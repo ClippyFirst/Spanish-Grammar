@@ -1,0 +1,71 @@
+/* ============================================================
+   GrammarWay — Design System (part 1: tokens)
+   Principles: CLARITY > DECORATION, READABILITY > INFO DENSITY
+   Target: WCAG 2.2 AA, mobile-first, static-first.
+   ============================================================ */
+
+:root {
+  color-scheme: light dark;
+  /* Color tokens — calm, low-saturation, accessible contrast. */
+  --color-bg: #ffffff;
+  --color-bg-soft: #f6f7f9;
+  --color-bg-tint: #eef3f7;
+  --color-surface: #ffffff;
+  --color-border: #d8dde3;
+  --color-border-strong: #b6bfc9;
+
+  --color-text: #1c232b;
+  --color-text-soft: #4a5563;
+  --color-text-muted: #6b7683;
+  --color-accent: #a43d2e;
+  --color-accent-strong: #8a2f22;
+  --color-accent-bg: #fbf1ef;
+
+  --color-link: #175a7d;
+  --color-good: #1e7a4a;
+  --color-bad: #b0302a;
+  --color-good-bg: #eef7f1;
+  --color-bad-bg: #fdf0ef;
+
+  --font-ui: system-ui, "Segoe UI", -apple-system, Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+  --fs-hero: clamp(1.75rem, 4.2vw, 2.6rem);
+  --fs-h1: clamp(1.55rem, 3.4vw, 2.1rem);
+  --fs-h2: clamp(1.3rem, 2.6vw, 1.55rem);
+  --fs-h3: 1.18rem;
+  --fs-body: 1.04rem;
+  --fs-small: 0.92rem;
+  --fs-tiny: 0.82rem;
+
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-5: 1.5rem; --space-6: 2rem;
+  --space-7: 3rem; --space-8: 4rem;
+
+  --radius: 8px; --radius-sm: 4px;
+  --shadow-sm: 0 1px 2px rgba(16,24,40,.06);
+  --shadow-md: 0 4px 16px rgba(16,24,40,.08);
+  --maxw: 1120px; --maxw-text: 780px;
+}
+
+/* Dark mode — every token keeps AA contrast. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #14181d;
+    --color-bg-soft: #1b2127;
+    --color-surface: #212830;
+    --color-border: #39434d;
+    --color-border-strong: #4b5763;
+    --color-text: #e7ecf1;
+    --color-text-soft: #b9c2cc;
+    --color-text-muted: #9aa6b2;
+    --color-accent: #e89a8c;
+    --color-accent-strong: #f0a594;
+    --color-accent-bg: #362725;
+    --color-link: #8fd0f2;
+    --color-good: #8cd6ad;
+    --color-bad: #f0908a;
+    --color-good-bg: #17301f;
+    --color-bad-bg: #38201f;
+  }
+}

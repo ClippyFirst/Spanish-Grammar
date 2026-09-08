@@ -1,0 +1,21 @@
+---
+// Example — one Spanish sentence with a natural Ukrainian translation.
+// Optional grammatical annotation and explanation.
+interface Props {
+  es: string;
+  uk: string;
+  gram?: string;
+  note?: string;
+  n?: number;
+}
+const { es, uk, gram, note, n } = Astro.props;
+---
+<div class="example">
+  <span class="ex-num" aria-hidden="true">{n ?? ''}</span>
+  <div>
+    {gram && <div class="ex-gram">{gram}</div>}
+    <div class="ex-es">{es}</div>
+    <div class="ex-uk">{uk}</div>
+    {note && <div class="ex-note">{note}</div>}
+  </div>
+</div>

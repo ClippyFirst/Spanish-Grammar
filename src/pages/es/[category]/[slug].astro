@@ -1,0 +1,31 @@
+---
+// Dynamic route for every grammar page: /es/<category>/<slug>/
+import { getCollection, render } from 'astro:content';
+import GrammarLayout from '../../../layouts/GrammarLayout.astro';
+import { mdxComponents } from '../../../components/mdx';
+import { resolveRelated, parseId } from '../../../utils/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('grammar');
+  return entries.map((entry) => {
+    const { category, slug } = parseId(entry.id);
+    return {
+      params: { category, slug },
+      props: { entry, all: entries },
+    };
+  });
+}
+
+interface Props {
+  entry: import('astro:content').CollectionEntry<'grammar'>;
+  all: import('astro:content').CollectionEntry<'grammar'>[];
+}
+
+const { entry, all } = Astro.props;
+const { Content, headings } = await render(entry);
+const related = resolveRelated(entry, all);
+const cat = getCategory(entry.data.category);
+---
+<GrammarLayout entry={entry} headings={headings} related={related}>
+  <Content components={mdxComponents} />
+</GrammarLayout>

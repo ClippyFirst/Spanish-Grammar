@@ -1,0 +1,99 @@
+/* ============================================================
+   GrammarWay — grammar components (part 1)
+   Formula tokens, examples, minimal pairs, notes
+   ============================================================ */
+
+/* ---------- Quick Formula ---------- */
+.formula-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; margin: var(--space-5) 0; }
+@media (min-width: 720px) { .formula-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.formula { border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-4); background: var(--color-bg); }
+.formula .formula-tag { font-family: var(--font-ui); font-weight: 800; font-size: var(--fs-tiny); text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: .5rem; }
+.formula.affirm .formula-tag { color: var(--color-good); }
+.formula.neg .formula-tag { color: var(--color-bad); }
+.formula.q .formula-tag { color: var(--color-accent); }
+.formula .formula-body { font-family: var(--font-serif); font-size: 1rem; line-height: 1.6; }
+
+/* ---------- Formula tokens (visual language) ---------- */
+.tok { display: inline-block; padding: .08rem .45rem; margin: .1rem .08rem; border-radius: var(--radius-sm); border: 1px solid transparent; font-family: var(--font-serif); font-weight: 700; }
+.tok-subj { background: var(--color-token-subject); border-color: var(--color-border); }
+.tok-verb { background: var(--color-token-verb); }
+.tok-neg { background: var(--color-token-neg); font-weight: 800; }
+.tok-aux { background: var(--color-token-aux); }
+.tok-infin { background: var(--color-token-infin); }
+.tok-part { background: var(--color-token-part); }
+.tok-pron { background: var(--color-token-pron); }
+.tok-pre { font-style: italic; }
+.tok-end { text-decoration: underline; }
+.tok-var { border-style: dashed; }
+
+.ly { color: var(--color-text-soft); }
+
+/* ---------- Examples ---------- */
+.example { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); border-radius: var(--radius); padding: var(--space-4); margin: var(--space-3) 0; background: var(--color-bg); }
+.example + .example { margin-top: var(--space-3); }
+.example .ex-num { font-family: var(--font-ui); color: var(--color-text-muted); font-size: var(--fs-small); font-weight: 700; }
+.example .ex-es { font-family: var(--font-serif); font-size: 1.08rem; font-weight: 600; margin-bottom: .15rem; }
+.example .ex-gram { font-family: var(--font-serif); font-style: italic; color: var(--color-accent-strong); font-size: var(--fs-small); margin-bottom: .35rem; }
+.example .ex-uk { color: var(--color-text-soft); margin-bottom: .35rem; }
+.example .ex-note { font-size: var(--fs-small); color: var(--color-text-muted); border-top: 1px dashed var(--color-border); padding-top: .5rem; margin-top: .5rem; }
+
+.examples-block { margin: var(--space-4) 0; }
+
+/* ============================================================
+   GrammarWay — grammar components (part 2)
+   Mistakes, minimal pairs, notes, tables, legend, keywords
+   ============================================================ */
+
+/* ---------- Common mistakes ---------- */
+.mistake { border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-4); margin: var(--space-3) 0; background: var(--color-bg); border-left: 4px solid var(--color-bad); }
+.mistake-row { display: grid; grid-template-columns: auto 1fr auto 1fr; gap: var(--space-2); align-items: start; font-family: var(--font-serif); }
+.mistake-row .mark { font-weight: 900; font-size: 1.1rem; }
+.mistake-row .mark.no { color: var(--color-bad); }
+.mistake-row .mark.ok { color: var(--color-good); }
+.mistake-row .span-x { color: var(--color-bad); text-decoration: line-through solid var(--color-bad); font-family: var(--font-serif); font-size: 1.05rem; }
+.mistake-row .span-ok { color: var(--color-good); font-family: var(--font-serif); font-size: 1.05rem; }
+@media (max-width: 620px) { .mistake-row { grid-template-columns: auto 1fr; row-gap: var(--space-1); } .mistake-row .span-ok { grid-column: 2; } }
+.mistake .why { margin-top: var(--space-3); font-size: var(--fs-small); color: var(--color-text-soft); }
+.mistake .why::before { content: "Чому? "; font-family: var(--font-ui); font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; font-size: var(--fs-tiny); letter-spacing: .05em; }
+
+/* ---------- Minimal pairs ---------- */
+.minpair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-4); margin: var(--space-4) 0; background: var(--color-bg); }
+@media (max-width: 620px) { .minpair { grid-template-columns: 1fr; } }
+.minpair .mp-row { background: var(--color-bg-tint); padding: var(--space-3); border-radius: var(--radius); }
+.minpair .mp-es { font-family: var(--font-serif); font-weight: 700; font-size: 1.05rem; margin-bottom: .2rem; }
+.minpair .mp-uk { color: var(--color-text-soft); margin-bottom: .4rem; }
+.minpair .mp-why { font-size: var(--fs-small); }
+
+/* ---------- Notes ---------- */
+.note { border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); border-radius: var(--radius); padding: var(--space-4) var(--space-5); margin: var(--space-4) 0; background: var(--color-bg); }
+.note .note-title { font-family: var(--font-ui); font-weight: 700; font-size: var(--fs-small); text-transform: uppercase; letter-spacing: .05em; color: var(--color-accent-strong); margin-bottom: .4rem; }
+.note p:last-child { margin-bottom: 0; }
+.note.region { border-left-color: var(--color-link); }
+.note.region .note-title { color: var(--color-link); }
+
+.region-tag { font-family: var(--font-ui); font-size: var(--fs-tiny); border: 1px solid var(--color-border-strong); border-radius: 999px; padding: .1rem .6rem; color: var(--color-text-soft); }
+
+/* ---------- Grammatical tables ---------- */
+table.gram { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; font-family: var(--font-serif); font-size: var(--fs-small); background: var(--color-bg); }
+table.gram caption { text-align: left; font-family: var(--font-ui); font-weight: 700; font-size: var(--fs-small); padding-bottom: .5rem; color: var(--color-text-soft); }
+table.gram th, table.gram td { border: 1px solid var(--color-border); padding: .5rem .7rem; text-align: left; vertical-align: top; }
+table.gram thead th { background: var(--color-bg-tint); font-family: var(--font-ui); font-weight: 700; }
+table.gram tbody th { background: var(--color-bg-soft); font-family: var(--font-ui); font-weight: 600; white-space: nowrap; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll table.gram { min-width: 500px; }
+
+/* token legend */
+.legend { display: flex; flex-wrap: wrap; gap: var(--space-2); font-family: var(--font-ui); font-size: var(--fs-tiny); color: var(--color-text-muted); margin: var(--space-3) 0; }
+.legend .tok { font-size: var(--fs-tiny); margin: 0; }
+
+/* keyword chips */
+.kw-list { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; padding: 0; margin: var(--space-3) 0; }
+.kw-list li { font-family: var(--font-ui); font-size: var(--fs-small); color: var(--color-text-soft); border: 1px solid var(--color-border); border-radius: 999px; padding: .25rem .7rem; background: var(--color-bg); }
+
+/* comparison page */
+.compare-col { border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-4) var(--space-5); }
+.compare-col h3 { margin-top: 0; }
+
+/* subtle italic for Spanish terms in prose */
+.es-term { font-family: var(--font-serif); font-weight: 700; font-style: italic; }

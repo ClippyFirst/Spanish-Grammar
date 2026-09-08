@@ -1,0 +1,47 @@
+---
+// Grammar index: /es/ — lists all categories.
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sortedCategories } from '../../../data/categories';
+import { categoryUrl, parseId } from '../../utils/content';
+
+const entries = await getCollection('grammar');
+const counts = new Map<string, number>();
+for (const e of entries) {
+  const { category } = parseId(e.id);
+  counts.set(category, (counts.get(category) ?? 0) + 1);
+}
+---
+<BaseLayout
+  title="Іспанська граматика — категорії · GrammarWay ES"
+  description="Усі розділи іспанської граматики для україномовних: основи, іменники, артиклі, дієслова, часи, способи, прийменники та регіональні варіанти."
+  canonical="/es/"
+>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти">
+      <ol>
+        <li><a href="/">Головна</a></li>
+        <li aria-current="page">Граматика</li>
+      </ol>
+    </nav>
+
+    <header class="page-head">
+      <div class="title-en">Gramática española</div>
+      <h1>Іспанська граматика</h1>
+      <p class="synopsis">
+        Розділи довідника. Оберіть тему — або скористайтеся пошуком угорі.
+      </p>
+    </header>
+
+    <div class="grid-categories">
+      {sortedCategories.map((c) => (
+        <a class="card" href={categoryUrl(c.key)}>
+          <span class="label">{c.titleEs}</span>
+          <span class="card-title">{c.titleUk}</span>
+          <p class="card-desc">{c.description}</p>
+          <span class="card-count">{counts.get(c.key) ?? 0} тем</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

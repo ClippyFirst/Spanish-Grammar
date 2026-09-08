@@ -1,0 +1,63 @@
+---
+// Comparisons index.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const comparisons = [
+  {
+    title: 'Ser / Estar',
+    url: '/comparisons/ser-estar/',
+    desc: 'Два дієслова «бути»: характеристика проти стану.',
+  },
+  {
+    title: 'Por / Para',
+    url: '/comparisons/por-para/',
+    desc: 'Прийменники, які україномовні найчастіше плутають.',
+  },
+  {
+    title: 'Минулі часи',
+    url: '/comparisons/past-tenses/',
+    desc: 'Pretérito perfecto, indefinido, imperfecto — коли що.',
+  },
+  {
+    title: 'Індикатив / Субхунтив',
+    url: '/comparisons/indicative-subjunctive/',
+    desc: 'Реальність проти ставлення: мова фактів проти мови думок.',
+  },
+  {
+    title: 'Артиклі',
+    url: '/comparisons/articles/',
+    desc: 'Означений і неозначений артикль, де в українській їх немає.',
+  },
+];
+---
+<BaseLayout
+  title="Порівняння — іспанська граматика · GrammarWay ES"
+  description="Порівняння іспанських конструкцій, які україномовні найчастіше плутають: ser/estar, por/para, минулі часи, індикатив/субхунтив, артиклі."
+  canonical="/comparisons/"
+>
+  <div class="container" style="max-width:860px">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти">
+      <ol>
+        <li><a href="/">Головна</a></li>
+        <li aria-current="page">Порівняння</li>
+      </ol>
+    </nav>
+    <header class="page-head">
+      <h1>Порівняння</h1>
+      <p class="synopsis">
+        Конструкції, де україномовні найчастіше помиляються, — розібрано дослівно, поруч,
+        з типовими помилками і мінімальними парами.
+      </p>
+    </header>
+    <ul class="topic-list">
+      {comparisons.map((c) => (
+        <li>
+          <a class="card-topic" href={c.url}>
+            <span class="t-es">{c.title}</span>
+            <span class="t-uk">{c.desc}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

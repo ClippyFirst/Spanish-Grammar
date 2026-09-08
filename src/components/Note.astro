@@ -1,0 +1,17 @@
+---
+// Note — a callout box. `kind` selects the accent:
+//   'uk'     → Ukrainian-specific note
+//   'region' → regional variation note
+//   default  → generic note
+interface Props {
+  title?: string;
+  kind?: 'uk' | 'region' | 'default';
+}
+const { title, kind = 'default' } = Astro.props;
+const defaultTitle = kind === 'uk' ? 'Для україномовних' : kind === 'region' ? 'Регіональний варіант' : 'Примітка';
+const cls = 'note' + (kind === 'uk' ? ' uk' : kind === 'region' ? ' region' : '');
+---
+<div class={cls}>
+  <div class="note-title">{title ?? defaultTitle}</div>
+  <div><slot /></div>
+</div>

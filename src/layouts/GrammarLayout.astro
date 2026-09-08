@@ -1,0 +1,98 @@
+---
+// GrammarLayout — consistent structure for every grammar page:
+// breadcrumbs → page head → TOC (desktop) → prose content → related topics.
+import BaseLayout from './BaseLayout.astro';
+import { getCategory } from '../../data/categories';
+import { entryUrl, categoryUrl, parseId, categoryLabel } from '../utils/content';
+import type { GrammarEntry } from '../utils/content';
+
+interface Heading { depth: number; slug: string; text: string; }
+interface Props {
+  entry: GrammarEntry;
+  headings: Heading[];
+  related: GrammarEntry[];
+}
+
+const { entry, headings, related } = Astro.props;
+const { lang, category, slug } = parseId(entry.id);
+const cat = getCategory(category);
+const canonical = entryUrl(entry);
+const toc = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+
+function regionLabel(r: string): string {
+  const map: Record<string, string> = {
+    spain: 'Іспанія', 'latin-america': 'Латинська Америка',
+    rioplatense: 'Ріо-де-ла-Плата', mexico: 'Мексика', caribbean: 'Кариби',
+  };
+  return map[r] ?? r;
+}
+---
+<BaseLayout
+  title={`${entry.data.title_uk} — ${entry.data.title_es} · GrammarWay ES`}
+  description={entry.data.short_description}
+  canonical={canonical}
+>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти">
+      <ol>
+        <li><a href="/">Головна</a></li>
+        <li><a href="/es/">Граматика</a></li>
+        <li><a href={categoryUrl(category)}>{cat?.titleUk ?? categoryLabel(category)}</a></li>
+        <li aria-current="page">{entry.data.title_uk}</li>
+      </ol>
+    </nav>
+
+    <div class="layout-doc">
+      <article>
+        <header class="page-head">
+          <div class="title-es">{entry.data.title_es}</div>
+          <h1>{entry.data.title_uk}</h1>
+          <div class="title-en">{entry.data.title_en}</div>
+          <p class="synopsis">{entry.data.short_description}</p>
+          <div class="meta-line">
+            <span class="chip">{cat?.titleUk ?? categoryLabel(category)}</span>
+            {entry.data.region !== 'general' && (
+              <span class="chip">{regionLabel(entry.data.region)}</span>
+            )}
+            {entry.data.updated && <span class="chip">Оновлено: {entry.data.updated}</span>}
+          </div>
+        </header>
+
+        <div class="prose">
+          <slot />
+        </div>
+
+        {related.length > 0 && (
+          <section class="related" aria-labelledby="related-heading">
+            <h2 id="related-heading">Пов'язані теми</h2>
+            <ul>
+              {related.map((r) => (
+                <li>
+                  <a href={entryUrl(r)}>
+                    <span class="r-es">{r.data.title_es}</span>
+                    <span class="r-uk">{r.data.title_uk}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </article>
+
+      {toc.length > 0 && (
+        <aside class="toc" aria-label="Зміст сторінки">
+          <h2>Зміст</h2>
+          <nav>
+            <ul>
+              {toc.map((h) => (
+                <li>
+                  <a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </aside>
+      )}
+    </div>
+  </div>
+</BaseLayout>

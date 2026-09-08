@@ -1,0 +1,25 @@
+---
+// MinPair — two contrasting examples (A vs B) with explanations.
+interface Pair {
+  es: string;
+  uk: string;
+  why?: string;
+}
+interface Props {
+  a: Pair;
+  b: Pair;
+}
+const { a, b } = Astro.props;
+---
+<div class="minpair">
+  <div class="mp-row">
+    <div class="mp-es">{a.es}</div>
+    <div class="mp-uk">{a.uk}</div>
+    {a.why && <div class="mp-why">{a.why}</div>}
+  </div>
+  <div class="mp-row">
+    <div class="mp-es">{b.es}</div>
+    <div class="mp-uk">{b.uk}</div>
+    {b.why && <div class="mp-why">{b.why}</div>}
+  </div>
+</div>

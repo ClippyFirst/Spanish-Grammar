@@ -1,0 +1,11 @@
+---
+// Token — a single element of the formula visual language.
+// Distinguishable without color (background + optional underline/dash).
+interface Props {
+  type?: 'subj' | 'verb' | 'neg' | 'aux' | 'infin' | 'part' | 'pron' | 'pre' | 'end' | 'var';
+  title?: string;
+}
+const { type = 'verb', title } = Astro.props;
+const cls = 'tok ' + (type ? 'tok-' + type : '');
+---
+<span class={cls} title={title}><slot /></span>

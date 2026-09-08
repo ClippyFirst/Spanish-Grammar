@@ -1,0 +1,51 @@
+---
+// Site header: brand, primary nav, mobile hamburger.
+const { pathname = '/' } = Astro.props;
+const base = Astro.site?.pathname ?? '/';
+const isActive = (p: string) => pathname.startsWith(p);
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="GrammarWay — головна">
+      <span>GrammarWay</span><span class="brand-lang">ES</span>
+    </a>
+
+    <nav class="nav-main" aria-label="Головна навігація">
+      <a href="/es/" aria-current={isActive('/es/') ? 'page' : undefined}>Граматика</a>
+      <a href="/comparisons/" aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
+      <a href="/search/" aria-current={isActive('/search/') ? 'page' : undefined}>Пошук</a>
+      <a href="/about/" aria-current={isActive('/about/') ? 'page' : undefined}>Про сайт</a>
+    </nav>
+
+    <span class="region-tag" title="Мова інтерфейсу — українська">Мова: українська</span>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">
+    <a href="/es/">Граматика</a>
+    <a href="/comparisons/">Порівняння</a>
+    <a href="/search/">Пошук</a>
+    <a href="/about/">Про сайт</a>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
+    });
+    menu.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).tagName === 'A') {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>

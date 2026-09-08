@@ -1,0 +1,18 @@
+---
+// Mistake — a typical Ukrainian-speaker error with a correction and the reason.
+interface Props {
+  bad: string;
+  good: string;
+  why: string;
+}
+const { bad, good, why } = Astro.props;
+---
+<div class="mistake">
+  <div class="mistake-row">
+    <span class="mark no" aria-hidden="true">✕</span>
+    <span class="span-x">{bad}</span>
+    <span class="mark ok" aria-hidden="true">✓</span>
+    <span class="span-ok">{good}</span>
+  </div>
+  <div class="why">{why}</div>
+</div>

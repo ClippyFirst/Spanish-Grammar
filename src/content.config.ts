@@ -1,0 +1,59 @@
+// Content Collections configuration.
+// Defines the structured content model for grammar entries.
+// See the "CONTENT MODEL" section of the project brief.
+import { defineCollection, z } from 'astro:content';
+
+const grammar = defineCollection({
+  type: 'content',
+  schema: z.object({
+    // Language code of the grammar language (currently only Spanish).
+    language: z.enum(['es']).default('es'),
+
+    // Stable human-readable slug (must match the file name).
+    slug: z.string(),
+
+    // Category key — must exist in data/categories.ts.
+    category: z.string(),
+
+    // Titles in the three reference languages.
+    title_uk: z.string(),
+    title_es: z.string(),
+    title_en: z.string(),
+
+    // One-sentence explanation shown at the top of the page + in listings.
+    short_description: z.string(),
+
+    // Optional longer description (used on category pages / meta description).
+    description: z.string().optional(),
+
+    // Sort order within a category.
+    order: z.number().default(100),
+
+    // Featured on the homepage "Popular / Essential" section.
+    popular: z.boolean().default(false),
+
+    // Recently added marker (used on homepage).
+    recently_added: z.boolean().default(false),
+
+    // Search keywords / synonyms in Ukrainian, Spanish and English.
+    // Powers Pagefind so "теперішній час", "subjunctive", "подобається"
+    // all resolve to the right topic.
+    keywords: z.array(z.string()).default([]),
+
+    // Related topic slugs (internal links). Must resolve to real pages.
+    related: z.array(z.string()).default([]),
+
+    // Optional regional focus. If set, this page is a deep regional page.
+    region: z
+      .enum(['general', 'spain', 'latin-america', 'rioplatense', 'mexico', 'caribbean'])
+      .default('general'),
+
+    // Optional CEFR hint used only internally — never shown in the UI.
+    cefr: z.enum(['a1', 'a2', 'b1', 'b2', 'c1', 'c2']).optional(),
+
+    // ISO date of last content review, e.g. "2026-09-08".
+    updated: z.string().optional(),
+  }),
+});
+
+export const collections = { grammar };

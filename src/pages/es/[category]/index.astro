@@ -1,0 +1,51 @@
+---
+// Category index: /es/<category>/
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCategory } from '../../../../data/categories';
+import { entryUrl, parseId } from '../../../utils/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('grammar');
+  const categories = [...new Set(entries.map((e) => parseId(e.id).category))];
+  return categories.map((category) => ({ params: { category } }));
+}
+
+const { category } = Astro.params;
+const cat = getCategory(category!);
+const entries = (await getCollection('grammar'))
+  .filter((e) => parseId(e.id).category === category)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout
+  title={`${cat?.titleUk ?? category} — іспанська граматика · GrammarWay ES`}
+  description={cat?.description}
+  canonical={`/es/${category}/`}
+>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти">
+      <ol>
+        <li><a href="/">Головна</a></li>
+        <li><a href="/es/">Граматика</a></li>
+        <li aria-current="page">{cat?.titleUk ?? category}</li>
+      </ol>
+    </nav>
+
+    <header class="page-head">
+      <div class="title-en">{cat?.titleEs}</div>
+      <h1>{cat?.titleUk ?? category}</h1>
+      <p class="synopsis">{cat?.description}</p>
+    </header>
+
+    <ul class="topic-list">
+      {entries.map((e) => (
+        <li>
+          <a class="card-topic" href={entryUrl(e)}>
+            <span class="t-es">{e.data.title_es}</span>
+            <span class="t-uk">{e.data.title_uk}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

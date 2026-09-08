@@ -1,0 +1,110 @@
+---
+// Homepage: identity, search, categories, popular topics, comparisons.
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sortedCategories } from '../../data/categories';
+import { entryUrl, categoryUrl, parseId } from '../utils/content';
+
+const entries = await getCollection('grammar');
+const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 8);
+const fresh = entries.filter((e) => e.data.recently_added).slice(0, 4);
+const comparisons = [
+  { titleUk: 'Ser / Estar', slug: 'ser-estar', desc: 'Бути, як характеристика чи стан' },
+  { titleUk: 'Por / Para', slug: 'por-para', desc: 'Причина, ціль, майбутність і межі' },
+  { titleUk: 'Претерит / Імперфект', slug: 'past-tenses', desc: 'Два минулі часи' },
+];
+---
+<BaseLayout
+  title="GrammarWay ES — іспанська граматика для україномовних"
+  description="Швидкий, зручний і глибокий довідник з іспанської граматики для україномовних: правила, формули, приклади, типові помилки, регіональні варіанти і пошук."
+  canonical="/"
+>
+  <div class="container">
+    <section class="hero">
+      <h1>Іспанська граматика — зрозуміти, не запам'ятовувати.</h1>
+      <p class="lead">
+        Довідник для україномовних. Знайдіть тему, зрозумійте правило, порівняйте схожі конструкції і запам'ятайте через приклади.
+      </p>
+      <div class="search-bar">
+        <label class="visually-hidden" for="home-search">Пошук по граматиці</label>
+        <input id="home-search" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjunktiv…" autocomplete="off" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Розділи граматики</h2>
+      <div class="grid-categories">
+        {sortedCategories.map((c) => (
+          <a class="card" href={categoryUrl(c.key)}>
+            <span class="label">{c.titleEs}</span>
+            <span class="card-title">{c.titleUk}</span>
+            <p class="card-desc">{c.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Популярні теми</h2>
+      <ul class="topic-list">
+        {popular.map((e) => (
+          <li>
+            <a class="card-topic" href={entryUrl(e)}>
+              <span class="t-es">{e.data.title_es}</span>
+              <span class="t-uk">{e.data.title_uk}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Порівняння</h2>
+      <p>Конструкції, які україномовні найчастіше плутають, — дослівно порівнянно.</p>
+      <ul class="topic-list">
+        {comparisons.map((c2k) => (
+          <li>
+            <a class="card-topic" href={`/comparisons/${c2k.slug}/`}>
+              <span class="t-es">{c2k.titleUk}</span>
+              <span class="t-uk">{c2k.desc}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {fresh.length > 0 && (
+      <section class="section">
+        <h2>Недавно додано</h2>
+        <ul class="topic-list">
+          {fresh.map((e) => (
+            <li>
+              <a class="card-topic" href={entryUrl(e)}>
+                <span class="t-es">{e.data.title_es}</span>
+                <span class="t-uk">{e.data.title_uk}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</BaseLayout>
+
+<script>
+  const input = document.getElementById('home-search');
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value.trim()) {
+        window.location.href = '/search/?q=' + encodeURIComponent(input.value.trim());
+      }
+    });
+    const btn = document.createElement('button');
+    btn.className = 'search-arrow';
+    btn.setAttribute('aria-label', 'Перейти до пошуку');
+    btn.addEventListener('click', () => {
+      window.location.href = '/search/?q=' + encodeURIComponent(input.value.trim());
+    });
+    input.parentNode.appendChild(btn);
+  }
+</script>

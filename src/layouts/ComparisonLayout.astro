@@ -1,0 +1,48 @@
+---
+// ComparisonLayout — consistent structure for comparison pages.
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  titleEn?: string;
+  description: string;
+  canonical?: string;
+}
+const {
+  title,
+  titleEn,
+  description,
+  canonical = '/comparisons/',
+} = Astro.props;
+---
+<BaseLayout
+  title={`${title} — порівняння · GrammarWay ES`}
+  description={description}
+  canonical={canonical}
+>
+  <div class="container" style="max-width:860px">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти">
+      <ol>
+        <li><a href="/">Головна</a></li>
+        <li><a href="/comparisons/">Порівняння</a></li>
+        <li aria-current="page">{title}</li>
+      </ol>
+    </nav>
+    <header class="page-head">
+      <h1>{title}</h1>
+      {titleEn && <div class="title-en">{titleEn}</div>}
+      <p class="synopsis">{description}</p>
+    </header>
+    <div class="prose">
+      <slot />
+    </div>
+    <nav class="related" aria-labelledby="comp-related">
+      <h2 id="comp-related">Інші порівняння</h2>
+      <ul>
+        <li><a href="/comparisons/ser-estar/"><span class="r-es">Ser / Estar</span><span class="r-uk">Бути</span></a></li>
+        <li><a href="/comparisons/por-para/"><span class="r-es">Por / Para</span><span class="r-uk">Прийменники</span></a></li>
+        <li><a href="/comparisons/past-tenses/"><span class="r-es">Pasados</span><span class="r-uk">Минулі часи</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</BaseLayout>

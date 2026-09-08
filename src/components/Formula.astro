@@ -1,0 +1,15 @@
+---
+// Formula — a quick-reference box (affirmative / negative / interrogative).
+// The structure adapts: for conjugation topics use the Conjugation component
+// instead of forcing this three-column layout.
+interface Props {
+  type?: 'affirm' | 'neg' | 'q';
+  label?: string;
+}
+const { type = 'affirm', label } = Astro.props;
+const tag = label ?? (type === 'affirm' ? 'Твердження' : type === 'neg' ? 'Заперечення' : 'Питання');
+---
+<div class={`formula ${type}`}>
+  <span class="formula-tag">{tag}</span>
+  <div class="formula-body"><slot /></div>
+</div>

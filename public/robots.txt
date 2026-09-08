@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# This site is fully static; the sitemap is generated at build time.
+# The public hostname is set via SITE_URL during the build.
+Sitemap: /sitemap-index.xml

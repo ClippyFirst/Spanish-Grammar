@@ -1,0 +1,62 @@
+---
+// Search page: /search/ — full client-side search via Pagefind.
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Пошук по іспанській граматиці · GrammarWay ES"
+  description="Пошук по всіх темах іспанської граматики. Шукайте українською, іспанською або англійською — present indikatyw, «теперішній час», subjunctive, ser/estar."
+  canonical="/search/"
+>
+  <div class="container" style="max-width:800px">
+    <header class="page-head">
+      <h1>Пошук</h1>
+      <p class="synopsis">
+        Знайдіть тему українською, іспанською або англійською:
+        <em>теперішній час</em>, <em>presente</em>, <em>subjunctive</em> чи <em>«подобається»</em>.
+      </p>
+    </header>
+
+    <div id="search" class="pagefind-ui"></div>
+    <p class="search-hint" style="color:var(--color-text-muted);font-size:var(--fs-small)">
+      Пошук працює повністю у вашому браузері, без серверу.
+    </p>
+  </div>
+</BaseLayout>
+
+<script>
+  // Load Pagefind UI lazily after build artifacts are present.
+  async function initSearch() {
+    if (window.__pagefindUI) return;
+    const url = new URL(window.location.href);
+    const q = url.searchParams.get('q') || '';
+    const uiEl = document.getElementById('search');
+    if (!uiEl) return;
+    uiEl.innerHTML = '';
+    const { PagefindUI } = await import('/pagefind/pagefind-ui.js');
+    const ui = new PagefindUI({
+      element: '#search',
+      showSubResults: false,
+      showImages: false,
+      resetStyles: false,
+      translations: {
+        placeholder: 'Пошук…',
+        zero_results: '[NO_RESULTS] Нічого не знайдено для «[QUERY]». Спробуйте інакше: presente, ser/estar, subjunktiv…',
+        many_results: '[RESULT_COUNT] результатів для «[QUERY]»',
+        one_result: '[RESULT_COUNT] результат для «[QUERY]»',
+        search: 'Пошук',
+        clear_search: 'Очистити',
+      },
+    });
+    window.__pagefindUI = ui;
+    if (q) {
+      // Wait for Pagefind index, then trigger the search.
+      setTimeout(() => {
+        try {
+          ui.triggerSearch(q);
+          uiEl.querySelector('input').value = q;
+        } catch {}
+      }, 600);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', initSearch);
+</script>

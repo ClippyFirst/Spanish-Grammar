@@ -1,0 +1,29 @@
+{
+  "name": "grammarway-es",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Spanish Grammar reference for Ukrainian speakers — static-first, searchable grammar handbook.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "search:index": "pagefind --site dist",
+    "build:full": "astro build && pagefind --site dist",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.2.0",
+    "pagefind": "^1.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "esbuild@0.25.12": true,
+    "sharp@0.34.5": true
+  }
+}

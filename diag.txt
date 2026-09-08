@@ -1,0 +1,31 @@
+KEYS: language, slug, category, title_uk, title_es, title_en, short_description, order, popular, recently_added, keywords, related, cefr, updated
+typeof slug: string | value: [adjective-agreement]
+typeof updated: object | Tue Sep 08 2026 03:00:00 GMT+0300 (за східноєвропейським літнім часом)
+---FRONTMATTER---
+language: es
+slug: adjective-agreement
+category: adjectives
+title_uk: Узгодження прикметників
+title_es: Concordancia del adjetivo
+title_en: Adjective agreement
+short_description: >-
+  Прикметник узгоджується з іменником за родом і числом: un libro interesante, una casa bonita.
+  Прикметники на -e та приголосні, позиція перед і після іменника.
+order: 1
+popular: true
+recently_added: false
+keywords:
+  - прикметники
+  - adjectives
+  - узгодження
+  - agreement
+  - género
+  - número
+  - bonito
+  - interesante
+related:
+  - genero
+  - ser-estar
+  - definite-indefinite
+cefr: a1
+updated: 2026-09-08

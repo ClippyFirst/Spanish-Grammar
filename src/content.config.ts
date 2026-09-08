@@ -51,13 +51,8 @@ const es = defineCollection({
     // Optional CEFR hint used only internally — never shown in the UI.
     cefr: z.enum(['a1', 'a2', 'b1', 'b2', 'c1', 'c2']).optional(),
 
-    // ISO date of last content review, e.g. "2026-09-08".
-    // YAML may parse an unquoted date as a Date object, so accept and normalize.
-    updated: z
-      .union([z.string(), z.date()])
-      .optional()
-      .transform((v) => (typeof v === 'string' ? v : v ? v.toISOString().slice(0, 10) : undefined))
-      .nullable(),
+    // ISO date of last content review, e.g. "2026-09-08". Keep quoted in frontmatter.
+    updated: z.string().optional(),
   }),
 });
 

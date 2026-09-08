@@ -1,9 +1,9 @@
 // Content Collections configuration.
 // Defines the structured content model for grammar entries.
-// See the "CONTENT MODEL" section of the project brief.
+// Collection `es` matches the folder `src/content/es/`; future langs (/fr/, /it/) get their own collections.
 import { defineCollection, z } from 'astro:content';
 
-const grammar = defineCollection({
+const es = defineCollection({
   type: 'content',
   schema: z.object({
     // Language code of the grammar language (currently only Spanish).
@@ -52,8 +52,13 @@ const grammar = defineCollection({
     cefr: z.enum(['a1', 'a2', 'b1', 'b2', 'c1', 'c2']).optional(),
 
     // ISO date of last content review, e.g. "2026-09-08".
-    updated: z.string().optional(),
+    // YAML may parse an unquoted date as a Date object, so accept and normalize.
+    updated: z
+      .union([z.string(), z.date()])
+      .optional()
+      .transform((v) => (typeof v === 'string' ? v : v ? v.toISOString().slice(0, 10) : undefined))
+      .nullable(),
   }),
 });
 
-export const collections = { grammar };
+export const collections = { es };

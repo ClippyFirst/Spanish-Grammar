@@ -6,14 +6,14 @@ import { getCategory } from '../../../../data/categories';
 import { entryUrl, parseId } from '../../../utils/content';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('grammar');
+  const entries = await getCollection('es');
   const categories = [...new Set(entries.map((e) => parseId(e.id).category))];
   return categories.map((category) => ({ params: { category } }));
 }
 
 const { category } = Astro.params;
 const cat = getCategory(category!);
-const entries = (await getCollection('grammar'))
+const entries = (await getCollection('es'))
   .filter((e) => parseId(e.id).category === category)
   .sort((a, b) => a.data.order - b.data.order);
 ---

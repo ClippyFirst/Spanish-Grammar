@@ -1,7 +1,7 @@
 // Helpers for building URLs and resolving related topics.
 import type { CollectionEntry } from 'astro:content';
 
-export type GrammarEntry = CollectionEntry<'grammar'>;
+export type GrammarEntry = CollectionEntry<'es'>;
 
 // A content entry id looks like "es/verbs/ser-estar".
 export interface EntryPath {

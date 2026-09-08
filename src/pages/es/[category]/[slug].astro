@@ -6,7 +6,7 @@ import { mdxComponents } from '../../../components/mdx';
 import { resolveRelated, parseId } from '../../../utils/content';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('grammar');
+  const entries = await getCollection('es');
   return entries.map((entry) => {
     const { category, slug } = parseId(entry.id);
     return {
@@ -17,8 +17,8 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  entry: import('astro:content').CollectionEntry<'grammar'>;
-  all: import('astro:content').CollectionEntry<'grammar'>[];
+  entry: import('astro:content').CollectionEntry<'es'>;
+  all: import('astro:content').CollectionEntry<'es'>[];
 }
 
 const { entry, all } = Astro.props;

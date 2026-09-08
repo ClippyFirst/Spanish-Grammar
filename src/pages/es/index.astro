@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { sortedCategories } from '../../../data/categories';
 import { categoryUrl, parseId } from '../../utils/content';
 
-const entries = await getCollection('grammar');
+const entries = await getCollection('es');
 const counts = new Map<string, number>();
 for (const e of entries) {
   const { category } = parseId(e.id);

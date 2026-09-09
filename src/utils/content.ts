@@ -18,13 +18,14 @@ export interface EntryPath {
 
 export function parseId(id: string): EntryPath {
   const parts = id.split('/');
-  // For `type: 'content'` collections Astro gives us "category/slug".
-  // Older/newer projects may include a leading "lang/" — handle both.
+  // Astro `type: 'content'` collections generate IDs like "verbs/ser-estar"
+  // (category/slug), WITHOUT the language prefix. We hardcode the language
+  // because this project currently has only one content collection ("es").
   if (parts.length === 2) {
     return { lang: CONTENT_LANG, category: parts[0], slug: parts[1] };
   }
   // Fallback: lang/category/slug...slug (handles nested slugs like
-  // "pronouns/leismo-laismo-loismo/algo").
+  // "pronouns/leismo-laismo-loismo/algo") or older 3-part ids.
   return {
     lang: parts[0] === CONTENT_LANG ? CONTENT_LANG : CONTENT_LANG,
     category: parts[1] ?? '',

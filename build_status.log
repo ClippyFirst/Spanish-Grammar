@@ -1,0 +1,13 @@
+[2m23:05:11[22m [34m[content][39m Syncing content
+[2m23:05:11[22m [34m[content][39m Astro config changed
+[2m23:05:11[22m [34m[content][39m Clearing content store
+bad indentation of a mapping entry
+  [1mLocation:[22m
+    [4mF:\GitHub\Grammars\Spanish Grammar\src\content\es\prepositions\place.mdx:5:32[24m
+  [1mStack trace:[22m
+[2m    at generateError (file:///F:/GitHub/Grammars/Spanish%20Grammar/node_modules/js-yaml/dist/js-yaml.mjs:1140:12)
+    at readBlockMapping (file:///F:/GitHub/Grammars/Spanish%20Grammar/node_modules/js-yaml/dist/js-yaml.mjs:1927:9)
+    at readDocument (file:///F:/GitHub/Grammars/Spanish%20Grammar/node_modules/js-yaml/dist/js-yaml.mjs:2283:5)
+    at load2 (file:///F:/GitHub/Grammars/Spanish%20Grammar/node_modules/js-yaml/dist/js-yaml.mjs:2341:23)
+    at safeParseFrontmatter (file:///F:/GitHub/Grammars/Spanish%20Grammar/node_modules/@astrojs/mdx/dist/utils.js:33:12)[22m
+Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 94

@@ -1,17 +1,15 @@
 // Content Collections configuration.
 // Defines the structured content model for grammar entries.
 // Collection `es` matches the folder `src/content/es/`; future langs (/fr/, /it/) get their own collections.
+// NOTE: do NOT add a `slug` field — Astro reserves `slug` for `type: 'content'` collections
+// and strips it from frontmatter before validating. URLs are derived from the file path.
 import { defineCollection, z } from 'astro:content';
 
 const es = defineCollection({
   type: 'content',
-  schema: z
-    .object({
+  schema: z.object({
     // Language code of the grammar language (currently only Spanish).
     language: z.enum(['es']).default('es'),
-
-    // Stable human-readable slug (must match the file name).
-    slug: z.string(),
 
     // Category key — must exist in data/categories.ts.
     category: z.string(),
@@ -54,11 +52,7 @@ const es = defineCollection({
 
     // ISO date of last content review, e.g. "2026-09-08". Keep quoted in frontmatter.
     updated: z.string().optional(),
-    })
-    .transform((data) => {
-      console.log('=== ASTRO DATA ===', JSON.stringify(data));
-      return data;
-    }),
+  }),
 });
 
 export const collections = { es };

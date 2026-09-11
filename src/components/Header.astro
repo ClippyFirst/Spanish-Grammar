@@ -32,20 +32,22 @@ const isActive = (p: string) => pathname.startsWith(p);
   </nav>
 </header>
 
-<script>
-  const toggle = document.getElementById('nav-toggle');
-  const menu = document.getElementById('mobile-menu');
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
-    });
-    menu.addEventListener('click', (e) => {
-      if ((e.target as HTMLElement).tagName === 'A') {
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
+<script is:inline>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target && e.target.tagName === 'A') {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  })();
 </script>

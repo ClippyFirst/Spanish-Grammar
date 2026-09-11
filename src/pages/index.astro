@@ -91,20 +91,21 @@ const comparisons = [
   </div>
 </BaseLayout>
 
-<script>
-  const input = document.getElementById('home-search');
-  if (input) {
-    input.addEventListener('keydown', (e) => {
+<script is:inline>
+  (function () {
+    var input = document.getElementById('home-search');
+    if (!input) return;
+    input.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' && input.value.trim()) {
         window.location.href = '/search/?q=' + encodeURIComponent(input.value.trim());
       }
     });
-    const btn = document.createElement('button');
+    var btn = document.createElement('button');
     btn.className = 'search-arrow';
     btn.setAttribute('aria-label', 'Перейти до пошуку');
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', function () {
       window.location.href = '/search/?q=' + encodeURIComponent(input.value.trim());
     });
     input.parentNode.appendChild(btn);
-  }
+  })();
 </script>

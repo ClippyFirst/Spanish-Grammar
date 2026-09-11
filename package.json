@@ -10,6 +10,9 @@
     "preview": "astro preview",
     "search:index": "pagefind --site dist",
     "build:full": "astro build && pagefind --site dist",
+    "validate": "node scripts/validate-content.mjs",
+    "links": "node scripts/check-links.mjs",
+    "qa": "node scripts/validate-content.mjs && node scripts/check-links.mjs && astro build",
     "check": "astro check"
   },
   "dependencies": {

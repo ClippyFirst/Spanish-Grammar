@@ -23,39 +23,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 </BaseLayout>
 
-<script>
+<script is:inline>
   // Load Pagefind UI lazily after build artifacts are present.
+  // is:inline => Astro does not bundle this; the /pagefind/*.js files
+  // exist only after `pagefind --site dist` runs (build:full).
   async function initSearch() {
     if (window.__pagefindUI) return;
-    const url = new URL(window.location.href);
-    const q = url.searchParams.get('q') || '';
-    const uiEl = document.getElementById('search');
+    var url = new URL(window.location.href);
+    var q = url.searchParams.get('q') || '';
+    var uiEl = document.getElementById('search');
     if (!uiEl) return;
     uiEl.innerHTML = '';
-    const { PagefindUI } = await import('/pagefind/pagefind-ui.js');
-    const ui = new PagefindUI({
-      element: '#search',
-      showSubResults: false,
-      showImages: false,
-      resetStyles: false,
-      translations: {
-        placeholder: 'Пошук…',
-        zero_results: '[NO_RESULTS] Нічого не знайдено для «[QUERY]». Спробуйте інакше: presente, ser/estar, subjunktiv…',
-        many_results: '[RESULT_COUNT] результатів для «[QUERY]»',
-        one_result: '[RESULT_COUNT] результат для «[QUERY]»',
-        search: 'Пошук',
-        clear_search: 'Очистити',
-      },
-    });
-    window.__pagefindUI = ui;
-    if (q) {
-      // Wait for Pagefind index, then trigger the search.
-      setTimeout(() => {
-        try {
-          ui.triggerSearch(q);
-          uiEl.querySelector('input').value = q;
-        } catch {}
-      }, 600);
+    try {
+      var mod = await import('/pagefind/pagefind-ui.js');
+      var ui = new mod.PagefindUI({
+        element: '#search',
+        showSubResults: false,
+        showImages: false,
+        resetStyles: false,
+        translations: {
+          placeholder: 'Пошук…',
+          zero_results: '[NO_RESULTS] Нічого не знайдено для «[QUERY]». Спробуйте інакше: presente, ser/estar, subjunktiv…',
+          many_results: '[RESULT_COUNT] результатів для «[QUERY]»',
+          one_result: '[RESULT_COUNT] результат для «[QUERY]»',
+          search: 'Пошук',
+          clear_search: 'Очистити',
+        },
+      });
+      window.__pagefindUI = ui;
+      if (q) {
+        // Wait for Pagefind index, then trigger the search.
+        setTimeout(function () {
+          try {
+            ui.triggerSearch(q);
+            uiEl.querySelector('input').value = q;
+          } catch (e) {}
+        }, 600);
+      }
+    } catch (e) {
+      uiEl.innerHTML = '<p>Пошуковий індекс ще не згенеровано. Запустіть <code>npm run build:full</code>.</p>';
     }
   }
   window.addEventListener('DOMContentLoaded', initSearch);

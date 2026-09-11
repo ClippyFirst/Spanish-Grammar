@@ -5,6 +5,10 @@ titleEn: Pretérito perfecto, indefinido, imperfecto.
 description: "Три основні минулі часи іспанської, розібрано для україномовних: pretérito perfecto, indefinido, imperfecto — коли що вживається."
 canonical: /comparisons/past-tenses/
 ---
+import CompareTable from '../../components/CompareTable.astro';
+import MinPair from '../../components/MinPair.astro';
+import Mistake from '../../components/Mistake.astro';
+import Note from '../../components/Note.astro';
 
 В українській минулий час один. В іспанській доводиться обирати між кількома, і кожен несе свій сенс: чи дія завершена, чи тривала, чи результат актуальний зараз.
 
@@ -31,13 +35,13 @@ canonical: /comparisons/past-tenses/
 ## Мінімальна пара
 
 <MinPair
-  a={{ es: 'Ayer comí a las dos.', uk: 'Учора я поїв о другій (конкретний факт..' }}
-  b={{ es: 'Cuando era niño, comía en casa.', uk: 'Коли я був дитиною, я їв удома (звичка..' }}
+  a={{ es: 'Ayer comí a las dos.', uk: 'Учора я поїв о другій (конкретний факт).' }}
+  b={{ es: 'Cuando era niño, comía en casa.', uk: 'Коли я був дитиною, я їв удома (звичка).' }}
 />
 
 <MinPair
-  a={{ es: 'Ya he comido.', uk: 'Я вже поїв (і зараз ситий..' }}
-  b={{ es: 'Comí hace una hora.', uk: 'Я поїв годину тому (просто факт минулого..' }}
+  a={{ es: 'Ya he comido.', uk: 'Я вже поїв (і зараз ситий).' }}
+  b={{ es: 'Comí hace una hora.', uk: 'Я поїв годину тому (просто факт минулого).' }}
 />
 
 ## Типові помилки україномовних
@@ -45,7 +49,7 @@ canonical: /comparisons/past-tenses/
 <Mistake
   bad="Ayer he comido a las dos."
   good="Ayer comí a las dos."
-  why="«Ayer»-відрізаний від теперішнього, минулий момент. З perfecto результат має бути актуальним зараз; з «ayer» звичайніше indefinido. "
+  why="«Ayer» — відрізаний від теперішнього, минулий момент. З perfecto результат має бути актуальним зараз; з «ayer» звичайніше indefinido."
 />
 <Mistake
   bad="Cuando era niño, comí en casa."
@@ -55,12 +59,12 @@ canonical: /comparisons/past-tenses/
 <Mistake
   bad="Esta semana comí mucho."
   good="Esta semana he comido mucho."
-  why="«Esta semana»-період, що триває, тому perfecto зустрічається значно частіше.«
+  why="«Esta semana» — період, що триває, тому perfecto зустрічається значно частіше."
 />
 
 <Note kind="region" title="Регіональна нота">
   У Латинській Америці (особливо в Мексиці й Андському регіоні) perfecto у розмовному мовленні
-  вживають рідше, ніж в Іспанії — там надійніше звучить <em>comí</em> навіть для «я вже поїв»,
-  якщо немає прямої прив'язки до теперішнього. Іспанці ж, навпаки, можуть казати <em>he comido</em>
+  вживають рідше, ніж в Іспанії — там надійніше звучить comí навіть для «я вже поїв»,
+  якщо немає прямої прив'язки до теперішнього. Іспанці ж, навпаки, можуть казати he comido
   для нещодавньої дії, пов'язаної з сьогоденням.
 </Note>

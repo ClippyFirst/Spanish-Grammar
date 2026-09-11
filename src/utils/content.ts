@@ -17,7 +17,10 @@ export interface EntryPath {
 }
 
 export function parseId(id: string): EntryPath {
-  const parts = id.split('/');
+  // Astro v5 content ids may include the file extension ("verbs/ser-estar.mdx").
+  // Strip it so slugs and URLs never contain ".mdx".
+  const clean = id.replace(/\.(mdx|md)$/i, '');
+  const parts = clean.split('/');
   // Astro `type: 'content'` collections generate IDs like "verbs/ser-estar"
   // (category/slug), WITHOUT the language prefix. We hardcode the language
   // because this project currently has only one content collection ("es").

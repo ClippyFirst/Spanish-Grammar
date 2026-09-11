@@ -80,7 +80,7 @@ export const categories: Category[] = [
     titleUk: 'Дієслова',
     titleEs: 'Verbos',
     description:
-      'Кон'југація, регулярні/нерегулярні, reflexives, gustar, personal a, ser/estar.',
+      'Конʼюгація, регулярні/нерегулярні, reflexives, gustar, personal a, ser/estar.',
     order: 9,
   },
   {

@@ -24,7 +24,6 @@ interface Props {
 const { entry, all } = Astro.props;
 const { Content, headings } = await render(entry);
 const related = resolveRelated(entry, all);
-const cat = getCategory(entry.data.category);
 ---
 <GrammarLayout entry={entry} headings={headings} related={related}>
   <Content components={mdxComponents} />

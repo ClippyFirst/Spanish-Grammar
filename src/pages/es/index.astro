@@ -2,7 +2,7 @@
 // Grammar index: /es/ — lists all categories.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { sortedCategories } from '../../../data/categories';
+import { sortedCategories } from '../../data/categories';
 import { categoryUrl, parseId } from '../../utils/content';
 
 const entries = await getCollection('es');

@@ -46,7 +46,7 @@ src/components/         # Astro + MDX-компоненти
 src/layouts/            # BaseLayout, GrammarLayout, ComparisonLayout
 src/pages/             # маршрути (/, /es/, /es/[cat]/, /es/[cat]/[slug]/, /search/, /comparisons/, ...)
 src/styles/             # дизайн-система (tokens, base, components, grammar, prose)
-data/categories.ts      # єдине джерело категорій і їхніх назв
+src/data/categories.ts   # єдине джерело категорій і їхніх назв
 src/utils/content.ts     # побудова URL, пов'язані теми
 public/                # статичні файли (favicon, robots.txt)
 ```
@@ -65,7 +65,7 @@ URL має вигляд `/es/<category>/<slug>/`. Сайт спроєктова�
 
 ## Категорії
 
-16 розділів: fundamentals, nouns, articles, adjectives, adverbs, pronouns, prepositions, conjunctions, verbs, tenses, moods, periphrases, sentence-structure, word-formation, spelling, regional. Див. `data/categories.ts` — там змінюються назви, описи і порядок.
+16 розділів: fundamentals, nouns, articles, adjectives, adverbs, pronouns, prepositions, conjunctions, verbs, tenses, moods, periphrases, sentence-structure, word-formation, spelling, regional. Див. `src/data/categories.ts` — там змінюються назви, описи і порядок.
 
 
 

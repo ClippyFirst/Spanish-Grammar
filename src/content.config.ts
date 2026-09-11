@@ -11,7 +11,7 @@ const es = defineCollection({
     // Language code of the grammar language (currently only Spanish).
     language: z.enum(['es']).default('es'),
 
-    // Category key — must exist in data/categories.ts.
+    // Category key — must exist in src/data/categories.ts.
     category: z.string(),
 
     // Titles in the three reference languages.

@@ -11,9 +11,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 *.log
-!pc_full.log
-!pt_full.log
-!pw_full.log
 
 # environment variables
 .env

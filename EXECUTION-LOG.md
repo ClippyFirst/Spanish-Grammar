@@ -58,9 +58,10 @@
 ## НАСТУПНЕ (за plan-standardization-prompts.md)
 
 ### Фаза 1 (завершити)
-- [ ] Видалити `data/categories.ts`; `git rm` артефактів (OUT.txt, diag.txt, build*.log, *.cjs, checkbuild.ps1, pc/pt/pw_full.log).
-- [ ] Порожні директорії (adverbs/, conjunctions/subordinating/ …) — видалити або .gitkeep + TODO.
-- [ ] `npm run build:full` → 48 pages + Pagefind без `no html lang`.
+- [x] Видалити `data/categories.ts` (DONE: коміт `41ab899`, фізично відсутній); `git rm` 17 артефактів (DONE: той самий коміт).
+- [x] Порожні директорії — DONE: на диску їх нема (`dir src/content/es` → 13 категорій без вкладених порожніх); в git їх і не було.
+- [x] `npm run build:full` → 48 pages + Pagefind без `no html lang` (DONE 2026-09-12: `Indexed 48 pages, 1 language uk`, лишився лише очікуваний `uk stemming`).
+- [x] `ComparisonLayout` «Інші порівняння» 3 → 5 (DONE). `.gitignore`: прибрано `!pc/pt/pw_full.log` (DONE).
 
 ### Фаза 2 — Стандарт сторінки
 - Золотий стандарт `ser-estar.mdx` (prompt_content p.13, A–L). Прогнати 24 сторінки. Critical Depth першими.

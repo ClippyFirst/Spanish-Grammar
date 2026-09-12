@@ -65,6 +65,8 @@
 
 ### Фаза 2 — Стандарт сторінки
 - Золотий стандарт `ser-estar.mdx` (prompt_content p.13, A–L). Прогнати 24 сторінки. Critical Depth першими.
+- [x] Batch 1 (2026-09-12, коміт `cd979ed`, 13 файлів): gustar (+region-Note), por-para (+Mistake, +comparison-link), presente-de-indicativo (`indicatorio`→`indicativo`), personal-a (+region-Note), genero (related `nouns`→`ser-estar`, category-links), definite-indefinite (related `nouns`→`ser-estar`, +adjective-link), hay-vs-estar (RU-блок `why`→UK, `exo`→нормальний short, дублікат keyword, +region-Note), coordinating (`Conjuncións coordinadoras`→`Conjunciones coordinantes`, `yu`→прибрано, related→реальні, y/e-правило переписано, мертві лінки→реальні), personal-pronouns-omission (RU-фрагменти `Warsaw/тоже живут`→UK, Mistakes переписано, +uk-Note/+region-Note, `Pрезентативний`→`Теперішній`), regional-overview (+leísmo-MinPair, +Mistake, +related), voseo (+Mistake, +uk-Note, +related), place (вигаданий Mistake→реальна пара en/a, +uk-Note/+region-Note, related→реальні), time (RU-keywords→UK, related→реальні, MinPair-кавички, +uk-Note/+region-Note).
+- Перевірка batch 1: validate 0 errors, links 0 broken, build 48 pages ✅. Push ✅.
 
 ### Фаза 3 — Нові сторінки (P1 з content-plan.md, ціль 35)
 - Порядок: articles/nouns/adjectives/adverbs → pronouns → conjunctions → prepositions → verbs → tenses → moods → sentence-structure. Кожна: `npm run validate` перед комітом.

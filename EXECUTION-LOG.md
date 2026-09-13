@@ -74,10 +74,12 @@
 - ✅ Фаза 2 ЗАВЕРШЕНА: всі 24 сторінки відповідають чек-листу — MinPair на ключових контрастах, region-Note на кожній сторінці, related/links лише на реальні URL, UA-кавички в MDX-пропсах, жодних RU-фрагментів.
 
 ### Фаза 3 — Нові сторінки (P1 з content-plan.md, ціль 35)
-- Порядок: articles/nouns/adjectives/adverbs → pronouns → conjunctions → prepositions → verbs → tenses → moods → sentence-structure. Кожна: `npm run validate` перед комітом.
+- [x] Batch P1-1 (2026-09-13, 12 файлів, 24 → 36 сторінок): articles/zero-article, articles/neutral-lo, nouns/numero-plural, pronouns/demonstrative-pronouns, pronouns/possessive-pronouns, tenses/pluscuamperfecto, tenses/futuro-simple, moods/subjunctive-triggers, moods/imperativo, sentence-structure/word-order, sentence-structure/questions, sentence-structure/double-negation.
+- Перевірка: validate 36 files 0 errors, links 49 URLs 0 broken, build 60 pages ✅.
+- Залишок P1 (~20): pronouns/se, pronouns/interrogative, pronouns/indefinite, pronouns/lo-neutral, tenses/condicional-simple, periphrases/tener-que+hay-que+poder/soler/acabar-de/volver-a, prepositions/verbs-with-prepositions, sentence-structure(conditional/reported/passive) — наступні батчі.
 
 ### Метрики зараз
-- Build OK 48 pages | Pagefind OK | validate 0 errors | links 0 broken | Контент 24/150+ (~16%).
+- Build OK 60 pages | Pagefind — | validate 0 errors (36 files) | links 0 broken (49 URLs) | Контент 36/150+ (~24%).
 
 ---
 

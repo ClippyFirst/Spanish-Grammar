@@ -1,4 +1,7 @@
 // Helpers for building URLs and resolving related topics.
+// All URLs respect Astro's configured `base` (e.g. "/Spanish-Grammar" on
+// GitHub Pages project sites): `withBase()` prefixes it, so the site works
+// both locally (base "/") and in production under a sub-path.
 import type { CollectionEntry } from 'astro:content';
 
 export type GrammarEntry = CollectionEntry<'es'>;
@@ -8,6 +11,15 @@ export type GrammarEntry = CollectionEntry<'es'>;
 // We hardcode the language here because this project currently has only one
 // content collection ("es") and future langs get their own collections.
 export const CONTENT_LANG = 'es';
+
+// Astro injects the configured `base` at build time via import.meta.env.BASE_URL.
+const SITE_BASE = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+
+/** Prefix a root-absolute path with the site base ("/es/..." -> "/Spanish-Grammar/es/..." in prod). */
+export function withBase(path: string): string {
+  if (!path.startsWith('/')) return `${SITE_BASE}/${path}`;
+  return `${SITE_BASE}${path}`;
+}
 
 // A parsed entry id with the language made explicit.
 export interface EntryPath {
@@ -36,10 +48,10 @@ export function parseId(id: string): EntryPath {
   };
 }
 
-// Stable, readable URL: /es/<category>/<slug>/
+// Stable, readable URL: /es/<category>/<slug>/ (prefixed with site base in prod)
 export function entryUrl(entry: GrammarEntry): string {
   const { lang, category, slug } = parseId(entry.id);
-  return `/${lang}/${category}/${slug}/`;
+  return withBase(`/${lang}/${category}/${slug}/`);
 }
 
 // Build a lookup so `related` frontmatter slugs resolve to real pages.
@@ -99,7 +111,7 @@ export function resolveRelated(entry: GrammarEntry, all: GrammarEntry[]): Gramma
 }
 
 export function categoryUrl(category: string): string {
-  return `/es/${category}/`;
+  return withBase(`/es/${category}/`);
 }
 
 export function categoryLabel(category: string): string {

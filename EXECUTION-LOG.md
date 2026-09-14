@@ -80,10 +80,12 @@
 - Перевірка: validate 45 files 0 errors, links 58 URLs 0 broken, build 69 pages ✅.
 - [x] Batch P1-3 (2026-09-14, 4 файли, 45 → 49 сторінок): periphrases/frequent-periphrases (soler/acabar-de/volver-a/seguir/dejar-de), pronouns/tu-usted-vosotros-ustedes (tuteo/ustedeo, vosotros-узгодження), sentence-structure/passive-voice (ser-пасив vs se-пасив), adverbs/formation-and-position (-mente, muy/mucho, tan/tanto).
 - Перевірка: validate 49 files 0 errors, links 63 URLs 0 broken, build 74 pages ✅.
-- Залишок P1 (~5): conjunctions/subordinating, verbs (infinitivo/gerundio/participio/irregulares), spelling-база — наступний батч. Ціль 35 P1 буде перевиконана (~54).
+- [x] Batch P1-4 (2026-09-14, 4 файли, 49 → 53 сторінки — P1 ЗАКРИТО ✅): conjunctions/subordinating (aunque/cuando — індикатив/субхунтив, заборона futuro після cuando), verbs/conjugations (-ar/-er/-ir, таблиця презенса), verbs/irregular-verbs (ексцентрики, чобіт e→ie/o→ue, орфографічні c→zc), spelling/accent-marks (agudas/llanas/esdrújulas, діакритичні пари, перша сторінка spelling).
+- Перевірка: validate 53 files 0 errors, links 68 URLs 0 broken, build 79 pages ✅.
 
 ### Метрики зараз
-- Build OK 74 pages | Pagefind — | validate 0 errors (49 files) | links 0 broken (63 URLs) | Контент 49/150+ (~33%).
+- ✅ P1 ЗАКРИТО: 53 контент-сторінки (ціль 35 — перевиконано). Build OK 79 pages | validate 0 errors (53 files) | links 0 broken (68 URLs) | Контент 53/150+ (~35%).
+- Наступне — Фаза 4/5/6 за plan-standardization: UX-полірування (ComparisonLayout, search, mobile), CI (.github/workflows/deploy.yml), deploy (PUBLIC_BASE/SITE_URL).
 
 ---
 

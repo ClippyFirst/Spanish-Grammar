@@ -76,12 +76,14 @@
 ### Фаза 3 — Нові сторінки (P1 з content-plan.md, ціль 35)
 - [x] Batch P1-1 (2026-09-13, 12 файлів, 24 → 36 сторінок): articles/zero-article, articles/neutral-lo, nouns/numero-plural, pronouns/demonstrative-pronouns, pronouns/possessive-pronouns, tenses/pluscuamperfecto, tenses/futuro-simple, moods/subjunctive-triggers, moods/imperativo, sentence-structure/word-order, sentence-structure/questions, sentence-structure/double-negation.
 - Перевірка: validate 36 files 0 errors, links 49 URLs 0 broken, build 60 pages ✅.
-- [x] Batch P1-2 (2026-09-13, 9 файлів, 36 → 45 сторінок): pronouns/se-reflexive-impersonal-passive (5 функцій se), pronouns/interrogative-pronouns (тільди, qué/cuál), pronouns/indefinite-pronouns (algo/nada, algún скорочення), tenses/condicional-simple (si+subjuntiuvo, заборона condicional після si), periphrases/tener-que-hay-que, periphrases/ir-a-infinitivo, prepositions/verbs-with-prepositions (pensar en/soñar con/casarse con), sentence-structure/conditional-sentences (3 типи), sentence-structure/reported-speech (зсув часів).
+- [x] Batch P1-2 (2026-09-13, 9 файлів, 36 → 45 сторінок — закомічено паралельним процесом як `359ebd7`, перевірено): pronouns/se-reflexive-impersonal-passive (5 функцій se), pronouns/interrogative-pronouns (тільди, qué/cuál), pronouns/indefinite-pronouns (algo/nada, algún скорочення), tenses/condicional-simple (si+subjuntivo, заборона condicional після si), periphrases/tener-que-hay-que, periphrases/ir-a-infinitivo, prepositions/verbs-with-prepositions (pensar en/soñar con/casarse con), sentence-structure/conditional-sentences (3 типи), sentence-structure/reported-speech (зсув часів).
 - Перевірка: validate 45 files 0 errors, links 58 URLs 0 broken, build 69 pages ✅.
-- Залишок P1 (~10): periphrases (poder/soler/acabar-de/volver-a/seguir), pronouns/tú-usted-vosotros-ustedes, sentence-structure (passive/se-passive/se-impersonal), adverbs — наступний батч.
+- [x] Batch P1-3 (2026-09-14, 4 файли, 45 → 49 сторінок): periphrases/frequent-periphrases (soler/acabar-de/volver-a/seguir/dejar-de), pronouns/tu-usted-vosotros-ustedes (tuteo/ustedeo, vosotros-узгодження), sentence-structure/passive-voice (ser-пасив vs se-пасив), adverbs/formation-and-position (-mente, muy/mucho, tan/tanto).
+- Перевірка: validate 49 files 0 errors, links 63 URLs 0 broken, build 74 pages ✅.
+- Залишок P1 (~5): conjunctions/subordinating, verbs (infinitivo/gerundio/participio/irregulares), spelling-база — наступний батч. Ціль 35 P1 буде перевиконана (~54).
 
 ### Метрики зараз
-- Build OK 60 pages | Pagefind — | validate 0 errors (36 files) | links 0 broken (49 URLs) | Контент 36/150+ (~24%).
+- Build OK 74 pages | Pagefind — | validate 0 errors (49 files) | links 0 broken (63 URLs) | Контент 49/150+ (~33%).
 
 ---
 

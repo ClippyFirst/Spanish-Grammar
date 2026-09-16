@@ -85,7 +85,8 @@
 
 ### Метрики зараз
 - ✅ P1 ЗАКРИТО: 53 контент-сторінки (ціль 35 — перевиконано). Build OK 79 pages | validate 0 errors (53 files) | links 0 broken (68 URLs) | Контент 53/150+ (~35%).
-- Наступне — Фаза 4/5/6 за plan-standardization: UX-полірування (ComparisonLayout, search, mobile), CI (.github/workflows/deploy.yml), deploy (PUBLIC_BASE/SITE_URL).
+- ✅ Фаза 5/6 (deploy-готовність, коміти `ffe6176`+`d543872`): `withBase()` у всіх навігаціях (header+mobile, breadcrumbs, search-redirect, pagefind-імпорт, 404, comparisons), `.github/workflows/deploy.yml` (validate+links+build:full, PUBLIC_BASE/SITE_URL), prod-білд перевірено: canonical `.../Spanish-Grammar/...`, посилання `/Spanish-Grammar/...`, Pagefind 79 pages/4465 words.
+- Наступне — Фаза 4 (UX) + P2-контент (28 сторінок: verbs infinitivo/gerundio/participio, spelling b/v/c/z/g/j, word-formation, regional-розширення).
 
 ---
 

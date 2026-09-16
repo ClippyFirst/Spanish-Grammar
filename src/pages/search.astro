@@ -23,10 +23,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 </BaseLayout>
 
-<script is:inline>
+<script is:inline define:vars={{ base: import.meta.env.BASE_URL ?? '/' }}>
   // Load Pagefind UI lazily after build artifacts are present.
   // is:inline => Astro does not bundle this; the /pagefind/*.js files
   // exist only after `pagefind --site dist` runs (build:full).
+  // `base` (e.g. "/Spanish-Grammar/") prefixes the Pagefind asset URL so
+  // search works both locally ("/") and on GitHub Pages sub-paths.
   async function initSearch() {
     if (window.__pagefindUI) return;
     var url = new URL(window.location.href);
@@ -35,7 +37,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     if (!uiEl) return;
     uiEl.innerHTML = '';
     try {
-      var mod = await import('/pagefind/pagefind-ui.js');
+      var prefix = (typeof base === 'string' ? base : '/').replace(/\/$/, '');
+      var mod = await import(prefix + '/pagefind/pagefind-ui.js');
       var ui = new mod.PagefindUI({
         element: '#search',
         showSubResults: false,

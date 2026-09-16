@@ -26,10 +26,10 @@ const isActive = (p: string) => pathname.startsWith(p);
   </div>
 
   <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">
-    <a href="/es/">Граматика</a>
-    <a href="/comparisons/">Порівняння</a>
-    <a href="/search/">Пошук</a>
-    <a href="/about/">Про сайт</a>
+    <a href={withBase('/es/')}>Граматика</a>
+    <a href={withBase('/comparisons/')}>Порівняння</a>
+    <a href={withBase('/search/')}>Пошук</a>
+    <a href={withBase('/about/')}>Про сайт</a>
   </nav>
 </header>
 

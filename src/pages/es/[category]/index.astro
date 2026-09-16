@@ -3,7 +3,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCategory } from '../../../data/categories';
-import { entryUrl, parseId } from '../../../utils/content';
+import { entryUrl, parseId, withBase } from '../../../utils/content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('es');
@@ -25,8 +25,8 @@ const entries = (await getCollection('es'))
   <div class="container">
     <nav class="breadcrumbs" aria-label="Хлібні крихти">
       <ol>
-        <li><a href="/">Головна</a></li>
-        <li><a href="/es/">Граматика</a></li>
+        <li><a href={withBase('/')}>Головна</a></li>
+        <li><a href={withBase('/es/')}>Граматика</a></li>
         <li aria-current="page">{cat?.titleUk ?? category}</li>
       </ol>
     </nav>

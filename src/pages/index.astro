@@ -3,7 +3,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories } from '../data/categories';
-import { entryUrl, categoryUrl, parseId } from '../utils/content';
+import { entryUrl, categoryUrl, parseId, withBase } from '../utils/content';
 
 const entries = await getCollection('es');
 const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 8);
@@ -64,7 +64,7 @@ const comparisons = [
       <ul class="topic-list">
         {comparisons.map((c2k) => (
           <li>
-            <a class="card-topic" href={`/comparisons/${c2k.slug}/`}>
+            <a class="card-topic" href={withBase(`/comparisons/${c2k.slug}/`)}>
               <span class="t-es">{c2k.titleUk}</span>
               <span class="t-uk">{c2k.desc}</span>
             </a>
@@ -91,20 +91,21 @@ const comparisons = [
   </div>
 </BaseLayout>
 
-<script is:inline>
+<script is:inline define:vars={{ base: import.meta.env.BASE_URL ?? '/' }}>
   (function () {
+    var prefix = (typeof base === 'string' ? base : '/').replace(/\/$/, '');
     var input = document.getElementById('home-search');
     if (!input) return;
     input.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' && input.value.trim()) {
-        window.location.href = '/search/?q=' + encodeURIComponent(input.value.trim());
+        window.location.href = prefix + '/search/?q=' + encodeURIComponent(input.value.trim());
       }
     });
     var btn = document.createElement('button');
     btn.className = 'search-arrow';
     btn.setAttribute('aria-label', 'Перейти до пошуку');
     btn.addEventListener('click', function () {
-      window.location.href = '/search/?q=' + encodeURIComponent(input.value.trim());
+      window.location.href = prefix + '/search/?q=' + encodeURIComponent(input.value.trim());
     });
     input.parentNode.appendChild(btn);
   })();

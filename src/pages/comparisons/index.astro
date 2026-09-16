@@ -1,6 +1,7 @@
 ---
 // Comparisons index.
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../utils/content';
 
 const comparisons = [
   {
@@ -38,7 +39,7 @@ const comparisons = [
   <div class="container" style="max-width:860px">
     <nav class="breadcrumbs" aria-label="Хлібні крихти">
       <ol>
-        <li><a href="/">Головна</a></li>
+        <li><a href={withBase('/')}>Головна</a></li>
         <li aria-current="page">Порівняння</li>
       </ol>
     </nav>
@@ -52,7 +53,7 @@ const comparisons = [
     <ul class="topic-list">
       {comparisons.map((c) => (
         <li>
-          <a class="card-topic" href={c.url}>
+          <a class="card-topic" href={withBase(c.url)}>
             <span class="t-es">{c.title}</span>
             <span class="t-uk">{c.desc}</span>
           </a>

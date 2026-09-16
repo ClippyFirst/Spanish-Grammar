@@ -3,7 +3,7 @@
 // breadcrumbs → page head → TOC (desktop) → prose content → related topics.
 import BaseLayout from './BaseLayout.astro';
 import { getCategory } from '../data/categories';
-import { entryUrl, categoryUrl, parseId, categoryLabel } from '../utils/content';
+import { entryUrl, categoryUrl, parseId, categoryLabel, withBase } from '../utils/content';
 import type { GrammarEntry } from '../utils/content';
 
 interface Heading { depth: number; slug: string; text: string; }
@@ -35,8 +35,8 @@ function regionLabel(r: string): string {
   <div class="container">
     <nav class="breadcrumbs" aria-label="Хлібні крихти">
       <ol>
-        <li><a href="/">Головна</a></li>
-        <li><a href="/es/">Граматика</a></li>
+        <li><a href={withBase('/')}>Головна</a></li>
+        <li><a href={withBase('/es/')}>Граматика</a></li>
         <li><a href={categoryUrl(category)}>{cat?.titleUk ?? categoryLabel(category)}</a></li>
         <li aria-current="page">{entry.data.title_uk}</li>
       </ol>

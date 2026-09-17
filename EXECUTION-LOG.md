@@ -10,25 +10,25 @@
 ## Фаза 3 — Наповнення
 
 - [x] P1–P2 → 80
-- [x] P3-1 (80→88) … P3-5 (112→120) — див. попередні коміти логу
-- [x] **P3-6 (2026-09-17, коміт `2bd107b`, 8 файлів, 120→128)**:
-  - `tenses/conditionals-review` — 3 типи si, заборона condicional після si
-  - `sentence-structure/passive-se-vs-ser` — se-пасив vs ser + participio
-  - `pronouns/object-pronoun-placement` — lo veo / verlo / míralo / no lo mires
-  - `prepositions/time-expressions` — en / a las / por la mañana / hace
-  - `prepositions/place-review` — en vs a, de, hacia, entre…
-  - `adjectives/agreement-traps` — gente, usted, кілька іменників
-  - `verbs/haber-vs-tener` — hay / tengo / he comido
-  - `fundamentals/numbers-in-speech` — veintiuno, cien/ciento, millón de
+- [x] P3-1 … P3-6 (до 128) — див. попередні коміти
+- [x] **P3-7 (2026-09-17, коміт `6088968`, 8 файлів, 128→136)**:
+  - `sentence-structure/reported-speech-review` — зсув часів у estilo indirecto
+  - `moods/subjunctive-triggers-list` — розширені групи тригерів
+  - `word-formation/diminutives-review` — -ito/-illo, регіони, орфографія
+  - `verbs/ser-estar-location` — está en vs la fiesta es en
+  - `articles/articles-with-names` — el Tajo, la India, el señor
+  - `verbs/gerund-uses` — proceso, simultaneidad, не після prep
+  - `verbs/infinitive-as-noun` — fumar es malo, al llegar
+  - `adjectives/comparison-structures` — más que / tan como / el más
 
 ### Метрики
-- **128 контент-сторінок** (~85% орієнтира 150+).
-- Довідник уже покриває майже всі щоденні зони + системні опозиції + регіональні блоки + карту інтерференцій UA.
+- **136 контент-сторінок** (~90% орієнтира 150+).
+- Довідник близький до повноти для щоденного користування україномовними.
 
 ### Наступне
-- QA: `validate` + `links` + `build:full`
-- Взаємні related, popular/featured
-- Полірування thin-сторінок
-- Залишки syllabus — лише точкове; акцент на якість і навігацію
+- QA: validate + links + build
+- Related у обидва боки, popular/featured
+- Полірування thin / старих сторінок
+- Залишки — лише точкове; далі якість і UX
 
 ---

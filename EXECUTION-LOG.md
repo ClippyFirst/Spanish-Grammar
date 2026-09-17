@@ -82,14 +82,14 @@
 - Перевірка: validate 49 files 0 errors, links 63 URLs 0 broken, build 74 pages ✅.
 - [x] Batch P1-4 (2026-09-14, 4 файли, 49 → 53 сторінки): conjunctions/subordinating (aunque/cuando — індикатив/субхунтив, заборона futuro після cuando), verbs/conjugations (-ar/-er/-ir, таблиця презенса), verbs/irregular-verbs (ексцентрики, чобіт e→ie/o→ue, орфографічні c→zc), spelling/accent-marks (agudas/llanas/esdrújulas, діакритичні пари, перша сторінка spelling).
 - Перевірка: validate 53 files 0 errors, links 68 URLs 0 broken, build 79 pages ✅.
-- [x] Batch P2-2 (2026-09-17, 4 файли, 64 → 68 сторінок): adjectives/adjective-position (після=опис/перед=оцінка, pobre/gran/viejo, усічення buen/gran/primer), adjectives/degrees-of-comparison (más...que/el más...de, mejor/peor/mayor, que-vs-de), moods/imperfecto-subjuntivo (основа від hablaron, -ra/-se, si-tuviera, quería-que-vinieras), sentence-structure/relative-clauses (que/donde/cuyo/lo-que, коми, todo-LO-que, субхунтив у неозначених).
-- Перевірка: validate 68 files 0 errors, links 84 URLs 0 broken, build 95 pages ✅.
-- adjectives тепер 3 сторінки (повна база); moods — 4; sentence-structure — 9.
+- [x] Batch P2-3 (2026-09-18, 5 файлів, 68 → 73 сторінки): fundamentals/reading-rules (таблиця ca/ce/que/gue, дифтонги/hiatus, не-йотувати!), fundamentals/date-time-numbers (cien/ciento, mil/millón+de, es-la-una/son-las), conjunctions/que-de-que (dequeísmo/queísmo, перевірка через algo), regional/mexico (ustedes, ¿mande?, ahorita), regional/rioplatense (vos+sh, che/boludo).
+- Перевірка: validate 73 files 0 errors, links 89 URLs 0 broken, build 100 pages ✅.
+- fundamentals тепер 3 сторінки; conjunctions — 3 (повна база); regional — 6.
 
 ### Метрики зараз
-- 68 контент-сторінок. Build OK 95 pages | validate 0 errors (68 files) | links 0 broken (84 URLs) | Контент 68/150+ (~45%).
+- 73 контент-сторінки. Build OK 100 pages 🎉 (перша тризначна!) | validate 0 errors (73 files) | links 0 broken (89 URLs) | Контент 73/150+ (~49%).
 - ✅ Фаза 5/6 (deploy-готовність, коміти `ffe6176`+`d543872`): `withBase()` у всіх навігаціях (header+mobile, breadcrumbs, search-redirect, pagefind-імпорт, 404, comparisons), `.github/workflows/deploy.yml` (validate+links+build:full, PUBLIC_BASE/SITE_URL), prod-білд перевірено: canonical `.../Spanish-Grammar/...`, посилання `/Spanish-Grammar/...`, Pagefind 79 pages/4465 words.
-- Наступне — P2-3: fundamentals (stress/reading/numbers), conjunctions (que-de-que), periphrases (poder/soler остаточно), regional (mexico/caribbean/argentina глибше) — ~6 файлів.
+- Наступне — P2-4 (до ~80): adverbs (frequency/time/manner глибше), moods (perfecto/pluscuamperfecto-subjuntivo), tenses (futuro-perfecto, condicional-compuesto), sentence-structure (subordinate-clauses, agreement) — ~7 файлів. Далі P3/фінішна пряма.
 
 ---
 

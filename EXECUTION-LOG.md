@@ -10,28 +10,25 @@
 ## Фаза 3 — Наповнення
 
 - [x] P1–P2 → 80
-- [x] P3-1 (80→88): leísmo, double object, when-not-subjunctive, irregular plurals, special articles, sequence of tenses, meaning-by-position, imperative+pronouns
-- [x] P3-2 (88→96): augmentatives, caribbean, compound-complex, pretérito anterior, common constructions, pronominal, tenses overview, deber-poder-soler
-- [x] P3-3 (96→104): haber auxiliary, possessive constructions, reciprocal, stem-changing, orthographic changes, central-america, irregular comparatives, se-impersonal
-- [x] P3-4 (104→112): preterito-vs-imperfecto, ser-estar-hay, discourse connectors, andean, verb+infinitive patterns, gender exceptions, relative clauses depth, muy-mucho-tan-tanto
-- [x] **P3-5 (2026-09-17, коміт `45a0bba`, 8 файлів, 112→120)**:
-  - `prepositions/por-para-markers` — маркери + MinPair por/para
-  - `articles/definite-vs-indefinite` — el/un опозиція для UA
-  - `sentence-structure/negation-patterns` — no/nunca/nadie, подвійне заперечення
-  - `sentence-structure/question-formation` — ¿qué?, інверсія, por qué/porque
-  - `moods/futuro-de-subjuntivo` — рідкісний час (розпізнавання)
-  - `fundamentals/ua-interference` — карта типових кальок україномовних
-  - `spelling/stress-and-accents-review` — agudas/llanas/esdrújulas + діакритика
-  - `verbs/ser-estar-with-adjectives` — listo/aburrido/bueno пари
+- [x] P3-1 (80→88) … P3-5 (112→120) — див. попередні коміти логу
+- [x] **P3-6 (2026-09-17, коміт `2bd107b`, 8 файлів, 120→128)**:
+  - `tenses/conditionals-review` — 3 типи si, заборона condicional після si
+  - `sentence-structure/passive-se-vs-ser` — se-пасив vs ser + participio
+  - `pronouns/object-pronoun-placement` — lo veo / verlo / míralo / no lo mires
+  - `prepositions/time-expressions` — en / a las / por la mañana / hace
+  - `prepositions/place-review` — en vs a, de, hacia, entre…
+  - `adjectives/agreement-traps` — gente, usted, кілька іменників
+  - `verbs/haber-vs-tener` — hay / tengo / he comido
+  - `fundamentals/numbers-in-speech` — veintiuno, cien/ciento, millón de
 
 ### Метрики
-- **120 контент-сторінок** (80% орієнтира 150+). 🎉
-- Є окрема карта інтерференцій UA → ES і всі ключові опозиції винесені в глибокі сторінки.
+- **128 контент-сторінок** (~85% орієнтира 150+).
+- Довідник уже покриває майже всі щоденні зони + системні опозиції + регіональні блоки + карту інтерференцій UA.
 
 ### Наступне
-- **QA**: validate + links + build:full
-- Взаємні related, popular/featured на топ-темах
-- Полірування найкоротших / найстаріших сторінок
-- Залишки: точкове (якщо аудит покаже дірки), далі — якість і UX, не гонитва за 150
+- QA: `validate` + `links` + `build:full`
+- Взаємні related, popular/featured
+- Полірування thin-сторінок
+- Залишки syllabus — лише точкове; акцент на якість і навігацію
 
 ---

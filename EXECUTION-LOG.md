@@ -86,10 +86,21 @@
 - Перевірка: validate 73 files 0 errors, links 89 URLs 0 broken, build 100 pages ✅.
 - fundamentals тепер 3 сторінки; conjunctions — 3 (повна база); regional — 6.
 
+- [x] Batch P2-4 (2026-09-17, коміт `b2ebb6d`, 7 файлів, 73 → 80 сторінок):
+  - `adverbs/types-frequency-time-manner` — частота/час/спосіб/кількість, muy/mucho, tan/tanto
+  - `moods/perfecto-subjuntivo` — haya + participio, завершеність до «зараз»/майбутнього
+  - `moods/pluscuamperfecto-subjuntivo` — hubiera/hubiese + participio, тип 3 умов
+  - `tenses/futuro-perfecto` — habré + participio, завершення до майбутнього орієнтира + припущення
+  - `tenses/condicional-compuesto` — habría + participio, пара до pluscuamperfecto subj.
+  - `sentence-structure/subordinate-clauses` — типи підрядних, ind/subj, таблиця сполучників
+  - `sentence-structure/agreement` — concordancia рід/число, usted, gente, lo que
+- Усі сторінки: MinPair/Mistake/Note(uk+region), related лише на існуючі slug, Conjugation де потрібно, без CEFR у тексті, без RU-фрагментів.
+- Наступне: прогнати validate + links + build (очікувано ~107 pages). Далі P3 — word-formation глибше, spelling (b/v, c/z/s…), regional (leísmo, caribbean), verbs (infinitive/gerundio/participio окремо якщо треба), sentence-structure (compound/complex).
+
 ### Метрики зараз
-- 73 контент-сторінки. Build OK 100 pages 🎉 (перша тризначна!) | validate 0 errors (73 files) | links 0 broken (89 URLs) | Контент 73/150+ (~49%).
+- 80 контент-сторінок (після P2-4). | Контент 80/150+ (~53%).
 - ✅ Фаза 5/6 (deploy-готовність, коміти `ffe6176`+`d543872`): `withBase()` у всіх навігаціях (header+mobile, breadcrumbs, search-redirect, pagefind-імпорт, 404, comparisons), `.github/workflows/deploy.yml` (validate+links+build:full, PUBLIC_BASE/SITE_URL), prod-білд перевірено: canonical `.../Spanish-Grammar/...`, посилання `/Spanish-Grammar/...`, Pagefind 79 pages/4465 words.
-- Наступне — P2-4 (до ~80): adverbs (frequency/time/manner глибше), moods (perfecto/pluscuamperfecto-subjuntivo), tenses (futuro-perfecto, condicional-compuesto), sentence-structure (subordinate-clauses, agreement) — ~7 файлів. Далі P3/фінішна пряма.
+- Наступне — QA після P2-4, потім P3/фінішна пряма.
 
 ---
 

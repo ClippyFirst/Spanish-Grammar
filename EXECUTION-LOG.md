@@ -6,41 +6,34 @@
 
 ---
 
-## 2026-09-11 — Фаза 0–2 (DONE ✅)
+## Фази 0–2 (DONE ✅)
 
-Стабілізація збірки, єдине джерело категорій, контент-хотфікси, QA-скрипти, стандарт сторінки (24 → golden). Деталі — у попередніх комітах логу.
+Стабілізація збірки, категорії, хотфікси, QA-скрипти, стандарт сторінки.
 
-## Фаза 3 — Нові сторінки (наповнення)
+## Фаза 3 — Наповнення
 
-- [x] P1-1 … P2-3 (ранні батчі).
-- [x] P2-4 (2026-09-17, 7 файлів, 73 → 80).
-- [x] P3-1 (2026-09-17, коміт `646a618`, 8 файлів, 80 → 88):
-  leísmo/laísmo/loísmo, double-object-pronouns, when-not-subjunctive, irregular-plurals, special-cases (artículos), sequence-of-tenses, meaning-by-position, imperative-pronouns.
+- [x] P1–P2 батчі (до 80 сторінок).
+- [x] P3-1 (80 → 88): leísmo, double object, when-not-subjunctive, irregular plurals, special articles, sequence of tenses, meaning-by-position, imperative+pronouns.
+- [x] P3-2 (88 → 96): augmentatives, caribbean, compound-complex, pretérito anterior, common constructions, pronominal verbs, tenses overview, deber-poder-soler.
+- [x] **P3-3 (2026-09-17, коміт `68b88d1`, 8 файлів, 96 → 104 сторінок)**:
+  - `verbs/haber-auxiliary` — he/has/ha…, hay ≠ ha, participio незмінний
+  - `nouns/possessive-constructions` — el libro de Juan, vs mi/mío
+  - `pronouns/reciprocal-pronouns` — nos/se + el uno al otro
+  - `verbs/stem-changing-verbs` — e→ie, o→ue, e→i, «чобіт»
+  - `verbs/orthographic-changes` — toqué, llegué, empecé, creyó
+  - `regional/central-america` — ustedes, voseo/ustedeo, ¿mande?, ahorita
+  - `adjectives/irregular-comparatives` — mejor/peor/mayor/menor
+  - `pronouns/se-impersonal` — se dice, se vive; vs pasiva/reflexivo
 
-- [x] **P3-2 (2026-09-17, коміт `ee68558`, 8 файлів, 88 → 96 сторінок)**:
-  - `word-formation/augmentatives` — -ón/-azo/-ote/-udo, відтінки, vs зменшувальні
-  - `regional/caribbean` — ustedes only, ¿qué tú…?, ослаблення -s, seseo
-  - `sentence-structure/compound-complex` — coordinación vs subordinación, коми, схеми
-  - `tenses/preterito-anterior` — hube + participio (рідкісний, літ.; чим замінювати)
-  - `prepositions/common-constructions` — ganas de, dejar de, soñar con, casarse con, consistir en…
-  - `verbs/pronominal-verbs` — levantarse / irse / olvidarse / comerse, групи, позиція
-  - `tenses/tenses-overview` — карта індикативу, ключові опозиції, регіональні нотатки
-  - `periphrases/deber-poder-soler` — обов’язок / можливість / звичка; deber vs tener que vs hay que
+### Метрики
+- **104 контент-сторінки** (~69% від орієнтира 150+).
+- Системні блоки (дієвідміна, займенники, часи, регіональні, словотвір, прийменники) виглядають вже як повноцінний довідник для щоденного користування.
 
-Усі сторінки: логіка, таблиці, MinPair, Mistake, Note(uk+region), related на існуючі slug.
-
-### Метрики зараз
-- **96 контент-сторінок** (~64% від орієнтира 150+).
-- Закриті: збільшувальні, карибський варіант, складені речення, карта часів, pronominal, ключові модальні, стійкі прийменникові конструкції, pretérito anterior (для повноти).
-
-### Наступне (P3-3 / фінішна пряма)
-- Поглибити thin-сторінки за потреби (аудит якості).
-- word-formation: якщо треба окремо derivation / складні слова.
-- regional: leísmo уже є; можна central-america або Andean за бажанням.
-- verbs: auxiliaries (haber/ser/estar як допоміжні) — якщо ще немає окремо.
-- sentence-structure: se impersonal окремо, якщо se-сторінка не покриває.
-- spelling: уже є b-v, c-z-s-g-j, h-y-ll, punctuation — перевірити повноту.
-- QA: `npm run validate` + `links` + `build:full` на поточному обсязі.
-- Потім — полірування, внутрішні лінки в обидва боки, featured/popular, meta.
+### Наступне
+- QA: validate + links + build.
+- Точкове поглиблення найтонших сторінок.
+- Взаємні related-лінки, popular/featured flags.
+- Можливі ще: Andean/Southern Cone глибше, discourse markers, orthography spelling-changes-in-conjugation (частково покрито), numerals already done.
+- Після ~110–120 — акцент на якість і полірування, не на сирий обсяг.
 
 ---

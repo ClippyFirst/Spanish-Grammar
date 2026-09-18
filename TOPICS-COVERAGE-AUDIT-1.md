@@ -1,1 +1,1 @@
-LOADING
+#{CONTENT_FROM_FILE:/home/workdir/artifacts/TOPICS-COVERAGE-AUDIT-1.md}

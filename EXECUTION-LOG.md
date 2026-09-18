@@ -8,23 +8,15 @@
 Стабілізація + **152** контент-сторінки.
 
 ## Силабус `TOPICS-COMPLETE-UA.md`
-- [x] Створено + PCIC-вирівнювання
-- [x] §17 фокус/полярність (*sí* ≈ *do*)
-- [x] **Добито прогалини** (2026-09-18, коміт `3bf99ab`):
-  - **Частини тіла + артикль + dativo** (*me duele la cabeza*, *me lavo las manos*) ⭐
-  - **Зміна стану**: ponerse, volverse, hacerse, convertirse en…
-  - **Hace / hace… que / desde hace / desde**
-  - **Ya / todavía / aún / ya no**
-  - **Deber vs deber de**; haber de
-  - Ser/estar + participio (стан vs пасив)
-  - Подвійні participios (frito/freído…)
-  - Псевдовідносні після ver/oír; perception + INF/ger/que
-  - Ir/venir, llevar/traer (дейксис)
-  - Estar de vs ser de
-  - Mismo; cualquiera/quienquiera; uno / generic tú
-  - Tag-питання; непрямі питання
-  - Mientras vs mientras que; como (3 значення); excepto/salvo
-  - Пріоритет UA: пункти **17–19**
+- [x] Створено; PCIC; §17 фокус; gap-fill
+- [x] **Суперінсет усіх версій** (2026-09-18, коміт `5216038`):
+  - Порівняно коміти: `4554d55` → `40ec45f` → `24af168` → `c0bbeba` → `3bf99ab`
+  - Відновлено детальні bullet-списки з `40ec45f` (~повні §1–16)
+  - Збережено PCIC-таблицю й терміни з `24af168`
+  - Збережено §17.1–17.8 (sí ≈ do, no es que, dislocation…) з `c0bbeba`
+  - Збережено gap-fill з `3bf99ab` (тіло+артикль, зміна стану, hace/ya, deber de…)
+  - Розмір файлу: **~32.7 KB** (раніше стиснута версія була ~10 KB)
+  - Пріоритет UA: 19 пунктів
 
 ### Наступне
 1. Статуси ✅/🟡/❌ за MDX  

@@ -7,14 +7,14 @@
 >
 > Статус: ✅ є · 🟡 частково · ❌ немає · ⭐ критично для UA.
 >
-> **Орієнтир структури:** *Plan curricular del Instituto Cervantes* (PCIC) — інвентар **Gramática** (sustantivo → oración subordinada), плюс Ortografía; адаптовано під довідник UA (без розбиття A1–C2 у меню).
+> **Орієнтир структури:** *Plan curricular del Instituto Cervantes* (PCIC) — інвентар **Gramática**, плюс Ortografía; адаптовано під довідник UA.
 
 ---
 
 ## Принципи відбору
 
-1. Уся практично значуща граматика іспанської.
-2. Акцент на інтерференції UA→ES.
+1. Уся практично значуща граматика іспанської — включно з **мікроконструкціями фокусу, полярності й емфази**, без яких «граматично правильно» ще не означає «звучить природно».
+2. Акцент на інтерференції UA→ES (і на кальках з англійського *do*-support).
 3. Контент: логіка → утворення → вживання/невживання → приклади з перекладом → помилки UA → регіон → related.
 4. Без лексичних словників без граматичного сенсу.
 5. Одна глибока сторінка може закривати кілька підтем.
@@ -28,15 +28,15 @@
 | 3 Artículo | §4 Артиклі |
 | 4 Demostrativos | §7 Займенники |
 | 5 Posesivos | §7 + dativo posesivo |
-| 6 Cuantificadores | §5 + §6 + окремі квантори |
+| 6 Cuantificadores | §5 + §6 |
 | 7 Pronombre | §7 |
 | 8 Adverbio | §6 |
 | 9 Verbo | §10–13 |
-| 10–12 Sintagmas | §14 + §3–5 |
+| 10–12 Sintagmas | §14 |
 | 13 Oración simple | §14 |
 | 14 Coordinación | §9 + §14 |
 | 15 Subordinación | §9 + §14 |
-| Ortografía (PCIC 4) | §2 |
+| Ortografía | §2 |
 
 ---
 
@@ -44,223 +44,182 @@
 
 - [ ] Поняття: слово, морфема, основа, закінчення; частини мови
 - [ ] Змінні / незмінні частини мови
-- [ ] Граматичний рід і число; особа; узгодження (загальне)
+- [ ] Граматичний рід і число; особа; узгодження
 - [ ] Рід vs природна стать
-- [ ] Базова структура речення: підмет, присудок, OD/OI, обставини, означення, **предикатив (complemento predicativo)**
-- [ ] Просте / складне речення (огляд)
+- [ ] Базова структура речення: підмет, присудок, OD/OI, обставини, означення, **предикатив**
+- [ ] Просте / складне речення
 - [ ] Ствердження / заперечення / питання / наказ / вигук / **vocativo**
 - [ ] Базовий порядок слів (SVO) і гнучкість
-- [ ] Абетка і вимова
-- [ ] Правила читання
-- [ ] Дата, години (¿qué hora es?)
-- [ ] Кількісні / порядкові числівники; числа в мовленні
-- [ ] Дроби, відсотки, приблизна кількість
+- [ ] Абетка і вимова; правила читання
+- [ ] Дата, години; числівники; дроби / відсотки
 - [ ] Типові інтерференції UA ⭐
 - [ ] Неправдиві друзі UA–ES ⭐
 - [ ] Регістр: tú/usted, розмова vs письмо
 
 ---
 
-# 2. Орфографія і пунктуація (spelling) — PCIC Ortografía
+# 2. Орфографія і пунктуація (spelling)
 
-- [ ] Agudas / llanas / esdrújulas; тільда
-- [ ] Діакритична тільда (sí/si, tú/tu…)
-- [ ] sólo/solo, aún/aun (норма RAE)
-- [ ] Дифтонги, хіатус; склади
-- [ ] Орфографічні зміни в дієвідміні
+- [ ] Agudas / llanas / esdrújulas; тільда; діакритика
+- [ ] sólo/solo, aún/aun
+- [ ] Дифтонги, хіатус; орфографічні зміни в дієвідміні
 - [ ] ñ, ü, ll/y, ch; b/v, h, r/rr
-- [ ] Велика літера
-- [ ] Пунктуація ¿? ¡!; кома (vocativo, переліки)
-- [ ] Абревіатури і siglas
-- [ ] Запозичення і власні імена
+- [ ] Велика літера; пунктуація ¿? ¡!; кома з vocativo
+- [ ] Абревіатури; запозичення
 
 ---
 
-# 3. Іменники (nouns) — PCIC 1 ⭐
+# 3. Іменники (nouns) ⭐
 
-- [ ] Загальні / власні; конкретні / абстрактні
-- [ ] Рід: -o/-a, винятки ⭐
-- [ ] Epicenos; спільний рід; зміна значення від роду
-- [ ] el agua / el águila + узгодження ⭐
-- [ ] Множина регулярна / особлива; singularia / pluralia tantum
-- [ ] Злічувані / незлічувані
-- [ ] Колективні (gente…) і узгодження
-- [ ] **Sustantivos acotadores** (una loncha de queso, una pastilla de…)
+- [ ] Рід, винятки, epicenos, el agua… ⭐
+- [ ] Множина; singularia/pluralia tantum; злічуваність
+- [ ] Колективні; **acotadores** (una loncha de…)
 - [ ] Присвійні конструкції de + N ⭐
-- [ ] Апозиція
-- [ ] Субстантивація; складні іменники
-- [ ] Професії: чол./жін. форми
+- [ ] Апозиція; субстантивація; складні; професії
 
 ---
 
-# 4. Артиклі (articles) — PCIC 3 ⭐
+# 4. Артиклі (articles) ⭐
 
-- [ ] Означений / неозначений ⭐
-- [ ] **Nombres escuetos** (нульовий артикль: обмеження підмета, predicados complejos: dar clase, tener lugar…) ⭐
+- [ ] el/un; **nombres escuetos** ⭐
 - [ ] Особливі випадки; артикль з іменами
 - [ ] Нейтральний **lo** ⭐
-- [ ] Узагальнення / конкретизація; anafórico / asociativo
+- [ ] Узагальнення / anafórico / asociativo
 
 ---
 
-# 5. Прикметники (adjectives) — PCIC 2
+# 5. Прикметники (adjectives)
 
-- [ ] Узгодження; закінчення
-- [ ] **Calificativos vs relacionales** (materno: без quant / prenominal)
-- [ ] Позиція; зміна значення (viejo amigo…) ⭐
-- [ ] Apócope: buen, mal, gran, primer…
-- [ ] Ступені: más/menos/tan; mejor/peor/mayor/menor ⭐
-- [ ] Comparativos cultos: superior, inferior, anterior, posterior…
-- [ ] Superlativo: -ísimo; prefijos super-/extra-; el más…de
-- [ ] **Metábasis**: el grande; **lo** + adj
-- [ ] Квантифікатори з іменником (mucho, algún…)
-- [ ] Порядок кількох прикметників
+- [ ] Узгодження; calificativos vs **relacionales**
+- [ ] Позиція; зміна значення ⭐
+- [ ] Apócope; ступені; comparativos cultos; -ísimo
+- [ ] **Metábasis**; квантори з N
 
 ---
 
-# 6. Прислівники (adverbs) — PCIC 8
+# 6. Прислівники (adverbs)
 
-- [ ] -mente; позиція
-- [ ] Типи: спосіб, місце, час, частота, ступінь
+- [ ] -mente; позиція; типи
 - [ ] muy / mucho / tan / tanto ⭐
-- [ ] **Focalizadores / intensificadores**: solo, incluso, hasta, apenas…
-- [ ] Adverbios del **modus** / externos al dictum (francamente, sinceramente…)
-- [ ] Conjuntivos: entonces, también, tampoco
-- [ ] Locuciones adverbiales
-- [ ] Відносні / питальні прислівники
+- [ ] **Focalizadores / intensificadores**
+- [ ] Modus / externos al dictum; locuciones
 
 ---
 
-# 7. Займенники і детермінативи (pronouns) — PCIC 4–7 ⭐
+# 7. Займенники (pronouns) ⭐
 
-- [ ] Особові підметові; опускання; емфаза ⭐
-- [ ] tú / usted / vosotros / ustedes / vos ⭐
-- [ ] OD / OI; дублювання OI; se lo ⭐
-- [ ] Позиція клітиків; clitic climbing ⭐
-- [ ] Зворотні / взаємні
-- [ ] **Valores de se** (повний спектр) ⭐
-- [ ] Демонстративні (este/ese/aquel; anafórico discursivo)
-- [ ] Присвійні átonos / tónicos
-- [ ] **Dativo posesivo** (le cortaron el pelo; ¿te hago la cama?) ⭐
-- [ ] Неозначені / квантори
-- [ ] Питальні
-- [ ] **Exclamativos** (¡qué…!, ¡cuánto…!) — окремо від interrogativos
-- [ ] Відносні (que, quien, cuyo, el que, lo que…) ⭐
+- [ ] Підмет; tú/usted/vosotros/ustedes/vos ⭐
+- [ ] OD/OI; se lo; позиція; clitic climbing ⭐
+- [ ] Зворотні / взаємні; **valores de se** ⭐
+- [ ] Демонстративні; присвійні; **dativo posesivo** ⭐
+- [ ] Неозначені; питальні; **exclamativos**; відносні ⭐
 
 ---
 
 # 8. Прийменники (prepositions) ⭐
 
-- [ ] Система (a, de, en, por, para…)
-- [ ] Місце / час
-- [ ] Por vs para ⭐
-- [ ] Особове a ⭐
-- [ ] **Complemento de régimen** (дієслово + обов’язковий prep)
-- [ ] Дієслово / прикметник / іменник + prep
-- [ ] Складені конструкції
+- [ ] Система; місце / час
+- [ ] Por vs para ⭐; особове a ⭐
+- [ ] **Complemento de régimen**; складені конструкції
 
 ---
 
-# 9. Сполучники і зв’язок (conjunctions) — PCIC 14–15
+# 9. Сполучники (conjunctions)
 
-- [ ] Координація: copulativas, disyuntivas, **adversativas**, **distributivas** (ya…ya, bien…bien…)
-- [ ] Pero vs sino ⭐
-- [ ] Підрядні: sustantivas, adjetivas, adverbiales
-- [ ] Час / причина / мета / умова / поступка / наслідок
-- [ ] Ind. vs subj. після сполучника
-- [ ] queísmo / dequeísmo
-- [ ] Дискурсивні конектори ⭐
-- [ ] Розмовні маркери
+- [ ] Координація (вкл. **distributivas**); pero vs sino ⭐
+- [ ] Підрядні за типами; ind. vs subj.
+- [ ] queísmo / dequeísmo; конектори; філери
 
 ---
 
-# 10. Дієслово — система (verbs) — PCIC 9 ⭐
+# 10–13. Дієслово, часи, способи, перифрази ⭐
 
-- [ ] Три дієвідміни; зміна основи; орфографічні зміни ⭐
-- [ ] Неправильні / дефективні
-- [ ] Аспект (не калькувати UA «вид»)
-- [ ] Перехідність; зв’язкові; допоміжні
-- [ ] Formas no personales: infinitivo, gerundio, participio
-- [ ] Haber / tener / hay ⭐
-- [ ] Ser / estar / hay ⭐
-- [ ] Gustar-тип ⭐
-- [ ] Прономінальні; модальні; погода; сприйняття; каузатив
+- [ ] Дієвідміна; зміна основи; неправильні; formas no personales
+- [ ] Haber / tener / hay; ser / estar / hay; gustar-тип ⭐
+- [ ] Усі часи індикатив; indefinido vs imperfecto ⭐
+- [ ] Subjuntivo + тригери / коли ні; ojalá; como si ⭐
+- [ ] Імператив + займенники ⭐
+- [ ] Перифрази (ir a, tener que, acabar de, estar + gerundio…)
 
 ---
 
-# 11. Часи індикативу (tenses) ⭐
+# 14. Структура речення (sentence-structure) ⭐
 
-- [ ] Усі 10 часів PCIC 9.1 (presente → condicional compuesto)
-- [ ] Indefinido vs imperfecto ⭐
-- [ ] Perfecto: регіональна частотність ⭐
-- [ ] Futuro / condicional de conjetura
-- [ ] Sequence of tenses ⭐
-- [ ] Умовні 3 типи + змішані ⭐
-
----
-
-# 12. Способи (moods) — PCIC 9.2–9.3 ⭐
-
-- [ ] Subjuntivo: 4 часи + futuro (розпізнавання)
-- [ ] Тригери / коли ні ⭐
-- [ ] Ojalá; como si; quizá + mood
-- [ ] Імператив ствердж./запереч. + займенники ⭐
-
----
-
-# 13. Перифрази (periphrases) — часто в PCIC під SV / verbo
-
-- [ ] ir a, tener que, hay que, estar + gerundio
-- [ ] acabar de, volver a, dejar de, seguir + gerundio
-- [ ] ponerse a, llevar + gerundio, empezar a, estar a punto de
-- [ ] ir + gerundio; tener + participio (результат)
-
----
-
-# 14. Структура речення (sentence-structure) — PCIC 10–15 ⭐
-
-- [ ] **Sintagma nominal**: ядро, модифікатори, concordancia interna, concordancia con verbo
-- [ ] **Sintagma adjetival**
-- [ ] **Sintagma verbal**: atributo, OD, OI, circunstanciales, **régimen**, **predicativo**
-- [ ] Oración simple: типи (enunciativa, interrogativa, exclamativa, imperativa)
-- [ ] Порядок складників; фокус
-- [ ] Заперечення / подвійне заперечення ⭐
-- [ ] Hay vs estar ⭐
-- [ ] Особове a ⭐
+- [ ] Sintagmas N / Adj / V (atributo, predicativo, régimen)
+- [ ] Порядок; фокус; заперечення ⭐
 - [ ] Підрядні / відносні / умовні / непряма мова ⭐
 - [ ] Пасив ser / se / estar+participio ⭐
-- [ ] Емфаза (sí, cleft); топікалізація
+- [ ] Cleft; топікалізація (база)
 
 ---
 
-# 15. Словотвір (word-formation)
+# 15. Словотвір · # 16. Регіональні ⭐
 
-- [ ] Префікси / суфікси
-- [ ] Зменшувальні / збільшувальні / пейоративи ⭐
-- [ ] -ito від прислівників
-- [ ] Субстантивація / складання
+- [ ] Зменшувальні / збільшувальні; префікси
+- [ ] Voseo; leísmo; perfecto vs indefinido; зони Іспанії / Америки
 
 ---
 
-# 16. Регіональні варіанти (regional) ⭐
+# 17. Мікроконструкції, фокус і полярність ⭐
 
-- [ ] Іспанія vs Латинська Америка
-- [ ] Voseo; ustedeo; vosotros vs ustedes ⭐
-- [ ] Leísmo / laísmo / loísmo ⭐
-- [ ] Perfecto vs indefinido (частотність)
-- [ ] México, Centroamérica, Caribe, Andino, Cono Sur
-- [ ] Seseo / ceceo / yeísmo / žeísmo
+> Саме тут «екзотика», без якої важко звучати впевнено. Багато з цього — відповідь на англійське *do*-support і на UA кальки.
 
----
+## 17.1. Емфаза полярності: **sí** (≈ англ. *do* / *does* / *did*)
 
-# 17. Мікроконструкції
+- [ ] **Yo sí quiero tener…** / **Él sí lo sabe** — ствердження всупереч очікуванню чи запереченню ⭐
+- [ ] Контраст: *No quiero café. — Yo **sí** quiero.*
+- [ ] *Sí* після підмета vs на початку: *Yo sí voy* / *Sí voy*
+- [ ] Відмінність від стверджувального *sí* (= «так») і від *si* (якщо) — орфографія з тільдою
+- [ ] **Sí que…** — підсилення (*Sí que es caro* ≈ «та це ж дорого / ой як дорого»)
+- [ ] *Pues sí*, *claro que sí*, *sí, sí* — дискурсивні відповіді
+- [ ] Негативний «двійник»: *Yo no…* з контрастом (*Yo no lo haría*)
 
-- [ ] Емфатичне sí; дублювання клітика
-- [ ] Se етичне / аспектуальне (se me olvidó; se comió…)
-- [ ] Pero / sino; por qué / porque / porqué
-- [ ] De + INF; de haberlo sabido…
-- [ ] Ojalá / como si; será que; no sea que; lo de…
-- [ ] Cuanto más… más…
+## 17.2. Заперечення і «не те, а…»
+
+- [ ] **No… sino / sino que** (не X, а Y) ⭐
+- [ ] **No es que… (sino que)…** — відхилення пояснення (*No es que no quiera, es que no puedo*)
+- [ ] **No es porque…** + subjuntivo / indicativo (тонкості)
+- [ ] *Tampoco* vs *también*; *ni… ni*
+- [ ] Подвійне заперечення як норма (вже в §14) + емфатичне *nada de…*
+
+## 17.3. Фокус, топік, дислокація
+
+- [ ] Ліва / права **дислокація** з клітиком (*El libro, lo leí ayer* / *Lo leí ayer, el libro*)
+- [ ] Топік vs фокус: інтонація + порядок
+- [ ] Cleft / pseudocleft: *Lo que quiero es…*; *Es a Juan a quien…*
+- [ ] **Verum focus** — підкреслення істинності предиката (часто через *sí* / *sí que*)
+- [ ] Емфатичний підмет (*YO lo hice*, не хтось інший)
+
+## 17.4. Se і «дрібні» актанти
+
+- [ ] Se етичне / зацікавленості (*se me olvidó*; *no se me ocurre*)
+- [ ] Se аспектуальне / інхоативне (*se comió toda la tarta*; *se cayó*)
+- [ ] Dativo posesivo (вже §7) у зв’язці з цими se
+
+## 17.5. Незалежний / «вільний» subjuntivo
+
+- [ ] Бажальні / наказові без головного: *¡Que te vaya bien!*; *¡Viva…!*; *Ojalá…*
+- [ ] *Que* + subjuntivo як м’який наказ / побажання третій особі
+- [ ] *Como si* + imperfecto / pluscuamperfecto de subjuntivo
+
+## 17.6. Інші «дорослі» конструкції
+
+- [ ] *De* + INF умовно (*De haberlo sabido…*)
+- [ ] *Será que…* / *¿Será que…?* — припущення
+- [ ] *No sea que…* / *por si…* / *por si acaso*
+- [ ] *Lo de* + N / INF / *que*…
+- [ ] *Cuanto más… más…*; *lo antes posible*
+- [ ] *Al* + INF (*Al llegar…*) — уже в інфінітиві; уточнити часову одночасність
+- [ ] Абсолютний participio / gerundio (*Terminada la reunión…*; *Estando yo allí…*) — розпізнавання
+- [ ] *Como que* (розмовне «типу / начебто») — регістр!
+- [ ] *En plan* (Ісп., молодіжний) — регістр
+- [ ] Reduplicación емфатична (*rápido rápido*; *café cafeína* — стилістика)
+
+## 17.7. Чого **не** калькувати з англійської / української
+
+- [ ] Англ. *do*-support → **не** *hacer* (**Yo hago quiero*), а **sí** / інтонація / порядок ⭐
+- [ ] UA «та я ж хочу» → часто *Yo sí quiero* / *Sí que quiero*
+- [ ] *I am the one who…* → cleft *Soy yo quien…* / *El que… soy yo*
 
 ---
 
@@ -268,7 +227,7 @@
 
 1. Артиклі + nombres escuetos + lo  
 2. Ser / estar / hay  
-3. Indefinido vs imperfecto (+perfecto регіони)  
+3. Indefinido vs imperfecto  
 4. Por vs para  
 5. Subjuntivo: тригери і «коли ні»  
 6. Клітики + se lo + dativo posesivo  
@@ -280,32 +239,34 @@
 12. Інтерференції UA  
 13. Haber vs hay vs tener  
 14. Відносні + subjuntivo при невідомому антецеденті  
+15. **Емфатичне sí / sí que** (полярність і контраст; анти-калька *do*) ⭐  
+16. **No… sino / no es que…**  
 
 ---
 
-# 19. Що не виносити в окремі «граматичні» сторінки
+# 19. Що не виносити в окремі сторінки
 
 - Лексичні списки без граматики  
-- Повний фонетичний курс (лише релевантне для письма)  
-- Культурологія / функції PCIC без граматичного ядра (можна cross-link пізніше)  
+- Повний фонетичний курс  
+- Чисті «функції» PCIC без граматичного ядра  
 - Вправи  
 
 ---
 
-# 20. Джерела вирівнювання
+# 20. Джерела
 
-- [Plan curricular del Instituto Cervantes — Gramática (CVC)](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/indice.htm) — інвентар 1–15  
-- PCIC Ortografía  
-- Пріоритети інтерференції UA→ES (внутрішній аудит проєкту)  
+- [PCIC Gramática (CVC)](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/indice.htm)  
+- Явища фокусу/полярності в сучасній описовій граматиці (sí, sí que, dislocation, cleft)  
+- Інтерференції UA→ES і поширені кальки з EN *do*  
 
 ---
 
 # 21. Як користуватися
 
 - Нова сторінка → ✅ + slug  
-- Аудит → проставити статуси §1–17  
-- Нові сторінки — лише за ❌ у §18 або явні дірки PCIC  
-- Запис змін у `EXECUTION-LOG.md`  
+- §17 часто закривається **однією** глибокою сторінкою «Емфаза, фокус і полярність» + Note в суміжних темах  
+- Нові сторінки — лише ❌ у §18 або явні дірки  
+- Зміни → `EXECUTION-LOG.md`  
 
 ---
 

@@ -1,1 +1,1 @@
-#{FILE:/home/workdir/artifacts/TOPICS-COVERAGE-AUDIT.md}
+PLACEHOLDER

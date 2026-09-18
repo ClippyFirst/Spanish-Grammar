@@ -1,28 +1,34 @@
 # 📒 Лог виконання
 
-> Джерела: audit, plan-standardization, prompt_*, TOPICS-COMPLETE-UA.md, PCIC
+> Джерела: audit, plan-standardization, prompt_*, TOPICS-COMPLETE-UA, PCIC
 
 ---
 
 ## Фази 0–3 (DONE ✅)
 Стабілізація + **152** контент-сторінки.
 
-## Силабус
-- [x] `TOPICS-COMPLETE-UA.md` + вирівнювання з PCIC
-- [x] **§17 розширено** (2026-09-18, коміт `c0bbeba`) — мікроконструкції для впевненого володіння:
-  - **17.1 Емфаза полярності: sí** ≈ EN *do/does/did* (*Yo sí quiero tener…*)
-  - **Sí que…**; *pues sí* / *claro que sí*
-  - **17.2** No… sino / **no es que…**
-  - **17.3** Дислокація, cleft, verum focus, емфатичний підмет
-  - **17.4** Se етичне / аспектуальне
-  - **17.5** Незалежний subjuntivo (*¡Que te vaya bien!*)
-  - **17.6** De + INF, será que, como que, абсолютні конструкції…
-  - **17.7** Анти-кальки: не *hacer* замість *do*, а **sí**
-  - Пріоритет UA: пункти **15–16** (sí / no es que)
+## Силабус `TOPICS-COMPLETE-UA.md`
+- [x] Створено + PCIC-вирівнювання
+- [x] §17 фокус/полярність (*sí* ≈ *do*)
+- [x] **Добито прогалини** (2026-09-18, коміт `3bf99ab`):
+  - **Частини тіла + артикль + dativo** (*me duele la cabeza*, *me lavo las manos*) ⭐
+  - **Зміна стану**: ponerse, volverse, hacerse, convertirse en…
+  - **Hace / hace… que / desde hace / desde**
+  - **Ya / todavía / aún / ya no**
+  - **Deber vs deber de**; haber de
+  - Ser/estar + participio (стан vs пасив)
+  - Подвійні participios (frito/freído…)
+  - Псевдовідносні після ver/oír; perception + INF/ger/que
+  - Ir/venir, llevar/traer (дейксис)
+  - Estar de vs ser de
+  - Mismo; cualquiera/quienquiera; uno / generic tú
+  - Tag-питання; непрямі питання
+  - Mientras vs mientras que; como (3 значення); excepto/salvo
+  - Пріоритет UA: пункти **17–19**
 
 ### Наступне
-1. Статуси ✅/🟡/❌ у силабусі  
+1. Статуси ✅/🟡/❌ за MDX  
 2. QA + related + полірування  
-3. За потреби — окрема сторінка `emphasis-polarity-focus` (sí / sí que / no es que)
+3. Точкові сторінки лише за ❌ у §18  
 
 ---

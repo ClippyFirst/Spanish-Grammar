@@ -8,18 +8,18 @@
 Стабілізація + **152** MDX.
 
 ## Силабус
-- [x] `TOPICS-COMPLETE-UA.md` — суперінсет (~32.7 KB)
-- [x] **`TOPICS-COVERAGE-AUDIT.md`** (2026-09-18, коміт `7b9b209`):
-  - Копія силабусу зі статусами ✅ / 🟡 / ❌ проти 152 MDX
-  - Підсумок по §1–18
-  - Таблиця пріоритету UA (1–14 ✅/🟡; **15–19 ❌/🟡**)
-  - Головний борг: **§17** (sí, no es que, дислокація, тіло+dativo, зміна стану…)
-  - Рекомендовані 7 наступних MDX
+- [x] `TOPICS-COMPLETE-UA.md` — суперінсет (теми **незмінні**)
+- [x] **`TOPICS-COVERAGE-AUDIT.md`** + **-1** + **-2** (коміт `c2126b8`):
+  - Копія силабусу зі статусами ✅ / 🟡 / ❌
+  - Частина 1: вступ + §1–9
+  - Частина 2: §10–21
+  - **✅ 147 · 🟡 83 · ❌ 93** (323 пункти)
+  - Головний борг: §17 (sí, no es que, тіло+dativo, зміна стану…)
 
-### Наступне (наповнення за аудитом)
-1. `emphasis-polarity-focus` ⭐  
-2. `change-of-state` ⭐  
-3. body parts + dativo ⭐  
-4. ya/todavía; ojalá/como si; deber de; hace/desde hace  
+### Наступне (наповнення)
+1. `emphasis-polarity-focus` ⭐
+2. `change-of-state` ⭐
+3. body parts + dativo ⭐
+4. ya/todavía; ojalá/como si; deber de
 
 ---

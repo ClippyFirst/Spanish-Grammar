@@ -5,59 +5,49 @@
 ---
 
 ## Фази 0–3 (DONE ✅)
-Стабілізація + **152+** MDX.
+Стабілізація + MDX база.
 
 ## Силабус
-- [x] `TOPICS-COMPLETE-UA.md` — суперінсет
-- [x] `TOPICS-COVERAGE-AUDIT.md` (+ parts 1–2) — статуси ✅/🟡/❌
+- [x] `TOPICS-COMPLETE-UA.md`
+- [x] `TOPICS-COVERAGE-AUDIT.md` — статуси + **таблиця прогресу**
 
 ---
 
-## 2026-09-18 — наповнення (розділ: артиклі + §17 пріоритет)
+## 2026-09-18 — batch 1 (артиклю + §17)
 
-### Коміти
-- `cef53da` — batch контенту
-- `e28f171` — definite-vs-indefinite
+Коміти: `cef53da`, `e28f171`
 
-### Зміни
+| MDX | Що |
+|-----|-----|
+| `articles/zero-article` | *No tengo coche* тощо |
+| `articles/definite-vs-indefinite` | пари нуль/un/el |
+| `sentence-structure/emphasis-polarity-focus` | sí, sí que, no es que, sino |
+| `verbs/change-of-state` | ponerse/volverse/hacerse… |
+| `pronouns/body-parts-possession` | *me duele la cabeza* |
 
-1. **`articles/zero-article`** — поглиблено:
-   - *No tengo coche* / *Tengo coche* (нуль у запереченні наявності)
-   - чому не *No tengo un coche*
-   - таблиці мінімальних пар (нуль / un / el)
-   - помилки UA
+---
 
-2. **`articles/definite-vs-indefinite`** — додано:
-   - пари *No tengo coche* vs *No tengo el coche*
-   - *Tengo coche* vs *Tengo un coche nuevo*
-   - Mistake на *No tengo un coche*
+## 2026-09-18 — batch 2
 
-3. **NEW `sentence-structure/emphasis-polarity-focus`** ⭐
-   - *Yo sí quiero* ≈ do-support
-   - *sí que*, *no es que*, *sino / sino que*
-   - дислокація / cleft (коротко)
-   - анти-кальки *hacer* + do
+Коміт: `f13d560`
 
-4. **NEW `verbs/change-of-state`** ⭐
-   - ponerse / volverse / hacerse / convertirse en / llegar a ser
-   - таблиця + помилки UA («я став…»)
+| MDX | Що |
+|-----|-----|
+| `adverbs/ya-todavia-aun` | ya / todavía / aún / ya no / todavía no |
+| `moods/ojala-como-si` | ojalá + subj.; como si + imperfecto subj. |
+| `prepositions/hace-desde-hace` | hace vs desde hace vs desde |
+| `verbs/deber-vs-deber-de` | обов'язок vs припущення |
+| `TOPICS-COVERAGE-AUDIT.md` | **§18.15–19 усі ✅**; таблиця прогресу |
 
-5. **NEW `pronouns/body-parts-possession`** ⭐
-   - *me duele la cabeza* (не *mi cabeza*)
-   - dativo + артикль, одяг, узгодження *duele/duelen*
+### Пріоритет UA §18
+**Усі пункти 15–19 закриті сторінками.**
 
-### Закрито з пріоритету UA (§18)
-- 15 емфатичне sí — ✅ сторінка
-- 16 no es que / sino — ✅ на тій же сторінці
-- 17 частини тіла + dativo — ✅
-- 19 зміна стану — ✅
-- 18 hace/ya — ще 🟡 (наступне)
-
-### Далі
-- `adverbs/ya-todavia-aun`
-- `moods/ojala-como-si`
-- `verbs/deber-vs-deber-de`
-- поглиблення special-cases, negation
-- далі по аудиту ❌
+### Далі (з аудиту ❌)
+- Tag-питання; cleft глибше
+- Подвійні participios
+- Іменники: epicenos, acotadores, апозиція
+- Excepto/salvo; como (3 значення)
+- Focalizadores / modus
+- Решта §17.7
 
 ---

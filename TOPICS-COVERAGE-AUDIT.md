@@ -1,54 +1,38 @@
 # TOPICS-COVERAGE-AUDIT
 
-> **КОПІЯ** [`TOPICS-COMPLETE-UA.md`](./TOPICS-COMPLETE-UA.md) зі статусами покриття MDX.
-> Теми й формулювання **не змінені**. Додано лише позначки ✅ / 🟡 / ❌ і slug.
->
-> Повна розмітка пунктів:
-> - [`TOPICS-COVERAGE-AUDIT-1.md`](./TOPICS-COVERAGE-AUDIT-1.md) — вступ + §1–9
+> Копія силабусу зі статусами. Детальна розмітка:
+> - [`TOPICS-COVERAGE-AUDIT-1.md`](./TOPICS-COVERAGE-AUDIT-1.md) — §1–9
 > - [`TOPICS-COVERAGE-AUDIT-2.md`](./TOPICS-COVERAGE-AUDIT-2.md) — §10–21
->
-> **MDX у репо:** 152 + нові (див. нижче)
 
 ---
 
-## Прогрес наповнення (оновлено 2026-09-18)
+## AUDIT-1 (§1–9) — СТАТУС 2026-09-18
 
-### Закрито в цій сесії ✅
+**❌ у AUDIT-1: 0** (усі колишні ❌ закриті сторінками або 🟡).
 
-| Тема (аудит) | MDX | Коміт |
-|--------------|-----|-------|
-| Нульовий артикль + *no tengo coche* | `articles/zero-article` (поглиблено) | `cef53da` |
-| el/un/нуль + заперечення | `articles/definite-vs-indefinite` | `e28f171` |
-| §18.15 Емфатичне sí / sí que | `sentence-structure/emphasis-polarity-focus` | `cef53da` |
-| §18.16 No… sino / no es que | (та ж сторінка) | `cef53da` |
-| §18.17 Частини тіла + dativo | `pronouns/body-parts-possession` | `cef53da` |
-| §18.19 Зміна стану | `verbs/change-of-state` | `cef53da` |
-| §18.18 Ya / todavía / aún | `adverbs/ya-todavia-aun` | цей |
-| §18.18 Hace / desde hace | `prepositions/hace-desde-hace` | цей |
-| Ojalá / como si | `moods/ojala-como-si` | цей |
-| Deber vs deber de | `verbs/deber-vs-deber-de` | цей |
+### Нові / поглиблені MDX цієї хвилі (AUDIT-1)
 
-### Пріоритет UA (§18) — актуальний статус
+| Розділ | MDX |
+|--------|-----|
+| §1 | `fundamentals/grammar-basics`, `fundamentals/fractions-percentages` |
+| §2 | `spelling/diphthongs-hiatus` |
+| §3 | `nouns/noun-special-cases` |
+| §4 | (раніше) `zero-article`, `body-parts-possession` |
+| §5 | `adjectives/adjective-types-cultos` |
+| §6 | `adverbs/ya-todavia-aun`, `adverbs/focus-and-stance` |
+| §7 | `pronouns/mismo-uno-generic`, `pronouns/exclamatives`, `body-parts-possession` |
+| §8 | `prepositions/estar-de-ser-de`, `hace-desde-hace` |
+| §9 | `conjunctions/como-excepto` |
 
-| # | Тема | Статус |
-|---|------|--------|
-| 1–14 | Ядро (артиклю, ser/estar, часи, subjuntivo, клітики, por/para, gustar, voseo…) | ✅ / 🟡 |
-| 15 | Емфатичне sí / sí que | ✅ `emphasis-polarity-focus` |
-| 16 | No… sino / no es que | ✅ `emphasis-polarity-focus` |
-| 17 | Частини тіла + артикль + dativo | ✅ `body-parts-possession` |
-| 18 | Hace / desde hace / ya–todavía | ✅ `hace-desde-hace` + `ya-todavia-aun` |
-| 19 | Зміна стану | ✅ `change-of-state` |
+### Пріоритет UA §18
 
-### Ще ❌ / 🟡 (черга)
+| # | Статус |
+|---|--------|
+| 1–14 | ✅ / 🟡 |
+| 15–19 | ✅ усі |
 
-- Tag-питання; cleft/дислокація глибше (частково в emphasis)
-- Подвійні participios
-- Epicenos / acotadores / апозиція (іменники)
-- Focalizadores / modus (прислівники)
-- Excepto/salvo; como (3 значення)
-- Незалежний subjuntivo (частково в ojala)
-- Решта мікро §17.7
+### Далі: AUDIT-2 (§10–21)
+
+Працювати по ❌ у `TOPICS-COVERAGE-AUDIT-2.md` (дієслово, часи, способи, §17 мікро…).
 
 ---
-
-*Оновлювати цю таблицю після кожного batch контенту.*

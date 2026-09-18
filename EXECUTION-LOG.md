@@ -1,53 +1,34 @@
 # 📒 Лог виконання
 
-> Джерела: audit, prompt_content, TOPICS-COMPLETE-UA, PCIC
-
 ---
 
-## Фази 0–3 (DONE ✅)
-Стабілізація + MDX база.
+## 2026-09-18 — AUDIT-1 (§1–9) закриття ❌
 
-## Силабус
-- [x] `TOPICS-COMPLETE-UA.md`
-- [x] `TOPICS-COVERAGE-AUDIT.md` — статуси + **таблиця прогресу**
+### Коміти контенту
+- `aaaf562` — grammar-basics, fractions, diphthongs, noun-special-cases
+- `1cfc81e` — adjective-types-cultos, focus-and-stance, mismo-uno-generic, exclamatives, estar-de-ser-de, como-excepto
+- (раніше) emphasis, change-of-state, body-parts, ya, ojalá, hace, deber de, zero-article
 
----
+### Підсумок AUDIT-1
+- **❌ → 0** у частині 1 (30 пунктів закрито або переведено в 🟡)
+- ✅ ~99 пунктів з slug
+- 🟡 лишаються часткові (напр. абревіатури, деякі огляди в існуючих сторінках)
 
-## 2026-09-18 — batch 1 (артиклю + §17)
+### Створені сторінки (хвиля AUDIT-1)
+1. `fundamentals/grammar-basics`
+2. `fundamentals/fractions-percentages`
+3. `spelling/diphthongs-hiatus`
+4. `nouns/noun-special-cases`
+5. `adjectives/adjective-types-cultos`
+6. `adverbs/focus-and-stance`
+7. `pronouns/mismo-uno-generic`
+8. `pronouns/exclamatives`
+9. `prepositions/estar-de-ser-de`
+10. `conjunctions/como-excepto`
 
-Коміти: `cef53da`, `e28f171`
+(+ раніше в сесії: zero-article deep, emphasis-polarity-focus, change-of-state, body-parts-possession, ya-todavia-aun, ojala-como-si, hace-desde-hace, deber-vs-deber-de)
 
-| MDX | Що |
-|-----|-----|
-| `articles/zero-article` | *No tengo coche* тощо |
-| `articles/definite-vs-indefinite` | пари нуль/un/el |
-| `sentence-structure/emphasis-polarity-focus` | sí, sí que, no es que, sino |
-| `verbs/change-of-state` | ponerse/volverse/hacerse… |
-| `pronouns/body-parts-possession` | *me duele la cabeza* |
-
----
-
-## 2026-09-18 — batch 2
-
-Коміт: `f13d560`
-
-| MDX | Що |
-|-----|-----|
-| `adverbs/ya-todavia-aun` | ya / todavía / aún / ya no / todavía no |
-| `moods/ojala-como-si` | ojalá + subj.; como si + imperfecto subj. |
-| `prepositions/hace-desde-hace` | hace vs desde hace vs desde |
-| `verbs/deber-vs-deber-de` | обов'язок vs припущення |
-| `TOPICS-COVERAGE-AUDIT.md` | **§18.15–19 усі ✅**; таблиця прогресу |
-
-### Пріоритет UA §18
-**Усі пункти 15–19 закриті сторінками.**
-
-### Далі (з аудиту ❌)
-- Tag-питання; cleft глибше
-- Подвійні participios
-- Іменники: epicenos, acotadores, апозиція
-- Excepto/salvo; como (3 значення)
-- Focalizadores / modus
-- Решта §17.7
+### Наступне
+**AUDIT-2** — §10–21, усі ❌ по черзі, коміти + лог + позначки в `TOPICS-COVERAGE-AUDIT-2.md`.
 
 ---

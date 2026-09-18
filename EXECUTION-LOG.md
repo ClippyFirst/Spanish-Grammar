@@ -2,33 +2,41 @@
 
 ---
 
-## 2026-09-18 — AUDIT-1 (§1–9) закриття ❌
+## 2026-09-18 — перевірка AUDIT-1 vs репо (честний аудит)
 
-### Коміти контенту
-- `aaaf562` — grammar-basics, fractions, diphthongs, noun-special-cases
-- `1cfc81e` — adjective-types-cultos, focus-and-stance, mismo-uno-generic, exclamatives, estar-de-ser-de, como-excepto
-- (раніше) emphasis, change-of-state, body-parts, ya, ojalá, hace, deber de, zero-article
+### Метод
+1. Усі slug з `[x] ✅` у `TOPICS-COVERAGE-AUDIT-1.md` звірено з `src/content/es/**/*.mdx`.
+2. Виміряно глибину нових сторінок (довжина, Mistake/Note).
+3. Spot-check 🟡 «частково» — чи тема реально згадана в цільовому MDX.
 
-### Підсумок AUDIT-1
-- **❌ → 0** у частині 1 (30 пунктів закрито або переведено в 🟡)
-- ✅ ~99 пунктів з slug
-- 🟡 лишаються часткові (напр. абревіатури, деякі огляди в існуючих сторінках)
+### Результат
 
-### Створені сторінки (хвиля AUDIT-1)
-1. `fundamentals/grammar-basics`
-2. `fundamentals/fractions-percentages`
-3. `spelling/diphthongs-hiatus`
-4. `nouns/noun-special-cases`
-5. `adjectives/adjective-types-cultos`
-6. `adverbs/focus-and-stance`
-7. `pronouns/mismo-uno-generic`
-8. `pronouns/exclamatives`
-9. `prepositions/estar-de-ser-de`
-10. `conjunctions/como-excepto`
+| Перевірка | Висновок |
+|-----------|----------|
+| Чи існують усі заявлені slug | **Так** (0 missing серед 70 refs; 169 MDX у репо) |
+| Чи нові сторінки не порожні | **Так** (1.6–5.4 KB, є приклади/помилки) |
+| Чи всі 🟡 чесні | **Ні — були слабкі** |
 
-(+ раніше в сесії: zero-article deep, emphasis-polarity-focus, change-of-state, body-parts-possession, ya-todavia-aun, ojala-como-si, hace-desde-hace, deber-vs-deber-de)
+### Слабкі 🟡 (виправлено в `47bb42b`)
 
-### Наступне
-**AUDIT-2** — §10–21, усі ❌ по черзі, коміти + лог + позначки в `TOPICS-COVERAGE-AUDIT-2.md`.
+| Заявлено «частково в…» | Було | Стало |
+|------------------------|------|-------|
+| epicenos / el agua → gender-exceptions | майже не було | додано секції |
+| sólo/solo, aún/aun → accent-marks | не згадувалось | додано норму RAE |
+| кома / vocativo → punctuation | слабко | розширено |
+| a pesar de / en lugar de → common-constructions | не було | додано таблицю |
+
+### Що лишається чесним 🟡
+Огляди без окремої глибокої сторінки: порядок кількох прикметників, metábasis, деякі locuciones adverbiales, повний розбір усіх типів підрядних в одній сторінці тощо — **не** видаються за ✅.
+
+### Тонші нові сторінки (є контент, можна поглибити пізніше)
+`exclamatives` (~1.6 KB), `estar-de-ser-de`, `como-excepto`, `mismo-uno-generic` — робочі, не stubs; глибина C2-рівня — на етапі підрихтовки.
+
+### Коміти
+- `dc6276c` — позначки AUDIT-1
+- `47bb42b` — fix слабких partial
+
+### Далі
+AUDIT-2 + подальше поглиблення 🟡 за потреби.
 
 ---

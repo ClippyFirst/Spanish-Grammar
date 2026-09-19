@@ -21,9 +21,9 @@
 
 ---
 
-## ✅ Прогрес AUDIT-1 (2026-09-18)
+## 🔎 Актуалізація AUDIT-1 (2026-09-19)
 
-**❌ залишок: 0.** Усі пункти §1–9 закриті MDX або позначені 🟡 (частково в існуючих сторінках).
+**❌ залишок: 0** у §1–9. Статуси звіряються з фактичним MDX-вмістом, а не лише з наявністю slug; 🟡 означає реальне, але неповне покриття.
 
 Нові slug: `grammar-basics`, `fractions-percentages`, `diphthongs-hiatus`, `noun-special-cases`, `adjective-types-cultos`, `ya-todavia-aun`, `focus-and-stance`, `body-parts-possession`, `mismo-uno-generic`, `exclamatives`, `estar-de-ser-de`, `hace-desde-hace`, `como-excepto`.
 
@@ -237,4 +237,4 @@
 
 ---
 
-*AUDIT-1: ❌ = 0 · ✅ ≈ 99 · 🟡 ≈ 43*
+*AUDIT-1: ❌ = 0 · статуси читаються з рядків цього файлу; перевірка — за фактичним MDX-вмістом*

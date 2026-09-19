@@ -1,5 +1,5 @@
 ---
-// Gramaticarrona — site header.
+// Gramaticarrona — restrained editorial header.
 import { withBase } from '../utils/content';
 const { pathname = '/' } = Astro.props;
 const isActive = (p: string) => pathname.startsWith(p);
@@ -8,48 +8,23 @@ const isActive = (p: string) => pathname.startsWith(p);
   <div class="header-rule" aria-hidden="true"></div>
   <div class="container header-inner">
     <a class="brand" href={withBase('/')} aria-label="Gramaticarrona — головна">
-      <span class="brand-mark">G</span>
+      <span class="brand-mark" aria-hidden="true">G</span>
       <span class="brand-name">Gramaticarrona</span>
       <span class="brand-sub">ES</span>
     </a>
-
     <nav class="nav-main" aria-label="Головна навігація">
       <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Граматика</a>
       <a href={withBase('/comparisons/')} aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
       <a href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>Пошук</a>
       <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про</a>
     </nav>
-
-    <span class="language-note">UA · ES</span>
-
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню">
-      <span></span><span></span><span></span>
-    </button>
+    <span class="language-note">UA / ES</span>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню"><span></span><span></span><span></span></button>
   </div>
-
   <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">
-    <a href={withBase('/es/')}>Граматика</a>
-    <a href={withBase('/comparisons/')}>Порівняння</a>
-    <a href={withBase('/search/')}>Пошук</a>
-    <a href={withBase('/about/')}>Про сайт</a>
+    <a href={withBase('/es/')}>Граматика</a><a href={withBase('/comparisons/')}>Порівняння</a><a href={withBase('/search/')}>Пошук</a><a href={withBase('/about/')}>Про сайт</a>
   </nav>
 </header>
-
 <script is:inline>
-  (function () {
-    var toggle = document.getElementById('nav-toggle');
-    var menu = document.getElementById('mobile-menu');
-    if (!toggle || !menu) return;
-    toggle.addEventListener('click', function () {
-      var open = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
-    });
-    menu.addEventListener('click', function (e) {
-      if (e.target && e.target.tagName === 'A') {
-        menu.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  })();
+(function(){var t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu');if(!t||!m)return;t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'Закрити меню':'Відкрити меню')});m.addEventListener('click',function(e){if(e.target&&e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded','false')}})})();
 </script>

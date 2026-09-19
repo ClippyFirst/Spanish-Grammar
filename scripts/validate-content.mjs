@@ -59,6 +59,8 @@ const slugs = new Set(files.map((f) => path.basename(f).replace(/\.mdx?$/i, ''))
 const pageSlugs = new Set(files.map((f) => path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, '')));
 const errors = [];
 const warnings = [];
+const relatedGraph = new Map();
+const markdownGraph = new Map();
 
 // YAML colon-smell: unquoted title/short_description containing ": " outside quotes.
 for (const f of files) {
@@ -84,7 +86,10 @@ for (const f of files) {
   if (data.category && categoryKeys.size && !categoryKeys.has(String(data.category))) {
     errors.push(`${path.relative(ROOT, f)}: unknown category "${data.category}"`);
   }
-  const rel = Array.isArray(data.related) ? data.related : [];
+  const rel = Array.isArray(data.related) ? [...new Set(data.related)] : [];
+  relatedGraph.set(path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, ''), rel);
+  if (rel.some((x) => x === path.basename(f).replace(/\.mdx?$/i, '') || x === path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, ''))) errors.push(`${path.relative(ROOT, f)}: related contains a self-link`);
+  if (rel.length !== (Array.isArray(data.related) ? data.related.length : 0)) warnings.push(`${path.relative(ROOT, f)}: duplicate related entries removed from graph`);
   for (const r of rel) {
     if (!slugs.has(r) && !pageSlugs.has(r) && !categoryKeys.has(r)) {
       warnings.push(`${path.relative(ROOT, f)}: related "${r}" resolves to no page/category (filtered at runtime)`);
@@ -92,6 +97,8 @@ for (const f of files) {
   }
   // MDX apostrophe smell: single-quoted JS string containing ' (breaks acorn).
   const mdxBody = text.replace(/^---\r?\n[\s\S]*?\r?\n---/, '');
+  const markdownLinks = [...mdxBody.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map((m) => m[1].replace(/\/$/, ''));
+  markdownGraph.set(path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, ''), markdownLinks);
   const badStrings = mdxBody.match(/=\{\{\s*es:\s*'[^']*'[^}]*\}\}/g) || [];
   for (const b of badStrings) {
     if (/'[^']*['’]/.test(b.replace(/^=\{\{\s*es:\s*'/, ''))) {
@@ -123,7 +130,16 @@ for (const f of files) {
   });
 }
 
+// Graph QA: report broken internal Markdown targets, orphan pages, and excessive cross-linking.
+const graphTargets = new Set([...pageSlugs].map((x) => x));
+for (const [src, links] of markdownGraph) for (const target of links) if (!graphTargets.has(target) && !categoryKeys.has(target)) warnings.push(`${src}: Markdown link "/es/${target}/" resolves to no content page`);
+const inbound = new Map([...pageSlugs].map((x) => [x, 0]));
+for (const [src, links] of markdownGraph) for (const target of links) if (inbound.has(target) && target !== src) inbound.set(target, inbound.get(target) + 1);
+for (const [src, rel] of relatedGraph) for (const target of rel) { const t = pageSlugs.has(target) ? target : (slugs.has(target) ? [...pageSlugs].find(x => x.endsWith('/'+target)) : null); if (t && t !== src && inbound.has(t)) inbound.set(t, inbound.get(t) + 1); }
+const orphanPages = [...inbound].filter(([p, n]) => n === 0 && !p.endsWith('/index')).map(([p]) => p);
+if (orphanPages.length) warnings.push(`GRAPH: ${orphanPages.length} pages have no inbound links: ${orphanPages.slice(0, 20).join(', ')}${orphanPages.length > 20 ? '…' : ''}`);
 console.log(`validate-content: ${files.length} files, ${slugs.size} slugs, ${categoryKeys.size} categories`);
+console.log(`graph: ${relatedGraph.size} related maps, ${[...markdownGraph.values()].reduce((n,x)=>n+x.length,0)} internal Markdown links, ${orphanPages.length} orphan pages`);
 if (warnings.length) {
   console.log(`\nWARNINGS (${warnings.length}):`);
   for (const w of warnings) console.log('  WARN ' + w);

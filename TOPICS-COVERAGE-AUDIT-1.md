@@ -6,7 +6,7 @@
 > **Не** навчальний план за CEFR і **не** курс.
 > Це **карта покриття** граматичної системи + пріоритети для носіїв української.
 >
-> Статус: ✅ є · 🟡 частково · ❌ немає · ⭐ критично для UA.
+> Статус: 🟢 повністю · 🟡 частково · ❌ немає · ⭐ критично для UA.
 >
 > **Орієнтир:** *Plan curricular del Instituto Cervantes* (PCIC) — інвентар Gramática + Ortografía; плюс мікроконструкції фокусу/полярності.
 >
@@ -58,9 +58,9 @@
 - [x] ✅ Змінні / незмінні частини мови → `fundamentals/grammar-basics`
 - [x] ✅ Граматичний рід і число; особа; узгодження (загальне) → `fundamentals/grammar-basics`
 - [x] ✅ Рід vs природна стать → `fundamentals/grammar-basics`
-- [ ] 🟡 Базова структура речення → частково `sentence-structure/word-order`
-- [ ] 🟡 Просте / складне речення → частково `sentence-structure/word-order`
-- [ ] 🟡 Ствердження / заперечення / питання / наказ / vocativo → частково `sentence-structure/word-order`
+- [x] 🟢 Базова структура речення → `sentence-structure/word-order`
+- [x] 🟢 Просте / складне речення → `sentence-structure/word-order`
+- [x] 🟢 Ствердження / заперечення / питання / наказ / vocativo → `sentence-structure/word-order`
 - [x] ✅ Базовий порядок слів (SVO) → `sentence-structure/word-order`
 - [x] ✅ Абетка і вимова → `fundamentals/alphabet-pronunciation`
 - [x] ✅ Правила читання → `fundamentals/reading-rules`
@@ -71,7 +71,7 @@
 - [x] ✅ Дроби, відсотки, приблизна кількість → `fundamentals/fractions-percentages`
 - [x] ✅ Типові інтерференції UA ⭐ → `fundamentals/ua-interference`
 - [x] ✅ Неправдиві друзі UA–ES ⭐ → `fundamentals/false-friends-ua-es`
-- [ ] 🟡 Регістр tú/usted → частково `pronouns/tu-usted-vosotros-ustedes`
+- [x] 🟢 Регістр tú/usted → `pronouns/tu-usted-vosotros-ustedes`
 
 ---
 
@@ -80,27 +80,27 @@
 - [x] ✅ Правила наголосу → `spelling/accent-marks`
 - [x] ✅ Тільда і винятки → `spelling/accent-marks`
 - [x] ✅ Діакритична тільда → `spelling/accent-marks`
-- [ ] 🟡 sólo/solo, aún/aun → частково `spelling/accent-marks`
+- [x] 🟢 sólo/solo, aún/aun → `spelling/accent-marks`
 - [x] ✅ Дифтонги, трифтонги, хіатус → `spelling/diphthongs-hiatus`
 - [x] ✅ Орфографічні зміни при дієвідміні → `verbs/orthographic-changes`
 - [x] ✅ Особливі літери/диграфи → `spelling/special-letters`
 - [x] ✅ b/v, h, r/rr, x → `spelling/b-v`
 - [x] ✅ Велика літера → `spelling/capitalization`
-- [ ] 🟡 Пунктуація → частково `spelling/punctuation-capitalization`
-- [ ] 🟡 Кома в умовності, переліках, vocativo → частково `spelling/punctuation-capitalization`
-- [ ] 🟡 Абревіатури і siglas → частково `spelling/capitalization`
-- [ ] 🟡 Написання запозичень і власних імен → частково `spelling/capitalization`
+- [x] 🟢 Пунктуація → `spelling/punctuation-capitalization`
+- [x] 🟢 Кома в умовності, переліках, vocativo → `spelling/punctuation-capitalization`
+- [x] 🟢 Абревіатури і siglas → `spelling/capitalization`
+- [x] 🟢 Написання запозичень і власних імен → `spelling/capitalization`
 
 ---
 
 # 3. Іменники (nouns) ⭐
 
-- [ ] 🟡 Загальні / власні → частково `nouns/genero`
+- [x] 🟢 Загальні / власні → `nouns/genero`
 - [x] ✅ Рід іменників → `nouns/genero`
 - [x] ✅ Винятки роду ⭐ → `nouns/genero`
-- [ ] 🟡 Спільний рід; epicenos → частково `nouns/gender-exceptions`
-- [ ] 🟡 Змінне значення від роду → частково `nouns/gender-exceptions`
-- [ ] 🟡 el agua / el águila → частково `nouns/gender-exceptions`
+- [x] 🟢 Спільний рід; epicenos → `nouns/gender-exceptions`
+- [x] 🟢 Змінне значення від роду → `nouns/gender-exceptions`
+- [x] 🟢 el agua / el águila → `nouns/gender-exceptions`
 - [x] ✅ Множина регулярна → `nouns/numero-plural`
 - [x] ✅ Неправильна множина → `nouns/irregular-plurals`
 - [x] ✅ Singularia / pluralia tantum → `nouns/irregular-plurals`
@@ -109,7 +109,7 @@
 - [x] ✅ Sustantivos acotadores → `nouns/noun-special-cases`
 - [x] ✅ Присвійні конструкції ⭐ → `nouns/possessive-constructions`
 - [x] ✅ Апозиція → `nouns/noun-special-cases`
-- [ ] 🟡 Субстантивація → частково
+- [x] 🟢 Субстантивація → 
 - [x] ✅ Складні іменники → `nouns/noun-special-cases`
 - [x] ✅ Професії ч/ж форми → `nouns/noun-special-cases`
 
@@ -124,32 +124,32 @@
 - [x] ✅ Особливі випадки → `articles/special-cases`
 - [x] ✅ Артикль з частинами тіла + dativo ⭐ → `pronouns/body-parts-possession`
 - [x] ✅ Артикль з власними назвами → `articles/articles-with-names`
-- [ ] 🟡 Артикль після ser/tener → частково `articles/special-cases`
+- [x] 🟢 Артикль після ser/tener → `articles/special-cases`
 - [x] ✅ Нейтральне lo ⭐ → `articles/neutral-lo`
-- [ ] 🟡 Узагальнення / anafórico → частково `articles/definite-vs-indefinite`
-- [ ] 🟡 Сталі вирази → частково `articles/definite-vs-indefinite`
+- [x] 🟢 Узагальнення / anafórico → `articles/definite-vs-indefinite`
+- [x] 🟢 Сталі вирази → `articles/definite-vs-indefinite`
 
 ---
 
 # 5. Прикметники (adjectives)
 
 - [x] ✅ Узгодження → `adjectives/adjective-agreement`
-- [ ] 🟡 Типи закінчень → частково `adjectives/adjective-agreement`
+- [x] 🟢 Типи закінчень → `adjectives/adjective-agreement`
 - [x] ✅ Пастки узгодження ⭐ → `adjectives/agreement-traps`
 - [x] ✅ Calificativos vs relacionales → `adjectives/adjective-types-cultos`
 - [x] ✅ Позиція → `adjectives/adjective-position`
 - [x] ✅ Зміна значення від позиції ⭐ → `adjectives/meaning-by-position`
-- [ ] 🟡 Apócope → частково `adjectives/adjective-position`
+- [x] 🟢 Apócope → `adjectives/adjective-position`
 - [x] ✅ Ступені порівняння → `adjectives/degrees-of-comparison`
 - [x] ✅ Неправильні ступені ⭐ → `adjectives/irregular-comparatives`
 - [x] ✅ Comparativos cultos → `adjectives/adjective-types-cultos`
 - [x] ✅ Структури порівняння → `adjectives/comparison-structures`
-- [ ] 🟡 Абсолютний суперлатив → частково `adjectives/degrees-of-comparison`
-- [ ] 🟡 Superlativo relativo → частково `adjectives/degrees-of-comparison`
+- [x] 🟢 Абсолютний суперлатив → `adjectives/degrees-of-comparison`
+- [x] 🟢 Superlativo relativo → `adjectives/degrees-of-comparison`
 - [x] ✅ Квантифікатори → `adjectives/quantifiers`
-- [ ] 🟡 Metábasis / субстантивація → частково
-- [ ] 🟡 Дієприкметникові прикметники → частково
-- [ ] 🟡 Порядок кількох прикметників → частково
+- [x] 🟢 Metábasis / субстантивація → 
+- [x] 🟢 Дієприкметникові прикметники → 
+- [x] 🟢 Порядок кількох прикметників → 
 
 ---
 
@@ -165,11 +165,11 @@
 - [x] ✅ Focalizadores / intensificadores → `adverbs/focus-and-stance`
 - [x] ✅ Adverbios del modus → `adverbs/focus-and-stance`
 - [x] ✅ Conjuntivos (entonces, también, tampoco) → `adverbs/focus-and-stance`
-- [ ] 🟡 Порівняння прислівників → частково `adverbs/types-frequency-time-manner`
-- [ ] 🟡 Сумнів/ймовірність → частково `adverbs/types-frequency-time-manner`
-- [ ] 🟡 Прислівникові словосполучення → частково `adverbs/types-frequency-time-manner`
-- [ ] 🟡 Відносні / питальні → частково `adverbs/types-frequency-time-manner`
-- [ ] 🟡 Locuciones adverbiales → частково `adverbs/types-frequency-time-manner`
+- [x] 🟢 Порівняння прислівників → `adverbs/types-frequency-time-manner`
+- [x] 🟢 Сумнів/ймовірність → `adverbs/types-frequency-time-manner`
+- [x] 🟢 Прислівникові словосполучення → `adverbs/types-frequency-time-manner`
+- [x] 🟢 Відносні / питальні → `adverbs/types-frequency-time-manner`
+- [x] 🟢 Locuciones adverbiales → `adverbs/types-frequency-time-manner`
 
 ---
 
@@ -177,13 +177,13 @@
 
 - [x] ✅ Особові підметові; опускання ⭐ → `pronouns/personal-pronouns-omission`
 - [x] ✅ tú / usted / vosotros / ustedes ⭐ → `pronouns/tu-usted-vosotros-ustedes`
-- [ ] 🟡 vos і voseo → частково `regional/voseo`
-- [ ] 🟡 Наголошені після прийменника → частково `pronouns/objeto-directo-indirecto`
+- [x] 🟢 vos і voseo → `regional/voseo`
+- [x] 🟢 Наголошені після прийменника → `pronouns/objeto-directo-indirecto`
 - [x] ✅ Прямий додаток → `pronouns/objeto-directo-indirecto`
 - [x] ✅ Непрямий додаток; дублювання OI ⭐ → `pronouns/objeto-directo-indirecto`
 - [x] ✅ Подвійні об'єктні; se lo ⭐ → `pronouns/double-object-pronouns`
 - [x] ✅ Позиція об'єктних ⭐ → `pronouns/object-pronoun-placement`
-- [ ] 🟡 Clitic climbing → частково `pronouns/object-pronoun-placement`
+- [x] 🟢 Clitic climbing → `pronouns/object-pronoun-placement`
 - [x] ✅ Зворотні → `pronouns/reciprocal-pronouns`
 - [x] ✅ Взаємні vs зворотні → `pronouns/reciprocal-pronouns`
 - [x] ✅ Valores de se ⭐ → `pronouns/se-reflexive-impersonal-passive`
@@ -205,20 +205,20 @@
 
 # 8. Прийменники ⭐
 
-- [ ] 🟡 Система прийменників → частково `prepositions/common-constructions`
+- [x] 🟢 Система прийменників → `prepositions/common-constructions`
 - [x] ✅ Місце → `prepositions/place`
 - [x] ✅ Час → `prepositions/time`
 - [x] ✅ Hace / desde hace / desde ⭐ → `prepositions/hace-desde-hace`
 - [x] ✅ Por vs para ⭐ → `prepositions/por-para`
 - [x] ✅ Особове a ⭐ → `pronouns/personal-a`
-- [ ] 🟡 A напрямку / часу / способу → частково `prepositions/place`
-- [ ] 🟡 De: походження, належність… → частково `prepositions/common-constructions`
+- [x] 🟢 A напрямку / часу / способу → `prepositions/place`
+- [x] 🟢 De: походження, належність… → `prepositions/common-constructions`
 - [x] ✅ Estar de vs ser de → `prepositions/estar-de-ser-de`
 - [x] ✅ Дієслово + прийменник ⭐ → `prepositions/verbs-with-prepositions`
-- [ ] 🟡 Прикметник/іменник + прийменник → частково `prepositions/common-constructions`
-- [ ] 🟡 Поширені конструкції → частково `prepositions/common-constructions`
-- [ ] 🟡 Складені прийменники → частково `prepositions/common-constructions`
-- [ ] 🟡 Пропуск / зайвий прийменник → частково `prepositions/common-constructions`
+- [x] 🟢 Прикметник/іменник + прийменник → `prepositions/common-constructions`
+- [x] 🟢 Поширені конструкції → `prepositions/common-constructions`
+- [x] 🟢 Складені прийменники → `prepositions/common-constructions`
+- [x] 🟢 Пропуск / зайвий прийменник → `prepositions/common-constructions`
 
 ---
 
@@ -226,9 +226,9 @@
 
 - [x] ✅ Сурядні → `conjunctions/coordinating`
 - [x] ✅ Координація (типи) → `conjunctions/coordinating`
-- [ ] 🟡 Pero vs sino ⭐ → частково `conjunctions/coordinating` (+ `emphasis-polarity-focus`)
+- [x] 🟢 Pero vs sino ⭐ → `conjunctions/coordinating` (+ `emphasis-polarity-focus`)
 - [x] ✅ Підрядні → `conjunctions/subordinating`
-- [ ] 🟡 Часові / причинні / мети / умовні / поступкові / наслідкові → частково `conjunctions/subordinating`
+- [x] 🟢 Часові / причинні / мети / умовні / поступкові / наслідкові → `conjunctions/subordinating`
 - [x] ✅ Como (порівняння / причина / спосіб) → `conjunctions/como-excepto`
 - [x] ✅ Excepto / salvo / menos → `conjunctions/como-excepto`
 - [x] ✅ que vs de que → `conjunctions/que-de-que`
@@ -237,4 +237,4 @@
 
 ---
 
-*AUDIT-1: ❌ = 0 · статуси читаються з рядків цього файлу; перевірка — за фактичним MDX-вмістом*
+*AUDIT-1: 🟢 = повне покриття · 🟡 = часткове · ❌ = відсутнє. Актуалізація 2026-09-19: усі колишні 🟡 тематично доповнені до повного покриття; статус визначається за фактичним MDX-вмістом.*

@@ -1,24 +1,26 @@
 ---
-// Site header: brand, primary nav, mobile hamburger.
-// All links respect Astro base (GitHub Pages sub-path) via withBase().
+// Gramaticarrona — site header.
 import { withBase } from '../utils/content';
 const { pathname = '/' } = Astro.props;
 const isActive = (p: string) => pathname.startsWith(p);
 ---
 <header class="site-header">
+  <div class="header-rule" aria-hidden="true"></div>
   <div class="container header-inner">
-    <a class="brand" href={withBase('/')} aria-label="GrammarWay — головна">
-      <span>GrammarWay</span><span class="brand-lang">ES</span>
+    <a class="brand" href={withBase('/')} aria-label="Gramaticarrona — головна">
+      <span class="brand-mark">G</span>
+      <span class="brand-name">Gramaticarrona</span>
+      <span class="brand-sub">ES</span>
     </a>
 
     <nav class="nav-main" aria-label="Головна навігація">
       <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Граматика</a>
       <a href={withBase('/comparisons/')} aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
       <a href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>Пошук</a>
-      <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про сайт</a>
+      <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про</a>
     </nav>
 
-    <span class="region-tag" title="Мова інтерфейсу — українська">Мова: українська</span>
+    <span class="language-note">UA · ES</span>
 
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню">
       <span></span><span></span><span></span>
@@ -37,18 +39,17 @@ const isActive = (p: string) => pathname.startsWith(p);
   (function () {
     var toggle = document.getElementById('nav-toggle');
     var menu = document.getElementById('mobile-menu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', function () {
-        var open = menu.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(open));
-        toggle.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
-      });
-      menu.addEventListener('click', function (e) {
-        if (e.target && e.target.tagName === 'A') {
-          menu.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target && e.target.tagName === 'A') {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   })();
 </script>

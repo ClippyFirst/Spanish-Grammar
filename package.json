@@ -1,9 +1,9 @@
 {
-  "name": "grammarway-es",
+  "name": "gramaticarrona",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Spanish Grammar reference for Ukrainian speakers — static-first, searchable grammar handbook.",
+  "description": "Gramaticarrona — Spanish grammar reference for Ukrainian speakers.",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

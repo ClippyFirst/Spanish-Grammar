@@ -56,6 +56,7 @@ try {
 } catch { /* ignore */ }
 
 const slugs = new Set(files.map((f) => path.basename(f).replace(/\.mdx?$/i, '')));
+const pageSlugs = new Set(files.map((f) => path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, '')));
 const errors = [];
 const warnings = [];
 
@@ -85,7 +86,7 @@ for (const f of files) {
   }
   const rel = Array.isArray(data.related) ? data.related : [];
   for (const r of rel) {
-    if (!slugs.has(r) && !categoryKeys.has(r)) {
+    if (!slugs.has(r) && !pageSlugs.has(r) && !categoryKeys.has(r)) {
       warnings.push(`${path.relative(ROOT, f)}: related "${r}" resolves to no page/category (filtered at runtime)`);
     }
   }

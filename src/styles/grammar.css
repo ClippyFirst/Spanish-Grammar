@@ -75,13 +75,95 @@
 .region-tag { font-family: var(--font-ui); font-size: var(--fs-tiny); border: 1px solid var(--color-border-strong); border-radius: 999px; padding: .1rem .6rem; color: var(--color-text-soft); }
 
 /* ---------- Grammatical tables ---------- */
-table.gram { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; font-family: var(--font-serif); font-size: var(--fs-small); background: var(--color-bg); }
-table.gram caption { text-align: left; font-family: var(--font-ui); font-weight: 700; font-size: var(--fs-small); padding-bottom: .5rem; color: var(--color-text-soft); }
-table.gram th, table.gram td { border: 1px solid var(--color-border); padding: .5rem .7rem; text-align: left; vertical-align: top; }
-table.gram thead th { background: var(--color-bg-tint); font-family: var(--font-ui); font-weight: 700; }
-table.gram tbody th { background: var(--color-bg-soft); font-family: var(--font-ui); font-weight: 600; white-space: nowrap; }
-.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.table-scroll table.gram { min-width: 500px; }
+/* ---------- Grammatical tables ---------- */
+/*
+   Tables are deliberately predictable: the first column identifies the row,
+   remaining columns share the available width. Wide tables scroll instead of
+   squeezing text into unreadable cells.
+*/
+table.gram {
+  width: 100%;
+  min-width: 560px;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--space-4) 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+table.gram caption {
+  text-align: left;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: var(--fs-small);
+  line-height: 1.4;
+  padding-bottom: .55rem;
+  color: var(--color-text-soft);
+}
+table.gram th,
+table.gram td {
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: .65rem .75rem;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+table.gram tr > :first-child {
+  border-left: 1px solid var(--color-border);
+  width: 22%;
+}
+table.gram thead th {
+  background: var(--color-bg-tint);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-weight: 750;
+  line-height: 1.35;
+  border-top: 1px solid var(--color-border);
+}
+table.gram thead th:first-child { border-top-left-radius: var(--radius-sm); }
+table.gram thead th:last-child { border-top-right-radius: var(--radius-sm); }
+table.gram tbody th {
+  background: var(--color-bg-soft);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-weight: 650;
+}
+table.gram tbody tr:nth-child(even) td { background: var(--color-bg-soft); }
+table.gram tbody tr:hover td,
+table.gram tbody tr:hover th { background: var(--color-bg-tint); }
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+.table-scroll table.gram { margin-top: 0; }
+
+/* Markdown tables do not have the .table-scroll wrapper. Make them usable too. */
+.prose > table,
+.prose table:not(.gram) {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+}
+.prose table:not(.gram) th,
+.prose table:not(.gram) td {
+  min-width: 9rem;
+  padding: .65rem .75rem;
+  border: 1px solid var(--color-border);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.prose table:not(.gram) thead th { background: var(--color-bg-tint); color: var(--color-text); }
+.prose table:not(.gram) tbody tr:nth-child(even) td { background: var(--color-bg-soft); }
 
 /* token legend */
 .legend { display: flex; flex-wrap: wrap; gap: var(--space-2); font-family: var(--font-ui); font-size: var(--fs-tiny); color: var(--color-text-muted); margin: var(--space-3) 0; }

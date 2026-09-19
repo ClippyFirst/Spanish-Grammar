@@ -14,7 +14,12 @@
     "links": "node scripts/check-links.mjs",
     "qa": "node scripts/validate-content.mjs && node scripts/check-links.mjs && astro build",
     "check": "astro check",
-    "audit:graph": "node scripts/audit-content-graph.mjs"
+    "audit:graph": "node scripts/audit-content-graph.mjs",
+    "audit:design": "npm run audit:design:tokens && npm run audit:design:a11y && npm run audit:design:responsive && npm run audit:design:components",
+    "audit:design:tokens": "node scripts/audit-design-tokens.mjs",
+    "audit:design:a11y": "node scripts/audit-design-accessibility.mjs",
+    "audit:design:responsive": "node scripts/audit-design-responsive.mjs",
+    "audit:design:components": "node scripts/audit-design-components.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

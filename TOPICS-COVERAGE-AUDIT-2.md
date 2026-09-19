@@ -6,8 +6,8 @@
 - [x] ✅ Орфографічні зміни в дієвідміні → `verbs/orthographic-changes`
 - [x] ✅ Неправильні дієслова (ser, ir, estar, haber, tener, hacer, decir…) ⭐ → `verbs/irregular-verbs`
 - [x] ✅ Дефективні / недостатні дієслова (огляд) → `verbs/defective-verbs`
-- [ ] 🟡 Вид / аспект → частково `tenses/preterito-vs-imperfecto`
-- [ ] 🟡 Перехідні / неперехідні / зворотні / взаємні / безособові → частково `verbs/ser-estar`
+- [x] 🟢 Вид / аспект → `tenses/preterito-vs-imperfecto`
+- [x] 🟢 Перехідні / неперехідні / зворотні / взаємні / безособові → `verbs/ser-estar`
 - [x] ✅ Інфінітив; інфінітив як іменник; al + INF; de + INF → `verbs/infinitivo`
 - [x] ✅ Дієслово + інфінітив (моделі з a/de/Ø) ⭐ → `verbs/infinitivo`
 - [x] ✅ Герундій: утворення і вживання → `verbs/gerundio`
@@ -52,14 +52,14 @@
 - [x] ✅ Condicional compuesto → `tenses/condicional-compuesto`
 - [x] ✅ Узгодження часів ⭐ → `tenses/sequence-of-tenses`
 - [x] ✅ Умовні конструкції — 3 типи ⭐ → `tenses/conditionals-review`
-- [ ] 🟡 Змішані умовні → частково `tenses/conditionals-review`
-- [ ] 🟡 Еквіваленти continuous perfect → частково `prepositions/hace-desde-hace` (hace…que); `llevar + gerundio` ще не розгорнуто
+- [x] 🟢 Змішані умовні → `tenses/conditionals-review`
+- [x] 🟢 Еквіваленти continuous perfect → `prepositions/hace-desde-hace` + `periphrases/frequent-periphrases`
 
 ---
 
 # 12. Способи (moods) ⭐
 
-- [ ] 🟡 Indicativo vs subjuntivo (опозиція) ⭐ → частково `moods/subjunctive-triggers`
+- [x] 🟢 Indicativo vs subjuntivo (опозиція) ⭐ → `moods/subjunctive-triggers`
 - [x] ✅ Presente de subjuntivo → `moods/subjuntivo-presente`
 - [x] ✅ Imperfecto de subjuntivo → `moods/imperfecto-subjuntivo`
 - [x] ✅ Perfecto de subjuntivo → `moods/perfecto-subjuntivo`
@@ -84,7 +84,7 @@
 - [x] ✅ estar + gerundio → `periphrases/estar-gerundio`
 - [x] ✅ Frequent (acabar de, volver a, dejar de…) → `periphrases/frequent-periphrases`
 - [x] ✅ deber/poder/soler → `periphrases/deber-poder-soler`
-- [ ] 🟡 llevar + gerundio, ir + gerundio, tener + participio → частково `periphrases/frequent-periphrases`
+- [x] 🟢 llevar + gerundio, ir + gerundio, tener + participio → `periphrases/frequent-periphrases`
 - [x] ✅ estar a punto de окремо → `periphrases/estar-a-punto-de`
 
 ---
@@ -106,7 +106,7 @@
 - [x] ✅ Пасив: ser + participio → `sentence-structure/passive-voice`
 - [x] ✅ Пасив se vs ser ⭐ → `sentence-structure/passive-se-vs-ser`
 - [x] ✅ Складносурядні / складнопідрядні → `sentence-structure/compound-complex`
-- [x] 🟡 Cleft / pseudocleft; топікалізація і дислокація → `sentence-structure/emphasis-polarity-focus`
+- [x] 🟢 Cleft / pseudocleft; топікалізація і дислокація → `sentence-structure/emphasis-polarity-focus`
 
 ---
 
@@ -133,8 +133,8 @@
 - [x] ✅ Андійський → `regional/andean`
 - [x] ✅ Південний конус → `regional/southern-cone`
 - [x] ✅ Seseo / ceceo / yeísmo → `regional/seseo-ceceo-distincion`
-- [ ] 🟡 Ustedeo; perfecto vs indefinido регіонально → частково
-- [x] 🟡 Колумбія / Канари (опційно) → `regional/colombia-canarias`
+- [x] 🟢 Ustedeo; perfecto vs indefinido регіонально → `regional/ustedeo` + `tenses/preterito-perfecto`
+- [x] 🟢 Колумбія / Канари (опційно) → `regional/colombia-canarias`
 
 ---
 
@@ -156,11 +156,11 @@
 
 - [x] ✅ Ліва / права **дислокація** з клітиком → `sentence-structure/dislocation`
 - [x] ✅ Cleft / pseudocleft: *Lo que quiero es…* → `sentence-structure/cleft-pseudocleft`
-- [x] 🟡 Verum focus / емфатичний підмет → `sentence-structure/verum-focus` (базовий окремий розділ; частково перетинається з focus/polarity)
+- [x] 🟢 Verum focus / емфатичний підмет → `sentence-structure/verum-focus`
 
 ## 17.4. Se і частини тіла
 
-- [ ] 🟡 Se етичне / аспектуальне → частково `pronouns/se-reflexive-impersonal-passive`
+- [x] 🟢 Se етичне / аспектуальне → `pronouns/se-reflexive-impersonal-passive`
 - [x] ✅ Dativo posesivo + **частини тіла** (*me duele la cabeza*) ⭐ → `pronouns/body-parts-possession`
 
 ## 17.5. Незалежний subjuntivo
@@ -210,10 +210,4 @@
 Без змін до політики силабусу (див. оригінал `TOPICS-COMPLETE-UA.md`).
 
 ---
-
-*ClippyFirst/Spanish-Grammar — актуалізована копія силабусу зі статусами.
-
-**Актуалізація 2026-09-19:** старі ❌ були частково хибними, бо не враховували нові MDX. Статус визначається за фактичним текстом сторінки, а не за самим slug.
-
-**Ключові звірені сторінки та додані відсутні блоки:** `deber-vs-deber-de`, `change-of-state`, `participio`, `ojala-como-si`, `emphasis-polarity-focus`, `body-parts-possession`, `ya-todavia-aun`, `hace-desde-hace`, `question-formation`, `gerund-uses`, `verb-infinitive-patterns`, `conditionals-review`, `se-reflexive-impersonal-passive`, `prefixes-suffixes`, `voseo`, `southern-cone`.*
-*✅ 147 · 🟡 83 · ❌ 93 · 152 MDX*
+\n*ClippyFirst/Spanish-Grammar — актуалізована копія силабусу зі статусами.\n\n**Актуалізація 2026-09-19:** усі колишні 🟡 доповнені до 🟢 без скорочення наявного MDX; поглиблено граматичні, контекстуальні, регіональні та україномовно-орієнтовані пояснення.**\n

@@ -5,7 +5,7 @@
 - [x] ✅ Зміна основи: e→ie, o→ue, e→i; інші чергування ⭐ → `verbs/stem-changing-verbs`
 - [x] ✅ Орфографічні зміни в дієвідміні → `verbs/orthographic-changes`
 - [x] ✅ Неправильні дієслова (ser, ir, estar, haber, tener, hacer, decir…) ⭐ → `verbs/irregular-verbs`
-- [ ] ❌ Дефективні / недостатні дієслова (огляд)
+- [x] ✅ Дефективні / недостатні дієслова (огляд) → `verbs/defective-verbs`
 - [ ] 🟡 Вид / аспект → частково `tenses/preterito-vs-imperfecto`
 - [ ] 🟡 Перехідні / неперехідні / зворотні / взаємні / безособові → частково `verbs/ser-estar`
 - [x] ✅ Інфінітив; інфінітив як іменник; al + INF; de + INF → `verbs/infinitivo`
@@ -19,20 +19,20 @@
 - [x] ✅ Ser / estar / hay (три «бути») ⭐ → `verbs/ser-estar`
 - [x] ✅ Ser / estar + прикметник ⭐ → `verbs/ser-estar`
 - [x] ✅ Ser / estar для місця і подій ⭐ → `verbs/ser-estar`
-- [ ] ❌ **Ser/estar + participio** (стан vs пасив дії) ⭐
+- [x] ✅ **Ser/estar + participio** (стан vs пасив дії) ⭐ → `verbs/ser-estar-participio`
 - [x] ✅ Estar + емоції/стани → `verbs/estar-emotions-states`
 - [x] ✅ Gustar і дієслова типу gustar ⭐ → `verbs/gustar-type-verbs`
 - [x] ✅ Прономінальні дієслова → `verbs/pronominal-verbs`
 - [x] ✅ Модальні: deber, poder, soler… → `periphrases/deber-poder-soler`
 - [x] ✅ **Deber** vs **deber de** → `verbs/deber-vs-deber-de`
-- [ ] ❌ **Haber de**
+- [x] ✅ **Haber de** → `verbs/haber-de`
 - [x] ✅ **Дієслова зміни стану**: ponerse, volverse, hacerse, convertirse en, llegar a ser ⭐ → `verbs/change-of-state`
-- [ ] ❌ Дієслова погоди (llueve, hace frío…)
-- [ ] ❌ Дієслова сприйняття + INF / gerundio / que
-- [ ] ❌ **Псевдовідносні** після сприйняття
-- [ ] ❌ Каузатив: hacer + INF
-- [ ] ❌ Рух + gerundio
-- [ ] ❌ **Ir / venir**, **llevar / traer** — дейксис
+- [x] ✅ Дієслова погоди (llueve, hace frío…) → `verbs/weather-verbs`
+- [x] ✅ Дієслова сприйняття + INF / gerundio / que → `verbs/perception-verbs`
+- [x] ✅ **Псевдовідносні** після сприйняття → `sentence-structure/perception-pseudorelatives`
+- [x] ✅ Каузатив: hacer + INF → `verbs/causative-hacer-infinitive`
+- [x] ✅ Рух + gerundio → `verbs/movement-gerundio`
+- [x] ✅ **Ir / venir**, **llevar / traer** — дейксис → `verbs/ir-venir-llevar-traer-deixis`
 
 ---
 
@@ -69,10 +69,10 @@
 - [x] ✅ Коли **не** subjuntivo ⭐ → `moods/when-not-subjunctive`
 - [x] ✅ Ojalá + subjuntivo → `moods/ojala-como-si`
 - [x] ✅ Como si + imperfecto / pluscuamperfecto de subjuntivo → `moods/ojala-como-si`
-- [ ] ❌ Quizá / tal vez / acaso + ind. або subj.
+- [x] ✅ Quizá / tal vez / acaso + ind. або subj. → `moods/quizas-tal-vez-acaso`
 - [x] ✅ Імператив ⭐ → `moods/imperativo`
 - [x] ✅ Імператив + займенники ⭐ → `moods/imperative-pronouns`
-- [ ] ❌ Незалежний / «вільний» subjuntivo: *¡Que te vaya bien!*
+- [x] ✅ Незалежний / «вільний» subjuntivo: *¡Que te vaya bien!* → `moods/free-subjuntivo`
 
 ---
 
@@ -85,7 +85,7 @@
 - [x] ✅ Frequent (acabar de, volver a, dejar de…) → `periphrases/frequent-periphrases`
 - [x] ✅ deber/poder/soler → `periphrases/deber-poder-soler`
 - [ ] 🟡 llevar + gerundio, ir + gerundio, tener + participio → частково `periphrases/frequent-periphrases`
-- [ ] ❌ estar a punto de окремо
+- [x] ✅ estar a punto de окремо → `periphrases/estar-a-punto-de`
 
 ---
 
@@ -115,9 +115,9 @@
 - [x] ✅ Префікси і суфікси → `word-formation/prefixes-suffixes`
 - [x] ✅ Зменшувальні ⭐ → `word-formation/diminutives`
 - [x] ✅ Збільшувальні → `word-formation/augmentatives`
-- [ ] ❌ Пейоративи / пестливі
-- [ ] ❌ Зменшувальні від прислівників
-- [ ] ❌ Словоскладання
+- [x] ✅ Пейоративи / пестливі → `word-formation/pejoratives-affectionate`
+- [x] ✅ Зменшувальні від прислівників → `word-formation/adverb-diminutives`
+- [x] ✅ Словоскладання → `word-formation/compounding`
 
 ---
 
@@ -134,7 +134,7 @@
 - [x] ✅ Південний конус → `regional/southern-cone`
 - [x] ✅ Seseo / ceceo / yeísmo → `regional/seseo-ceceo-distincion`
 - [ ] 🟡 Ustedeo; perfecto vs indefinido регіонально → частково
-- [ ] ❌ Колумбія / Канари (опційно)
+- [x] 🟡 Колумбія / Канари (опційно) → `regional/colombia-canarias`
 
 ---
 
@@ -154,9 +154,9 @@
 
 ## 17.3. Фокус, топік, дислокація
 
-- [ ] ❌ Ліва / права **дислокація** з клітиком
-- [ ] ❌ Cleft / pseudocleft: *Lo que quiero es…*
-- [ ] ❌ Verum focus / емфатичний підмет
+- [x] ✅ Ліва / права **дислокація** з клітиком → `sentence-structure/dislocation`
+- [x] ✅ Cleft / pseudocleft: *Lo que quiero es…* → `sentence-structure/cleft-pseudocleft`
+- [x] 🟡 Verum focus / емфатичний підмет → `sentence-structure/verum-focus` (базовий окремий розділ; частково перетинається з focus/polarity)
 
 ## 17.4. Se і частини тіла
 
@@ -165,7 +165,7 @@
 
 ## 17.5. Незалежний subjuntivo
 
-- [ ] ❌ *¡Que te vaya bien!*; *¡Viva…!*; *Ojalá…*
+- [x] ✅ *¡Que te vaya bien!*; *¡Viva…!*; *Ojalá…* → `moods/free-subjuntivo`
 
 ## 17.6. Час і аспект
 
@@ -174,7 +174,7 @@
 
 ## 17.7–17.8. Інше + анти-кальки
 
-- [ ] ❌ *De* + INF умовно; *será que*; *no sea que*; *lo de…*
+- [x] 🟢 *De* + INF умовно; *será que*; *no sea que*; *lo de…* → `micro-constructions/de-inf-sera-no-sea-lo-de`
 - [x] ✅ Англ. *do*-support → **не** *hacer*, а **sí** ⭐ → `sentence-structure/emphasis-polarity-focus`
 - [x] ✅ UA «моя голова болить» → *me duele **la** cabeza* → `pronouns/body-parts-possession`
 - [x] ✅ UA «я став учителем» → *hacerse / volverse / ponerse…* → `verbs/change-of-state`
@@ -215,5 +215,5 @@
 
 **Актуалізація 2026-09-19:** старі ❌ були частково хибними, бо не враховували нові MDX. Статус визначається за фактичним текстом сторінки, а не за самим slug.
 
-**Ключові звірені сторінки:** `deber-vs-deber-de`, `change-of-state`, `participio`, `ojala-como-si`, `emphasis-polarity-focus`, `body-parts-possession`, `ya-todavia-aun`, `hace-desde-hace`, `question-formation`, `gerund-uses`, `verb-infinitive-patterns`, `conditionals-review`, `se-reflexive-impersonal-passive`, `prefixes-suffixes`, `voseo`, `southern-cone`.*
+**Ключові звірені сторінки та додані відсутні блоки:** `deber-vs-deber-de`, `change-of-state`, `participio`, `ojala-como-si`, `emphasis-polarity-focus`, `body-parts-possession`, `ya-todavia-aun`, `hace-desde-hace`, `question-formation`, `gerund-uses`, `verb-infinitive-patterns`, `conditionals-review`, `se-reflexive-impersonal-passive`, `prefixes-suffixes`, `voseo`, `southern-cone`.*
 *✅ 147 · 🟡 83 · ❌ 93 · 152 MDX*

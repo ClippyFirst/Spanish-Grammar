@@ -951,3 +951,70 @@ PCIC для C1–C2, зі свого боку, прямо містить окр�
 3. чи немає суперечливих правил між review- і deep-сторінками;
 4. чи не залишилися категоричні формулювання без потрібного контексту;
 5. чи можна завершити аудит без створення зайвого дублювання.
+
+
+---
+
+# 20. Final Technical + Grammar QA Pass
+
+**Оновлено:** 2026-09-19.
+
+## Build validation
+
+У репозиторії вже існують окремі npm-перевірки:
+
+- `npm run validate` — frontmatter/content validation;
+- `npm run links` — внутрішні `/es/...` links;
+- `npm run check` — Astro type/content checks;
+- `npm run build` — Astro production build;
+- `npm run build:full` — production build + Pagefind;
+- `npm run qa` — послідовна автоматична перевірка validate → links → Astro build.
+
+Локальний build користувача вже підтвердив, що після виправлення `region: argentina` на допустиме schema-значення попередня blocking schema error усунена. Саме виконання нового `npm run qa` у цьому середовищі не симулюється; остаточний runtime verdict залишається за локальним build/CI.
+
+## Link validation
+
+Перевірено логіку `scripts/check-links.mjs`.
+
+Додатково виправлено `scripts/validate-content.mjs`: `related` тепер перевіряє не лише basename slug, а й повний вкладений шлях контенту. Це важливо для однакових назв файлів у різних категоріях.
+
+## Review / deep consistency
+
+Повторно перевірено показові вузли:
+
+- questions / question-formation;
+- subjuntivo;
+- subordinate clauses;
+- regional overview;
+- tú/usted/vosotros/ustedes;
+- object pronouns / leísmo;
+- pretérito perfecto;
+- ser/estar.
+
+Виявлені раніше спрощення вже скориговані. Особливо перевірено, щоб review-сторінка не формулювала глибоке правило більш категорично, ніж deep-сторінка.
+
+## Categorical-language pass
+
+Пошуковий контроль виконано для українських маркерів категоричності: `завжди`, `ніколи`, `тільки`, `лише`, `виключно`, `обов’язково`.
+
+Важливий принцип: саме слово не є автоматично помилковим. Воно має залишатися там, де правило справді категоричне. Перевіряти потрібно **контекст і нормативний статус**, а не механічно видаляти слова.
+
+## Final grammar audit
+
+Поточна структура охоплює не лише морфологічні парадигми, а й:
+
+- категорії та їхні синтаксичні функції;
+- керування та валентність;
+- підрядність;
+- інформаційну структуру;
+- модальність;
+- еліпсис;
+- абсолютні конструкції;
+- регіональну варіативність;
+- word order;
+- punctuation/spelling;
+- discourse-level distinctions.
+
+Після цього проходу головний залишковий ризик — вже не «відсутня базова тема», а локальні суперечності, broken links, CSS/MDX rendering issues та поодинокі формулювання, які потребують контексту.
+
+**Статус:** Grammar/content audit → завершено на рівні структури; technical runtime QA → потребує локального `npm run qa` / production build.

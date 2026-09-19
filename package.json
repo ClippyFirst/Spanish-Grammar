@@ -13,7 +13,8 @@
     "validate": "node scripts/validate-content.mjs",
     "links": "node scripts/check-links.mjs",
     "qa": "node scripts/validate-content.mjs && node scripts/check-links.mjs && astro build",
-    "check": "astro check"
+    "check": "astro check",
+    "audit:graph": "node scripts/audit-content-graph.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

@@ -139,6 +139,14 @@ export const categories: Category[] = [
       'Іспанія vs Латинська Америка, voseo, leísmo/laísmo/loísmo, вимовні відмінності.',
     order: 16,
   },
+  {
+    key: 'micro-constructions',
+    titleUk: 'Мікроконструкції',
+    titleEs: 'Microconstrucciones',
+    description:
+      'Високочастотні короткі граматичні моделі, які краще вивчати як цілісні конструкції.',
+    order: 17,
+  },
 ];
 
 export function getCategory(key: string): Category | undefined {

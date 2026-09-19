@@ -27,7 +27,16 @@
   --color-good-bg: #eef7f1;
   --color-bad-bg: #fdf0ef;
 
-  --font-ui: system-ui, "Segoe UI", -apple-system, Roboto, sans-serif;
+  /* Formula-token backgrounds: always paired with borders/text, never color-only. */
+  --color-token-subject: #eef3f7;
+  --color-token-verb: #f6eee9;
+  --color-token-neg: #f9e9e7;
+  --color-token-aux: #eeeaf7;
+  --color-token-infin: #edf5ec;
+  --color-token-part: #f5f1e6;
+  --color-token-pron: #e9f2f7;
+
+    --font-ui: system-ui, "Segoe UI", -apple-system, Roboto, sans-serif;
   --font-serif: Georgia, "Times New Roman", "DejaVu Serif", serif;
 
   --fs-hero: clamp(1.75rem, 4.2vw, 2.6rem);
@@ -67,5 +76,13 @@
     --color-bad: #f0908a;
     --color-good-bg: #17301f;
     --color-bad-bg: #38201f;
+
+    --color-token-subject: #25313a;
+    --color-token-verb: #3a2c29;
+    --color-token-neg: #402a29;
+    --color-token-aux: #302b3d;
+    --color-token-infin: #27372b;
+    --color-token-part: #39352b;
+    --color-token-pron: #26343b;
   }
 }

@@ -1,4 +1,4 @@
-# GrammarWay ES — Іспанська граматика для україномовних
+# Gramaticarrona — Іспанська граматика для україномовних
 
 Статичний довідник з іспанської граматики для україномовних. Головний принцип:
 **Знайти → зрозуміти → порівняти → запам'ятати.**
@@ -137,7 +137,7 @@ URL має вигляд `/es/<category>/<slug>/`. Сайт спроєктова�
 
 ## Категорії
 
-16 розділів: fundamentals, nouns, articles, adjectives, adverbs, pronouns, prepositions, conjunctions, verbs, tenses, moods, periphrases, sentence-structure, word-formation, spelling, regional. Див. `src/data/categories.ts` — там змінюються назви, описи і порядок.
+17 розділів: fundamentals, nouns, articles, adjectives, adverbs, pronouns, prepositions, conjunctions, verbs, tenses, moods, periphrases, sentence-structure, word-formation, spelling, regional. Див. `src/data/categories.ts` — там змінюються назви, описи і порядок.
 
 
 

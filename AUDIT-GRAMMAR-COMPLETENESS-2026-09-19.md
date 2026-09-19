@@ -793,3 +793,55 @@ PCIC для C1–C2, зі свого боку, прямо містить окр�
 Якщо закрити 20 пунктів із розділу 15, особливо **comparatives + consecutives + modals + predicatives + adjective complements + advanced quantification + subordinate-clause system**, проєкт буде дуже близьким до стану, коли його вже можна називати **повним практичним граматичним довідником іспанської для україномовного користувача**.
 
 > **Важливе обмеження:** навіть після цього його не слід називати буквально «повною граматикою іспанської мови» в академічному сенсі. RAE охоплює значно більше тонких морфосинтаксичних, семантичних, прагматичних і варіативних явищ. Для користувацького довідника наша ціль має бути іншою: **максимально повне практично релевантне покриття + глибина C1–C2 + українська педагогічна адаптація.**
+
+
+---
+
+# 18. Depth Completion + Quality Control — виконано
+
+**Оновлено:** 2026-09-19.
+
+На підставі цього аудиту внесено зміни без скорочення наявного матеріалу.
+
+### Нові глибокі сторінки
+
+- `sentence-structure/comparative-clauses.mdx`
+- `sentence-structure/consecutive-clauses.mdx`
+- `sentence-structure/modal-clauses.mdx`
+- `sentence-structure/predicative-complement.mdx`
+- `adjectives/adjective-complements.mdx`
+- `adjectives/quantifiers-advanced.mdx`
+- `fundamentals/numerals-advanced.mdx`
+- `sentence-structure/interjections.mdx`
+- `sentence-structure/advanced-conditionals.mdx`
+- `sentence-structure/concessive-clauses.mdx`
+- `sentence-structure/ellipsis.mdx`
+- `sentence-structure/verb-valency.mdx`
+- `sentence-structure/modality-speech-acts.mdx`
+- `sentence-structure/absolute-constructions.mdx`
+
+### Поглиблено / виправлено
+
+- `pronouns/relative-pronouns.mdx` — виправлено надто категоричну заборону **en que**; додано карту варіантів `que / el que / el cual / quien`.
+- `sentence-structure/relative-clauses.mdx` — виправлено те саме спрощення та додано класифікацію relative constructions.
+- `sentence-structure/subordinate-clauses.mdx` — додано повну карту основних типів підрядності та посилання на окремі comparative/consecutive/modal сторінки.
+- `tenses/sequence-of-tenses.mdx` — виправлено механічне трактування sequence of tenses; додано часову перспективу та актуальність.
+- `adjectives/quantifiers.mdx` — додано перехід до поглибленої системи квантифікації.
+- `sentence-structure/emphasis-polarity-focus.mdx` — додано системну карту інформаційної структури.
+- `sentence-structure/concessive-clauses.mdx` — уточнено українську термінологію як **допустові речення**.
+
+### Що змінилося концептуально
+
+Після цього раунду проєкт більше не покладається лише на базові сторінки типу «що таке subjuntivo / що таке comparative». Додано окремий другий шар для:
+
+**comparative → consecutive → modal → concessive → advanced conditional → predicative → adjective complement → valency → ellipsis → absolute constructions → quantification → modality/speech acts.**
+
+Це саме той шар, який був головним залишковим розривом між «дуже широким довідником» та довідником із реальною C1–C2 синтаксичною глибиною.
+
+### Quality-control правило, яке треба зберігати надалі
+
+Не використовувати абсолютні формулювання на кшталт «X завжди заборонено», якщо нормативна система допускає контекстуальні, стилістичні або регіональні варіанти. Для кожного спірного явища треба розділяти:
+
+**нормативність → частотність → стиль/регістр → регіон → семантичне значення.**
+
+Особливо це стосується relative clauses, subjuntivo, sequence of tenses, prepositions, concordancia та regional grammar.

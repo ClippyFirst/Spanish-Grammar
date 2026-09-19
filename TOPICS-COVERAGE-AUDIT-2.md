@@ -12,7 +12,7 @@
 - [x] ✅ Дієслово + інфінітив (моделі з a/de/Ø) ⭐ → `verbs/infinitivo`
 - [x] ✅ Герундій: утворення і вживання → `verbs/gerundio`
 - [x] ✅ Participio: утворення, неправильні → `verbs/participio`
-- [ ] ❌ **Подвійні participios** (freído/frito, imprimido/impreso…)
+- [x] ✅ **Подвійні participios** → `verbs/participio` (freído/frito, imprimido/impreso…)
 - [x] ✅ Haber як допоміжне; hay ≠ ha ⭐ → `verbs/haber-auxiliary`
 - [x] ✅ Haber vs tener ⭐ → `verbs/haber-vs-tener`
 - [x] ✅ Ser vs estar (повний розбір) ⭐ → `verbs/ser-estar`
@@ -24,9 +24,9 @@
 - [x] ✅ Gustar і дієслова типу gustar ⭐ → `verbs/gustar-type-verbs`
 - [x] ✅ Прономінальні дієслова → `verbs/pronominal-verbs`
 - [x] ✅ Модальні: deber, poder, soler… → `periphrases/deber-poder-soler`
-- [ ] ❌ **Deber** vs **deber de**
+- [x] ✅ **Deber** vs **deber de** → `verbs/deber-vs-deber-de`
 - [ ] ❌ **Haber de**
-- [ ] ❌ **Дієслова зміни стану**: ponerse, volverse, hacerse, convertirse en, llegar a ser ⭐
+- [x] ✅ **Дієслова зміни стану**: ponerse, volverse, hacerse, convertirse en, llegar a ser ⭐ → `verbs/change-of-state`
 - [ ] ❌ Дієслова погоди (llueve, hace frío…)
 - [ ] ❌ Дієслова сприйняття + INF / gerundio / que
 - [ ] ❌ **Псевдовідносні** після сприйняття
@@ -53,7 +53,7 @@
 - [x] ✅ Узгодження часів ⭐ → `tenses/sequence-of-tenses`
 - [x] ✅ Умовні конструкції — 3 типи ⭐ → `tenses/conditionals-review`
 - [ ] 🟡 Змішані умовні → частково `tenses/conditionals-review`
-- [ ] 🟡 Еквіваленти continuous perfect → частково `tenses/conditionals-review`
+- [ ] 🟡 Еквіваленти continuous perfect → частково `prepositions/hace-desde-hace` (hace…que); `llevar + gerundio` ще не розгорнуто
 
 ---
 
@@ -67,8 +67,8 @@
 - [x] ✅ Futuro de subjuntivo → `moods/futuro-de-subjuntivo`
 - [x] ✅ Тригери subjuntivo ⭐ → `moods/subjunctive-triggers`
 - [x] ✅ Коли **не** subjuntivo ⭐ → `moods/when-not-subjunctive`
-- [ ] ❌ Ojalá + subjuntivo
-- [ ] ❌ Como si + imperfecto / pluscuamperfecto de subjuntivo
+- [x] ✅ Ojalá + subjuntivo → `moods/ojala-como-si`
+- [x] ✅ Como si + imperfecto / pluscuamperfecto de subjuntivo → `moods/ojala-como-si`
 - [ ] ❌ Quizá / tal vez / acaso + ind. або subj.
 - [x] ✅ Імператив ⭐ → `moods/imperativo`
 - [x] ✅ Імператив + займенники ⭐ → `moods/imperative-pronouns`
@@ -94,7 +94,7 @@
 - [x] ✅ Порядок слів ⭐ → `sentence-structure/word-order`
 - [x] ✅ Опускання підмета → `pronouns/personal-pronouns-omission`
 - [x] ✅ Утворення запитань ⭐ → `sentence-structure/question-formation`
-- [ ] ❌ **Tag-питання**: ¿no?, ¿verdad?, ¿eh?
+- [x] ✅ **Tag-питання**: ¿no?, ¿verdad?, ¿eh? → `sentence-structure/question-formation`
 - [x] ✅ Заперечення; подвійне заперечення ⭐ → `sentence-structure/negation`
 - [x] ✅ Hay vs estar ⭐ → `sentence-structure/hay-vs-estar`
 - [x] ✅ Особове a ⭐ → `sentence-structure/personal-a`
@@ -106,7 +106,7 @@
 - [x] ✅ Пасив: ser + participio → `sentence-structure/passive-voice`
 - [x] ✅ Пасив se vs ser ⭐ → `sentence-structure/passive-se-vs-ser`
 - [x] ✅ Складносурядні / складнопідрядні → `sentence-structure/compound-complex`
-- [ ] ❌ Cleft / pseudocleft; топікалізація і дислокація
+- [x] 🟡 Cleft / pseudocleft; топікалізація і дислокація → `sentence-structure/emphasis-polarity-focus`
 
 ---
 
@@ -142,15 +142,15 @@
 
 ## 17.1. Емфаза полярності: **sí** (≈ англ. *do*)
 
-- [ ] ❌ **Yo sí quiero tener…** / **Él sí lo sabe** ⭐
-- [ ] ❌ Контраст: *No quiero café. — Yo **sí** quiero.*
-- [ ] ❌ **Sí que…** (*Sí que es caro*)
-- [ ] ❌ *sí* vs *si* (орфографія)
+- [x] ✅ **Yo sí quiero tener…** / **Él sí lo sabe** ⭐ → `sentence-structure/emphasis-polarity-focus`
+- [x] ✅ Контраст: *No quiero café. — Yo **sí** quiero. → `sentence-structure/emphasis-polarity-focus`*
+- [x] ✅ **Sí que…** (*Sí que es caro*) → `sentence-structure/emphasis-polarity-focus`
+- [x] ✅ *sí* vs *si* (орфографія) → `sentence-structure/emphasis-polarity-focus`
 
 ## 17.2. Заперечення і «не те, а…»
 
-- [ ] ❌ **No… sino / sino que** ⭐
-- [ ] ❌ **No es que… (sino que)…** ⭐
+- [x] ✅ **No… sino / sino que** ⭐ → `sentence-structure/emphasis-polarity-focus`
+- [x] ✅ **No es que… (sino que)…** ⭐ → `sentence-structure/emphasis-polarity-focus`
 
 ## 17.3. Фокус, топік, дислокація
 
@@ -161,7 +161,7 @@
 ## 17.4. Se і частини тіла
 
 - [ ] 🟡 Se етичне / аспектуальне → частково `pronouns/se-reflexive-impersonal-passive`
-- [ ] ❌ Dativo posesivo + **частини тіла** (*me duele la cabeza*) ⭐
+- [x] ✅ Dativo posesivo + **частини тіла** (*me duele la cabeza*) ⭐ → `pronouns/body-parts-possession`
 
 ## 17.5. Незалежний subjuntivo
 
@@ -169,15 +169,15 @@
 
 ## 17.6. Час і аспект
 
-- [ ] 🟡 *Hace dos años (que)…*; *desde hace…* → частково `prepositions/time`
-- [ ] ❌ *Ya* / *todavía* / *aún* / *ya no*
+- [x] ✅ *Hace dos años (que)…*; *desde hace…* → `prepositions/hace-desde-hace`
+- [x] ✅ *Ya* / *todavía* / *aún* / *ya no* → `adverbs/ya-todavia-aun`
 
 ## 17.7–17.8. Інше + анти-кальки
 
 - [ ] ❌ *De* + INF умовно; *será que*; *no sea que*; *lo de…*
-- [ ] ❌ Англ. *do*-support → **не** *hacer*, а **sí** ⭐
-- [ ] ❌ UA «моя голова болить» → *me duele **la** cabeza*
-- [ ] ❌ UA «я став учителем» → *hacerse / volverse / ponerse…*
+- [x] ✅ Англ. *do*-support → **не** *hacer*, а **sí** ⭐ → `sentence-structure/emphasis-polarity-focus`
+- [x] ✅ UA «моя голова болить» → *me duele **la** cabeza* → `pronouns/body-parts-possession`
+- [x] ✅ UA «я став учителем» → *hacerse / volverse / ponerse…* → `verbs/change-of-state`
 
 ---
 
@@ -211,5 +211,9 @@
 
 ---
 
-*ClippyFirst/Spanish-Grammar — копія силабусу зі статусами.*
+*ClippyFirst/Spanish-Grammar — актуалізована копія силабусу зі статусами.
+
+**Актуалізація 2026-09-19:** старі ❌ були частково хибними, бо не враховували нові MDX. Статус визначається за фактичним текстом сторінки, а не за самим slug.
+
+**Ключові звірені сторінки:** `deber-vs-deber-de`, `change-of-state`, `participio`, `ojala-como-si`, `emphasis-polarity-focus`, `body-parts-possession`, `ya-todavia-aun`, `hace-desde-hace`, `question-formation`, `gerund-uses`, `verb-infinitive-patterns`, `conditionals-review`, `se-reflexive-impersonal-passive`, `prefixes-suffixes`, `voseo`, `southern-cone`.*
 *✅ 147 · 🟡 83 · ❌ 93 · 152 MDX*

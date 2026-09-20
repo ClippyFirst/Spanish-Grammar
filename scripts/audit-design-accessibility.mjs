@@ -18,6 +18,11 @@ const src = files
   .map((x) => fs.readFileSync(x, 'utf8'))
   .join('\n');
 
+const css = files
+  .filter((x) => x.endsWith('.css'))
+  .map((x) => fs.readFileSync(x, 'utf8'))
+  .join('\n');
+
 const checks = [
   ['images-without-alt', /<img(?![^>]*\balt=)[^>]*>/gi],
   ['autofocus', /\bautofocus\b/gi],

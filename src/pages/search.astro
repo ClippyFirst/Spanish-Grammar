@@ -66,7 +66,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }, 600);
       }
     } catch (e) {
-      if (statusEl) statusEl.innerHTML = 'Пошуковий індекс ще не згенеровано. Виконайте <code>npm run build</code> або <code>npm run build:full</code>.';
+      if (statusEl) statusEl.innerHTML = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'У режимі <code>npm run dev</code> Pagefind-індекс не обслуговується. Для перевірки пошуку після <code>npm run build</code> відкрийте сайт через <code>npm run preview</code>.' : 'Пошук тимчасово недоступний. Перезавантажте сторінку або спробуйте пізніше.';
     }
   }
   window.addEventListener('DOMContentLoaded', initSearch);

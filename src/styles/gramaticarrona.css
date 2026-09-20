@@ -31,9 +31,9 @@ body { color:var(--gr-ink); font-family:var(--gr-display); }
 .brand { gap:.55rem; font-family:var(--gr-display); letter-spacing:-.04em; }
 .brand-mark { width:28px; height:28px; border-radius:0; background:var(--gr-red); color:var(--gr-white); font-family:var(--gr-ui); font-weight:800; font-size:.8rem; }
 .brand-name { font-size:1.32rem; }
-.brand-sub { color:var(--gr-red); font-family:var(--gr-ui); font-size:.64rem; font-weight:800; letter-spacing:.16em; }
+.brand-sub { color:var(--gr-red); font-family:var(--gr-ui); font-size:.72rem; font-weight:800; letter-spacing:.16em; }
 .nav-main { gap:1.15rem; }
-.nav-main a { font-family:var(--gr-ui); font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.35rem 0; }
+.nav-main a { font-family:var(--gr-ui); font-size:.74rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.35rem 0; }
 .nav-main a:hover { background:none; color:var(--gr-red); }
 .nav-main a[aria-current="page"] { color:var(--gr-red); text-decoration:none; border-bottom:2px solid var(--gr-red); }
 .language-note { font-family:var(--gr-ui); font-size:.72rem; letter-spacing:.14em; color:var(--gr-blue); }
@@ -42,7 +42,7 @@ body { color:var(--gr-ink); font-family:var(--gr-display); }
 .container { max-width:var(--maxw); padding-left:clamp(1rem,4vw,2.5rem); padding-right:clamp(1rem,4vw,2.5rem); }
 
 .hero { padding:clamp(4rem,9vw,8rem) 0 clamp(3rem,7vw,5.5rem); border-bottom:1px solid var(--gr-line); max-width:1050px; }
-.hero::before { content:"ДОВІДНИК · GRAMÁTICA ESPAÑOLA"; display:block; margin-bottom:1.3rem; color:var(--gr-red); font:800 .68rem/1 var(--gr-ui); letter-spacing:.17em; }
+.hero::before { content:"ДОВІДНИК · GRAMÁTICA ESPAÑOLA"; display:block; margin-bottom:1.3rem; color:var(--gr-red); font:800 .72rem/1.2 var(--gr-ui); letter-spacing:.17em; }
 .hero h1 { max-width:18ch; font-size:clamp(3.2rem,8vw,7.2rem); line-height:.9; letter-spacing:-.065em; }
 .hero .lead { max-width:60ch; margin-top:1.7rem; font-size:1.12rem; }
 .search-bar { max-width:760px; margin-top:2.5rem; }
@@ -74,13 +74,13 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
 .card-topic .t-uk { color:var(--gr-muted); font-size:.82rem; }
 
 .layout-doc { grid-template-columns:minmax(0,780px) 210px; gap:clamp(3rem,8vw,7rem); }
-.breadcrumbs { font-family:var(--gr-ui); font-size:.67rem; text-transform:uppercase; letter-spacing:.06em; }
+.breadcrumbs { font-family:var(--gr-ui); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
 .page-head { margin:2.2rem 0 3rem; padding-bottom:1.8rem; border-bottom:1px solid var(--gr-line); }
 .page-head .title-es { color:var(--gr-red); font-family:var(--gr-ui); font-size:.72rem; text-transform:uppercase; letter-spacing:.14em; }
 .page-head h1 { font-size:clamp(2.5rem,6vw,5rem); line-height:.94; letter-spacing:-.055em; }
 .page-head .title-en { font-family:var(--gr-ui); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; }
 .page-head .synopsis { font-size:1.12rem; max-width:60ch; }
-.meta-line { font-family:var(--gr-ui); font-size:.67rem; }
+.meta-line { font-family:var(--gr-ui); font-size:.72rem; }
 .meta-line .chip { border:0; border-bottom:1px solid var(--gr-line); padding:.2rem .35rem; background:transparent; border-radius:0; }
 
 .toc { top:96px; border-left:1px solid var(--gr-line); padding-left:1rem; font-family:var(--gr-ui); }
@@ -93,7 +93,7 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
 .prose { max-width:var(--maxw-text); }
 .prose h2 { margin-top:3.4rem; }
 .prose h3 { margin-top:2.3rem; }
-.prose th { background:var(--gr-ink); color:var(--gr-paper); font-family:var(--gr-ui); font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; }
+.prose th { background:var(--gr-ink); color:var(--gr-paper); font-family:var(--gr-ui); font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; }
 .prose tr:nth-child(even) td { background:var(--gr-table-stripe); }
 
 .formula { border:2px solid var(--gr-ink); border-radius:0; background:var(--gr-paper-alt); box-shadow:6px 6px 0 var(--gr-maize); }
@@ -148,3 +148,5 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
 .page-404 .lead { margin:0 auto; max-width:46ch; }
 .page-404-actions { margin-top:var(--space-5); display:flex; flex-wrap:wrap; justify-content:center; gap:var(--space-3); }
 .page-404-actions .card-topic { display:inline-block; }
+
+.container-reading { max-width:var(--maxw-text); }

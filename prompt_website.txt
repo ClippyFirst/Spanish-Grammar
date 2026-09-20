@@ -1,8 +1,8 @@
-# MASTER PROMPT — Spanish Grammar Reference for Ukrainian Speakers
+# MASTER PROMPT — Gramaticarrona Reference for Ukrainian Speakers
 
 You are the lead software architect, UX/UI designer, frontend engineer and technical product designer.
 
-Your task is to build a modern, fast, static-first grammar reference website dedicated initially to SPANISH GRAMMAR FOR UKRAINIAN-SPEAKING LEARNERS.
+Your task is to build a modern, fast, static-first grammar reference website dedicated initially to GRAMATICARRONA FOR UKRAINIAN-SPEAKING LEARNERS.
 
 The website is NOT a language course.
 
@@ -18,7 +18,7 @@ The core UX principle is:
 
 "Find → understand → compare → remember."
 
-The website should preserve the strongest ideas of GrammarWay while substantially improving its information architecture, search, explanations, examples, error correction, regional notes and navigation.
+The website should preserve the strongest ideas of Gramaticarrona while substantially improving its information architecture, search, explanations, examples, error correction, regional notes and navigation.
 
 ==================================================
 1. TARGET AUDIENCE
@@ -225,7 +225,7 @@ Homepage should provide:
 1. Clear site identity.
 2. Short explanation of what the site is.
 3. Prominent search.
-4. Spanish grammar categories.
+4. Gramaticarrona categories.
 5. "Popular / Essential topics" section.
 6. Recently added topics if useful.
 7. Links to major grammar areas.
@@ -449,7 +449,7 @@ Minimal pairs are especially important for:
 
 Every important grammar page should contain:
 
-"Типові помилки україномовних"
+"Типові помилки носіїв української"
 
 Each mistake should include:
 
@@ -469,7 +469,7 @@ Do not simply say:
 
 This is one of the most important requirements.
 
-Whenever Spanish grammar differs significantly from Ukrainian, explicitly explain the difference.
+Whenever Gramaticarrona differs significantly from Ukrainian, explicitly explain the difference.
 
 Examples:
 
@@ -788,7 +788,7 @@ Phase 2:
 - breadcrumbs.
 
 Phase 3:
-- create representative Spanish grammar pages;
+- create representative Gramaticarrona pages;
 - test all components;
 - test mobile;
 - test accessibility.
@@ -822,7 +822,7 @@ The content must be replaceable independently from the UI.
 30. DEFINITION OF DONE
 ==================================================
 
-The resulting product should feel like a serious digital Spanish grammar handbook for Ukrainian speakers.
+The resulting product should feel like a serious digital Gramaticarrona handbook for Ukrainian speakers.
 
 It should be:
 

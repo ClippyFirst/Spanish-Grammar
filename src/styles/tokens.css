@@ -1,87 +1,94 @@
-/* ============================================================
-   GrammarWay — Design System (part 1: tokens)
-   Principles: CLARITY > DECORATION, READABILITY > INFO DENSITY
-   Target: WCAG 2.2 AA, mobile-first, static-first.
-   ============================================================ */
-
+/* Gramaticarrona — design tokens.
+   Direction: editorial linguistic atlas / Swiss information design.
+   The interface is intentionally typographic, asymmetric and information-led. */
 :root {
   color-scheme: light;
-  /* Color tokens — calm, low-saturation, accessible contrast. */
-  --color-bg: #ffffff;
-  --color-bg-soft: #f6f7f9;
-  --color-bg-tint: #eef3f7;
-  --color-surface: #ffffff;
-  --color-border: #d8dde3;
-  --color-border-strong: #b6bfc9;
 
-  --color-text: #1c232b;
-  --color-text-soft: #4a5563;
-  --color-text-muted: #6b7683;
-  --color-accent: #a43d2e;
-  --color-accent-strong: #8a2f22;
-  --color-accent-bg: #fbf1ef;
+  --color-bg: #f2efe7;
+  --color-bg-soft: #e7e3d8;
+  --color-bg-tint: #ddd8cb;
+  --color-surface: #f8f6f0;
+  --color-border: #c7c1b4;
+  --color-border-strong: #918a7d;
 
-  --color-link: #175a7d;
-  --color-good: #1e7a4a;
-  --color-bad: #b0302a;
-  --color-good-bg: #eef7f1;
-  --color-bad-bg: #fdf0ef;
+  --color-text: #1d1e1a;
+  --color-text-soft: #55564f;
+  --color-text-muted: #77776e;
+  --color-accent: #a93625;
+  --color-accent-strong: #7d281d;
+  --color-accent-bg: #ead4cc;
+  --color-link: #075d68;
 
-  /* Formula-token backgrounds: always paired with borders/text, never color-only. */
-  --color-token-subject: #eef3f7;
-  --color-token-verb: #f6eee9;
-  --color-token-neg: #f9e9e7;
-  --color-token-aux: #eeeaf7;
-  --color-token-infin: #edf5ec;
-  --color-token-part: #f5f1e6;
-  --color-token-pron: #e9f2f7;
+  --color-good: #416b4c;
+  --color-bad: #a12d27;
+  --color-good-bg: #e2ece3;
+  --color-bad-bg: #f0dcd7;
 
-    --font-ui: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
-  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+  --color-token-subject: #dfe8e9;
+  --color-token-verb: #eadfd8;
+  --color-token-neg: #efd9d5;
+  --color-token-aux: #e5e0ed;
+  --color-token-infin: #dfe9df;
+  --color-token-part: #e9e4d5;
+  --color-token-pron: #dfe8ec;
 
-  --fs-hero: clamp(1.75rem, 4.2vw, 2.6rem);
-  --fs-h1: clamp(1.55rem, 3.4vw, 2.1rem);
-  --fs-h2: clamp(1.3rem, 2.6vw, 1.55rem);
-  --fs-h3: 1.18rem;
-  --fs-body: 1.04rem;
-  --fs-small: 0.92rem;
-  --fs-tiny: 0.82rem;
+  --font-ui: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-mono: "IBM Plex Mono", "Cascadia Mono", monospace;
 
-  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
-  --space-4: 1rem; --space-5: 1.5rem; --space-6: 2rem;
-  --space-7: 3rem; --space-8: 4rem;
+  --fs-hero: clamp(3.5rem, 8.5vw, 8rem);
+  --fs-h1: clamp(2.7rem, 6vw, 5.2rem);
+  --fs-h2: clamp(1.8rem, 3.4vw, 2.8rem);
+  --fs-h3: 1.28rem;
+  --fs-body: 1.06rem;
+  --fs-small: .91rem;
+  --fs-tiny: .74rem;
 
-  --radius: 8px; --radius-sm: var(--radius); --radius-pill: 999px;
-  --maxw: 1120px; --maxw-text: 780px;
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.25rem;
+  --space-7: 3.5rem;
+  --space-8: 5rem;
+
+  --radius: 0;
+  --radius-sm: 0;
+  --radius-pill: 999px;
+  --maxw: 1280px;
+  --maxw-text: 790px;
+
+  --line: 1px solid var(--color-border);
+  --line-strong: 2px solid var(--color-text);
 }
 
-/* Dark mode — every token keeps AA contrast. */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --color-bg: #14181d;
-    --color-bg-soft: #1b2127;
-    --color-surface: #212830;
-    --color-border: #39434d;
-    --color-border-strong: #4b5763;
-    --color-text: #e7ecf1;
-    --color-text-soft: #b9c2cc;
-    --color-text-muted: #9aa6b2;
-    --color-accent: #e89a8c;
-    --color-accent-strong: #f0a594;
-    --color-accent-bg: #362725;
-    --color-link: #8fd0f2;
-    --color-good: #8cd6ad;
-    --color-bad: #f0908a;
-    --color-good-bg: #17301f;
-    --color-bad-bg: #38201f;
-
-    --color-token-subject: #25313a;
-    --color-token-verb: #3a2c29;
-    --color-token-neg: #402a29;
-    --color-token-aux: #302b3d;
-    --color-token-infin: #27372b;
+    --color-bg: #181916;
+    --color-bg-soft: #24251f;
+    --color-bg-tint: #303129;
+    --color-surface: #20211d;
+    --color-border: #4d4d45;
+    --color-border-strong: #77776c;
+    --color-text: #f0eee6;
+    --color-text-soft: #cbc9bd;
+    --color-text-muted: #aaa89d;
+    --color-accent: #e2765f;
+    --color-accent-strong: #f0937c;
+    --color-accent-bg: #422923;
+    --color-link: #79c5cb;
+    --color-good: #8bc39a;
+    --color-bad: #ef9185;
+    --color-good-bg: #1d3021;
+    --color-bad-bg: #38201d;
+    --color-token-subject: #29383a;
+    --color-token-verb: #392d29;
+    --color-token-neg: #402725;
+    --color-token-aux: #312d3b;
+    --color-token-infin: #28382a;
     --color-token-part: #39352b;
-    --color-token-pron: #26343b;
+    --color-token-pron: #29383b;
   }
 }

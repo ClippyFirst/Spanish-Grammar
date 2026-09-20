@@ -90,3 +90,14 @@ AUDIT-2: §10 verbs першим.
 
 ---
 
+
+
+## 2026-09-20 — accessibility/link affordance + radius vocabulary cleanup
+
+**Зміни:**
+- body links отримали явне underline за замовчуванням; навігаційні та структурні винятки зберігають власну affordance.
+- `--radius-sm` став semantic alias до `--radius`; hard-coded pill-radius у chip/keyword стилях замінено на `--radius-pill`.
+- з `fundamentals/grammar-basics` прибрано неоднозначний related slug `personal-a`; сторінки з цим slug у різних категоріях не повинні розв'язуватися через basename.
+- accessibility audit script тепер реально завантажує CSS перед перевірками `:focus-visible` та reduced-motion.
+
+**Коміти:** `215f191`, `8e1cfbc`, `0aeb3e8`, `bb4bf99`, `ca9ad6a`, `d626015`.

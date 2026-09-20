@@ -47,7 +47,7 @@ if(/overflow-x:\\s*auto/.test(css))add('LOW','responsive','Horizontal scrolling 
 if(/position:\\s*sticky/.test(css))add('MEDIUM','responsive','Sticky elements need viewport testing','Sticky header/TOC detected.','Test short viewports, zoom and keyboard focus.');
 
 const components=['site-header','site-footer','page-head','prose','layout-doc','toc','toc-mobile','breadcrumbs','grid-categories','card','card-topic','formula','example','mistake','minpair','note','related','search-bar'];
-const missing=components.filter(x=>!new RegExp('\\\\.'+x+'\\\\b').test(css));
+const missing=components.filter(x=>!css.includes('.'+x));
 if(missing.length)add('HIGH','components','Missing required component styles',missing.join(', '),'Define or remove components so templates and CSS remain aligned.');
 const inline=n(/\\sstyle=["']/g,src);
 if(inline)add('MEDIUM','components',inline+' inline style attribute(s)','Presentation rules are embedded in templates.','Move recurring decisions into named classes/tokens.');

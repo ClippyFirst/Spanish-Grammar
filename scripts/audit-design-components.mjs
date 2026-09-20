@@ -12,7 +12,7 @@ function n(re,s){return (s.match(re)||[]).length;}
 function uniq(a){return [...new Set(a)];}
 
 const required=['--color-bg','--color-bg-soft','--color-surface','--color-border','--color-border-strong','--color-text','--color-text-soft','--color-text-muted','--color-accent','--color-accent-strong','--color-accent-bg','--color-link','--font-ui','--font-serif','--maxw','--maxw-text'];
-for(const t of required)if(!new RegExp(t.replace(/[.*+?^${}()|[\]\]/g,'\$&')+'\s*:').test(css))add('HIGH','tokens','Missing token '+t,'Required semantic token is absent.','Define one canonical token or remove the dependency.');
+for(const t of required)if(!css.includes(t+':'))add('HIGH','tokens','Missing token '+t,'Required semantic token is absent.','Define one canonical token or remove the dependency.');
 
 const colors=uniq((css.match(/#[0-9a-fA-F]{3,8}\b/g)||[]).map(x=>x.toLowerCase()));
 if(colors.length>25)add('MEDIUM','tokens','Many hard-coded colors',colors.length+' distinct hex colors are present.','Keep semantic colors in tokens and document exceptions.');

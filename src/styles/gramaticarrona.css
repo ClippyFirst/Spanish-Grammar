@@ -33,7 +33,7 @@ body { color:var(--gr-ink); font-family:var(--gr-display); }
 .brand-name { font-size:1.32rem; }
 .brand-sub { color:var(--gr-red); font-family:var(--gr-ui); font-size:.72rem; font-weight:800; letter-spacing:.16em; }
 .nav-main { gap:1.15rem; }
-.nav-main a { font-family:var(--gr-ui); font-size:.74rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.35rem 0; }
+.nav-main a { font-family:var(--gr-ui); font-size:.74rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.35rem 0; white-space:nowrap; line-height:1.2; }
 .nav-main a:hover { background:none; color:var(--gr-red); }
 .nav-main a[aria-current="page"] { color:var(--gr-red); text-decoration:none; border-bottom:2px solid var(--gr-red); }
 .language-note { font-family:var(--gr-ui); font-size:.72rem; letter-spacing:.14em; color:var(--gr-blue); }
@@ -49,7 +49,7 @@ body { color:var(--gr-ink); font-family:var(--gr-display); }
 .search-bar input { border:0; border-bottom:2px solid var(--gr-ink); border-radius:0; background:transparent; padding:1rem 3.2rem 1rem .1rem; font-family:var(--gr-ui);  }
 .search-bar input:focus { outline:none; }\n.search-bar input:focus-visible { outline:3px solid var(--gr-red); outline-offset:3px; }
 .search-bar:focus-within input { border-color:var(--gr-red); }
-.search-arrow { border-radius:0; background:var(--gr-ink); }
+.search-arrow { border-radius:0; background:var(--gr-ink); color:var(--gr-white); white-space:nowrap; line-height:1; }
 
 h1,h2,h3,h4 { font-family:var(--gr-display); }
 h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); padding-top:.55rem; letter-spacing:-.035em; }
@@ -93,7 +93,7 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
 .prose { max-width:var(--maxw-text); }
 .prose h2 { margin-top:3.4rem; }
 .prose h3 { margin-top:2.3rem; }
-.prose th { background:var(--gr-ink); color:var(--gr-paper); font-family:var(--gr-ui); font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; }
+.prose th { background:var(--gr-paper-alt); color:var(--gr-ink); font-family:var(--gr-ui); font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; }
 .prose tr:nth-child(even) td { background:var(--gr-table-stripe); }
 
 .formula { border:2px solid var(--gr-ink); border-radius:0; background:var(--gr-paper-alt); border-right:6px solid var(--gr-maize); border-bottom:6px solid var(--gr-maize); }

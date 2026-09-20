@@ -111,3 +111,9 @@ AUDIT-2: §10 verbs першим.
 - design audit точніше відрізняє body links від structural-link exceptions.
 - додано inbound-зв’язки для раніше orphan pages.
 - search status оновлюється через `aria-live` після завантаження Pagefind.
+## 2026-09-20 — final design-token cleanup
+
+**Зміни:**
+- прибрано останній hardcoded колір у footer на користь `--gr-footer-link`.
+- прибрано `box-shadow` з формули; редакційний акцент збережено через праву й нижню межі `--gr-maize`.
+- після цього audit:design:tokens має завершуватися без inline-colors, hard-radius, shadows і system-ui findings.

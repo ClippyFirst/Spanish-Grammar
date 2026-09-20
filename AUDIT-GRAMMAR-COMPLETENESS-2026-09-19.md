@@ -1076,3 +1076,26 @@ npm run qa
 ```
 
 The graph audit should remain free of broken, ambiguous, self, duplicate and orphan errors. The production QA remains the authoritative runtime check.
+
+
+# 22. Graph + grammar integration pass — 2026-09-20
+
+This pass continued the semantic graph cleanup rather than removing unique grammar coverage.
+
+Implemented:
+- connected the remaining category-only leaf topics to canonical explanatory hubs;
+- marked only the deliberate navigation hubs as high-density graph nodes in the graph-audit policy;
+- removed redundant manual related blocks from newly deepened C1–C2 pages where automatic `related` navigation already provides the same UI role;
+- removed the duplicated subordinate-clause map heading;
+- refined the relative-pronoun wording around `en que` and corrected sequence-of-tenses wording so the base pattern is not presented as an absolute mechanical rule;
+- deepened advanced quantification with `apenas`, `demasiado + sustantivo`, `todo lo más`, and quantity ellipsis.
+
+The repository must still be locally verified after this pass with:
+
+```bash
+npm run audit:mdx
+npm run audit:graph
+npm run qa
+```
+
+No build-pass claim is made here until those commands are run against the current `main`.

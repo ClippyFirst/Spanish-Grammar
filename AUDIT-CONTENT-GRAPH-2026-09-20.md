@@ -2,9 +2,9 @@
 
 Pages: 195
 Nodes with related: 195
-Markdown internal links: 644
-Broken targets: 5
-Ambiguous targets: 12
+Markdown internal links: 643
+Broken targets: 0
+Ambiguous targets: 0
 Self-links: 0
 Duplicate related entries: 0
 Orphans: 56
@@ -68,25 +68,8 @@ Orphans: 56
 - word-formation/diminutives-review
 
 ## Broken Markdown links
-- adjectives/adjective-complements → prepositions
-- prepositions/por-para → pronouns
-- regional/southern-cone → regional/argentina
-- tenses/presente-de-indicativo → periphrases
-- tenses/presente-de-indicativo → pronouns
 
 ## Ambiguous targets
-- adjectives/adjective-agreement → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- moods/subjunctive-triggers → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- moods/subjuntivo-presente → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- prepositions/place → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- prepositions/verbs-with-prepositions → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- pronouns/double-object-pronouns → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- pronouns/indefinite-pronouns → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- pronouns/interrogative-pronouns → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- pronouns/objeto-directo-indirecto → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- pronouns/personal-pronouns-omission → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- sentence-structure/passive-voice → personal-a: pronouns/personal-a, sentence-structure/personal-a
-- verbs/gustar → personal-a: pronouns/personal-a, sentence-structure/personal-a
 
 ## Self-links
 

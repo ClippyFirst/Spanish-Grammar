@@ -75,7 +75,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         window.setTimeout(applyQuery, 0);
       }
     } catch (e) {
-      if (statusEl) statusEl.innerHTML = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'У режимі <code>npm run dev</code> Pagefind-індекс не обслуговується. Для перевірки пошуку після <code>npm run build</code> відкрийте сайт через <code>npm run preview</code>.' : 'Пошук тимчасово недоступний. Перезавантажте сторінку або спробуйте пізніше.';
+      if (statusEl) {
+        var protocol = window.location.protocol;
+        if (protocol === 'file:') {
+          statusEl.innerHTML = 'Сторінку відкрито як локальний файл. Після <code>npm run build</code> запустіть <code>npm run preview</code> і відкрийте адресу, яку покаже Astro.';
+        } else {
+          statusEl.textContent = 'Пошук не зміг завантажити Pagefind. Переконайтеся, що сайт запущено через npm run preview після npm run build, і перезавантажте сторінку.';
+        }
+      }
+      console.error('Pagefind initialization failed:', e);
     }
   }
   window.addEventListener('DOMContentLoaded', initSearch);

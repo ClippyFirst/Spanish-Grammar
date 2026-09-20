@@ -46,7 +46,7 @@ body { color:var(--gr-ink); font-family:var(--gr-display); }
 .hero h1 { max-width:18ch; font-size:clamp(3.2rem,8vw,7.2rem); line-height:.9; letter-spacing:-.065em; }
 .hero .lead { max-width:60ch; margin-top:1.7rem; font-size:1.12rem; }
 .search-bar { max-width:760px; margin-top:2.5rem; }
-.search-bar input { border:0; border-bottom:2px solid var(--gr-ink); border-radius:0; background:transparent; padding:1rem 3.2rem 1rem .1rem; font-family:var(--gr-ui); box-shadow:none; }
+.search-bar input { border:0; border-bottom:2px solid var(--gr-ink); border-radius:0; background:transparent; padding:1rem 3.2rem 1rem .1rem; font-family:var(--gr-ui);  }
 .search-bar input:focus { outline:none; }\n.search-bar input:focus-visible { outline:3px solid var(--gr-red); outline-offset:3px; }
 .search-bar:focus-within input { border-color:var(--gr-red); }
 .search-arrow { border-radius:0; background:var(--gr-ink); }
@@ -57,7 +57,7 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
 
 /* Categories are an index, not a grid of product cards. */
 .grid-categories { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; border-top:1px solid var(--gr-ink); }
-.card { position:relative; display:grid; grid-template-columns:3.2rem minmax(0,1fr); column-gap:1rem; min-height:150px; padding:1.25rem 1rem 1.25rem 0; border:0; border-bottom:1px solid var(--gr-line); background:transparent; box-shadow:none; }
+.card { position:relative; display:grid; grid-template-columns:3.2rem minmax(0,1fr); column-gap:1rem; min-height:150px; padding:1.25rem 1rem 1.25rem 0; border:0; border-bottom:1px solid var(--gr-line); background:transparent;  }
 .card::before { content:counter(category); counter-increment:category; font:700 .78rem/1 var(--gr-ui); color:var(--gr-red); padding-top:.25rem; }
 .grid-categories { counter-reset:category; }
 .card::after { content:"↗"; position:absolute; right:0; top:1.2rem; color:var(--gr-red); font-family:var(--gr-ui); font-weight:800; }
@@ -69,7 +69,7 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
 .topic-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 2rem; border-top:1px solid var(--gr-ink); }
 .card-topic { display:grid; grid-template-columns:1fr auto; gap:1rem; border:0; border-bottom:1px solid var(--gr-line); border-radius:0; padding:1rem 0; background:transparent; }
 .card-topic::after { content:"→"; color:var(--gr-red); font-family:var(--gr-ui); }
-.card-topic:hover { background:var(--gr-paper-alt); box-shadow:none; color:var(--gr-ink); padding-left:.6rem; }
+.card-topic:hover { background:var(--gr-paper-alt);  color:var(--gr-ink); padding-left:.6rem; }
 .card-topic .t-es { font-size:1.08rem; }
 .card-topic .t-uk { color:var(--gr-muted); font-size:.82rem; }
 

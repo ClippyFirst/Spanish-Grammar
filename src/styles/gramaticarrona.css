@@ -138,3 +138,13 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
   .mistake { background:var(--gr-accent-dark-bg); } .site-footer { background:var(--gr-footer-bg-dark); }
 }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+
+
+/* ---------- Page utilities ---------- */
+.container-narrow { max-width:860px; }
+.container-search { max-width:800px; }
+.search-hint { color:var(--color-text-muted); font-size:var(--fs-small); }
+.page-404 { text-align:center; padding-top:var(--space-8); }
+.page-404 .lead { margin:0 auto; max-width:46ch; }
+.page-404-actions { margin-top:var(--space-5); display:flex; flex-wrap:wrap; justify-content:center; gap:var(--space-3); }
+.page-404-actions .card-topic { display:inline-block; }

@@ -24,14 +24,9 @@
 /* In-article inline formula (single line) */
 .inline-formula { font-family: var(--font-serif); font-size: 1.05rem; background: var(--color-bg-tint); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-3) var(--space-4); margin: var(--space-4) 0; }
 
-/* Related topics list */
-.related { margin-top: var(--space-7); border-top: 1px solid var(--color-border); padding-top: var(--space-4); }
-.related ul { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); grid-template-columns: 1fr; }
-@media (min-width: 640px) { .related ul { grid-template-columns: repeat(2, 1fr); } }
-.related a { display: block; border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-3) var(--space-4); text-decoration: none; color: var(--color-text); }
-.related a:hover { border-color: var(--color-accent); }
-.related a .r-es { font-family: var(--font-serif); font-weight: 700; }
-.related a .r-uk { color: var(--color-text-soft); font-size: var(--fs-small); }
+/* Related topics list — structural sizing lives in gramaticarrona.css. */
+.related ul { list-style: none; }
+.related a { text-decoration: none; }
 
 /* Section heading with anchor link */
 .prose h2 .anchor, .prose h3 .anchor { opacity: 0; text-decoration: none; color: var(--color-accent); margin-left: .35rem; font-weight: 400; }

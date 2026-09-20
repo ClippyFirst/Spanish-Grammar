@@ -57,13 +57,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       });
       window.__pagefindUI = ui;
       if (q) {
-        // Wait for Pagefind index, then trigger the search.
-        setTimeout(function () {
+        // Pagefind loads its index asynchronously. Retry briefly instead of
+        // relying on a single fixed delay, so deep-linked searches are reliable
+        // on both GitHub Pages and slower connections.
+        var attempts = 0;
+        var applyQuery = function () {
+          attempts += 1;
+          var searchInput = uiEl.querySelector('input');
           try {
             ui.triggerSearch(q);
-            uiEl.querySelector('input').value = q;
-          } catch (e) {}
-        }, 600);
+            if (searchInput) searchInput.value = q;
+            return;
+          } catch (e) {
+            if (attempts < 20) window.setTimeout(applyQuery, 150);
+          }
+        };
+        window.setTimeout(applyQuery, 0);
       }
     } catch (e) {
       if (statusEl) statusEl.innerHTML = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'У режимі <code>npm run dev</code> Pagefind-індекс не обслуговується. Для перевірки пошуку після <code>npm run build</code> відкрийте сайт через <code>npm run preview</code>.' : 'Пошук тимчасово недоступний. Перезавантажте сторінку або спробуйте пізніше.';

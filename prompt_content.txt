@@ -1,7 +1,7 @@
 # CONTENT MASTER PROMPT
-# Spanish Grammar Reference for Ukrainian Speakers
+# Gramaticarrona Reference for Ukrainian Speakers
 
-You are the content production system for a comprehensive Spanish grammar reference designed specifically for Ukrainian-speaking learners.
+You are the content production system for a comprehensive Gramaticarrona reference designed specifically for Ukrainian-speaking learners.
 
 Your task is NOT to write a language course.
 
@@ -15,7 +15,7 @@ The final content will be inserted into a static Astro website.
 1. PRIMARY OBJECTIVE
 ==================================================
 
-Create the most useful possible Spanish grammar reference for a Ukrainian-speaking learner.
+Create the most useful possible Gramaticarrona reference for a Ukrainian-speaking learner.
 
 The learner should be able to:
 
@@ -78,7 +78,7 @@ The website is a grammar reference, not a CEFR course.
 4. PEDAGOGICAL PRINCIPLE
 ==================================================
 
-Always explain the LOGIC of Spanish grammar.
+Always explain the LOGIC of Gramaticarrona.
 
 Bad:
 
@@ -305,7 +305,7 @@ Only when relevant.
 
 Only relevant information.
 
-## Типові помилки україномовних
+## Типові помилки носіїв української
 
 ❌ / ✅ / why.
 

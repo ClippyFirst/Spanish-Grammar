@@ -16,9 +16,8 @@ const isActive = (p: string) => pathname.startsWith(p);
       <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Граматика</a>
       <a href={withBase('/comparisons/')} aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
       <a href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>Пошук</a>
-      <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про</a>
+      <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про сайт</a>
     </nav>
-    <span class="language-note">UA / ES</span>
     <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню"><span></span><span></span><span></span></button>
   </div>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">

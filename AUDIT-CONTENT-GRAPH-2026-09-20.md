@@ -2,25 +2,24 @@
 
 Pages: 195
 Nodes with related: 195
-Markdown internal links: 643
+Markdown internal links: 621
 Broken targets: 0
-Ambiguous targets: 0
+Ambiguous targets: 1
 Self-links: 0
 Duplicate related entries: 0
 Semantic orphans (no inbound and not category-reachable): 0
 Category-index reachable: 195
 Navigation orphans (not reachable from category index): 0
-Category-only leaf pages (no semantic inbound): 56
+Category-only leaf pages (no semantic inbound): 50
 
 ## Semantic orphans (not category-reachable)
 
 ## Navigation orphans
 
-## Category-only leaf pages (category index is the intended entry point)
+## Category-index reachable but semantically unlinked
 - adjectives/adjective-complements,
 - adjectives/adjective-types-cultos,
 - adjectives/agreement-traps,
-- adjectives/comparison-structures,
 - adjectives/meaning-by-position,
 - adverbs/focus-and-stance,
 - articles/articles-with-names,
@@ -41,13 +40,11 @@ Category-only leaf pages (no semantic inbound): 56
 - periphrases/overview,
 - prepositions/estar-de-ser-de,
 - prepositions/place-review,
-- prepositions/por-para-markers,
 - prepositions/verb-preposition-pairs,
 - pronouns/demonstrative-pronouns,
 - pronouns/exclamatives,
 - pronouns/mismo-uno-generic,
 - pronouns/reciprocal-pronouns,
-- pronouns/relative-pronouns-review,
 - regional/andean,
 - regional/caribbean,
 - regional/colombia-canarias,
@@ -56,8 +53,6 @@ Category-only leaf pages (no semantic inbound): 56
 - sentence-structure/absolute-constructions,
 - sentence-structure/interjections,
 - sentence-structure/modality-speech-acts,
-- sentence-structure/negation-patterns,
-- sentence-structure/passive-se-vs-ser,
 - sentence-structure/personal-a,
 - sentence-structure/reported-speech-review,
 - sentence-structure/si-clauses-overview,
@@ -67,7 +62,6 @@ Category-only leaf pages (no semantic inbound): 56
 - tenses/preterito-anterior,
 - verbs/change-of-state,
 - verbs/deber-vs-deber-de,
-- verbs/gustar-type-verbs,
 - verbs/haber-vs-tener,
 - verbs/infinitive-as-noun,
 - word-formation/adverb-diminutives,
@@ -77,6 +71,7 @@ Category-only leaf pages (no semantic inbound): 56
 ## Broken Markdown links
 
 ## Ambiguous targets
+- verbs/gustar → personal-a: pronouns/personal-a, sentence-structure/personal-a
 
 ## Self-links
 
@@ -84,8 +79,6 @@ Category-only leaf pages (no semantic inbound): 56
 
 ## Overlinked pages (12+ outgoing)
 - fundamentals/ua-interference: 24
-- tenses/tenses-overview: 13
-- sentence-structure/subordinate-clauses: 12
 
 ## Graph policy
 Preferred direction: quick reference → primary explanation → deep dive → adjacent/specialized topic.

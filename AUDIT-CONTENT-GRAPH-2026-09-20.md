@@ -2,7 +2,7 @@
 
 Pages: 195
 Nodes with related: 195
-Markdown internal links: 598
+Markdown internal links: 590
 Broken targets: 0
 Ambiguous targets: 0
 Self-links: 0
@@ -11,8 +11,8 @@ Semantic orphans (no inbound and not category-reachable): 0
 Category-index reachable: 195
 Navigation orphans (not reachable from category index): 0
 Category-only leaf pages (no semantic inbound): 50
-Manual related sections: 174
-Manual/automatic related duplicates: 3
+Manual related sections: 171
+Manual/automatic related duplicates: 0
 
 ## Semantic orphans (not category-reachable)
 
@@ -79,9 +79,6 @@ Manual/automatic related duplicates: 3
 ## Duplicate related entries
 
 ## Manual/automatic related duplicates
-- pronouns/indefinite-pronouns → pronouns/personal-a
-- pronouns/interrogative-pronouns → pronouns/personal-a
-- verbs/gustar → pronouns/personal-a
 
 ## Overlinked pages (12+ outgoing)
 - fundamentals/ua-interference: 24

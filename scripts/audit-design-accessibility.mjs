@@ -31,8 +31,8 @@ for (const [name, re] of checks) {
   if (count) fail++;
 }
 
-console.log('focus-visible:', /focus-visible/.test(src));
-console.log('reduced-motion:', /prefers-reduced-motion/.test(src));
+console.log('focus-visible:', /:focus-visible\b/.test(css));
+console.log('reduced-motion:', /prefers-reduced-motion/.test(css));
 console.log('semantic-nav:', /<nav\b/.test(src));
 
 if (fail) process.exitCode = 1;

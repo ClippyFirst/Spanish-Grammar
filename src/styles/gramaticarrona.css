@@ -447,6 +447,7 @@ h2::before {
 .note { border-radius: 0; background: var(--gr-paper-alt); }
 .note.region { border-left-color: var(--gr-teal); }
 .related {
+  max-width: var(--maxw-text);
   border-top: var(--line-strong);
   margin-top: clamp(4rem, 8vw, 7rem);
   padding-top: 1.25rem;
@@ -456,7 +457,7 @@ h2::before {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: 88px;
-  gap: 0 1.5rem;
+  gap: .75rem 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;

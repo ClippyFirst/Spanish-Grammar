@@ -11,7 +11,7 @@ const { caption, headers, rows } = Astro.props;
   <table class="gram">
     {caption && <caption>{caption}</caption>}
     <thead>
-      <tr><th scope="col"></th>{headers.map((h) => <th scope="col">{h}</th>)}</tr>
+      <tr>{headers.map((h) => <th scope="col">{h}</th>)}</tr>
     </thead>
     <tbody>
       {rows.map((r) => (

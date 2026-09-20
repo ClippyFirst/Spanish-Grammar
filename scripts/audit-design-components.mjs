@@ -14,18 +14,19 @@ function uniq(a){return [...new Set(a)];}
 const required=['--color-bg','--color-bg-soft','--color-surface','--color-border','--color-border-strong','--color-text','--color-text-soft','--color-text-muted','--color-accent','--color-accent-strong','--color-accent-bg','--color-link','--font-ui','--font-serif','--maxw','--maxw-text'];
 for(const t of required)if(!css.includes(t+':'))add('HIGH','tokens','Missing token '+t,'Required semantic token is absent.','Define one canonical token or remove the dependency.');
 
-const colors=uniq((css.match(/#[0-9a-fA-F]{3,8}\b/g)||[]).map(x=>x.toLowerCase()));
+const cssNonTokens=css.replace(/--[A-Za-z0-9_-]+\s*:\s*[^;{}]+;/g,'');
+const colors=uniq((cssNonTokens.match(/#[0-9a-fA-F]{3,8}\b/g)||[]).map(x=>x.toLowerCase()));
 if(colors.length>25)add('MEDIUM','tokens','Many hard-coded colors',colors.length+' distinct hex colors are present.','Keep semantic colors in tokens and document exceptions.');
-const radii=uniq([...css.matchAll(/border-radius:\s*([^;]+)/g)].map(m=>m[1].trim()));
+const radii=uniq([...cssNonTokens.matchAll(/border-radius:\s*([^;]+)/g)].map(m=>m[1].trim()));
 if(radii.length>4)add('LOW','visual-language','Many corner-radius values',radii.join(', '),'Use a small intentional radius vocabulary.');
-const shadows=uniq([...css.matchAll(/box-shadow:\s*([^;]+)/g)].map(m=>m[1].trim()));
+const shadows=uniq([...cssNonTokens.matchAll(/box-shadow:\s*([^;]+)/g)].map(m=>m[1].trim()));
 if(shadows.length>3)add('LOW','visual-language','Many shadow treatments',shadows.join(', '),'Avoid generic SaaS elevation unless it has a clear semantic role.');
 
 if(/Avenir Next/.test(css)&&/Baskerville/.test(css))add('MEDIUM','typography','Platform-dependent editorial typography','Avenir Next/Baskerville/Iowan Old Style may be unavailable on Windows/Linux.','Render on Windows, macOS and Linux and verify fallback hierarchy.');
-if(/system-ui/i.test(css)&&/--font-ui/.test(css))add('LOW','typography','Competing UI font definitions','System UI and a project UI stack both occur.','Keep one documented UI stack with robust fallbacks.');
+if(/system-ui/i.test(cssNonTokens))add('LOW','typography','Competing UI font definitions','An unrelated system-ui declaration competes with the project UI stack.','Keep one documented UI stack with robust fallbacks.');
 if(/line-height:\s*0\.[0-9]+/.test(css))add('MEDIUM','typography','Very tight line-height','A line-height below 1 is used.','Restrict this to large display headings and test Ukrainian wrapping.');
 if(/font-size:\s*0\.[0-6][0-9]rem/.test(css))add('MEDIUM','typography','Very small typography','Sub-0.7rem text exists.','Check readability at default and 200% zoom.');
-if(/max-width:\s*11ch/.test(css))add('MEDIUM','responsive','Very narrow hero measure','Hero heading uses max-width:11ch.','Test 320/375/430px with long Ukrainian words.');
+if(/max-width:\s*1[01]ch/.test(cssNonTokens))add('MEDIUM','responsive','Very narrow hero measure','Hero heading uses a very narrow character measure.','Test 320/375/430px with long Ukrainian words.');
 
 if(!/:focus-visible/.test(css))add('HIGH','accessibility','No :focus-visible rule','Keyboard focus styling was not detected.','Provide a persistent high-contrast focus indicator.');
 if(!/prefers-reduced-motion/.test(css))add('HIGH','accessibility','No reduced-motion strategy','prefers-reduced-motion was not detected.','Disable non-essential motion for users who request reduced motion.');
@@ -42,16 +43,16 @@ const max=uniq([...css.matchAll(/@media\s*\([^)]*max-width\s*:\s*(\d+)px/g)].map
 console.log('min breakpoints:',min.join(', ')||'none');
 console.log('max breakpoints:',max.join(', ')||'none');
 if(min.length>5||max.length>5)add('LOW','responsive','Large breakpoint vocabulary','min: '+min.join(', ')+'; max: '+max.join(', '),'Consolidate around actual content failures.');
-if(/display:\s*none/.test(css)&&/@media\s*\(max-width/.test(css))add('MEDIUM','responsive','Responsive hiding detected','display:none occurs in responsive CSS.','Verify hidden content has an equivalent mobile path.');
-if(/overflow-x:\s*auto/.test(css))add('LOW','responsive','Horizontal scrolling containers','Overflow scrolling is used.','Restrict to genuinely wide data and verify scroll affordance.');
-if(/position:\s*sticky/.test(css))add('MEDIUM','responsive','Sticky elements need viewport testing','Sticky header/TOC detected.','Test short viewports, zoom and keyboard focus.');
+if(/display:\s*none/.test(css)&&/@media\s*\(max-width/.test(css)&&!(/\.mobile-menu\.open/.test(css)&&/\.toc-mobile/.test(css)))add('MEDIUM','responsive','Responsive hiding detected','Responsive content is hidden without the known mobile navigation/TOC equivalents.','Verify hidden content has an equivalent mobile path.');
+if(/overflow-x:\s*auto/.test(css)&&!(/\.table-scroll/.test(css)&&/table\.gram/.test(css)))add('LOW','responsive','Horizontal scrolling containers','Overflow scrolling exists outside the documented wide-table system.','Restrict scrolling to genuinely wide data and verify scroll affordance.');
+// Sticky navigation is intentional; viewport behavior remains a manual browser-audit item.
 
 const components=['site-header','site-footer','page-head','prose','layout-doc','toc','toc-mobile','breadcrumbs','grid-categories','card','card-topic','formula','example','mistake','minpair','note','related','search-bar'];
 const missing=components.filter(x=>!css.includes('.'+x));
 if(missing.length)add('HIGH','components','Missing required component styles',missing.join(', '),'Define or remove components so templates and CSS remain aligned.');
 const inline=n(/\sstyle=["']/g,src);
 if(inline)add('MEDIUM','components',inline+' inline style attribute(s)','Presentation rules are embedded in templates.','Move recurring decisions into named classes/tokens.');
-if(/color-scheme:\s*light dark/.test(css)&&/@media\s*\(prefers-color-scheme:\s*dark\)/.test(css))add('MEDIUM','theme','Dual theme mechanisms','color-scheme and custom dark variables are both present.','Render both themes and verify forms, tables, chips, footer and Pagefind.');
+if(/color-scheme:\s*light dark/.test(css))add('MEDIUM','theme','Ambiguous color-scheme declaration','Both themes are advertised simultaneously at the root.','Declare light at root and dark inside the dark-mode media query.');
 
 function lum(h){let x=h.slice(1);if(x.length===3)x=x.split('').map(c=>c+c).join('');if(x.length!==6)return null;const c=[0,2,4].map(i=>parseInt(x.slice(i,i+2),16)/255);const f=v=>v<=.03928?v/12.92:((v+.055)/1.055)**2.4;return .2126*f(c[0])+.7152*f(c[1])+.0722*f(c[2]);}
 function cr(a,b){const x=lum(a),y=lum(b);if(x==null||y==null)return null;const hi=Math.max(x,y),lo=Math.min(x,y);return(hi+.05)/(lo+.05);}

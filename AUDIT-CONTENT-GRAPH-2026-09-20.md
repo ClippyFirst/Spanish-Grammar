@@ -2,17 +2,17 @@
 
 Pages: 195
 Nodes with related: 195
-Markdown internal links: 621
+Markdown internal links: 598
 Broken targets: 0
-Ambiguous targets: 1
+Ambiguous targets: 0
 Self-links: 0
 Duplicate related entries: 0
 Semantic orphans (no inbound and not category-reachable): 0
 Category-index reachable: 195
 Navigation orphans (not reachable from category index): 0
 Category-only leaf pages (no semantic inbound): 50
-Manual related sections: 181
-Manual/automatic related duplicates: 9
+Manual related sections: 174
+Manual/automatic related duplicates: 3
 
 ## Semantic orphans (not category-reachable)
 
@@ -73,22 +73,15 @@ Manual/automatic related duplicates: 9
 ## Broken Markdown links
 
 ## Ambiguous targets
-- verbs/gustar → personal-a: pronouns/personal-a, sentence-structure/personal-a
 
 ## Self-links
 
 ## Duplicate related entries
 
 ## Manual/automatic related duplicates
-- adjectives/adjective-complements → prepositions
-- micro-constructions/de-inf-sera-no-sea-lo-de → articles/neutral-lo
-- prepositions/verbs-with-prepositions → pronouns/personal-a
-- pronouns/double-object-pronouns → pronouns/personal-a
 - pronouns/indefinite-pronouns → pronouns/personal-a
 - pronouns/interrogative-pronouns → pronouns/personal-a
-- pronouns/objeto-directo-indirecto → pronouns/personal-a
-- pronouns/personal-pronouns-omission → pronouns/personal-a
-- sentence-structure/passive-voice → pronouns/personal-a
+- verbs/gustar → pronouns/personal-a
 
 ## Overlinked pages (12+ outgoing)
 - fundamentals/ua-interference: 24

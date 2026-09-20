@@ -1,0 +1,10 @@
+[33m3179cb5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m docs: log search and audit cleanup
+[33mad7198c[m fix: expose Pagefind search status
+[33m05a6aa2[m fix: link micro constructions from conditionals
+[33m7c334a7[m fix: link micro constructions from infinitive
+[33m090738b[m fix: link personal a from object pronouns
+[33m22b7e5b[m fix: link deber modal distinctions
+[33mcd94297[m fix: distinguish body links from structural links
+[33mf604a5b[m fix: generate search index in standard build
+[33mb04dd78[m fix: update audit reports to reflect corrected ambiguous targets and findings
+[33m247cdba[m docs: log design and accessibility cleanup

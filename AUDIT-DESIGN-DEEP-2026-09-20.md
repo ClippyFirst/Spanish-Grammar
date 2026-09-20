@@ -4,15 +4,10 @@ Source files: 231
 
 ## Result
 
-Findings: 1 — HIGH 0, MEDIUM 1, LOW 0.
+Findings: 0 — HIGH 0, MEDIUM 0, LOW 0.
 
 ## Findings
 
-### 1. [MEDIUM] accessibility — Links may lose non-color affordance
-
-**Evidence:** Some link rules remove underlines.
-
-**Recommendation:** Keep body links distinguishable without hover; card/nav exceptions should have another clear affordance.
 
 ## Mandatory browser audit
 

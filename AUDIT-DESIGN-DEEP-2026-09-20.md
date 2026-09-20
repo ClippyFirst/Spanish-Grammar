@@ -4,16 +4,11 @@ Source files: 231
 
 ## Result
 
-Findings: 2 — HIGH 0, MEDIUM 1, LOW 1.
+Findings: 1 — HIGH 0, MEDIUM 1, LOW 0.
 
 ## Findings
 
-### 1. [LOW] visual-language — Many corner-radius values
-
-**Evidence:** var(--radius-sm), 0, var(--radius), 999px, var(--radius-pill)
-
-**Recommendation:** Use a small intentional radius vocabulary.
-### 2. [MEDIUM] accessibility — Links may lose non-color affordance
+### 1. [MEDIUM] accessibility — Links may lose non-color affordance
 
 **Evidence:** Some link rules remove underlines.
 

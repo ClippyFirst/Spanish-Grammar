@@ -4,7 +4,7 @@ Pages: 195
 Nodes with related: 195
 Markdown internal links: 572
 Broken targets: 0
-Ambiguous targets: 1
+Ambiguous targets: 0
 Self-links: 0
 Duplicate related entries: 0
 Semantic orphans (no inbound and not category-reachable): 0
@@ -26,7 +26,6 @@ Manual/automatic related duplicates: 0
 ## Broken Markdown links
 
 ## Ambiguous targets
-- fundamentals/grammar-basics → personal-a: pronouns/personal-a, sentence-structure/personal-a
 
 ## Self-links
 
@@ -36,7 +35,6 @@ Manual/automatic related duplicates: 0
 
 ## Overlinked non-hub pages (12+ outgoing)
 - fundamentals/date-time-numbers: 12
-- fundamentals/grammar-basics: 12
 - moods/subjuntivo-presente: 12
 
 ## Graph policy

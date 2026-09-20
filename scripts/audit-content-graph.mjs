@@ -8,9 +8,10 @@ const files=walk(CONTENT), pages=new Set(files.map(slugOf)), base=new Map();
 const categoryKeys=new Set(['fundamentals','nouns','articles','adjectives','adverbs','pronouns','prepositions','conjunctions','verbs','tenses','moods','periphrases','sentence-structure','word-formation','spelling','regional','micro-constructions']);
 const isCategoryRoute=x=>categoryKeys.has(x);
 for(const p of pages){const b=p.split('/').pop();if(!base.has(b))base.set(b,[]);base.get(b).push(p)}
-function manualRelatedLinks(text){const i=text.search(/^##\s+Пов['’]язані теми\s*$/im);if(i<0)return [];const tail=text.slice(i);const next=tail.search(/^##\s+/m);const section=next>0?tail.slice(0,next):tail;return [...section.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map(m=>m[1].replace(/\/$/,''))}\nconst nodes=new Map();
+function manualRelatedLinks(text){const i=text.search(/^##\s+Пов['’]язані теми\s*$/im);if(i<0)return [];const tail=text.slice(i);const next=tail.slice(1).search(/^##\s+/m);const section=next>=0?tail.slice(0,next+1):tail;return [...section.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map(m=>m[1].replace(/\/$/,''))}
+const nodes=new Map();
 for(const f of files){const src=slugOf(f),text=fs.readFileSync(f,'utf8'),rel=related(text),links=[...text.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map(m=>m[1].replace(/\/$/,''));nodes.set(src,{rel,links,manual:manualRelatedLinks(text)})}
-const resolve=x=>pages.has(x)?x:(isCategoryRoute(x)?x:(base.get(x)?.length===1?base.get(x)[0]:null)), inbound=new Map([...pages].map(p=>[p,[]])),broken=[],ambiguous=[],self=[],dups=[];
+const resolve=x=>pages.has(x)?x:(isCategoryRoute(x)?x:(base.get(x)?.length===1?base.get(x)[0]:null)), inbound=new Map([...pages].map(p=>[p,[]])), broken=[], ambiguous=[], self=[], dups=[];
 for(const [src,n] of nodes){const seen=new Set();for(const x of n.rel){if(seen.has(x))dups.push([src,x]);seen.add(x);const t=resolve(x);if(t===src)self.push([src,x]);if(!t&&base.has(x))ambiguous.push([src,x,base.get(x)]);if(t&&t!==src&&inbound.has(t))inbound.get(t).push([src,'related'])}for(const x of n.links){const t=resolve(x);if(!t)broken.push([src,x]);else if(t!==src&&inbound.has(t))inbound.get(t).push([src,'markdown'])}}
 const duplicateManualRelated=[...nodes].flatMap(([src,n])=>n.manual.filter(x=>n.rel.includes(x)).map(x=>[src,x]));
 const categoryReachable=new Set([...pages].filter(p=>categoryKeys.has(p.split('/')[0])));

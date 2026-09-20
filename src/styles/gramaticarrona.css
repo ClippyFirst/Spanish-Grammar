@@ -57,14 +57,16 @@ h2 { font-size:clamp(1.7rem,3vw,2.5rem); border-top:2px solid var(--gr-ink); pad
 
 /* Categories are an index, not a grid of product cards. */
 .grid-categories { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; border-top:1px solid var(--gr-ink); }
-.card { position:relative; display:grid; grid-template-columns:3.2rem minmax(0,1fr); column-gap:1rem; min-height:150px; padding:1.25rem 1rem 1.25rem 0; border:0; border-bottom:1px solid var(--gr-line); background:transparent;  }
-.card::before { content:counter(category); counter-increment:category; font:700 .78rem/1 var(--gr-ui); color:var(--gr-red); padding-top:.25rem; }
+.card { position:relative; display:grid; grid-template-columns:3.2rem minmax(0,1fr); column-gap:1rem; align-items:start; min-height:150px; padding:1.25rem 1rem 1.25rem 0; border:0; border-bottom:1px solid var(--gr-line); background:transparent; }
+.card::before { content:none; }
+.card-index::before { content:counter(category); counter-increment:category; font:700 .78rem/1 var(--gr-ui); color:var(--gr-red); padding-top:.25rem; }
 .grid-categories { counter-reset:category; }
 .card::after { content:"↗"; position:absolute; right:0; top:1.2rem; color:var(--gr-red); font-family:var(--gr-ui); font-weight:800; }
 .card:hover { background:var(--gr-paper-alt); color:var(--gr-ink); padding-left:.7rem; }
-.card .label { color:var(--gr-red-dark); }
-.card .card-title { font-size:1.45rem; line-height:1.05; margin-bottom:.4rem; }
-.card .card-desc { max-width:38ch; }
+.card-copy { min-width:0; display:flex; flex-direction:column; align-items:flex-start; }
+.card .label { color:var(--gr-red-dark); line-height:1.2; margin-bottom:.3rem; }
+.card .card-title { font-size:1.45rem; line-height:1.12; margin-bottom:.4rem; }
+.card .card-desc { max-width:38ch; margin:0; line-height:1.5; }
 
 .topic-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 2rem; border-top:1px solid var(--gr-ink); }
 .card-topic { display:grid; grid-template-columns:1fr auto; gap:1rem; border:0; border-bottom:1px solid var(--gr-line); border-radius:0; padding:1rem 0; background:transparent; }

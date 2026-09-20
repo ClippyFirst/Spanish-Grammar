@@ -27,8 +27,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   // Load Pagefind UI lazily after build artifacts are present.
   // is:inline => Astro does not bundle this; the /pagefind/*.js files
   // exist only after `pagefind --site dist` runs (build:full).
-  // `base` (e.g. "/Spanish-Grammar/") prefixes the Pagefind asset URL so
-  // search works both locally ("/") and on GitHub Pages sub-paths.
+  // `base` (e.g. "/Spanish-Grammar/") prefixes both the Pagefind asset URL
+  // and result URLs so search works locally ("/") and on GitHub Pages sub-paths.
+  // The bundlePath is explicit because the UI is loaded through a dynamic import;
+  // this avoids relying on Pagefind's automatic bundle-path detection.
   async function initSearch() {
     if (window.__pagefindUI) return;
     var url = new URL(window.location.href);
@@ -39,10 +41,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     var statusEl = document.getElementById('search-status');
     try {
       var prefix = (typeof base === 'string' ? base : '/').replace(/\/$/, '');
-      var mod = await import(prefix + '/pagefind/pagefind-ui.js');
+      var bundlePath = prefix + '/pagefind/';
+      var baseUrl = prefix + '/';
+      var mod = await import(bundlePath + 'pagefind-ui.js');
       if (statusEl) statusEl.textContent = 'Пошук готовий.';
       var ui = new mod.PagefindUI({
         element: '#search',
+        bundlePath: bundlePath,
+        baseUrl: baseUrl,
         showSubResults: false,
         showImages: false,
         resetStyles: false,

@@ -17,7 +17,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </header>
 
     <div id="search" class="pagefind-ui"></div>
-    <p class="search-hint">
+    <p class="search-hint" id="search-status" aria-live="polite">
       Пошук працює повністю у вашому браузері, без серверу.
     </p>
   </div>
@@ -36,9 +36,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     var uiEl = document.getElementById('search');
     if (!uiEl) return;
     uiEl.innerHTML = '';
+    var statusEl = document.getElementById('search-status');
     try {
       var prefix = (typeof base === 'string' ? base : '/').replace(/\/$/, '');
       var mod = await import(prefix + '/pagefind/pagefind-ui.js');
+      if (statusEl) statusEl.textContent = 'Пошук готовий.';
       var ui = new mod.PagefindUI({
         element: '#search',
         showSubResults: false,
@@ -64,7 +66,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }, 600);
       }
     } catch (e) {
-      uiEl.innerHTML = '<p>Пошуковий індекс ще не згенеровано. Запустіть <code>npm run build:full</code>.</p>';
+      if (statusEl) statusEl.innerHTML = 'Пошуковий індекс ще не згенеровано. Виконайте <code>npm run build</code> або <code>npm run build:full</code>.';
     }
   }
   window.addEventListener('DOMContentLoaded', initSearch);

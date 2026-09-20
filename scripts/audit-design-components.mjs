@@ -36,7 +36,7 @@ for(const b of [...src.matchAll(/<button\b[\s\S]*?>/g)].map(m=>m[0]))if(!/aria-l
 for(const i of [...src.matchAll(/<input\b[\s\S]*?>/g)].map(m=>m[0]))if(!/aria-label=|aria-labelledby=|id=/.test(i))add('HIGH','accessibility','Possibly unnamed input',i.replace(/\s+/g,' ').slice(0,160),'Associate inputs with labels or accessible names.');
 for(const i of [...src.matchAll(/<img\b[\s\S]*?>/g)].map(m=>m[0]))if(!/\balt=/.test(i))add('HIGH','accessibility','Image without alt',i.slice(0,160),'Use meaningful alt text or alt="" for decorative images.');
 if(/text-transform:\s*uppercase/.test(css)&&/font-size:\s*0\.[0-7]rem/.test(css))add('MEDIUM','accessibility','Tiny uppercase text','Uppercase labels use sub-0.7rem sizing.','Verify readability at 200% zoom and on mobile.');
-if(/a\s*\{[^}]*text-decoration:\s*none/.test(css))add('MEDIUM','accessibility','Links may lose non-color affordance','Some link rules remove underlines.','Keep body links distinguishable without hover; card/nav exceptions should have another clear affordance.');
+if(/(?:^|[}\n])\s*a\s*\{[^}]*text-decoration:\s*none/.test(css))add('MEDIUM','accessibility','Links may lose non-color affordance','Some link rules remove underlines.','Keep body links distinguishable without hover; card/nav exceptions should have another clear affordance.');
 
 const min=uniq([...css.matchAll(/@media\s*\([^)]*min-width\s*:\s*(\d+)px/g)].map(m=>+m[1])).sort((a,b)=>a-b);
 const max=uniq([...css.matchAll(/@media\s*\([^)]*max-width\s*:\s*(\d+)px/g)].map(m=>+m[1])).sort((a,b)=>a-b);

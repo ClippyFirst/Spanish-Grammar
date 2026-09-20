@@ -5,10 +5,12 @@ function walk(dir,out=[]){for(const e of fs.readdirSync(dir,{withFileTypes:true}
 const slugOf=f=>path.relative(CONTENT,f).replace(/\\/g,'/').replace(/\.mdx$/,'');
 function related(text){const raw=(text.match(/^---\r?\n([\s\S]*?)\r?\n---/)||[])[1]||'';const a=[];let on=false;for(const line of raw.split(/\r?\n/)){if(/^related:\s*$/.test(line.trim())){on=true;continue}if(on&&/^\s*-\s+/.test(line)){a.push(line.replace(/^\s*-\s+/,'').trim().replace(/^['"]|['"]$/g,''));continue}if(on&&/^\S/.test(line))on=false}return a}
 const files=walk(CONTENT), pages=new Set(files.map(slugOf)), base=new Map();
+const categoryKeys=new Set(['fundamentals','nouns','articles','adjectives','adverbs','pronouns','prepositions','conjunctions','verbs','tenses','moods','periphrases','sentence-structure','word-formation','spelling','regional','micro-constructions']);
+const isCategoryRoute=x=>categoryKeys.has(x);
 for(const p of pages){const b=p.split('/').pop();if(!base.has(b))base.set(b,[]);base.get(b).push(p)}
 const nodes=new Map();
 for(const f of files){const src=slugOf(f),text=fs.readFileSync(f,'utf8'),rel=related(text),links=[...text.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map(m=>m[1].replace(/\/$/,''));nodes.set(src,{rel,links})}
-const resolve=x=>pages.has(x)?x:(base.get(x)?.length===1?base.get(x)[0]:null), inbound=new Map([...pages].map(p=>[p,[]])),broken=[],ambiguous=[],self=[],dups=[];
+const resolve=x=>pages.has(x)?x:(isCategoryRoute(x)?x:(base.get(x)?.length===1?base.get(x)[0]:null)), inbound=new Map([...pages].map(p=>[p,[]])),broken=[],ambiguous=[],self=[],dups=[];
 for(const [src,n] of nodes){const seen=new Set();for(const x of n.rel){if(seen.has(x))dups.push([src,x]);seen.add(x);const t=resolve(x);if(t===src)self.push([src,x]);if(!t&&base.has(x))ambiguous.push([src,x,base.get(x)]);if(t&&t!==src)inbound.get(t).push([src,'related'])}for(const x of n.links){const t=resolve(x);if(!t)broken.push([src,x]);else if(t!==src)inbound.get(t).push([src,'markdown'])}}
 const orphans=[...inbound].filter(x=>x[1].length===0&&!/(^|\/)index$/.test(x[0]));
 const over=[...nodes].map(x=>[x[0],x[1].rel.length+x[1].links.length]).filter(x=>x[1]>=12).sort((a,b)=>b[1]-a[1]);

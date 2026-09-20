@@ -36,9 +36,12 @@ const comparisons = [
       <div class="grid-categories">
         {sortedCategories.map((c) => (
           <a class="card" href={categoryUrl(c.key)}>
-            <span class="label">{c.titleEs}</span>
-            <span class="card-title">{c.titleUk}</span>
-            <p class="card-desc">{c.description}</p>
+            <span class="card-index" aria-hidden="true"></span>
+            <span class="card-copy">
+              <span class="label">{c.titleEs}</span>
+              <span class="card-title">{c.titleUk}</span>
+              <span class="card-desc">{c.description}</span>
+            </span>
           </a>
         ))}
       </div>

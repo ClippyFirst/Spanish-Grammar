@@ -6,7 +6,7 @@ Markdown internal links: 572
 Broken targets: 0
 Ambiguous targets: 1
 Self-links: 0
-Duplicate related entries: 2
+Duplicate related entries: 0
 Semantic orphans (no inbound and not category-reachable): 0
 Category-index reachable: 195
 Navigation orphans (not reachable from category index): 0
@@ -32,8 +32,6 @@ Manual/automatic related duplicates: 0
 ## Self-links
 
 ## Duplicate related entries
-- adjectives/adjective-agreement → agreement-traps
-- verbs/ser-estar → estar-de-ser-de
 
 ## Manual/automatic related duplicates
 

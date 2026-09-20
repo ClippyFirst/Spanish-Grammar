@@ -101,3 +101,13 @@ AUDIT-2: §10 verbs першим.
 - accessibility audit script тепер реально завантажує CSS перед перевірками `:focus-visible` та reduced-motion.
 
 **Коміти:** `215f191`, `8e1cfbc`, `0aeb3e8`, `bb4bf99`, `ca9ad6a`, `d626015`.
+
+
+## 2026-09-20 — search indexing + graph/audit cleanup
+
+**Зміни:**
+- стандартний `npm run build` тепер генерує Pagefind-індекс; `build:full` залишено сумісним alias.
+- `qa` використовує той самий повний build pipeline.
+- design audit точніше відрізняє body links від structural-link exceptions.
+- додано inbound-зв’язки для раніше orphan pages.
+- search status оновлюється через `aria-live` після завантаження Pagefind.

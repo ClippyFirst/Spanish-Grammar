@@ -16,6 +16,7 @@
   --gr-footer-bg: #1d1e1a;
   --gr-footer-text: #eeece3;
   --gr-footer-link: #e3c96d;
+  --gr-selection-text: #171711;
 }
 
 html, body { background: var(--gr-paper); }
@@ -28,7 +29,7 @@ body {
     var(--gr-paper);
   background-size: 32px 32px;
 }
-::selection { background: var(--gr-maize); color: #171711; }
+::selection { background: var(--gr-maize); color: var(--gr-selection-text); }
 
 .site-header {
   position: sticky;
@@ -132,7 +133,7 @@ body {
 .hero h1 {
   grid-column: 1 / 2;
   grid-row: 2;
-  max-width: 10ch;
+  max-width: 14ch;
   margin: 0;
   font-size: var(--fs-hero);
   line-height: .84;
@@ -424,7 +425,8 @@ h2::before {
   border: 2px solid var(--gr-ink);
   border-radius: 0;
   background: var(--gr-paper-alt);
-  box-shadow: 7px 7px 0 var(--gr-maize);
+  border-right: 7px solid var(--gr-maize);
+  border-bottom: 7px solid var(--gr-maize);
 }
 .formula .formula-tag, .label { font-family: var(--font-ui); }
 .inline-formula { border-radius: 0; border-left: 4px solid var(--gr-red); background: var(--gr-paper-alt); }
@@ -495,7 +497,7 @@ h2::before {
     grid-template-columns: 1fr auto;
     column-gap: 2rem;
   }
-  .hero h1 { max-width: 11ch; }
+  .hero h1 { max-width: 14ch; }
   .grid-categories, .topic-list { grid-template-columns: 1fr; }
   .card, .card:nth-child(even) { border-right: 0; padding-left: 0; }
   .card:nth-child(even):hover { padding-left: .75rem; }

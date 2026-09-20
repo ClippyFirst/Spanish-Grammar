@@ -36,8 +36,8 @@
   --color-token-part: #f5f1e6;
   --color-token-pron: #e9f2f7;
 
-    --font-ui: system-ui, "Segoe UI", -apple-system, Roboto, sans-serif;
-  --font-serif: Georgia, "Times New Roman", "DejaVu Serif", serif;
+    --font-ui: "Segoe UI Variable", "Segoe UI", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
 
   --fs-hero: clamp(1.75rem, 4.2vw, 2.6rem);
   --fs-h1: clamp(1.55rem, 3.4vw, 2.1rem);
@@ -52,8 +52,6 @@
   --space-7: 3rem; --space-8: 4rem;
 
   --radius: 8px; --radius-sm: 4px;
-  --shadow-sm: 0 1px 2px rgba(16,24,40,.06);
-  --shadow-md: 0 4px 16px rgba(16,24,40,.08);
   --maxw: 1120px; --maxw-text: 780px;
 }
 

@@ -1,1 +1,37 @@
-import fs from 'node:fs';import path from 'node:path';const R=process.cwd(),D=path.join(R,'src');const files=[];function w(x){for(const e of fs.readdirSync(x,{withFileTypes:true})){const p=path.join(x,e.name);e.isDirectory()?w(p):files.push(p)}}w(D);const css=files.filter(x=>x.endsWith('.css')).map(x=>fs.readFileSync(x,'utf8')).join('\n');const checks=[['inline-colors',/(?:^|[;{\\s])(?:color|background(?:-color)?|border(?:-color)?):\\s*#[0-9a-f]{3,8}/gi],['hard-radius',/border-radius:\\s*(?:[1-9]|[1-9]\\d+)px/gi],['shadows',/box-shadow\\s*:/gi],['system-ui',/font-family:[^;]*system-ui/gi]];let fail=0;for(const [n,re] of checks){const c=(css.match(re)||[]).length;console.log(n+':',c);if(c)fail++}console.log('custom properties:',(css.match(/--[\\w-]+\\s*:/g)||[]).length);if(fail)process.exitCode=1;
+import fs from 'node:fs';
+import path from 'node:path';
+
+const R = process.cwd();
+const D = path.join(R, 'src');
+const files = [];
+
+function walk(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    entry.isDirectory() ? walk(p) : files.push(p);
+  }
+}
+walk(D);
+
+const css = files
+  .filter((x) => x.endsWith('.css'))
+  .map((x) => fs.readFileSync(x, 'utf8'))
+  .join('\n');
+
+const checks = [
+  ['inline-colors', /(?:^|[;{\s])(?:color|background(?:-color)?|border(?:-color)?):\s*#[0-9a-f]{3,8}/gi],
+  ['hard-radius', /border-radius:\s*(?:[1-9]|[1-9]\d+)px/gi],
+  ['shadows', /box-shadow\s*:/gi],
+  ['system-ui', /font-family:[^;]*system-ui/gi],
+];
+
+let fail = 0;
+for (const [name, re] of checks) {
+  const count = (css.match(re) || []).length;
+  console.log(name + ':', count);
+  if (count) fail++;
+}
+
+console.log('custom properties:', (css.match(/--[\w-]+\s*:/g) || []).length);
+
+if (fail) process.exitCode = 1;

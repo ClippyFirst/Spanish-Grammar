@@ -10,7 +10,7 @@ Duplicate related entries: 0
 Semantic orphans (no inbound and not category-reachable): 0
 Category-index reachable: 195
 Navigation orphans (not reachable from category index): 0
-Category-only leaf pages (no semantic inbound): 4
+Category-only leaf pages (no semantic inbound): 3
 Manual related sections: 165
 Manual/automatic related duplicates: 0
 
@@ -22,7 +22,6 @@ Manual/automatic related duplicates: 0
 - micro-constructions/de-inf-sera-no-sea-lo-de,
 - sentence-structure/personal-a,
 - verbs/deber-vs-deber-de,
-- verbs/infinitive-as-noun,
 
 ## Broken Markdown links
 

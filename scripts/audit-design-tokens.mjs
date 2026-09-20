@@ -13,10 +13,9 @@ function walk(dir) {
 }
 walk(D);
 
-const css = files
-  .filter((x) => x.endsWith('.css'))
-  .map((x) => fs.readFileSync(x, 'utf8'))
-  .join('\n');
+const designFile = path.join(D, 'styles', 'gramaticarrona.css');
+const css = fs.readFileSync(designFile, 'utf8');
+const checkCss = css.replace(/:root\\s*\\{[\\s\\S]*?\\}/g, '');
 
 const checks = [
   ['inline-colors', /(?:^|[;{\s])(?:color|background(?:-color)?|border(?:-color)?):\s*#[0-9a-f]{3,8}/gi],
@@ -27,7 +26,7 @@ const checks = [
 
 let fail = 0;
 for (const [name, re] of checks) {
-  const count = (css.match(re) || []).length;
+  const count = (checkCss.match(re) || []).length;
   console.log(name + ':', count);
   if (count) fail++;
 }

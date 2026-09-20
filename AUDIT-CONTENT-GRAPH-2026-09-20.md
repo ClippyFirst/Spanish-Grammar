@@ -11,12 +11,14 @@ Semantic orphans (no inbound and not category-reachable): 0
 Category-index reachable: 195
 Navigation orphans (not reachable from category index): 0
 Category-only leaf pages (no semantic inbound): 50
+Manual related sections: 181
+Manual/automatic related duplicates: 9
 
 ## Semantic orphans (not category-reachable)
 
 ## Navigation orphans
 
-## Category-index reachable but semantically unlinked
+## Category-only leaf pages (no semantic inbound)
 - adjectives/adjective-complements,
 - adjectives/adjective-types-cultos,
 - adjectives/agreement-traps,
@@ -76,6 +78,17 @@ Category-only leaf pages (no semantic inbound): 50
 ## Self-links
 
 ## Duplicate related entries
+
+## Manual/automatic related duplicates
+- adjectives/adjective-complements → prepositions
+- micro-constructions/de-inf-sera-no-sea-lo-de → articles/neutral-lo
+- prepositions/verbs-with-prepositions → pronouns/personal-a
+- pronouns/double-object-pronouns → pronouns/personal-a
+- pronouns/indefinite-pronouns → pronouns/personal-a
+- pronouns/interrogative-pronouns → pronouns/personal-a
+- pronouns/objeto-directo-indirecto → pronouns/personal-a
+- pronouns/personal-pronouns-omission → pronouns/personal-a
+- sentence-structure/passive-voice → pronouns/personal-a
 
 ## Overlinked pages (12+ outgoing)
 - fundamentals/ua-interference: 24

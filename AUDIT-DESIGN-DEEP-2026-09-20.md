@@ -4,10 +4,15 @@ Source files: 231
 
 ## Result
 
-Findings: 0 — HIGH 0, MEDIUM 0, LOW 0.
+Findings: 1 — HIGH 0, MEDIUM 1, LOW 0.
 
 ## Findings
 
+### 1. [MEDIUM] responsive — Very narrow hero measure
+
+**Evidence:** Hero heading uses a very narrow character measure.
+
+**Recommendation:** Test 320/375/430px with long Ukrainian words.
 
 ## Mandatory browser audit
 

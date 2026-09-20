@@ -1018,3 +1018,61 @@ PCIC для C1–C2, зі свого боку, прямо містить окр�
 Після цього проходу головний залишковий ризик — вже не «відсутня базова тема», а локальні суперечності, broken links, CSS/MDX rendering issues та поодинокі формулювання, які потребують контексту.
 
 **Статус:** Grammar/content audit → завершено на рівні структури; technical runtime QA → потребує локального `npm run qa` / production build.
+
+
+---
+
+# 21. Graph integration pass — 2026-09-20
+
+Після первинного grammar/depth audit виконано окремий semantic-navigation pass.
+
+## Verified graph baseline before the integration pass
+
+- 195 content pages.
+- 195 pages reachable from category indexes.
+- 0 semantic orphans.
+- 0 navigation orphans.
+- 0 broken internal targets.
+- 0 ambiguous targets.
+- 0 self-links.
+- 0 duplicate `related` entries.
+- 0 manual/automatic related duplicates after cleanup.
+
+Category-only leaves are treated as a navigation-design signal, not as errors: they remain reachable from their category index and are retained when they represent legitimate specialized grammar topics.
+
+## Semantic navigation improvements
+
+The canonical hubs were strengthened so that specialized pages are reached through meaningful parent → detail relationships rather than isolated category listings. In particular, connections were expanded across:
+
+- adjective position → adjective complements / specialized adjective types / meaning by position;
+- tense overview → pretérito anterior;
+- subjunctive core → specialized subjunctive forms and free subjunctive;
+- periphrasis overview/core → specialized periphrases;
+- preposition constructions → verb-preposition and place reviews;
+- regional overview → major regional grammar areas;
+- subordinate-clause map → comparative, consecutive, modal, concessive, conditional and related deep dives;
+- question/word-order hubs → their review/deep pages;
+- noun number → irregular plurals;
+- pronoun and `se` hubs → specialized pronoun constructions;
+- verb/word-formation hubs → specialized derivational and lexical constructions.
+
+No unique grammar coverage was removed in this pass. The purpose was to make the information architecture reflect the actual conceptual relationships already present in the content.
+
+## Current architectural rule
+
+The preferred navigation graph is:
+
+**base/reference → canonical overview → primary explanation → deep dive → specialized/regional construction**.
+
+Category indexes remain the universal fallback navigation layer. Frontmatter `related` is the canonical automatic related-navigation mechanism; manual sections with the same purpose should not be duplicated.
+
+## Next verification
+
+After the final graph edits, run locally:
+
+```powershell
+npm run audit:graph
+npm run qa
+```
+
+The graph audit should remain free of broken, ambiguous, self, duplicate and orphan errors. The production QA remains the authoritative runtime check.

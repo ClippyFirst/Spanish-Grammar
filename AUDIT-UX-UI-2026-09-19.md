@@ -1,4 +1,4 @@
-# UX/UI Audit — GrammarWay ES
+# UX/UI Audit — Gramaticarrona ES
 
 **Дата:** 2026-09-19  
 **Мета:** зробити довідник не просто функціональним, а стабільним, читабельним і передбачуваним на desktop та mobile.

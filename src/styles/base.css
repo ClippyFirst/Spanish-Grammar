@@ -20,7 +20,7 @@ h2[id], h3[id], h4[id] { scroll-margin-top: 88px; }
 
 p { margin: 0 0 var(--space-4); }
 
-a { color: var(--color-link); text-decoration-thickness: 1px; text-underline-offset: 2px; border-radius: var(--radius-sm); }
+a { color: var(--color-link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; border-radius: var(--radius-sm); }
 a:hover { color: var(--color-accent-strong); }
 a:visited { color: var(--color-link); }
 

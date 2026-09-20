@@ -51,7 +51,7 @@
   --space-4: 1rem; --space-5: 1.5rem; --space-6: 2rem;
   --space-7: 3rem; --space-8: 4rem;
 
-  --radius: 8px; --radius-sm: 4px; --radius-pill:999px;
+  --radius: 8px; --radius-sm: var(--radius); --radius-pill: 999px;
   --maxw: 1120px; --maxw-text: 780px;
 }
 

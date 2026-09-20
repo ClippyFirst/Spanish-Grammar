@@ -90,6 +90,7 @@ Category-only leaf pages (no semantic inbound): 56
 ## Graph policy
 Preferred direction: quick reference → primary explanation → deep dive → adjacent/specialized topic.
 
+Category indexes are first-class navigation hubs; a page with no semantic inbound is not an orphan if it is listed by its category index.
 Review/overview pages should navigate to canonical pages, not duplicate them.
 related is for genuinely useful neighboring topics, not every page in the same category.
 Remove self-links, duplicates, broken targets and ambiguous basename targets.

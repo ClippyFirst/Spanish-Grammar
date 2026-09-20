@@ -1,1 +1,38 @@
-import fs from 'node:fs';import path from 'node:path';const R=process.cwd(),D=path.join(R,'src');const files=[];function w(x){for(const e of fs.readdirSync(x,{withFileTypes:true})){const p=path.join(x,e.name);e.isDirectory()?w(p):files.push(p)}}w(D);const src=files.filter(x=>/\\.(astro|mdx)$/.test(x)).map(x=>fs.readFileSync(x,'utf8')).join('\n');const checks=[['images-without-alt',/<img(?![^>]*\\balt=)[^>]*>/gi],['autofocus',/\\bautofocus\\b/gi],['tabindex-positive',/tabindex=["']?[1-9]/gi]];let fail=0;for(const [n,re] of checks){const c=(src.match(re)||[]).length;console.log(n+':',c);if(c)fail++}console.log('focus-visible:',/focus-visible/.test(src));console.log('reduced-motion:',/prefers-reduced-motion/.test(src));console.log('semantic-nav:',/<nav\\b/.test(src));if(fail)process.exitCode=1;
+import fs from 'node:fs';
+import path from 'node:path';
+
+const R = process.cwd();
+const D = path.join(R, 'src');
+const files = [];
+
+function walk(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    entry.isDirectory() ? walk(p) : files.push(p);
+  }
+}
+walk(D);
+
+const src = files
+  .filter((x) => /\.(astro|mdx)$/.test(x))
+  .map((x) => fs.readFileSync(x, 'utf8'))
+  .join('\n');
+
+const checks = [
+  ['images-without-alt', /<img(?![^>]*\balt=)[^>]*>/gi],
+  ['autofocus', /\bautofocus\b/gi],
+  ['tabindex-positive', /tabindex=["']?[1-9]/gi],
+];
+
+let fail = 0;
+for (const [name, re] of checks) {
+  const count = (src.match(re) || []).length;
+  console.log(name + ':', count);
+  if (count) fail++;
+}
+
+console.log('focus-visible:', /focus-visible/.test(src));
+console.log('reduced-motion:', /prefers-reduced-motion/.test(src));
+console.log('semantic-nav:', /<nav\b/.test(src));
+
+if (fail) process.exitCode = 1;

@@ -72,7 +72,7 @@
 .note.region { border-left-color: var(--color-link); }
 .note.region .note-title { color: var(--color-link); }
 
-.region-tag { font-family: var(--font-ui); font-size: var(--fs-tiny); border: 1px solid var(--color-border-strong); border-radius: 999px; padding: .1rem .6rem; color: var(--color-text-soft); }
+.region-tag { font-family: var(--font-ui); font-size: var(--fs-tiny); border: 1px solid var(--color-border-strong); border-radius: var(--radius-pill); padding: .1rem .6rem; color: var(--color-text-soft); }
 
 /* ---------- Grammatical tables ---------- */
 /* ---------- Grammatical tables ---------- */

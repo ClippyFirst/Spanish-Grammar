@@ -4,14 +4,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { withBase } from '../utils/content';
 ---
 <BaseLayout title="Сторінку не знайдено · GrammarWay ES" canonical="/404/">
-  <div class="container" style="text-align:center;padding-top:var(--space-8)">
+  <div class="container page-404">
     <h1>404 — сторінку не знайдено</h1>
-    <p class="lead" style="margin:0 auto;max-width:46ch">
+    <p class="lead">
       Такої сторінки немає. Спробуйте пошук або поверніться до розділів граматики.
     </p>
-    <p style="margin-top:var(--space-5)">
-      <a class="card-topic" href={withBase('/es/')} style="display:inline-block">До розділів граматики</a>
-      <a class="card-topic" href={withBase('/search/')} style="display:inline-block;margin-left:var(--space-3)">Пошук</a>
+    <p class="page-404-actions">
+      <a class="card-topic" href={withBase('/es/')}>До розділів граматики</a>
+      <a class="card-topic" href={withBase('/search/')}>Пошук</a>
     </p>
   </div>
 </BaseLayout>

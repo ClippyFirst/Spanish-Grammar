@@ -94,9 +94,38 @@ body {
 .nav-toggle { border-color: var(--gr-ink); }
 
 .container {
+  width: min(100% - clamp(2rem, 6vw, 6.5rem), var(--maxw));
   max-width: var(--maxw);
-  padding-inline: clamp(1rem, 4vw, 3.25rem);
+  margin-inline: auto;
 }
+.container > * { min-width: 0; }
+
+/* ---------- Editorial column system ---------- */
+:root {
+  --grid-gap: clamp(1rem, 2.4vw, 2rem);
+  --grid-col: minmax(0, 1fr);
+}
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+.layout-doc {
+  display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(180px, 2fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+.layout-doc > article { min-width: 0; }
+.layout-doc > .toc { min-width: 0; }
+.page-shell {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+}
+.page-shell > .page-main { grid-column: 1 / span 9; min-width: 0; }
+.page-shell > .page-aside { grid-column: 10 / -1; min-width: 0; }
+
 
 /* ---------- Homepage ---------- */
 .hero {
@@ -202,11 +231,12 @@ h2::before {
 /* ---------- Index cards ---------- */
 .grid-categories {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   border-top: 1px solid var(--gr-ink);
   counter-reset: category;
 }
 .card {
+  grid-column: span 6;
   position: relative;
   display: grid;
   grid-template-columns: 4.25rem minmax(0, 1fr);
@@ -280,11 +310,12 @@ h2::before {
 /* ---------- Lists of topics ---------- */
 .topic-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 0 2.5rem;
   margin: 0;
   border-top: 1px solid var(--gr-ink);
 }
+.topic-list > li { grid-column: span 6; min-width: 0; }
 .card-topic {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -312,11 +343,7 @@ h2::before {
 .card-topic .t-es { font-size: 1.05rem; font-weight: 650; }
 .card-topic .t-uk { color: var(--gr-muted); font-size: .82rem; }
 
-.layout-doc {
-  grid-template-columns: minmax(0, 790px) 220px;
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: start;
-}
+
 .breadcrumbs {
   padding-top: 1.5rem;
   font: 650 .68rem/1.3 var(--font-ui);
@@ -455,14 +482,14 @@ h2::before {
 .related > h2 { margin-bottom: 1.25rem; }
 .related ul {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-auto-rows: 88px;
   gap: .75rem 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.related li { min-width: 0; min-height: 0; }
+.related li { grid-column: span 6; min-width: 0; min-height: 0; }
 .related a,
 .related-link {
   box-sizing: border-box;
@@ -569,16 +596,22 @@ h2::before {
     column-gap: 2rem;
   }
   .hero h1 { max-width: 14ch; }
-  .grid-categories, .topic-list { grid-template-columns: 1fr; }
-  .card, .card:nth-child(even) { border-right: 0; padding-left: 0; }
+  .grid-categories, .topic-list, .related ul { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .card, .card:nth-child(even) { grid-column: span 6; border-right: 0; padding-left: 0; }
+  .topic-list > li, .related li { grid-column: span 6; }
+  .page-shell > .page-main { grid-column: 1 / -1; }
+  .page-shell > .page-aside { grid-column: 1 / -1; }
+
   .card:nth-child(even):hover { padding-left: .75rem; }
   .layout-doc { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .related ul { grid-template-columns: 1fr; }
+
 }
 @media (max-width: 639px) {
   .header-inner { height: 64px; }
   .brand-name { font-size: 1.12rem; }
+  .grid-categories, .topic-list, .related ul { grid-template-columns: 1fr; }
+  .topic-list > li, .related li, .card { grid-column: 1 / -1; }
   .hero {
     display: block;
     padding-top: 3.5rem;
@@ -602,7 +635,7 @@ h2::before {
   .card .card-desc { font-size: .85rem; }
   .page-head h1 { font-size: 3rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .related ul { grid-auto-rows: 76px; }
+
   .related a, .related-link { height: 76px; min-height: 76px; padding-inline: .8rem; }
   .related .r-es { font-size: .9rem; }
   .related .r-uk { font-size: .74rem; }

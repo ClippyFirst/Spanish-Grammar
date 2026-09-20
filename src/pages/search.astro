@@ -1,5 +1,4 @@
 ---
-// Search page: /search/ — full client-side search via Pagefind.
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
@@ -16,14 +15,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </header>
 
-    <div id="search" class="pagefind-ui"></div>
-    <p class="search-hint" id="search-status" aria-live="polite">
-      Пошук працює повністю у вашому браузері, без серверу.
-    </p>
-  </div>
-</BaseLayout>
-
-<div class="search-interface" id="search-interface">
+    <div class="search-interface" id="search-interface">
       <form class="search-form" id="search-form" role="search">
         <label class="sr-only" for="search-input">Пошук по граматиці</label>
         <input id="search-input" type="search" name="q" placeholder="Пошук…" autocomplete="off" />
@@ -36,11 +28,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <script is:inline define:vars={{ base: import.meta.env.BASE_URL ?? '/' }}>
-  // Use Pagefind's core Search API instead of pagefind-ui.js. This avoids
-  // UI-bundle path detection issues while keeping the search interface fully
-  // controlled by the site's own design system.
+  // Use Pagefind's core Search API. This avoids pagefind-ui.js path detection
+  // and lets the site's own design system control the search interface.
   async function initSearch() {
-    var prefix = (typeof base === 'string' ? base : '/').replace(/\\/$/, '');
+    var prefix = (typeof base === 'string' ? base : '/').replace(/\/$/, '');
     var input = document.getElementById('search-input');
     var form = document.getElementById('search-form');
     var resultsEl = document.getElementById('search-results');
@@ -66,12 +57,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       async function runSearch(query, updateUrl) {
         var clean = query.trim();
         resultsEl.innerHTML = '';
+
         if (updateUrl) {
           var next = new URL(window.location.href);
           if (clean) next.searchParams.set('q', clean);
           else next.searchParams.delete('q');
           window.history.replaceState({}, '', next);
         }
+
         if (!clean) {
           statusEl.textContent = 'Введіть слово або фразу для пошуку.';
           return;
@@ -79,29 +72,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         statusEl.textContent = 'Шукаємо…';
         var search = await pagefind.search(clean);
+
         if (!search.results.length) {
           statusEl.textContent = 'Нічого не знайдено для «' + clean + '».';
           return;
         }
 
         statusEl.textContent = 'Знайдено: ' + search.results.length + '.';
-        var items = await Promise.all(search.results.slice(0, 30).map(async function(result) {
-          var data = await result.data();
-          return { data: data, score: result.score };
-        }));
 
-        items.forEach(function(item) {
-          var data = item.data || {};
+        var items = await Promise.all(
+          search.results.slice(0, 30).map(async function(result) {
+            return await result.data();
+          })
+        );
+
+        items.forEach(function(data) {
           var li = document.createElement('li');
           li.className = 'search-result';
           var title = data.meta && data.meta.title ? data.meta.title : 'Без назви';
           var excerpt = data.excerpt || '';
           var url = data.url || '#';
+
           li.innerHTML =
             '<a class="search-result-link" href="' + escapeHtml(url) + '">' +
               '<strong>' + escapeHtml(title) + '</strong>' +
               (excerpt ? '<span>' + excerpt + '</span>' : '') +
             '</a>';
+
           resultsEl.appendChild(li);
         });
       }
@@ -113,10 +110,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       var initial = new URL(window.location.href).searchParams.get('q') || '';
       input.value = initial;
-      if (initial) await runSearch(initial, false);
-      else statusEl.textContent = 'Введіть слово або фразу для пошуку.';
+
+      if (initial) {
+        await runSearch(initial, false);
+      } else {
+        statusEl.textContent = 'Введіть слово або фразу для пошуку.';
+      }
     } catch (e) {
-      statusEl.textContent = 'Пошук не зміг завантажити Pagefind. Перевірте, що після npm run build існує dist/pagefind/pagefind.js, і запустіть сайт через npm run preview.';
+      statusEl.textContent =
+        'Пошук не зміг завантажити Pagefind. Перевірте, що після npm run build існує dist/pagefind/pagefind.js, і запустіть сайт через npm run preview.';
       console.error('Pagefind initialization failed:', e);
     }
   }

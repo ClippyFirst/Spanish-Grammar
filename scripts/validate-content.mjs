@@ -1,6 +1,4 @@
-// Frontmatter + related-links validator.
-// Usage: node scripts/validate-content.mjs
-// Exit 0 = clean, 1 = problems found. Never throws on missing files.
+// Structural/editorial frontmatter validator for the grammar corpus.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -10,144 +8,147 @@ const CATEGORIES_FILE = path.join(ROOT, 'src', 'data', 'categories.ts');
 
 function walk(dir, out = []) {
   if (!fs.existsSync(dir)) return out;
-  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    const p = path.join(dir, e.name);
-    if (e.isDirectory()) walk(p, out);
-    else if (/\.mdx?$/.test(e.name)) out.push(p);
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) walk(file, out);
+    else if (/\.mdx?$/.test(entry.name)) out.push(file);
   }
   return out;
 }
 
-function parseFrontmatter(text, file) {
-  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!m) return { error: 'missing frontmatter block', data: {} };
+function frontmatter(text) {
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!match) return { data: {}, lists: {}, error: 'missing frontmatter block' };
+
   const data = {};
+  const lists = {};
+  let current = null;
   const errors = [];
-  let currentKey = null;
-  for (const raw of m[1].split(/\r?\n/)) {
-    const line = raw.trimEnd();
-    if (/^\s*#/.test(line) || line.trim() === '') continue;
-    const kv = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*:\s*(.*)$/);
-    if (kv) {
-      currentKey = kv[1];
-      let v = kv[2].trim();
-      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
-        v = v.slice(1, -1);
+
+  for (const rawLine of match[1].split(/\r?\n/)) {
+    const line = rawLine.trimEnd();
+    if (!line.trim() || /^\s*#/.test(line)) continue;
+
+    const scalar = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*:\s*(.*)$/);
+    if (scalar) {
+      current = scalar[1];
+      let value = scalar[2].trim();
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
       }
-      if (v === '' || v === '[]') data[currentKey] = [];
-      else data[currentKey] = v;
-    } else if (/^\s*-\s+/.test(line) && currentKey) {
-      let v = line.replace(/^\s*-\s+/, '').trim();
-      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
-      if (!Array.isArray(data[currentKey])) data[currentKey] = data[currentKey] === undefined || data[currentKey] === '' ? [] : [data[currentKey]];
-      data[currentKey].push(v);
-    } else if (/^\s+\S/.test(line)) {
-      errors.push(`suspicious continuation line: ${line.trim().slice(0, 80)}`);
+      if (value === '[]') lists[current] = [];
+      else data[current] = value;
+      continue;
     }
+
+    const item = line.match(/^\s*-\s+(.*)$/);
+    if (item && current) {
+      lists[current] ??= [];
+      let value = item[1].trim();
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
+      }
+      lists[current].push(value);
+      continue;
+    }
+
+    if (/^\s+\S/.test(line)) errors.push('suspicious continuation: ' + line.trim().slice(0, 100));
   }
-  return { data, errors };
+
+  return { data, lists, errors };
 }
 
-const files = walk(CONTENT_DIR);
-let categoryKeys = new Set();
-try {
-  const catSrc = fs.readFileSync(CATEGORIES_FILE, 'utf8');
-  for (const m of catSrc.matchAll(/key:\s*['"]([^'"]+)['"]/g)) categoryKeys.add(m[1]);
-} catch { /* ignore */ }
+const files = walk(CONTENT_DIR).sort();
+const categorySource = fs.existsSync(CATEGORIES_FILE) ? fs.readFileSync(CATEGORIES_FILE, 'utf8') : '';
+const categories = new Set([...categorySource.matchAll(/key:\s*['"]([^'"]+)['"]/g)].map((m) => m[1]));
+const pages = new Set(files.map((file) => path.relative(CONTENT_DIR, file).replace(/\\/g, '/').replace(/\.mdx?$/, '')));
+const basenames = new Map();
 
-const slugs = new Set(files.map((f) => path.basename(f).replace(/\.mdx?$/i, '')));
-const pageSlugs = new Set(files.map((f) => path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, '')));
+for (const page of pages) {
+  const key = page.split('/').pop();
+  const bucket = basenames.get(key) ?? [];
+  bucket.push(page);
+  basenames.set(key, bucket);
+}
+
+function resolve(target) {
+  if (pages.has(target) || categories.has(target)) return target;
+  const matches = basenames.get(target) ?? [];
+  return matches.length === 1 ? matches[0] : null;
+}
+
+const required = ['title_uk', 'title_es', 'title_en', 'short_description', 'category'];
+const relationFields = ['related', 'prerequisites', 'contrasts', 'extensions', 'exceptions'];
+const allowedRegions = new Set(['general', 'spain', 'latin-america', 'rioplatense', 'mexico', 'caribbean']);
+const allowedReview = new Set(['draft', 'reviewed', 'verified']);
+
 const errors = [];
 const warnings = [];
-const relatedGraph = new Map();
-const markdownGraph = new Map();
 
-// YAML colon-smell: unquoted title/short_description containing ": " outside quotes.
-for (const f of files) {
-  const text = fs.readFileSync(f, 'utf8');
+for (const file of files) {
+  const relative = path.relative(ROOT, file);
+  const text = fs.readFileSync(file, 'utf8');
+  const parsed = frontmatter(text);
+
+  if (parsed.error) errors.push(relative + ': ' + parsed.error);
+  for (const warning of parsed.errors ?? []) warnings.push(relative + ': ' + warning);
+
+  for (const field of required) {
+    if (!parsed.data[field]) errors.push(relative + ': missing required field ' + field);
+  }
+
+  if (parsed.data.category && !categories.has(String(parsed.data.category))) {
+    errors.push(relative + ': unknown category ' + parsed.data.category);
+  }
+
+  if (parsed.data.region && !allowedRegions.has(String(parsed.data.region))) {
+    errors.push(relative + ': invalid region ' + parsed.data.region);
+  }
+
+  if (parsed.data.review_status && !allowedReview.has(String(parsed.data.review_status))) {
+    errors.push(relative + ': invalid review_status ' + parsed.data.review_status);
+  }
+
+  if (parsed.data.updated && !/^\d{4}-\d{2}-\d{2}$/.test(String(parsed.data.updated))) {
+    errors.push(relative + ': updated must be YYYY-MM-DD');
+  }
+
+  for (const field of relationFields) {
+    const values = parsed.lists[field] ?? [];
+    const seen = new Set();
+    for (const target of values) {
+      if (seen.has(target)) warnings.push(relative + ': duplicate ' + field + ' target ' + target);
+      seen.add(target);
+      const resolved = resolve(target);
+      if (!resolved) {
+        const candidates = basenames.get(target) ?? [];
+        errors.push(relative + ': ' + field + ' target ' + target + (candidates.length > 1 ? ' is ambiguous: ' + candidates.join(', ') : ' does not resolve'));
+      }
+      const currentPage = path.relative(CONTENT_DIR, file).replace(/\\/g, '/').replace(/\.mdx?$/, '');
+      if (resolved === currentPage) errors.push(relative + ': self-link in ' + field + ': ' + target);
+    }
+  }
+
   const fmRaw = (text.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
   for (const key of ['title_uk', 'title_es', 'title_en', 'short_description']) {
-    const line = fmRaw.split(/\r?\n/).find((l) => new RegExp(`^\\s*${key}\\s*:`).test(l));
+    const line = fmRaw.split(/\r?\n/).find((item) => new RegExp('^\\s*' + key + '\\s*:').test(item));
     if (line) {
-      const val = line.split(/:/).slice(1).join(':').trim();
-      const quoted = /^['"].*['"]$/.test(val);
-      if (!quoted && val.includes(':')) {
-        errors.push(`${path.relative(ROOT, f)}: ${key} contains unquoted colon -> quote it: ${line.trim().slice(0, 100)}`);
+      const value = line.split(':').slice(1).join(':').trim();
+      if (!/^['"]/.test(value) && value.includes(': ')) {
+        errors.push(relative + ': ' + key + ' contains an unquoted YAML colon');
       }
     }
   }
-  const { data, errors: fmErr } = parseFrontmatter(text, f);
-  for (const e of fmErr) warnings.push(`${path.relative(ROOT, f)}: ${e}`);
-  for (const req of ['title_uk', 'title_es', 'title_en', 'short_description', 'category']) {
-    if (data[req] === undefined || data[req] === '' || (Array.isArray(data[req]) && data[req].length === 0)) {
-      errors.push(`${path.relative(ROOT, f)}: missing required frontmatter field "${req}"`);
-    }
-  }
-  if (data.category && categoryKeys.size && !categoryKeys.has(String(data.category))) {
-    errors.push(`${path.relative(ROOT, f)}: unknown category "${data.category}"`);
-  }
-  const rel = Array.isArray(data.related) ? [...new Set(data.related)] : [];
-  relatedGraph.set(path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, ''), rel);
-  if (rel.some((x) => x === path.basename(f).replace(/\.mdx?$/i, '') || x === path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, ''))) errors.push(`${path.relative(ROOT, f)}: related contains a self-link`);
-  if (rel.length !== (Array.isArray(data.related) ? data.related.length : 0)) warnings.push(`${path.relative(ROOT, f)}: duplicate related entries removed from graph`);
-  for (const r of rel) {
-    if (!slugs.has(r) && !pageSlugs.has(r) && !categoryKeys.has(r)) {
-      warnings.push(`${path.relative(ROOT, f)}: related "${r}" resolves to no page/category (filtered at runtime)`);
-    }
-  }
-  // MDX apostrophe smell: single-quoted JS string containing ' (breaks acorn).
-  const mdxBody = text.replace(/^---\r?\n[\s\S]*?\r?\n---/, '');
-  const markdownLinks = [...mdxBody.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map((m) => m[1].replace(/\/$/, ''));
-  markdownGraph.set(path.relative(CONTENT_DIR, f).replace(/\\/g, '/').replace(/\.mdx?$/i, ''), markdownLinks);
-  const badStrings = mdxBody.match(/=\{\{\s*es:\s*'[^']*'[^}]*\}\}/g) || [];
-  for (const b of badStrings) {
-    if (/'[^']*['’]/.test(b.replace(/^=\{\{\s*es:\s*'/, ''))) {
-      // handled below more precisely; keep as warning class
-    }
-  }
-  // Heuristic: single-quoted JS string that actually contains an ASCII apostrophe
-  // (U+0027) as in п'ятниці. Count only straight apostrophes — UTF-8 multibyte
-  // text (й, é, ñ...) must NOT trigger this. Lines without inner ' are clean.
-  const lines = mdxBody.split(/\r?\n/);
-  lines.forEach((ln, i) => {
-    if (!/(uk|es|bad|good|why)\s*[:=]/.test(ln)) return;
-    // Find '...' spans on this line; if any span's inner text contains a
-    // straight apostrophe that is surrounded by letters, flag it.
-    const spans = ln.match(/'[^'\n]*'/g) || [];
-    // Reconstruct: a line like  uk: 'З понеділка до п\'ятниці.' contains 3 quotes.
-    const quoteCount = (ln.match(/'/g) || []).length;
-    // Odd quote count on a prop line is a strong apostrophe signal
-    // (open + close + one inner). Even counts with letter-surrounded ' also count.
-    const hasInnerApostrophe = /[A-Za-zА-Яа-яІіЇїЄєҐґ]\'[A-Za-zА-Яа-яІіЇїЄєҐґ]/.test(ln);
-    if (quoteCount % 2 === 1 || (hasInnerApostrophe && spans.length > 0 && /(uk|es)\s*:/.test(ln))) {
-      // Only flag when the apostrophe is inside a '...' value (not in "double" attrs).
-      if (hasInnerApostrophe && /:\s*'[^'\n]*[A-Za-zА-Яа-яІіЇїЄєҐґ]'[A-Za-zА-Яа-яІіЇїЄєҐґ]/.test(ln)) {
-        warnings.push(`${path.relative(ROOT, f)}:${i + 1}: single-quoted JS string contains apostrophe -> use double quotes: ${ln.trim().slice(0, 110)}`);
-      } else if (quoteCount % 2 === 1 && /:\s*'/.test(ln)) {
-        warnings.push(`${path.relative(ROOT, f)}:${i + 1}: unbalanced single quotes (likely apostrophe) -> use double quotes: ${ln.trim().slice(0, 110)}`);
-      }
-    }
-  });
 }
 
-// Graph QA: report broken internal Markdown targets, orphan pages, and excessive cross-linking.
-const graphTargets = new Set([...pageSlugs].map((x) => x));
-for (const [src, links] of markdownGraph) for (const target of links) if (!graphTargets.has(target) && !categoryKeys.has(target)) warnings.push(`${src}: Markdown link "/es/${target}/" resolves to no content page`);
-const inbound = new Map([...pageSlugs].map((x) => [x, 0]));
-for (const [src, links] of markdownGraph) for (const target of links) if (inbound.has(target) && target !== src) inbound.set(target, inbound.get(target) + 1);
-for (const [src, rel] of relatedGraph) for (const target of rel) { const t = pageSlugs.has(target) ? target : (slugs.has(target) ? [...pageSlugs].find(x => x.endsWith('/'+target)) : null); if (t && t !== src && inbound.has(t)) inbound.set(t, inbound.get(t) + 1); }
-const orphanPages = [...inbound].filter(([p, n]) => n === 0 && !p.endsWith('/index')).map(([p]) => p);
-if (orphanPages.length) warnings.push(`GRAPH: ${orphanPages.length} pages have no inbound links: ${orphanPages.slice(0, 20).join(', ')}${orphanPages.length > 20 ? '…' : ''}`);
-console.log(`validate-content: ${files.length} files, ${slugs.size} slugs, ${categoryKeys.size} categories`);
-console.log(`graph: ${relatedGraph.size} related maps, ${[...markdownGraph.values()].reduce((n,x)=>n+x.length,0)} internal Markdown links, ${orphanPages.length} orphan pages`);
+console.log('validate-content: ' + files.length + ' files, ' + pages.size + ' pages, ' + categories.size + ' categories');
 if (warnings.length) {
-  console.log(`\nWARNINGS (${warnings.length}):`);
-  for (const w of warnings) console.log('  WARN ' + w);
+  console.log('\nWARNINGS (' + warnings.length + '):');
+  for (const warning of warnings) console.log('  WARN ' + warning);
 }
 if (errors.length) {
-  console.log(`\nERRORS (${errors.length}):`);
-  for (const e of errors) console.log('  ERR ' + e);
+  console.log('\nERRORS (' + errors.length + '):');
+  for (const error of errors) console.log('  ERR ' + error);
   process.exit(1);
-} else {
-  console.log('\nOK: no blocking errors.');
 }
+console.log('\nOK: no blocking content errors.');

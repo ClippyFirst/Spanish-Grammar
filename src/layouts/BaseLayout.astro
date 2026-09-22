@@ -30,8 +30,22 @@ const {
 } = Astro.props;
 
 const site = Astro.site ?? new URL('https://example.org');
-const canonicalUrl = new URL(canonical, site);
-const ogImageUrl = ogImage ? new URL(ogImage, site) : null;
+
+/**
+ * Resolve a page asset against the deployed site while respecting Astro's
+ * configured project base (for example /Spanish-Grammar on GitHub Pages).
+ *
+ * Astro.site is intentionally the site origin; withBase() owns the project
+ * sub-path. Using new URL('/es/...', site) directly would silently discard
+ * that sub-path and produce incorrect canonical/OG/hreflang URLs.
+ */
+function absoluteSiteUrl(pathOrUrl: string): URL {
+  if (/^https?:\\/\\//i.test(pathOrUrl)) return new URL(pathOrUrl);
+  return new URL(withBase(pathOrUrl), site);
+}
+
+const canonicalUrl = absoluteSiteUrl(canonical);
+const ogImageUrl = ogImage ? absoluteSiteUrl(ogImage) : null;
 ---
 <!doctype html>
 <html lang="uk">
@@ -57,7 +71,7 @@ const ogImageUrl = ogImage ? new URL(ogImage, site) : null;
     <meta name="twitter:description" content={description} />
 
     {alternates.map((a) => (
-      <link rel="alternate" hreflang={a.lang} href={new URL(a.path, site).href} />
+      <link rel="alternate" hreflang={a.lang} href={absoluteSiteUrl(a.path).href} />
     ))}
     <link rel="alternate" hreflang="x-default" href={canonicalUrl.href} />
 

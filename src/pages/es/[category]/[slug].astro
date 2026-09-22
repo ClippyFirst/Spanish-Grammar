@@ -3,7 +3,7 @@
 import { getCollection, render } from 'astro:content';
 import GrammarLayout from '../../../layouts/GrammarLayout.astro';
 import { mdxComponents } from '../../../components/mdx';
-import { resolveRelated, parseId } from '../../../utils/content';
+import { resolveRelated, resolveReferences, parseId } from '../../../utils/content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('es');
@@ -23,8 +23,8 @@ interface Props {
 
 const { entry, all } = Astro.props;
 const { Content, headings } = await render(entry);
-const related = resolveRelated(entry, all);
+const related = resolveRelated(entry, all);\nconst prerequisites = resolveReferences(entry.data.prerequisites, entry, all);\nconst contrasts = resolveReferences(entry.data.contrasts, entry, all);\nconst extensions = resolveReferences(entry.data.extensions, entry, all);\nconst exceptions = resolveReferences(entry.data.exceptions, entry, all);
 ---
-<GrammarLayout entry={entry} headings={headings} related={related}>
+<GrammarLayout\n  entry={entry}\n  headings={headings}\n  related={related}\n  prerequisites={prerequisites}\n  contrasts={contrasts}\n  extensions={extensions}\n  exceptions={exceptions}\n>
   <Content components={mdxComponents} />
 </GrammarLayout>

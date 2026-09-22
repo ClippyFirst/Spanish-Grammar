@@ -1,6 +1,4 @@
 ---
-// GrammarLayout — consistent structure for every grammar page:
-// breadcrumbs → page head → TOC (desktop) → prose content → related topics.
 import BaseLayout from './BaseLayout.astro';
 import { getCategory } from '../data/categories';
 import { entryUrl, categoryUrl, parseId, categoryLabel, withBase } from '../utils/content';
@@ -11,20 +9,31 @@ interface Props {
   entry: GrammarEntry;
   headings: Heading[];
   related: GrammarEntry[];
+  prerequisites: GrammarEntry[];
+  contrasts: GrammarEntry[];
+  extensions: GrammarEntry[];
+  exceptions: GrammarEntry[];
 }
 
-const { entry, headings, related } = Astro.props;
-const { lang, category, slug } = parseId(entry.id);
+const { entry, headings, related, prerequisites, contrasts, extensions, exceptions } = Astro.props;
+const { category } = parseId(entry.id);
 const cat = getCategory(category);
 const canonical = entryUrl(entry);
 const toc = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 
 function regionLabel(r: string): string {
   const map: Record<string, string> = {
-    spain: 'Іспанія', 'latin-america': 'Латинська Америка',
-    rioplatense: 'Ріо-де-ла-Плата', mexico: 'Мексика', caribbean: 'Кариби',
+    spain: 'Іспанія',
+    'latin-america': 'Латинська Америка',
+    rioplatense: 'Ріо-де-ла-Плата',
+    mexico: 'Мексика',
+    caribbean: 'Кариби',
   };
   return map[r] ?? r;
+}
+
+function relationLabel(entry: GrammarEntry): string {
+  return `${entry.data.title_es} — ${entry.data.title_uk}`;
 }
 ---
 <BaseLayout
@@ -49,9 +58,7 @@ function regionLabel(r: string): string {
           <nav aria-label="Зміст сторінки">
             <ul>
               {toc.map((h) => (
-                <li>
-                  <a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>
-                </li>
+                <li><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a></li>
               ))}
             </ul>
           </nav>
@@ -66,12 +73,50 @@ function regionLabel(r: string): string {
           <p class="synopsis">{entry.data.short_description}</p>
           <div class="meta-line">
             <span class="chip">{cat?.titleUk ?? categoryLabel(category)}</span>
-            {entry.data.region !== 'general' && (
-              <span class="chip">{regionLabel(entry.data.region)}</span>
-            )}
+            {entry.data.region !== 'general' && <span class="chip">{regionLabel(entry.data.region)}</span>}
             {entry.data.updated && <span class="chip">Оновлено: {entry.data.updated}</span>}
+            {entry.data.review_status !== 'draft' && (
+              <span class="chip">Статус: {entry.data.review_status === 'verified' ? 'перевірено' : 'переглянуто'}</span>
+            )}
           </div>
         </header>
+
+        {(prerequisites.length > 0 || contrasts.length > 0 || extensions.length > 0 || exceptions.length > 0) && (
+          <aside class="semantic-nav" aria-label="Навігація між поняттями">
+            {prerequisites.length > 0 && (
+              <section>
+                <h2>Перед цією темою</h2>
+                <ul>
+                  {prerequisites.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
+                </ul>
+              </section>
+            )}
+            {contrasts.length > 0 && (
+              <section>
+                <h2>Порівняти з</h2>
+                <ul>
+                  {contrasts.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
+                </ul>
+              </section>
+            )}
+            {extensions.length > 0 && (
+              <section>
+                <h2>Продовження</h2>
+                <ul>
+                  {extensions.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
+                </ul>
+              </section>
+            )}
+            {exceptions.length > 0 && (
+              <section>
+                <h2>Винятки та особливі випадки</h2>
+                <ul>
+                  {exceptions.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
+                </ul>
+              </section>
+            )}
+          </aside>
+        )}
 
         <div class="prose">
           <slot />
@@ -83,7 +128,7 @@ function regionLabel(r: string): string {
             <ul>
               {related.map((r) => (
                 <li>
-                  <a class="related-link" href={entryUrl(r)} aria-label={r.data.title_es + ' — ' + r.data.title_uk}>
+                  <a class="related-link" href={entryUrl(r)} aria-label={relationLabel(r)}>
                     <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
                     <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
                   </a>
@@ -100,9 +145,7 @@ function regionLabel(r: string): string {
           <nav>
             <ul>
               {toc.map((h) => (
-                <li>
-                  <a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a>
-                </li>
+                <li><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a></li>
               ))}
             </ul>
           </nav>

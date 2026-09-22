@@ -13,7 +13,7 @@
     "validate": "node scripts/validate-content.mjs",
     "links": "node scripts/check-links.mjs",
     "qa": "npm run qa:static",
-    "check": "astro check",
+    "check": "npx --yes @astrojs/check@0.9.10",
     "audit:graph": "node scripts/audit-content-graph.mjs",
     "audit:design": "npm run audit:design:tokens && npm run audit:design:a11y && npm run audit:design:responsive && npm run audit:design:components",
     "audit:design:tokens": "node scripts/audit-design-tokens.mjs",
@@ -22,7 +22,8 @@
     "audit:design:components": "node scripts/audit-design-components.mjs",
     "audit:mdx": "node scripts/audit-mdx-preflight.mjs",
     "qa:static": "npm run audit:static-site && npm run check && npm run audit:mdx && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run build",
-    "audit:static-site": "node scripts/audit-static-site-config.mjs"
+    "audit:static-site": "node scripts/audit-static-site-config.mjs",
+    "typecheck": "npm run check"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

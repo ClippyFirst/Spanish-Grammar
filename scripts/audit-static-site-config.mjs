@@ -15,6 +15,19 @@ const lock = read('package-lock.json');
 
 const failures = [];
 
+const projectBase = '/Spanish-Grammar';
+const siteOrigin = 'https://clippyfirst.github.io';
+const expectedCanonical = new URL(projectBase + '/es/verbs/ser-estar/', siteOrigin).href;
+const expectedRoot = new URL(projectBase + '/', siteOrigin).href;
+
+if (expectedCanonical !== 'https://clippyfirst.github.io/Spanish-Grammar/es/verbs/ser-estar/') {
+  failures.push('Project-base canonical URL composition is incorrect.');
+}
+
+if (expectedRoot !== 'https://clippyfirst.github.io/Spanish-Grammar/') {
+  failures.push('Project-base root URL composition is incorrect.');
+}
+
 if (!/output:\s*['"]static['"]/.test(astro)) {
   failures.push('Astro output must remain static.');
 }
@@ -47,7 +60,7 @@ if (!/"name": "gramaticarrona"/.test(lock)) {
   failures.push('package-lock.json root package name must match package.json.');
 }
 
-if (pkg.scripts?.['qa:static'] !== 'npm run check && npm run audit:mdx && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run build') {
+if (pkg.scripts?.['qa:static'] !== 'npm run audit:static-site && npm run check && npm run audit:mdx && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run build') {
   failures.push('qa:static must run the complete static-site verification pipeline.');
 }
 

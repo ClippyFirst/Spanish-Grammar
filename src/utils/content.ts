@@ -92,9 +92,9 @@ export function resolveRelated(entry: GrammarEntry, all: GrammarEntry[]): Gramma
     entries.sort((a, b) => (a.data.order ?? 100) - (b.data.order ?? 100));
   }
 
-  const related = entry.data.related ?? [];
+  const related: string[] = entry.data.related ?? [];
 
-  return related.map((s) => {
+  return related.map((s: string): GrammarEntry | undefined => {
     // 1. Try exact slug match first
     const exact = slugMap.get(s);
     if (exact) return exact;
@@ -107,7 +107,7 @@ export function resolveRelated(entry: GrammarEntry, all: GrammarEntry[]): Gramma
 
     // 3. If nothing found, skip (no dead links)
     return undefined;
-  }).filter((e): e is GrammarEntry => Boolean(e));
+  }).filter((e: GrammarEntry | undefined): e is GrammarEntry => Boolean(e));
 }
 
 export function categoryUrl(category: string): string {

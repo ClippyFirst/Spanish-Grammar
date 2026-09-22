@@ -1,148 +1,140 @@
 # Gramaticarrona — Іспанська граматика для носіїв української
 
-Статичний довідник з іспанської граматики для носіїв української. Головний принцип:
-**Знайти → зрозуміти → порівняти → запам'ятати.**
+Статичний довідник з іспанської граматики для носіїв української. Принцип:
+**знайти → зрозуміти → порівняти → запам'ятати**.
 
-- Статичний HTML (Astro + TypeScript + MDX).
-- Клієнт-сайд пошук через [Pagefind](https://pagefind.app)).
-- Жодного бекенда, мінімум JavaScript.
+Проєкт навмисно не має бекенду, бази даних чи обов'язкової клієнтської логіки: джерелом істини є MDX-контент, а Astro генерує готовий статичний сайт.
+
+## Стек
+
+- **Astro + MDX + TypeScript** — генерація статичного HTML.
+- **Pagefind** — клієнтський пошук без окремого сервера.
+- **GitHub Pages** — production-деплой.
+- **CSS design system** у `src/styles/`.
+- **Content Collections** у `src/content/` зі структурованою схемою.
 
 ## Швидкий старт
 
-```bash
-npm install
-npm run build:full   # astro build + pagefind index
-npm run preview        # local preview
-```
-
-Для розробки: `npm run dev`.
-
-> Увага: Pagefind index (`npm run search:index`) генерується **після** `npm run build`, бо індексує статичний `dist/`. `build:full` робить обидва кроки автоматично.
-
-## Локальний запуск
-
-### Вимоги
-
-Потрібні:
-- **Node.js** — рекомендовано актуальну LTS-версію;
-- **npm** — встановлюється разом із Node.js;
-- Git — якщо репозиторій ще не клоновано.
-
-Перевірити встановлення:
-
-```bash
-node --version
-npm --version
-```
-
-### 1. Клонувати репозиторій
-
-```bash
-git clone https://github.com/ClippyFirst/Spanish-Grammar.git
-cd Spanish-Grammar
-```
-
-Якщо репозиторій уже завантажений локально, достатньо перейти до його папки:
-
-```bash
-cd Spanish-Grammar
-```
-
-### 2. Встановити залежності
+Потрібні Node.js LTS, npm і Git.
 
 ```bash
 npm install
-```
-
-### 3. Запустити локальний сервер розробки
-
-```bash
 npm run dev
 ```
 
-Після запуску Astro покаже локальну адресу, зазвичай **http://localhost:4321/**. Відкрийте її у браузері.
-
-У режимі розробки зміни у файлах Astro/MDX автоматично підхоплюються сервером, тому після редагування контенту зазвичай достатньо оновити сторінку.
-
-### 4. Перевірити production-збірку локально
-
-Щоб перевірити саме зібрану статичну версію разом із пошуковим індексом Pagefind:
+Production-перевірка:
 
 ```bash
-npm run build:full
+npm run qa
+npm run build
 npm run preview
 ```
 
-Після цього Astro покаже адресу локального preview-сервера.
+`npm run build` виконує Astro build і після нього створює Pagefind index. Окремий `build:full` навмисно прибраний як дубль.
 
-**Важливо:** `npm run dev` — режим розробки; `npm run build:full` + `npm run preview` — перевірка готової production-збірки.
+## Якість і QA
 
-### Якщо порт 4321 зайнятий
-
-```bash
-npm run dev -- --port 4322
-```
-
-або для preview:
+Основна перевірка:
 
 ```bash
-npm run preview -- --port 4322
+npm run qa
 ```
 
-Тоді сайт буде доступний за **http://localhost:4322/**.
+Вона послідовно перевіряє:
 
-## Розгортання
+1. `astro check` — типи та Astro/MDX diagnostics.
+2. MDX preflight — синтаксична компіляція всіх MDX.
+3. Content validation — frontmatter, категорії, пов'язані теми й граф.
+4. Link validation — внутрішні посилання.
+5. Content graph audit — орфани, неоднозначні цілі, self-links, дублікати та надмірне перелінкування.
+6. Design audits — токени, accessibility, responsive і компоненти.
+7. Production build + Pagefind.
 
-### GitHub Pages
-Для проєктного сайту (`https://<user>.github.io/<repo>/`) задайте базовий шлях:
-
-```powershell
-$env:PUBLIC_BASE = "/<repo-name>"
-$env:SITE_URL     = "https://<user>.github.io"
-npm run build:full
-```
-Публікуйте вміст `dist/` (гілка `gh-pages` або GitHub Actions з upload-pages-artifact).
-
-### Cloudflare Pages / Vercel
-- Build command: `npm run build:full`
-- Output directory: `dist`
-- (Опційно) Environment variable `SITE_URL` — фінальний домен.
-
-
+CI має запускати той самий `npm run qa`, щоб локальна та production-перевірка не розходилися.
 
 ## Структура
 
 ```
-content/es/...          # граматичний контент (MDX), окремий від UI (у src/content/)
-src/components/         # Astro + MDX-компоненти
-src/layouts/            # BaseLayout, GrammarLayout, ComparisonLayout
-src/pages/             # маршрути (/, /es/, /es/[cat]/, /es/[cat]/[slug]/, /search/, /comparisons/, ...)
-src/styles/             # дизайн-система (tokens, base, components, grammar, prose)
-src/data/categories.ts   # єдине джерело категорій і їхніх назв
-src/utils/content.ts     # побудова URL, пов'язані теми
-public/                # статичні файли (favicon, robots.txt)
+src/
+  content/
+    es/                 # весь іспанський граматичний контент
+  components/           # UI-компоненти та MDX primitives
+  layouts/              # BaseLayout, GrammarLayout тощо
+  pages/                # маршрути Astro
+  data/categories.ts    # єдине джерело категорій
+  utils/content.ts      # URL та семантична навігація
+  styles/               # дизайн-система
+scripts/                # автоматизована QA/аудит-логіка
+public/                 # favicon та інші статичні ресурси
+.github/workflows/      # GitHub Actions
 ```
 
-## Додавання нової теми
+## Модель контенту
 
-1. Створіть MDX-файл у `src/content/es/<category>/<slug>.mdx`.
-2. Заповніть frontmatter (див. [схему](src/content.config.ts)): `slug`, `category`, `title_uk`, `title_es`, `title_en`, `short_description`, `keywords`, `related`...
-3. Пишіть тіло з MDX-компонентами: `Formula`, `Conjugation`, `Example`, `Mistake`, `MinPair`, `Note`, `Token`, `CompareTable`.
-4. Переконайтеся, що `related`-посилання вказують на реальні існуючі sluggи (неіснуючі автоматично фільтруються).
+Кожна тема живе у `src/content/es/<category>/<slug>.mdx`.
 
+Обов'язкові поля:
 
-URL має вигляд `/es/<category>/<slug>/`. Сайт спроєктований так, щоб пізніше додавати інші мови
-(`/fr/...`, `/it/...`) без реструктурування. Файли контенту повністю окремі від презентації —
-фронтенд не містить жодної зашитої граматики.
+- `category`
+- `title_uk`
+- `title_es`
+- `title_en`
+- `short_description`
+
+Навігаційні поля:
+
+- `related` — сусідні теми;
+- `canonical_topic` — канонічна тема, якщо сторінка є оглядом/варіантом;
+- `prerequisites` — що бажано знати перед темою;
+- `contrasts` — граматично близькі, але відмінні поняття;
+- `extensions` — логічне продовження;
+- `exceptions` — теми про винятки.
+
+Редакційні поля:
+
+- `review_status`: `draft`, `reviewed` або `verified`;
+- `updated`: дата останнього перегляду;
+- `sources`: джерела для фактчекінгу.
+
+Ці поля вводяться поступово: старі сторінки залишаються валідними, але новий або істотно переглянутий матеріал бажано забезпечувати джерелами й статусом перевірки.
 
 ## Категорії
 
-17 розділів: fundamentals, nouns, articles, adjectives, adverbs, pronouns, prepositions, conjunctions, verbs, tenses, moods, periphrases, sentence-structure, word-formation, spelling, regional. Див. `src/data/categories.ts` — там змінюються назви, описи і порядок.
+Категорії та їхній порядок визначаються **лише** у `src/data/categories.ts`. Не дублюйте назви категорій у компонентах або утилітах.
 
+## Додавання теми
 
+1. Створіть MDX у відповідній категорії.
+2. Заповніть frontmatter.
+3. Використовуйте наявні MDX-компоненти (`Formula`, `Conjugation`, `Example`, `Mistake`, `MinPair`, `Note`, `Token`, `CompareTable`).
+4. Додавайте тільки справді корисні `related`, а не всі сторінки тієї самої категорії.
+5. Для тверджень про норму, варіантність або регіональне вживання додавайте джерела.
+6. Запустіть `npm run qa`.
 
-## Правила якості контенту
+## URL і GitHub Pages
 
-- Українська — основна мова пояснень; англійська — лише як міжнародна термінологія.
-- Не вигадуйте граматичні правила — дотримуйтеся стандартної норми і позначайте регіональні/розмовні варіанти.
-- Типові помилки завжди мають пояснення причини «Чому?».
+Production workflow використовує:
+
+```
+PUBLIC_BASE=/Spanish-Grammar
+SITE_URL=https://clippyfirst.github.io/Spanish-Grammar
+```
+
+Для локальної розробки base path за замовчуванням — `/`.
+
+URL теми:
+
+```
+/es/<category>/<slug>/
+```
+
+Усі URL будуються через централізовані helper-функції, тому не вставляйте production base path вручну в компоненти.
+
+## Редакційні принципи
+
+- Українська — основна мова пояснень.
+- Іспанські приклади мають бути нормативними або чітко маркованими як розмовні/регіональні.
+- Не змішуйте загальну норму з регіональним варіантом без маркування.
+- Не прирівнюйте граматичні категорії різних мов механічно: порівняння з українською має пояснювати функцію, а не лише переклад терміна.
+- Приклад має ілюструвати правило, а не просто містити потрібну форму.
+- Для спірних або варіативних тверджень важливіше вказати межі застосування та джерело, ніж створити надто категоричне правило.

@@ -132,6 +132,7 @@ export function categoryLabel(category: string): string {
     'word-formation': 'Словотвір',
     spelling: 'Орфографія',
     regional: 'Регіональні варіанти',
+    'micro-constructions': 'Мікроконструкції',
   };
   return map[category] ?? category;
 }

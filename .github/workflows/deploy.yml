@@ -24,12 +24,10 @@ jobs:
           node-version: "20"
           cache: npm
       - run: npm ci
-      - run: npm run validate
-      - run: npm run links
-      - run: npm run build:full
+      - run: npm run qa:static
         env:
           PUBLIC_BASE: /Spanish-Grammar
-          SITE_URL: https://clippyfirst.github.io/Spanish-Grammar
+          SITE_URL: https://clippyfirst.github.io
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

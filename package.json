@@ -13,7 +13,7 @@
     "validate": "node scripts/validate-content.mjs",
     "links": "node scripts/check-links.mjs",
     "qa": "npm run qa:static",
-    "check": "npx --yes @astrojs/check@0.9.10",
+    "check": "npx --yes @astrojs/check@0.9.6",
     "audit:graph": "node scripts/audit-content-graph.mjs",
     "audit:design": "npm run audit:design:tokens && npm run audit:design:a11y && npm run audit:design:responsive && npm run audit:design:components",
     "audit:design:tokens": "node scripts/audit-design-tokens.mjs",

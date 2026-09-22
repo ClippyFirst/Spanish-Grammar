@@ -1,24 +1,109 @@
 import fs from 'node:fs';
 import path from 'node:path';
-const ROOT=process.cwd(), CONTENT=path.join(ROOT,'src','content','es'), OUT=path.join(ROOT,'AUDIT-CONTENT-GRAPH-2026-09-20.md');
-function walk(dir,out=[]){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p,out);else if(e.name.endsWith('.mdx'))out.push(p)}return out}
-const slugOf=f=>path.relative(CONTENT,f).replace(/\\/g,'/').replace(/\.mdx$/,'');
-function related(text){const raw=(text.match(/^---\r?\n([\s\S]*?)\r?\n---/)||[])[1]||'';const a=[];let on=false;for(const line of raw.split(/\r?\n/)){if(/^related:\s*$/.test(line.trim())){on=true;continue}if(on&&/^\s*-\s+/.test(line)){a.push(line.replace(/^\s*-\s+/,'').trim().replace(/^['"]|['"]$/g,''));continue}if(on&&/^\S/.test(line))on=false}return a}
-const files=walk(CONTENT), pages=new Set(files.map(slugOf)), base=new Map();
-const categoryKeys=new Set(['fundamentals','nouns','articles','adjectives','adverbs','pronouns','prepositions','conjunctions','verbs','tenses','moods','periphrases','sentence-structure','word-formation','spelling','regional','micro-constructions']);
-const isCategoryRoute=x=>categoryKeys.has(x);
-for(const p of pages){const b=p.split('/').pop();if(!base.has(b))base.set(b,[]);base.get(b).push(p)}
-function manualRelatedLinks(text){const i=text.search(/^##\s+Пов['’]язані теми\s*$/im);if(i<0)return [];const tail=text.slice(i);const next=tail.slice(1).search(/^##\s+/m);const section=next>=0?tail.slice(0,next+1):tail;return [...section.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map(m=>m[1].replace(/\/$/,''))}
-const nodes=new Map();
-for(const f of files){const src=slugOf(f),text=fs.readFileSync(f,'utf8'),rel=related(text),links=[...text.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map(m=>m[1].replace(/\/$/,''));nodes.set(src,{rel,links,manual:manualRelatedLinks(text)})}
-const resolve=x=>pages.has(x)?x:(isCategoryRoute(x)?x:(base.get(x)?.length===1?base.get(x)[0]:null)), inbound=new Map([...pages].map(p=>[p,[]])), broken=[], ambiguous=[], self=[], dups=[];
-for(const [src,n] of nodes){const seen=new Set();for(const x of n.rel){if(seen.has(x))dups.push([src,x]);seen.add(x);const t=resolve(x);if(t===src)self.push([src,x]);if(!t&&base.has(x))ambiguous.push([src,x,base.get(x)]);if(t&&t!==src&&inbound.has(t))inbound.get(t).push([src,'related'])}for(const x of n.links){const t=resolve(x);if(!t)broken.push([src,x]);else if(t!==src&&inbound.has(t))inbound.get(t).push([src,'markdown'])}}
-const duplicateManualRelated=[...nodes].flatMap(([src,n])=>n.manual.filter(x=>n.rel.includes(x)).map(x=>[src,x]));
-const categoryReachable=new Set([...pages].filter(p=>categoryKeys.has(p.split('/')[0])));
-const semanticOrphans=[...inbound].filter(x=>x[1].length===0&&!/(^|\/)index$/.test(x[0])&&!categoryReachable.has(x[0]));
-const unreachablePages=[...pages].filter(p=>!categoryReachable.has(p)).filter(p=>!/(^|\/)index$/.test(p));
-const categoryOnly=[...inbound].filter(x=>x[1].length===0&&!/(^|\/)index$/.test(x[0])&&categoryReachable.has(x[0]));
-const navigationHubs=new Set(['fundamentals/ua-interference','sentence-structure/subordinate-clauses']);
-const over=[...nodes].map(x=>[x[0],x[1].rel.length+x[1].links.length]).filter(x=>x[1]>=12&&!navigationHubs.has(x[0])).sort((a,b)=>b[1]-a[1]);
-const L=['# Content graph audit — 2026-09-20','',`Pages: ${pages.size}`,`Nodes with related: ${[...nodes.values()].filter(n=>n.rel.length).length}`,`Markdown internal links: ${[...nodes.values()].reduce((n,x)=>n+x.links.length,0)}`,`Broken targets: ${broken.length}`,`Ambiguous targets: ${ambiguous.length}`,`Self-links: ${self.length}`,`Duplicate related entries: ${dups.length}`,`Semantic orphans (no inbound and not category-reachable): ${semanticOrphans.length}`,`Category-index reachable: ${categoryReachable.size}`,`Navigation orphans (not reachable from category index): ${unreachablePages.length}`,`Category-only leaf pages (no semantic inbound): ${categoryOnly.length}`,`Manual related sections: ${[...nodes.values()].filter(n=>n.manual.length).length}`,`Manual/automatic related duplicates: ${duplicateManualRelated.length}`,'','## Semantic orphans (not category-reachable)',...semanticOrphans.map(x=>'- '+x[0]),'','## Navigation orphans',...unreachablePages.map(x=>'- '+x),'','## Category-only leaf pages (no semantic inbound)',...categoryOnly.map(x=>'- '+x),'','## Broken Markdown links',...broken.map(x=>'- '+x[0]+' → '+x[1]),'','## Ambiguous targets',...ambiguous.map(x=>'- '+x[0]+' → '+x[1]+': '+x[2].join(', ')),'','## Self-links',...self.map(x=>'- '+x[0]+' → '+x[1]),'','## Duplicate related entries',...dups.map(x=>'- '+x[0]+' → '+x[1]),'','## Manual/automatic related duplicates',...duplicateManualRelated.map(x=>'- '+x[0]+' → '+x[1]),'','## Overlinked non-hub pages (12+ outgoing)',...over.map(x=>'- '+x[0]+': '+x[1]),'','## Graph policy','Preferred direction: quick reference → primary explanation → deep dive → adjacent/specialized topic.','','Category indexes are first-class navigation hubs; a page with no semantic inbound is not an orphan if it is listed by its category index.','Review/overview pages should navigate to canonical pages, not duplicate them.','related is for genuinely useful neighboring topics, not every page in the same category.','Known navigation hubs may have higher outbound density when they serve as deliberate maps; they are excluded from the overlink warning.','Remove self-links, duplicates, broken targets and ambiguous basename targets.','Do not delete unique grammar coverage merely to reduce graph size.'];
-fs.writeFileSync(OUT,L.join('\n')+'\n');console.log('wrote '+OUT);
+
+const ROOT = process.cwd();
+const CONTENT = path.join(ROOT, 'src', 'content', 'es');
+const OUT_DIR = path.join(ROOT, 'docs', 'audits', 'current');
+const OUT = path.join(OUT_DIR, 'content-graph.md');
+
+function walk(dir, out = []) {
+  if (!fs.existsSync(dir)) return out;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) walk(file, out);
+    else if (/\.mdx?$/.test(entry.name)) out.push(file);
+  }
+  return out;
+}
+
+function listField(text, field) {
+  const raw = (text.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
+  const values = [];
+  let active = false;
+  for (const line of raw.split(/\r?\n/)) {
+    if (new RegExp('^' + field + ':\\s*$').test(line.trim())) { active = true; continue; }
+    if (active && /^\s*-\s+/.test(line)) { values.push(line.replace(/^\s*-\s+/, '').trim().replace(/^['"]|['"]$/g, '')); continue; }
+    if (active && /^\S/.test(line)) active = false;
+  }
+  return values;
+}
+
+const files = walk(CONTENT).sort();
+const slugOf = (file) => path.relative(CONTENT, file).replace(/\\/g, '/').replace(/\.mdx?$/, '');
+const pages = new Set(files.map(slugOf));
+const categories = new Set(files.map((file) => path.relative(CONTENT, file).split(path.sep)[0]));
+const byBasename = new Map();
+for (const page of pages) { const base = page.split('/').pop(); const bucket = byBasename.get(base) ?? []; bucket.push(page); byBasename.set(base, bucket); }
+
+const fields = ['related', 'prerequisites', 'contrasts', 'extensions', 'exceptions'];
+const nodes = new Map();
+for (const file of files) {
+  const text = fs.readFileSync(file, 'utf8');
+  const node = { links: [], fields: {} };
+  for (const field of fields) node.fields[field] = listField(text, field);
+  node.links = [...text.matchAll(/\]\(\/es\/([^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map((m) => m[1].replace(/\/$/, ''));
+  nodes.set(slugOf(file), node);
+}
+
+function resolve(target) {
+  if (pages.has(target)) return target;
+  if (categories.has(target)) return target;
+  const matches = byBasename.get(target) ?? [];
+  return matches.length === 1 ? matches[0] : null;
+}
+
+const inbound = new Map([...pages].map((page) => [page, []]));
+const broken = [], ambiguous = [], self = [], duplicates = [];
+for (const [source, node] of nodes) {
+  for (const field of fields) {
+    const seen = new Set();
+    for (const target of node.fields[field]) {
+      if (seen.has(target)) duplicates.push([source, field, target]);
+      seen.add(target);
+      const resolved = resolve(target);
+      if (resolved === source) self.push([source, field, target]);
+      if (!resolved && byBasename.has(target)) ambiguous.push([source, field, target, byBasename.get(target)]);
+      if (!resolved && !byBasename.has(target) && !categories.has(target)) broken.push([source, field, target]);
+      if (resolved && resolved !== source && inbound.has(resolved)) inbound.get(resolved).push([source, field]);
+    }
+  }
+  for (const target of node.links) {
+    const resolved = resolve(target);
+    if (!resolved) broken.push([source, 'markdown', target]);
+    else if (resolved !== source && inbound.has(resolved)) inbound.get(resolved).push([source, 'markdown']);
+  }
+}
+
+const semanticOrphans = [...inbound].filter(([page, refs]) => refs.length === 0 && !/(^|\/)index$/.test(page)).map(([page]) => page);
+const overlinked = [...nodes].map(([page, node]) => [page, fields.reduce((n, field) => n + node.fields[field].length, 0) + node.links.length]).filter(([, count]) => count >= 12).sort((a, b) => b[1] - a[1]);
+fs.mkdirSync(OUT_DIR, { recursive: true });
+
+const lines = [
+  '# Content graph audit',
+  '',
+  'Generated by npm run audit:graph. This file is current-state evidence, not hand-edited documentation.',
+  '',
+  'Generated: ' + new Date().toISOString(),
+  'Pages: ' + pages.size,
+  'Markdown internal links: ' + [...nodes.values()].reduce((n, x) => n + x.links.length, 0),
+  'Broken targets: ' + broken.length,
+  'Ambiguous basename targets: ' + ambiguous.length,
+  'Self-links: ' + self.length,
+  'Duplicate semantic links: ' + duplicates.length,
+  'Semantic orphans: ' + semanticOrphans.length,
+  '', '## Semantic orphans', ...(semanticOrphans.length ? semanticOrphans.map((x) => '- ' + x) : ['- None']),
+  '', '## Broken targets', ...(broken.length ? broken.map((x) => '- ' + x[0] + ' → [' + x[1] + '] ' + x[2]) : ['- None']),
+  '', '## Ambiguous targets', ...(ambiguous.length ? ambiguous.map((x) => '- ' + x[0] + ' → [' + x[1] + '] ' + x[2] + ': ' + x[3].join(', ')) : ['- None']),
+  '', '## Self-links', ...(self.length ? self.map((x) => '- ' + x[0] + ' → [' + x[1] + '] ' + x[2]) : ['- None']),
+  '', '## Duplicate semantic links', ...(duplicates.length ? duplicates.map((x) => '- ' + x[0] + ' → [' + x[1] + '] ' + x[2]) : ['- None']),
+  '', '## Heavily linked pages (12+ outgoing references)', ...(overlinked.length ? overlinked.map((x) => '- ' + x[0] + ': ' + x[1]) : ['- None']),
+  '', '## Policy',
+  '- Category indexes are first-class navigation hubs.',
+  '- related is for genuinely useful neighboring topics, not every page in a category.',
+  '- Typed semantic fields should describe a relationship, not merely duplicate related.',
+  '- Ambiguous basename references should be replaced with the full category/slug path.',
+  '- A unique grammar page should not be deleted merely because it has low graph centrality.',
+];
+
+fs.writeFileSync(OUT, lines.join('\n') + '\n');
+console.log('audit-content-graph: ' + pages.size + ' pages, ' + broken.length + ' broken, ' + semanticOrphans.length + ' semantic orphans');

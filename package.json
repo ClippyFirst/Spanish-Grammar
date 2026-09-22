@@ -9,18 +9,17 @@
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "search:index": "pagefind --site dist",
-    "build:full": "npm run build",
     "validate": "node scripts/validate-content.mjs",
     "links": "node scripts/check-links.mjs",
-    "qa": "npm run audit:mdx && node scripts/validate-content.mjs && node scripts/check-links.mjs && npm run build",
-    "check": "astro check",
     "audit:graph": "node scripts/audit-content-graph.mjs",
     "audit:design": "npm run audit:design:tokens && npm run audit:design:a11y && npm run audit:design:responsive && npm run audit:design:components",
     "audit:design:tokens": "node scripts/audit-design-tokens.mjs",
     "audit:design:a11y": "node scripts/audit-design-accessibility.mjs",
     "audit:design:responsive": "node scripts/audit-design-responsive.mjs",
     "audit:design:components": "node scripts/audit-design-components.mjs",
-    "audit:mdx": "node scripts/audit-mdx-preflight.mjs"
+    "audit:mdx": "node scripts/audit-mdx-preflight.mjs",
+    "check": "astro check",
+    "qa": "npm run check && npm run audit:mdx && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run build"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

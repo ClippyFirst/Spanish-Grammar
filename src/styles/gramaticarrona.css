@@ -429,6 +429,49 @@ h2::before {
   font-family: var(--font-ui);
 }
 
+/* ---------- Semantic navigation ---------- */
+.semantic-nav {
+  max-width: var(--maxw-text);
+  margin: 0 0 3rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--gr-line);
+  border-bottom: 1px solid var(--gr-line);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2rem;
+}
+.semantic-nav section { min-width: 0; }
+.semantic-nav h2 {
+  margin: 0 0 .65rem;
+  padding: 0;
+  border: 0;
+  font: 800 .68rem/1.3 var(--font-ui);
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--gr-red-dark);
+}
+.semantic-nav h2::before { display: none; }
+.semantic-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.semantic-nav li + li { margin-top: .25rem; }
+.semantic-nav a {
+  display: block;
+  padding: .3rem .45rem;
+  color: var(--gr-ink);
+  font: 600 .82rem/1.35 var(--font-ui);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+.semantic-nav a:hover,
+.semantic-nav a:focus-visible {
+  color: var(--gr-red);
+  background: var(--gr-paper-alt);
+  border-left-color: var(--gr-red);
+}
+
 /* ---------- Reading layer ---------- */
 .prose { max-width: var(--maxw-text); }
 .prose h2 { margin-top: 3.8rem; }

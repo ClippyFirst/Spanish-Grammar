@@ -14,7 +14,7 @@ interface Props {
 }
 
 const { entry, headings, related } = Astro.props;
-const { lang, category, slug } = parseId(entry.id);
+const { category } = parseId(entry.id);
 const cat = getCategory(category);
 const canonical = entryUrl(entry);
 const toc = headings.filter((h) => h.depth >= 2 && h.depth <= 3);

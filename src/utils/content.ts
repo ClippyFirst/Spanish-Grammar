@@ -42,24 +42,30 @@ export function buildSlugMap(entries: GrammarEntry[]): Map<string, GrammarEntry[
   return map;
 }
 
-export function resolveRelated(entry: GrammarEntry, all: GrammarEntry[]): GrammarEntry[] {
+function resolveReference(reference: string, all: GrammarEntry[]): GrammarEntry | undefined {
   const slugMap = buildSlugMap(all);
+  const exact = slugMap.get(reference);
+  if (exact?.length === 1) return exact[0];
+
+  if (getCategory(reference)) {
+    return all
+      .filter((candidate) => parseId(candidate.id).category === reference)
+      .sort((a, b) => (a.data.order ?? 100) - (b.data.order ?? 100))[0];
+  }
+
+  return undefined;
+}
+
+export function resolveReferences(
+  references: string[] | undefined,
+  entry: GrammarEntry,
+  all: GrammarEntry[],
+): GrammarEntry[] {
   const result: GrammarEntry[] = [];
   const seen = new Set<string>();
 
-  for (const reference of entry.data.related ?? []) {
-    const exact = slugMap.get(reference);
-    let target: GrammarEntry | undefined;
-
-    if (exact?.length === 1) {
-      target = exact[0];
-    } else if (getCategory(reference)) {
-      const inCategory = all
-        .filter((candidate) => parseId(candidate.id).category === reference)
-        .sort((a, b) => (a.data.order ?? 100) - (b.data.order ?? 100));
-      target = inCategory[0];
-    }
-
+  for (const reference of references ?? []) {
+    const target = resolveReference(reference, all);
     if (target && target.id !== entry.id && !seen.has(target.id)) {
       result.push(target);
       seen.add(target.id);
@@ -67,6 +73,10 @@ export function resolveRelated(entry: GrammarEntry, all: GrammarEntry[]): Gramma
   }
 
   return result;
+}
+
+export function resolveRelated(entry: GrammarEntry, all: GrammarEntry[]): GrammarEntry[] {
+  return resolveReferences(entry.data.related, entry, all);
 }
 
 export function categoryUrl(category: string): string {

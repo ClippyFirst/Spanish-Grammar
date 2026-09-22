@@ -18,7 +18,7 @@ function walk(dir, out = []) {
   return out;
 }
 
-function parseFrontmatter(text, file) {
+function parseFrontmatter(text) {
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!m) return { error: 'missing frontmatter block', data: {} };
   const data = {};

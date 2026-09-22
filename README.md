@@ -4,15 +4,15 @@
 **Знайти → зрозуміти → порівняти → запам'ятати.**
 
 - Статичний HTML (Astro + TypeScript + MDX).
-- Клієнт-сайд пошук через [Pagefind](https://pagefind.app)).
+- Клієнт-сайд пошук через [Pagefind](https://pagefind.app).
 - Жодного бекенда, мінімум JavaScript.
 
 ## Швидкий старт
 
 ```bash
 npm install
-npm run build:full   # astro build + pagefind index
-npm run preview        # local preview
+npm run build:full   # статичний Astro build + Pagefind index
+npm run preview       # локальний preview
 ```
 
 Для розробки: `npm run dev`.
@@ -113,7 +113,7 @@ npm run build:full
 ## Структура
 
 ```
-content/es/...          # граматичний контент (MDX), окремий від UI (у src/content/)
+src/content/es/...      # граматичний контент (MDX), окремий від UI
 src/components/         # Astro + MDX-компоненти
 src/layouts/            # BaseLayout, GrammarLayout, ComparisonLayout
 src/pages/             # маршрути (/, /es/, /es/[cat]/, /es/[cat]/[slug]/, /search/, /comparisons/, ...)
@@ -137,7 +137,7 @@ URL має вигляд `/es/<category>/<slug>/`. Сайт спроєктова�
 
 ## Категорії
 
-17 розділів: fundamentals, nouns, articles, adjectives, adverbs, pronouns, prepositions, conjunctions, verbs, tenses, moods, periphrases, sentence-structure, word-formation, spelling, regional. Див. `src/data/categories.ts` — там змінюються назви, описи і порядок.
+17 розділів: fundamentals, nouns, articles, adjectives, adverbs, pronouns, prepositions, conjunctions, verbs, tenses, moods, periphrases, sentence-structure, word-formation, spelling, regional, micro-constructions. Див. `src/data/categories.ts` — там змінюються назви, описи і порядок.
 
 
 
@@ -146,3 +146,17 @@ URL має вигляд `/es/<category>/<slug>/`. Сайт спроєктова�
 - Українська — основна мова пояснень; англійська — лише як міжнародна термінологія.
 - Не вигадуйте граматичні правила — дотримуйтеся стандартної норми і позначайте регіональні/розмовні варіанти.
 - Типові помилки завжди мають пояснення причини «Чому?».
+
+## Перевірка перед публікацією
+
+Проєкт є повністю статичним: Astro генерує HTML/CSS/JS, а Pagefind генерує локальний пошуковий індекс без бекенда.
+
+Повна локальна перевірка:
+
+```bash
+npm run qa:static
+```
+
+У CI ця ж команда запускається перед деплоєм. Для GitHub Pages використовується `PUBLIC_BASE=/Spanish-Grammar`, а `SITE_URL` містить лише origin (`https://clippyfirst.github.io`); це не допускає подвійного або втраченого project base у canonical, Open Graph, hreflang та sitemap URL.
+
+Після змін у production-пути потрібно перевірити щонайменше `npm run qa:static` і `npm run preview`.

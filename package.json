@@ -21,7 +21,8 @@
     "audit:design:responsive": "node scripts/audit-design-responsive.mjs",
     "audit:design:components": "node scripts/audit-design-components.mjs",
     "audit:mdx": "node scripts/audit-mdx-preflight.mjs",
-    "qa:static": "npm run check && npm run audit:mdx && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run build"
+    "qa:static": "npm run audit:static-site && npm run check && npm run audit:mdx && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run build",
+    "audit:static-site": "node scripts/audit-static-site-config.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

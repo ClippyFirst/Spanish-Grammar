@@ -682,7 +682,7 @@ h2::before {
   .related a, .related-link { height: 76px; min-height: 76px; padding-inline: .8rem; }
   .related .r-es { font-size: .9rem; }
   .related .r-uk { font-size: .74rem; }
-  .site-footer { margin-top: 6rem; }
+  .semantic-nav { grid-template-columns: 1fr; gap: 1rem; }\n  .site-footer { margin-top: 6rem; }
   .prose { font-size: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -23,8 +23,8 @@ interface Props {
 
 const { entry, all } = Astro.props;
 const { Content, headings } = await render(entry);
-const related = resolveRelated(entry, all);\nconst prerequisites = resolveReferences(entry.data.prerequisites, entry, all);\nconst contrasts = resolveReferences(entry.data.contrasts, entry, all);\nconst extensions = resolveReferences(entry.data.extensions, entry, all);\nconst exceptions = resolveReferences(entry.data.exceptions, entry, all);
+const related = resolveRelated(entry, all);\nconst prerequisites = resolveReferences(entry.data.prerequisites, entry, all);\nconst contrasts = resolveReferences(entry.data.contrasts, entry, all);\nconst extensions = resolveReferences(entry.data.extensions, entry, all);\nconst exceptions = resolveReferences(entry.data.exceptions, entry, all);\nconst canonicalTopic = entry.data.canonical_topic ? resolveReferences([entry.data.canonical_topic], entry, all)[0] : undefined;
 ---
-<GrammarLayout\n  entry={entry}\n  headings={headings}\n  related={related}\n  prerequisites={prerequisites}\n  contrasts={contrasts}\n  extensions={extensions}\n  exceptions={exceptions}\n>
+<GrammarLayout\n  entry={entry}\n  headings={headings}\n  related={related}\n  prerequisites={prerequisites}\n  contrasts={contrasts}\n  extensions={extensions}\n  exceptions={exceptions}\n  canonicalTopic={canonicalTopic}\n>
   <Content components={mdxComponents} />
 </GrammarLayout>

@@ -65,6 +65,7 @@ console.log('required styles:',components.length);
 console.log('missing:',missing.length?missing.join(', '):'none');
 console.log('deep design findings:',findings.length);
 console.log('HIGH:',findings.filter(x=>x.s==='HIGH').length);
+if (findings.length) console.log('findings detail:', JSON.stringify(findings));
 console.log('MEDIUM:',findings.filter(x=>x.s==='MEDIUM').length);
 console.log('LOW:',findings.filter(x=>x.s==='LOW').length);
 console.log('report:',path.basename(out));

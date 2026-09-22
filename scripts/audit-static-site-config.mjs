@@ -48,8 +48,9 @@ if (!/PUBLIC_BASE:\s*\/Spanish-Grammar/.test(workflow)) {
   failures.push('GitHub Pages deployment must set PUBLIC_BASE=/Spanish-Grammar.');
 }
 
-if (!/SITE_URL:\s*https:\/\/clippyfirst\.github\.io\s*$/.test(workflow)) {
-  failures.push('GitHub Pages SITE_URL must be the origin, not the project path.');
+const workflowSiteUrl = workflow.match(/^\s*SITE_URL:\s*(\S+)\s*$/m)?.[1];
+if (workflowSiteUrl !== siteOrigin) {
+  failures.push(`GitHub Pages SITE_URL must be the origin (${siteOrigin}), not the project path.`);
 }
 
 if (pkg.name !== 'gramaticarrona') {

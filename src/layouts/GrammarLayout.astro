@@ -12,10 +12,10 @@ interface Props {
   prerequisites: GrammarEntry[];
   contrasts: GrammarEntry[];
   extensions: GrammarEntry[];
-  exceptions: GrammarEntry[];
+  exceptions: GrammarEntry[];\n  canonicalTopic?: GrammarEntry;
 }
 
-const { entry, headings, related, prerequisites, contrasts, extensions, exceptions } = Astro.props;
+const { entry, headings, related, prerequisites, contrasts, extensions, exceptions, canonicalTopic } = Astro.props;
 const { category } = parseId(entry.id);
 const cat = getCategory(category);
 const canonical = entryUrl(entry);
@@ -118,7 +118,7 @@ function relationLabel(entry: GrammarEntry): string {
           </aside>
         )}
 
-        <div class="prose">
+        {canonicalTopic && (\n          <aside class="canonical-topic" aria-label="Канонічна тема">\n            <span>Канонічна тема</span>\n            <a href={entryUrl(canonicalTopic)}>{relationLabel(canonicalTopic)}</a>\n          </aside>\n        )}\n\n        <div class="prose">
           <slot />
         </div>
 

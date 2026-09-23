@@ -1,0 +1,29 @@
+---
+// Dynamic route for every comparison page: /comparisons/<slug>/
+import { getCollection, render } from 'astro:content';
+import ComparisonLayout from '../../layouts/ComparisonLayout.astro';
+import { sortComparisons } from '../../utils/comparisons';
+
+export async function getStaticPaths() {
+  const comparisons = sortComparisons(await getCollection('comparisons'));
+
+  return comparisons.map((entry) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      others: comparisons.filter((candidate) => candidate.id !== entry.id),
+    },
+  }));
+}
+
+interface Props {
+  entry: import('astro:content').CollectionEntry<'comparisons'>;
+  others: import('astro:content').CollectionEntry<'comparisons'>[];
+}
+
+const { entry, others } = Astro.props;
+const { Content } = await render(entry);
+---
+<ComparisonLayout entry={entry} others={others}>
+  <Content />
+</ComparisonLayout>

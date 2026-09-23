@@ -386,3 +386,25 @@ For pronoun/article QA, verify the construction before labeling an expression as
 - `mi + N`, `el mío`, and `un N mío` as distinct possessive constructions;
 - bare noun phrase vs definite/indefinite noun phrase according to reference and construction;
 - profession predicates after `ser` without treating article presence as an absolute prohibition.
+
+
+## Eighteenth deep rewrite pass — 2026-09-23
+
+The eighteenth pass performed a targeted **pronoun-system precision audit** after the previous demonstrative/article pass. The goal was to remove remaining over-prescription and make grammatical form, discourse function, and reference explicit.
+
+The indefinite-pronoun page was tightened around `alguien/nadie`: their grammatical agreement is singular, but that grammatical number does not encode the sex of the referent. The negative-polarity explanation was also made more construction-specific: postverbal `nada/nadie` occurs with `no` in the ordinary negative pattern, while preverbal `Nada/Nadie + verbo` can carry the negative polarity without a separate `no`.
+
+The subject-pronoun page was checked for a common pedagogical failure: turning a stylistic preference into a grammatical error. Repetition of `yo` may be pragmatically unnecessary in a neutral sequence, but it is not intrinsically ungrammatical. The page therefore retains a genuinely ill-formed redundant subject pattern while avoiding an artificial “every explicit pronoun is an error” rule.
+
+The possessive page was refined so that `su` ambiguity is treated as a **reference-management issue**, not as a grammatical defect. Explicit `de él/de ella/de ellos/de usted` is presented as a disambiguating construction when context does not identify the possessor.
+
+Academic Writing Toolkit was applied to representative passages from the revised indefinite, subject-pronoun and possessive sections. The review found no higher-level paragraph-logic defect. The remaining observations, where present, concern compact paragraph scope rather than logical inconsistency.
+
+### New cross-page QA rule
+
+For indefinite, subject and possessive pronouns, distinguish:
+- grammatical number from referent sex/gender;
+- negative polarity from simple lexical meaning of `nada/nadie`;
+- grammaticality from discourse-marked or stylistically unnecessary repetition;
+- possessor ambiguity from grammatical incorrectness;
+- canonical learner patterns from legitimate marked/contextual alternatives.

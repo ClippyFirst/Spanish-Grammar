@@ -432,3 +432,20 @@ For pronoun and clitic pages, verify:
 - personal `a` independently from direct/indirect object classification;
 - `se` by construction, agreement and argument structure rather than by translation;
 - passive versus impersonal analyses where animate objects with personal `a` complicate a superficial agreement test.
+
+
+## Twentieth deep rewrite pass — 2026-09-23
+
+The twentieth pass performed a **relative-clause cross-page consistency audit** across `relative-pronouns.mdx`, `relative-clauses.mdx`, `relative-clauses-depth.mdx`, and `subordinate-clauses.mdx`. The main issue was not missing terminology but excessive compression of rules that could be read as categorical.
+
+The relative-clause pages were synchronized around four distinctions: **antecedent/reference**, **relative-element selection**, **prepositional government**, and **mood**. The earlier shortcut “неозначений антецедент → subjuntivo” was explicitly downgraded to a strong pedagogical tendency rather than a mechanical rule. The same principle is now visible on both the quick and deep relative-clause pages.
+
+The basic relative page also no longer presents `en que` as an error when the construction is grammatical. Its error section now focuses on genuine structural problems such as `todo lo que` and loss of the preposition required by `hablar con alguien`. Regional wording was narrowed to genre, register and frequency differences instead of an unsupported Spain/Americas split.
+
+The deep page was synchronized with the relative-pronoun page on `lo que` / `lo cual`, `cuyo`, preposition + relative element, and the interpretation of indicative/subjunctive. The subordinate-clause overview remains the higher-level map and should not contradict these more specific explanations.
+
+The Academic Writing Toolkit was applied to representative prose from the revised relative-clause pages. Its remaining short-paragraph observations are compatible with the project's compact reference format; no higher-level paragraph-logic defect was identified.
+
+### New cross-page QA rule
+
+Relative-clause QA must test the same sentence across all relevant pages and ask: **What is the antecedent? What syntactic role does the relative element fill? Which preposition is selected by the governing construction? Is the clause restrictive or explanatory? What reference/modality motivates the mood?** Any page that turns one of these dimensions into a universal shortcut should be revised to preserve the constructional analysis.

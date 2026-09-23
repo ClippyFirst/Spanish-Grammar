@@ -123,3 +123,14 @@ The third pass deepened the verbal-periphrase section rather than simply adding 
 The Academic Writing Toolkit paragraph review was re-run against representative prose from this pass. It again flagged short paragraphs, but no higher-level logical problem was identified by the tool. The short blocks are intentional reference units and should not be merged merely to satisfy a generic academic-prose heuristic.
 
 A technical limitation remains important: the repository's GitHub Pages workflow runs `npm run qa` only on pushes to `main`; the working rewrite branch therefore does not receive that deployment workflow automatically. The branch is kept separate from `main` while content work continues.
+
+
+## Cross-page consistency pass — 2026-09-23
+
+A targeted consistency audit was applied after the periphrase rewrite. The audit did not treat individual pages as isolated essays: constructions were checked against neighboring pages for competing explanations, especially **ir a + infinitivo / futuro / presente**, **estar + gerundio / seguir + gerundio**, and **acabar de / terminar de**. Several pedagogical shortcuts were tightened because they could otherwise be read as universal rules: ir a + infinitivo is not restricted to finalized plans, futuro simple is not merely a prediction form, and estar + gerundio is not restricted to the exact moment of speaking. The regional note on estar + gerundio was also rewritten to avoid an unsupported country-wide frequency generalization.
+
+The Academic Writing Toolkit was used again on the revised prose. Its paragraph-level review is treated as a structural signal, not as an automatic requirement to merge short reference units. The current pass therefore prioritizes semantic precision and cross-page consistency over paragraph length.
+
+### New cross-page audit rule
+
+When two pages teach competing constructions, the reference should not assign each construction a single fixed Ukrainian translation or a single communicative function if the actual Spanish system permits overlap. A canonical page may give the most useful default, but neighboring pages must preserve the overlap explicitly. This is especially important for tense choice, modal constructions, aspectual periphrases and future reference.

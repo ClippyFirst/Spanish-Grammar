@@ -4,6 +4,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const CONTENT_DIR = path.join(ROOT, 'src', 'content', 'es');
+const COMPARISONS_DIR = path.join(ROOT, 'src', 'content', 'comparisons');
 
 function walk(dir, out = []) {
   if (!fs.existsSync(dir)) return out;
@@ -27,7 +28,7 @@ function relationList(text, field) {
   return values;
 }
 
-const files = walk(CONTENT_DIR).sort();
+const files = [...walk(CONTENT_DIR), ...walk(COMPARISONS_DIR)].sort();
 const pages = new Set(files.map((file) => path.relative(CONTENT_DIR, file).replace(/\\/g, '/').replace(/\.mdx?$/, '')));
 const categories = new Set(files.map((file) => path.relative(CONTENT_DIR, file).split(path.sep)[0]));
 const basename = new Map();

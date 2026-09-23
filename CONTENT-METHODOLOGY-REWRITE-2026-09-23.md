@@ -1,0 +1,543 @@
+# Content methodology and rewrite audit — 2026-09-23
+
+## Scope
+
+This branch upgrades the Spanish grammar reference for Ukrainian-speaking learners. The goal is not to turn the site into an academic textbook. The target is a rigorous, deep, readable reference: accurate enough to consult, explanatory enough to understand, and structured enough to find a solution quickly.
+
+The first rewrite pass focuses on the highest-risk/highest-value grammar domains: ser / estar; por / para; direct and indirect object pronouns; se; pretérito indefinido vs imperfecto; presente de subjuntivo; definite/indefinite articles; noun gender; relative pronouns; negation; gustar; personal a.
+
+## Methodological principles
+
+### 1. Concept before rule
+
+Start with the grammatical problem a Ukrainian speaker actually has. Then give the core model, then exceptions and edge cases.
+
+Avoid rules such as: ser = permanent; estar = temporary; subjuntivo = unreal; por = cause and para = purpose; a = before every person. These are useful mnemonic fragments only when explicitly marked as incomplete.
+
+### 2. Contrastive Ukrainian-first explanation
+
+For each major topic ask: What does Ukrainian allow the learner to assume incorrectly?
+
+Examples: Ukrainian has one basic copular verb, so ser/estar must be distinguished. Ukrainian lacks articles, so article choice must be explained as reference/discourse, not translation. Ukrainian uses case, so personal a and object-clitic functions need syntactic explanation. Ukrainian past morphology does not map directly to the Spanish tense/aspect system. Ukrainian has a subjunctive/conditional form, but it is not equivalent to Spanish subjuntivo.
+
+### 3. Construction-based learning
+
+Do not teach isolated words when the grammar is constructional. Examples: me gusta + noun/infinitive; se + lo/la; a + animate specific direct object; para que + subjuntivo; estar + gerundio; se vende / se venden; cuyo + noun. The unit of learning is often a construction, not a single grammatical label.
+
+### 4. Minimal pairs
+
+When two forms compete, show the smallest change that changes interpretation: Es listo / Está listo; Lo veo / Le escribo; Lo hago para ti / Lo hago por ti; Viví en Madrid / Vivía en Madrid; Creo que es / No creo que sea; Hay un libro / El libro está...
+
+### 5. Progressive disclosure
+
+Every major page should answer questions in this order: what is the problem; what is the quick rule/model; how is it formed; when is it used; when is it not used; what contrasts with it; exceptions; Ukrainian-specific difficulty; regional variation; related topics.
+
+Advanced detail should not block the basic answer.
+
+### 6. Examples as evidence
+
+Examples should demonstrate the rule rather than decorate the page. Prefer contemporary natural Spanish, varied persons and contexts, affirmative and negative examples, questions where relevant, minimal pairs for contrasts, and Ukrainian translations for important examples. Avoid invented textbook Spanish that exists only to illustrate a form.
+
+### 7. Valency and syntax
+
+Where a mistake depends on what a verb selects, explain the construction rather than blaming the learner. Examples: ayudar a alguien still has a direct object; gustar has a different argument structure from English like; escribir a alguien selects an indirect object; prepositional complements must be learned with the governing verb where appropriate.
+
+### 8. Error analysis
+
+Typical Ukrainian mistake must mean a plausible, linguistically motivated transfer error. Do not manufacture mistakes merely to fill a section. Priorities are Ukrainian structural interference, direct translation, confusion between two Spanish constructions, and English interference only where genuinely common.
+
+### 9. Regional/pluricentric Spanish
+
+The reference treats Spanish as a pluricentric language. Regional information is included when it changes what a learner will encounter, especially tú / vos / usted; vosotros / ustedes; voseo; leísmo and related pronominal systems; tense choice; imperative forms; common regional constructions. A regional variant is not presented as wrong merely because it differs from another variety.
+
+### 10. Corpus-minded factual discipline
+
+Before a grammatical statement is promoted to a rule, distinguish productive grammatical rule, strong tendency, lexical restriction, register preference, regional variation, and pedagogical simplification. The reference should never turn a convenient mnemonic into a false universal.
+
+## External methodological grounding
+
+The rewrite is informed by current RAE/ASALE grammatical organization and terminology, and by Instituto Cervantes ELE methodology.
+
+Useful reference frameworks include RAE/ASALE, Nueva gramática de la lengua española; RAE/ASALE, Nueva gramática básica; and Instituto Cervantes ELE materials on learner difficulties, grammar in use, contrast, error analysis, ser/estar, pronouns, past tenses, subjunctive and regional variation.
+
+## Academic Writing Toolkit audit
+
+The Academic Writing Toolkit paragraph review was applied to rewritten MDX pages. It reports many short-paragraph findings. These are largely caused by the project's intentional component-based format: MinPair, Mistake, Note, Formula, tables and short example blocks. Therefore the raw paragraph count should not be interpreted as a prose-quality score for MDX. The tool is useful here as a deterministic structural signal, but its findings must be interpreted in the context of the document format.
+
+This is why the project should use layered QA rather than one generic academic-prose score.
+
+## Definition of done for future rewrites
+
+A major grammar page is ready only when the central distinction is explained without a false universal; formation is correct; important non-uses are covered; at least one contrast/minimal pair exists where relevant; examples are natural and translated; Ukrainian interference is addressed where justified; regional variation is distinguished from the general rule; terminology is consistent; related links are real; no duplicate article silently contradicts the canonical explanation; MDX/frontmatter validates; content graph validates; and the production build succeeds.
+
+## Remaining rewrite roadmap
+
+1. all pronoun pages, especially clitic placement, double objects, reflexives, demonstratives, possessives and interrogatives;
+2. the full tense system, including perfecto, pluscuamperfecto, futuro and condicional;
+3. all subjunctive tenses and trigger/anti-trigger pages;
+4. imperative and pronoun placement;
+5. conjunctions and subordinate-clause selection;
+6. preposition governance and high-frequency verb-preposition constructions;
+7. adjective position and meaning changes;
+8. adverbs and information structure;
+9. sentence structure, reported speech, passive and conditional clauses;
+10. spelling, accentuation and pronunciation;
+11. regional Spanish pages;
+12. reference tables and cross-page consistency.
+
+The objective is coverage plus depth, not simply making every page longer.
+
+## Important quality principle
+
+A 10,000-word article is not automatically better than a 3,000-word article. The target is maximum useful explanatory density with minimum unnecessary cognitive load.
+
+A reference page should let a learner both solve the immediate problem and understand why the answer is what it is.
+
+## Sources
+
+- Real Academia Española / ASALE — Nueva gramática: https://www.rae.es/gramática
+- Real Academia Española / ASALE — Nueva gramática básica: https://www.rae.es/gramática-básica
+- Instituto Cervantes — Centro Virtual Cervantes: https://cvc.cervantes.es/
+- Instituto Cervantes — current ELE grammar training materials: https://gestionportales.cervantes.es/
+
+
+## Second deep rewrite pass — 2026-09-23
+
+The second pass extended the same methodology into articles covering articles, demonstratives, subject-pronoun omission, double object pronouns, possessives, indefinites, interrogatives, word order, questions, hay/estar, pluscuamperfecto, condicional, imperative, spatial prepositions, temporal prepositions, and verb-preposition government. Existing pages were rewritten rather than merely lengthened: simplified universal rules were replaced with construction-based explanations, minimal contrasts, syntactic function, discourse/reference distinctions, and Ukrainian-specific transfer notes.
+
+### Academic Writing Toolkit follow-up
+
+The paragraph-logic review was run on the rewritten article set. It reported many short-paragraph findings. This is expected for this project because examples, tables, formulas, MinPair/Mistake/Note components, and one-idea reference blocks are deliberately short. The findings should therefore trigger a manual structural review rather than automatic prose merging. In a grammar reference, merging all short blocks into long academic paragraphs would reduce retrieval speed and obscure examples.
+
+The useful quality signal from the review is therefore: each prose paragraph should have one clear claim and a clear relation to the surrounding section; example blocks should remain separate when they function as evidence; tables/components should not be merged merely to satisfy a paragraph-length heuristic.
+
+## Current completion criterion
+
+The branch is still intentionally **not merged into main**. Content work continues until the full coverage map is addressed and the remaining pages pass cross-page consistency, MDX/frontmatter, link, graph, and production QA. A page being rewritten does not by itself mean the whole grammar reference is complete.
+
+
+## Third deep rewrite pass — 2026-09-23
+
+The third pass deepened the verbal-periphrase section rather than simply adding more examples. The overview now distinguishes genuine grammatical periphrases from ordinary combinations such as a motion verb plus a purpose infinitive, and it maps the main infinitive-, gerund- and selected participle-based constructions by function. The pages for **deber / poder / soler** and **tener que / hay que** now distinguish obligation, recommendation, general necessity, possibility, permission, skill and habituality without treating their Ukrainian translations as one-to-one equivalents. The frequent-periphrases page was expanded around **acabar de, volver a, seguir + gerundio, dejar de, ponerse a, llevar + gerundio** and **ir + gerundio**, with aspectual contrasts and Ukrainian transfer warnings.
+
+The Academic Writing Toolkit paragraph review was re-run against representative prose from this pass. It again flagged short paragraphs, but no higher-level logical problem was identified by the tool. The short blocks are intentional reference units and should not be merged merely to satisfy a generic academic-prose heuristic.
+
+A technical limitation remains important: the repository's GitHub Pages workflow runs `npm run qa` only on pushes to `main`; the working rewrite branch therefore does not receive that deployment workflow automatically. The branch is kept separate from `main` while content work continues.
+
+
+## Cross-page consistency pass — 2026-09-23
+
+A targeted consistency audit was applied after the periphrase rewrite. The audit did not treat individual pages as isolated essays: constructions were checked against neighboring pages for competing explanations, especially **ir a + infinitivo / futuro / presente**, **estar + gerundio / seguir + gerundio**, and **acabar de / terminar de**. Several pedagogical shortcuts were tightened because they could otherwise be read as universal rules: ir a + infinitivo is not restricted to finalized plans, futuro simple is not merely a prediction form, and estar + gerundio is not restricted to the exact moment of speaking. The regional note on estar + gerundio was also rewritten to avoid an unsupported country-wide frequency generalization.
+
+The Academic Writing Toolkit was used again on the revised prose. Its paragraph-level review is treated as a structural signal, not as an automatic requirement to merge short reference units. The current pass therefore prioritizes semantic precision and cross-page consistency over paragraph length.
+
+### New cross-page audit rule
+
+When two pages teach competing constructions, the reference should not assign each construction a single fixed Ukrainian translation or a single communicative function if the actual Spanish system permits overlap. A canonical page may give the most useful default, but neighboring pages must preserve the overlap explicitly. This is especially important for tense choice, modal constructions, aspectual periphrases and future reference.
+
+
+## Fourth deep rewrite pass — 2026-09-23
+
+The fourth pass treated the tense system as an interconnected system rather than a collection of isolated pages. The overview was checked against **pretérito perfecto, indefinido / imperfecto, pluscuamperfecto, futuro, futuro perfecto, condicional simple, condicional compuesto, sequence of tenses and conditionals**. The main quality criterion was preservation of temporal perspective: a tense should not be reduced to one Ukrainian translation or one communicative label.
+
+Particular attention was given to three recurrent risks:
+
+- **Perfecto vs indefinido:** the distinction was kept probabilistic and variety-sensitive rather than reduced to a universal “today vs yesterday” rule. The reference explicitly warns against treating Latin American Spanish as if it simply lacked *perfecto*.
+- **Futuro and futuro perfecto:** both pages retain the distinction between temporal future reference and modal inference. *Futuro* can express supposition about the present, while *futuro perfecto* can express supposition about a prior situation.
+- **Condicional and reported speech:** *condicional* remains the normal resource for future relative to a past reference point, but reported speech is not treated as a mechanical backshift operation. A speaker can preserve a present-oriented perspective where context supports it. The conditional page was adjusted so that *Dijo que viene mañana* is no longer presented as an automatic error.
+
+The **sequence-of-tenses** page was checked for the same principle: *quería que vinieras* and *esperaba que hubieras terminado* are taught through relative temporal relations, not through a simple “move everything one tense back” formula. The conditionals page similarly keeps the traditional 1–3 classification only as a learning map and explicitly includes mixed conditionals.
+
+The Academic Writing Toolkit was run again on representative tense-system prose. It returned only short-paragraph findings, which are expected for a component-based grammar reference and were not treated as reasons to merge evidence blocks. The resulting edits therefore prioritize semantic precision, deictic perspective, regional variation and cross-page consistency.
+
+
+## Fifth deep rewrite pass — 2026-09-23
+
+The fifth pass audited the boundary between **subjuntivo, conditional clauses, sequence of tenses and reported speech**. The goal was to remove a different class of pedagogical overstatement: rules that are useful as first approximations but become false when generalized.
+
+The conditional-sentence page was tightened so that the open-condition pattern is described as **indicativo in the *si*-clause**, while the main clause may use future, present or an imperative. The old “three types” map is retained only as a learning framework, and mixed conditionals are now explicit. The statement about *futuro/condicional* after *si* was narrowed to the ordinary standard conditional construction instead of being phrased as a universal claim about every sentence containing *si*.
+
+The subjunctive-trigger page was also tightened. In particular, *aunque + subjuntivo* is no longer reduced to “unknown” information: the page now describes the range as hypothetical, alternative or not asserted as an established fact, while preserving the context-sensitive nature of the contrast with indicativo. Temporal clauses now also include *cuando hayas terminado*, making the relationship between **future reference and perfect subjunctive** visible rather than teaching a simple *cuando + present subjunctive* formula.
+
+The Academic Writing Toolkit was run against representative prose from this pass. It returned **three short-paragraph findings and no higher-level logic finding**. These remain intentional reference units rather than prose defects. The fifth pass therefore confirms the project's QA principle: use paragraph-level tooling to catch unclear prose structure, but do not optimize a grammar reference for paragraph length at the expense of retrieval and contrastive examples.
+
+
+## Sixth deep rewrite pass — 2026-09-23
+
+The sixth pass audited the intersection of **imperative formation, subjuntivo, clitic placement and regional address forms**. This area was treated as one system because a learner error often crosses page boundaries: choosing the wrong imperative form can also force the wrong pronoun position, and a simplified statement about subjuntivo can contradict the imperative page.
+
+The imperative pages were tightened in several ways:
+
+- **Affirmative vs negative commands** are now explicitly separated. Negative commands are taught as **no + presente de subjuntivo**, rather than as an affirmative imperative with *no* added.
+- The person system is made explicit: **usted, nosotros/as and ustedes** affirmative forms coincide with corresponding present-subjunctive forms; **tú** and **vosotros/as** have characteristic affirmative forms, while **tú** also has a high-frequency irregular set.
+- The contrast is demonstrated with lexical pairs such as *Ven → No vengas*, *Hazlo → No lo hagas* and *Di la verdad → No digas la verdad*, preventing learners from extending the positive irregular form into the negative command.
+- **Clitic placement** is stated as a constructional opposition: affirmative imperative + enclitic(s) versus negative command + proclitic(s). Double-object order remains indirect + direct, with **se** replacing **le/les** before *lo/la/los/las*.
+- The accent section was corrected so that orthographic stress is treated as a consequence of Spanish spelling rules rather than as a mechanical “imperative + pronoun = add an accent” rule. The specific form **vete** was corrected from the erroneous *véte*.
+- **Voseo** is presented as a regional system rather than as an error or a single universal Latin American pattern. Examples such as *hablá, comé, vení* are retained while acknowledging variation.
+- The quick-reference page was synchronized with the detailed pages so that its person/form table, subjunctive relationship, clitic placement and regional wording no longer imply competing rules.
+
+The Academic Writing Toolkit paragraph review was applied to representative prose from the sixth pass. As in earlier passes, short findings are expected where the reference intentionally uses compact rule blocks, examples, tables and components. The review should therefore be interpreted together with semantic and cross-page checks rather than as a paragraph-length target.
+
+A further manual consistency point was established: whenever a grammar construction changes both **morphology and clitic position**, the canonical page should show the two dimensions together in at least one minimal pair. This is now implemented with pairs such as *Dímelo → No me lo digas*.
+
+
+## Seventh deep rewrite pass — 2026-09-23
+
+The seventh pass deepened the **subordinating-conjunction and prepositional-government system**. The goal was to prevent a common failure mode in grammar references: presenting *que, cuando, aunque, si* or another conjunction as if the conjunction itself mechanically selected a mood.
+
+The subordinating-conjunction page was expanded to distinguish **semantic relation, syntactic construction, semantic status and temporal perspective**. It now covers causal, purposive, temporal, concessive, conditional and complement clauses, with additional attention to *antes de que, hasta que, después de que* and *en cuanto*. Future-oriented temporal clauses are contrasted with habitual/factual ones so that learners do not memorize “*cuando = subjuntivo*”. The page also explicitly separates conditional *si* from interrogative *si*, and connector-like consequence markers such as *así que* from subordinate conjunctions.
+
+The pass also corrected small editorial defects in the existing page, including the malformed *A aunque* wording and the stray marker before *Creo de que viene*.
+
+The **que / de que** page was strengthened as a constructional government reference. It now uses the contrast between *Creo que viene* and *Me alegro de que hayas venido*, extends the analysis to *depender de que*, and makes clear that the *eso/algo* substitution test is diagnostic rather than an absolute grammatical rule. The page also distinguishes the governing head (verb, adjective or noun) from the subordinate clause itself.
+
+The Academic Writing Toolkit paragraph-logic review was run on representative prose from this pass and returned **no issues**. This is a useful confirmation that the expanded explanatory paragraphs remain structurally coherent. The project continues to treat intentional short MDX blocks as reference components rather than forcing them into academic-style paragraph lengths.
+
+A new cross-page QA rule follows from this pass: whenever a conjunction appears on more than one canonical page, each page must preserve the same **construction + mood + temporal perspective** relationship. In particular, *cuando*, *aunque* and *si* must not receive conflicting blanket rules on the conjunction page, subjunctive pages and conditional pages.
+
+
+## Eighth deep rewrite pass — 2026-09-23
+
+The eighth pass deepened the **prepositional-government and high-frequency verb + preposition system**. The goal was to make the distinction between lexical government, free prepositional meaning, and other constructions explicit rather than presenting lists of verb/preposition pairs as a flat memorization table.
+
+The pages for **verb-preposition pairs** and **verbs with prepositions** were rewritten around constructional units such as *depender de, pensar en, soñar con, confiar en, insistir en, tratar de, empezar a* and *interesarse por*. The revised material now distinguishes:
+
+- the governing verb from the semantic contribution of the preposition;
+- verb + preposition + noun/pronoun from verb + preposition + infinitive;
+- verb + infinitive without a preposition from constructions where the preposition is obligatory;
+- verbal government from **personal a** and other independent functions of *a*;
+- prepositional government before *que* from the mood selected by the subordinate construction;
+- a default lexical pattern from cases where a verb permits more than one construction with different meanings or contextual conditions.
+
+The rewrite also strengthened the **pensar en / pensar de** contrast and added a constructional algorithm: identify the governing head, identify its complement pattern, check whether the model changes meaning, and only then use the Ukrainian translation as a semantic aid. This prevents the reference from teaching a false one-to-one mapping such as «український прийменник → іспанський прийменник».
+
+The **queísmo/dequeísmo** boundary was kept connected to the prepositional-government pages: *me acuerdo de que...* is treated as the result of the governing construction *acordarse de*, while *creo que...* illustrates a verb that does not select *de*. The mood of a clause after a preposition is not presented as mechanically caused by the preposition itself.
+
+The Academic Writing Toolkit paragraph-logic review was run on representative prose from this pass. It returned **one short-paragraph finding and no higher-level logic issue**. The finding corresponds to a deliberately compact Ukrainian-learner summary and does not justify merging the reference structure into longer academic-style paragraphs. As in earlier passes, short reference units are evaluated by function and retrieval value rather than paragraph length alone.
+
+A new cross-page QA rule follows from this pass: whenever a verb-preposition construction appears in more than one page, the pages must agree on its **governing preposition, complement type, core meaning, and degree of lexical variation**. Special attention should be paid to *pensar en/de, preocuparse por/de, depender de, ayudar a*, and constructions that meet *queísmo/dequeísmo*, *personal a*, infinitival complements, or verbal periphrases.
+
+
+## Ninth deep rewrite pass — 2026-09-23
+
+The ninth pass performed a cross-page **preposition-system consistency audit**, following the eighth pass on verbal government. The focus was the interaction between *por/para*, common prepositional constructions, spatial/temporal prepositions, and the constructional verb-preposition pages.
+
+The canonical *por/para* page was deepened so that the guide no longer relies on a compact «por = X / para = Y» formula. It now separates purpose, addressee, deadline, destination, cause/motive, exchange, route, duration, means/channel, and passive agent, and explicitly distinguishes semantic relations from Ukrainian translation equivalents. The page also strengthens *para + infinitive* vs *para que + finite clause* without turning the subject relation into an absolute rule.
+
+The companion *por/para markers* page was synchronized so that its marker lists are explicitly treated as a learning map, not a universal decision algorithm. An unsupported broad regional claim was removed and replaced with a restrained statement about shared basic opposition and possible frequency/style variation.
+
+The *common-constructions* page was aligned with the government model: lexical government (*depender de, soñar con*) is distinguished from prepositional locutions (*a pesar de, en lugar de*), and the infinitive vs *que* distinction for locutions was clarified. This prevents the overview page from silently teaching a simpler system than the canonical pages.
+
+The cross-page audit retained the existing spatial and temporal pages as separate reference systems. Their core contrasts — *en/a/de/desde/hacia/hasta* for place and *a/en/desde/hasta/durante/por/hace* for time — remain useful, while *por/para* is now explicitly linked to them as a semantic rather than translation-based system.
+
+Academic Writing Toolkit was run on representative prose from the canonical *por/para* rewrite. It returned **4 short-paragraph findings and no higher-level logic issue**. These findings are structural signals from intentionally compact reference prose; no artificial paragraph merging was performed merely to satisfy paragraph-length heuristics.
+
+New cross-page QA rule: every occurrence of *por/para* must agree with the canonical semantic distinction and must not reintroduce a blanket translation rule. Examples involving *por la mañana, para mañana, por tres horas, en tres años, durante tres años,* and *desde hace tres años* should remain explicitly distinguishable as different temporal constructions. Likewise, *para Madrid* (destination), *a Madrid* (basic goal/direction), and *por Madrid* (route) must not be presented as interchangeable translations of «до/через».
+
+
+## Tenth deep rewrite pass — 2026-09-23
+
+The tenth pass extends the prepositional-government work from verbs to **adjective complements**. The canonical page `adjective-complements.mdx` was rewritten around the constructional unit **adjetivo + régimen**, with explicit separation of complement types (noun phrase, infinitive, finite `que` clause), semantic/model variation, and learner transfer from Ukrainian.
+
+The new reference inventory covers high-frequency models including `capaz de`, `contento con/de`, `orgulloso de`, `interesado en`, `dispuesto a`, `contrario a`, `favorable a`, `responsable de`, `consciente de`, `seguro de`, `diferente de`, `parecido a`, and `lleno de`. It explicitly states that the inventory is a learning map rather than a complete government dictionary.
+
+The page now cross-links adjective government with the previously rewritten verbal government and `queísmo/dequeísmo` pages. In particular, it distinguishes `Estoy seguro de que vendrá` from `Es posible que venga`, preventing the common false rule that `que` either always requires `de` or never does. It also documents cases where different prepositions form different constructions rather than simple interchangeable variants, e.g. `contento con el resultado` vs `contento de verte`.
+
+Academic Writing Toolkit was applied to representative prose. It returned **3 short-paragraph findings and no higher-level logic issue**. These are treated as structural signals in a reference page, not as reasons to merge intentionally compact examples or definition blocks.
+
+New cross-page QA rule: adjective-government examples must use the same constructional principle as verb-government pages. Every adjective + preposition example should be checked for (1) governing adjective, (2) complement type, (3) semantic model, (4) `queísmo/dequeísmo` implications where relevant, and (5) consistency with Ukrainian-first contrastive explanations. The guide should not infer Spanish prepositions from Ukrainian equivalents alone.
+
+
+## Eleventh deep rewrite pass — 2026-09-23
+
+The eleventh pass adds the missing **noun complement government** layer through `src/content/es/nouns/noun-complements.mdx`. The page treats noun + preposition as a lexical-syntactic construction rather than a translation exercise, and separates noun-phrase, infinitival, and finite `que` complements.
+
+The reference map includes `necesidad de`, `miedo a/de`, `interés en/por`, `confianza en`, `acceso a`, `solución a`, `relación con`, `causa de`, `problema con`, and `dependencia de`. Multiple models are explicitly treated as potentially meaning- or construction-sensitive rather than automatically interchangeable.
+
+The page connects nominal government with the already rewritten adjective and verb government systems. A specific contrast is documented for `interesarse por algo` / `estar interesado en algo` / `tener interés en/por algo`, preventing false transfer of a preposition across related lexical items.
+
+Academic Writing Toolkit was applied to representative prose. It returned **4 short-paragraph findings and no higher-level logic issue**. As with previous reference-page audits, compact definition/example units remain intentional and should not be merged solely to satisfy paragraph-length heuristics.
+
+Cross-page QA rule added: noun-government examples must be checked for the governing noun, semantic sense, complement type, preposition, and interaction with `queísmo/dequeísmo`; related verb/adjective forms must not be assumed to share the same preposition merely because Ukrainian translations are similar.
+
+
+## Twelfth deep rewrite pass — 2026-09-23
+
+The twelfth pass broadened the noun system from **government** to the interaction of countability, reference, possession, collective agreement, apposition and noun formation. Two existing pages were revised: `possessive-constructions.mdx` and `noun-special-cases.mdx`.
+
+The possessive page was corrected and deepened in several ways. The earlier statement about a genitive case was narrowed to the more precise claim that Spanish lacks a **productive genitive case** comparable to Ukrainian. The page now distinguishes possession from the wider set of relations expressed by `de + noun phrase`, including material, content, origin and part/whole relations. It also corrects the treatment of `de él`: this form is grammatical and can be useful for contrast or disambiguation, so it must not be described as simply incorrect or universally rare. The previous blanket regional note on `su casa de él` was replaced with a restrained statement about double possessive marking in particular varieties and contexts.
+
+The special-noun-cases page was revised around a constructional view of **countability and quantification**. The previous example `Quiero un agua` was identified as too categorical: `agua` commonly appears without an article when referring to the substance, but `un agua` can be grammatical when the noun is interpreted as a portion, drink or variety. The page now contrasts `Bebo agua`, `Quiero un vaso de agua` and `Quiero un agua mineral`, making the semantic shift explicit. The treatment of `gente` retains singular grammatical agreement while avoiding the broader claim that collective nouns can never show contextual variation. Compound-noun plurals, apposition and profession names were also reframed as systems with lexical or constructional variation rather than one-rule exceptions.
+
+Academic Writing Toolkit was run on representative revised prose from the possessive page and returned **3 short-paragraph findings**; no higher-level paragraph-logic problem was identified. The findings are consistent with the project's component-based reference format and do not justify artificial paragraph merging.
+
+### New cross-page QA rule
+
+Noun pages should distinguish at least four separate questions: **(1) lexical government, (2) possession/other `de` relations, (3) countability and quantification, and (4) grammatical agreement**. A noun construction must not be classified solely from its Ukrainian translation or from the presence of a preposition. In particular, `de + noun` must not automatically be called possession, `un/una` must not be treated as a permanent property of a lexical item, and collective nouns such as `gente` must be checked together with their agreement pattern. Possessive pages must also remain consistent with `possessive-pronouns`, article pages and noun-complement government.
+
+
+## Thirteenth deep rewrite pass — 2026-09-23
+
+The thirteenth pass audited noun number formation against the broader noun/article system and against current normative evidence. \`numero-plural.mdx\` was substantially rewritten.
+
+The page no longer presents plural formation as an almost exceptionless \`-s/-es\` mechanism. It now distinguishes the high-frequency patterns (vowel + \`-s\`, most consonants + \`-es\`, \`-z → -ces\`) from invariant plurals such as \`lunes\` and \`crisis\`, and from variant or lexicalized patterns in loanwords. The earlier wording that \`clubes\` was simply the normative form was corrected: \`clubs\` and \`clubes\` are both documented valid plurals, so the page now treats them as variation rather than error. This is consistent with RAE/ASALE material on current Spanish plural formation.
+
+The treatment of accentuation was also reframed. Instead of claiming that stress simply remains in the same syllable, the page now uses \`canción → canciones\` and \`régimen → regímenes\` to show that plural formation can alter the prosodic environment and therefore the written accentuation. The page also warns against applying one universal rule to stressed \`-í/-ú\` forms.
+
+Academic Writing Toolkit was run on representative revised prose. It returned **3 short-paragraph findings and no higher-level paragraph-logic problem**. These findings are retained as a structural warning rather than treated as a defect requiring longer prose, because the reference uses short explanatory blocks intentionally.
+
+### New cross-page QA rule
+
+Plural formation must remain consistent with **article/reference, adjective agreement, noun special cases and lexical government**. Invariant nouns must not be taught as if they lacked grammatical number; number may be expressed elsewhere in the noun phrase. Loanword plurals and stressed \`-í/-ú\` forms must be checked for documented variation rather than forced into the most common productive rule. Any regional statement about plural pronunciation must be separated from the written standard and supported independently.
+
+
+## Fourteenth deep rewrite pass — 2026-09-23
+
+The fourteenth pass focused on the intersection of **possessives, articles, zero article, grammatical gender and noun reference**. Four canonical pages were inspected: \`possessive-pronouns.mdx\`, \`definite-indefinite.mdx\`, \`zero-article.mdx\`, and \`gender-exceptions.mdx\`.
+
+\`possessive-pronouns.mdx\` was aligned more explicitly with the noun/article system. The page now distinguishes a full possessive used independently (\`el mío\`) from a full possessive after an indefinite noun phrase (\`un amigo mío\`), and it avoids treating \`el mi\` as a general statement about every possible possessive environment. The regional note on \`vuestro/vuestra\` was also softened so that it describes the distribution across varieties without implying a single uniform American pattern.
+
+The article pages were cross-checked for an important pedagogical trap: **profession nouns after \`ser\`**. The neutral classification pattern (\`Soy médico\`) is presented as frequent, not as an absolute prohibition on articles. Both pages now use a consistent contrast with an individualized/descriptive noun phrase such as \`Soy un médico especializado en cirugía\`. A malformed self-comparison in the article error box (\`El agua está fría\` → itself) was corrected to the actual contrast \`La agua está fría\` → \`El agua está fría\`.
+
+Academic Writing Toolkit was run on representative possessive and article prose. The possessive sample returned **no issues**; the article sample returned **2 short-paragraph findings and no higher-level logic issue**. The shortness is intentional for reference-style micro-explanations.
+
+### New cross-page QA rule
+
+Possessive determiners, full possessives, definite/indefinite articles and zero article must be audited as **interacting determiner/reference constructions**, not as isolated vocabulary lists. The QA pass must check:
+- \`mi + N\` versus \`el mío\` / \`un amigo mío\`;
+- article omission with possessive determiners;
+- article choice with profession/role predicates;
+- noun reference in singular and plural;
+- grammatical gender in \`el agua fría\` and related forms;
+- consistency between article, possessive, adjective agreement and noun gender;
+- regional claims about \`vuestro/vuestra\` versus \`su/de ustedes\` must remain descriptive and non-absolute.
+
+
+## Fifteenth deep rewrite pass — 2026-09-23
+
+The fifteenth pass continued the determiner/noun cross-page audit, focusing on **gender terminology, neuter `lo`, indefinite forms, adjective agreement and article special cases**.
+
+The audit corrected an important terminology issue in `gender-exceptions.mdx`: **epicene nouns** were separated from nouns with variable gender marking. `bebé` is no longer used as the representative epicene example; the page reserves the term for nouns whose grammatical gender remains fixed while the referent may be male or female, such as `la víctima`, `la persona` and `el personaje`.
+
+The adjective-agreement page was tightened to avoid the false generalization that all consonant-final adjectives are invariable for gender. Many are (`fácil, difícil, azul, feliz`), but others have distinct gender forms (`trabajador/trabajadora, español/española`). The regional note was also softened so that lexical, semantic, stylistic and variety-dependent adjective placement is not reduced to a universal claim.
+
+The neuter `lo` page now explicitly separates **neuter/article-like `lo` constructions** from **`lo cual` as a relative construction**. This prevents the common analytical error of treating every occurrence of `lo` as the same grammatical category.
+
+The indefinite-pronoun page was checked for the interaction between pronoun and determiner forms: `algún/ningún` before masculine singular nouns, `alguna/ninguna` before feminine singular nouns, and independent `alguno/ninguno` forms. The negative-polarity examples remain aligned with the canonical negation page.
+
+The article special-cases page was also corrected so that `Soy médico` versus `Soy un médico especializado en cirugía` is presented as a contrast of noun-phrase structure and reference, not as a simple grammatical-error pair. This keeps the article/zero-article pages consistent and avoids marking a contextually grammatical article as categorically wrong.
+
+Academic Writing Toolkit was run on representative prose from this pass. It returned short-paragraph findings but no higher-level paragraph-logic problem. As established by the methodology, these findings are interpreted in the context of the project's compact reference components rather than used as a paragraph-length target.
+
+### New cross-page QA rule
+
+The determiner/noun audit must now distinguish **grammatical category, gender, number, reference and construction** before labeling a form as an exception or error. In particular:
+- `el agua fría` must remain feminine in agreement despite the singular `el` form;
+- epicene nouns must not be confused with common-gender nouns or nouns with variable gender;
+- `lo + adjective`, `lo que`, and `lo cual` must remain analytically distinct;
+- indefinite determiners (`algún`, `ningún`, `alguna`, `ninguna`) must agree with the noun they determine, while independent pronouns use forms such as `alguno`, `ninguno`, `alguna`, `ninguna`;
+- adjective agreement must distinguish gender-invariant classes from consonant-final adjectives that have separate masculine/feminine forms;
+- profession predicates after `ser` must be checked for neutral classification versus referential/descriptive noun phrases rather than forced into a binary article/no-article rule.
+
+
+## Sixteenth deep rewrite pass — 2026-09-23
+
+The sixteenth pass continued the determiner–noun–agreement audit, concentrating on **demonstratives, noun-gender exception taxonomy, and the special article form in `el agua`**.
+
+The demonstrative page was made more construction-oriented: `este/ese/aquel` before a noun are distinguished from their independent use, while `esto/eso/aquello` are treated as neuter forms that typically refer to situations, facts, events or otherwise non-nominalized content. The page now explicitly prevents the learner from treating `esto problema` as a masculine/feminine agreement choice and contrasts `Quiero este` with `Quiero esto`.
+
+The noun-gender pages were synchronized around the principle that **gender is a lexical-grammatical property, while the form `el` in `el agua` is a special determiner choice in a phonological environment**. This is now connected explicitly to agreement: `el agua fría`, `esta agua`, `mucha agua`, and plural `las aguas` all preserve feminine agreement.
+
+The exception taxonomy was also tightened: common-gender nouns, epicene nouns, variable-gender lexical pairs and the stressed-initial-`a` article phenomenon are kept as distinct mechanisms rather than being grouped under a single label of “exceptions”.
+
+Academic Writing Toolkit was run on representative prose from this pass. The review found no higher-level paragraph-logic defect; any short-paragraph findings are treated as acceptable for the project's compact reference format.
+
+### New cross-page QA rule
+
+For demonstratives and noun gender, QA must distinguish:
+- demonstrative determiner before a noun (`este problema`) from independent demonstrative (`Quiero este`);
+- neuter demonstrative referring to content/situation (`esto/eso/aquello`) from a gendered noun phrase;
+- grammatical gender from determiner allomorphy in `el agua`;
+- common gender from epicene nouns and from lexical pairs whose gender changes meaning;
+- singular special forms from plural agreement (`el agua fría → las aguas frías`).
+
+
+## Seventeenth deep rewrite pass — 2026-09-23
+
+The seventeenth pass extended the pronoun/determiner audit to **interrogatives, double object pronouns, subject-pronoun omission, possessives, and zero-article constructions**.
+
+The interrogative page was tightened around the constructional contrast **qué + noun** versus independent **cuál** and **cuál de + noun phrase**. The page now avoids presenting *cuál + noun* as an absolute grammatical impossibility: it identifies the neutral standard learner model while acknowledging contextual/varietal occurrences without turning them into a universal rule. The distinction is therefore taught through syntactic position and choice/identification rather than translation alone.
+
+The double-object page was checked for consistency with the imperative and object-pronoun pages: **OI + OD**, `le/les → se` before `lo/la/los/las`, and the position of clitics with finite verbs, infinitives, gerunds and affirmative/negative imperatives remain aligned.
+
+The subject-pronoun page was retained as a discourse/pragmatics explanation rather than a prohibition against explicit pronouns. Explicit `yo/tú/él...` is presented as available for contrast, correction, focus and disambiguation; omission is the neutral option when context and verbal morphology identify the subject. Possessive forms were checked against the article and noun-gender system, especially `mi casa`, `el mío`, `un amigo mío`, and the ambiguity of `su`.
+
+The zero-article page was checked against the earlier article-special-cases work. It now consistently treats bare noun phrases as a **referential/constructional choice**, not merely as an absence of a word. The examples distinguish bare plural, mass/abstract reference, profession predicates and lexicalized constructions, while avoiding absolute rules such as “no after no tener” or “profession after ser never takes an article”.
+
+Academic Writing Toolkit was applied to representative prose from this pass. The prose presented no higher-level paragraph-logic defect; short-form reference writing remains compatible with the project's compact component format.
+
+### New cross-page QA rule
+
+For pronoun/article QA, verify the construction before labeling an expression as an error:
+- `qué + noun` vs `cuál` / `cuál de + NP`;
+- interrogative/exclamative forms with tilde vs relative/conjunctive forms without it;
+- OI + OD ordering and `le/les → se` before direct-object clitics;
+- explicit subject pronoun as discourse marking vs neutral null subject;
+- `mi + N`, `el mío`, and `un N mío` as distinct possessive constructions;
+- bare noun phrase vs definite/indefinite noun phrase according to reference and construction;
+- profession predicates after `ser` without treating article presence as an absolute prohibition.
+
+
+## Eighteenth deep rewrite pass — 2026-09-23
+
+The eighteenth pass performed a targeted **pronoun-system precision audit** after the previous demonstrative/article pass. The goal was to remove remaining over-prescription and make grammatical form, discourse function, and reference explicit.
+
+The indefinite-pronoun page was tightened around `alguien/nadie`: their grammatical agreement is singular, but that grammatical number does not encode the sex of the referent. The negative-polarity explanation was also made more construction-specific: postverbal `nada/nadie` occurs with `no` in the ordinary negative pattern, while preverbal `Nada/Nadie + verbo` can carry the negative polarity without a separate `no`.
+
+The subject-pronoun page was checked for a common pedagogical failure: turning a stylistic preference into a grammatical error. Repetition of `yo` may be pragmatically unnecessary in a neutral sequence, but it is not intrinsically ungrammatical. The page therefore retains a genuinely ill-formed redundant subject pattern while avoiding an artificial “every explicit pronoun is an error” rule.
+
+The possessive page was refined so that `su` ambiguity is treated as a **reference-management issue**, not as a grammatical defect. Explicit `de él/de ella/de ellos/de usted` is presented as a disambiguating construction when context does not identify the possessor.
+
+Academic Writing Toolkit was applied to representative passages from the revised indefinite, subject-pronoun and possessive sections. The review found no higher-level paragraph-logic defect. The remaining observations, where present, concern compact paragraph scope rather than logical inconsistency.
+
+### New cross-page QA rule
+
+For indefinite, subject and possessive pronouns, distinguish:
+- grammatical number from referent sex/gender;
+- negative polarity from simple lexical meaning of `nada/nadie`;
+- grammaticality from discourse-marked or stylistically unnecessary repetition;
+- possessor ambiguity from grammatical incorrectness;
+- canonical learner patterns from legitimate marked/contextual alternatives.
+
+
+## Nineteenth deep rewrite pass — 2026-09-23
+
+The nineteenth pass continued the pronoun-system audit with **relative, exclamative, clitic, personal-a, and se constructions**.
+
+Relative-pronoun review sharpened the distinction between `lo que`, `lo cual`, and gendered `el cual/la cual`. The key learner principle is that neuter `lo` in `lo que` is not masculine noun agreement, while `lo cual` can refer to a preceding proposition or situation. The page also retains the constructional distinction among `que`, `quien`, `el que`, and `el cual` after prepositions rather than reducing the system to a single mandatory form.
+
+The exclamative page was tightened so that interrogative and exclamative uses of `qué/cómo/cuánto` are distinguished by communicative function and punctuation, not merely by word order. The tilde in these interrogative/exclamative forms was kept explicit.
+
+The `se` page received a higher-precision diagnostic for passive `se` versus impersonal `se`. Agreement such as `se venden libros` is useful evidence for a reflexive passive analysis, while constructions with an animate direct object marked by personal `a` require structural analysis rather than a mechanical classification from `se` alone. The page now explicitly warns that agreement is diagnostic evidence, not an infallible one-line test.
+
+Academic Writing Toolkit was applied to representative passages from the relative, exclamative and `se` revisions. Each compact passage triggered only the tool's `short-paragraph` observation; no higher-level paragraph-logic issue was found. Because these are reference components, they remain intentionally concise rather than being expanded merely to satisfy a paragraph-length heuristic.
+
+### New cross-page QA rule
+
+For pronoun and clitic pages, verify:
+- `lo que` as a neuter relative construction versus gendered `el/la cual`;
+- `lo cual` as a relative form that may refer to a preceding proposition/situation;
+- interrogative versus exclamative function and tilde;
+- clitic position by verb form and polarity;
+- personal `a` independently from direct/indirect object classification;
+- `se` by construction, agreement and argument structure rather than by translation;
+- passive versus impersonal analyses where animate objects with personal `a` complicate a superficial agreement test.
+
+
+## Twentieth deep rewrite pass — 2026-09-23
+
+The twentieth pass performed a **relative-clause cross-page consistency audit** across `relative-pronouns.mdx`, `relative-clauses.mdx`, `relative-clauses-depth.mdx`, and `subordinate-clauses.mdx`. The main issue was not missing terminology but excessive compression of rules that could be read as categorical.
+
+The relative-clause pages were synchronized around four distinctions: **antecedent/reference**, **relative-element selection**, **prepositional government**, and **mood**. The earlier shortcut “неозначений антецедент → subjuntivo” was explicitly downgraded to a strong pedagogical tendency rather than a mechanical rule. The same principle is now visible on both the quick and deep relative-clause pages.
+
+The basic relative page also no longer presents `en que` as an error when the construction is grammatical. Its error section now focuses on genuine structural problems such as `todo lo que` and loss of the preposition required by `hablar con alguien`. Regional wording was narrowed to genre, register and frequency differences instead of an unsupported Spain/Americas split.
+
+The deep page was synchronized with the relative-pronoun page on `lo que` / `lo cual`, `cuyo`, preposition + relative element, and the interpretation of indicative/subjunctive. The subordinate-clause overview remains the higher-level map and should not contradict these more specific explanations.
+
+The Academic Writing Toolkit was applied to representative prose from the revised relative-clause pages. Its remaining short-paragraph observations are compatible with the project's compact reference format; no higher-level paragraph-logic defect was identified.
+
+### New cross-page QA rule
+
+Relative-clause QA must test the same sentence across all relevant pages and ask: **What is the antecedent? What syntactic role does the relative element fill? Which preposition is selected by the governing construction? Is the clause restrictive or explanatory? What reference/modality motivates the mood?** Any page that turns one of these dimensions into a universal shortcut should be revised to preserve the constructional analysis.
+
+
+## Twenty-first deep rewrite pass — 2026-09-23
+
+The twenty-first pass extended the cross-page audit from relative clauses into **questions, reported speech, conditional clauses, passive/impersonal se, hay/estar, and word order**. The purpose was to check whether pages that share the same constructions still describe them from compatible syntactic and discourse perspectives.
+
+The questions page was tightened around the distinction between **interrogative form, syntactic role, and information structure**. The page now explicitly demonstrates that a fronted interrogative can carry different syntactic roles (qué, a quién, con quién) and that Spanish questions cannot be reduced to obligatory subject–verb inversion. This keeps the page aligned with the word-order page and with the separate qué/cuál analysis.
+
+The passive-se page was refined to avoid suggesting that an agent is simply another optional complement of every se construction. The passive with ser readily permits an expressed por-agent, while the different se constructions must first be classified structurally. The examples Se venden casas, Se vive bien aquí, and Se entrevistó a los candidatos remain the core diagnostic set.
+
+The conditional and reported-speech pages were checked together. The conditional page correctly keeps the ordinary si-clause patterns separate from the broader phenomenon of sentences containing si. The reported-speech page keeps tense backshift contextual rather than mechanical and treats deictic expressions as part of the change in reference point. This prevents a learner from applying the conditional-page prohibition on futuro/condicional after si to unrelated embedded questions or reported clauses.
+
+The hay/estar page was checked against article/reference and noun-phrase pages. Its central distinction is maintained as a discourse-functional contrast: hay commonly introduces or asserts existence/availability, while estar locates an identified referent or describes a state. The page deliberately avoids reducing the contrast to “unknown versus known” as an absolute semantic rule.
+
+The word-order page was checked against questions, clitic placement and subject-pronoun omission. Its SVO description remains a neutral base rather than a fixed universal order; information structure, topicalization and focus can motivate other orders. Clitic position remains a more constrained subsystem and is delegated to the dedicated clitic page rather than being explained through general word order.
+
+Academic Writing Toolkit was run on representative prose from this pass. It flagged the compact size of the selected reference paragraphs but did not identify a higher-level paragraph-logic defect. The short units remain intentional because examples and constructional rules are designed for rapid retrieval.
+
+### New cross-page QA rule
+
+For sentence-structure QA, the same construction should be checked for compatibility across pages:
+- interrogative form and syntactic role must remain distinct from information structure;
+- si in conditional clauses must not be confused with interrogative si or reported questions;
+- passive se, impersonal se, and other se constructions must be classified by argument structure rather than by the surface form alone;
+- hay versus estar must remain a reference/existence/localization contrast, not an absolute known/unknown rule;
+- SVO must remain the neutral base, while clitic placement follows its own constructional constraints;
+- reported-speech tense choice must remain compatible with the sequence-of-tenses page without becoming a mechanical backshift rule.
+
+
+## Twenty-second deep rewrite pass — 2026-09-23
+
+The twenty-second pass focused on the interaction among **reported speech, sequence of tenses, conditional clauses, questions, and deictic reference**. The audit treated these as overlapping systems rather than as isolated pages.
+
+The reported-speech page was refined so that temporal backshift and deictic shift are explicitly related to a changed reference point without becoming one-to-one replacement rules. Indirect yes/no questions are distinguished from indirect wh-questions, and the page now states explicitly that *si* introduces the yes/no type while *dónde, qué, quién,* and related forms retain their interrogative function.
+
+The conditional page remains deliberately narrower: its prohibition of future or conditional forms applies to the standard conditional *si*-clause, not to every sentence in which *si* occurs. This distinction is important because *si* also introduces interrogative clauses and can therefore appear in constructions governed by other tense systems.
+
+The sequence-of-tenses page and reported-speech page were checked as a pair. The former describes temporal correlation; the latter describes a broader discourse transformation involving reference point, deixis, clause type and reported content. This prevents the common learner shortcut that treats reported speech as nothing more than tense backshift.
+
+Academic Writing Toolkit was applied to representative explanatory paragraphs from this pass. It flagged their compact length but found no higher-level paragraph-logic defect. The short paragraphs remain intentional reference units.
+
+### New cross-page QA rule
+
+When auditing reported speech and conditionals, verify separately:
+- the syntactic function of *si*;
+- whether a clause is conditional or interrogative;
+- temporal relation versus discourse reference point;
+- verb-tense correlation versus deictic shift;
+- direct versus indirect question punctuation;
+- *que + subjuntivo* in reported commands versus ordinary complement clauses.
+
+
+## Twenty-third deep rewrite pass — 2026-09-23
+
+A follow-up precision pass revisited the sequence-of-tenses and conditional overview pages after the reported-speech audit. The purpose was to eliminate residual ambiguity in the compact reference tables rather than introduce another broad rewrite.
+
+The sequence-of-tenses table now names the anteriority relation more explicitly: the present-oriented row can use presente de subjuntivo or an anterior form such as haya + participio, while the past/conditional perspective can use imperfecto de subjuntivo or pluscuamperfecto de subjuntivo. The explanatory prose now describes pluscuamperfecto de subjuntivo in terms of anteriority relative to a past reference point, rather than simply calling it a past form.
+
+The conditional overview was also narrowed so that the prohibition of condicional after si is explicitly scoped to the conditional clause. This reinforces the distinction between conditional si and interrogative si established in the previous pass.
+
+Academic Writing Toolkit was applied to representative prose from the revised pages. It returned only the expected short-paragraph observation for each compact reference block and no higher-level paragraph-logic defect.
+
+### Cross-page QA refinement
+
+For tense and conditional pages, QA must check the following separately:
+- absolute tense versus relative temporal relation;
+- anteriority versus simple pastness;
+- si as conditional conjunction versus interrogative conjunction;
+- conditional-clause morphology versus conditional forms elsewhere in the sentence;
+- reported-speech backshift versus the speaker's maintained present perspective.
+
+
+## Twenty-fourth precision rewrite pass — 2026-09-23
+
+The twenty-fourth pass moved the cross-page audit into the **adverb system**, concentrating on formation, semantic classification, position, degree modifiers, focus, and discourse stance. The objective was to remove residual shortcuts that could make a learner treat every adverb as a single positional or morphological class.
+
+The formation page now distinguishes productive **-mente** derivation from simple adverbs such as *bien, mal, mejor,* and *peor*. It explicitly states that *-mente* attaches to the feminine form when the adjective has gendered forms, while adjectives in *-e* or a consonant do not require a feminine alternant. Adverb position is presented as construction- and scope-sensitive rather than as a fixed slot.
+
+The type/classification page was synchronized with the formation page on **muy / mucho / tan / tanto**, while preserving the distinction between degree, quantity, manner, time and frequency. The previous regional wording was narrowed so that individual colloquial expressions are not presented as universal Latin-American replacements. The treatment of *quizá(s), tal vez,* and related probability adverbs remains context-sensitive rather than assigning one mood mechanically.
+
+Academic Writing Toolkit was applied to representative prose from the adverb rewrite. One selected formation paragraph received only the expected "short-paragraph" observation; the degree/quantity paragraph received no issue. No higher-level paragraph-logic defect was identified.
+
+### New cross-page QA rule
+
+For adverb pages, verify separately:
+- productive *-mente* formation versus lexical/simple adverbs;
+- feminine-base formation only where the adjective has gendered forms;
+- adverbial position versus scope/information structure;
+- *muy/mucho* and *tan/tanto* according to what they modify;
+- frequency/time/manner/degree classification without assuming one word has one immutable function;
+- probability adverbs with mood choice treated as context-sensitive;
+- regional colloquial expressions described as variants, not universal replacements.

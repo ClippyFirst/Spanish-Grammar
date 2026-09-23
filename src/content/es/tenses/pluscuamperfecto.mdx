@@ -1,89 +1,111 @@
 ---
 language: es
 category: tenses
-title_uk: Давноминулий час (pluscuamperfecto)
+title_uk: "Pretérito pluscuamperfecto: передування в минулому"
 title_es: Pretérito pluscuamperfecto
-title_en: Past perfect (pluperfect)
-short_description: "«Я вже поїв, коли він прийшов»: дія, завершена РАНІШЕ за іншу минулу дію. había + дієприкметник. Маркери ya/todavía no, різниця з perfecto і indefinido."
+title_en: Pluperfect
+short_description: "había + participio: дія або стан, які вже відбулися до певної точки в минулому; відношення до indefinido та imperfecto."
 order: 5
-popular: false
-recently_added: true
 keywords:
   - pluscuamperfecto
-  - past perfect
+  - había hecho
   - pluperfect
-  - había comido
-  - haber
-  - давноминулий
-  - вже
+  - past perfect
 related:
   - preterito-indefinido
   - preterito-imperfecto
   - preterito-perfecto
-cefr: b1
-updated: "2026-09-13"
+updated: "2026-09-23"
 ---
 
-**Pluscuamperfecto** — «минуле в минулому»: дія завершилась раніше за іншу минулу дію.
+**Pretérito pluscuamperfecto** локалізує ситуацію **перед іншою минулою точкою**. Українська часто передає це просто минулим часом із *вже, раніше, до того*, тоді як іспанська має окрему часову форму.
 
-## Одне речення
+## Базова модель
 
-*Cuando llegué, ya **había comido**.* — «Коли я прийшов, він **вже поїв**» (поїв раніше, ніж я прийшов).
+*Cuando llegué, Ana ya había salido.*  
+Коли я прийшов, Ана вже пішла.
+
+Послідовність:
+
+**Ana salió → я прийшов.**
+
+*Había salido* показує, що вихід уже відбувся відносно минулої точки *llegué*.
 
 ## Утворення
 
-<Formula type="affirm" label="Pluscuamperfecto">
-  <Token type="aux">haber в imperfecto (había, habías...)</Token> + <Token type="part">дієприкметник (-ado / -ido)</Token>
-</Formula>
+**haber в imperfecto + participio**
 
-<Conjugation
-  caption="haber в imperfecto + comido"
-  headers={["haber", "comer"]}
-  rows={[
-    { label: "yo", cells: ["había", "comido"] },
-    { label: "tú", cells: ["habías", "comido"] },
-    { label: "él / ella / usted", cells: ["había", "comido"] },
-    { label: "nosotros", cells: ["habíamos", "comido"] },
-    { label: "vosotros", cells: ["habíais", "comido"] },
-    { label: "ellos / ustedes", cells: ["habían", "comido"] },
-  ]}
-/>
+*había hablado*  
+*habías comido*  
+*habíamos vivido*  
+*habían escrito*
 
-## Коли вживати
+| Особа | haber |
+|---|---|
+| yo | había |
+| tú | habías |
+| él/ella/usted | había |
+| nosotros/as | habíamos |
+| vosotros/as | habíais |
+| ellos/as/ustedes | habían |
 
-- **Передування в минулому:** *Ya había salido cuando llamaste.* (Він уже вийшов, коли ти подзвонив.)
-- **Скасована дія / несправджене очікування:** *Había comprado entradas, pero cancelaron el concierto.*
-- **Ввічливе пом'якшення докору:** *Te había dicho que no.* (Я ж тобі казав.)
+Дієприкметник у складних часах з **haber** не узгоджується з підметом:
 
-## Маркери часу
+*Ana había llegado*, не *había llegada*.
 
-**ya, todavía no, antes de, cuando, después de que, nunca antes**.
+## Не тільки «дві завершені дії»
 
-## Типові помилки україномовних
+Важливим є **відношення між часовими точками**, а не просто завершеність.
+
+*Ya había vivido allí durante cinco años cuando se mudó.*  
+Вона вже прожила там п'ять років, коли переїхала.
+
+Тут pluscuamperfecto може описувати стан/тривалість, яка існувала до іншої минулої події.
+
+## З якою формою минулого поєднується
+
+З *indefinido*:
+
+*Cuando llegamos, la película ya había empezado.*
+
+З *imperfecto*:
+
+*Cuando llegábamos a casa, ya había oscurecido.*
+
+Вибір другої форми залежить від того, як мовець структурує саму минулу сцену.
+
+## Типові помилки
 
 <Mistake
   bad="Cuando llegué, ya comí."
   good="Cuando llegué, ya había comido."
-  why="«Вже» + раніша дія в минулому — pluscuamperfecto. Простий comí означав би дві одночасні дії, а не передування."
+  why="Якщо *поїв* відбулося до іншої минулої точки *прийшов*, pluscuamperfecto явно кодує це передування."
 />
 
-<MinPair
-  a={{ es: "Ya he comido (сьогодні).", uk: "Я вже поїв — результат зараз (perfecto)." }}
-  b={{ es: "Ya había comido (коли ти прийшов).", uk: "Я вже поїв — раніше за інше минуле (pluscuamperfecto)." }}
+<Mistake
+  bad="Ana había llegada."
+  good="Ana había llegado."
+  why="У складних часах із *haber* participio не узгоджується з родом і числом підмета."
 />
 
-<Note kind="uk" title="Для україномовних">
-  Українська передає передування словами «вже/раніше» + звичайний минулий час.
-  Іспанська вимагає окремий час: якщо є дві минулі дії і одна раніша — раніша йде в pluscuamperfecto.
-</Note>
+## Не плутайте з pretérito perfecto
 
-<Note kind="region" title="Регіональна нота">
-  Форми й логіка однакові в усьому іспаномовному світі.
-</Note>
+*Ya he comido.* — Я вже поїв; часову рамку мовець пов'язує з теперішнім.
+
+*Ya había comido cuando llegaste.* — Я вже поїв до моменту, коли ти прийшов.
+
+Обидві форми мають **haber + participio**, але допоміжний час визначає часову точку відліку.
+
+## Для україномовного учня
+
+Думайте не «це час для дуже давнього минулого», а:
+
+> **Яка минула точка є точкою відліку? Що відбулося до неї?**
+
+Якщо відлік у минулому й подія вже передує йому — pluscuamperfecto.
 
 ## Пов'язані теми
 
-- [Pretérito indefinido](/es/tenses/preterito-indefinido/) — точка, від якої відлічують «раніше».
-- [Imperfecto](/es/tenses/preterito-imperfecto/) — фон, на якому сталося «вже».
-- [Pretérito perfecto](/es/tenses/preterito-perfecto/) — haber + дієприкметник у теперішній рамці.
-- [Порівняння минулих часів](/comparisons/past-tenses/) — три часи поруч.
+- [Pretérito indefinido](/es/tenses/preterito-indefinido/).
+- [Pretérito imperfecto](/es/tenses/preterito-imperfecto/).
+- [Pretérito perfecto](/es/tenses/preterito-perfecto/).

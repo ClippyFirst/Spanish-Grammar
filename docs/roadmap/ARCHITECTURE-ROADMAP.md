@@ -15,7 +15,7 @@
 - [ ] Verify CI branch/event behavior.
 
 ## Wave C — Low-risk alignment
-- [ ] Remove only evidence-backed dead code/files.
+- [ ] Remove only evidence-backed dead code/files.\n- [x] Fix stale hardcoded homepage corpus metadata.
 - [ ] Consolidate real duplicated helpers.
 - [ ] Align physical folders only when discoverability improves without churn.
 - [ ] Strengthen deterministic QA for documented invariants.

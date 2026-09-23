@@ -1,35 +1,12 @@
 ---
 // Comparisons index.
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { withBase } from '../../utils/content';
+import { comparisonUrl, sortComparisons } from '../../utils/comparisons';
 
-const comparisons = [
-  {
-    title: 'Ser / Estar',
-    url: '/comparisons/ser-estar/',
-    desc: 'Два дієслова «бути»: характеристика проти стану.',
-  },
-  {
-    title: 'Por / Para',
-    url: '/comparisons/por-para/',
-    desc: 'Прийменники, які україномовні найчастіше плутають.',
-  },
-  {
-    title: 'Минулі часи',
-    url: '/comparisons/past-tenses/',
-    desc: 'Pretérito perfecto, indefinido, imperfecto — коли що.',
-  },
-  {
-    title: 'Індикатив / Субхунктив',
-    url: '/comparisons/indicative-subjunctive/',
-    desc: 'Реальність проти ставлення: мова фактів проти мови думок.',
-  },
-  {
-    title: 'Артиклі',
-    url: '/comparisons/articles/',
-    desc: 'Означений і неозначений артикль, де в українській їх немає.',
-  },
-];
+const comparisons = sortComparisons(await getCollection('comparisons'));
+
 ---
 <BaseLayout
   title="Порівняння — іспанська граматика · GrammarWay ES"
@@ -53,9 +30,9 @@ const comparisons = [
     <ul class="topic-list comparison-index-grid">
       {comparisons.map((c) => (
         <li>
-          <a class="card-topic" href={withBase(c.url)}>
-            <span class="t-es">{c.title}</span>
-            <span class="t-uk">{c.desc}</span>
+          <a class="card-topic" href={comparisonUrl(c.id)}>
+            <span class="t-es">{c.data.title}</span>
+            <span class="t-uk">{c.data.description}</span>
           </a>
         </li>
       ))}

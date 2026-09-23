@@ -74,7 +74,7 @@ The current component/layout/script files are connected to the application archi
 
 ## Remaining work
 
-1. Run the new PR QA workflow against this branch/PR.
+1. PR QA completed successfully on this branch; keep the workflow as the pre-merge gate.
 2. Complete browser/manual accessibility and responsive smoke testing.
 3. Review the comparison subsystem as a separate migration decision.
 4. Apply the content model and source discipline progressively during the editorial rewrite.

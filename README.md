@@ -50,7 +50,7 @@ npm run qa
 6. Design audits — токени, accessibility, responsive і компоненти.
 7. Production build + Pagefind.
 
-CI запускає той самий `npm run qa`, щоб локальна та production-перевірка не розходилися.
+CI запускає той самий `npm run qa`: pull requests перевіряються окремим QA workflow, а `main` — перед production-деплоєм. Так локальна, review та production-перевірка не розходяться.
 
 ## Структура
 

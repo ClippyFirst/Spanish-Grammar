@@ -1,0 +1,1879 @@
+# ЗАВДАННЯ: СТВОРИТИ ПОВНУ КАРТУ ГРАМАТИЧНИХ ТЕМ ІСПАНСЬКОЇ МОВИ
+
+Сформуй максимально повний, системний і деталізований перелік граматичних тем іспанської мови — від найелементарніших конструкцій до найскладніших нюансів, які можуть бути релевантними для рівня C2.
+
+Це НЕ має бути навчальний план, курс або програма за рівнями.
+
+Це має бути **повна карта граматики іспанської мови**, яку можна використати як основу для великого довідника.
+
+Не групуй теми за A1/A2/B1/B2/C1/C2 у фінальному переліку. Рівні можуть бути використані лише внутрішньо для визначення глибини охоплення, але сам список має бути єдиною системою.
+
+## ГОЛОВНИЙ ПРИНЦИП
+
+Потрібно охопити не лише «основні правила», а **всю практично значущу граматичну систему іспанської**, включно з:
+
+* базовими структурами;
+* морфологією;
+* синтаксисом;
+* словозміною;
+* дієслівною системою;
+* узгодженням;
+* порядком слів;
+* службовими словами;
+* складними реченнями;
+* підрядністю;
+* умовними конструкціями;
+* непрямою мовою;
+* займенниковими конструкціями;
+* тонкими відмінностями між близькими конструкціями;
+* конструкціями писемної та розмовної мови;
+* емфатичними конструкціями;
+* конструкціями з особливим порядком слів;
+* випадками, де зміна маленького слова або позиції змінює значення;
+* нормативними та поширеними варіантами;
+* регіональними граматичними відмінностями;
+* високорівневими конструкціями, які часто не входять до базових курсів.
+
+Не зупиняйся на тому, що зазвичай називають «шкільною граматикою».
+
+Наприклад, потрібно охоплювати не тільки:
+
+> Él escucha eso.
+
+а й такі явища, як:
+
+> Él sí escucha eso.
+
+тобто емфатичне / контрастивне `sí`, яке передає значення на кшталт «він таки це слухає / він справді це слухає / він-то це слухає».
+
+Так само необхідно охоплювати інші подібні мікроконструкції, якщо вони є частиною граматичної або синтаксичної системи мови.
+
+---
+
+# 1. ОСНОВИ ІСПАНСЬКОЇ ГРАМАТИКИ
+
+* поняття слова, морфеми, кореня, основи, закінчення
+* частини мови
+* змінні та незмінні частини мови
+* граматичний рід
+* граматичне число
+* особа
+* відмінність між родом і природною статтю
+* однина
+* множина
+* граматична особа
+* узгодження
+* базова структура іспанського речення
+* підмет + присудок
+* дієслово як центр речення
+* додаток
+* непрямий додаток
+* обставина
+* означення
+* предикатив
+* головне та другорядне речення
+* просте та складне речення
+* ствердження
+* заперечення
+* питання
+* наказ
+* вигук
+* базовий порядок слів
+
+# 2. АЛФАВІТ, ОРФОГРАФІЯ І ФОНЕТИЧНО-ГРАМАТИЧНІ ЯВИЩА
+
+* алфавіт
+* назви літер
+* правила читання
+* наголос
+* склад
+* наголошений склад
+* ненаголошені склади
+* дифтонги
+* трифтонги
+* hiatus
+* поділ на склади
+* графічний наголос
+* правила акцентуації
+* загальні правила tilde
+* наголос у формах дієслів
+* наголос у займенникових формах
+* діакритичні наголоси
+* `qué/que`
+* `cómo/como`
+* `cuándo/cuando`
+* `dónde/donde`
+* `quién/quien`
+* `cuál/cual`
+* `cuánto/cuanto`
+* `sí/si`
+* `tú/tu`
+* `él/el`
+* `mí/mi`
+* `sé/se`
+* `dé/de`
+* `más/mas`
+* `aún/aun`
+* `sólo/solo`
+* орфографічні зміни при відмінюванні
+* `c/qu`
+* `g/gu`
+* `g/j`
+* `c/z`
+* `b/v`
+* `y/ll`
+* `r/rr`
+* `h`
+* `x`
+* `cc`
+* `sc`
+* `ñ`
+* написання великих літер
+* пунктуація
+* кома
+* крапка
+* двокрапка
+* крапка з комою
+* тире
+* дужки
+* лапки
+* знак питання
+* знак оклику
+* подвійні `¿ ?`
+* подвійні `¡ !`
+* абревіатури
+* скорочення
+
+# 3. ІМЕННИКИ
+
+* загальні та власні іменники
+* конкретні та абстрактні
+* злічувані та незлічувані
+* колективні
+* речовинні
+* одушевлені та неодухотворені
+* граматичний рід
+* чоловічий рід
+* жіночий рід
+* зміна роду
+* іменники спільного роду
+* іменники подвійного роду
+* іменники омонімічного роду
+* іменники зі змінним значенням залежно від роду
+* професії та назви осіб
+* жіночі форми професій
+* особливі випадки роду
+* `el agua`, `el águila` та подібні випадки
+* множина
+* утворення множини
+* множина після голосної
+* множина після приголосної
+* слова на `-s`
+* слова на `-x`
+* слова іншомовного походження
+* незмінювані іменники
+* неправильна множина
+* множинні іменники
+* іменники, що вживаються переважно в однині
+* іменники, що вживаються переважно в множині
+* зміна значення в однині/множині
+* субстантивація
+* складні іменники
+* утворення іменників
+* суфіксація
+* префіксація
+* зменшувальні форми
+* збільшувальні форми
+* пестливі форми
+* пейоративні форми
+
+# 4. АРТИКЛІ
+
+* означений артикль
+* неозначений артикль
+* нульовий артикль
+* `el/la/los/las`
+* `un/una/unos/unas`
+* вживання означеного артикля
+* вживання неозначеного артикля
+* відсутність артикля
+* артикль із власними назвами
+* артикль із географічними назвами
+* артикль із назвами країн
+* артикль із містами
+* артикль із мовами
+* артикль із професіями
+* артикль з абстрактними поняттями
+* артикль із загальними поняттями
+* артикль після `ser`
+* артикль після `tener`
+* артикль після прийменників
+* артикль у сталих виразах
+* артикль і частини тіла
+* артикль і дні тижня
+* артикль і пори року
+* артикль у назвах мов
+* `lo` як нейтральний артикль
+* `lo + adjective`
+* `lo + participle`
+* `lo + que`
+* `lo que`
+* `lo cual`
+* `lo de`
+* `lo mismo`
+* `lo mejor`
+* `lo importante`
+* контраст `el/la` та `lo`
+* особливі випадки `el agua`, `el hambre`, `el alma`
+* узгодження прикметника при таких іменниках
+* артикль та узагальнення
+* артикль та конкретизація
+
+# 5. ПРИКМЕТНИКИ
+
+* узгодження роду
+* узгодження числа
+* базові закінчення
+* прикметники на `-o/-a`
+* прикметники на приголосну
+* незмінювані прикметники
+* прикметники на `-e`
+* утворення жіночого роду
+* утворення множини
+* позиція прикметника
+* прикметник перед іменником
+* прикметник після іменника
+* зміна значення залежно від позиції
+* `un gran hombre / un hombre grande`
+* `un viejo amigo / un amigo viejo`
+* `un pobre hombre / un hombre pobre`
+* суб'єктивна та об'єктивна характеристика
+* атрибутивне вживання
+* предикативне вживання
+* прикметник як іменник
+* субстантивація прикметників
+* абсолютний суперлатив
+* відносний суперлатив
+* порівняння
+* `más... que`
+* `menos... que`
+* `tan... como`
+* `tanto... como`
+* `mejor`
+* `peor`
+* `mayor`
+* `menor`
+* неправильні ступені порівняння
+* `muy`
+* `mucho`
+* `poco`
+* `bastante`
+* `demasiado`
+* прикметники з префіксами
+* складні прикметники
+* дієприкметникові прикметники
+* прикметники з двома значеннями залежно від позиції
+* стилістичний порядок кількох прикметників
+* узгодження кількох прикметників
+* прикметники з колективним значенням
+
+# 6. ЗАЙМЕННИКИ
+
+* система займенників
+* особові займенники
+* підметові займенники
+* додаткові займенники
+* наголошені займенники
+* ненаголошені займенники
+* `yo`
+* `tú`
+* `él`
+* `ella`
+* `usted`
+* `nosotros`
+* `vosotros`
+* `ellos`
+* `ustedes`
+* пропуск підметового займенника
+* експліцитний підмет
+* контрастивний підмет
+* емфатичний підмет
+* `tú` / `usted`
+* `vosotros` / `ustedes`
+* `vos`
+* voseo
+* особові займенники після прийменників
+* `mí`
+* `ti`
+* `sí`
+* `conmigo`
+* `contigo`
+* `consigo`
+* прямий додаток
+* `me/te/lo/la/nos/os/los/las`
+* непрямий додаток
+* `me/te/le/nos/os/les`
+* дублювання непрямого додатка
+* `leísmo`
+* `laísmo`
+* `loísmo`
+* два додатки одночасно
+* `se lo`
+* `se la`
+* `se los`
+* `se las`
+* порядок двох займенників
+* позиція займенників
+* займенники перед дієсловом
+* займенники після інфінітива
+* займенники після герундія
+* займенники з наказовим способом
+* наголос при приєднанні займенників
+* рефлексивні займенники
+* взаємні займенники
+* `nos`
+* `se`
+* зворотні конструкції
+* взаємні конструкції
+* демонстративні займенники
+* `este/ese/aquel`
+* нейтральні демонстративи
+* `esto/eso/aquello`
+* присвійні займенники
+* `mío/tuyo/suyo`
+* короткі присвійні форми
+* довгі присвійні форми
+* неозначені займенники
+* `alguien`
+* `nadie`
+* `algo`
+* `nada`
+* `alguno`
+* `ninguno`
+* `cualquiera`
+* `todo`
+* `otro`
+* `mismo`
+* `cada`
+* `ambos`
+* `varios`
+* питальні займенники
+* відносні займенники
+* `que`
+* `el que`
+* `el cual`
+* `quien`
+* `cuyo`
+* `cuanto`
+* `donde`
+* `cuando`
+* `como`
+* нейтральні займенникові конструкції
+
+# 7. ЧИСЛІВНИКИ
+
+* кількісні числівники
+* порядкові
+* дробові
+* множинні
+* колективні
+* написання чисел
+* `uno`
+* `un`
+* `una`
+* узгодження числівників
+* числа з іменниками
+* великі числа
+* мільйон
+* мільярд
+* десяткові дроби
+* відсотки
+* дати
+* роки
+* століття
+* математичні вирази
+* час
+* тривалість
+* приблизна кількість
+* `unos/unas`
+* `unos cuantos`
+* `decenas de`
+* `cientos de`
+* `miles de`
+
+# 8. ПРИСЛІВНИКИ
+
+* утворення прислівників
+* `-mente`
+* подвійні прислівникові конструкції
+* позиція прислівника
+* прислівники способу
+* місця
+* часу
+* частоти
+* кількості
+* ступеня
+* впевненості
+* сумніву
+* твердження
+* заперечення
+* `sí`
+* `también`
+* `tampoco`
+* `no`
+* `nunca`
+* `jamás`
+* `ya`
+* `todavía`
+* `aún`
+* `siempre`
+* `casi`
+* `solo`
+* `apenas`
+* `incluso`
+* `hasta`
+* `justo`
+* `exactamente`
+* `precisamente`
+* `quizá(s)`
+* `acaso`
+* `probablemente`
+* `seguramente`
+* прислівники на початку речення
+* прислівники в середині речення
+* прислівники наприкінці
+* групи прислівників
+* ступінь прислівників
+* порівняння прислівників
+
+# 9. ПРИЙМЕННИКИ
+
+* базова система прийменників
+* `a`
+* `ante`
+* `bajo`
+* `con`
+* `contra`
+* `de`
+* `desde`
+* `durante`
+* `en`
+* `entre`
+* `hacia`
+* `hasta`
+* `mediante`
+* `para`
+* `por`
+* `según`
+* `sin`
+* `sobre`
+* `tras`
+* `versus`
+* прийменникові конструкції
+* прийменник + іменник
+* прийменник + займенник
+* прийменник + інфінітив
+* прийменники після дієслів
+* дієслово + конкретний прийменник
+* прикметник + прийменник
+* іменник + прийменник
+* прийменникове керування
+* пропуск прийменника
+* неправильний прийменник
+* `a` для напрямку
+* `a` для часу
+* `a` у способі дії
+* personal `a`
+* `de` як походження
+* `de` як належність
+* `de` як матеріал
+* `de` як характеристика
+* `en` для місця
+* `en` для транспорту
+* `por`
+* `para`
+* `por` у причинах
+* `para` у цілях
+* `por` у тривалості
+* `para` у дедлайнах
+* `por` у маршруті
+* `para` у напрямку
+* `por` як обмін
+* `por` як заміна
+* `para` як адресат
+* складені прийменники
+* `a partir de`
+* `a pesar de`
+* `a causa de`
+* `en lugar de`
+* `por medio de`
+* `de acuerdo con`
+* `frente a`
+* `junto a`
+* `debido a`
+* `gracias a`
+* `acerca de`
+* `en torno a`
+
+# 10. СПОЛУЧНИКИ
+
+* сурядні сполучники
+* `y/e`
+* `o/u`
+* `ni`
+* `pero`
+* `sino`
+* `sino que`
+* `mas`
+* `aunque`
+* `porque`
+* `pues`
+* `ya que`
+* підрядні сполучники
+* `que`
+* `si`
+* `como`
+* `cuando`
+* `mientras`
+* `aunque`
+* `antes de que`
+* `después de que`
+* `hasta que`
+* `para que`
+* `sin que`
+* `a menos que`
+* `con tal de que`
+* `siempre que`
+* `en caso de que`
+* `a condición de que`
+* `a no ser que`
+* `de modo que`
+* `de manera que`
+* `por más que`
+* `por mucho que`
+* `a pesar de que`
+* сполучники з індикативом
+* сполучники із суб'юнктивом
+* зміна способу після сполучника
+* `que` vs `de que`
+* dequeísmo
+* queísmo
+* складені сполучники
+
+# 11. ДІЄСЛОВО: ЗАГАЛЬНА СИСТЕМА
+
+* інфінітив
+* основа дієслова
+* закінчення
+* три дієвідміни
+* `-ar`
+* `-er`
+* `-ir`
+* особові закінчення
+* час
+* спосіб
+* особа
+* число
+* стан
+* видове значення
+* доконаність/недоконаність як семантична категорія
+* перехідні дієслова
+* неперехідні
+* безособові
+* зв'язкові
+* допоміжні
+* модальні
+* прономінальні
+* рефлексивні
+* взаємні
+* неправильні
+* дефективні
+* однокореневі дієслова
+* чергування кореневої голосної
+* `e → ie`
+* `o → ue`
+* `e → i`
+* інші чергування
+* орфографічні зміни
+* `c → qu`
+* `g → gu`
+* `z → c`
+* неправильні основи
+* неправильні закінчення
+
+# 12. ОСНОВНІ ДІЄСЛОВА
+
+* `ser`
+* `estar`
+* `haber`
+* `tener`
+* `hacer`
+* `ir`
+* `venir`
+* `decir`
+* `poder`
+* `querer`
+* `saber`
+* `conocer`
+* `poner`
+* `salir`
+* `traer`
+* `dar`
+* `ver`
+* `oír`
+* `sentir`
+* `pedir`
+* `dormir`
+* `morir`
+* `seguir`
+* `servir`
+* `jugar`
+* `leer`
+* `creer`
+* `caer`
+* `construir`
+* `huir`
+* `valer`
+* `caber`
+* `conducir`
+* системи неправильних дієслів
+
+# 13. SER / ESTAR / HABER / TENER
+
+* `ser`
+* `estar`
+* `haber`
+* `tener`
+* ідентифікація
+* характеристика
+* походження
+* професія
+* матеріал
+* належність
+* місце
+* стан
+* результат
+* тимчасовий стан
+* постійна характеристика
+* подія та місце події
+* `ser` + adjective
+* `estar` + adjective
+* зміна значення прикметника
+* `ser` + participle
+* `estar` + participle
+* `ser` пасив
+* `estar` результативний стан
+* `hay`
+* `hay` vs `estar`
+* `hay` vs `tener`
+* `haber` як допоміжне
+* `haber` як безособове
+* узгодження/неузгодження `haber`
+* `hay que`
+* `tener que`
+* `tener de`
+* `tener + participle`
+
+# 14. INDICATIVO
+
+* presente
+* pretérito perfecto compuesto
+* pretérito perfecto simple / indefinido
+* pretérito imperfecto
+* pluscuamperfecto
+* pretérito anterior
+* futuro simple
+* futuro perfecto
+* condicional simple
+* condicional compuesto
+* повна система часів indicativo
+* утворення кожного часу
+* неправильні форми
+* допоміжні дієслова
+* часові маркери
+* вибір часу
+* співвідношення часів
+* послідовність часів
+* одночасність
+* передування
+* наступність
+* завершена дія
+* незавершена дія
+* фонова дія
+* звичка
+* повторювана дія
+* результат
+* досвід
+* конкретний момент
+* тривалість
+* зміна стану
+
+# 15. PRESENTE
+
+* регулярні форми
+* неправильні форми
+* stem-changing verbs
+* presente de indicativo
+* теперішня дія
+* звичка
+* загальна істина
+* постійна характеристика
+* майбутнє значення
+* історичний теперішній
+* наказове/інструктивне значення
+* теперішнє у розповіді
+* presente + desde
+* presente + hace
+* presente habitual
+* presente gnómico
+
+# 16. PRETÉRITO PERFECTO COMPUESTO
+
+* утворення
+* `haber + participio`
+* значення завершеної дії
+* досвід
+* результат
+* період, який ще триває
+* `hoy`
+* `esta semana`
+* `este año`
+* `ya`
+* `todavía no`
+* відмінності регіонального вживання
+
+# 17. PRETÉRITO INDEFINIDO
+
+* утворення
+* регулярні форми
+* неправильні форми
+* неправильні основи
+* завершена дія
+* послідовність подій
+* конкретний завершений період
+* одинична дія
+* повторювана завершена дія
+* історична розповідь
+* часові маркери
+* контраст із perfecto
+* контраст із imperfecto
+
+# 18. IMPERFECTO
+
+* утворення
+* неправильні форми
+* фон
+* опис
+* звичка
+* повторення
+* незавершеність
+* одночасність
+* вік
+* час
+* погода
+* контекст
+* контраст із indefinido
+* контраст `era/fue`
+* контраст `estaba/estuvo`
+* imperfecto narrativo
+* стилістичне використання
+
+# 19. PLUSCUAMPERFECTO
+
+* утворення
+* `había + participio`
+* дія до іншої минулої дії
+* anterioridad
+* послідовність минулих подій
+* непряма мова
+* умовні конструкції
+* розповідний стиль
+
+# 20. PRETÉRITO ANTERIOR
+
+* утворення
+* функція
+* `hube/hubiste/... + participio`
+* часові конструкції
+* літературне/формальне вживання
+* сучасне обмежене використання
+
+# 21. FUTURO
+
+* futuro simple
+* утворення
+* неправильні основи
+* майбутня дія
+* прогноз
+* обіцянка
+* наказ
+* припущення про теперішнє
+* epistemic future
+* `¿Qué será?`
+* майбутнє в умовних конструкціях
+
+# 22. FUTURO PERFECTO
+
+* утворення
+* дія, завершена до моменту в майбутньому
+* припущення про минуле
+* epistemic future
+* послідовність часів
+
+# 23. CONDICIONAL
+
+* condicional simple
+* condicional compuesto
+* утворення
+* неправильні основи
+* гіпотеза
+* ввічливість
+* припущення
+* майбутнє в минулому
+* reported speech
+* невиконана умова
+* контрфактичність
+* condicional de rumor
+* condicional periodístico
+* стилістичні функції
+
+# 24. SUBJUNTIVO
+
+* поняття modo subjuntivo
+* presente de subjuntivo
+* imperfecto de subjuntivo
+* perfecto de subjuntivo
+* pluscuamperfecto de subjuntivo
+* утворення
+* неправильні форми
+* дві форми imperfecto
+* `-ra`
+* `-se`
+* вибір `-ra/-se`
+* subjuntivo після бажання
+* волі
+* наказу
+* емоції
+* оцінки
+* сумніву
+* заперечення
+* можливості
+* необхідності
+* безособових конструкцій
+* `que`
+* `para que`
+* `aunque`
+* `cuando`
+* `antes de que`
+* `después de que`
+* `hasta que`
+* `sin que`
+* `a menos que`
+* `como si`
+* `ojalá`
+* `quizá(s)`
+* `tal vez`
+* відносні речення із суб'юнктивом
+* невизначений референт
+* заперечений референт
+* суперлатив + subjuntivo
+* єдиність/оцінка + subjuntivo
+* `lo que` + subjuntivo
+* subjuntivo після заперечення
+* subjuntivo після `no creer`
+* subjuntivo після `no pensar`
+* коли subjuntivo НЕ використовується
+* indicativo vs subjuntivo
+* зміна значення через indicativo/subjuntivo
+* subjuntivo у формальній мові
+* subjuntivo у розмовній мові
+* майбутнє значення subjuntivo
+* imperfecto de subjuntivo у минулому
+* pluscuamperfecto de subjuntivo у контрфактичних конструкціях
+
+# 25. IMPERATIVO
+
+* affirmative imperative
+* negative imperative
+* tú
+* usted
+* vosotros
+* ustedes
+* vos
+* неправильні форми
+* imperative + pronouns
+* позиція займенників
+* наголос із займенниками
+* наказ
+* прохання
+* порада
+* інструкція
+* застереження
+* `no + subjuntivo`
+* непрямий наказ
+* `que + subjuntivo`
+* `a + infinitivo`
+* розмовні наказові конструкції
+
+# 26. НЕОСОБОВІ ФОРМИ ДІЄСЛОВА
+
+* infinitivo
+* infinitivo simple
+* infinitivo compuesto
+* infinitive clauses
+* `al + infinitivo`
+* `antes de + infinitivo`
+* `después de + infinitivo`
+* `para + infinitivo`
+* `sin + infinitivo`
+* `por + infinitivo`
+* gerundio
+* gerundio simple
+* gerundio compuesto
+* progressive constructions
+* правильне вживання gerundio
+* неправильне вживання gerundio
+* participio
+* regular participles
+* irregular participles
+* double participles
+* participle as adjective
+* participle in compound tenses
+
+# 27. ДІЄСЛІВНІ ПЕРИФРАЗИ
+
+* `ir a + infinitivo`
+* `estar a punto de + infinitivo`
+* `tener que + infinitivo`
+* `tener de + infinitivo`
+* `haber que + infinitivo`
+* `deber + infinitivo`
+* `deber de + infinitivo`
+* `poder + infinitivo`
+* `querer + infinitivo`
+* `saber + infinitivo`
+* `soler + infinitivo`
+* `acabar de + infinitivo`
+* `volver a + infinitivo`
+* `dejar de + infinitivo`
+* `empezar a + infinitivo`
+* `comenzar a + infinitivo`
+* `ponerse a + infinitivo`
+* `llegar a + infinitivo`
+* `terminar de + infinitivo`
+* `estar + gerundio`
+* `seguir + gerundio`
+* `continuar + gerundio`
+* `llevar + gerundio`
+* `andar + gerundio`
+* `venir + gerundio`
+* `ir + gerundio`
+* `tener + participio`
+* `llevar + participio`
+* `quedar + participio`
+* значення аспектуальних перифраз
+* початок дії
+* завершення
+* тривалість
+* повторення
+* припинення
+* результат
+* наближення
+* обов'язок
+* можливість
+* звичка
+
+# 28. REFLEXIVE / PRONOMINAL VERBS
+
+* рефлексивні дієслова
+* `lavarse`
+* `vestirse`
+* взаємні конструкції
+* прономінальні дієслова
+* зміна значення з `se`
+* `ir / irse`
+* `dormir / dormirse`
+* `llevar / llevarse`
+* `comer / comerse`
+* `beber / beberse`
+* `quedar / quedarse`
+* `volver / volverse`
+* `poner / ponerse`
+* `hacer / hacerse`
+* `acordar / acordarse`
+* `olvidar / olvidarse`
+* лексичне `se`
+* аспектуальне `se`
+
+# 29. GUSTAR ТА ПОДІБНІ КОНСТРУКЦІЇ
+
+* `gustar`
+* `encantar`
+* `interesar`
+* `doler`
+* `molestar`
+* `faltar`
+* `parecer`
+* `quedar`
+* `importar`
+* `preocupar`
+* `sorprender`
+* `aburrir`
+* `fascinar`
+* непрямий додаток
+* порядок компонентів
+* `me gusta`
+* `me gustan`
+* інфінітив після `gustar`
+* підрядне речення після `gustar`
+* емфатичне `a mí`
+* `a mí me`
+* узгодження дієслова
+
+# 30. PERSONAL A
+
+* `a` перед людьми
+* `a` перед конкретними тваринами
+* `a` перед персоніфікованими об'єктами
+* відсутність personal `a`
+* невизначений людський об'єкт
+* `buscar a`
+* `tener a`
+* `ver a`
+* `conocer a`
+* personal `a` та займенники
+* personal `a` та passive
+* personal `a` та порядок слів
+
+# 31. SE
+
+* рефлексивне `se`
+* взаємне `se`
+* прономінальне `se`
+* безособове `se`
+* пасивне `se`
+* `se` як заміна `le/les`
+* `se lo`
+* `se la`
+* `se los`
+* `se las`
+* aspectual `se`
+* accidental `se`
+* `se me cayó`
+* `se me olvidó`
+* `se` з непередбачуваною подією
+* impersonal `se`
+* pasiva refleja
+* відмінності між ними
+* узгодження при pasiva refleja
+* `se vende`
+* `se venden`
+* `se busca`
+* `se buscan`
+* `se` у розмовній мові
+* `se` у складних конструкціях
+
+# 32. ЗАПЕРЕЧЕННЯ
+
+* `no`
+* просте заперечення
+* подвійне заперечення
+* `no... nunca`
+* `no... nada`
+* `no... nadie`
+* `no... tampoco`
+* `no... jamás`
+* negative concord
+* позиція негативного слова
+* `nadie`
+* `nada`
+* `ninguno`
+* `nunca`
+* `jamás`
+* `tampoco`
+* `ni`
+* `ni... ni`
+* `no solo... sino también`
+* заперечення перед дієсловом
+* заперечення після дієслова
+* емфатичне заперечення
+* заперечення інфінітива
+* заперечення gerundio
+* заперечення subjuntivo
+* заперечення imperative
+
+# 33. ПИТАННЯ
+
+* загальні питання
+* спеціальні питання
+* `qué`
+* `quién`
+* `cuál`
+* `cuánto`
+* `cómo`
+* `cuándo`
+* `dónde`
+* `por qué`
+* `para qué`
+* `cómo de`
+* питання без інверсії
+* інтонаційне питання
+* риторичне питання
+* уточнювальне питання
+* непряме питання
+* interrogative + infinitive
+* `¿qué...?`
+* `¿cuál...?`
+* `¿qué es...?`
+* `¿cuál es...?`
+
+# 34. ПОРЯДОК СЛІВ
+
+* базовий SVO
+* варіанти SOV
+* варіанти VSO
+* позиція підмета
+* постпозиція підмета
+* fronting
+* topicalization
+* dislocation
+* left dislocation
+* right dislocation
+* focalization
+* contrastive focus
+* information structure
+* тема та рема
+* емфаза
+* інверсія
+* порядок займенників
+* порядок прислівників
+* порядок прикметників
+* порядок додатків
+* порядок обставин
+* позиція `no`
+* позиція `también`
+* позиція `tampoco`
+* позиція `solo`
+* позиція `sí`
+* `Él sí escucha eso`
+* `Yo sí lo sé`
+* `Ella también viene`
+* контрастивне `sí`
+* емфатичне `sí`
+* `lo que sí...`
+* `el que sí...`
+* `sí que`
+* `sí mismo`
+* емфатична конструкція `es que`
+* `lo que pasa es que`
+* `resulta que`
+
+# 35. ЕМФАЗА, ФОКУС І АКЦЕНТУВАННЯ
+
+* contrastive focus
+* emphatic pronouns
+* emphatic `sí`
+* emphatic `no`
+* `sí que`
+* `no es que`
+* `es que`
+* `lo que`
+* `lo que sí`
+* `lo que no`
+* `el que`
+* `la que`
+* `quien`
+* cleft sentences
+* pseudo-cleft sentences
+* `es X quien...`
+* `es X lo que...`
+* `fue X cuando...`
+* `lo que ocurrió fue...`
+* fronting
+* повторення займенника
+* topicalization
+* інтонаційна емфаза
+* контрастивний порядок слів
+
+# 36. УЗГОДЖЕННЯ
+
+* підмет + дієслово
+* іменник + прикметник
+* іменник + participle
+* займенник + референт
+* узгодження числа
+* узгодження роду
+* узгодження при кількох підметах
+* узгодження з колективними іменниками
+* узгодження з `todo`
+* узгодження після `haber`
+* узгодження в pasiva refleja
+* узгодження у складних конструкціях
+* узгодження у відносних реченнях
+* семантичне узгодження
+* формальне узгодження
+* варіантне узгодження
+
+# 37. СКЛАДНІ РЕЧЕННЯ
+
+* координація
+* субординація
+* головне речення
+* підрядне речення
+* nominal clauses
+* relative clauses
+* adverbial clauses
+* causal
+* consecutive
+* concessive
+* conditional
+* final
+* temporal
+* comparative
+* modal
+* locative
+* consecutive constructions
+* складені сполучники
+* вкладені підрядні
+* кілька рівнів підрядності
+* пунктуація складних речень
+
+# 38. ВІДНОСНІ РЕЧЕННЯ
+
+* `que`
+* `el que`
+* `la que`
+* `los que`
+* `las que`
+* `lo que`
+* `el cual`
+* `la cual`
+* `los cuales`
+* `las cuales`
+* `quien`
+* `quienes`
+* `cuyo`
+* `cuya`
+* `cuyos`
+* `cuyas`
+* `donde`
+* `cuando`
+* `como`
+* antecedent
+* визначені відносні речення
+* невизначені/описові
+* restrictive vs non-restrictive
+* коми у відносних реченнях
+* indicativo vs subjuntivo
+* `que` vs `el cual`
+* `que` vs `quien`
+* `cuyo`
+* прийменник + relative
+* `con el que`
+* `para la cual`
+* `en que`
+* пропуск прийменника
+* відносні речення без antecedent
+* free relatives
+* fused relatives
+
+# 39. ПІДРЯДНІ ДОДАТКОВІ РЕЧЕННЯ
+
+* `que`
+* дієслово + `que`
+* думка
+* знання
+* бажання
+* наказ
+* прохання
+* емоція
+* оцінка
+* факт
+* заперечення факту
+* `de que`
+* `queísmo`
+* `dequeísmo`
+* infinitive vs subordinate clause
+* зміна підмета
+* однаковий підмет
+* subjuntivo vs indicativo
+
+# 40. ПРИЧИНА
+
+* `porque`
+* `ya que`
+* `puesto que`
+* `dado que`
+* `como`
+* `debido a`
+* `a causa de`
+* `por`
+* infinitive causal constructions
+* indicativo/subjuntivo у причинних конструкціях
+* заперечена причина
+* причина як пояснення
+* причина як виправдання
+
+# 41. МЕТА
+
+* `para`
+* `para que`
+* `a fin de`
+* `a fin de que`
+* `con el fin de`
+* `con el fin de que`
+* `con objeto de`
+* `con objeto de que`
+* infinitive vs subjunctive
+* однаковий підмет
+* різні підмети
+
+# 42. УМОВНІ КОНСТРУКЦІЇ
+
+* `si`
+* реальні умови
+* можливі умови
+* нереальні умови
+* контрфактичні умови
+* `si + presente`
+* `si + futuro`
+* `si + imperfecto de subjuntivo`
+* `si + pluscuamperfecto de subjuntivo`
+* condicional
+* `si tuviera...`
+* `si hubiera...`
+* `si hubiera sabido...`
+* змішані умовні
+* `si + imperfecto → condicional`
+* `si + pluscuamperfecto → condicional compuesto`
+* інші умовні конструкції
+* `a condición de que`
+* `siempre que`
+* `con tal de que`
+* `a menos que`
+* `salvo que`
+* `excepto si`
+* `como`
+* `de + infinitivo`
+* `en caso de`
+* `en caso de que`
+
+# 43. НАСЛІДОК
+
+* `por eso`
+* `por tanto`
+* `por lo tanto`
+* `así que`
+* `de modo que`
+* `de manera que`
+* `de forma que`
+* `tan... que`
+* `tanto... que`
+* `tal... que`
+* `hasta tal punto que`
+* consecutive clauses
+* indicativo/subjuntivo у конструкціях наслідку
+
+# 44. ПРОТИДІЯ ТА ДОПУСТОВІСТЬ
+
+* `aunque`
+* `a pesar de`
+* `a pesar de que`
+* `pese a`
+* `pese a que`
+* `por más que`
+* `por mucho que`
+* `por muy... que`
+* `si bien`
+* `aun cuando`
+* indicativo vs subjuntivo
+* реальний факт vs гіпотетичність
+* concessive clauses
+
+# 45. ЧАСОВІ ПІДРЯДНІ
+
+* `cuando`
+* `mientras`
+* `mientras que`
+* `antes de`
+* `antes de que`
+* `después de`
+* `después de que`
+* `hasta`
+* `hasta que`
+* `desde que`
+* `en cuanto`
+* `tan pronto como`
+* `apenas`
+* `nada más`
+* `cada vez que`
+* `siempre que`
+* `al + infinitivo`
+* indicativo/subjuntivo
+* майбутнє після часових сполучників
+* минуле
+* повторюваність
+* одночасність
+* anterioridad
+* posterioridad
+
+# 46. ПОРІВНЯЛЬНІ КОНСТРУКЦІЇ
+
+* `más... que`
+* `menos... que`
+* `tan... como`
+* `tanto... como`
+* `igual de... que`
+* `lo mismo que`
+* `mejor que`
+* `peor que`
+* `mayor que`
+* `menor que`
+* порівняння кількості
+* `más de`
+* `menos de`
+* `más que`
+* `menos que`
+* `no más de`
+* `no menos de`
+* `cuanto más... más`
+* `cuanto menos... menos`
+* `mientras más... más`
+* `cada vez más`
+* `cada vez menos`
+
+# 47. ПАСИВНІ КОНСТРУКЦІЇ
+
+* пасив із `ser`
+* `ser + participio`
+* узгодження participle
+* complemento agente
+* `por`
+* pasiva refleja
+* `se` passive
+* impersonal `se`
+* active vs passive
+* passive alternatives
+* resultative constructions
+* формальна пасивна мова
+* газетна пасивна мова
+
+# 48. БЕЗОСОБОВІ КОНСТРУКЦІЇ
+
+* `hay`
+* `hace` + weather/time
+* `es necesario`
+* `es posible`
+* `se`
+* impersonal verbs
+* `se dice`
+* `se sabe`
+* `se cree`
+* `se considera`
+* `uno`
+* `hay que`
+* `es de esperar`
+* `parece`
+* `resulta`
+
+# 49. НЕПРЯМА МОВА
+
+* пряма мова
+* непряма мова
+* `decir que`
+* `preguntar si`
+* `preguntar qué`
+* наказ у непрямій мові
+* зміна часів
+* sequence of tenses
+* зміна займенників
+* зміна прислівників часу
+* `hoy → ese día`
+* `mañana → al día siguiente`
+* `ayer → el día anterior`
+* `aquí → allí`
+* reported questions
+* reported commands
+* reported speech with subjunctive
+* журналістська непряма мова
+
+# 50. ПОСЛІДОВНІСТЬ ЧАСІВ
+
+* concordancia de tiempos
+* presente → presente
+* presente → futuro
+* presente → pretérito
+* pasado → imperfecto
+* pasado → pluscuamperfecto
+* pasado → condicional
+* subjuntivo sequence
+* simultaneity
+* anteriority
+* posteriority
+* backshifting
+* непряма мова
+* умовні конструкції
+
+# 51. СТАЛІ СИНТАКСИЧНІ КОНСТРУКЦІЇ
+
+* `tener + sustantivo`
+* `hacer + tiempo`
+* `llevar + tiempo`
+* `llevar + gerundio`
+* `hace + tiempo + que`
+* `desde hace`
+* `desde`
+* `desde que`
+* `acabar de`
+* `volver a`
+* `dejar de`
+* `seguir + gerundio`
+* `seguir sin + infinitivo`
+* `estar por + infinitivo`
+* `estar para + infinitivo`
+* `quedar por + infinitivo`
+* `dar por + participio`
+* `tener por`
+* `hacer que`
+* `dejar que`
+* `lograr que`
+* `conseguir que`
+* `evitar que`
+* `impedir que`
+
+# 52. ДЕРИВАЦІЯ І СЛОВОТВІР
+
+* префіксація
+* суфіксація
+* конверсія
+* словоскладання
+* складні слова
+* продуктивні суфікси
+* продуктивні префікси
+* заперечні префікси
+* збільшення
+* зменшення
+* пестливість
+* абстрактні іменники
+* назви осіб
+* прикметники від іменників
+* дієслова від іменників
+* дієслова від прикметників
+* прислівники від прикметників
+* морфологічна прозорість
+* непродуктивні моделі
+* лексикалізовані форми
+
+# 53. РЕГІОНАЛЬНА ГРАМАТИКА
+
+* Іспанія vs Латинська Америка
+* `tú`
+* `vos`
+* `usted`
+* `vosotros`
+* `ustedes`
+* voseo
+* verbal voseo
+* pronominal voseo
+* imperative voseo
+* ustedes замість vosotros
+* відмінності імперативу
+* `leísmo`
+* `laísmo`
+* `loísmo`
+* `seseo`
+* `ceceo`
+* distinction `s/z/c`
+* регіональні форми займенників
+* регіональні дієслівні форми
+* регіональні конструкції
+* формальна vs розмовна норма
+* стандартна паніспанська норма
+* варіативність
+
+# 54. РОЗМОВНА ГРАМАТИКА
+
+* скорочення
+* елізія
+* повторення
+* неповні речення
+* фрагменти
+* self-repair
+* fillers
+* discourse markers
+* `pues`
+* `o sea`
+* `es que`
+* `bueno`
+* `entonces`
+* `a ver`
+* `mira`
+* `resulta que`
+* `total que`
+* `vamos`
+* розмовна інверсія
+* topicalization
+* повтор займенників
+* емфатичні конструкції
+* colloquial `se`
+* colloquial imperative
+* розмовні скорочені конструкції
+
+# 55. ФОРМАЛЬНА І ПИСЕМНА ГРАМАТИКА
+
+* формальна синтаксична структура
+* номіналізація
+* пасив
+* безособові конструкції
+* складна підрядність
+* відносні речення
+* книжні сполучники
+* participial constructions
+* infinitival constructions
+* формальна послідовність часів
+* академічний стиль
+* адміністративний стиль
+* журналістський стиль
+* юридичний стиль
+
+# 56. ДИСКУРСИВНІ КОНСТРУКЦІЇ
+
+* тема
+* рема
+* focus
+* contrast
+* emphasis
+* correction
+* clarification
+* addition
+* concession
+* conclusion
+* consequence
+* cause
+* reformulation
+* `es decir`
+* `o sea`
+* `mejor dicho`
+* `en otras palabras`
+* `de hecho`
+* `en realidad`
+* `por cierto`
+* `además`
+* `sin embargo`
+* `no obstante`
+* `por tanto`
+* `en cambio`
+* `aun así`
+
+# 57. ВИСОКОРІВНЕВІ СИНТАКСИЧНІ ЯВИЩА
+
+* cleft constructions
+* pseudo-clefts
+* extraposition
+* topicalization
+* left dislocation
+* right dislocation
+* inversion
+* subject inversion
+* stylistic inversion
+* focus fronting
+* contrastive fronting
+* null subjects
+* null objects
+* implicit arguments
+* generic subjects
+* arbitrary subjects
+* control constructions
+* raising constructions
+* infinitival clauses
+* participial clauses
+* gerundive clauses
+* reduced relative clauses
+* non-finite subordinate clauses
+* coordination reduction
+* ellipsis
+* gapping
+* stripping
+* conjunction reduction
+* comparative ellipsis
+
+# 58. ЕЛІПСИС
+
+* пропуск підмета
+* пропуск дієслова
+* пропуск додатка
+* nominal ellipsis
+* verbal ellipsis
+* comparative ellipsis
+* conversational ellipsis
+* coordination ellipsis
+* контекстуальна еліпса
+* відновлення пропущеного компонента
+
+# 59. СЕМАНТИЧНО-ГРАМАТИЧНІ КОНТРАСТИ
+
+* `ser / estar`
+* `haber / tener`
+* `hay / estar`
+* `saber / conocer`
+* `pedir / preguntar`
+* `decir / hablar`
+* `llevar / traer`
+* `ir / venir`
+* `por / para`
+* `desde / hace`
+* `desde / durante`
+* `a / en`
+* `bien / bueno`
+* `mal / malo`
+* `muy / mucho`
+* `tan / tanto`
+* `algún / alguno`
+* `ningún / ninguno`
+* `cualquier / cualquiera`
+* `qué / cuál`
+* `porque / por qué / porqué / por que`
+* `sino / si no`
+* `también / tampoco`
+* `aún / aun`
+* `solo / sólo`
+* `deber / deber de`
+* `tener que / deber`
+* `ir / irse`
+* `dormir / dormirse`
+* `comer / comerse`
+* `llevar / llevarse`
+* `quedar / quedarse`
+* `volver / volverse`
+* `acordar / acordarse`
+* `olvidar / olvidarse`
+
+# 60. МІКРОВІДМІННОСТІ, ЯКІ ПОТРІБНО ОХОПИТИ
+
+Окремо перевір наявність у карті таких типів явищ:
+
+* зміна значення через `ser/estar`
+* зміна значення через `se`
+* зміна значення через позицію прикметника
+* зміна значення через артикль
+* зміна значення через `por/para`
+* зміна значення через indicativo/subjuntivo
+* зміна значення через imperfecto/indefinido
+* зміна значення через perfecto/indefinido
+* зміна значення через `deber/deber de`
+* зміна значення через `haber/tener`
+* зміна значення через `qué/cuál`
+* зміна значення через `saber/conocer`
+* зміна значення через `pedir/preguntar`
+* зміна значення через `ir/irse`
+* зміна значення через `llevar/llevarse`
+* зміна значення через `quedar/quedarse`
+* зміна значення через наявність/відсутність займенника
+* зміна значення через порядок слів
+* зміна значення через `sí`
+* зміна значення через `no`
+* контрастивна емфаза
+* контрастивне повторення
+* topicalization
+* focus
+* information structure
+
+# 61. РІДКІСНІ, ЛІТЕРАТУРНІ ТА ВИСОКОФОРМАЛЬНІ ФОРМИ
+
+* pretérito anterior
+* майбутній subjuntivo
+* imperfecto de subjuntivo `-ra`
+* imperfecto de subjuntivo `-se`
+* архаїчні форми
+* літературний порядок слів
+* інверсія
+* формальні пасивні конструкції
+* складні participial constructions
+* складні infinitival constructions
+* книжні сполучники
+* юридичні конструкції
+* адміністративні конструкції
+* газетні конструкції
+* риторичні конструкції
+
+# 62. ПОВНА СИСТЕМА ГРАМАТИЧНИХ ТАБЛИЦЬ
+
+Передбачити окремі довідкові таблиці для:
+
+* усіх часів indicativo
+* усіх часів subjuntivo
+* condicional
+* imperative
+* infinitive
+* gerundio
+* participio
+* регулярних дієвідмін
+* основних неправильних дієслів
+* stem-changing verbs
+* дієслів із неправильними participles
+* особових займенників
+* об'єктних займенників
+* reflexive pronouns
+* demonstratives
+* possessives
+* indefinite pronouns
+* interrogatives
+* relative pronouns
+* articles
+* comparatives
+* superlatives
+* основних прийменників
+* сполучників
+* negative words
+* irregular verb patterns
+* voseo forms
+* imperative forms
+
+# 63. ФІНАЛЬНА ПЕРЕВІРКА ПОВНОТИ
+
+Після створення списку проведи окрему внутрішню перевірку:
+
+1. Чи охоплено базову граматику?
+2. Чи охоплено всю систему іменників, прикметників, артиклів, займенників, прислівників і прийменників?
+3. Чи охоплено всі основні дієслівні часи та способи?
+4. Чи охоплено всі основні неправильні моделі?
+5. Чи охоплено subjuntivo достатньо глибоко?
+6. Чи охоплено `se` достатньо глибоко?
+7. Чи охоплено object pronouns достатньо глибоко?
+8. Чи охоплено порядок слів?
+9. Чи охоплено емфазу та contrastive focus?
+10. Чи охоплено `sí` у значенні емфатичного підтвердження?
+11. Чи охоплено topicalization, cleft constructions та інші конструкції інформаційної структури?
+12. Чи охоплено складні підрядні речення?
+13. Чи охоплено sequence of tenses?
+14. Чи охоплено непряму мову?
+15. Чи охоплено пасивні та безособові конструкції?
+16. Чи охоплено розмовну та формальну граматику?
+17. Чи охоплено регіональні граматичні відмінності?
+18. Чи охоплено високорівневі та рідкісні конструкції?
+19. Чи є теми, які зазвичай викладають окремо, але їх ще немає?
+20. Чи можна за цим списком побудувати довідник, який фактично охоплює граматичний діапазон від початкового рівня до C2?
+
+## ФОРМАТ ВІДПОВІДІ
+
+Виведи **тільки структурований перелік тем**.
+
+Не пиши пояснень про методику навчання.
+
+Не пиши уроки.
+
+Не створюй самі пояснення граматики.
+
+Не створюй вправи.
+
+Не створюй приклади речень, якщо вони не потрібні для назви теми.
+
+Не маркуй теми рівнями A0–C2.
+
+Можеш і маєш розбивати теми на великі розділи та підрозділи.
+
+Якщо для повноти потрібно додати тему, якої немає в цьому початковому переліку, **додай її**.
+
+Ключова вимога: краще мати зайву окрему тему, ніж пропустити реальне граматичне явище.
+
+Мета — отримати **максимально повну карту граматичних тем іспанської мови**, а не короткий syllabus.

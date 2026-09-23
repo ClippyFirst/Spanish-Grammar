@@ -360,3 +360,29 @@ For demonstratives and noun gender, QA must distinguish:
 - grammatical gender from determiner allomorphy in `el agua`;
 - common gender from epicene nouns and from lexical pairs whose gender changes meaning;
 - singular special forms from plural agreement (`el agua fría → las aguas frías`).
+
+
+## Seventeenth deep rewrite pass — 2026-09-23
+
+The seventeenth pass extended the pronoun/determiner audit to **interrogatives, double object pronouns, subject-pronoun omission, possessives, and zero-article constructions**.
+
+The interrogative page was tightened around the constructional contrast **qué + noun** versus independent **cuál** and **cuál de + noun phrase**. The page now avoids presenting *cuál + noun* as an absolute grammatical impossibility: it identifies the neutral standard learner model while acknowledging contextual/varietal occurrences without turning them into a universal rule. The distinction is therefore taught through syntactic position and choice/identification rather than translation alone.
+
+The double-object page was checked for consistency with the imperative and object-pronoun pages: **OI + OD**, `le/les → se` before `lo/la/los/las`, and the position of clitics with finite verbs, infinitives, gerunds and affirmative/negative imperatives remain aligned.
+
+The subject-pronoun page was retained as a discourse/pragmatics explanation rather than a prohibition against explicit pronouns. Explicit `yo/tú/él...` is presented as available for contrast, correction, focus and disambiguation; omission is the neutral option when context and verbal morphology identify the subject. Possessive forms were checked against the article and noun-gender system, especially `mi casa`, `el mío`, `un amigo mío`, and the ambiguity of `su`.
+
+The zero-article page was checked against the earlier article-special-cases work. It now consistently treats bare noun phrases as a **referential/constructional choice**, not merely as an absence of a word. The examples distinguish bare plural, mass/abstract reference, profession predicates and lexicalized constructions, while avoiding absolute rules such as “no after no tener” or “profession after ser never takes an article”.
+
+Academic Writing Toolkit was applied to representative prose from this pass. The prose presented no higher-level paragraph-logic defect; short-form reference writing remains compatible with the project's compact component format.
+
+### New cross-page QA rule
+
+For pronoun/article QA, verify the construction before labeling an expression as an error:
+- `qué + noun` vs `cuál` / `cuál de + NP`;
+- interrogative/exclamative forms with tilde vs relative/conjunctive forms without it;
+- OI + OD ordering and `le/les → se` before direct-object clitics;
+- explicit subject pronoun as discourse marking vs neutral null subject;
+- `mi + N`, `el mío`, and `un N mío` as distinct possessive constructions;
+- bare noun phrase vs definite/indefinite noun phrase according to reference and construction;
+- profession predicates after `ser` without treating article presence as an absolute prohibition.

@@ -3,7 +3,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories } from '../data/categories';
-import { entryUrl, categoryUrl, parseId, withBase } from '../utils/content';
+import { entryUrl, categoryUrl, withBase } from '../utils/content';
 
 const entries = await getCollection('es');
 const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 8);
@@ -25,9 +25,9 @@ const comparisons = [
       <p class="lead">
         Довідник для носіїв української: від базових конструкцій до тонких відмінностей. Не вчить замість вас — дає точну карту мови, щоб швидко знайти правило, зіставити форми й перевірити приклад.
       </p>
-      <div class="search-bar">
+      <div class="hero-meta" aria-label="Статистика довідника">\n        <span>{entries.length} тем</span>\n        <span>{sortedCategories.length} розділів</span>\n        <span>UA · ES</span>\n        <span>Довідник, не курс</span>\n      </div>\n      <div class="search-bar">
         <label class="visually-hidden" for="home-search">Пошук по граматиці</label>
-        <input id="home-search" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjunktiv…" autocomplete="off" />
+        <input id="home-search" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjuntivo…" autocomplete="off" />
       </div>
     </section>
 

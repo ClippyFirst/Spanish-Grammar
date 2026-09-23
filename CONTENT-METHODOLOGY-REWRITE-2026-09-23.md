@@ -311,3 +311,30 @@ Possessive determiners, full possessives, definite/indefinite articles and zero 
 - grammatical gender in \`el agua fría\` and related forms;
 - consistency between article, possessive, adjective agreement and noun gender;
 - regional claims about \`vuestro/vuestra\` versus \`su/de ustedes\` must remain descriptive and non-absolute.
+
+
+## Fifteenth deep rewrite pass — 2026-09-23
+
+The fifteenth pass continued the determiner/noun cross-page audit, focusing on **gender terminology, neuter `lo`, indefinite forms, adjective agreement and article special cases**.
+
+The audit corrected an important terminology issue in `gender-exceptions.mdx`: **epicene nouns** were separated from nouns with variable gender marking. `bebé` is no longer used as the representative epicene example; the page reserves the term for nouns whose grammatical gender remains fixed while the referent may be male or female, such as `la víctima`, `la persona` and `el personaje`.
+
+The adjective-agreement page was tightened to avoid the false generalization that all consonant-final adjectives are invariable for gender. Many are (`fácil, difícil, azul, feliz`), but others have distinct gender forms (`trabajador/trabajadora, español/española`). The regional note was also softened so that lexical, semantic, stylistic and variety-dependent adjective placement is not reduced to a universal claim.
+
+The neuter `lo` page now explicitly separates **neuter/article-like `lo` constructions** from **`lo cual` as a relative construction**. This prevents the common analytical error of treating every occurrence of `lo` as the same grammatical category.
+
+The indefinite-pronoun page was checked for the interaction between pronoun and determiner forms: `algún/ningún` before masculine singular nouns, `alguna/ninguna` before feminine singular nouns, and independent `alguno/ninguno` forms. The negative-polarity examples remain aligned with the canonical negation page.
+
+The article special-cases page was also corrected so that `Soy médico` versus `Soy un médico especializado en cirugía` is presented as a contrast of noun-phrase structure and reference, not as a simple grammatical-error pair. This keeps the article/zero-article pages consistent and avoids marking a contextually grammatical article as categorically wrong.
+
+Academic Writing Toolkit was run on representative prose from this pass. It returned short-paragraph findings but no higher-level paragraph-logic problem. As established by the methodology, these findings are interpreted in the context of the project's compact reference components rather than used as a paragraph-length target.
+
+### New cross-page QA rule
+
+The determiner/noun audit must now distinguish **grammatical category, gender, number, reference and construction** before labeling a form as an exception or error. In particular:
+- `el agua fría` must remain feminine in agreement despite the singular `el` form;
+- epicene nouns must not be confused with common-gender nouns or nouns with variable gender;
+- `lo + adjective`, `lo que`, and `lo cual` must remain analytically distinct;
+- indefinite determiners (`algún`, `ningún`, `alguna`, `ninguna`) must agree with the noun they determine, while independent pronouns use forms such as `alguno`, `ninguno`, `alguna`, `ninguna`;
+- adjective agreement must distinguish gender-invariant classes from consonant-final adjectives that have separate masculine/feminine forms;
+- profession predicates after `ser` must be checked for neutral classification versus referential/descriptive noun phrases rather than forced into a binary article/no-article rule.

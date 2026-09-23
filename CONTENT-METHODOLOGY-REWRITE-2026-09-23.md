@@ -499,3 +499,23 @@ When auditing reported speech and conditionals, verify separately:
 - verb-tense correlation versus deictic shift;
 - direct versus indirect question punctuation;
 - *que + subjuntivo* in reported commands versus ordinary complement clauses.
+
+
+## Twenty-third deep rewrite pass — 2026-09-23
+
+A follow-up precision pass revisited the sequence-of-tenses and conditional overview pages after the reported-speech audit. The purpose was to eliminate residual ambiguity in the compact reference tables rather than introduce another broad rewrite.
+
+The sequence-of-tenses table now names the anteriority relation more explicitly: the present-oriented row can use presente de subjuntivo or an anterior form such as haya + participio, while the past/conditional perspective can use imperfecto de subjuntivo or pluscuamperfecto de subjuntivo. The explanatory prose now describes pluscuamperfecto de subjuntivo in terms of anteriority relative to a past reference point, rather than simply calling it a past form.
+
+The conditional overview was also narrowed so that the prohibition of condicional after si is explicitly scoped to the conditional clause. This reinforces the distinction between conditional si and interrogative si established in the previous pass.
+
+Academic Writing Toolkit was applied to representative prose from the revised pages. It returned only the expected short-paragraph observation for each compact reference block and no higher-level paragraph-logic defect.
+
+### Cross-page QA refinement
+
+For tense and conditional pages, QA must check the following separately:
+- absolute tense versus relative temporal relation;
+- anteriority versus simple pastness;
+- si as conditional conjunction versus interrogative conjunction;
+- conditional-clause morphology versus conditional forms elsewhere in the sentence;
+- reported-speech backshift versus the speaker's maintained present perspective.

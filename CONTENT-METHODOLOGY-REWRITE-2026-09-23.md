@@ -449,3 +449,30 @@ The Academic Writing Toolkit was applied to representative prose from the revise
 ### New cross-page QA rule
 
 Relative-clause QA must test the same sentence across all relevant pages and ask: **What is the antecedent? What syntactic role does the relative element fill? Which preposition is selected by the governing construction? Is the clause restrictive or explanatory? What reference/modality motivates the mood?** Any page that turns one of these dimensions into a universal shortcut should be revised to preserve the constructional analysis.
+
+
+## Twenty-first deep rewrite pass — 2026-09-23
+
+The twenty-first pass extended the cross-page audit from relative clauses into **questions, reported speech, conditional clauses, passive/impersonal se, hay/estar, and word order**. The purpose was to check whether pages that share the same constructions still describe them from compatible syntactic and discourse perspectives.
+
+The questions page was tightened around the distinction between **interrogative form, syntactic role, and information structure**. The page now explicitly demonstrates that a fronted interrogative can carry different syntactic roles (qué, a quién, con quién) and that Spanish questions cannot be reduced to obligatory subject–verb inversion. This keeps the page aligned with the word-order page and with the separate qué/cuál analysis.
+
+The passive-se page was refined to avoid suggesting that an agent is simply another optional complement of every se construction. The passive with ser readily permits an expressed por-agent, while the different se constructions must first be classified structurally. The examples Se venden casas, Se vive bien aquí, and Se entrevistó a los candidatos remain the core diagnostic set.
+
+The conditional and reported-speech pages were checked together. The conditional page correctly keeps the ordinary si-clause patterns separate from the broader phenomenon of sentences containing si. The reported-speech page keeps tense backshift contextual rather than mechanical and treats deictic expressions as part of the change in reference point. This prevents a learner from applying the conditional-page prohibition on futuro/condicional after si to unrelated embedded questions or reported clauses.
+
+The hay/estar page was checked against article/reference and noun-phrase pages. Its central distinction is maintained as a discourse-functional contrast: hay commonly introduces or asserts existence/availability, while estar locates an identified referent or describes a state. The page deliberately avoids reducing the contrast to “unknown versus known” as an absolute semantic rule.
+
+The word-order page was checked against questions, clitic placement and subject-pronoun omission. Its SVO description remains a neutral base rather than a fixed universal order; information structure, topicalization and focus can motivate other orders. Clitic position remains a more constrained subsystem and is delegated to the dedicated clitic page rather than being explained through general word order.
+
+Academic Writing Toolkit was run on representative prose from this pass. It flagged the compact size of the selected reference paragraphs but did not identify a higher-level paragraph-logic defect. The short units remain intentional because examples and constructional rules are designed for rapid retrieval.
+
+### New cross-page QA rule
+
+For sentence-structure QA, the same construction should be checked for compatibility across pages:
+- interrogative form and syntactic role must remain distinct from information structure;
+- si in conditional clauses must not be confused with interrogative si or reported questions;
+- passive se, impersonal se, and other se constructions must be classified by argument structure rather than by the surface form alone;
+- hay versus estar must remain a reference/existence/localization contrast, not an absolute known/unknown rule;
+- SVO must remain the neutral base, while clitic placement follows its own constructional constraints;
+- reported-speech tense choice must remain compatible with the sequence-of-tenses page without becoming a mechanical backshift rule.

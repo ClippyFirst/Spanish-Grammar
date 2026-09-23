@@ -259,3 +259,18 @@ The page connects nominal government with the already rewritten adjective and ve
 Academic Writing Toolkit was applied to representative prose. It returned **4 short-paragraph findings and no higher-level logic issue**. As with previous reference-page audits, compact definition/example units remain intentional and should not be merged solely to satisfy paragraph-length heuristics.
 
 Cross-page QA rule added: noun-government examples must be checked for the governing noun, semantic sense, complement type, preposition, and interaction with `queísmo/dequeísmo`; related verb/adjective forms must not be assumed to share the same preposition merely because Ukrainian translations are similar.
+
+
+## Twelfth deep rewrite pass — 2026-09-23
+
+The twelfth pass broadened the noun system from **government** to the interaction of countability, reference, possession, collective agreement, apposition and noun formation. Two existing pages were revised: `possessive-constructions.mdx` and `noun-special-cases.mdx`.
+
+The possessive page was corrected and deepened in several ways. The earlier statement about a genitive case was narrowed to the more precise claim that Spanish lacks a **productive genitive case** comparable to Ukrainian. The page now distinguishes possession from the wider set of relations expressed by `de + noun phrase`, including material, content, origin and part/whole relations. It also corrects the treatment of `de él`: this form is grammatical and can be useful for contrast or disambiguation, so it must not be described as simply incorrect or universally rare. The previous blanket regional note on `su casa de él` was replaced with a restrained statement about double possessive marking in particular varieties and contexts.
+
+The special-noun-cases page was revised around a constructional view of **countability and quantification**. The previous example `Quiero un agua` was identified as too categorical: `agua` commonly appears without an article when referring to the substance, but `un agua` can be grammatical when the noun is interpreted as a portion, drink or variety. The page now contrasts `Bebo agua`, `Quiero un vaso de agua` and `Quiero un agua mineral`, making the semantic shift explicit. The treatment of `gente` retains singular grammatical agreement while avoiding the broader claim that collective nouns can never show contextual variation. Compound-noun plurals, apposition and profession names were also reframed as systems with lexical or constructional variation rather than one-rule exceptions.
+
+Academic Writing Toolkit was run on representative revised prose from the possessive page and returned **3 short-paragraph findings**; no higher-level paragraph-logic problem was identified. The findings are consistent with the project's component-based reference format and do not justify artificial paragraph merging.
+
+### New cross-page QA rule
+
+Noun pages should distinguish at least four separate questions: **(1) lexical government, (2) possession/other `de` relations, (3) countability and quantification, and (4) grammatical agreement**. A noun construction must not be classified solely from its Ukrainian translation or from the presence of a preposition. In particular, `de + noun` must not automatically be called possession, `un/una` must not be treated as a permanent property of a lexical item, and collective nouns such as `gente` must be checked together with their agreement pattern. Possessive pages must also remain consistent with `possessive-pronouns`, article pages and noun-complement government.

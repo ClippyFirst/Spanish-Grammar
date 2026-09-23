@@ -134,3 +134,18 @@ The Academic Writing Toolkit was used again on the revised prose. Its paragraph-
 ### New cross-page audit rule
 
 When two pages teach competing constructions, the reference should not assign each construction a single fixed Ukrainian translation or a single communicative function if the actual Spanish system permits overlap. A canonical page may give the most useful default, but neighboring pages must preserve the overlap explicitly. This is especially important for tense choice, modal constructions, aspectual periphrases and future reference.
+
+
+## Fourth deep rewrite pass — 2026-09-23
+
+The fourth pass treated the tense system as an interconnected system rather than a collection of isolated pages. The overview was checked against **pretérito perfecto, indefinido / imperfecto, pluscuamperfecto, futuro, futuro perfecto, condicional simple, condicional compuesto, sequence of tenses and conditionals**. The main quality criterion was preservation of temporal perspective: a tense should not be reduced to one Ukrainian translation or one communicative label.
+
+Particular attention was given to three recurrent risks:
+
+- **Perfecto vs indefinido:** the distinction was kept probabilistic and variety-sensitive rather than reduced to a universal “today vs yesterday” rule. The reference explicitly warns against treating Latin American Spanish as if it simply lacked *perfecto*.
+- **Futuro and futuro perfecto:** both pages retain the distinction between temporal future reference and modal inference. *Futuro* can express supposition about the present, while *futuro perfecto* can express supposition about a prior situation.
+- **Condicional and reported speech:** *condicional* remains the normal resource for future relative to a past reference point, but reported speech is not treated as a mechanical backshift operation. A speaker can preserve a present-oriented perspective where context supports it. The conditional page was adjusted so that *Dijo que viene mañana* is no longer presented as an automatic error.
+
+The **sequence-of-tenses** page was checked for the same principle: *quería que vinieras* and *esperaba que hubieras terminado* are taught through relative temporal relations, not through a simple “move everything one tense back” formula. The conditionals page similarly keeps the traditional 1–3 classification only as a learning map and explicitly includes mixed conditionals.
+
+The Academic Writing Toolkit was run again on representative tense-system prose. It returned only short-paragraph findings, which are expected for a component-based grammar reference and were not treated as reasons to merge evidence blocks. The resulting edits therefore prioritize semantic precision, deictic perspective, regional variation and cross-page consistency.

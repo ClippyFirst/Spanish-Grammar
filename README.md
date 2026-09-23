@@ -76,6 +76,18 @@ docs/
 .github/workflows/      # GitHub Actions
 ```
 
+
+## Архітектура та розробка
+
+Репозиторій має формальну архітектурну конституцію та правила для людської й AI-розробки:
+
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — source of truth для структури та меж системи.
+- [DEVELOPMENT_RULES.md](./DEVELOPMENT_RULES.md) — workflow, AI rules, Git та правила змін.
+- [docs/architecture/](./docs/architecture/) — content model, design system та QA.
+- [Architecture roadmap](./docs/roadmap/ARCHITECTURE-ROADMAP.md) — поетапне вирівнювання фактичної реалізації з цим стандартом.
+
+Перед великим рефакторингом спочатку перевіряйте архітектуру та існуючі патерни; не створюйте нову абстракцію, якщо проблему вже вирішує наявна.
+
 ## Модель контенту
 
 Кожна тема живе у `src/content/es/<category>/<slug>.mdx`.

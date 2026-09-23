@@ -338,3 +338,25 @@ The determiner/noun audit must now distinguish **grammatical category, gender, n
 - indefinite determiners (`algún`, `ningún`, `alguna`, `ninguna`) must agree with the noun they determine, while independent pronouns use forms such as `alguno`, `ninguno`, `alguna`, `ninguna`;
 - adjective agreement must distinguish gender-invariant classes from consonant-final adjectives that have separate masculine/feminine forms;
 - profession predicates after `ser` must be checked for neutral classification versus referential/descriptive noun phrases rather than forced into a binary article/no-article rule.
+
+
+## Sixteenth deep rewrite pass — 2026-09-23
+
+The sixteenth pass continued the determiner–noun–agreement audit, concentrating on **demonstratives, noun-gender exception taxonomy, and the special article form in `el agua`**.
+
+The demonstrative page was made more construction-oriented: `este/ese/aquel` before a noun are distinguished from their independent use, while `esto/eso/aquello` are treated as neuter forms that typically refer to situations, facts, events or otherwise non-nominalized content. The page now explicitly prevents the learner from treating `esto problema` as a masculine/feminine agreement choice and contrasts `Quiero este` with `Quiero esto`.
+
+The noun-gender pages were synchronized around the principle that **gender is a lexical-grammatical property, while the form `el` in `el agua` is a special determiner choice in a phonological environment**. This is now connected explicitly to agreement: `el agua fría`, `esta agua`, `mucha agua`, and plural `las aguas` all preserve feminine agreement.
+
+The exception taxonomy was also tightened: common-gender nouns, epicene nouns, variable-gender lexical pairs and the stressed-initial-`a` article phenomenon are kept as distinct mechanisms rather than being grouped under a single label of “exceptions”.
+
+Academic Writing Toolkit was run on representative prose from this pass. The review found no higher-level paragraph-logic defect; any short-paragraph findings are treated as acceptable for the project's compact reference format.
+
+### New cross-page QA rule
+
+For demonstratives and noun gender, QA must distinguish:
+- demonstrative determiner before a noun (`este problema`) from independent demonstrative (`Quiero este`);
+- neuter demonstrative referring to content/situation (`esto/eso/aquello`) from a gendered noun phrase;
+- grammatical gender from determiner allomorphy in `el agua`;
+- common gender from epicene nouns and from lexical pairs whose gender changes meaning;
+- singular special forms from plural agreement (`el agua fría → las aguas frías`).

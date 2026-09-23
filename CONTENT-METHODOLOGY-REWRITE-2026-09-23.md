@@ -274,3 +274,18 @@ Academic Writing Toolkit was run on representative revised prose from the posses
 ### New cross-page QA rule
 
 Noun pages should distinguish at least four separate questions: **(1) lexical government, (2) possession/other `de` relations, (3) countability and quantification, and (4) grammatical agreement**. A noun construction must not be classified solely from its Ukrainian translation or from the presence of a preposition. In particular, `de + noun` must not automatically be called possession, `un/una` must not be treated as a permanent property of a lexical item, and collective nouns such as `gente` must be checked together with their agreement pattern. Possessive pages must also remain consistent with `possessive-pronouns`, article pages and noun-complement government.
+
+
+## Thirteenth deep rewrite pass — 2026-09-23
+
+The thirteenth pass audited noun number formation against the broader noun/article system and against current normative evidence. \`numero-plural.mdx\` was substantially rewritten.
+
+The page no longer presents plural formation as an almost exceptionless \`-s/-es\` mechanism. It now distinguishes the high-frequency patterns (vowel + \`-s\`, most consonants + \`-es\`, \`-z → -ces\`) from invariant plurals such as \`lunes\` and \`crisis\`, and from variant or lexicalized patterns in loanwords. The earlier wording that \`clubes\` was simply the normative form was corrected: \`clubs\` and \`clubes\` are both documented valid plurals, so the page now treats them as variation rather than error. This is consistent with RAE/ASALE material on current Spanish plural formation.
+
+The treatment of accentuation was also reframed. Instead of claiming that stress simply remains in the same syllable, the page now uses \`canción → canciones\` and \`régimen → regímenes\` to show that plural formation can alter the prosodic environment and therefore the written accentuation. The page also warns against applying one universal rule to stressed \`-í/-ú\` forms.
+
+Academic Writing Toolkit was run on representative revised prose. It returned **3 short-paragraph findings and no higher-level paragraph-logic problem**. These findings are retained as a structural warning rather than treated as a defect requiring longer prose, because the reference uses short explanatory blocks intentionally.
+
+### New cross-page QA rule
+
+Plural formation must remain consistent with **article/reference, adjective agreement, noun special cases and lexical government**. Invariant nouns must not be taught as if they lacked grammatical number; number may be expressed elsewhere in the noun phrase. Loanword plurals and stressed \`-í/-ú\` forms must be checked for documented variation rather than forced into the most common productive rule. Any regional statement about plural pronunciation must be separated from the written standard and supported independently.

@@ -16,7 +16,7 @@ This audit verifies the architecture standard against the actual repository tree
 | Layouts | 3 |
 | Stylesheets | 6 |
 | QA/audit scripts | 8 |
-| Documentation files | 37 |
+| Documentation files | 40 |
 | Public assets | 2 |
 
 The 17 category directories are present under `src/content/es`. The grammar route is generated from the collection and uses `GrammarLayout`; category indexes are generated from the same collection.
@@ -57,7 +57,11 @@ This is an infrastructure/repository-settings blocker, not a failed application 
 
 **Action required outside source files:** enable GitHub Pages for the repository using the GitHub Actions/pages deployment path, then rerun the workflow.
 
-### 6. No broad structural deletion is justified by this audit
+### 6. Dependency/runtime state
+
+The CI runtime is now Node 22, matching the declared minimum of Node >=22.19.0 and removing the observed `undici` engine warning. npm still reports 4 vulnerabilities (2 low, 1 high, 1 critical) and a deprecated `tsconfck@3.1.6`; these are tracked separately in `docs/audits/current/DEPENDENCY-AUDIT-2026-09-23.md` and are not being mass-fixed without advisory-level evidence.
+
+### 7. No broad structural deletion is justified by this audit
 
 The current component/layout/script files are connected to the application architecture. The audit does not provide evidence for deleting production source merely to make folders smaller.
 
@@ -75,7 +79,7 @@ The current component/layout/script files are connected to the application archi
 
 ## Post-migration checks
 
-1. Final PR QA completed successfully on the current head.
+1. Final PR QA completed successfully on the current head; 201 MDX files are included in the dedicated preflight.
 2. Browser/manual accessibility and responsive smoke testing remains release-stage work.
 3. Content model and source discipline continue into the editorial rewrite.
 4. Dependency vulnerabilities remain explicitly tracked for advisory-level maintenance.

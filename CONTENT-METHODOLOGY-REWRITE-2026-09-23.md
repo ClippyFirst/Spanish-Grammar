@@ -149,3 +149,14 @@ Particular attention was given to three recurrent risks:
 The **sequence-of-tenses** page was checked for the same principle: *quería que vinieras* and *esperaba que hubieras terminado* are taught through relative temporal relations, not through a simple “move everything one tense back” formula. The conditionals page similarly keeps the traditional 1–3 classification only as a learning map and explicitly includes mixed conditionals.
 
 The Academic Writing Toolkit was run again on representative tense-system prose. It returned only short-paragraph findings, which are expected for a component-based grammar reference and were not treated as reasons to merge evidence blocks. The resulting edits therefore prioritize semantic precision, deictic perspective, regional variation and cross-page consistency.
+
+
+## Fifth deep rewrite pass — 2026-09-23
+
+The fifth pass audited the boundary between **subjuntivo, conditional clauses, sequence of tenses and reported speech**. The goal was to remove a different class of pedagogical overstatement: rules that are useful as first approximations but become false when generalized.
+
+The conditional-sentence page was tightened so that the open-condition pattern is described as **indicativo in the *si*-clause**, while the main clause may use future, present or an imperative. The old “three types” map is retained only as a learning framework, and mixed conditionals are now explicit. The statement about *futuro/condicional* after *si* was narrowed to the ordinary standard conditional construction instead of being phrased as a universal claim about every sentence containing *si*.
+
+The subjunctive-trigger page was also tightened. In particular, *aunque + subjuntivo* is no longer reduced to “unknown” information: the page now describes the range as hypothetical, alternative or not asserted as an established fact, while preserving the context-sensitive nature of the contrast with indicativo. Temporal clauses now also include *cuando hayas terminado*, making the relationship between **future reference and perfect subjunctive** visible rather than teaching a simple *cuando + present subjunctive* formula.
+
+The Academic Writing Toolkit was run against representative prose from this pass. It returned **three short-paragraph findings and no higher-level logic finding**. These remain intentional reference units rather than prose defects. The fifth pass therefore confirms the project's QA principle: use paragraph-level tooling to catch unclear prose structure, but do not optimize a grammar reference for paragraph length at the expense of retrieval and contrastive examples.

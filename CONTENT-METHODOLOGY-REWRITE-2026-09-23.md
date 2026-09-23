@@ -216,3 +216,20 @@ The **queísmo/dequeísmo** boundary was kept connected to the prepositional-gov
 The Academic Writing Toolkit paragraph-logic review was run on representative prose from this pass. It returned **one short-paragraph finding and no higher-level logic issue**. The finding corresponds to a deliberately compact Ukrainian-learner summary and does not justify merging the reference structure into longer academic-style paragraphs. As in earlier passes, short reference units are evaluated by function and retrieval value rather than paragraph length alone.
 
 A new cross-page QA rule follows from this pass: whenever a verb-preposition construction appears in more than one page, the pages must agree on its **governing preposition, complement type, core meaning, and degree of lexical variation**. Special attention should be paid to *pensar en/de, preocuparse por/de, depender de, ayudar a*, and constructions that meet *queísmo/dequeísmo*, *personal a*, infinitival complements, or verbal periphrases.
+
+
+## Ninth deep rewrite pass — 2026-09-23
+
+The ninth pass performed a cross-page **preposition-system consistency audit**, following the eighth pass on verbal government. The focus was the interaction between *por/para*, common prepositional constructions, spatial/temporal prepositions, and the constructional verb-preposition pages.
+
+The canonical *por/para* page was deepened so that the guide no longer relies on a compact «por = X / para = Y» formula. It now separates purpose, addressee, deadline, destination, cause/motive, exchange, route, duration, means/channel, and passive agent, and explicitly distinguishes semantic relations from Ukrainian translation equivalents. The page also strengthens *para + infinitive* vs *para que + finite clause* without turning the subject relation into an absolute rule.
+
+The companion *por/para markers* page was synchronized so that its marker lists are explicitly treated as a learning map, not a universal decision algorithm. An unsupported broad regional claim was removed and replaced with a restrained statement about shared basic opposition and possible frequency/style variation.
+
+The *common-constructions* page was aligned with the government model: lexical government (*depender de, soñar con*) is distinguished from prepositional locutions (*a pesar de, en lugar de*), and the infinitive vs *que* distinction for locutions was clarified. This prevents the overview page from silently teaching a simpler system than the canonical pages.
+
+The cross-page audit retained the existing spatial and temporal pages as separate reference systems. Their core contrasts — *en/a/de/desde/hacia/hasta* for place and *a/en/desde/hasta/durante/por/hace* for time — remain useful, while *por/para* is now explicitly linked to them as a semantic rather than translation-based system.
+
+Academic Writing Toolkit was run on representative prose from the canonical *por/para* rewrite. It returned **4 short-paragraph findings and no higher-level logic issue**. These findings are structural signals from intentionally compact reference prose; no artificial paragraph merging was performed merely to satisfy paragraph-length heuristics.
+
+New cross-page QA rule: every occurrence of *por/para* must agree with the canonical semantic distinction and must not reintroduce a blanket translation rule. Examples involving *por la mañana, para mañana, por tres horas, en tres años, durante tres años,* and *desde hace tres años* should remain explicitly distinguishable as different temporal constructions. Likewise, *para Madrid* (destination), *a Madrid* (basic goal/direction), and *por Madrid* (route) must not be presented as interchangeable translations of «до/через».

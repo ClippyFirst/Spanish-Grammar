@@ -233,3 +233,16 @@ The cross-page audit retained the existing spatial and temporal pages as separat
 Academic Writing Toolkit was run on representative prose from the canonical *por/para* rewrite. It returned **4 short-paragraph findings and no higher-level logic issue**. These findings are structural signals from intentionally compact reference prose; no artificial paragraph merging was performed merely to satisfy paragraph-length heuristics.
 
 New cross-page QA rule: every occurrence of *por/para* must agree with the canonical semantic distinction and must not reintroduce a blanket translation rule. Examples involving *por la mañana, para mañana, por tres horas, en tres años, durante tres años,* and *desde hace tres años* should remain explicitly distinguishable as different temporal constructions. Likewise, *para Madrid* (destination), *a Madrid* (basic goal/direction), and *por Madrid* (route) must not be presented as interchangeable translations of «до/через».
+
+
+## Tenth deep rewrite pass — 2026-09-23
+
+The tenth pass extends the prepositional-government work from verbs to **adjective complements**. The canonical page `adjective-complements.mdx` was rewritten around the constructional unit **adjetivo + régimen**, with explicit separation of complement types (noun phrase, infinitive, finite `que` clause), semantic/model variation, and learner transfer from Ukrainian.
+
+The new reference inventory covers high-frequency models including `capaz de`, `contento con/de`, `orgulloso de`, `interesado en`, `dispuesto a`, `contrario a`, `favorable a`, `responsable de`, `consciente de`, `seguro de`, `diferente de`, `parecido a`, and `lleno de`. It explicitly states that the inventory is a learning map rather than a complete government dictionary.
+
+The page now cross-links adjective government with the previously rewritten verbal government and `queísmo/dequeísmo` pages. In particular, it distinguishes `Estoy seguro de que vendrá` from `Es posible que venga`, preventing the common false rule that `que` either always requires `de` or never does. It also documents cases where different prepositions form different constructions rather than simple interchangeable variants, e.g. `contento con el resultado` vs `contento de verte`.
+
+Academic Writing Toolkit was applied to representative prose. It returned **3 short-paragraph findings and no higher-level logic issue**. These are treated as structural signals in a reference page, not as reasons to merge intentionally compact examples or definition blocks.
+
+New cross-page QA rule: adjective-government examples must use the same constructional principle as verb-government pages. Every adjective + preposition example should be checked for (1) governing adjective, (2) complement type, (3) semantic model, (4) `queísmo/dequeísmo` implications where relevant, and (5) consistency with Ukrainian-first contrastive explanations. The guide should not infer Spanish prepositions from Ukrainian equivalents alone.

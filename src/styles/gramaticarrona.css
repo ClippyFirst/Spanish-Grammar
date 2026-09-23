@@ -147,17 +147,26 @@ body {
   letter-spacing: .17em;
 }
 .hero::after {
-  content: "UA · ES\A 195 тем · 17 розділів\A Довідник, не курс";
-  white-space: pre;
+  content: none;
+}
+.hero-meta {
+  grid-column: 2;
+  grid-row: 2 / span 2;
   align-self: start;
   justify-self: end;
-  max-width: 18ch;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  max-width: 22ch;
   padding-top: .25rem;
   color: var(--gr-muted);
-  font: 600 .72rem/1.8 var(--font-ui);
+  font: 600 .72rem/1.55 var(--font-ui);
   letter-spacing: .08em;
   text-transform: uppercase;
   border-top: 2px solid var(--gr-ink);
+}
+.hero-meta span:first-child {
+  color: var(--gr-ink);
 }
 .hero h1 {
   grid-column: 1 / 2;
@@ -684,9 +693,12 @@ h2::before {
     display: block;
     padding-top: 3.5rem;
   }
-  .hero::after {
-    display: block;
+  .hero-meta {
+    display: flex;
     margin-top: 2rem;
+    padding-top: .75rem;
+    max-width: none;
+    border-top-width: 2px;
   }
   .hero h1 {
     max-width: 9ch;

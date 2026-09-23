@@ -114,3 +114,12 @@ The useful quality signal from the review is therefore: each prose paragraph sho
 ## Current completion criterion
 
 The branch is still intentionally **not merged into main**. Content work continues until the full coverage map is addressed and the remaining pages pass cross-page consistency, MDX/frontmatter, link, graph, and production QA. A page being rewritten does not by itself mean the whole grammar reference is complete.
+
+
+## Third deep rewrite pass — 2026-09-23
+
+The third pass deepened the verbal-periphrase section rather than simply adding more examples. The overview now distinguishes genuine grammatical periphrases from ordinary combinations such as a motion verb plus a purpose infinitive, and it maps the main infinitive-, gerund- and selected participle-based constructions by function. The pages for **deber / poder / soler** and **tener que / hay que** now distinguish obligation, recommendation, general necessity, possibility, permission, skill and habituality without treating their Ukrainian translations as one-to-one equivalents. The frequent-periphrases page was expanded around **acabar de, volver a, seguir + gerundio, dejar de, ponerse a, llevar + gerundio** and **ir + gerundio**, with aspectual contrasts and Ukrainian transfer warnings.
+
+The Academic Writing Toolkit paragraph review was re-run against representative prose from this pass. It again flagged short paragraphs, but no higher-level logical problem was identified by the tool. The short blocks are intentional reference units and should not be merged merely to satisfy a generic academic-prose heuristic.
+
+A technical limitation remains important: the repository's GitHub Pages workflow runs `npm run qa` only on pushes to `main`; the working rewrite branch therefore does not receive that deployment workflow automatically. The branch is kept separate from `main` while content work continues.

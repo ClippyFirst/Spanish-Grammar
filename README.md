@@ -58,6 +58,7 @@ CI запускає той самий `npm run qa`: pull requests перевір
 src/
   content/
     es/                 # весь іспанський граматичний контент
+    comparisons/        # порівняльні граматичні довідки
   components/           # UI-компоненти та MDX primitives
   layouts/              # BaseLayout, GrammarLayout тощо
   pages/                # маршрути Astro

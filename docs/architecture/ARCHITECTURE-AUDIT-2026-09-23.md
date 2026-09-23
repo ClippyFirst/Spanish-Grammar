@@ -41,15 +41,13 @@ The comparison index, homepage featured set and topic-level related navigation n
 
 The homepage previously displayed a hardcoded `195 тем · 17 розділів`. The repository currently contains 196 grammar topics plus 5 comparison documents, so hardcoded corpus counts were already becoming stale.
 
-The homepage now derives the topic and category counts from `getCollection('es')` and the canonical category registry.
+The homepage now derives the topic and category counts from `getCollection('es')` and the canonical category registry. The search control is also now a native GET form rather than runtime-generated JavaScript UI.
 
-### 4. QA was strong but branch coverage was incomplete
+### 4. QA is now covered before merge
 
-The deployment workflow already runs `npm run qa` before publishing on `main`. A current GitHub Actions run confirmed that the **build/QA job succeeds**.
+The deployment workflow runs `npm run qa` before publishing on `main`. A dedicated PR workflow now runs the same aggregate gate before merge.
 
-There was no pull-request QA workflow, so architecture changes could be reviewed without the same automated gate before merge.
-
-A dedicated `.github/workflows/qa.yml` has now been added for pull requests and manual dispatch. It runs the same `npm run qa` command with the production base/site variables.
+The final PR QA run on the current head completed successfully, including typecheck, MDX preflight, content validation, link validation, graph/design audits, production build and Pagefind.
 
 ### 5. GitHub Pages deployment is externally blocked
 
@@ -65,16 +63,20 @@ The current component/layout/script files are connected to the application archi
 
 ## Alignment changes made on this branch
 
-- Canonical category registry now exports `categoryKeys` and remains the source of truth.
+- Canonical category registry remains the source of truth for category keys, labels, order and descriptions.
 - Content Collection schema validates category membership against that registry.
 - Homepage corpus counts are derived rather than hardcoded.
-- Homepage search placeholder uses the correct Spanish term `subjuntivo`.
-- Pull-request QA workflow added.
+- Homepage search uses a native GET form and the correct Spanish term `subjuntivo`.
+- Pull-request QA workflow added and verified on the final head.
+- Comparisons migrated into a first-class collection with preserved URLs.
+- Node runtime baseline aligned to the dependency engine requirement.
+- Dependency vulnerability/deprecation output explicitly recorded for follow-up.
 - Architecture audit recorded with the current inventory and external deployment blocker.
 
 ## Post-migration checks
 
-1. PR QA completed successfully before the comparison migration and must be rerun for the final head.
-2. Complete browser/manual accessibility and responsive smoke testing.
-3. Apply the content model and source discipline progressively during the editorial rewrite.
-4. Enable GitHub Pages outside the codebase and confirm a successful production deployment.
+1. Final PR QA completed successfully on the current head.
+2. Browser/manual accessibility and responsive smoke testing remains release-stage work.
+3. Content model and source discipline continue into the editorial rewrite.
+4. Dependency vulnerabilities remain explicitly tracked for advisory-level maintenance.
+5. GitHub Pages must be enabled outside the codebase before production deployment can succeed.

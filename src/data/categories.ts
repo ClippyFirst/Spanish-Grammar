@@ -29,8 +29,6 @@ export const categories: Category[] = [
   { key: 'micro-constructions', titleUk: 'Мікроконструкції', titleEs: 'Microconstrucciones', description: 'Високочастотні короткі граматичні моделі, які доцільно вивчати як цілісні конструкції.', order: 17 },
 ];
 
-export const categoryKeys = categories.map((category) => category.key);
-
 export function getCategory(key: string): Category | undefined {
   return categories.find((c) => c.key === key);
 }

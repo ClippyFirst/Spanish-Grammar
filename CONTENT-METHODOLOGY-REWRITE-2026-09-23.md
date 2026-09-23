@@ -519,3 +519,25 @@ For tense and conditional pages, QA must check the following separately:
 - si as conditional conjunction versus interrogative conjunction;
 - conditional-clause morphology versus conditional forms elsewhere in the sentence;
 - reported-speech backshift versus the speaker's maintained present perspective.
+
+
+## Twenty-fourth precision rewrite pass — 2026-09-23
+
+The twenty-fourth pass moved the cross-page audit into the **adverb system**, concentrating on formation, semantic classification, position, degree modifiers, focus, and discourse stance. The objective was to remove residual shortcuts that could make a learner treat every adverb as a single positional or morphological class.
+
+The formation page now distinguishes productive **-mente** derivation from simple adverbs such as *bien, mal, mejor,* and *peor*. It explicitly states that *-mente* attaches to the feminine form when the adjective has gendered forms, while adjectives in *-e* or a consonant do not require a feminine alternant. Adverb position is presented as construction- and scope-sensitive rather than as a fixed slot.
+
+The type/classification page was synchronized with the formation page on **muy / mucho / tan / tanto**, while preserving the distinction between degree, quantity, manner, time and frequency. The previous regional wording was narrowed so that individual colloquial expressions are not presented as universal Latin-American replacements. The treatment of *quizá(s), tal vez,* and related probability adverbs remains context-sensitive rather than assigning one mood mechanically.
+
+Academic Writing Toolkit was applied to representative prose from the adverb rewrite. One selected formation paragraph received only the expected "short-paragraph" observation; the degree/quantity paragraph received no issue. No higher-level paragraph-logic defect was identified.
+
+### New cross-page QA rule
+
+For adverb pages, verify separately:
+- productive *-mente* formation versus lexical/simple adverbs;
+- feminine-base formation only where the adjective has gendered forms;
+- adverbial position versus scope/information structure;
+- *muy/mucho* and *tan/tanto* according to what they modify;
+- frequency/time/manner/degree classification without assuming one word has one immutable function;
+- probability adverbs with mood choice treated as context-sensitive;
+- regional colloquial expressions described as variants, not universal replacements.

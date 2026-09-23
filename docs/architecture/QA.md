@@ -1,5 +1,9 @@
 # QA Architecture
 
+## Runtime baseline
+
+Repository runtime baseline is Node >=22.19.0 with npm >=10, declared in `package.json`; CI uses the latest Node 22 release.
+
 ## Aggregate gate
 npm run qa is the canonical release-oriented command. It currently runs typecheck, MDX preflight, content validation, link validation, content graph audit, design audits, production build and Pagefind.
 

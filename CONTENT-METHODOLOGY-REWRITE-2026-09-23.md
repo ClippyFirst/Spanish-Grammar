@@ -246,3 +246,16 @@ The page now cross-links adjective government with the previously rewritten verb
 Academic Writing Toolkit was applied to representative prose. It returned **3 short-paragraph findings and no higher-level logic issue**. These are treated as structural signals in a reference page, not as reasons to merge intentionally compact examples or definition blocks.
 
 New cross-page QA rule: adjective-government examples must use the same constructional principle as verb-government pages. Every adjective + preposition example should be checked for (1) governing adjective, (2) complement type, (3) semantic model, (4) `queísmo/dequeísmo` implications where relevant, and (5) consistency with Ukrainian-first contrastive explanations. The guide should not infer Spanish prepositions from Ukrainian equivalents alone.
+
+
+## Eleventh deep rewrite pass — 2026-09-23
+
+The eleventh pass adds the missing **noun complement government** layer through `src/content/es/nouns/noun-complements.mdx`. The page treats noun + preposition as a lexical-syntactic construction rather than a translation exercise, and separates noun-phrase, infinitival, and finite `que` complements.
+
+The reference map includes `necesidad de`, `miedo a/de`, `interés en/por`, `confianza en`, `acceso a`, `solución a`, `relación con`, `causa de`, `problema con`, and `dependencia de`. Multiple models are explicitly treated as potentially meaning- or construction-sensitive rather than automatically interchangeable.
+
+The page connects nominal government with the already rewritten adjective and verb government systems. A specific contrast is documented for `interesarse por algo` / `estar interesado en algo` / `tener interés en/por algo`, preventing false transfer of a preposition across related lexical items.
+
+Academic Writing Toolkit was applied to representative prose. It returned **4 short-paragraph findings and no higher-level logic issue**. As with previous reference-page audits, compact definition/example units remain intentional and should not be merged solely to satisfy paragraph-length heuristics.
+
+Cross-page QA rule added: noun-government examples must be checked for the governing noun, semantic sense, complement type, preposition, and interaction with `queísmo/dequeísmo`; related verb/adjective forms must not be assumed to share the same preposition merely because Ukrainian translations are similar.

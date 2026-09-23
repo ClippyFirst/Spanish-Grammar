@@ -160,3 +160,22 @@ The conditional-sentence page was tightened so that the open-condition pattern i
 The subjunctive-trigger page was also tightened. In particular, *aunque + subjuntivo* is no longer reduced to “unknown” information: the page now describes the range as hypothetical, alternative or not asserted as an established fact, while preserving the context-sensitive nature of the contrast with indicativo. Temporal clauses now also include *cuando hayas terminado*, making the relationship between **future reference and perfect subjunctive** visible rather than teaching a simple *cuando + present subjunctive* formula.
 
 The Academic Writing Toolkit was run against representative prose from this pass. It returned **three short-paragraph findings and no higher-level logic finding**. These remain intentional reference units rather than prose defects. The fifth pass therefore confirms the project's QA principle: use paragraph-level tooling to catch unclear prose structure, but do not optimize a grammar reference for paragraph length at the expense of retrieval and contrastive examples.
+
+
+## Sixth deep rewrite pass — 2026-09-23
+
+The sixth pass audited the intersection of **imperative formation, subjuntivo, clitic placement and regional address forms**. This area was treated as one system because a learner error often crosses page boundaries: choosing the wrong imperative form can also force the wrong pronoun position, and a simplified statement about subjuntivo can contradict the imperative page.
+
+The imperative pages were tightened in several ways:
+
+- **Affirmative vs negative commands** are now explicitly separated. Negative commands are taught as **no + presente de subjuntivo**, rather than as an affirmative imperative with *no* added.
+- The person system is made explicit: **usted, nosotros/as and ustedes** affirmative forms coincide with corresponding present-subjunctive forms; **tú** and **vosotros/as** have characteristic affirmative forms, while **tú** also has a high-frequency irregular set.
+- The contrast is demonstrated with lexical pairs such as *Ven → No vengas*, *Hazlo → No lo hagas* and *Di la verdad → No digas la verdad*, preventing learners from extending the positive irregular form into the negative command.
+- **Clitic placement** is stated as a constructional opposition: affirmative imperative + enclitic(s) versus negative command + proclitic(s). Double-object order remains indirect + direct, with **se** replacing **le/les** before *lo/la/los/las*.
+- The accent section was corrected so that orthographic stress is treated as a consequence of Spanish spelling rules rather than as a mechanical “imperative + pronoun = add an accent” rule. The specific form **vete** was corrected from the erroneous *véte*.
+- **Voseo** is presented as a regional system rather than as an error or a single universal Latin American pattern. Examples such as *hablá, comé, vení* are retained while acknowledging variation.
+- The quick-reference page was synchronized with the detailed pages so that its person/form table, subjunctive relationship, clitic placement and regional wording no longer imply competing rules.
+
+The Academic Writing Toolkit paragraph review was applied to representative prose from the sixth pass. As in earlier passes, short findings are expected where the reference intentionally uses compact rule blocks, examples, tables and components. The review should therefore be interpreted together with semantic and cross-page checks rather than as a paragraph-length target.
+
+A further manual consistency point was established: whenever a grammar construction changes both **morphology and clitic position**, the canonical page should show the two dimensions together in at least one minimal pair. This is now implemented with pairs such as *Dímelo → No me lo digas*.

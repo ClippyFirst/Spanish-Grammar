@@ -45,4 +45,15 @@ const es = defineCollection({
   }),
 });
 
-export const collections = { es };
+const comparisons = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    titleEn: z.string().optional(),
+    description: z.string(),
+    order: z.number().default(100),
+    featured: z.boolean().default(false),
+  }),
+});
+
+export const collections = { es, comparisons };

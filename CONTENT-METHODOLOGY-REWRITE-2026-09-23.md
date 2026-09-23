@@ -476,3 +476,26 @@ For sentence-structure QA, the same construction should be checked for compatibi
 - hay versus estar must remain a reference/existence/localization contrast, not an absolute known/unknown rule;
 - SVO must remain the neutral base, while clitic placement follows its own constructional constraints;
 - reported-speech tense choice must remain compatible with the sequence-of-tenses page without becoming a mechanical backshift rule.
+
+
+## Twenty-second deep rewrite pass — 2026-09-23
+
+The twenty-second pass focused on the interaction among **reported speech, sequence of tenses, conditional clauses, questions, and deictic reference**. The audit treated these as overlapping systems rather than as isolated pages.
+
+The reported-speech page was refined so that temporal backshift and deictic shift are explicitly related to a changed reference point without becoming one-to-one replacement rules. Indirect yes/no questions are distinguished from indirect wh-questions, and the page now states explicitly that *si* introduces the yes/no type while *dónde, qué, quién,* and related forms retain their interrogative function.
+
+The conditional page remains deliberately narrower: its prohibition of future or conditional forms applies to the standard conditional *si*-clause, not to every sentence in which *si* occurs. This distinction is important because *si* also introduces interrogative clauses and can therefore appear in constructions governed by other tense systems.
+
+The sequence-of-tenses page and reported-speech page were checked as a pair. The former describes temporal correlation; the latter describes a broader discourse transformation involving reference point, deixis, clause type and reported content. This prevents the common learner shortcut that treats reported speech as nothing more than tense backshift.
+
+Academic Writing Toolkit was applied to representative explanatory paragraphs from this pass. It flagged their compact length but found no higher-level paragraph-logic defect. The short paragraphs remain intentional reference units.
+
+### New cross-page QA rule
+
+When auditing reported speech and conditionals, verify separately:
+- the syntactic function of *si*;
+- whether a clause is conditional or interrogative;
+- temporal relation versus discourse reference point;
+- verb-tense correlation versus deictic shift;
+- direct versus indirect question punctuation;
+- *que + subjuntivo* in reported commands versus ordinary complement clauses.

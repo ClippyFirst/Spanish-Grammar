@@ -289,3 +289,25 @@ Academic Writing Toolkit was run on representative revised prose. It returned **
 ### New cross-page QA rule
 
 Plural formation must remain consistent with **article/reference, adjective agreement, noun special cases and lexical government**. Invariant nouns must not be taught as if they lacked grammatical number; number may be expressed elsewhere in the noun phrase. Loanword plurals and stressed \`-í/-ú\` forms must be checked for documented variation rather than forced into the most common productive rule. Any regional statement about plural pronunciation must be separated from the written standard and supported independently.
+
+
+## Fourteenth deep rewrite pass — 2026-09-23
+
+The fourteenth pass focused on the intersection of **possessives, articles, zero article, grammatical gender and noun reference**. Four canonical pages were inspected: \`possessive-pronouns.mdx\`, \`definite-indefinite.mdx\`, \`zero-article.mdx\`, and \`gender-exceptions.mdx\`.
+
+\`possessive-pronouns.mdx\` was aligned more explicitly with the noun/article system. The page now distinguishes a full possessive used independently (\`el mío\`) from a full possessive after an indefinite noun phrase (\`un amigo mío\`), and it avoids treating \`el mi\` as a general statement about every possible possessive environment. The regional note on \`vuestro/vuestra\` was also softened so that it describes the distribution across varieties without implying a single uniform American pattern.
+
+The article pages were cross-checked for an important pedagogical trap: **profession nouns after \`ser\`**. The neutral classification pattern (\`Soy médico\`) is presented as frequent, not as an absolute prohibition on articles. Both pages now use a consistent contrast with an individualized/descriptive noun phrase such as \`Soy un médico especializado en cirugía\`. A malformed self-comparison in the article error box (\`El agua está fría\` → itself) was corrected to the actual contrast \`La agua está fría\` → \`El agua está fría\`.
+
+Academic Writing Toolkit was run on representative possessive and article prose. The possessive sample returned **no issues**; the article sample returned **2 short-paragraph findings and no higher-level logic issue**. The shortness is intentional for reference-style micro-explanations.
+
+### New cross-page QA rule
+
+Possessive determiners, full possessives, definite/indefinite articles and zero article must be audited as **interacting determiner/reference constructions**, not as isolated vocabulary lists. The QA pass must check:
+- \`mi + N\` versus \`el mío\` / \`un amigo mío\`;
+- article omission with possessive determiners;
+- article choice with profession/role predicates;
+- noun reference in singular and plural;
+- grammatical gender in \`el agua fría\` and related forms;
+- consistency between article, possessive, adjective agreement and noun gender;
+- regional claims about \`vuestro/vuestra\` versus \`su/de ustedes\` must remain descriptive and non-absolute.

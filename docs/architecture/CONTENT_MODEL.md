@@ -32,3 +32,7 @@ Public topic URLs follow /es/<category>/<slug>/. Preserve existing URLs whenever
 
 ## Quality hierarchy
 1. factual accuracy; 2. grammatical precision; 3. Ukrainian learner fit; 4. cross-page consistency; 5. source discipline; 6. technical QA.
+## Comparison content exception
+Five comparison pages currently live in `src/pages/comparisons/*.mdx` and use `ComparisonLayout`. They are editorial route content, not entries in the `es` Content Collection. The comparison index and layout currently maintain their small registry explicitly.
+
+This is a documented legacy subsystem, not a second general-purpose content model. Do not introduce additional page-scoped MDX content without an architectural reason. A future migration to a dedicated comparison collection requires separate route, metadata, QA and link-migration review.

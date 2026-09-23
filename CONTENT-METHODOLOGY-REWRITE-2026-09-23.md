@@ -408,3 +408,27 @@ For indefinite, subject and possessive pronouns, distinguish:
 - grammaticality from discourse-marked or stylistically unnecessary repetition;
 - possessor ambiguity from grammatical incorrectness;
 - canonical learner patterns from legitimate marked/contextual alternatives.
+
+
+## Nineteenth deep rewrite pass — 2026-09-23
+
+The nineteenth pass continued the pronoun-system audit with **relative, exclamative, clitic, personal-a, and se constructions**.
+
+Relative-pronoun review sharpened the distinction between `lo que`, `lo cual`, and gendered `el cual/la cual`. The key learner principle is that neuter `lo` in `lo que` is not masculine noun agreement, while `lo cual` can refer to a preceding proposition or situation. The page also retains the constructional distinction among `que`, `quien`, `el que`, and `el cual` after prepositions rather than reducing the system to a single mandatory form.
+
+The exclamative page was tightened so that interrogative and exclamative uses of `qué/cómo/cuánto` are distinguished by communicative function and punctuation, not merely by word order. The tilde in these interrogative/exclamative forms was kept explicit.
+
+The `se` page received a higher-precision diagnostic for passive `se` versus impersonal `se`. Agreement such as `se venden libros` is useful evidence for a reflexive passive analysis, while constructions with an animate direct object marked by personal `a` require structural analysis rather than a mechanical classification from `se` alone. The page now explicitly warns that agreement is diagnostic evidence, not an infallible one-line test.
+
+Academic Writing Toolkit was applied to representative passages from the relative, exclamative and `se` revisions. Each compact passage triggered only the tool's `short-paragraph` observation; no higher-level paragraph-logic issue was found. Because these are reference components, they remain intentionally concise rather than being expanded merely to satisfy a paragraph-length heuristic.
+
+### New cross-page QA rule
+
+For pronoun and clitic pages, verify:
+- `lo que` as a neuter relative construction versus gendered `el/la cual`;
+- `lo cual` as a relative form that may refer to a preceding proposition/situation;
+- interrogative versus exclamative function and tilde;
+- clitic position by verb form and polarity;
+- personal `a` independently from direct/indirect object classification;
+- `se` by construction, agreement and argument structure rather than by translation;
+- passive versus impersonal analyses where animate objects with personal `a` complicate a superficial agreement test.

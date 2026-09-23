@@ -99,3 +99,18 @@ A reference page should let a learner both solve the immediate problem and under
 - Real Academia Española / ASALE — Nueva gramática básica: https://www.rae.es/gramática-básica
 - Instituto Cervantes — Centro Virtual Cervantes: https://cvc.cervantes.es/
 - Instituto Cervantes — current ELE grammar training materials: https://gestionportales.cervantes.es/
+
+
+## Second deep rewrite pass — 2026-09-23
+
+The second pass extended the same methodology into articles covering articles, demonstratives, subject-pronoun omission, double object pronouns, possessives, indefinites, interrogatives, word order, questions, hay/estar, pluscuamperfecto, condicional, imperative, spatial prepositions, temporal prepositions, and verb-preposition government. Existing pages were rewritten rather than merely lengthened: simplified universal rules were replaced with construction-based explanations, minimal contrasts, syntactic function, discourse/reference distinctions, and Ukrainian-specific transfer notes.
+
+### Academic Writing Toolkit follow-up
+
+The paragraph-logic review was run on the rewritten article set. It reported many short-paragraph findings. This is expected for this project because examples, tables, formulas, MinPair/Mistake/Note components, and one-idea reference blocks are deliberately short. The findings should therefore trigger a manual structural review rather than automatic prose merging. In a grammar reference, merging all short blocks into long academic paragraphs would reduce retrieval speed and obscure examples.
+
+The useful quality signal from the review is therefore: each prose paragraph should have one clear claim and a clear relation to the surrounding section; example blocks should remain separate when they function as evidence; tables/components should not be merged merely to satisfy a paragraph-length heuristic.
+
+## Current completion criterion
+
+The branch is still intentionally **not merged into main**. Content work continues until the full coverage map is addressed and the remaining pages pass cross-page consistency, MDX/frontmatter, link, graph, and production QA. A page being rewritten does not by itself mean the whole grammar reference is complete.

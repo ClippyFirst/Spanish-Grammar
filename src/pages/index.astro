@@ -28,10 +28,11 @@ const comparisons = sortComparisons(await getCollection('comparisons')).filter((
         <span>UA · ES</span>
         <span>Довідник, не курс</span>
       </div>
-      <div class="search-bar">
+      <form class="search-bar" action={withBase('/search/')} method="get" role="search">
         <label class="visually-hidden" for="home-search">Пошук по граматиці</label>
-        <input id="home-search" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjuntivo…" autocomplete="off" />
-      </div>
+        <input id="home-search" name="q" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjuntivo…" autocomplete="off" />
+        <button class="search-arrow" type="submit" aria-label="Перейти до пошуку">→</button>
+      </form>
     </section>
 
     <section class="section grammar-sections">
@@ -96,23 +97,3 @@ const comparisons = sortComparisons(await getCollection('comparisons')).filter((
     )}
   </div>
 </BaseLayout>
-
-<script is:inline define:vars={{ base: import.meta.env.BASE_URL ?? '/' }}>
-  (function () {
-    var prefix = (typeof base === 'string' ? base : '/').replace(/\/$/, '');
-    var input = document.getElementById('home-search');
-    if (!input) return;
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' && input.value.trim()) {
-        window.location.href = prefix + '/search/?q=' + encodeURIComponent(input.value.trim());
-      }
-    });
-    var btn = document.createElement('button');
-    btn.className = 'search-arrow';
-    btn.setAttribute('aria-label', 'Перейти до пошуку');
-    btn.addEventListener('click', function () {
-      window.location.href = prefix + '/search/?q=' + encodeURIComponent(input.value.trim());
-    });
-    input.parentNode.appendChild(btn);
-  })();
-</script>

@@ -179,3 +179,18 @@ The imperative pages were tightened in several ways:
 The Academic Writing Toolkit paragraph review was applied to representative prose from the sixth pass. As in earlier passes, short findings are expected where the reference intentionally uses compact rule blocks, examples, tables and components. The review should therefore be interpreted together with semantic and cross-page checks rather than as a paragraph-length target.
 
 A further manual consistency point was established: whenever a grammar construction changes both **morphology and clitic position**, the canonical page should show the two dimensions together in at least one minimal pair. This is now implemented with pairs such as *Dímelo → No me lo digas*.
+
+
+## Seventh deep rewrite pass — 2026-09-23
+
+The seventh pass deepened the **subordinating-conjunction and prepositional-government system**. The goal was to prevent a common failure mode in grammar references: presenting *que, cuando, aunque, si* or another conjunction as if the conjunction itself mechanically selected a mood.
+
+The subordinating-conjunction page was expanded to distinguish **semantic relation, syntactic construction, semantic status and temporal perspective**. It now covers causal, purposive, temporal, concessive, conditional and complement clauses, with additional attention to *antes de que, hasta que, después de que* and *en cuanto*. Future-oriented temporal clauses are contrasted with habitual/factual ones so that learners do not memorize “*cuando = subjuntivo*”. The page also explicitly separates conditional *si* from interrogative *si*, and connector-like consequence markers such as *así que* from subordinate conjunctions.
+
+The pass also corrected small editorial defects in the existing page, including the malformed *A aunque* wording and the stray marker before *Creo de que viene*.
+
+The **que / de que** page was strengthened as a constructional government reference. It now uses the contrast between *Creo que viene* and *Me alegro de que hayas venido*, extends the analysis to *depender de que*, and makes clear that the *eso/algo* substitution test is diagnostic rather than an absolute grammatical rule. The page also distinguishes the governing head (verb, adjective or noun) from the subordinate clause itself.
+
+The Academic Writing Toolkit paragraph-logic review was run on representative prose from this pass and returned **no issues**. This is a useful confirmation that the expanded explanatory paragraphs remain structurally coherent. The project continues to treat intentional short MDX blocks as reference components rather than forcing them into academic-style paragraph lengths.
+
+A new cross-page QA rule follows from this pass: whenever a conjunction appears on more than one canonical page, each page must preserve the same **construction + mood + temporal perspective** relationship. In particular, *cuando*, *aunque* and *si* must not receive conflicting blanket rules on the conjunction page, subjunctive pages and conditional pages.

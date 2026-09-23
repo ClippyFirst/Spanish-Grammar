@@ -15,7 +15,7 @@ walk(D);
 
 const designFile = path.join(D, 'styles', 'gramaticarrona.css');
 const css = fs.readFileSync(designFile, 'utf8');
-const checkCss = css.replace(/:root\\s*\\{[\\s\\S]*?\\}/g, '');
+const checkCss = css.replace(/:root\s*\\{[\s\\S]*?\\}/g, '');
 
 const checks = [
   ['inline-colors', /(?:^|[;{\s])(?:color|background(?:-color)?|border(?:-color)?):\s*#[0-9a-f]{3,8}/gi],

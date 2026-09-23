@@ -1,7 +1,7 @@
 # Content Model
 
 ## File identity
-Each topic is stored as src/content/es/<category>/<slug>.mdx. The path is the stable content identity used by routing and graph tools.
+Grammar topics are stored as `src/content/es/<category>/<slug>.mdx`. The path is the stable content identity used by routing and graph tools. Comparisons are stored as `src/content/comparisons/<slug>.mdx`.
 
 ## Required frontmatter
 language, category, title_uk, title_es, title_en, short_description.
@@ -32,7 +32,5 @@ Public topic URLs follow /es/<category>/<slug>/. Preserve existing URLs whenever
 
 ## Quality hierarchy
 1. factual accuracy; 2. grammatical precision; 3. Ukrainian learner fit; 4. cross-page consistency; 5. source discipline; 6. technical QA.
-## Comparison content exception
-Five comparison pages currently live in `src/pages/comparisons/*.mdx` and use `ComparisonLayout`. They are editorial route content, not entries in the `es` Content Collection. The comparison index and layout currently maintain their small registry explicitly.
-
-This is a documented legacy subsystem, not a second general-purpose content model. Do not introduce additional page-scoped MDX content without an architectural reason. A future migration to a dedicated comparison collection requires separate route, metadata, QA and link-migration review.
+## Comparison collection
+Comparison entries use the smaller schema `title`, `description`, optional `titleEn`, `order` and `featured`. Their public URLs remain `/comparisons/<slug>/` through `src/pages/comparisons/[slug].astro`; URL construction belongs to `src/utils/comparisons.ts`. The index and topic-level related navigation are generated from the collection.

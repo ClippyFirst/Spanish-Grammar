@@ -8,15 +8,16 @@
 - [x] QA contract.
 
 ## Wave B — Verification
-- [ ] Verify complete route tree.
-- [ ] Verify complete component import graph.
-- [ ] Verify scripts/config/dependencies against consumers.
-- [ ] Verify assets and public URLs.
-- [ ] Verify CI branch/event behavior.
+- [x] Verify complete route tree.
+- [x] Verify complete component import graph.
+- [x] Verify scripts/config/dependencies against consumers.
+- [x] Verify assets and public URLs.
+- [x] Verify CI branch/event behavior; PR QA is now enforced.
 
 ## Wave C — Low-risk alignment
-- [ ] Remove only evidence-backed dead code/files.\n- [x] Fix stale hardcoded homepage corpus metadata.
-- [ ] Consolidate real duplicated helpers.
+- [ ] Remove only evidence-backed dead code/files.
+- [x] Fix stale hardcoded homepage corpus metadata.
+- [x] Consolidate real duplicated helpers.
 - [ ] Align physical folders only when discoverability improves without churn.
 - [ ] Strengthen deterministic QA for documented invariants.
 

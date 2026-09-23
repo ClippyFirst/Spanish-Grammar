@@ -1,5 +1,5 @@
 // Canonical category registry for the Spanish grammar reference.
-// Keep this file as the single source of truth for category labels, order and descriptions.
+// Keep this file as the single source of truth for category keys, labels, order and descriptions.
 
 export interface Category {
   key: string;
@@ -28,6 +28,8 @@ export const categories: Category[] = [
   { key: 'regional', titleUk: 'Регіональні варіанти', titleEs: 'Variantes regionales', description: 'Іспанія й Латинська Америка, voseo, leísmo/laísmo/loísmo та інші територіальні відмінності.', order: 16 },
   { key: 'micro-constructions', titleUk: 'Мікроконструкції', titleEs: 'Microconstrucciones', description: 'Високочастотні короткі граматичні моделі, які доцільно вивчати як цілісні конструкції.', order: 17 },
 ];
+
+export const categoryKeys = categories.map((category) => category.key);
 
 export function getCategory(key: string): Category | undefined {
   return categories.find((c) => c.key === key);

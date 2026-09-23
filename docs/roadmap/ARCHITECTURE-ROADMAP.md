@@ -22,9 +22,9 @@
 - [ ] Strengthen deterministic QA for documented invariants.
 
 ## Wave D — UX/IA
-- [ ] Review home → grammar → category → topic journey.
-- [ ] Review search and discoverability.
-- [ ] Review breadcrumbs, related links and semantic navigation.
+- [x] Review home → grammar → category → topic journey at source level.
+- [x] Review search and discoverability at source level.
+- [x] Review breadcrumbs, related links and semantic navigation at source level.
 - [ ] Browser-based accessibility review.
 
 ## Wave E — Editorial integration

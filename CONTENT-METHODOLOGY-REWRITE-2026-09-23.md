@@ -194,3 +194,25 @@ The **que / de que** page was strengthened as a constructional government refere
 The Academic Writing Toolkit paragraph-logic review was run on representative prose from this pass and returned **no issues**. This is a useful confirmation that the expanded explanatory paragraphs remain structurally coherent. The project continues to treat intentional short MDX blocks as reference components rather than forcing them into academic-style paragraph lengths.
 
 A new cross-page QA rule follows from this pass: whenever a conjunction appears on more than one canonical page, each page must preserve the same **construction + mood + temporal perspective** relationship. In particular, *cuando*, *aunque* and *si* must not receive conflicting blanket rules on the conjunction page, subjunctive pages and conditional pages.
+
+
+## Eighth deep rewrite pass — 2026-09-23
+
+The eighth pass deepened the **prepositional-government and high-frequency verb + preposition system**. The goal was to make the distinction between lexical government, free prepositional meaning, and other constructions explicit rather than presenting lists of verb/preposition pairs as a flat memorization table.
+
+The pages for **verb-preposition pairs** and **verbs with prepositions** were rewritten around constructional units such as *depender de, pensar en, soñar con, confiar en, insistir en, tratar de, empezar a* and *interesarse por*. The revised material now distinguishes:
+
+- the governing verb from the semantic contribution of the preposition;
+- verb + preposition + noun/pronoun from verb + preposition + infinitive;
+- verb + infinitive without a preposition from constructions where the preposition is obligatory;
+- verbal government from **personal a** and other independent functions of *a*;
+- prepositional government before *que* from the mood selected by the subordinate construction;
+- a default lexical pattern from cases where a verb permits more than one construction with different meanings or contextual conditions.
+
+The rewrite also strengthened the **pensar en / pensar de** contrast and added a constructional algorithm: identify the governing head, identify its complement pattern, check whether the model changes meaning, and only then use the Ukrainian translation as a semantic aid. This prevents the reference from teaching a false one-to-one mapping such as «український прийменник → іспанський прийменник».
+
+The **queísmo/dequeísmo** boundary was kept connected to the prepositional-government pages: *me acuerdo de que...* is treated as the result of the governing construction *acordarse de*, while *creo que...* illustrates a verb that does not select *de*. The mood of a clause after a preposition is not presented as mechanically caused by the preposition itself.
+
+The Academic Writing Toolkit paragraph-logic review was run on representative prose from this pass. It returned **one short-paragraph finding and no higher-level logic issue**. The finding corresponds to a deliberately compact Ukrainian-learner summary and does not justify merging the reference structure into longer academic-style paragraphs. As in earlier passes, short reference units are evaluated by function and retrieval value rather than paragraph length alone.
+
+A new cross-page QA rule follows from this pass: whenever a verb-preposition construction appears in more than one page, the pages must agree on its **governing preposition, complement type, core meaning, and degree of lexical variation**. Special attention should be paid to *pensar en/de, preocuparse por/de, depender de, ayudar a*, and constructions that meet *queísmo/dequeísmo*, *personal a*, infinitival complements, or verbal periphrases.

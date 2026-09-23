@@ -9,9 +9,9 @@ This audit verifies the architecture standard against the actual repository tree
 | Area | Count / state |
 |---|---:|
 | Grammar MDX under `src/content/es` | 196 |
-| Comparison MDX under `src/pages/comparisons` | 5 |
+| Comparison MDX under `src/content/comparisons` | 5 |
 | Total MDX files | 201 |
-| Astro route files | 8 |
+| Astro route files | 9 |
 | Reusable components + MDX registry | 11 files |
 | Layouts | 3 |
 | Stylesheets | 6 |
@@ -29,13 +29,13 @@ The main corpus lives in `src/content/es/<category>/<slug>.mdx`, uses an Astro C
 
 The schema now also validates that every content `category` exists in the canonical category registry. This prevents the TypeScript registry and the content corpus from silently drifting apart.
 
-### 2. Comparison pages are a separate legacy content surface
+### 2. Comparison content is now a first-class collection
 
-Five comparison documents remain page-scoped MDX files in `src/pages/comparisons`. Their metadata is interpreted by `ComparisonLayout`, while the comparison index and related links contain a small manually maintained registry.
+Five comparison documents are now entries in the dedicated `comparisons` Content Collection. The public `/comparisons/<slug>/` URLs are preserved through `src/pages/comparisons/[slug].astro` and the centralized `comparisonUrl()` helper.
 
-This is not treated as dead code. It is a deliberate architectural exception for now because migrating it into a second Content Collection would change routing, metadata, QA and content ownership at once.
+The comparison index, homepage featured set and topic-level related navigation now all consume the collection instead of maintaining duplicate title/URL registries.
 
-**Decision:** keep the subsystem stable during architecture cleanup; document it explicitly; consider a dedicated comparison collection only as a later, separately reviewed migration.
+**Decision:** comparisons are now a first-class content subsystem with a deliberately smaller schema because their semantics differ from grammar topics.
 
 ### 3. Homepage corpus metadata had drifted
 
@@ -72,10 +72,9 @@ The current component/layout/script files are connected to the application archi
 - Pull-request QA workflow added.
 - Architecture audit recorded with the current inventory and external deployment blocker.
 
-## Remaining work
+## Post-migration checks
 
-1. PR QA completed successfully on this branch; keep the workflow as the pre-merge gate.
+1. PR QA completed successfully before the comparison migration and must be rerun for the final head.
 2. Complete browser/manual accessibility and responsive smoke testing.
-3. Review the comparison subsystem as a separate migration decision.
-4. Apply the content model and source discipline progressively during the editorial rewrite.
-5. Enable GitHub Pages outside the codebase and confirm a successful production deployment.
+3. Apply the content model and source discipline progressively during the editorial rewrite.
+4. Enable GitHub Pages outside the codebase and confirm a successful production deployment.

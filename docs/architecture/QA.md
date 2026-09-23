@@ -12,6 +12,12 @@ npm run qa is the canonical release-oriented command. It currently runs typechec
 - Design audits: token, accessibility, responsive and component checks.
 - Build: actual static output and search index.
 
+## CI coverage
+
+- `.github/workflows/qa.yml` runs the same `npm run qa` gate on pull requests and manual dispatch.
+- `.github/workflows/deploy.yml` runs the same gate before production deployment on `main`.
+- Deployment availability itself is an infrastructure concern; a successful QA job does not prove that GitHub Pages is enabled.
+
 ## Evidence rule
 A green static check proves only what it checks. Browser/manual verification is required for visual interaction, focus behavior, real responsive layout and other runtime properties.
 

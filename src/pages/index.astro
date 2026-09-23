@@ -4,15 +4,12 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories } from '../data/categories';
 import { entryUrl, categoryUrl, withBase } from '../utils/content';
+import { comparisonUrl, sortComparisons } from '../utils/comparisons';
 
 const entries = await getCollection('es');
 const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 8);
 const fresh = entries.filter((e) => e.data.recently_added).slice(0, 4);
-const comparisons = [
-  { titleUk: 'Ser / Estar', slug: 'ser-estar', desc: 'Бути, як характеристика чи стан' },
-  { titleUk: 'Por / Para', slug: 'por-para', desc: 'Причина, ціль, майбутність і межі' },
-  { titleUk: 'Претерит / Імперфект', slug: 'past-tenses', desc: 'Два минулі часи' },
-];
+const comparisons = sortComparisons(await getCollection('comparisons')).filter((entry) => entry.data.featured);
 ---
 <BaseLayout
   title="Gramaticarrona — іспанська граматика для носіїв української"
@@ -71,11 +68,11 @@ const comparisons = [
       <h2>Порівняти</h2>
       <p>Конструкції, які україномовні найчастіше плутають, — у зіставленні, а не за механічним правилом.</p>
       <ul class="topic-list">
-        {comparisons.map((c2k) => (
+        {comparisons.map((entry) => (
           <li>
-            <a class="card-topic" href={withBase(`/comparisons/${c2k.slug}/`)}>
-              <span class="t-es">{c2k.titleUk}</span>
-              <span class="t-uk">{c2k.desc}</span>
+            <a class="card-topic" href={comparisonUrl(entry.id)}>
+              <span class="t-es">{entry.data.title}</span>
+              <span class="t-uk">{entry.data.description}</span>
             </a>
           </li>
         ))}

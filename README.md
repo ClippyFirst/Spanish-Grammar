@@ -42,15 +42,15 @@ npm run qa
 
 Вона послідовно перевіряє:
 
-1. `astro check` — типи та Astro/MDX diagnostics.
+1. TypeScript typecheck — `tsc --noEmit`.
 2. MDX preflight — синтаксична компіляція всіх MDX.
-3. Content validation — frontmatter, категорії, пов'язані теми й граф.
+3. Content validation — frontmatter, категорії та навігаційні зв'язки.
 4. Link validation — внутрішні посилання.
 5. Content graph audit — орфани, неоднозначні цілі, self-links, дублікати та надмірне перелінкування.
 6. Design audits — токени, accessibility, responsive і компоненти.
 7. Production build + Pagefind.
 
-CI має запускати той самий `npm run qa`, щоб локальна та production-перевірка не розходилися.
+CI запускає той самий `npm run qa`, щоб локальна та production-перевірка не розходилися.
 
 ## Структура
 
@@ -66,6 +66,13 @@ src/
   styles/               # дизайн-система
 scripts/                # автоматизована QA/аудит-логіка
 public/                 # favicon та інші статичні ресурси
+docs/
+  methodology/          # поточна методологія переписування
+  roadmap/              # активні силабус і roadmaps
+  workflows/            # робочі журнали, плани та промпти
+  audits/current/       # актуальний стан автоматичних аудитів
+  audits/archive/       # історичні аудити
+  superpowers/          # технічні плани та специфікації
 .github/workflows/      # GitHub Actions
 ```
 

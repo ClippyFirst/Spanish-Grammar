@@ -17,16 +17,6 @@ const cat = getCategory(category);
 const canonical = entryUrl(entry);
 const toc = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 
-function regionLabel(r: string): string {
-  const map: Record<string, string> = {
-    spain: 'Іспанія',
-    'latin-america': 'Латинська Америка',
-    rioplatense: 'Ріо-де-ла-Плата',
-    mexico: 'Мексика',
-    caribbean: 'Кариби',
-  };
-  return map[r] ?? r;
-}
 ---
 <BaseLayout
   title={`${entry.data.title_uk} — ${entry.data.title_es} · Gramaticarrona`}
@@ -44,19 +34,6 @@ function regionLabel(r: string): string {
     </nav>
 
     <div class="layout-doc grammar-doc">
-      {toc.length > 0 && (
-        <details class="toc-mobile">
-          <summary>Зміст сторінки</summary>
-          <nav aria-label="Зміст сторінки">
-            <ul>
-              {toc.map((h) => (
-                <li><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a></li>
-              ))}
-            </ul>
-          </nav>
-        </details>
-      )}
-
       <article>
         <header class="page-head">
           <div class="article-kicker">
@@ -66,15 +43,7 @@ function regionLabel(r: string): string {
           </div>
           <h1>{entry.data.title_uk}</h1>
           <div class="title-es">{entry.data.title_es}</div>
-          <div class="title-en">{entry.data.title_en}</div>
           <p class="synopsis">{entry.data.short_description}</p>
-          <div class="meta-line">
-            {entry.data.region !== 'general' && <span class="chip">{regionLabel(entry.data.region)}</span>}
-            {entry.data.updated && <span class="chip">Оновлено: {entry.data.updated}</span>}
-            {entry.data.review_status !== 'draft' && (
-              <span class="chip">Статус: {entry.data.review_status === 'verified' ? 'перевірено' : 'переглянуто'}</span>
-            )}
-          </div>
         </header>
 
         <div class="article-rule" aria-hidden="true"></div>
@@ -89,7 +58,7 @@ function regionLabel(r: string): string {
             <ul>
               {related.map((r) => (
                 <li>
-                  <a class="related-link" href={entryUrl(r)} aria-label={relationLabel(r)}>
+                  <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
                     <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
                     <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
                   </a>
@@ -100,18 +69,6 @@ function regionLabel(r: string): string {
         )}
       </article>
 
-      {toc.length > 0 && (
-        <aside class="toc" aria-label="Зміст сторінки">
-          <h2>Зміст</h2>
-          <nav>
-            <ul>
-              {toc.map((h) => (
-                <li><a href={`#${h.slug}`} data-depth={h.depth}>{h.text}</a></li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
-      )}
     </div>
   </div>
 </BaseLayout>

@@ -83,7 +83,7 @@
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/subordinate-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verb-valency.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verum-focus.mdx`
-- [ ] `src/content/es/sentence-structure/word-order-review.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/word-order-review.mdx`
 
 ## conjunctions — 4 сторінок
 
@@ -117,10 +117,10 @@
 
 ## tenses — 4 сторінок
 
-- [ ] `src/content/es/tenses/presente-de-indicativo.mdx`
-- [ ] `src/content/es/tenses/preterito-anterior.mdx`
-- [ ] `src/content/es/tenses/preterito-imperfecto.mdx`
-- [ ] `src/content/es/tenses/preterito-indefinido.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/tenses/presente-de-indicativo.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/tenses/preterito-anterior.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/tenses/preterito-imperfecto.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/tenses/preterito-indefinido.mdx`
 
 ## moods — 1 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **46** |
-| Частка незачеплених сторінок | **23.5%** |
+| Не змінені / залишені в rewrite backlog | **42** |
+| Частка незачеплених сторінок | **21.4%** |
 
 ### Protected baseline rule
 
@@ -375,3 +375,14 @@ The current precision pass closed seven additional backlog pages on this branch:
 - All three pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit was run on all three full pages; no higher-level paragraph-logic defect was returned (only the repository's expected short-component signals).
 - Current backlog: **46 of 196 grammar MDX pages (23.5%)**.
+
+
+## Progress update — 2026-09-24 (core tenses)
+
+- Closed the four remaining core indicative tense pages in the current P0 backlog: `presente-de-indicativo`, `preterito-imperfecto`, `preterito-indefinido`, and `preterito-anterior`.
+- Reframed the present around current, habitual, gnomic, historical, and contextual future uses instead of treating it as only an action happening now.
+- Reworked the imperfecto/indefinido contrast around viewpoint, discourse structure, background vs event sequencing, and bounded situations rather than the absolute "unfinished vs finished" mnemonic.
+- Reworked `pretérito anterior` around anteriority and its restricted modern stylistic distribution; removed the stronger unsupported claim that it is simply a literary-only form.
+- RAE/ASALE sources were checked for the tense-system and aspectual claims; all four pages are marked `review_status: verified`.
+- Academic Writing Toolkit was run on all four pages. It reported only the expected short-paragraph signals from the componentized reference format and no higher-level paragraph-logic defect.
+- Current backlog: **42 of 196 grammar MDX pages (21.4%)**.

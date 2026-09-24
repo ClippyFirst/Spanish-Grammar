@@ -1,5 +1,7 @@
 ---
-// Mistake — a typical Ukrainian-speaker error with a correction and the reason.
+// Mistake — a compact editorial correction pair.
+// The visual language follows the Gramaticarrona redesign:
+// incorrect form → correct form, with the explanation underneath.
 interface Props {
   bad: string;
   good: string;
@@ -9,10 +11,9 @@ const { bad, good, why } = Astro.props;
 ---
 <div class="mistake">
   <div class="mistake-row">
-    <span class="mark no" aria-hidden="true">✕</span>
-    <span class="span-x">{bad}</span>
-    <span class="mark ok" aria-hidden="true">✓</span>
-    <span class="span-ok">{good}</span>
+    <span class="mistake-bad">{bad}</span>
+    <span class="mistake-arrow" aria-hidden="true">→</span>
+    <span class="mistake-good">{good}</span>
   </div>
-  <div class="why">{why}</div>
+  <p class="mistake-why">{why}</p>
 </div>

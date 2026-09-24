@@ -1497,3 +1497,64 @@ p, li { max-width: 75ch; }
     font-size: 14px;
   }
 }
+
+
+/* Keep the article itself on the documented 760px reading measure.
+   This also makes every in-article navigation row share one stable width. */
+.grammar-doc {
+  width: min(100%, var(--maxw-text));
+  max-width: var(--maxw-text);
+}
+
+.grammar-doc article {
+  width: 100%;
+  max-width: var(--maxw-text);
+}
+
+/* Category rows: permit the bilingual labels and description to shrink
+   instead of allowing one long label to push another column over it. */
+.category-copy,
+.category-copy > * {
+  min-width: 0;
+}
+
+.category-copy strong,
+.category-copy em,
+.category-copy > span {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  .category-copy {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .category-copy > span {
+    grid-column: 1 / -1;
+  }
+}
+
+/* The 17-column index is intentionally hidden below desktop; all other
+   editorial rows must remain inside their containing block. */
+.category-row,
+.popular-row,
+.topic-row {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .grammar-doc {
+    width: 100%;
+  }
+}
+
+/* Formula grids inherit the editorial no-card treatment and never force
+   narrow reading widths. */
+.formula-grid {
+  min-width: 0;
+}
+
+.formula-grid > * {
+  min-width: 0;
+}

@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **68 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **66 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -96,8 +96,8 @@
 - [ ] REWRITE `adjectives/meaning-by-position.mdx`
 - [x] DONE — verified / precision metadata `adjectives/adjective-agreement.mdx`
 - [x] DONE — precision rewrite + verification `adjectives/agreement-traps.mdx`
-- [ ] VERIFY `adjectives/quantifiers.mdx`
-- [ ] VERIFY `adjectives/quantifiers-advanced.mdx`
+- [x] DONE — verified / precision metadata `adjectives/quantifiers.mdx`
+- [x] DONE — verified / precision metadata `adjectives/quantifiers-advanced.mdx`
 
 **Cross-page test:**
 `un gran hombre / un hombre grande`,
@@ -406,7 +406,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Closed `conjunctions/como-excepto.mdx`, `conjunctions/discourse-connectors.mdx`, and `conjunctions/discourse-fillers.mdx` with precision rewrites and verification.
 - Tightened the distinctions among the main uses of `como`, exception constructions, discourse connectors, punctuation, register, and conversational discourse markers.
 - Academic Writing Toolkit returned only short-paragraph signals expected from the componentized reference format on all three rewritten pages.
-- Current untouched/review backlog: **68 of 196 grammar MDX pages (34.7%)**.
+- Current untouched/review backlog: **66 of 196 grammar MDX pages (33.7%)**.
 
 
 ### P1 adjectives precision pass — 2026-09-24
@@ -427,3 +427,12 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Reworked `adjectives/agreement-traps.mdx` to distinguish grammatical number, semantic agreement, collective nouns, `usted/ustedes`, and coordinated mixed-gender subjects without false universals.
 - Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
 - Current untouched/review backlog: **68 of 196 grammar MDX pages (34.7%)**.
+
+
+### P1 adjectives quantification verification — 2026-09-24
+
+- Verified `adjectives/quantifiers.mdx` and `adjectives/quantifiers-advanced.mdx`.
+- Added current RAE/ASALE source metadata and `review_status: verified`.
+- Preserved the componentized reference structure while tightening the treatment of `el resto de` and quantity/concordance variability.
+- Academic Writing Toolkit returned only expected short-paragraph signals on both pages.
+- Current untouched/review backlog: **66 of 196 grammar MDX pages (33.7%)**.

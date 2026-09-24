@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 23.09.2026:** 196 MDX-сторінок загалом; 79 уже змінювалися на цій гілці; **117 не змінювалися**. Нижче — саме ці 117 сторінок.
+**Станом на 23.09.2026:** 196 MDX-сторінок загалом; 86 уже змінювалися на цій гілці; **110 не змінювалися**. Нижче — саме ці 117 сторінок.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -35,11 +35,11 @@
 
 ## verbs — 20 сторінок
 
-- [ ] `src/content/es/verbs/change-of-state.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/change-of-state.mdx`
 - [ ] `src/content/es/verbs/conjugations.mdx`
 - [ ] `src/content/es/verbs/deber-vs-deber-de.mdx`
-- [ ] `src/content/es/verbs/estar-emotions-states.mdx`
-- [ ] `src/content/es/verbs/gerund-uses.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/estar-emotions-states.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/gerund-uses.mdx`
 - [ ] `src/content/es/verbs/gerundio.mdx`
 - [ ] `src/content/es/verbs/gustar-type-verbs.mdx`
 - [ ] `src/content/es/verbs/haber-auxiliary.mdx`
@@ -50,7 +50,7 @@
 - [ ] `src/content/es/verbs/orthographic-changes.mdx`
 - [ ] `src/content/es/verbs/participio.mdx`
 - [ ] `src/content/es/verbs/pronominal-verbs.mdx`
-- [ ] `src/content/es/verbs/ser-estar-hay.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/ser-estar-hay.mdx`
 - [ ] `src/content/es/verbs/ser-estar-location.mdx`
 - [ ] `src/content/es/verbs/ser-estar-with-adjectives.mdx`
 - [ ] `src/content/es/verbs/stem-changing-verbs.mdx`
@@ -88,7 +88,7 @@
 ## conjunctions — 4 сторінок
 
 - [ ] `src/content/es/conjunctions/como-excepto.mdx`
-- [ ] `src/content/es/conjunctions/coordinating.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/conjunctions/coordinating.mdx`
 - [ ] `src/content/es/conjunctions/discourse-connectors.mdx`
 - [ ] `src/content/es/conjunctions/discourse-fillers.mdx`
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **116** |
-| Частка незачеплених сторінок | **59.2%** |
+| Не змінені / залишені в rewrite backlog | **109** |
+| Частка незачеплених сторінок | **55.6%** |
 
 ### Protected baseline rule
 
@@ -227,3 +227,8 @@
 Academic Writing Toolkit тут є допоміжним інструментом для логіки й структури прозового тексту. Його короткопараграфні попередження не слід автоматично перетворювати на довші абзаци: у цьому репозиторії короткі Formula, Example, MinPair, Mistake, Note та таблиці є функціональними одиницями довідника.
 
 **Основна ієрархія якості:** фактична точність → граматична точність → придатність для україномовного учня → міжсторінкова узгодженість → джерельна дисципліна → технічний QA.
+
+
+## Progress update — 2026-09-24
+
+The current precision pass closed seven additional backlog pages on this branch: four verb pages and three conjunction pages. The protected `verbs/ser-estar.mdx` baseline was reviewed but deliberately not rewritten.

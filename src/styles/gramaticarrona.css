@@ -1836,3 +1836,121 @@ p, li { max-width: 75ch; }
     padding: .8rem;
   }
 }
+
+
+/* ==========================================================================
+   FINAL PASS — navigation state, focus visibility, and narrow-layout safety
+   ========================================================================== */
+
+/* Mobile index keeps the same active-category language as the desktop stripe. */
+@media (max-width: 1000px) {
+  .mobile-menu-index a[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .mobile-menu-primary a:focus-visible,
+  .mobile-menu-index a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+/* Do not let a long brand or nav label create accidental horizontal scroll. */
+.header-inner,
+.mobile-menu,
+.mobile-menu-primary,
+.mobile-menu-index {
+  min-width: 0;
+}
+
+.brand {
+  min-width: 0;
+}
+
+.brand-name,
+.brand-sub {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* The search field must retain a visible keyboard focus after the base reset. */
+.search-form:focus-within {
+  border-color: var(--color-accent);
+}
+
+.search-form input:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.search-bar input:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* Keep editorial rows from producing a viewport-level scrollbar at narrow widths. */
+.category-row,
+.popular-row,
+.topic-row,
+.related-link,
+.search-result-link,
+.footer-inner {
+  min-width: 0;
+}
+
+.category-copy,
+.popular-copy,
+.topic-title,
+.search-result-link,
+.footer-line {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .brand {
+    gap: .35rem;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .brand-sub {
+    font-size: 10px;
+  }
+
+  .nav-toggle {
+    flex: 0 0 auto;
+  }
+
+  .search-interface,
+  .search-form,
+  .search-form input,
+  .search-form button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .footer-line {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .mobile-menu {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1 {
+    font-size: 2.65rem;
+  }
+}

@@ -3,8 +3,7 @@
 import { getCollection, render } from 'astro:content';
 import GrammarLayout from '../../../layouts/GrammarLayout.astro';
 import { mdxComponents } from '../../../components/mdx';
-import { resolveRelated, resolveReferences, parseId } from '../../../utils/content';
-import { getCategory } from '../../../data/categories';
+import { buildTopicNumberMap, resolveRelated, resolveReferences, parseId, sortGrammarEntries } from '../../../utils/content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('es');

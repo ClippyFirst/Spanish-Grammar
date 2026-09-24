@@ -53,6 +53,7 @@ When adding a new grammar topic, put useful alternate search terms into its `key
 
 The canonical implementation is:
 
+- `src/components/SearchControl.astro` — shared form, base-path-safe submission, and `/` shortcut
 - `src/utils/search.ts` — ranking and normalization
 - `src/pages/search.astro` — search UI and build-time catalog
 - topic frontmatter `keywords` — editorial aliases
@@ -71,6 +72,7 @@ The search control is a shared editorial instrument used on both the homepage an
 - Supporting text sits below the rule, outside the field, so the input remains visually quiet.
 - Focus changes the rules and action to the accent color and retains a visible keyboard focus ring.
 - The `/` key focuses the search field when the user is not already typing in another editable control; the shortcut is implemented by the shared component.
+- Form submission is also implemented by the shared component: it resolves the declared action against the current URL and explicitly writes `q` before navigation. This prevents the homepage form from losing its query when the site is served under the `/Spanish-Grammar/` GitHub Pages base path.
 - Mobile keeps the same instrument; only spacing and proportions contract. There is no stacked full-width button treatment.
 
 The canonical reusable component is `src/components/SearchControl.astro`. Homepage and `/search/` must use this component rather than maintaining separate search-form markup.

@@ -99,9 +99,9 @@ for (const d of docs) {
   if (hits.length) findings.forbidden_ukrainomov.push({ page: d.rel, hits: [...new Set(hits)] });
 }
 
-const artifact = /(?<!\*)\*[^\n*]+\*\*[^\n*]+\*/g;
+const artifact = /\\*[^\\n*]+\\*\\*[^\\s*][^\\n*]*\\*/g;
 for (const d of docs) {
-  const hits = [...d.body.matchAll(artifact)].map(m => ({ match: m[0], line: d.body.slice(0, m.index).split(/\r?\n/).length }));
+  const hits = [...d.body.matchAll(artifact)].map(m => ({ match: m[0], line: d.body.slice(0, m.index).split(/\\r?\\n/).length }));
   if (hits.length) findings.emphasis_artifacts.push({ page: d.rel, hits });
 }
 
@@ -121,7 +121,11 @@ for (const d of docs) {
       const links = [...section.matchAll(/\]\((\/es\/[^)#?]+)\/?(?:[#?][^)]*)?\)/g)].map(m => m[1]);
       sections.push({ links, count: links.length });
     }
-    findings.related_sections.push({ page: d.rel, sections });
+    const sectionLinks = sections.flatMap(section => section.links);
+    const frontmatterLinks = (d.lists.related ?? []).map(target => '/es/' + (target.includes('/') ? target : '') + '/');
+    const unresolvedComparison = sectionLinks.length !== (d.lists.related ?? []).length;
+    if (unresolvedComparison) findings.related_sections.push({ page: d.rel, sections, frontmatter_count: (d.lists.related ?? []).length });
+    else findings.related_sections.push({ page: d.rel, sections, frontmatter_count: (d.lists.related ?? []).length });
   }
   const related = d.lists.related ?? [];
   const seen = new Set();

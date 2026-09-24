@@ -1,44 +1,52 @@
 ---
-// Homepage: identity, search, categories, popular topics, comparisons.
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories } from '../data/categories';
 import { entryUrl, categoryUrl, withBase } from '../utils/content';
-import { comparisonUrl, sortComparisons } from '../utils/comparisons';
 
 const entries = await getCollection('es');
-const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 8);
-const fresh = entries.filter((e) => e.data.recently_added).slice(0, 4);
-const comparisons = sortComparisons(await getCollection('comparisons')).filter((entry) => entry.data.featured);
+const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 5);
+const featuredCategories = sortedCategories.slice(0, 9);
 ---
 <BaseLayout
   title="Gramaticarrona — іспанська граматика для носіїв української"
-  description="Швидкий, зручний і глибокий довідник з іспанської граматики для носіїв української: правила, формули, приклади, типові помилки, регіональні варіанти і пошук."
+  description="Швидкий і глибокий довідник з іспанської граматики для носіїв української: правила, формули, приклади, типові помилки, регіональні варіанти і пошук."
   canonical="/"
 >
   <div class="container">
     <section class="hero">
-      <h1>Іспанська граматика — зрозуміти, а не просто запам’ятати.</h1>
+      <h1>Іспанська граматика для українськомовних.</h1>
       <p class="lead">
-        Довідник для носіїв української: від базових конструкцій до тонких відмінностей. Не вчить замість вас — дає точну карту мови, щоб швидко знайти правило, зіставити форми й перевірити приклад.
+        Редакційний довідник, який допомагає не просто запам’ятати правило, а зрозуміти його,
+        зіставити форми та повернутися до потрібної конструкції в потрібний момент.
       </p>
       <div class="hero-meta" aria-label="Статистика довідника">
         <span>{entries.length} тем</span>
-        <span>{sortedCategories.length} розділів</span>
+        <span>{sortedCategories.length} категорій</span>
         <span>UA · ES</span>
-        <span>Довідник, не курс</span>
+        <span>довідник, не курс</span>
       </div>
       <form class="search-bar" action={withBase('/search/')} method="get" role="search">
         <label class="visually-hidden" for="home-search">Пошук по граматиці</label>
-        <input id="home-search" name="q" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjuntivo…" autocomplete="off" />
+        <input id="home-search" name="q" type="search" placeholder="presente, «подобається», ser / estar, subjuntivo…" autocomplete="off" />
         <button class="search-arrow" type="submit" aria-label="Перейти до пошуку">→</button>
       </form>
     </section>
 
+    <section class="section learning-path" aria-label="Як користуватися довідником">
+      <h2>Як читати довідник</h2>
+      <div class="path-grid">
+        <div><b>01</b><span>ЗНАЙТИ</span></div>
+        <div><b>02</b><span>ЗРОЗУМІТИ</span></div>
+        <div><b>03</b><span>ПОРІВНЯТИ</span></div>
+        <div><b>04</b><span>ЗАПАМ’ЯТАТИ</span></div>
+      </div>
+    </section>
+
     <section class="section grammar-sections">
-      <h2>Розділи граматики</h2>
+      <h2>Категорії — {sortedCategories.length}</h2>
       <div class="grid-categories">
-        {sortedCategories.map((c) => (
+        {featuredCategories.map((c) => (
           <a class="card" href={categoryUrl(c.key)}>
             <span class="card-index" aria-hidden="true"></span>
             <span class="card-copy">
@@ -49,10 +57,11 @@ const comparisons = sortComparisons(await getCollection('comparisons')).filter((
           </a>
         ))}
       </div>
+      <p class="categories-more"><a href={withBase('/es/')}>і ще {sortedCategories.length - featuredCategories.length} категорій →</a></p>
     </section>
 
     <section class="section">
-      <h2>Популярні теми</h2>
+      <h2>Популярне</h2>
       <ul class="topic-list">
         {popular.map((e) => (
           <li>
@@ -64,36 +73,5 @@ const comparisons = sortComparisons(await getCollection('comparisons')).filter((
         ))}
       </ul>
     </section>
-
-    <section class="section">
-      <h2>Порівняти</h2>
-      <p>Конструкції, які україномовні найчастіше плутають, — у зіставленні, а не за механічним правилом.</p>
-      <ul class="topic-list">
-        {comparisons.map((entry) => (
-          <li>
-            <a class="card-topic" href={comparisonUrl(entry.id)}>
-              <span class="t-es">{entry.data.title}</span>
-              <span class="t-uk">{entry.data.description}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    {fresh.length > 0 && (
-      <section class="section">
-        <h2>Недавно додано</h2>
-        <ul class="topic-list">
-          {fresh.map((e) => (
-            <li>
-              <a class="card-topic" href={entryUrl(e)}>
-                <span class="t-es">{e.data.title_es}</span>
-                <span class="t-uk">{e.data.title_uk}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
   </div>
 </BaseLayout>

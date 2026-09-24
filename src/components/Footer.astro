@@ -1,10 +1,15 @@
 ---
-// Site footer.
+import { withBase } from '../utils/content';
 ---
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div><p class="footer-brand">Gramaticarrona</p><p>Іспанська граматика для носіїв української — від базових конструкцій до тонких відмінностей.</p></div>
-    <div><p class="footer-label">МЕТОД</p><p>Знайти → зрозуміти → порівняти → перевірити.</p></div>
-    <div><p class="footer-label">ПРОЄКТ</p><p>Статичний довідник на <a href="https://astro.build" rel="noopener">Astro</a>. Пошук працює у браузері.</p></div>
+  <div class="container footer-inner">
+    <p class="footer-line">
+      <strong>GRAMATICARRONA</strong>
+      <span aria-hidden="true">·</span>
+      <span>ІСПАНСЬКА ГРАМАТИКА ДЛЯ УКРАЇНОМОВНИХ</span>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/ClippyFirst/Spanish-Grammar" rel="noopener">GITHUB.COM/CLIPPYFIRST</a>
+    </p>
+    <a class="footer-top" href={withBase('/')} aria-label="На початок">↑ НА ПОЧАТОК</a>
   </div>
 </footer>

@@ -136,8 +136,8 @@
 
 ## articles — 2 сторінок
 
-- [ ] `src/content/es/articles/articles-with-names.mdx`
-- [ ] `src/content/es/articles/definite-vs-indefinite.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/articles/articles-with-names.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/articles/definite-vs-indefinite.mdx`
 
 ## prepositions — 4 сторінок
 
@@ -427,3 +427,13 @@ The current precision pass closed seven additional backlog pages on this branch:
 - All four pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit returned only expected short-paragraph signals for the componentized reference format; no higher-level paragraph-logic defect was reported.
 - Current backlog: **34 of 196 grammar MDX pages (17.3%)**.
+
+
+## Progress update — 2026-09-24 (articles precision)
+
+- Closed two article backlog pages: `articles-with-names` and `definite-vs-indefinite`.
+- Reworked proper-name article use around official-name articles, geographic classes, titles, regional variation, and the distinction between an article that belongs to a name and one introduced by a syntactic construction.
+- Reworked definite/indefinite contrast around referent identification, anaphora, genericity, zero article, professions, and contextual readings of `un` under negation.
+- Added RAE/ASALE source metadata and `review_status: verified` to both pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals for the componentized reference format; no higher-level paragraph-logic defect was reported.
+- Current backlog: **32 of 196 grammar MDX pages (16.3%)**.

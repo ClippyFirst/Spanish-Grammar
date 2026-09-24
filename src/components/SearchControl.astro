@@ -51,3 +51,18 @@ const {
     <kbd aria-label="Гаряча клавіша пошуку">/</kbd>
   </div>
 </form>
+
+<script define:vars={{ id }}>
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
+    const target = event.target;
+    if (
+      target instanceof HTMLInputElement ||
+      target instanceof HTMLTextAreaElement ||
+      target instanceof HTMLSelectElement ||
+      (target instanceof HTMLElement && target.isContentEditable)
+    ) return;
+    event.preventDefault();
+    document.getElementById(id)?.focus();
+  });
+</script>

@@ -118,9 +118,9 @@ const sections = [
       ['Пасивний стан', 'sentence-structure/passive-voice', 'НМТ · ЄВІ'],
       ['Пряма й непряма мова', 'sentence-structure/reported-speech', 'НМТ · ЄВІ'],
       ['Напівзв’язкові дієслова зміни стану: ponerse, hacerse, volverse, quedarse', 'verbs/change-of-state', 'НМТ'],
-      ['Percepción + infinitivo / gerundio / que', 'verbs/verb-infinitive-patterns', 'НМТ'],
-      ['Каузативна конструкція hacer + infinitivo', 'verbs/verb-infinitive-patterns', 'НМТ'],
-      ['Дейктичні ir / venir / llevar / traer', 'prepositions/place', 'НМТ'],
+      ['Percepción + infinitivo / gerundio / que', 'verbs/perception-verbs', 'НМТ'],
+      ['Каузативна конструкція hacer + infinitivo', 'verbs/causative-hacer-infinitivo', 'НМТ'],
+      ['Дейктичні ir / venir / llevar / traer', 'verbs/deictic-motion', 'НМТ'],
     ],
   },
   {
@@ -167,9 +167,7 @@ const sections = [
 ];
 
 const canonical = (path: string) => withBase('/es/' + path + '/');
-const partialTopics = new Set(['Percepción + infinitivo / gerundio / que']);
-const missingTopics = new Set(['Каузативна конструкція hacer + infinitivo', 'Дейктичні ir / venir / llevar / traer']);
-const topicStatus = (label: string) => missingTopics.has(label) ? 'потрібно доповнити' : partialTopics.has(label) ? 'частково' : 'опрацьовано';
+const topicStatus = (_label: string) => 'опрацьовано';
 
 const totalRows = sections.reduce((sum, section) => sum + section.rows.length, 0);
 const sharedRows = sections.reduce(

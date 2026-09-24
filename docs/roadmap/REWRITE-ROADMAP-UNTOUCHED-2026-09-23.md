@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **23 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **19 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -165,12 +165,12 @@
 ## word-formation — 7 сторінок
 
 - [ ] `src/content/es/word-formation/adverb-diminutives.mdx`
-- [ ] `src/content/es/word-formation/augmentatives.mdx`
-- [ ] `src/content/es/word-formation/compounding.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/word-formation/augmentatives.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/word-formation/compounding.mdx`
 - [ ] `src/content/es/word-formation/diminutives-review.mdx`
-- [ ] `src/content/es/word-formation/diminutives.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/word-formation/diminutives.mdx`
 - [ ] `src/content/es/word-formation/pejoratives-affectionate.mdx`
-- [ ] `src/content/es/word-formation/prefixes-suffixes.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/word-formation/prefixes-suffixes.mdx`
 
 ## adverbs — 2 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **23** |
-| Частка незачеплених сторінок | **11.7%** |
+| Не змінені / залишені в rewrite backlog | **19** |
+| Частка незачеплених сторінок | **9.7%** |
 
 ### Protected baseline rule
 
@@ -461,3 +461,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Academic Writing Toolkit returned only short-paragraph signals on all five pages; no higher-level paragraph-logic defect was reported.
 - RAE/ASALE sources were refreshed for voseo, seseo/ceceo, and pronominal variation.
 - Current backlog: **23 of 196 grammar MDX pages (11.7%)**.
+
+
+## Progress update — 2026-09-24 (word formation I)
+
+- Closed four word-formation backlog pages: `prefixes-suffixes`, `diminutives`, `augmentatives`, and `compounding`.
+- Reworked derivational explanations so prefixes and suffixes are treated as formants with context-sensitive meanings rather than one-to-one translation rules.
+- Reworked diminutives around size, affect, mitigation, irony and lexicalization; removed rigid rules for `-cito` and the claim that `-illo` is inherently pejorative.
+- Reworked augmentatives around `-ón/-ona`, `-azo/-aza`, `-ote/-ota` and the distinct adjectival behavior of `-udo/-uda`.
+- Expanded compounding around productive V+N patterns, lexicalization, plural behavior, and the boundary between compounds and multiword expressions.
+- All four pages are marked `review_status: verified` with RAE/ASALE source metadata.
+- Academic Writing Toolkit returned only short-paragraph signals on all four pages; no higher-level paragraph-logic defect was reported.
+- Current backlog: **19 of 196 grammar MDX pages (9.7%)**.

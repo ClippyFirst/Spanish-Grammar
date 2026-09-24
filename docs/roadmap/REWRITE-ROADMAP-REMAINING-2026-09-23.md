@@ -34,11 +34,11 @@
 - [x] DONE — deep rewrite + verification `verbs/gerundio.mdx`
 - [x] DONE — deep rewrite + verification `verbs/participio.mdx`
 - [x] DONE — deep rewrite + verification `verbs/infinitivo.mdx`
-- [ ] VERIFY `verbs/gerund-uses.mdx`
-- [ ] VERIFY `verbs/estar-emotions-states.mdx`
-- [ ] VERIFY `verbs/change-of-state.mdx`
+- [x] DONE — verified / precision rewrite `verbs/gerund-uses.mdx`
+- [x] DONE — verified / precision rewrite `verbs/estar-emotions-states.mdx`
+- [x] DONE — verified / precision rewrite `verbs/change-of-state.mdx`
 - [ ] VERIFY `verbs/ser-estar.mdx`
-- [ ] VERIFY `verbs/ser-estar-hay.mdx`
+- [x] DONE — verified / precision rewrite `verbs/ser-estar-hay.mdx`
 
 **Чому P0:** морфологічні сторінки є фундаментом для всього tense/mood/periphrasis system. Тут особливо важливо не змішувати форму, функцію та лексичну валентність.
 
@@ -364,3 +364,13 @@ Primary quality gates remain:
 - infinitive versus *que + subjuntivo* without a false one-subject/two-subject universal.
 
 All 11 revised pages were marked `review_status: verified` after the PR QA gate. Previously rewritten grammar pages outside this P0 block remain protected and were not re-rewritten.
+
+
+### Follow-up precision pass — 2026-09-24
+
+- Verified/reworked four remaining verb pages: `gerund-uses`, `estar-emotions-states`, `change-of-state`, `ser-estar-hay`.
+- Kept `verbs/ser-estar.mdx` as protected baseline; it was reviewed for consistency but not rewritten because it already belongs to the previous deep-rewrite corpus.
+- Completed the first three P0 conjunction pages: `coordinating`, `subordinating`, `que-de-que`.
+- Tightened false universals around gerundio, ser/estar, change-of-state verbs, and indicativo/subjuntivo selection.
+- Added/updated RAE/ASALE source metadata and marked the seven touched content pages as `review_status: verified`.
+- Academic Writing Toolkit review of the seven pages returned only the expected short-paragraph signals from the componentized reference format; no higher-level paragraph-logic issue was reported.

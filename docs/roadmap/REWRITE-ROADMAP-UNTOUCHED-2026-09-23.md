@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **70 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **68 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -95,7 +95,7 @@
 ## adjectives — 8 сторінок
 
 - [x] DONE — precision rewrite + verification `src/content/es/adjectives/adjective-types-cultos.mdx`
-- [ ] `src/content/es/adjectives/agreement-traps.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adjectives/agreement-traps.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/adjectives/comparison-structures.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/adjectives/degrees-of-comparison.mdx`
 - [ ] `src/content/es/adjectives/irregular-comparatives.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **70** |
-| Частка незачеплених сторінок | **35.7%** |
+| Не змінені / залишені в rewrite backlog | **68** |
+| Частка незачеплених сторінок | **34.7%** |
 
 ### Protected baseline rule
 
@@ -296,3 +296,12 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added `review_status: verified` and RAE/ASALE source metadata to all four rewritten pages.
 - Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
 - Current backlog: **70 of 196 grammar MDX pages (35.7%)**.
+
+
+## Progress update — 2026-09-24 (adjectives II)
+
+- Closed `irregular-comparatives` and `meaning-by-position` with precision rewrites.
+- Verified `adjective-agreement` and added current source/review metadata.
+- Reworked `agreement-traps` around collective nouns, `usted/ustedes`, coordinated subjects, and the distinction between grammatical and semantic agreement.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
+- Current backlog: **68 of 196 grammar MDX pages (34.7%)**.

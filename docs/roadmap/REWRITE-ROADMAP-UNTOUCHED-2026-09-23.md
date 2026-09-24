@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **28 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **23 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -448,7 +448,7 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Reworked temporal prepositions around fixed constructions, distinguishing `en una hora` (future point) from `durante una hora` (duration), and `dentro de` from `hace`.
 - All four pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit was run on all four full pages; only short-paragraph signals were returned, consistent with the repository's componentized reference format.
-- Current backlog: **28 of 196 grammar MDX pages (14.3%)**.
+- Current backlog: **23 of 196 grammar MDX pages (11.7%)**.
 
 
 ## Progress update — 2026-09-24 (regional precision)

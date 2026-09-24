@@ -1325,3 +1325,175 @@ p, li { max-width: 75ch; }
   .button-primary, .button-secondary { min-height: 44px; }
   .footer-line { font-size: 9px; }
 }
+
+
+/* --------------------------------------------------------------------------
+   Article component polish
+   -------------------------------------------------------------------------- */
+
+/* Long linguistic strings must never collide with adjacent grid/flex content. */
+.grammar-doc .prose,
+.grammar-doc .prose > *,
+.grammar-doc .prose p,
+.grammar-doc .prose li,
+.grammar-doc .prose table,
+.grammar-doc .related,
+.grammar-doc .related li,
+.grammar-doc .related-link,
+.grammar-doc .mistake,
+.grammar-doc .mistake-row,
+.grammar-doc .minpair,
+.grammar-doc .mp-row,
+.grammar-doc .formula,
+.grammar-doc .formula-body,
+.grammar-doc .note {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.grammar-doc .prose {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.grammar-doc .prose pre,
+.grammar-doc .prose code {
+  max-width: 100%;
+}
+
+.grammar-doc .prose pre {
+  overflow-x: auto;
+}
+
+/* Related topics are true full-width rows: stable columns, equal hit areas,
+   and no flex shrink that can make bilingual labels collide. */
+.related ul {
+  width: 100%;
+}
+
+.related li {
+  display: block;
+}
+
+.related-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 28px;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+  min-height: 58px;
+  box-sizing: border-box;
+  padding: 14px 0;
+  border: 0;
+}
+
+.related-link .r-es,
+.related-link .r-uk {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.related-link .r-es {
+  color: var(--color-link);
+  font: 500 14px/1.35 var(--font-mono);
+}
+
+.related-link .r-uk {
+  color: var(--color-text-secondary);
+  font: 400 14px/1.45 var(--font-body);
+}
+
+.related-link::after {
+  justify-self: end;
+  width: 28px;
+  text-align: right;
+  color: var(--color-accent);
+  font: 500 18px/1 var(--font-body);
+}
+
+/* Mistake correction follows the reference literally:
+   incorrect form → correct form, explanation below. */
+.mistake {
+  margin: 24px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.mistake-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 12px;
+  width: 100%;
+}
+
+.mistake-bad,
+.mistake-good {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font: 500 15px/1.5 var(--font-body);
+}
+
+.mistake-bad {
+  color: var(--color-accent);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+}
+
+.mistake-arrow {
+  justify-self: center;
+  color: var(--color-text-muted);
+  font: 500 18px/1 var(--font-body);
+}
+
+.mistake-good {
+  color: var(--color-correct);
+  font-weight: 600;
+}
+
+.mistake-why {
+  max-width: none !important;
+  margin: 10px 0 0;
+  color: var(--color-text-secondary);
+  font: 400 14px/1.55 var(--font-body);
+}
+
+@media (max-width: 767px) {
+  .related-link {
+    grid-template-columns: minmax(0, 1fr) 24px;
+    column-gap: 12px;
+    min-height: 56px;
+    padding: 12px 0;
+  }
+
+  .related-link .r-es,
+  .related-link .r-uk {
+    grid-column: 1;
+  }
+
+  .related-link .r-es {
+    grid-row: 1;
+  }
+
+  .related-link .r-uk {
+    grid-row: 2;
+    margin-top: 2px;
+  }
+
+  .related-link::after {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .mistake-row {
+    grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
+    column-gap: 8px;
+  }
+
+  .mistake-bad,
+  .mistake-good {
+    font-size: 14px;
+  }
+}

@@ -31,6 +31,40 @@ export function entryUrl(entry: GrammarEntry): string {
   return withBase(`/${lang}/${category}/${slug}/`);
 }
 
+/**
+ * Stable editorial order used everywhere a topic receives a visible number.
+ * Frontmatter order remains source metadata; the visible number is the
+ * position within the category after applying the same deterministic sort.
+ */
+export function sortGrammarEntries(entries: GrammarEntry[]): GrammarEntry[] {
+  return [...entries].sort((a, b) => {
+    const aPath = parseId(a.id);
+    const bPath = parseId(b.id);
+    const categoryDelta =
+      (getCategory(aPath.category)?.order ?? 999) - (getCategory(bPath.category)?.order ?? 999);
+    if (categoryDelta !== 0) return categoryDelta;
+
+    const orderDelta = (a.data.order ?? 100) - (b.data.order ?? 100);
+    if (orderDelta !== 0) return orderDelta;
+
+    return aPath.slug.localeCompare(bPath.slug);
+  });
+}
+
+export function buildTopicNumberMap(entries: GrammarEntry[]): Map<string, number> {
+  const numbers = new Map<string, number>();
+  const counters = new Map<string, number>();
+
+  for (const entry of sortGrammarEntries(entries)) {
+    const { category } = parseId(entry.id);
+    const next = (counters.get(category) ?? 0) + 1;
+    counters.set(category, next);
+    numbers.set(entry.id, next);
+  }
+
+  return numbers;
+}
+
 export function buildSlugMap(entries: GrammarEntry[]): Map<string, GrammarEntry[]> {
   const map = new Map<string, GrammarEntry[]>();
   for (const entry of entries) {

@@ -6,9 +6,8 @@
   "description": "Gramaticarrona — Spanish grammar reference for Ukrainian speakers.",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
+    "build": "astro build",
     "preview": "astro preview",
-    "search:index": "pagefind --site dist",
     "typecheck": "astro sync && tsc --noEmit",
     "validate": "node scripts/validate-content.mjs",
     "links": "node scripts/check-links.mjs",
@@ -25,8 +24,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.2.0",
-    "pagefind": "^1.2.0"
+    "astro": "^5.2.0"
   },
   "devDependencies": {
     "typescript": "^5.7.0"

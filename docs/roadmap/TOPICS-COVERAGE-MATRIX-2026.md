@@ -71,8 +71,8 @@ These are the items that should not be marked “complete” merely because a ne
 | **10.6** | Дефективні / недостатні дієслова | **missing** | `irregular-verbs` | Irregularity is covered; defective/incomplete paradigms are not. |
 | **10.7** | Вид / аспект | **partial** | `tenses-overview`, `frequent-periphrases` | Aspectual meaning is discussed, but there is no explicit consolidated treatment of Spanish aspect as a system. |
 | **10.34** | Дієслова сприйняття + INF / gerundio / que | **partial** | `gerund-uses`, `verb-infinitive-patterns` | INF/gerundio patterns are covered, but the perception-verb contrast is not a dedicated or clearly consolidated topic. |
-| **10.35** | Псевдовідносні після сприйняття: *Vi a Juan que corría* | **missing** | — | No explicit canonical treatment found. |
-| **10.36** | Каузатив: hacer + INF | **missing** | — | General verb + infinitive patterns exist, but the causative construction is not explicitly covered. |
+| **10.34** | Псевдовідносні після сприйняття: *Vi a Juan que corría* | **missing** | — | No explicit canonical treatment found. |
+| **10.35** | Каузатив: hacer + INF | **missing** | — | General verb + infinitive patterns exist, but the causative construction is not explicitly covered. |
 | **10.37** | Ir / venir, llevar / traer — дейксис | **missing** | — | The current inventory does not contain a dedicated deictic-motion treatment. |
 | **14.8** | Tag-питання: ¿no?, ¿verdad?, ¿eh?, ¿cierto? | **missing** | `questions` | Questions are covered, but these discourse/syntax tag forms are not explicitly documented. |
 | **17.2.3** | *No es porque…* + subjuntivo / indicativo | **missing** | `emphasis-polarity-focus` | `no es que…` is covered, but the distinct *no es porque…* construction is not. |

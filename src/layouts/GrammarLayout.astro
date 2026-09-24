@@ -7,9 +7,10 @@ import type { GrammarEntry } from '../utils/content';
 interface Props {
   entry: GrammarEntry;
   related: GrammarEntry[];
+  topicNumber: number;
 }
 
-const { entry, related } = Astro.props;
+const { entry, related, topicNumber } = Astro.props;
 const { category } = parseId(entry.id);
 const cat = getCategory(category);
 const canonical = entryUrl(entry);
@@ -34,7 +35,7 @@ const canonical = entryUrl(entry);
       <article>
         <header class="page-head">
           <div class="article-kicker">
-            <span class="topic-code">{String(cat?.order ?? 0).padStart(2, '0')}.{String(entry.data.order).padStart(2, '0')}</span>
+            <span class="topic-code">{String(cat?.order ?? 0).padStart(2, '0')}.{String(topicNumber).padStart(2, '0')}</span>
             {entry.data.cefr && <span class="level-badge">{entry.data.cefr.toUpperCase()}</span>}
             {entry.data.popular && <span class="popular-mark">● популярне</span>}
           </div>
@@ -52,19 +53,16 @@ const canonical = entryUrl(entry);
         {related.length > 0 && (
           <section class="related" aria-labelledby="related-heading">
             <h2 id="related-heading">Пов'язані теми</h2>
-            <ul>
+            <div class="related-links">
               {related.map((r) => (
-                <li>
-                  <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
-                    <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
-                    <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
-                  </a>
-                </li>
+                <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
+                  <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
+                  <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
+                </a>
               ))}
-            </ul>
+            </div>
           </section>
-        )}
-      </article>
+        )}      </article>
     </div>
   </div>
 </BaseLayout>

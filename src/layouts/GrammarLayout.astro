@@ -4,18 +4,15 @@ import { getCategory } from '../data/categories';
 import { entryUrl, categoryUrl, parseId, categoryLabel, withBase } from '../utils/content';
 import type { GrammarEntry } from '../utils/content';
 
-interface Heading { depth: number; slug: string; text: string; }
 interface Props {
   entry: GrammarEntry;
-  headings: Heading[];
   related: GrammarEntry[];
 }
 
-const { entry, headings, related } = Astro.props;
+const { entry, related } = Astro.props;
 const { category } = parseId(entry.id);
 const cat = getCategory(category);
 const canonical = entryUrl(entry);
-const toc = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 
 ---
 <BaseLayout

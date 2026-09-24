@@ -68,12 +68,16 @@ function relationLabel(entry: GrammarEntry): string {
 
       <article>
         <header class="page-head">
-          <div class="title-es">{entry.data.title_es}</div>
+          <div class="article-kicker">
+            <span class="topic-code">{String(cat?.order ?? 0).padStart(2, '0')}.{String(entry.data.order).padStart(2, '0')}</span>
+            {entry.data.cefr && <span class="level-badge">{entry.data.cefr.toUpperCase()}</span>}
+            {entry.data.popular && <span class="popular-mark">● популярне</span>}
+          </div>
           <h1>{entry.data.title_uk}</h1>
+          <div class="title-es">{entry.data.title_es}</div>
           <div class="title-en">{entry.data.title_en}</div>
           <p class="synopsis">{entry.data.short_description}</p>
           <div class="meta-line">
-            <span class="chip">{cat?.titleUk ?? categoryLabel(category)}</span>
             {entry.data.region !== 'general' && <span class="chip">{regionLabel(entry.data.region)}</span>}
             {entry.data.updated && <span class="chip">Оновлено: {entry.data.updated}</span>}
             {entry.data.review_status !== 'draft' && (

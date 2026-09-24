@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const EXCLUDED_DIRS = new Set(['.git', '.astro', 'dist', 'node_modules']);
+const CONTENT_ROOTS = [path.join(ROOT, 'src', 'content', 'es'), path.join(ROOT, 'src', 'content', 'comparisons')];
 
 function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -52,6 +53,8 @@ for (const file of files) {
       if (count !== headerCount) failures.push({file:rel(file),line:row+1,kind:'markdown body',expected:headerCount,actual:count,text:current});
     }
   }
+
+  if (!CONTENT_ROOTS.some((root) => file.startsWith(root + path.sep))) continue;
 
   let searchFrom = 0;
   while (true) {

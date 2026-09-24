@@ -14,6 +14,7 @@ const isActive = (p: string) => pathname.startsWith(p);
     <nav class="nav-main" aria-label="Головна навігація">
       <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Категорії</a>
       <a href={withBase('/comparisons/')} aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
+      <a href={withBase('/preparation/')} aria-current={isActive('/preparation/') ? 'page' : undefined}>НМТ / ЄВІ</a>
       <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про проєкт</a>
       <a class="nav-search" href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}><span aria-hidden="true">⌕</span> Пошук</a>
     </nav>
@@ -28,6 +29,7 @@ const isActive = (p: string) => pathname.startsWith(p);
       <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Категорії</a>
       <a href={withBase('/comparisons/')} aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
       <a href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>Пошук ⌕</a>
+      <a href={withBase('/preparation/')} aria-current={isActive('/preparation/') ? 'page' : undefined}>НМТ / ЄВІ</a>
       <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про проєкт</a>
     </div>
     <div class="mobile-menu-index">

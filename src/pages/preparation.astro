@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/content';
+
+const sections = [
+  {
+    number: '01',
+    title: 'Іменник',
+    es: 'Sustantivo',
+    rows: [
+      ['Рід іменників', 'nouns/genero', 'НМТ · ЄВІ'],
+      ['Число іменників', 'nouns/numero-plural', 'НМТ · ЄВІ'],
+      ['Складні іменники', 'word-formation/compounding', 'НМТ'],
+      ['Множина складних іменників', 'word-formation/compounding', 'НМТ'],
+      ['Іменники, що вживаються лише в множині', 'nouns/noun-special-cases', 'НМТ'],
+      ['Зменшувальні суфікси — -ito, -ita та ін.', 'word-formation/diminutives', 'НМТ'],
+    ],
+  },
+  {
+    number: '02',
+    title: 'Артикль',
+    es: 'Artículo',
+    rows: [
+      ['Означений та неозначений артиклі', 'articles/definite-indefinite', 'НМТ · ЄВІ'],
+      ['Відсутність артикля', 'articles/zero-article', 'НМТ'],
+      ['Нейтральний артикль lo', 'articles/neutral-lo', 'НМТ · ЄВІ'],
+    ],
+  },
+  {
+    number: '03',
+    title: 'Прикметник',
+    es: 'Adjetivo',
+    rows: [
+      ['Рід і число прикметників', 'adjectives/adjective-agreement', 'НМТ · ЄВІ'],
+      ['Узгодження прикметника з іменником', 'adjectives/adjective-agreement', 'НМТ · ЄВІ'],
+      ['Ступені порівняння', 'adjectives/degrees-of-comparison', 'НМТ · ЄВІ'],
+      ['bueno, malo, grande та усічені форми', 'adjectives/adjective-types-cultos', 'НМТ'],
+      ['Вживання ser та estar з прикметниками', 'adjectives/adjective-complements', 'НМТ · ЄВІ'],
+      ['Неозначені прикметники', 'adjectives/quantifiers', 'ЄВІ'],
+    ],
+  },
+  {
+    number: '04',
+    title: 'Займенник',
+    es: 'Pronombre',
+    rows: [
+      ['Особові займенники', 'pronouns/personal-pronouns-omission', 'НМТ · ЄВІ'],
+      ['Присвійні займенники', 'pronouns/possessive-pronouns', 'НМТ · ЄВІ'],
+      ['Вказівні займенники', 'pronouns/demonstrative-pronouns', 'НМТ · ЄВІ'],
+      ['Неозначені ствердні займенники', 'pronouns/indefinite-pronouns', 'НМТ · ЄВІ'],
+      ['Неозначені заперечні займенники', 'pronouns/indefinite-pronouns', 'НМТ · ЄВІ'],
+      ['Зворотні займенники', 'pronouns/se-reflexive-impersonal-passive', 'НМТ · ЄВІ'],
+      ['Відносні займенники', 'pronouns/relative-pronouns', 'НМТ · ЄВІ'],
+      ['Питальні займенники', 'pronouns/interrogative-pronouns', 'НМТ · ЄВІ'],
+      ['Окличні займенники', 'pronouns/exclamatives', 'НМТ · ЄВІ'],
+      ['Заперечення та заперечні конструкції із займенниками', 'sentence-structure/negation-patterns', 'НМТ'],
+    ],
+  },
+  {
+    number: '05',
+    title: 'Числівник',
+    es: 'Numeral',
+    rows: [
+      ['Кількісні числівники', 'fundamentals/numbers-in-speech', 'НМТ · ЄВІ'],
+      ['Порядкові числівники', 'fundamentals/ordinal-numbers', 'НМТ · ЄВІ'],
+    ],
+  },
+  {
+    number: '06',
+    title: 'Прислівник',
+    es: 'Adverbio',
+    rows: [
+      ['Утворення прислівників із суфіксом -mente', 'adverbs/formation-and-position', 'НМТ · ЄВІ'],
+      ['Ступені порівняння прислівників', 'adverbs/formation-and-position', 'НМТ · ЄВІ'],
+      ['Прислівники способу дії', 'adverbs/types-frequency-time-manner', 'НМТ · ЄВІ'],
+      ['Прислівники місця', 'adverbs/types-frequency-time-manner', 'НМТ · ЄВІ'],
+      ['Прислівники часу', 'adverbs/types-frequency-time-manner', 'НМТ · ЄВІ'],
+      ['Прислівники кількості', 'adverbs/muy-mucho-tan-tanto', 'НМТ'],
+      ['Прислівники ствердження', 'adverbs/focus-and-stance', 'НМТ'],
+      ['Прислівники заперечення', 'adverbs/focus-and-stance', 'НМТ'],
+      ['Прислівники сумніву', 'adverbs/focus-and-stance', 'НМТ'],
+      ['Модальні прислівники', 'adverbs/focus-and-stance', 'ЄВІ'],
+      ['Прислівникові звороти', 'adverbs/types-frequency-time-manner', 'НМТ · ЄВІ'],
+    ],
+  },
+  {
+    number: '07',
+    title: 'Дієслово',
+    es: 'Verbo',
+    rows: [
+      ['Система способів: Modo Indicativo, Subjuntivo, Imperativo', 'verbs/conjugations', 'НМТ · ЄВІ'],
+      ['Presente de Indicativo', 'tenses/presente-de-indicativo', 'НМТ'],
+      ['Pretérito Perfecto Compuesto', 'tenses/preterito-perfecto', 'НМТ'],
+      ['Pretérito Perfecto Simple', 'tenses/preterito-indefinido', 'НМТ'],
+      ['Pretérito Imperfecto', 'tenses/preterito-imperfecto', 'НМТ'],
+      ['Futuro Simple', 'tenses/futuro-simple', 'НМТ'],
+      ['Pretérito Pluscuamperfecto', 'tenses/pluscuamperfecto', 'НМТ'],
+      ['Condicional Simple', 'tenses/condicional-simple', 'НМТ'],
+      ['Узгодження часів у Modo Indicativo', 'tenses/sequence-of-tenses', 'НМТ'],
+      ['Futuro Simple зі значенням імовірності', 'tenses/futuro-simple', 'НМТ'],
+      ['Condicional Simple зі значенням імовірності', 'tenses/condicional-simple', 'НМТ'],
+      ['Condicional Compuesto', 'tenses/condicional-compuesto', 'НМТ'],
+      ['Presente de Subjuntivo', 'moods/subjuntivo-presente', 'НМТ'],
+      ['Pretérito Imperfecto de Subjuntivo', 'moods/imperfecto-subjuntivo', 'НМТ'],
+      ['Pretérito Perfecto de Subjuntivo', 'moods/perfecto-subjuntivo', 'НМТ'],
+      ['Pretérito Pluscuamperfecto de Subjuntivo', 'moods/pluscuamperfecto-subjuntivo', 'НМТ'],
+      ['Утворення та вживання Modo Subjuntivo', 'moods/subjunctive-triggers', 'ЄВІ'],
+      ['Imperativo afirmativo', 'moods/imperativo', 'НМТ'],
+      ['Imperativo negativo', 'moods/imperative-pronouns', 'НМТ'],
+      ['Утворення та вживання Modo Imperativo', 'moods/imperative-overview', 'ЄВІ'],
+      ['Неособові форми: infinitivo, gerundio, participio', 'verbs/infinitivo', 'НМТ · ЄВІ'],
+      ['Вживання gerundio', 'verbs/gerund-uses', 'НМТ'],
+      ['Вживання participio', 'verbs/participio', 'НМТ'],
+      ['Конструкції з неособовими формами', 'verbs/verb-infinitive-patterns', 'НМТ · ЄВІ'],
+      ['Дієслівні перифрази з infinitivo', 'periphrases/ir-a-infinitivo', 'НМТ'],
+      ['Дієслівні перифрази з gerundio', 'periphrases/estar-gerundio', 'НМТ'],
+      ['Дієслівні перифрази з participio', 'periphrases/frequent-periphrases', 'НМТ'],
+      ['Пасивний стан', 'sentence-structure/passive-voice', 'НМТ · ЄВІ'],
+      ['Пряма й непряма мова', 'sentence-structure/reported-speech', 'НМТ · ЄВІ'],
+      ['Напівзв’язкові дієслова зміни стану: ponerse, hacerse, volverse, quedarse', 'verbs/change-of-state', 'НМТ'],
+      ['Percepción + infinitivo / gerundio / que', 'verbs/verb-infinitive-patterns', 'НМТ'],
+      ['Каузативна конструкція hacer + infinitivo', 'verbs/verb-infinitive-patterns', 'НМТ'],
+      ['Дейктичні ir / venir / llevar / traer', 'prepositions/place', 'НМТ'],
+    ],
+  },
+  {
+    number: '08',
+    title: 'Прийменник',
+    es: 'Preposición',
+    rows: [
+      ['Прості прийменники', 'prepositions/common-constructions', 'НМТ · ЄВІ'],
+      ['Складні прийменники', 'prepositions/common-constructions', 'НМТ · ЄВІ'],
+      ['Складені форми al, del', 'prepositions/common-constructions', 'НМТ'],
+    ],
+  },
+  {
+    number: '09',
+    title: 'Сполучник',
+    es: 'Conjunción',
+    rows: [
+      ['Сполучники сурядності', 'conjunctions/coordinating', 'НМТ · ЄВІ'],
+      ['Сполучники підрядності', 'conjunctions/subordinating', 'НМТ · ЄВІ'],
+    ],
+  },
+  {
+    number: '10',
+    title: 'Синтаксис і мовлення',
+    es: 'Sintaxis y discurso',
+    rows: [
+      ['Пряма й непряма мова', 'sentence-structure/reported-speech', 'НМТ · ЄВІ'],
+      ['Пасивний стан дієслова', 'sentence-structure/passive-voice', 'НМТ · ЄВІ'],
+      ['Узгодження в реченні', 'sentence-structure/agreement', 'НМТ'],
+      ['Порядок слів', 'sentence-structure/word-order', 'НМТ'],
+      ['Запитання та питальні конструкції', 'sentence-structure/questions', 'НМТ'],
+      ['Заперечення', 'sentence-structure/negation', 'НМТ'],
+    ],
+  },
+  {
+    number: '11',
+    title: 'Словотвір',
+    es: 'Formación de palabras',
+    rows: [
+      ['Зменшувальні суфікси', 'word-formation/diminutives', 'НМТ'],
+      ['Складні слова', 'word-formation/compounding', 'НМТ'],
+    ],
+  },
+];
+
+const canonical = (path: string) => withBase('/es/' + path + '/');
+const partialTopics = new Set(['Percepción + infinitivo / gerundio / que']);
+const missingTopics = new Set(['Каузативна конструкція hacer + infinitivo', 'Дейктичні ir / venir / llevar / traer']);
+const topicStatus = (label: string) => missingTopics.has(label) ? 'потрібно доповнити' : partialTopics.has(label) ? 'частково' : 'опрацьовано';
+
+const totalRows = sections.reduce((sum, section) => sum + section.rows.length, 0);
+const sharedRows = sections.reduce(
+  (sum, section) => sum + section.rows.filter((row) => row[2] === 'НМТ · ЄВІ').length,
+  0,
+);
+---
+
+<BaseLayout
+  title="Підготовка до НМТ / ЄВІ — іспанська мова | Gramaticarrona"
+  description="Єдина карта граматичних тем іспанської мови для підготовки до НМТ та ЄВІ. Кожна тема веде до відповідної статті Gramaticarrona."
+  canonical="/preparation/"
+>
+  <div class="container exam-page">
+    <div class="breadcrumbs">
+      <ol>
+        <li><a href={withBase('/')}>Gramaticarrona</a></li>
+        <li aria-current="page">Підготовка до НМТ / ЄВІ</li>
+      </ol>
+    </div>
+
+    <header class="page-head">
+      <div class="title-en">EXAM PREPARATION · ES</div>
+      <h1>Підготовка до НМТ / ЄВІ</h1>
+      <p class="synopsis">
+        Єдина граматична карта іспанської мови: вимоги двох програм зведені в одну
+        навчальну систему, без дублювання однакових тем. Натисніть на тему, щоб
+        перейти до повного матеріалу довідника.
+      </p>
+      <div class="exam-meta" aria-label="Статистика карти">
+        <span>{sections.length} блоків</span>
+        <span>{totalRows} програмних пунктів</span>
+        <span>{sharedRows} спільних пунктів</span>
+        <span>НМТ · ЄВІ</span>
+      </div>
+    </header>
+
+    <section class="exam-note" aria-label="Як користуватися сторінкою">
+      <div class="exam-note-label">ПРИНЦИП</div>
+      <p>
+        <strong>Граматика спільна — програми не потрібно вчити двічі.</strong>
+        Тут зібрані граматичні вимоги НМТ та ЄВІ в одному дереві. Позначка
+        <b>НМТ · ЄВІ</b> означає, що тема прямо присутня в обох переліках.
+        Позначка <b>НМТ</b> — що це додатковий пункт програми НМТ.
+        Окремий тематичний шар для лексики можна розширити без зміни цієї
+        граматичної карти.
+      </p>
+    </section>
+
+    <nav class="exam-jump" aria-label="Розділи програми">
+      {sections.map((section) => (
+        <a href={'#section-' + section.number}>{section.number} · {section.title}</a>
+      ))}
+    </nav>
+
+    <div class="exam-sections">
+      {sections.map((section) => (
+        <section class="exam-section" id={'section-' + section.number}>
+          <div class="exam-section-head">
+            <span class="exam-section-number">{section.number}</span>
+            <div>
+              <h2>{section.title}</h2>
+              <span class="exam-section-es">{section.es}</span>
+            </div>
+          </div>
+
+          <ol class="exam-topic-list">
+            {section.rows.map(([label, path, source], index) => (
+              <li>
+                <a class="exam-topic" href={canonical(path)}>
+                  <span class="exam-topic-index">{String(index + 1).padStart(2, '0')}</span>
+                  <span class="exam-topic-label">{label}</span>
+                  <span class="exam-topic-source">{source}</span>
+                  <span class={'exam-topic-status status-' + topicStatus(label).replaceAll(' ', '-')}>
+                    {topicStatus(label)}
+                  </span>
+                  <span class="exam-topic-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </div>
+
+    <section class="exam-sources">
+      <div class="section-label">ОФІЦІЙНІ ПРОГРАМИ</div>
+      <h2>Джерела вимог</h2>
+      <div class="source-list">
+        <a href="https://testportal.gov.ua/inozemni-movy-2026/" rel="noopener noreferrer">
+          <span>УЦОЯО</span>
+          <strong>Іноземні мови — НМТ 2026</strong>
+          <small>Офіційна інформація про формат тесту та програму.</small>
+        </a>
+        <a href="https://testportal.gov.ua/progesp/" rel="noopener noreferrer">
+          <span>УЦОЯО</span>
+          <strong>Програма ЗНО з іспанської мови</strong>
+          <small>Програма, на яку спирається зміст тесту з іспанської.</small>
+        </a>
+        <a href="https://mon.gov.ua/osvita-2/vishcha-osvita-ta-osvita-doroslikh/yevi-ta-iefvv/yedynyi-vstupnyi-ispyt-ievi/zatverdzheni-programi-evi" rel="noopener noreferrer">
+          <span>МОН</span>
+          <strong>Затверджені програми ЄВІ</strong>
+          <small>Офіційний перелік програм ЄВІ.</small>
+        </a>
+        <a href="https://mon.gov.ua/static-objects/mon/uploads/public/661/687/704/66168770465de084402330.pdf" rel="noopener noreferrer">
+          <span>МОН · PDF</span>
+          <strong>Програма ЄВІ з іноземної мови</strong>
+          <small>Іспанська входить до програми; рівень програми — B1–B2.</small>
+        </a>
+      </div>
+    </section>
+
+    <p class="exam-footnote">
+      Ця сторінка є навігаційною картою довідника, а не заміною офіційної програми.
+      Формат і нормативні вимоги іспитів можуть оновлюватися; перед складанням
+      перевіряйте актуальні матеріали УЦОЯО та МОН.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+.exam-page { padding-bottom: 6rem; }
+.exam-page .page-head { max-width: 980px; margin-bottom: 2.5rem; }
+.exam-page .title-en { color: var(--color-text-muted); font: 600 11px/1.2 var(--font-mono); letter-spacing: .14em; margin-bottom: .7rem; }
+.exam-page .page-head h1 { max-width: 16ch; }
+.exam-meta { display:flex; flex-wrap:wrap; gap: 0; margin-top:1.5rem; border-top:1px solid var(--color-text); border-bottom:1px solid var(--color-divider); }
+.exam-meta span { padding:.7rem 1rem .7rem 0; margin-right:1rem; color:var(--color-text-secondary); font:500 11px/1.3 var(--font-mono); }
+.exam-meta span + span { padding-left:1rem; border-left:1px solid var(--color-divider); }
+.exam-note { display:grid; grid-template-columns:150px minmax(0,760px); gap:2rem; padding:1.25rem 0; border-top:1px solid var(--color-text); border-bottom:1px solid var(--color-divider); }
+.exam-note-label { color:var(--color-accent); font:700 11px/1.3 var(--font-mono); letter-spacing:.12em; }
+.exam-note p { margin:0; color:var(--color-text-secondary); font-size:15px; line-height:1.65; }
+.exam-jump { display:flex; flex-wrap:wrap; gap:.5rem 1.25rem; margin:2.5rem 0 1rem; padding:1rem 0; border-bottom:1px solid var(--color-divider); }
+.exam-jump a { color:var(--color-link); font:500 11px/1.4 var(--font-mono); text-decoration:none; }
+.exam-jump a:hover { text-decoration:underline; text-underline-offset:4px; }
+.exam-section { margin-top:4.5rem; scroll-margin-top:calc(var(--header-height) + 24px); }
+.exam-section-head { display:grid; grid-template-columns:90px minmax(0,1fr); gap:1.5rem; align-items:end; padding-bottom:1rem; border-bottom:3px solid var(--color-text); }
+.exam-section-number { color:var(--color-accent); font:900 4rem/.8 var(--font-display); letter-spacing:-.06em; }
+.exam-section-head h2 { margin:0; padding:0; border:0; font-size:clamp(1.8rem,3vw,2.6rem); }
+.exam-section-es { color:var(--color-text-muted); font:italic 400 14px/1.4 var(--font-body); }
+.exam-topic-list { list-style:none; padding:0; margin:0; border-bottom:1px solid var(--color-divider); }
+.exam-topic-list li { margin:0; }
+.exam-topic { display:grid; grid-template-columns:44px minmax(0,1fr) 100px 116px 28px; gap:1rem; align-items:center; min-height:58px; padding:.65rem 0; border-bottom:1px solid var(--color-divider); color:var(--color-text); text-decoration:none; }
+.exam-topic:hover { background:var(--color-surface); }
+.exam-topic:focus-visible { outline:3px solid var(--color-accent); outline-offset:3px; }
+.exam-topic-index { color:var(--color-text-muted); font:500 11px/1 var(--font-mono); }
+.exam-topic-label { min-width:0; color:var(--color-text); font:500 14px/1.45 var(--font-body); overflow-wrap:anywhere; }
+.exam-topic-source { justify-self:start; color:var(--color-accent); font:600 9px/1.2 var(--font-mono); letter-spacing:.05em; white-space:nowrap; }
+.exam-topic-status { justify-self:start; color:var(--color-text-muted); font:500 9px/1.25 var(--font-mono); letter-spacing:.02em; }
+.status-опрацьовано { color:var(--color-correct); }
+.status-частково { color:var(--color-accent); }
+.status-потрібно-доповнити { color:var(--color-accent-dark); }
+.exam-topic-arrow { justify-self:end; color:var(--color-link); font-size:17px; }
+.exam-sources { margin-top:7rem; padding-top:1rem; border-top:3px solid var(--color-text); }
+.exam-sources h2 { margin-top:.5rem; }
+.source-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-top:1px solid var(--color-text); }
+.source-list a { display:grid; gap:.35rem; padding:1.1rem 1.25rem 1.1rem 0; border-bottom:1px solid var(--color-divider); color:var(--color-text); text-decoration:none; }
+.source-list a:nth-child(even) { padding-left:1.25rem; border-left:1px solid var(--color-divider); }
+.source-list a:hover { background:var(--color-surface); }
+.source-list span { color:var(--color-accent); font:600 10px/1.2 var(--font-mono); letter-spacing:.08em; }
+.source-list strong { font:600 16px/1.35 var(--font-body); }
+.source-list small { color:var(--color-text-secondary); font:400 13px/1.45 var(--font-body); }
+.exam-footnote { margin:2rem 0 0; max-width:760px; color:var(--color-text-muted); font:400 12px/1.6 var(--font-body); }
+@media (max-width:767px) {
+  .exam-note { grid-template-columns:1fr; gap:.5rem; }
+  .exam-jump { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem 1rem; }
+  .exam-section { margin-top:3.5rem; }
+  .exam-section-head { grid-template-columns:56px minmax(0,1fr); gap:1rem; }
+  .exam-section-number { font-size:3rem; }
+  .exam-topic { grid-template-columns:34px minmax(0,1fr) 22px; gap:.55rem; padding:.75rem 0; }
+  .exam-topic-source { grid-column:2; grid-row:2; }
+  .exam-topic-status { grid-column:2; grid-row:3; margin-top:-.2rem; }
+  .exam-topic-arrow { grid-column:3; grid-row:1 / span 2; }
+  .source-list { grid-template-columns:1fr; }
+  .source-list a:nth-child(even) { padding-left:0; border-left:0; }
+}
+</style>

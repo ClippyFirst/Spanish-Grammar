@@ -3,16 +3,13 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories } from '../data/categories';
-import { entryUrl, categoryUrl, parseId, withBase } from '../utils/content';
+import { entryUrl, categoryUrl, withBase } from '../utils/content';
+import { comparisonUrl, sortComparisons } from '../utils/comparisons';
 
 const entries = await getCollection('es');
 const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 8);
 const fresh = entries.filter((e) => e.data.recently_added).slice(0, 4);
-const comparisons = [
-  { titleUk: 'Ser / Estar', slug: 'ser-estar', desc: 'Бути, як характеристика чи стан' },
-  { titleUk: 'Por / Para', slug: 'por-para', desc: 'Причина, ціль, майбутність і межі' },
-  { titleUk: 'Претерит / Імперфект', slug: 'past-tenses', desc: 'Два минулі часи' },
-];
+const comparisons = sortComparisons(await getCollection('comparisons')).filter((entry) => entry.data.featured);
 ---
 <BaseLayout
   title="Gramaticarrona — іспанська граматика для носіїв української"
@@ -25,10 +22,17 @@ const comparisons = [
       <p class="lead">
         Довідник для носіїв української: від базових конструкцій до тонких відмінностей. Не вчить замість вас — дає точну карту мови, щоб швидко знайти правило, зіставити форми й перевірити приклад.
       </p>
-      <div class="search-bar">
-        <label class="visually-hidden" for="home-search">Пошук по граматиці</label>
-        <input id="home-search" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjunktiv…" autocomplete="off" />
+      <div class="hero-meta" aria-label="Статистика довідника">
+        <span>{entries.length} тем</span>
+        <span>{sortedCategories.length} розділів</span>
+        <span>UA · ES</span>
+        <span>Довідник, не курс</span>
       </div>
+      <form class="search-bar" action={withBase('/search/')} method="get" role="search">
+        <label class="visually-hidden" for="home-search">Пошук по граматиці</label>
+        <input id="home-search" name="q" type="search" placeholder="Пошук: presente, «подобається», ser/estar, subjuntivo…" autocomplete="off" />
+        <button class="search-arrow" type="submit" aria-label="Перейти до пошуку">→</button>
+      </form>
     </section>
 
     <section class="section grammar-sections">
@@ -65,11 +69,11 @@ const comparisons = [
       <h2>Порівняти</h2>
       <p>Конструкції, які україномовні найчастіше плутають, — у зіставленні, а не за механічним правилом.</p>
       <ul class="topic-list">
-        {comparisons.map((c2k) => (
+        {comparisons.map((entry) => (
           <li>
-            <a class="card-topic" href={withBase(`/comparisons/${c2k.slug}/`)}>
-              <span class="t-es">{c2k.titleUk}</span>
-              <span class="t-uk">{c2k.desc}</span>
+            <a class="card-topic" href={comparisonUrl(entry.id)}>
+              <span class="t-es">{entry.data.title}</span>
+              <span class="t-uk">{entry.data.description}</span>
             </a>
           </li>
         ))}
@@ -93,23 +97,3 @@ const comparisons = [
     )}
   </div>
 </BaseLayout>
-
-<script is:inline define:vars={{ base: import.meta.env.BASE_URL ?? '/' }}>
-  (function () {
-    var prefix = (typeof base === 'string' ? base : '/').replace(/\/$/, '');
-    var input = document.getElementById('home-search');
-    if (!input) return;
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' && input.value.trim()) {
-        window.location.href = prefix + '/search/?q=' + encodeURIComponent(input.value.trim());
-      }
-    });
-    var btn = document.createElement('button');
-    btn.className = 'search-arrow';
-    btn.setAttribute('aria-label', 'Перейти до пошуку');
-    btn.addEventListener('click', function () {
-      window.location.href = prefix + '/search/?q=' + encodeURIComponent(input.value.trim());
-    });
-    input.parentNode.appendChild(btn);
-  })();
-</script>

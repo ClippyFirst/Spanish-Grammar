@@ -4,6 +4,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const CONTENT_DIR = path.join(ROOT, 'src', 'content', 'es');
+const COMPARISONS_DIR = path.join(ROOT, 'src', 'content', 'comparisons');
 const CATEGORIES_FILE = path.join(ROOT, 'src', 'data', 'categories.ts');
 
 function walk(dir, out = []) {
@@ -141,7 +142,24 @@ for (const file of files) {
   }
 }
 
-console.log('validate-content: ' + files.length + ' files, ' + pages.size + ' pages, ' + categories.size + ' categories');
+const comparisonFiles = walk(COMPARISONS_DIR).sort();
+for (const file of comparisonFiles) {
+  const relative = path.relative(ROOT, file);
+  const text = fs.readFileSync(file, 'utf8');
+  const parsed = frontmatter(text);
+  if (parsed.error) errors.push(relative + ': ' + parsed.error);
+  for (const field of ['title', 'description']) {
+    if (!parsed.data[field]) errors.push(relative + ': missing required field ' + field);
+  }
+  if (parsed.data.order && !/^\d+(?:\.\d+)?$/.test(String(parsed.data.order))) {
+    errors.push(relative + ': order must be numeric');
+  }
+  if (parsed.data.featured && !['true', 'false'].includes(String(parsed.data.featured))) {
+    errors.push(relative + ': featured must be true or false');
+  }
+}
+
+console.log('validate-content: ' + files.length + ' grammar files, ' + comparisonFiles.length + ' comparison files, ' + pages.size + ' grammar pages, ' + categories.size + ' categories');
 if (warnings.length) {
   console.log('\nWARNINGS (' + warnings.length + '):');
   for (const warning of warnings) console.log('  WARN ' + warning);

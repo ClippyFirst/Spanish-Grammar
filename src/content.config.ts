@@ -2,12 +2,15 @@
 // The schema stays deliberately backward-compatible: editorial metadata can be
 // introduced incrementally without forcing a rewrite of the existing corpus.
 import { defineCollection, z } from 'astro:content';
+import { getCategory } from './data/categories';
 
 const es = defineCollection({
   type: 'content',
   schema: z.object({
     language: z.enum(['es']).default('es'),
-    category: z.string(),
+    category: z.string().refine((value) => Boolean(getCategory(value)), {
+      message: 'category must exist in src/data/categories.ts',
+    }),
 
     title_uk: z.string(),
     title_es: z.string(),
@@ -42,4 +45,15 @@ const es = defineCollection({
   }),
 });
 
-export const collections = { es };
+const comparisons = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    titleEn: z.string().optional(),
+    description: z.string(),
+    order: z.number().default(100),
+    featured: z.boolean().default(false),
+  }),
+});
+
+export const collections = { es, comparisons };

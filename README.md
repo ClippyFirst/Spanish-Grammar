@@ -50,7 +50,7 @@ npm run qa
 6. Design audits — токени, accessibility, responsive і компоненти.
 7. Production build + Pagefind.
 
-CI запускає той самий `npm run qa`, щоб локальна та production-перевірка не розходилися.
+CI запускає той самий `npm run qa`: pull requests перевіряються окремим QA workflow, а `main` — перед production-деплоєм. Так локальна, review та production-перевірка не розходяться.
 
 ## Структура
 
@@ -58,6 +58,7 @@ CI запускає той самий `npm run qa`, щоб локальна та
 src/
   content/
     es/                 # весь іспанський граматичний контент
+    comparisons/        # порівняльні граматичні довідки
   components/           # UI-компоненти та MDX primitives
   layouts/              # BaseLayout, GrammarLayout тощо
   pages/                # маршрути Astro
@@ -75,6 +76,18 @@ docs/
   superpowers/          # технічні плани та специфікації
 .github/workflows/      # GitHub Actions
 ```
+
+
+## Архітектура та розробка
+
+Репозиторій має формальну архітектурну конституцію та правила для людської й AI-розробки:
+
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — source of truth для структури та меж системи.
+- [DEVELOPMENT_RULES.md](./DEVELOPMENT_RULES.md) — workflow, AI rules, Git та правила змін.
+- [docs/architecture/](./docs/architecture/) — content model, design system та QA.
+- [Architecture roadmap](./docs/roadmap/ARCHITECTURE-ROADMAP.md) — поетапне вирівнювання фактичної реалізації з цим стандартом.
+
+Перед великим рефакторингом спочатку перевіряйте архітектуру та існуючі патерни; не створюйте нову абстракцію, якщо проблему вже вирішує наявна.
 
 ## Модель контенту
 

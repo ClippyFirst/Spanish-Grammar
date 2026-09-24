@@ -147,17 +147,26 @@ body {
   letter-spacing: .17em;
 }
 .hero::after {
-  content: "UA · ES\A 195 тем · 17 розділів\A Довідник, не курс";
-  white-space: pre;
+  content: none;
+}
+.hero-meta {
+  grid-column: 2;
+  grid-row: 2 / span 2;
   align-self: start;
   justify-self: end;
-  max-width: 18ch;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  max-width: 22ch;
   padding-top: .25rem;
   color: var(--gr-muted);
-  font: 600 .72rem/1.8 var(--font-ui);
+  font: 600 .72rem/1.55 var(--font-ui);
   letter-spacing: .08em;
   text-transform: uppercase;
   border-top: 2px solid var(--gr-ink);
+}
+.hero-meta span:first-child {
+  color: var(--gr-ink);
 }
 .hero h1 {
   grid-column: 1 / 2;
@@ -179,6 +188,7 @@ body {
   line-height: 1.55;
 }
 .search-bar {
+  position: relative;
   grid-column: 1 / -1;
   grid-row: 4;
   max-width: 900px;
@@ -197,16 +207,24 @@ body {
 .search-bar input:focus-visible { outline: 3px solid var(--gr-red); outline-offset: 5px; }
 .search-bar:focus-within input { border-color: var(--gr-red); }
 .search-arrow {
+  position: absolute;
+  top: 50%;
   right: 0;
   width: 3rem;
   height: 3rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
   border: 2px solid var(--gr-ink);
   border-radius: 0;
   background: var(--gr-ink);
   color: var(--gr-white);
   font: 800 1.2rem/1 var(--font-ui);
+  cursor: pointer;
+  transform: translateY(-50%);
 }
 .search-arrow:hover { background: var(--gr-red); border-color: var(--gr-red); }
+.search-arrow:focus-visible { outline: 3px solid var(--gr-red); outline-offset: 4px; }
 
 h1, h2, h3, h4 { font-family: var(--font-serif); }
 h2 {
@@ -684,9 +702,12 @@ h2::before {
     display: block;
     padding-top: 3.5rem;
   }
-  .hero::after {
-    display: block;
+  .hero-meta {
+    display: flex;
     margin-top: 2rem;
+    padding-top: .75rem;
+    max-width: none;
+    border-top-width: 2px;
   }
   .hero h1 {
     max-width: 9ch;

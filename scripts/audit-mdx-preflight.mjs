@@ -3,7 +3,10 @@ import path from 'node:path';
 import { compile } from '@mdx-js/mdx';
 
 const ROOT = process.cwd();
-const CONTENT = path.join(ROOT, 'src', 'content', 'es');
+const CONTENT_DIRS = [
+  path.join(ROOT, 'src', 'content', 'es'),
+  path.join(ROOT, 'src', 'content', 'comparisons'),
+];
 
 function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -25,7 +28,7 @@ function locationOf(error) {
   return ':' + line + (column ? ':' + column : '');
 }
 
-const files = walk(CONTENT).sort();
+const files = CONTENT_DIRS.flatMap((dir) => walk(dir)).sort();
 const failures = [];
 
 for (const file of files) {

@@ -1,5 +1,5 @@
 // Canonical category registry for the Spanish grammar reference.
-// Keep this file as the single source of truth for category labels, order and descriptions.
+// Keep this file as the single source of truth for category keys, labels, order and descriptions.
 
 export interface Category {
   key: string;

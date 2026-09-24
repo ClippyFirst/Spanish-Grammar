@@ -7,6 +7,8 @@
 
 ## Як користуватися
 
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **116 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
 - [ ] **VERIFY** — після rewrite перевірити приклади, термінологію, cross-page consistency та джерела.
@@ -21,11 +23,11 @@
 
 ## 1.1 Verbs — базова морфологія та лексико-граматичні конструкції
 
-- [ ] REWRITE `verbs/conjugations.mdx`
-- [ ] REWRITE `verbs/irregular-verbs.mdx`
-- [ ] REWRITE `verbs/stem-changing-verbs.mdx`
-- [ ] REWRITE `verbs/orthographic-changes.mdx`
-- [ ] REWRITE `verbs/pronominal-verbs.mdx`
+- [x] DONE — deep rewrite + verification `verbs/conjugations.mdx`
+- [x] DONE — deep rewrite + verification `verbs/irregular-verbs.mdx`
+- [x] DONE — deep rewrite + verification `verbs/stem-changing-verbs.mdx`
+- [x] DONE — deep rewrite + verification `verbs/orthographic-changes.mdx`
+- [x] DONE — deep rewrite + verification `verbs/pronominal-verbs.mdx`
 - [ ] REWRITE `verbs/verb-infinitive-patterns.mdx`
 - [ ] REWRITE `verbs/deber-vs-deber-de.mdx`
 - [ ] REWRITE `verbs/haber-auxiliary.mdx`
@@ -336,3 +338,13 @@ The Academic Writing Toolkit review remains a secondary structural signal. Short
 
 Primary quality gates remain:
 **factual correctness → grammatical precision → Ukrainian learner fit → cross-page consistency → source discipline → technical QA.**
+
+
+## Поточний progress log — 2026-09-24
+
+- Завершено precision rewrite п'яти P0-сторінок блоку **verbs**: `conjugations`, `irregular-verbs`, `stem-changing-verbs`, `orthographic-changes`, `pronominal-verbs`.
+- Перевірено міжсторінкову узгодженість цих п'яти сторінок з регулярною дієвідміною, нерегулярністю, voseo та системою `se`.
+- Прибрано або звужено статистичні та категоричні твердження, для яких у репозиторії не було достатньої підстави.
+- Academic Writing Toolkit повторно застосовано до репрезентативної прозової частини; його short-paragraph сигнали залишено як очікувані для компонентного довідника.
+- GitHub PR QA: **PASS** на PR #5 після змін п'яти сторінок; повний `npm run qa` завершився успішно.
+- Наступний P0-блок після цього проходу: `verb-infinitive-patterns`, `deber-vs-deber-de`, `haber-auxiliary`, `gerundio`, `participio`, `infinitivo`.

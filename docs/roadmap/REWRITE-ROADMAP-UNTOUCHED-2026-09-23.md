@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **30 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **28 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -98,8 +98,8 @@
 - [x] DONE — precision rewrite + verification `src/content/es/adjectives/agreement-traps.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/adjectives/comparison-structures.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/adjectives/degrees-of-comparison.mdx`
-- [ ] `src/content/es/adjectives/irregular-comparatives.mdx`
-- [ ] `src/content/es/adjectives/meaning-by-position.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adjectives/irregular-comparatives.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adjectives/meaning-by-position.mdx`
 - [x] DONE — verified / precision metadata `src/content/es/adjectives/quantifiers-advanced.mdx`
 - [x] DONE — verified / precision metadata `src/content/es/adjectives/quantifiers.mdx`
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **30** |
-| Частка незачеплених сторінок | **15.3%** |
+| Не змінені / залишені в rewrite backlog | **28** |
+| Частка незачеплених сторінок | **14.3%** |
 
 ### Protected baseline rule
 
@@ -448,4 +448,4 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Reworked temporal prepositions around fixed constructions, distinguishing `en una hora` (future point) from `durante una hora` (duration), and `dentro de` from `hace`.
 - All four pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit was run on all four full pages; only short-paragraph signals were returned, consistent with the repository's componentized reference format.
-- Current backlog: **30 of 196 grammar MDX pages (15.3%)**.
+- Current backlog: **28 of 196 grammar MDX pages (14.3%)**.

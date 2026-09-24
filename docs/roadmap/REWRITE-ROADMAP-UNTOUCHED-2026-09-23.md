@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **90 залишаються** в untouched/review backlog. Нижче — саме ці 90 сторінок.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **82 залишаються** в untouched/review backlog. Нижче — саме ці 90 сторінок.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -64,15 +64,15 @@
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/cleft-pseudocleft.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/comparative-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/compound-complex.mdx`
-- [ ] `src/content/es/sentence-structure/concessive-clauses.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/concessive-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/consecutive-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/dislocation.mdx`
-- [ ] `src/content/es/sentence-structure/double-negation.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/double-negation.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/ellipsis.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/emphasis-polarity-focus.mdx`
-- [ ] `src/content/es/sentence-structure/interjections.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/interjections.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/modal-clauses.mdx`
-- [ ] `src/content/es/sentence-structure/modality-speech-acts.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/modality-speech-acts.mdx`
 - [ ] `src/content/es/sentence-structure/negation-patterns.mdx`
 - [ ] `src/content/es/sentence-structure/passive-voice.mdx`
 - [ ] `src/content/es/sentence-structure/personal-a.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **86** |
-| Частка незачеплених сторінок | **43.9%** |
+| Не змінені / залишені в rewrite backlog | **82** |
+| Частка незачеплених сторінок | **41.8%** |
 
 ### Protected baseline rule
 
@@ -259,3 +259,11 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Tightened the distinction between coordination, subordination and juxtaposition; cleft/pseudocleft focus; left/right dislocation; topic vs focus; and emphatic `sí`, `sí que`, `no es que`, `sino/sino que`.
 - Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
 - Current backlog: **86 of 196 grammar MDX pages (43.9%)**.
+
+
+## Progress update — 2026-09-24 (sentence structure IV)
+
+- Closed four additional P0 sentence-structure pages: `concessive-clauses`, `double-negation`, `interjections`, `modality-speech-acts`.
+- Tightened concessive mood selection, negative concord, interjection/discourse-marker boundaries, punctuation, and modality/speech-act distinctions.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
+- Current backlog: **82 of 196 grammar MDX pages (41.8%)**.

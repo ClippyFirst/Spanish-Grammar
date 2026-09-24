@@ -1,10 +1,10 @@
 ---
 language: es
 category: sentence-structure
-title_uk: Непряма мова — зсув часів
-title_es: Estilo indirecto — correlación temporal
-title_en: Reported speech — tense shift
-short_description: "Dijo que venía / que vendría / que había venido: зсув часів після dijo, preguntó, me dijo que. Питання й накази в непрямій мові."
+title_uk: Непряма мова — узгодження часів
+title_es: Estilo indirecto y correlación temporal
+title_en: Reported speech — tense sequence
+short_description: "Непряма мова: співвідношення часів, зміна часової перспективи, питання, накази й випадки, коли минулий головний час не вимагає механічного зсуву."
 order: 8
 popular: true
 recently_added: true
@@ -18,63 +18,95 @@ related:
   - sequence-of-tenses
   - conditional-sentences
 cefr: b1
-updated: "2026-09-17"
+updated: "2026-09-24"
+review_status: verified
+sources:
+  - "RAE/ASALE, Libro de estilo de la lengua española: modo y subordinación — https://www.rae.es/libro-estilo-lengua-española/el-modo-indicativo-o-subjuntivo"
+  - "RAE/ASALE, Nueva gramática de la lengua española: estilo indirecto y correlación temporal — https://www.rae.es/gramática/sintaxis"
 ---
 
-Коли передаємо чужі слова після минулого (*dijo, preguntó, me explicó*), часи в підрядному **зсуваються** назад.
+Непряма мова передає зміст чужого висловлення без обов'язкового збереження його початкової форми. Вибір часу залежить від **часу дієслова мовлення, часової перспективи та того, чи вважається описувана ситуація актуальною**.
 
-## Одне речення
+Тому правило «після минулого часу все обов'язково зсувається на один крок назад» корисне як навчальна модель, але занадто сильне як опис реальної іспанської.
 
-«Vengo mañana» → *Dijo que **venía** / **vendría** mañana.* «He terminado» → *Dijo que **había terminado**.*
+## Базовий контраст
 
-## Таблиця зсуву (головне в минулому)
+Пряма мова:
 
-| Пряма мова | Непряма |
-|------------|--------|
-| presente (*vengo*) | imperfecto (*venía*) |
-| pretérito perfecto (*he venido*) | pluscuamperfecto (*había venido*) |
-| indefinido (*vine*) | pluscuamperfecto / imperfecto |
-| futuro (*vendré*) | condicional (*vendría*) |
-| imperativo (*ven*) | que + subjuntivo (*que viniera / que venga*) |
+> «Vengo mañana».
 
-## Питання
+Непряма:
 
-- Загальне: *Me preguntó **si** venía.*
-- Спеціальне: *Me preguntó **qué** quería.*
+- *Dijo que venía al día siguiente.*
+- *Dijo que vendría al día siguiente.*
 
-## Накази / прохання
+Обидва варіанти можуть бути граматичними, але вони організовують часову перспективу по-різному: *venía* переносить ситуацію в рамки минулого оповідання, *vendría* може подавати майбутнє щодо моменту минулого мовлення.
 
-- *Me dijo que me callara. / Me pidió que lo ayudara.*
+Інший типовий зсув:
 
-## Без зсуву
+- «He terminado» → *Dijo que había terminado.*
+- «Vendré» → *Dijo que vendría.*
 
-Якщо головне в теперішньому: *Dice que viene.* — зсуву немає.
-Якщо факт досі актуальний: іноді зберігають презенс — *Dijo que la Tierra gira…*
+## Питання в непрямій мові
+
+Загальні питання вводяться *si*:
+
+- *Me preguntó si venía.*
+- *No sabía si llegaría.*
+
+Питання з питальним словом зберігає відповідний елемент:
+
+- *Me preguntó qué quería.*
+- *Preguntó dónde vivíamos.*
+
+Після *preguntó* це вже не пряме питання, тому знаки *¿?* не є частиною всієї конструкції.
+
+## Накази, прохання та вплив
+
+Для передачі наказу або прохання часто використовують *que + subjuntivo*:
+
+- *Me dijo que me callara.*
+- *Me pidió que lo ayudara.*
+- *Les ordenó que salieran.*
+
+Вибір часу subjuntivo залежить від часової перспективи й узгодження, а не від одного механічного правила «наказ = imperfecto».
+
+## Коли зсув не обов'язковий
+
+Якщо головне дієслово в теперішньому:
+
+- *Dice que viene.*
+- *Me explica que vive en Madrid.*
+
+З минулим головним дієсловом теперішній час теж може зберігатися, якщо мовець подає інформацію як чинну або загальновідому:
+
+- *Dijo que la Tierra gira alrededor del Sol.*
+
+Тут *gira* не означає, що мовцеві треба «скасовувати» узгодження часів; він подає твердження як актуальний факт.
 
 ## Типові помилки україномовних
 
 <Mistake
   bad="Dijo que viene mañana."
-  good="Dijo que venía / vendría mañana."
-  why="Після dijo час підрядного зазвичай зсувається."
+  good="Dijo que venía al día siguiente. / Dijo que vendría al día siguiente."
+  why="У стандартній передачі минулого висловлення треба врахувати часову перспективу та змінити *mañana* на відповідний часовий орієнтир, якщо йдеться про наступний день відносно минулого моменту."
 />
 
 <MinPair
-  a={{ es: "Dice que está cansado.", uk: "Каже, що втомився (головне в теперішньому — без зсуву)." }}
-  b={{ es: "Dijo que estaba cansado.", uk: "Сказав, що втомився (зсув)." }}
+  a={{ es: "Dice que está cansado.", uk: "Каже, що втомився; головне в теперішньому." }}
+  b={{ es: "Dijo que estaba cansado.", uk: "Сказав, що був/є втомлений; час організовано від минулої точки." }}
 />
 
 <Note kind="uk" title="Для україномовних">
-  Українська часто зберігає час прямого мовлення.
-  Іспанська після минулого дієслова мовлення майже механічно зсуває.
+  В іспанській треба відокремлювати **зсув часу** від **зміни часових слів**: *hoy → ese día*, *mañana → al día siguiente* тощо. Обидва компоненти залежать від точки відліку.
 </Note>
 
 <Note kind="region" title="Регіональна нота">
-  Правило спільне. У розмові зсув інколи пом’якшують — для норми тримайте таблицю.
+  Основний принцип спільний для іспанської. В окремих різновидах і стилях частотність збереження теперішнього та інші варіанти кореляції можуть відрізнятися.
 </Note>
 
 ## Пов'язані теми
 
 - [Непряма мова (база)](/es/sentence-structure/reported-speech/)
 - [Узгодження часів](/es/tenses/sequence-of-tenses/)
-- [Умовні](/es/sentence-structure/conditional-sentences/)
+- [Умовні речення](/es/sentence-structure/conditional-sentences/)

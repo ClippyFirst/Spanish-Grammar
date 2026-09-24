@@ -1,10 +1,10 @@
 ---
 language: es
 category: spelling
-title_uk: Особливі літери — ñ, ll, ch, ü
-title_es: Letras especiales — ñ, ll, ch, ü
-title_en: Special letters ñ, ll, ch, ü
-short_description: "Ñ, diéresis (vergüenza), ll/y (yeísmo), ch: що писати і як звучить."
+title_uk: Особливі літери й диграфи — ñ, ll, ch, ü
+title_es: Letras y dígrafos — ñ, ll, ch, ü
+title_en: Special letters and digraphs
+short_description: "Ñ, дієреза ü та диграфи ll/ch: що є окремою літерою, що є диграфом і як це пов'язано з вимовою."
 order: 4
 popular: false
 recently_added: true
@@ -13,60 +13,100 @@ keywords:
   - diéresis
   - yeísmo
   - ü
+  - ll
+  - ch
 related:
   - alphabet-pronunciation
   - reading-rules
   - accent-marks
   - h-y-ll
 cefr: a1
-updated: "2026-09-17"
+updated: "2026-09-24"
+review_status: verified
+sources:
+  - RAE/ASALE — Ortografía de la lengua española
 ---
 
-Кілька символів і диграфів потребують окремої уваги.
-
-## Одне речення
-
-*España (ñ); vergüenza (ü); calle (ll); chico (ch).*
+В іспанському письмі є **ñ**, а також диграфи **ll** і **ch** та знак дієрези **ü**. Їх важливо не змішувати: **ñ** — окрема літера, **ll/ch** — диграфи, а **ü** — діакритичний знак над *u*.
 
 ## Ñ
 
-- Окрема літера абетки; звук [ɲ] (як у «нь»).
-- *año, español, mañana*
+**Ñ** — окрема літера іспанської абетки. Вона позначає палатальний носовий звук, як у *año, español, mañana*.
 
-## Ü (diéresis)
+Не замінюйте її послідовністю *ny* в іспанському правописі:
 
-- Лише в *güe / güi*, щоб **вимовити u**: *vergüenza, pingüino, lingüística*
-- Без дієрезису *gue/gui* — u німе: *guerra, guitarra*
+- *año* ≠ *anyo*;
+- *niño* ≠ *nino*.
 
-## LL і Y
+## Ü: дієреза
 
-- Традиційно різні; у більшості зон **yeísmo** — однакове звучання (*calle* ~ *caye*).
-- У письмі ll і y **не** взаємозамінні: *llamar ≠ yamar*
+Дієреза над **u** показує, що *u* треба вимовляти в послідовностях **güe/güi**:
+
+- *vergüenza*
+- *pingüino*
+- *lingüística*
+
+Порівняйте:
+
+- *guerra, guitarra* — *u* у **gue/gui** не вимовляється;
+- *vergüenza, pingüino* — *u* вимовляється завдяки **ü**.
+
+Дієреза тут не позначає наголос: це інший орфографічний знак.
+
+## LL
+
+**Ll** — диграф, тобто дві літери, які разом утворюють стабільну графічну одиницю: *llave, calle, llamar*.
+
+У більшості сучасних іспаномовних регіонів діє **yeísmo**: *ll* та *y* вимовляються однаково або дуже близько. В інших різновидах розрізнення може зберігатися.
+
+Yeísmo **не** означає, що написання взаємозамінне:
+
+- *calló* — форма *callar*;
+- *cayó* — форма *caer*.
 
 ## CH
 
-- Диграф [tʃ]: *chico, muchacho*
-- У сучасній абетці не окрема літера для сортування в багатьох контекстах, але в письмі стабільний
+**Ch** — диграф: *chico, coche, mucho*. Він позначає африкатний приголосний.
+
+Історично *ch* мав окреме місце в традиційному алфавітному порядку, але сучасна іспанська абетка не вважає **ch** окремою літерою. Для практичного правопису важливо сприймати його як усталений диграф.
+
+## Не плутайте графіку і вимову
+
+У сучасній іспанській одна й та сама вимова може відповідати різним написанням. Саме тому:
+
+- *haya* і *halla* треба розрізняти за значенням і граматикою;
+- *vaya* і *valla* — теж;
+- *calló* і *cayó* можуть збігатися у вимові за yeísmo.
+
+Правопис не можна відновлювати лише зі звучання.
 
 ## Типові помилки
 
 <Mistake
   bad="Espana / verguenza"
   good="España / vergüenza"
-  why="Ñ і ü обов’язкові в цих словах."
+  why="У цих словах потрібні відповідно ñ та ü."
+/>
+
+<Mistake
+  bad="Espero que halla tiempo."
+  good="Espero que haya tiempo."
+  why="Тут потрібна форма *haber*: *haya*. *Halla* походить від *hallar*."
+/>
+
+<MinPair
+  a={{ es: "Él cayó ayer.", uk: "Він учора впав." }}
+  b={{ es: "Él calló ayer.", uk: "Він учора замовк." }}
+  note="За yeísmo ці форми можуть звучати однаково, але пишуться по-різному й мають різне значення."
 />
 
 <Note kind="uk" title="Для україномовних">
-  Ñ ≈ «нь». Ü — щоб u було чути в gue/gui.
-  Yeísmo не означає, що можна писати y замість ll.
-</Note>
-
-<Note kind="region" title="Регіональна нота">
-  Yeísmo — майже всюди; žeísmo/ʃеísmo (calle ~ cashe) — Аргентина/Уругвай.
+  Ñ — окрема літера; ll і ch — диграфи; ü — знак, який показує вимову u в güe/güi. Це три різні орфографічні явища.
 </Note>
 
 ## Пов'язані теми
 
 - [Абетка і вимова](/es/fundamentals/alphabet-pronunciation/)
 - [Правила читання](/es/fundamentals/reading-rules/)
-- [Наголос](/es/spelling/accent-marks/)
+- [H, Y і LL](/es/spelling/h-y-ll/)
+- [Наголос і тільда](/es/spelling/accent-marks/)

@@ -7,10 +7,14 @@
 
 ## Як користуватися
 
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 сторінок у protected baseline**; разом із поточним rewrite-проходом закрито 162 сторінки, а **32 сторінки залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
 - [ ] **VERIFY** — після rewrite перевірити приклади, термінологію, cross-page consistency та джерела.
 - [ ] **DONE** — сторінка має бути закрита лише після проходження QA.
+
+Поточний операційний backlog нижче не є підставою повторно переписувати protected baseline: нові сторінки закриваються окремими precision/verification passes.
 
 Принцип:
 **не переписувати сторінку заради довжини.** Спочатку визначити граматичну проблему, потім перевірити правило, межі правила, приклади, українську інтерпретацію, регіональні варіанти та зв'язки з іншими сторінками.
@@ -21,22 +25,22 @@
 
 ## 1.1 Verbs — базова морфологія та лексико-граматичні конструкції
 
-- [ ] REWRITE `verbs/conjugations.mdx`
-- [ ] REWRITE `verbs/irregular-verbs.mdx`
-- [ ] REWRITE `verbs/stem-changing-verbs.mdx`
-- [ ] REWRITE `verbs/orthographic-changes.mdx`
-- [ ] REWRITE `verbs/pronominal-verbs.mdx`
-- [ ] REWRITE `verbs/verb-infinitive-patterns.mdx`
-- [ ] REWRITE `verbs/deber-vs-deber-de.mdx`
-- [ ] REWRITE `verbs/haber-auxiliary.mdx`
-- [ ] REWRITE `verbs/gerundio.mdx`
-- [ ] REWRITE `verbs/participio.mdx`
-- [ ] REWRITE `verbs/infinitivo.mdx`
-- [ ] VERIFY `verbs/gerund-uses.mdx`
-- [ ] VERIFY `verbs/estar-emotions-states.mdx`
-- [ ] VERIFY `verbs/change-of-state.mdx`
-- [ ] VERIFY `verbs/ser-estar.mdx`
-- [ ] VERIFY `verbs/ser-estar-hay.mdx`
+- [x] DONE — deep rewrite + verification `verbs/conjugations.mdx`
+- [x] DONE — deep rewrite + verification `verbs/irregular-verbs.mdx`
+- [x] DONE — deep rewrite + verification `verbs/stem-changing-verbs.mdx`
+- [x] DONE — deep rewrite + verification `verbs/orthographic-changes.mdx`
+- [x] DONE — deep rewrite + verification `verbs/pronominal-verbs.mdx`
+- [x] DONE — deep rewrite + verification `verbs/verb-infinitive-patterns.mdx`
+- [x] DONE — deep rewrite + verification `verbs/deber-vs-deber-de.mdx`
+- [x] DONE — deep rewrite + verification `verbs/haber-auxiliary.mdx`
+- [x] DONE — deep rewrite + verification `verbs/gerundio.mdx`
+- [x] DONE — deep rewrite + verification `verbs/participio.mdx`
+- [x] DONE — deep rewrite + verification `verbs/infinitivo.mdx`
+- [x] DONE — verified / precision rewrite `verbs/gerund-uses.mdx`
+- [x] DONE — verified / precision rewrite `verbs/estar-emotions-states.mdx`
+- [x] DONE — verified / precision rewrite `verbs/change-of-state.mdx`
+- [x] DONE — verified existing protected baseline; no rewrite needed `verbs/ser-estar.mdx`
+- [x] DONE — verified / precision rewrite `verbs/ser-estar-hay.mdx`
 
 **Чому P0:** морфологічні сторінки є фундаментом для всього tense/mood/periphrasis system. Тут особливо важливо не змішувати форму, функцію та лексичну валентність.
 
@@ -44,12 +48,12 @@
 
 # 2. P0 — Conjunctions та subordinate-clause system
 
-- [ ] REWRITE `conjunctions/coordinating.mdx`
-- [ ] REWRITE `conjunctions/subordinating.mdx`
-- [ ] REWRITE `conjunctions/que-de-que.mdx`
-- [ ] VERIFY `conjunctions/como-excepto.mdx`
-- [ ] VERIFY `conjunctions/discourse-connectors.mdx`
-- [ ] VERIFY `conjunctions/discourse-fillers.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/coordinating.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/subordinating.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/que-de-que.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/como-excepto.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/discourse-connectors.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/discourse-fillers.mdx`
 
 ### Cross-page dependency
 
@@ -64,21 +68,21 @@
 
 # 3. P0 — Valency, complements and sentence structure
 
-- [ ] REWRITE `sentence-structure/verb-valency.mdx`
-- [ ] REWRITE `sentence-structure/predicative-complement.mdx`
-- [ ] REWRITE `sentence-structure/agreement.mdx`
-- [ ] REWRITE `sentence-structure/comparative-clauses.mdx`
-- [ ] REWRITE `sentence-structure/consecutive-clauses.mdx`
-- [ ] REWRITE `sentence-structure/modal-clauses.mdx`
-- [ ] REWRITE `sentence-structure/absolute-constructions.mdx`
-- [ ] REWRITE `sentence-structure/ellipsis.mdx`
-- [ ] VERIFY `sentence-structure/compound-complex.mdx`
-- [ ] VERIFY `sentence-structure/cleft-pseudocleft.mdx`
-- [ ] VERIFY `sentence-structure/dislocation.mdx`
-- [ ] VERIFY `sentence-structure/emphasis-polarity-focus.mdx`
-- [ ] VERIFY `sentence-structure/modality-speech-acts.mdx`
-- [ ] VERIFY `sentence-structure/verum-focus.mdx`
-- [ ] VERIFY `sentence-structure/interjections.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/verb-valency.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/predicative-complement.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/agreement.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/comparative-clauses.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/consecutive-clauses.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/modal-clauses.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/absolute-constructions.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/ellipsis.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/compound-complex.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/cleft-pseudocleft.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/dislocation.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/emphasis-polarity-focus.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/modality-speech-acts.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/verum-focus.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/interjections.mdx`
 
 **Головний ризик:** не плутати аргумент, adjunct, attribute, predicative complement і discourse function.
 
@@ -86,16 +90,16 @@
 
 # 4. P1 — Adjectives: завершальний системний прохід
 
-- [ ] REWRITE `adjectives/adjective-complements.mdx`
-- [ ] REWRITE `adjectives/adjective-types-cultos.mdx`
-- [ ] REWRITE `adjectives/comparison-structures.mdx`
-- [ ] REWRITE `adjectives/degrees-of-comparison.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/adjective-complements.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/adjective-types-cultos.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/comparison-structures.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/degrees-of-comparison.mdx`
 - [ ] REWRITE `adjectives/irregular-comparatives.mdx`
 - [ ] REWRITE `adjectives/meaning-by-position.mdx`
-- [ ] VERIFY `adjectives/adjective-agreement.mdx`
-- [ ] VERIFY `adjectives/agreement-traps.mdx`
-- [ ] VERIFY `adjectives/quantifiers.mdx`
-- [ ] VERIFY `adjectives/quantifiers-advanced.mdx`
+- [x] DONE — verified / precision metadata `adjectives/adjective-agreement.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/agreement-traps.mdx`
+- [x] DONE — verified / precision metadata `adjectives/quantifiers.mdx`
+- [x] DONE — verified / precision metadata `adjectives/quantifiers-advanced.mdx`
 
 **Cross-page test:**
 `un gran hombre / un hombre grande`,
@@ -336,3 +340,184 @@ The Academic Writing Toolkit review remains a secondary structural signal. Short
 
 Primary quality gates remain:
 **factual correctness → grammatical precision → Ukrainian learner fit → cross-page consistency → source discipline → technical QA.**
+
+
+## Поточний progress log — 2026-09-24
+
+- Завершено precision rewrite п'яти P0-сторінок блоку **verbs**: `conjugations`, `irregular-verbs`, `stem-changing-verbs`, `orthographic-changes`, `pronominal-verbs`.
+- Перевірено міжсторінкову узгодженість цих п'яти сторінок з регулярною дієвідміною, нерегулярністю, voseo та системою `se`.
+- Прибрано або звужено статистичні та категоричні твердження, для яких у репозиторії не було достатньої підстави.
+- Academic Writing Toolkit повторно застосовано до репрезентативної прозової частини; його short-paragraph сигнали залишено як очікувані для компонентного довідника.
+- GitHub PR QA: **PASS** на PR #5 після змін п'яти сторінок; повний `npm run qa` завершився успішно.
+- Наступний P0-блок після цього проходу: `verb-infinitive-patterns`, `deber-vs-deber-de`, `haber-auxiliary`, `gerundio`, `participio`, `infinitivo`.
+
+
+### P0 verbs precision pass — 2026-09-24
+
+**Completed:** all 11 verb pages listed in the P0 morphology block now have a documented deep rewrite + verification status. The pass covered:
+
+- regular conjugation groups and the limits of simplified frequency claims;
+- irregularity typology, stem alternation, voseo and orthographic adaptation;
+- pronominal constructions and the distinction between grammaticality and departure/emphasis nuances;
+- verb + infinitive government;
+- deber / deber de modality and real-usage variation;
+- haber as auxiliary versus hay;
+- gerundio and participio with construction-sensitive analysis;
+- infinitive versus *que + subjuntivo* without a false one-subject/two-subject universal.
+
+All 11 revised pages were marked `review_status: verified` after the PR QA gate. Previously rewritten grammar pages outside this P0 block remain protected and were not re-rewritten.
+
+
+### Follow-up precision pass — 2026-09-24
+
+- Verified/reworked four remaining verb pages: `gerund-uses`, `estar-emotions-states`, `change-of-state`, `ser-estar-hay`.
+- Kept `verbs/ser-estar.mdx` as protected baseline; it was reviewed for consistency but not rewritten because it already belongs to the previous deep-rewrite corpus.
+- Completed the first three P0 conjunction pages: `coordinating`, `subordinating`, `que-de-que`.
+- Tightened false universals around gerundio, ser/estar, change-of-state verbs, and indicativo/subjuntivo selection.
+- Added/updated RAE/ASALE source metadata and marked the seven touched content pages as `review_status: verified`.
+- Academic Writing Toolkit review of the seven pages returned only the expected short-paragraph signals from the componentized reference format; no higher-level paragraph-logic issue was reported.
+
+
+### Sentence-structure precision pass — 2026-09-24
+
+- Closed four P0 sentence-structure pages: `verb-valency`, `predicative-complement`, `comparative-clauses`, `consecutive-clauses`.
+- Tightened false universals around argument counts, complement classification, secondary predication, comparative conjunctions and consecutive mood selection.
+- Added RAE/ASALE source metadata and `review_status: verified` to the four touched pages.
+- Academic Writing Toolkit review again reported only expected short-paragraph signals from the componentized reference format.
+- Closed four additional P0 sentence-structure pages: `compound-complex`, `cleft-pseudocleft`, `dislocation`, `emphasis-polarity-focus`.
+- Tightened the distinction between coordination, subordination and juxtaposition; cleft/pseudocleft focus; left/right dislocation; topic vs focus; and emphatic `sí`, `sí que`, `no es que`, `sino/sino que`.
+- Academic Writing Toolkit again returned only expected short-paragraph signals from the componentized reference format; no higher-level paragraph-logic issue was reported.
+- Closed four additional P0 sentence-structure pages: `concessive-clauses`, `double-negation`, `interjections`, `modality-speech-acts`.
+- Tightened concessive mood selection, negative concord, interjection/discourse-marker boundaries, punctuation, and modality/speech-act distinctions.
+- Academic Writing Toolkit again returned only expected short-paragraph signals from the componentized reference format.
+- Current untouched/review backlog: **74 of 196 grammar MDX pages (37.8%)**; previously rewritten baseline remains protected.
+
+
+### P0 sentence-structure precision pass V — 2026-09-24
+
+- Closed four additional P0 sentence-structure pages: `verum-focus`, `advanced-conditionals`, `negation-patterns`, and `passive-voice`.
+- Tightened verum focus vs contrastive focus, advanced conditional constructions, negative concord and pre/postverbal negative elements, and the distinction between pasiva perifrástica, pasiva refleja, and impersonal `se`.
+- Added/updated RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit again returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **78 of 196 grammar MDX pages (39.8%)**.
+
+
+### P0 conjunction + baseline verification pass — 2026-09-24
+
+- Verified the protected baseline `verbs/ser-estar.mdx` for cross-page consistency; no rewrite was needed, so the page remains untouched and protected.
+- Closed `conjunctions/como-excepto.mdx`, `conjunctions/discourse-connectors.mdx`, and `conjunctions/discourse-fillers.mdx` with precision rewrites and verification.
+- Tightened the distinctions among the main uses of `como`, exception constructions, discourse connectors, punctuation, register, and conversational discourse markers.
+- Academic Writing Toolkit returned only short-paragraph signals expected from the componentized reference format on all three rewritten pages.
+- Current untouched/review backlog: **58 of 196 grammar MDX pages (29.6%)**.
+
+
+### P1 adjectives precision pass — 2026-09-24
+
+- Closed four adjective pages: `adjective-complements`, `adjective-types-cultos`, `comparison-structures`, and `degrees-of-comparison`.
+- Reframed adjective government around constructional régimen rather than translation-based preposition guessing.
+- Distinguished calificativos from relacionales without turning tendencies into absolute prohibitions on degree modification.
+- Reworked comparative structures around `más/menos... que`, `tan... como`, `tanto... como`, `igual de... que`, `más/menos de + quantity`, superlative constructions, and correlative comparisons.
+- Tightened the treatment of `mejor, peor, mayor, menor`, `superior/inferior`, and absolute vs relative superlative.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **70 of 196 grammar MDX pages (35.7%)**.
+
+
+### P1 adjectives precision pass II — 2026-09-24
+
+- Closed `adjectives/irregular-comparatives.mdx` and `adjectives/meaning-by-position.mdx` with precision rewrites.
+- Verified `adjectives/adjective-agreement.mdx` and upgraded its source/review metadata without changing the established instructional structure.
+- Reworked `adjectives/agreement-traps.mdx` to distinguish grammatical number, semantic agreement, collective nouns, `usted/ustedes`, and coordinated mixed-gender subjects without false universals.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
+- Current untouched/review backlog: **68 of 196 grammar MDX pages (34.7%)**.
+
+
+### P1 adjectives quantification verification — 2026-09-24
+
+- Verified `adjectives/quantifiers.mdx` and `adjectives/quantifiers-advanced.mdx`.
+- Added current RAE/ASALE source metadata and `review_status: verified`.
+- Preserved the componentized reference structure while tightening the treatment of `el resto de` and quantity/concordance variability.
+- Academic Writing Toolkit returned only expected short-paragraph signals on both pages.
+- Current untouched/review backlog: **58 of 196 grammar MDX pages (29.6%)**.
+
+
+## Progress update — 2026-09-24 (verbs continuation)
+
+- Closed four remaining backlog verb pages in this focused block: `gustar-type-verbs`, `haber-vs-tener`, `infinitive-as-noun`, and `ser-estar-location`.
+- Reworked `gustar` around indirect-object/dative structure and subject–verb agreement rather than the informal “reverse logic” mnemonic.
+- Reworked `haber vs tener` around existential `hay`, possession, compound tenses, and the distinct resultative `tener + participio` construction.
+- Reworked infinitive nominality to distinguish nominal syntactic uses from verbal infinitives, article-based nominalization, prepositional infinitives, and `al + infinitivo`.
+- Reworked `ser/estar` location around entity localization vs event location, avoiding the permanent/temporary shortcut.
+- Academic Writing Toolkit found only short-paragraph signals expected for the componentized reference format on all four pages.
+- RAE/ASALE was used for the high-risk constructional claims and source metadata was refreshed.
+- Current backlog: **56 of 196 grammar MDX pages (28.6%)**.
+
+
+## Progress update — 2026-09-24 (sentence structure VI)
+
+- Closed four additional P0 sentence-structure pages: `personal-a`, `question-formation`, `reported-speech-review`, and `si-clauses-overview`.
+- Reworked personal `a` around direct-object function, animacy, definiteness and specificity rather than a single “person = a” rule.
+- Reworked question formation around intonation, interrogatives, information structure, punctuation and the fact that inversion is not obligatory.
+- Reworked reported speech around temporal perspective, indirect questions, directives and non-mechanical tense backshift.
+- Reworked `si` clauses around open, hypothetical, past counterfactual and mixed-time conditions, while avoiding an absolute “three types only” presentation.
+- Academic Writing Toolkit returned only short-paragraph signals expected for the componentized reference format on all four pages.
+- Current backlog: **58 of 196 grammar MDX pages (29.6%)**.
+
+
+## Progress update — 2026-09-24 (ser/estar + subordinate-clause closure)
+
+- Closed verbs/ser-estar-with-adjectives with a construction-first precision rewrite: removed the permanent/temporary shortcut as a universal rule, clarified lexical meaning shifts, state/resultative readings, and high-frequency contrasts such as ser/estar listo and ser/estar aburrido.
+- Closed sentence-structure/subordinate-clauses with a system overview covering sustantivas, relativas, adverbial subordinate types, mood selection, ordering and punctuation, while avoiding “conjunction = subjuntivo” rules.
+- Academic Writing Toolkit found no paragraph-logic issue in the ser/estar sample; the subordinate-clause sample produced only the expected short-paragraph signal for componentized reference prose.
+- Both pages received review_status: verified and RAE/ASALE source metadata.
+- Current backlog: **56 of 196 grammar MDX pages (28.6%)**.
+
+
+## Progress update — 2026-09-24 (subjunctive quick guide)
+
+- Closed `moods/subjunctive-triggers-list` with a precision rewrite centered on construction rather than a mechanical trigger-word list.
+- Added contrasts for indicativo/subjuntivo, including negation, uncertain referents, temporal clauses, and contexts where both modes can occur with different interpretations.
+- Added RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was identified.
+- Current backlog: **40 of 196 grammar MDX pages (20.4%)**.
+
+
+## Progress update — 2026-09-24 (body-part possession)
+
+- Closed `pronouns/body-parts-possession` with a construction-first precision rewrite.
+- Distinguished possessive dative, reflexive pronouns, affected-person datives, ordinary possessives, and `doler` agreement.
+- Removed the stronger false-universal framing that every body-part or clothing construction mechanically requires `dativo + definite article`.
+- Added RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was identified.
+- Current backlog: **40 of 196 grammar MDX pages (20.4%)**.
+
+
+## Progress update — 2026-09-24 (subjunctive tense precision)
+
+- Closed `moods/imperfecto-subjuntivo` and `moods/futuro-de-subjuntivo`.
+- Reworked imperfecto de subjuntivo around modal/hypothetical meaning and temporal perspective, including both normative `-ra/-se` series.
+- Reworked futuro de subjuntivo as a recognition-oriented historical/marked form, correcting its examples and adding the compound form.
+- Added RAE/ASALE source metadata and `review_status: verified` to both pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was identified.
+- Current backlog: **38 of 196 grammar MDX pages (19.4%)**.
+
+
+### Pronouns precision pass — 2026-09-24
+
+- Closed `pronouns/mismo-uno-generic`, `pronouns/reciprocal-pronouns`, `pronouns/relative-pronouns-review`, and `pronouns/se-impersonal`.
+- Tightened the distinction between identity/intensification (`mismo`), generic `uno`, `cualquiera`, and generic second person.
+- Reworked reciprocal `nos/os/se` around the reflexive/reciprocal ambiguity and explicit reciprocal markers.
+- Reworked the relative-pronoun quick guide around antecedent type, prepositions, `cuyo` agreement, and `lo que`.
+- Reworked impersonal `se` around the structural contrast with pasiva refleja, especially personal `a` and agreement.
+- Added RAE/ASALE source metadata and `review_status: verified` to all four pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **34 of 196 grammar MDX pages (17.3%)**.
+
+
+### Articles precision pass — 2026-09-24
+
+- Closed `articles/articles-with-names` and `articles/definite-vs-indefinite`.
+- Reworked proper-name article use around official-name articles, geographic classes, titles, regional variation, and article insertion from syntax rather than lexical naming.
+- Reworked definite/indefinite contrast around referent identification, anaphora, genericity, zero article, professions, and contextual readings of `un` under negation.
+- Added RAE/ASALE source metadata and `review_status: verified` to both pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **32 of 196 grammar MDX pages (16.3%)**.

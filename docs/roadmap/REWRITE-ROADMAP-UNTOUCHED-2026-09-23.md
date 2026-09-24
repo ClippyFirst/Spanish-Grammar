@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **6** |
-| Частка незачеплених сторінок | **3.1%** |
+| Не змінені / залишені в rewrite backlog | **11** |
+| Частка незачеплених сторінок | **5.6%** |
 
 ### Protected baseline rule
 
@@ -511,4 +511,4 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Removed unsupported universal claims about `ser + adjective`, past-tense selection, leísmo and individual lexical markers.
 - Added/updated RAE/ASALE source metadata and `review_status: verified` on all eight pages.
 - Academic Writing Toolkit returned only short-paragraph signals on the eight pages; no higher-level paragraph-logic defect was reported.
-- Current operational page backlog after reconciliation: **6 of 196 grammar MDX pages (3.1%)**.
+- Current operational page backlog after reconciliation: **11 of 196 grammar MDX pages (5.6%)**.

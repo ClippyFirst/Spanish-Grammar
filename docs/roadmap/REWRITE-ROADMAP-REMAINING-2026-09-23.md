@@ -382,4 +382,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Tightened false universals around argument counts, complement classification, secondary predication, comparative conjunctions and consecutive mood selection.
 - Added RAE/ASALE source metadata and `review_status: verified` to the four touched pages.
 - Academic Writing Toolkit review again reported only expected short-paragraph signals from the componentized reference format.
-- Current untouched/review backlog: **90 of 196 grammar MDX pages (45.9%)**; previously rewritten baseline remains protected.
+- Closed four additional P0 sentence-structure pages: `compound-complex`, `cleft-pseudocleft`, `dislocation`, `emphasis-polarity-focus`.
+- Tightened the distinction between coordination, subordination and juxtaposition; cleft/pseudocleft focus; left/right dislocation; topic vs focus; and emphatic `sí`, `sí que`, `no es que`, `sino/sino que`.
+- Academic Writing Toolkit again returned only expected short-paragraph signals from the componentized reference format; no higher-level paragraph-logic issue was reported.
+- Current untouched/review backlog: **86 of 196 grammar MDX pages (43.9%)**; previously rewritten baseline remains protected.

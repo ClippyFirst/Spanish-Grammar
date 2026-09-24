@@ -16,7 +16,7 @@ interface Props {
   canonicalTopic?: GrammarEntry;
 }
 
-const { entry, headings, related, prerequisites, contrasts, extensions, exceptions, canonicalTopic } = Astro.props;
+const { entry, headings, related } = Astro.props;
 const { category } = parseId(entry.id);
 const cat = getCategory(category);
 const canonical = entryUrl(entry);
@@ -31,10 +31,6 @@ function regionLabel(r: string): string {
     caribbean: 'Кариби',
   };
   return map[r] ?? r;
-}
-
-function relationLabel(entry: GrammarEntry): string {
-  return `${entry.data.title_es} — ${entry.data.title_uk}`;
 }
 ---
 <BaseLayout
@@ -86,49 +82,7 @@ function relationLabel(entry: GrammarEntry): string {
           </div>
         </header>
 
-        {(prerequisites.length > 0 || contrasts.length > 0 || extensions.length > 0 || exceptions.length > 0) && (
-          <aside class="semantic-nav" aria-label="Навігація між поняттями">
-            {prerequisites.length > 0 && (
-              <section>
-                <h2>Перед цією темою</h2>
-                <ul>
-                  {prerequisites.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
-                </ul>
-              </section>
-            )}
-            {contrasts.length > 0 && (
-              <section>
-                <h2>Порівняти з</h2>
-                <ul>
-                  {contrasts.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
-                </ul>
-              </section>
-            )}
-            {extensions.length > 0 && (
-              <section>
-                <h2>Продовження</h2>
-                <ul>
-                  {extensions.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
-                </ul>
-              </section>
-            )}
-            {exceptions.length > 0 && (
-              <section>
-                <h2>Винятки та особливі випадки</h2>
-                <ul>
-                  {exceptions.map((item) => <li><a href={entryUrl(item)}>{relationLabel(item)}</a></li>)}
-                </ul>
-              </section>
-            )}
-          </aside>
-        )}
-
-        {canonicalTopic && (
-          <aside class="canonical-topic" aria-label="Канонічна тема">
-            <span>Канонічна тема</span>
-            <a href={entryUrl(canonicalTopic)}>{relationLabel(canonicalTopic)}</a>
-          </aside>
-        )}
+        <div class="article-rule" aria-hidden="true"></div>
 
         <div class="prose">
           <slot />

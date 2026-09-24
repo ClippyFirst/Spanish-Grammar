@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **78 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **74 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -87,10 +87,10 @@
 
 ## conjunctions — 4 сторінок
 
-- [ ] `src/content/es/conjunctions/como-excepto.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/conjunctions/como-excepto.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/conjunctions/coordinating.mdx`
-- [ ] `src/content/es/conjunctions/discourse-connectors.mdx`
-- [ ] `src/content/es/conjunctions/discourse-fillers.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/conjunctions/discourse-connectors.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/conjunctions/discourse-fillers.mdx`
 
 ## adjectives — 8 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **78** |
-| Частка незачеплених сторінок | **39.8%** |
+| Не змінені / залишені в rewrite backlog | **74** |
+| Частка незачеплених сторінок | **37.8%** |
 
 ### Protected baseline rule
 
@@ -278,3 +278,12 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Passive voice now distinguishes `ser + participio`, pasiva refleja, and impersonal `se`, including agreement and personal `a` diagnostics.
 - Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
 - Current backlog: **78 of 196 grammar MDX pages (39.8%)**.
+
+
+## Progress update — 2026-09-24 (conjunctions + protected baseline verification)
+
+- Verified the protected `verbs/ser-estar.mdx` page for cross-page consistency without rewriting it.
+- Closed three conjunction backlog pages: `como-excepto`, `discourse-connectors`, and `discourse-fillers`.
+- Tightened construction, discourse-function, punctuation, register, and regional-variation claims; added current RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit reported only expected short-paragraph signals on the three rewritten pages.
+- Current backlog: **74 of 196 grammar MDX pages (37.8%)**.

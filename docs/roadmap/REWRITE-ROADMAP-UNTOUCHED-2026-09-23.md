@@ -61,15 +61,15 @@
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/absolute-constructions.mdx`
 - [ ] `src/content/es/sentence-structure/advanced-conditionals.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/agreement.mdx`
-- [ ] `src/content/es/sentence-structure/cleft-pseudocleft.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/cleft-pseudocleft.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/comparative-clauses.mdx`
-- [ ] `src/content/es/sentence-structure/compound-complex.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/compound-complex.mdx`
 - [ ] `src/content/es/sentence-structure/concessive-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/consecutive-clauses.mdx`
-- [ ] `src/content/es/sentence-structure/dislocation.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/dislocation.mdx`
 - [ ] `src/content/es/sentence-structure/double-negation.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/ellipsis.mdx`
-- [ ] `src/content/es/sentence-structure/emphasis-polarity-focus.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/emphasis-polarity-focus.mdx`
 - [ ] `src/content/es/sentence-structure/interjections.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/modal-clauses.mdx`
 - [ ] `src/content/es/sentence-structure/modality-speech-acts.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **90** |
-| Частка незачеплених сторінок | **45.9%** |
+| Не змінені / залишені в rewrite backlog | **86** |
+| Частка незачеплених сторінок | **43.9%** |
 
 ### Protected baseline rule
 
@@ -251,3 +251,11 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Ellipsis was expanded around predicate ellipsis, comparative ellipsis, coordination, dialogue and recovery/ambiguity diagnostics.
 - Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
 - Current backlog: **90 of 196 grammar MDX pages (45.9%)**.
+
+
+## Progress update — 2026-09-24 (sentence structure III)
+
+- Closed four additional P0 sentence-structure pages: `compound-complex`, `cleft-pseudocleft`, `dislocation`, `emphasis-polarity-focus`.
+- Tightened the distinction between coordination, subordination and juxtaposition; cleft/pseudocleft focus; left/right dislocation; topic vs focus; and emphatic `sí`, `sí que`, `no es que`, `sino/sino que`.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
+- Current backlog: **86 of 196 grammar MDX pages (43.9%)**.

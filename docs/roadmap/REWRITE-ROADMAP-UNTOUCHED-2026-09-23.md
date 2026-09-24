@@ -106,11 +106,11 @@
 ## spelling — 9 сторінок
 
 - [x] DONE — precision rewrite + verification `src/content/es/spelling/accent-marks.mdx`
-- [ ] `src/content/es/spelling/b-v.mdx`
-- [ ] `src/content/es/spelling/c-z-s-g-j.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/b-v.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/c-z-s-g-j.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/spelling/capitalization.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/spelling/diphthongs-hiatus.mdx`
-- [ ] `src/content/es/spelling/h-y-ll.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/h-y-ll.mdx`
 - [ ] `src/content/es/spelling/punctuation-capitalization.mdx`
 - [ ] `src/content/es/spelling/special-letters.mdx`
 - [ ] `src/content/es/spelling/stress-and-accents-review.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **52** |
-| Частка незачеплених сторінок | **26.5%** |
+| Не змінені / залишені в rewrite backlog | **49** |
+| Частка незачеплених сторінок | **25.0%** |
 
 ### Protected baseline rule
 
@@ -352,3 +352,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Marked all three pages `review_status: verified` and refreshed RAE/ASALE source metadata.
 - Academic Writing Toolkit returned only short-paragraph signals expected for the componentized reference format on all three pages.
 - Current backlog: **52 of 196 grammar MDX pages (26.5%)**.
+
+
+## Progress update — 2026-09-24 (spelling II)
+
+- Closed three consonant-orthography backlog pages: `b-v`, `c-z-s-g-j`, and `h-y-ll`.
+- Replaced absolute or overly mnemonic claims with construction-/morphology-first spelling rules, and separated orthography from regional pronunciation (seseo/distinción, yeísmo, regional realizations).
+- Corrected B/V guidance against RAE/ASALE: `-bir/-buir`, imperfect `-aba`, `bu-/bur-/bus-`, `ad-/sub-/ob-`, `-ave/-eve/-evo/-ivo`, and relevant verbal forms.
+- Corrected C/Z/S and G/J guidance, including `gue/gui`, `güe/güi`, and verb alternations such as `empezar → empiezo/empecé` and `proteger → protejo`.
+- Corrected H and Y/LL coverage to avoid the absolute claim that H is never pronounced and to describe yeísmo as widespread rather than universal.
+- All three pages are marked `review_status: verified` with RAE/ASALE source metadata.
+- Academic Writing Toolkit found only short-paragraph signals (5 / 19 / 10 respectively); no higher-level paragraph-logic issue was reported.
+- Current backlog: **49 of 196 grammar MDX pages (25.0%)**.

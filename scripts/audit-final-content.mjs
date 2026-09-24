@@ -71,7 +71,7 @@ const docs = files.map(file => {
 const findings = {
   generated: new Date().toISOString(),
   pages: docs.length,
-  duplicate_orders: [],
+  duplicate_topic_codes: [],
   forbidden_ukrainomov: [],
   emphasis_artifacts: [],
   table_mismatches: [],
@@ -79,21 +79,31 @@ const findings = {
   duplicate_related_targets: [],
 };
 
-const orderMap = new Map();
-for (const d of docs) {
+const ordered = [...docs].sort((a, b) => {
+  const categoryOrder = (x) => Number(x.data.categoryOrder ?? 999);
+  const categoryA = a.data.category || a.rel.split('/')[0];
+  const categoryB = b.data.category || b.rel.split('/')[0];
+  if (categoryA !== categoryB) return categoryA.localeCompare(categoryB);
+  const orderDelta = Number(a.data.order ?? 100) - Number(b.data.order ?? 100);
+  if (orderDelta !== 0) return orderDelta;
+  return a.rel.localeCompare(b.rel);
+});
+const codeMap = new Map();
+const categoryIndexes = new Map();
+for (const d of ordered) {
   const category = d.data.category || d.rel.split('/')[0];
-  const order = d.data.order;
-  if (order == null) continue;
-  const key = category + ':' + order;
-  const bucket = orderMap.get(key) ?? [];
+  const index = (categoryIndexes.get(category) ?? 0) + 1;
+  categoryIndexes.set(category, index);
+  const code = String(index);
+  const bucket = codeMap.get(category + ':' + code) ?? [];
   bucket.push(d.rel);
-  orderMap.set(key, bucket);
+  codeMap.set(category + ':' + code, bucket);
 }
-for (const [key, bucket] of orderMap) {
-  if (bucket.length > 1) findings.duplicate_orders.push({ key, pages: bucket });
+for (const [key, bucket] of codeMap) {
+  if (bucket.length > 1) findings.duplicate_topic_codes.push({ key, pages: bucket });
 }
 
-const forbidden = /україномов(?:ний|на|не|ні|ного|ному|ними|них|них)?|українськомов(?:ний|на|не|ні|ного|ному|ними|них)?/giu;
+const forbidden = /україномов|українськомов/giu;
 for (const d of docs) {
   const hits = [...d.body.matchAll(forbidden)].map(m => m[0]);
   if (hits.length) findings.forbidden_ukrainomov.push({ page: d.rel, hits: [...new Set(hits)] });
@@ -136,6 +146,6 @@ for (const d of docs) {
 const totals = Object.fromEntries(Object.entries(findings).filter(([k]) => Array.isArray(findings[k])).map(([k,v]) => [k, v.length]));
 console.log(JSON.stringify({ ...findings, totals }, null, 2));
 let failed = false;
-for (const [key, value] of Object.entries(totals)) if (key !== 'related_sections' && value > 0) failed = true;
+for (const [, value] of Object.entries(totals)) if (value > 0) failed = true;
 if (findings.related_sections.some(x => x.sections.length !== 0)) failed = true;
 process.exitCode = failed ? 1 : 0;

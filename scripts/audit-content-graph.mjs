@@ -83,7 +83,7 @@ for (const page of pages) {
 }
 
 const semanticOrphans = [...inbound]
-  .filter(([page, refs]) => refs.length === 0 && !/(^|\\/)index$/.test(page))
+  .filter(([page, refs]) => refs.length === 0 && !/(^|\/)index$/.test(page))
   .map(([page]) => page);
 const overlinked = [...nodes].map(([page, node]) => [page, fields.reduce((n, field) => n + node.fields[field].length, 0) + node.links.length]).filter(([, count]) => count >= 12).sort((a, b) => b[1] - a[1]);
 fs.mkdirSync(OUT_DIR, { recursive: true });

@@ -148,18 +148,18 @@
 
 ## regional — 13 сторінок
 
-- [ ] `src/content/es/regional/andean.mdx`
-- [ ] `src/content/es/regional/caribbean.mdx`
-- [ ] `src/content/es/regional/central-america.mdx`
-- [ ] `src/content/es/regional/colombia-canarias.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/andean.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/caribbean.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/central-america.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/colombia-canarias.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/regional/leismo-laismo-loismo.mdx`
-- [ ] `src/content/es/regional/mexico.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/mexico.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/regional/regional-overview.mdx`
-- [ ] `src/content/es/regional/rioplatense.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/rioplatense.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/regional/seseo-ceceo-distincion.mdx`
-- [ ] `src/content/es/regional/southern-cone.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/southern-cone.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/regional/spain-vs-latin-america.mdx`
-- [ ] `src/content/es/regional/ustedeo.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/ustedeo.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/regional/voseo.mdx`
 
 ## word-formation — 7 сторінок
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **14** |
-| Частка незачеплених сторінок | **7.1%** |
+| Не змінені / залишені в rewrite backlog | **6** |
+| Частка незачеплених сторінок | **3.1%** |
 
 ### Protected baseline rule
 
@@ -502,3 +502,13 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Both pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit returned only short-paragraph signals on both pages; no higher-level paragraph-logic defect was reported.
 - Current backlog: **14 of 196 grammar MDX pages (7.1%)**.
+
+
+## Progress update — 2026-09-24 (regional precision pass)
+
+- Closed eight regional pages: `andean`, `caribbean`, `central-america`, `colombia-canarias`, `mexico`, `rioplatense`, `southern-cone`, and `ustedeo`.
+- Replaced country-wide absolutes with region- and context-sensitive descriptions of `tú/usted/vos/ustedes`, voseo and ustedeo.
+- Removed unsupported universal claims about `ser + adjective`, past-tense selection, leísmo and individual lexical markers.
+- Added/updated RAE/ASALE source metadata and `review_status: verified` on all eight pages.
+- Academic Writing Toolkit returned only short-paragraph signals on the eight pages; no higher-level paragraph-logic defect was reported.
+- Current operational page backlog after reconciliation: **6 of 196 grammar MDX pages (3.1%)**.

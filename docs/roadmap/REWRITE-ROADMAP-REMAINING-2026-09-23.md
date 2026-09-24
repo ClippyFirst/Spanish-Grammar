@@ -7,12 +7,14 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **56 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 сторінок у protected baseline**; разом із поточним rewrite-проходом закрито 162 сторінки, а **34 сторінки залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
 - [ ] **VERIFY** — після rewrite перевірити приклади, термінологію, cross-page consistency та джерела.
 - [ ] **DONE** — сторінка має бути закрита лише після проходження QA.
+
+Поточний операційний backlog нижче не є підставою повторно переписувати protected baseline: нові сторінки закриваються окремими precision/verification passes.
 
 Принцип:
 **не переписувати сторінку заради довжини.** Спочатку визначити граматичну проблему, потім перевірити правило, межі правила, приклади, українську інтерпретацію, регіональні варіанти та зв'язки з іншими сторінками.
@@ -497,3 +499,15 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Added RAE/ASALE source metadata and `review_status: verified` to both pages.
 - Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was identified.
 - Current backlog: **38 of 196 grammar MDX pages (19.4%)**.
+
+
+### Pronouns precision pass — 2026-09-24
+
+- Closed `pronouns/mismo-uno-generic`, `pronouns/reciprocal-pronouns`, `pronouns/relative-pronouns-review`, and `pronouns/se-impersonal`.
+- Tightened the distinction between identity/intensification (`mismo`), generic `uno`, `cualquiera`, and generic second person.
+- Reworked reciprocal `nos/os/se` around the reflexive/reciprocal ambiguity and explicit reciprocal markers.
+- Reworked the relative-pronoun quick guide around antecedent type, prepositions, `cuyo` agreement, and `lo que`.
+- Reworked impersonal `se` around the structural contrast with pasiva refleja, especially personal `a` and agreement.
+- Added RAE/ASALE source metadata and `review_status: verified` to all four pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **34 of 196 grammar MDX pages (17.3%)**.

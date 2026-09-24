@@ -385,4 +385,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Closed four additional P0 sentence-structure pages: `compound-complex`, `cleft-pseudocleft`, `dislocation`, `emphasis-polarity-focus`.
 - Tightened the distinction between coordination, subordination and juxtaposition; cleft/pseudocleft focus; left/right dislocation; topic vs focus; and emphatic `sí`, `sí que`, `no es que`, `sino/sino que`.
 - Academic Writing Toolkit again returned only expected short-paragraph signals from the componentized reference format; no higher-level paragraph-logic issue was reported.
-- Current untouched/review backlog: **86 of 196 grammar MDX pages (43.9%)**; previously rewritten baseline remains protected.
+- Closed four additional P0 sentence-structure pages: `concessive-clauses`, `double-negation`, `interjections`, `modality-speech-acts`.
+- Tightened concessive mood selection, negative concord, interjection/discourse-marker boundaries, punctuation, and modality/speech-act distinctions.
+- Academic Writing Toolkit again returned only expected short-paragraph signals from the componentized reference format.
+- Current untouched/review backlog: **82 of 196 grammar MDX pages (41.8%)**; previously rewritten baseline remains protected.

@@ -25,16 +25,16 @@ const isActive = (p: string) => pathname.startsWith(p);
 
   <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">
     <div class="mobile-menu-primary">
-      <a href={withBase('/es/')}>Категорії</a>
-      <a href={withBase('/comparisons/')}>Порівняння</a>
-      <a href={withBase('/search/')}>Пошук ⌕</a>
-      <a href={withBase('/about/')}>Про проєкт</a>
+      <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Категорії</a>
+      <a href={withBase('/comparisons/')} aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
+      <a href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>Пошук ⌕</a>
+      <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про проєкт</a>
     </div>
     <div class="mobile-menu-index">
       <span class="mobile-menu-label">КАТЕГОРІЇ — 17</span>
       <ol>
         {sortedCategories.map((category) => (
-          <li><a href={categoryUrl(category.key)}>{String(category.order).padStart(2, '0')} · {category.titleUk}</a></li>
+          <li><a href={categoryUrl(category.key)} aria-current={pathname.startsWith(categoryUrl(category.key)) ? 'page' : undefined}>{String(category.order).padStart(2, '0')} · {category.titleUk}</a></li>
         ))}
       </ol>
     </div>

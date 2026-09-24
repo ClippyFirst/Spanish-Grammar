@@ -2,13 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const CONTENT_DIRS = [path.join(ROOT, 'src', 'content', 'es'), path.join(ROOT, 'src', 'content', 'comparisons')];
+const EXCLUDED_DIRS = new Set(['.git', '.astro', 'dist', 'node_modules']);
 
 function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const file = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(file, out);
-    else if (entry.name.endsWith('.mdx')) out.push(file);
+    else if (/\\.(md|mdx)$/i.test(entry.name)) out.push(file);
   }
   return out;
 }
@@ -33,7 +33,7 @@ function arrayStringCount(source) {
   return matches ? matches.length : 0;
 }
 
-const files = CONTENT_DIRS.flatMap((dir) => walk(dir)).sort();
+const files = walk(ROOT).filter((file) => { const parts = path.relative(ROOT, file).split(path.sep); return parts.every((part) => !EXCLUDED_DIRS.has(part)) && /\\.(md|mdx)$/i.test(file); }).sort();
 const failures = []; let markdownTables = 0; let compareTables = 0;
 
 for (const file of files) {
@@ -78,7 +78,7 @@ for (const file of files) {
   }
 }
 
-console.log('MDX table audit: ' + files.length + ' files scanned');
+console.log('Markdown table audit: ' + files.length + ' files scanned');
 console.log('Markdown tables checked: ' + markdownTables);
 console.log('CompareTable components checked: ' + compareTables);
 console.log('Column-count errors: ' + failures.length);

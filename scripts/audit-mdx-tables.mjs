@@ -29,7 +29,7 @@ function splitCells(line) {
 }
 function isSeparator(line) { return splitCells(line).every((cell) => /^:?-{3,}:?$/.test(cell)); }
 function arrayStringCount(source) {
-  const matches = source.match(/'(?:\\\\.|[^'])*'|\"(?:\\\\.|[^\"])*\"/gs);
+    const matches = source.match(/'(?:\\\\.|[^'])*'|\"(?:\\\\.|[^\"])*\"/gs);
   return matches ? matches.length : 0;
 }
 

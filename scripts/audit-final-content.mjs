@@ -99,7 +99,7 @@ for (const d of docs) {
   if (hits.length) findings.forbidden_ukrainomov.push({ page: d.rel, hits: [...new Set(hits)] });
 }
 
-const artifact = /\\*[^\\n*]+\\*\\*[^\\s*][^\\n*]*\\*/g;
+const artifact = /\*[^*\n]+\*\*[^\s*][^\n*]*\*/g;
 for (const d of docs) {
   const hits = [...d.body.matchAll(artifact)].map(m => ({ match: m[0], line: d.body.slice(0, m.index).split(/\\r?\\n/).length }));
   if (hits.length) findings.emphasis_artifacts.push({ page: d.rel, hits });

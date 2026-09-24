@@ -206,21 +206,26 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 - **150–154** → `verbs/conjugations`, `stem-changing-verbs`, `orthographic-changes`, `irregular-verbs`.
 - **155** → **missing**: defective/incomplete verbs.
 - **156** → **partial**: aspect is distributed between `tenses/tenses-overview` and `periphrases/frequent-periphrases`.
-- **157–160** → `sentence-structure/verb-valency`, `ser-estar`, and auxiliary-verb material.
-- **161–163** → `verbs/infinitivo`, `infinitive-as-noun`, `verb-infinitive-patterns`.
-- **164** → `verbs/gerundio` + `gerund-uses`.
-- **165** → `verbs/participio`.
-- **166** → `verbs/participio` for double participles.
-- **167–169** → `haber-auxiliary`, `haber-vs-tener`.
-- **170–176** → `ser-estar`, `ser-estar-hay`, `ser-estar-location`, `ser-estar-with-adjectives`.
-- **177** → `ser-estar` + `participio` material.
-- **178–180** → `ser-estar`, `gustar`, `gustar-type-verbs`, `pronominal-verbs`, modal pages.
-- **181** → `deber-vs-deber-de` / modal material.
-- **182** → `deber-poder-soler` / modal material.
-- **183** → `change-of-state`.
-- **184** → **full** for weather through the general verb-system material.
-- **185** → **partial**: perception verbs with infinitive/gerundio are available as general patterns, but the requested perception-verb system is not consolidated.
-- **186** → **missing**: deictic `ir/venir/llevar/traer`; causative `hacer + INF` is the preceding requirement and is also missing. The pseudo-relative requirement is missing as well.
+- **157–159** → `sentence-structure/verb-valency`, `ser-estar`, and auxiliary-verb material.
+- **160** → `verbs/infinitivo` + `infinitive-as-noun`.
+- **161** → `verbs/verb-infinitive-patterns`.
+- **162** → `verbs/gerundio` + `gerund-uses`.
+- **163** → `verbs/participio`.
+- **164** → `verbs/participio` for double participles.
+- **165–167** → `haber-auxiliary`, `haber-vs-tener` and the impersonal `haber` forms.
+- **168–174** → `ser-estar`, `ser-estar-hay`, `ser-estar-location`, `ser-estar-with-adjectives`.
+- **175** → `gustar` + `gustar-type-verbs`.
+- **176** → `pronominal-verbs`.
+- **177** → `deber-poder-soler` / modal material.
+- **178** → `deber-vs-deber-de`.
+- **179** → `deber-poder-soler` / `periphrases` material for `haber de`.
+- **180** → `change-of-state`.
+- **181** → **full**: impersonal weather verbs are covered by the general verb-system treatment.
+- **182** → **partial**: perception verbs with infinitive/gerundio are available as general patterns, but the requested perception-verb system is not consolidated.
+- **183** → **missing**: pseudo-relative constructions after perception verbs.
+- **184** → **missing**: causative `hacer + infinitivo`.
+- **185** → `gerund-uses` for motion + gerundio.
+- **186** → **missing**: deictic `ir/venir/llevar/traer`.
 
 ## 11. Indicative tenses — items 187–202
 

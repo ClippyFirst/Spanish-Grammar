@@ -1,94 +1,76 @@
-/* Gramaticarrona — design tokens.
-   Direction: editorial linguistic atlas / Swiss information design.
-   The interface is intentionally typographic, asymmetric and information-led. */
+/* Gramaticarrona — global design tokens.
+   Editorial linguistic atlas / information design.
+   Single source for color, typography, spacing and geometry. */
 :root {
   color-scheme: light;
 
-  --color-bg: #f2efe7;
-  --color-bg-soft: #e7e3d8;
-  --color-bg-tint: #ddd8cb;
-  --color-surface: #f8f6f0;
-  --color-border: #c7c1b4;
-  --color-border-strong: #918a7d;
+  --color-paper: #F3F0E7;
+  --color-stripe: #E3DDCB;
+  --color-surface: #FBFAF6;
+  --color-text: #15140F;
+  --color-text-secondary: #55524A;
+  --color-text-muted: #8A8578;
+  --color-accent: #C13A1E;
+  --color-accent-dark: #8F2814;
+  --color-link: #1F3A5F;
+  --color-correct: #2F5233;
+  --color-divider: #C9C2B2;
+  --color-on-accent: #FBFAF6;
 
-  --color-text: #1d1e1a;
-  --color-text-soft: #55564f;
-  --color-text-muted: #77776e;
-  --color-accent: #a93625;
-  --color-accent-strong: #7d281d;
-  --color-accent-bg: #ead4cc;
-  --color-link: #075d68;
+  --color-bg: var(--color-paper);
+  --color-bg-soft: var(--color-stripe);
+  --color-bg-tint: #E8E3D7;
+  --color-border: var(--color-divider);
+  --color-border-strong: var(--color-text);
+  --color-text-soft: var(--color-text-secondary);
+  --color-accent-strong: var(--color-accent-dark);
+  --color-accent-bg: #EAD8D1;
+  --color-link-soft: #DCE3E8;
+  --color-good: var(--color-correct);
+  --color-bad: var(--color-accent);
+  --color-good-bg: #E0E8E1;
+  --color-bad-bg: #F0DCD7;
 
-  --color-good: #416b4c;
-  --color-bad: #a12d27;
-  --color-good-bg: #e2ece3;
-  --color-bad-bg: #f0dcd7;
+  --color-token-subject: #DCE3E4;
+  --color-token-verb: #EFE1D6;
+  --color-token-neg: #E8D7D3;
+  --color-token-aux: #E6DEEA;
+  --color-token-infin: #E1E8DE;
+  --color-token-part: #E9E4D5;
+  --color-token-pron: #DCE5E8;
 
-  --color-token-subject: #dfe8e9;
-  --color-token-verb: #eadfd8;
-  --color-token-neg: #efd9d5;
-  --color-token-aux: #e5e0ed;
-  --color-token-infin: #dfe9df;
-  --color-token-part: #e9e4d5;
-  --color-token-pron: #dfe8ec;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-ui: var(--font-body);
+  --font-serif: var(--font-display);
 
-  --font-ui: "IBM Plex Sans", "Segoe UI", sans-serif;
-  --font-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-mono: "IBM Plex Mono", "Cascadia Mono", monospace;
-
-  --fs-hero: clamp(3.5rem, 8.5vw, 8rem);
-  --fs-h1: clamp(2.7rem, 6vw, 5.2rem);
-  --fs-h2: clamp(1.8rem, 3.4vw, 2.8rem);
-  --fs-h3: 1.28rem;
-  --fs-body: 1.06rem;
-  --fs-small: .91rem;
-  --fs-tiny: .74rem;
+  --fs-hero: clamp(3.1rem, 7vw, 5.2rem);
+  --fs-h1: clamp(2.4rem, 4.6vw, 4rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.65rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: .9rem;
+  --fs-tiny: .72rem;
 
   --space-1: .25rem;
   --space-2: .5rem;
   --space-3: .75rem;
   --space-4: 1rem;
   --space-5: 1.5rem;
-  --space-6: 2.25rem;
+  --space-6: 2.5rem;
   --space-7: 3.5rem;
   --space-8: 5rem;
+
+  --stripe-width: 88px;
+  --content-pad-x: 56px;
+  --header-height: 70px;
+  --maxw: 1320px;
+  --maxw-text: 760px;
 
   --radius: 0;
   --radius-sm: 0;
   --radius-pill: 999px;
-  --maxw: 1280px;
-  --maxw-text: 790px;
-
-  --line: 1px solid var(--color-border);
-  --line-strong: 2px solid var(--color-text);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --color-bg: #181916;
-    --color-bg-soft: #24251f;
-    --color-bg-tint: #303129;
-    --color-surface: #20211d;
-    --color-border: #4d4d45;
-    --color-border-strong: #77776c;
-    --color-text: #f0eee6;
-    --color-text-soft: #cbc9bd;
-    --color-text-muted: #aaa89d;
-    --color-accent: #e2765f;
-    --color-accent-strong: #f0937c;
-    --color-accent-bg: #422923;
-    --color-link: #79c5cb;
-    --color-good: #8bc39a;
-    --color-bad: #ef9185;
-    --color-good-bg: #1d3021;
-    --color-bad-bg: #38201d;
-    --color-token-subject: #29383a;
-    --color-token-verb: #392d29;
-    --color-token-neg: #402725;
-    --color-token-aux: #312d3b;
-    --color-token-infin: #28382a;
-    --color-token-part: #39352b;
-    --color-token-pron: #29383b;
-  }
+  --line: 1px solid var(--color-divider);
+  --line-strong: 1px solid var(--color-text);
 }

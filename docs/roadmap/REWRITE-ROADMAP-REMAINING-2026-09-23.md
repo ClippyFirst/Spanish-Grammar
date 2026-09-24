@@ -476,4 +476,14 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Added contrasts for indicativo/subjuntivo, including negation, uncertain referents, temporal clauses, and contexts where both modes can occur with different interpretations.
 - Added RAE/ASALE source metadata and `review_status: verified`.
 - Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was identified.
-- Current backlog: **41 of 196 grammar MDX pages (20.9%)**.
+- Current backlog: **40 of 196 grammar MDX pages (20.4%)**.
+
+
+## Progress update — 2026-09-24 (body-part possession)
+
+- Closed `pronouns/body-parts-possession` with a construction-first precision rewrite.
+- Distinguished possessive dative, reflexive pronouns, affected-person datives, ordinary possessives, and `doler` agreement.
+- Removed the stronger false-universal framing that every body-part or clothing construction mechanically requires `dativo + definite article`.
+- Added RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was identified.
+- Current backlog: **40 of 196 grammar MDX pages (20.4%)**.

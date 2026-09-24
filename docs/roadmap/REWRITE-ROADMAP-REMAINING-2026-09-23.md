@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **78 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **74 сторінки, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -37,7 +37,7 @@
 - [x] DONE — verified / precision rewrite `verbs/gerund-uses.mdx`
 - [x] DONE — verified / precision rewrite `verbs/estar-emotions-states.mdx`
 - [x] DONE — verified / precision rewrite `verbs/change-of-state.mdx`
-- [ ] VERIFY `verbs/ser-estar.mdx`
+- [x] DONE — verified existing protected baseline; no rewrite needed `verbs/ser-estar.mdx`
 - [x] DONE — verified / precision rewrite `verbs/ser-estar-hay.mdx`
 
 **Чому P0:** морфологічні сторінки є фундаментом для всього tense/mood/periphrasis system. Тут особливо важливо не змішувати форму, функцію та лексичну валентність.
@@ -49,9 +49,9 @@
 - [x] DONE — precision rewrite + verification `conjunctions/coordinating.mdx`
 - [x] DONE — precision rewrite + verification `conjunctions/subordinating.mdx`
 - [x] DONE — precision rewrite + verification `conjunctions/que-de-que.mdx`
-- [ ] VERIFY `conjunctions/como-excepto.mdx`
-- [ ] VERIFY `conjunctions/discourse-connectors.mdx`
-- [ ] VERIFY `conjunctions/discourse-fillers.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/como-excepto.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/discourse-connectors.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/discourse-fillers.mdx`
 
 ### Cross-page dependency
 
@@ -388,7 +388,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Closed four additional P0 sentence-structure pages: `concessive-clauses`, `double-negation`, `interjections`, `modality-speech-acts`.
 - Tightened concessive mood selection, negative concord, interjection/discourse-marker boundaries, punctuation, and modality/speech-act distinctions.
 - Academic Writing Toolkit again returned only expected short-paragraph signals from the componentized reference format.
-- Current untouched/review backlog: **78 of 196 grammar MDX pages (39.8%)**; previously rewritten baseline remains protected.
+- Current untouched/review backlog: **74 of 196 grammar MDX pages (37.8%)**; previously rewritten baseline remains protected.
 
 
 ### P0 sentence-structure precision pass V — 2026-09-24
@@ -398,3 +398,12 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Added/updated RAE/ASALE source metadata and `review_status: verified`.
 - Academic Writing Toolkit again returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
 - Current untouched/review backlog: **78 of 196 grammar MDX pages (39.8%)**.
+
+
+### P0 conjunction + baseline verification pass — 2026-09-24
+
+- Verified the protected baseline `verbs/ser-estar.mdx` for cross-page consistency; no rewrite was needed, so the page remains untouched and protected.
+- Closed `conjunctions/como-excepto.mdx`, `conjunctions/discourse-connectors.mdx`, and `conjunctions/discourse-fillers.mdx` with precision rewrites and verification.
+- Tightened the distinctions among the main uses of `como`, exception constructions, discourse connectors, punctuation, register, and conversational discourse markers.
+- Academic Writing Toolkit returned only short-paragraph signals expected from the componentized reference format on all three rewritten pages.
+- Current untouched/review backlog: **74 of 196 grammar MDX pages (37.8%)**.

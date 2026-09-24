@@ -6,6 +6,12 @@ interface Props {
   rows: { label: string; cells: string[] }[];
 }
 const { caption, headers, rows } = Astro.props;
+
+for (const [index, row] of rows.entries()) {
+  if (row.cells.length !== headers.length - 1) {
+    throw new Error(`CompareTable row ${index + 1} has ${row.cells.length} data cells, but headers define ${headers.length - 1} data columns.`);
+  }
+}
 ---
 <div class="table-scroll">
   <table class="gram">

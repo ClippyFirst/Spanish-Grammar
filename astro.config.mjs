@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import remarkNormaliseEmphasis from './src/plugins/remark-normalise-emphasis.mjs';
 
 const base = process.env.PUBLIC_BASE || '/';
 const site = process.env.SITE_URL;
@@ -18,7 +19,7 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx({ remarkPlugins: [remarkNormaliseEmphasis] }), sitemap()],
   markdown: {
     shikiConfig: {
       theme: 'github-light',

@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **62 сторінки, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **58 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -406,7 +406,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Closed `conjunctions/como-excepto.mdx`, `conjunctions/discourse-connectors.mdx`, and `conjunctions/discourse-fillers.mdx` with precision rewrites and verification.
 - Tightened the distinctions among the main uses of `como`, exception constructions, discourse connectors, punctuation, register, and conversational discourse markers.
 - Academic Writing Toolkit returned only short-paragraph signals expected from the componentized reference format on all three rewritten pages.
-- Current untouched/review backlog: **62 of 196 grammar MDX pages (31.6%)**.
+- Current untouched/review backlog: **58 of 196 grammar MDX pages (29.6%)**.
 
 
 ### P1 adjectives precision pass — 2026-09-24
@@ -435,7 +435,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Added current RAE/ASALE source metadata and `review_status: verified`.
 - Preserved the componentized reference structure while tightening the treatment of `el resto de` and quantity/concordance variability.
 - Academic Writing Toolkit returned only expected short-paragraph signals on both pages.
-- Current untouched/review backlog: **62 of 196 grammar MDX pages (31.6%)**.
+- Current untouched/review backlog: **58 of 196 grammar MDX pages (29.6%)**.
 
 
 ## Progress update — 2026-09-24 (verbs continuation)
@@ -447,4 +447,15 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Reworked `ser/estar` location around entity localization vs event location, avoiding the permanent/temporary shortcut.
 - Academic Writing Toolkit found only short-paragraph signals expected for the componentized reference format on all four pages.
 - RAE/ASALE was used for the high-risk constructional claims and source metadata was refreshed.
-- Current backlog: **62 of 196 grammar MDX pages (31.6%)**.
+- Current backlog: **58 of 196 grammar MDX pages (29.6%)**.
+
+
+## Progress update — 2026-09-24 (sentence structure VI)
+
+- Closed four additional P0 sentence-structure pages: `personal-a`, `question-formation`, `reported-speech-review`, and `si-clauses-overview`.
+- Reworked personal `a` around direct-object function, animacy, definiteness and specificity rather than a single “person = a” rule.
+- Reworked question formation around intonation, interrogatives, information structure, punctuation and the fact that inversion is not obligatory.
+- Reworked reported speech around temporal perspective, indirect questions, directives and non-mechanical tense backshift.
+- Reworked `si` clauses around open, hypothetical, past counterfactual and mixed-time conditions, while avoiding an absolute “three types only” presentation.
+- Academic Writing Toolkit returned only short-paragraph signals expected for the componentized reference format on all four pages.
+- Current backlog: **58 of 196 grammar MDX pages (29.6%)**.

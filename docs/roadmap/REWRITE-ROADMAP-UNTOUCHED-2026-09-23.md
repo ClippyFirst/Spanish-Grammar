@@ -124,7 +124,7 @@
 
 ## moods — 1 сторінок
 
-- [ ] `src/content/es/moods/subjunctive-triggers-list.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/moods/subjunctive-triggers-list.mdx`
 
 ## pronouns — 5 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **42** |
-| Частка незачеплених сторінок | **21.4%** |
+| Не змінені / залишені в rewrite backlog | **41** |
+| Частка незачеплених сторінок | **20.9%** |
 
 ### Protected baseline rule
 
@@ -375,6 +375,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - All three pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit was run on all three full pages; no higher-level paragraph-logic defect was returned (only the repository's expected short-component signals).
 - Current backlog: **46 of 196 grammar MDX pages (23.5%)**.
+
+
+## Progress update — 2026-09-24 (subjunctive quick guide)
+
+- Closed `subjunctive-triggers-list` as a precision rewrite rather than a mechanical trigger list.
+- Reframed the page around construction, discourse meaning, referent status, temporal horizon, and cases where indicativo/subjuntivo alternate.
+- Added RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit returned only the repository's expected short-component signals; no higher-level paragraph-logic defect was found.
+- Current backlog: **41 of 196 grammar MDX pages (20.9%)**.
 
 
 ## Progress update — 2026-09-24 (core tenses)

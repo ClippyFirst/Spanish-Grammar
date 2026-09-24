@@ -105,11 +105,11 @@
 
 ## spelling — 9 сторінок
 
-- [ ] `src/content/es/spelling/accent-marks.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/accent-marks.mdx`
 - [ ] `src/content/es/spelling/b-v.mdx`
 - [ ] `src/content/es/spelling/c-z-s-g-j.mdx`
-- [ ] `src/content/es/spelling/capitalization.mdx`
-- [ ] `src/content/es/spelling/diphthongs-hiatus.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/capitalization.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/diphthongs-hiatus.mdx`
 - [ ] `src/content/es/spelling/h-y-ll.mdx`
 - [ ] `src/content/es/spelling/punctuation-capitalization.mdx`
 - [ ] `src/content/es/spelling/special-letters.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **56** |
-| Частка незачеплених сторінок | **28.6%** |
+| Не змінені / залишені в rewrite backlog | **52** |
+| Частка незачеплених сторінок | **26.5%** |
 
 ### Protected baseline rule
 
@@ -343,3 +343,12 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Closed src/content/es/verbs/ser-estar-with-adjectives.mdx and src/content/es/sentence-structure/subordinate-clauses.mdx.
 - Both pages were marked review_status: verified with RAE/ASALE source metadata.
 - Current backlog: **56 of 196 grammar MDX pages (28.6%)**.
+
+
+## Progress update — 2026-09-24 (spelling I)
+
+- Closed three spelling backlog pages: `accent-marks`, `capitalization`, and `diphthongs-hiatus`.
+- Tightened stress/tilde rules, diacritical tilde, `solo/sólo`, `aun/aún`, capitalization of days/months/languages/titles, and the interaction of syllabification, diphthongs, triphthongs, and hiatus.
+- Marked all three pages `review_status: verified` and refreshed RAE/ASALE source metadata.
+- Academic Writing Toolkit returned only short-paragraph signals expected for the componentized reference format on all three pages.
+- Current backlog: **52 of 196 grammar MDX pages (26.5%)**.

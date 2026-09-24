@@ -19,7 +19,8 @@
     "audit:design:components": "node scripts/audit-design-components.mjs",
     "audit:mdx": "node scripts/audit-mdx-preflight.mjs",
     "audit:tables": "node scripts/audit-mdx-tables.mjs",
-    "qa": "npm run typecheck && npm run audit:mdx && npm run audit:tables && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run build"
+    "qa": "npm run typecheck && npm run audit:mdx && npm run audit:tables && npm run validate && npm run links && npm run audit:graph && npm run audit:design && npm run audit:final && npm run build",
+    "audit:final": "node scripts/audit-final-content.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

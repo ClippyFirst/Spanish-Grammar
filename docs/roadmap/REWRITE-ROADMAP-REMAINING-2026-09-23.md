@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **90 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **78 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -74,13 +74,13 @@
 - [x] DONE — precision rewrite + verification `sentence-structure/modal-clauses.mdx`
 - [x] DONE — precision rewrite + verification `sentence-structure/absolute-constructions.mdx`
 - [x] DONE — precision rewrite + verification `sentence-structure/ellipsis.mdx`
-- [ ] VERIFY `sentence-structure/compound-complex.mdx`
-- [ ] VERIFY `sentence-structure/cleft-pseudocleft.mdx`
-- [ ] VERIFY `sentence-structure/dislocation.mdx`
-- [ ] VERIFY `sentence-structure/emphasis-polarity-focus.mdx`
-- [ ] VERIFY `sentence-structure/modality-speech-acts.mdx`
-- [ ] VERIFY `sentence-structure/verum-focus.mdx`
-- [ ] VERIFY `sentence-structure/interjections.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/compound-complex.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/cleft-pseudocleft.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/dislocation.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/emphasis-polarity-focus.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/modality-speech-acts.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/verum-focus.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/interjections.mdx`
 
 **Головний ризик:** не плутати аргумент, adjunct, attribute, predicative complement і discourse function.
 
@@ -388,4 +388,13 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Closed four additional P0 sentence-structure pages: `concessive-clauses`, `double-negation`, `interjections`, `modality-speech-acts`.
 - Tightened concessive mood selection, negative concord, interjection/discourse-marker boundaries, punctuation, and modality/speech-act distinctions.
 - Academic Writing Toolkit again returned only expected short-paragraph signals from the componentized reference format.
-- Current untouched/review backlog: **82 of 196 grammar MDX pages (41.8%)**; previously rewritten baseline remains protected.
+- Current untouched/review backlog: **78 of 196 grammar MDX pages (39.8%)**; previously rewritten baseline remains protected.
+
+
+### P0 sentence-structure precision pass V — 2026-09-24
+
+- Closed four additional P0 sentence-structure pages: `verum-focus`, `advanced-conditionals`, `negation-patterns`, and `passive-voice`.
+- Tightened verum focus vs contrastive focus, advanced conditional constructions, negative concord and pre/postverbal negative elements, and the distinction between pasiva perifrástica, pasiva refleja, and impersonal `se`.
+- Added/updated RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit again returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **78 of 196 grammar MDX pages (39.8%)**.

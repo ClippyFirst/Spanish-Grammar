@@ -1,10 +1,10 @@
 ---
 language: es
 category: verbs
-title_uk: Неправильні дієслова — головні групи
+title_uk: Неправильні дієслова — головні типи
 title_es: Verbos irregulares principales
 title_en: Main irregular verbs
-short_description: "Ser, ir, tener, hacer, decir, poder: найчастотніші неправильні, групи stem-changing (e→ie, o→ue, e→i), орфографічні зміни (c→zc, g→j). Що вчити напам'ять, що — за патерном."
+short_description: "Ser, ir, tener, hacer, decir, poder: головні типи нерегулярності — окремі парадигми, зміна основи, зміни приголосних та орфографічні чергування."
 order: 4
 popular: true
 recently_added: true
@@ -21,20 +21,23 @@ related:
   - conjugations
   - presente-de-indicativo
   - verbs/ser-estar
+  - stem-changing-verbs
+  - orthographic-changes
 cefr: a2
-updated: "2026-09-14"
+updated: "2026-09-24"
+sources:
+  - "RAE/ASALE, Nueva gramática de la lengua española, § 4.4 — verbos irregulares"
+  - "RAE/ASALE, El buen uso del español — verbos con alternancia vocálica"
 ---
 
-Неправильних дієслів сотні — але більшість іде за **патернами**. Напам'ять вчать лише ~15 «великих», решту виводять із груп.
+Нерегулярність в іспанських дієсловах не є одним типом. Частина дієслів має майже окрему парадигму, частина змінює голосний або приголосний у певних формах, а частина має зміни, пов'язані з орфографією.
 
-## Одне речення
+Тому корисніше вчити не абстрактний список «винятків», а **модель нерегулярності + конкретне дієслово**.
 
-Виняток або одиничний (*ser, ir*), або груповий (*e→ie: pensar→pienso*) — групові не вчать, а впізнають.
-
-## Група 1: повні ексцентрики (напам'ять)
+## Окремі нерегулярні парадигми
 
 <Conjugation
-  caption="Ser, ir, tener (презенс)"
+  caption="Деякі частотні нерегулярні дієслова в presente"
   headers={["ser", "ir", "tener"]}
   rows={[
     { label: "yo", cells: ["soy", "voy", "tengo"] },
@@ -46,54 +49,82 @@ updated: "2026-09-14"
   ]}
 />
 
-Сюди ж: *estar (estoy), haber (he/hay), saber (sé), hacer (hago), poner (pongo), salir (salgo), dar (doy).*
+До цієї великої групи належать, зокрема, *ser, ir, estar, haber, saber, hacer, poner, salir, dar* — але їхні нерегулярності не однакові. Наприклад, *tener* поєднує зміну основи (*tienes*) з особливою формою yo (*tengo*), тоді як *ser* має кілька різних основ.
 
-## Група 2: stem-changing (дифтонги)
+Не варто намагатися звести всі ці дієслова до одного правила.
 
-- **e → ie:** *pensar→pienso, querer→quiero, cerrar→cierra, empezar→empiezo*
-- **o → ue:** *poder→puedo, dormir→duermo, volver→vuelvo, costar→cuesta*
-- **e → i:** *pedir→pido, seguir→sigo, repetir→repito* (переважно -ir)
-- Правило «чобіт»: зміна скрізь, **крім nosotros/vosotros** (*pensamos, dormimos*).
+## Зміна голосного в основі
 
-## Група 3: орфографічні (звук зберігається)
+Поширені моделі:
 
-- **c → zc:** *conocer→conozco, parecer→parezco, traducir→traduzco* (лише yo-форма)
-- **g → j:** *coger→cojo, proteger→protejo, dirigir→dirijo*
-- **gu → g:** *seguir→sigo, conseguir→consigo*
-- **c → qu / z → c:** *buscar→busco/busqué, empezar→empiezo/empecé* (збереження вимови [k]/[θ])
+- **e → ie:** *pensar → pienso, querer → quiero, empezar → empiezo*;
+- **o → ue:** *poder → puedo, dormir → duermo, volver → vuelvo*;
+- **e → i:** *pedir → pido, seguir → sigo, repetir → repito*.
+
+Це не означає, що кожне дієслово з відповідним голосним автоматично має таку зміну: належність до моделі є лексичною властивістю конкретного дієслова.
+
+У багатьох дієсловах зі зміною основи в **presente de indicativo** чергування видно в наголошених формах, тому традиційна «чобіткова» схема зручна як мнемоніка. Але це не універсальний закон для всіх часів і всіх дієслів.
+
+## Інші типи нерегулярності
+
+### Зміни приголосних
+
+Деякі дієслова мають зміни приголосного в певних формах:
+
+- *conocer → conozco*;
+- *parecer → parezco*;
+- *hacer → hago*;
+- *decir → digo*.
+
+Такі зміни треба пов'язувати з конкретною морфологічною моделлю, а не називати все «орфографією».
+
+### Орфографічні зміни
+
+В інших випадках написання змінюється, щоб передати потрібну вимову, наприклад:
+
+- *tocar → toqué*;
+- *llegar → llegué*;
+- *empezar → empecé*.
+
+Докладніше це розглянуто на окремій сторінці про орфографічні зміни.
 
 ## Типові помилки україномовних
 
 <Mistake
   bad="Yo penso que sí."
   good="Yo pienso que sí."
-  why="Pensar — e→ie: pienso, piensas, piensa (крім pensamos/pensáis). Форма penso не існує."
+  why="У *pensar* у відповідних формах presente відбувається чергування *e → ie*: *pienso, piensas, piensa, piensan*. Форма *penso* не є формою цього дієслова в стандартному presente de indicativo."
 />
 
 <Mistake
   bad="Ellos podon venir."
   good="Ellos pueden venir."
-  why="Poder — o→ue: puedo, puedes, puede, pueden. Форма podon — калька українського «можуть» з іспанським коренем."
+  why="Форма *pueden* поєднує основу *pued-* з особовим закінченням. *Podon* не є формою іспанського дієслова *poder*."
 />
 
 <MinPair
-  a={{ es: "Pienso en ti.", uk: "Я думаю про тебе (e→ie: pienso)." }}
-  b={{ es: "Pensamos en ti.", uk: "Ми думаємо про тебе (без зміни: pensamos)." }}
+  a={{ es: "Pienso en ti.", uk: "Я думаю про тебе: *pensar → pienso*." }}
+  b={{ es: "Pensamos en ti.", uk: "Ми думаємо про тебе: у *nosotros* основа *pens-* не має дифтонга." }}
 />
 
 <Note kind="uk" title="Для україномовних">
-  Українські чергування (*нести — несу, могти — можу*) схожі на stem-changing за духом.
-  Різниця: іспанські патерни стабільніші — правило «чобота» (усі крім nosotros/vosotros)
-  покриває сотні дієслів одним махом.
+  Українські чергування кореневих голосних теж можуть бути нерегулярними, тому аналогія
+  допомагає побачити ідею. Але іспанські моделі не можна виводити лише з української:
+  конкретне дієслово треба знати разом із типом його нерегулярності та формами, у яких вона
+  проявляється.
 </Note>
 
 <Note kind="region" title="Регіональна нота">
-  Неправильні форми однакові скрізь. Vos-форми зберігають ті самі зміни
-  (*pensás, podés* — з дифтонгом і наголосом на кінці).
+  Нерегулярні парадигми не слід описувати як повністю однакові в усіх регіонах: окремі
+  системи звертання, зокрема *vos*, мають власні форми. У voseo в presente de indicativo
+  поширені форми на кшталт *pensás, podés, dormís*; у них немає того дифтонга, який бачимо
+  в *piensas, puedes, duermes*. Це одна з причин, чому «чобіт» не варто перетворювати на
+  універсальне правило для всіх різновидів іспанської.
 </Note>
 
 ## Пов'язані теми
 
 - [Три дієвідміни](/es/verbs/conjugations/) — регулярна база.
-- [Теперішній час](/es/tenses/presente-de-indicativo/) — де зміни видно.
-- [Ser / Estar](/es/verbs/ser-estar/) — два головні ексцентрики.
+- [Зміна основи](/es/verbs/stem-changing-verbs/) — докладно про *e→ie, o→ue, e→i*.
+- [Орфографічні зміни](/es/verbs/orthographic-changes/) — написання та вимова.
+- [Теперішній час](/es/tenses/presente-de-indicativo/) — форми в контексті.

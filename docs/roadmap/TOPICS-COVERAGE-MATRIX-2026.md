@@ -14,7 +14,7 @@ The important result is:
 - **196/196 MDX entries are structurally routed into the Astro site.**
 - **17/17 grammar categories are represented.**
 - The checklist is intentionally a **coverage map, not a one-page-per-bullet specification**. Many bullets are covered inside deeper canonical articles.
-- The audit found **12 requirements that are missing or only partially covered enough to warrant explicit follow-up**.
+- The audit found **13 requirements that are missing or only partially covered enough to warrant explicit follow-up**.
 - The remaining requirements have a canonical home either as a dedicated page or as an embedded subsection/block in another page.
 
 ### Status vocabulary
@@ -83,8 +83,8 @@ These are the items that should not be marked “complete” merely because a ne
 ### Gap count
 
 - **8 missing**
-- **4 partial**
-- **311 full or embedded**
+- **5 partial**
+- **310 full or embedded**
 
 The four partial items are deliberately kept separate from “missing”: the repository already contains meaningful material, but not enough to claim the roadmap requirement is fully satisfied.
 
@@ -206,16 +206,21 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 - **150–154** → `verbs/conjugations`, `stem-changing-verbs`, `orthographic-changes`, `irregular-verbs`.
 - **155** → **missing**: defective/incomplete verbs.
 - **156** → **partial**: aspect is distributed between `tenses/tenses-overview` and `periphrases/frequent-periphrases`.
-- **157–160** → `sentence-structure/verb-valency` + `pronominal-verbs` + `ser-estar`.
-- **161–163** → `infinitivo`, `infinitive-as-noun`, `verb-infinitive-patterns`.
-- **164–166** → `gerundio`, `gerund-uses`, `participio`.
-- **167** → `participio` (with irregular/double participles).
-- **168–170** → `haber-auxiliary`, `haber-vs-tener`.
-- **171–177** → `ser-estar`, `ser-estar-hay`, `ser-estar-location`, `ser-estar-with-adjectives`.
-- **178–180** → `ser-estar` + `participio` material.
-- **181–184** → `gustar`, `gustar-type-verbs`, `pronominal-verbs`, modal pages.
-- **185** → `change-of-state`.
-- **186** → weather/perception/causative/deictic cluster: weather itself is covered, but perception pseudo-relatives, causative `hacer + INF`, and `ir/venir/llevar/traer` deixis remain gaps.
+- **157–160** → `sentence-structure/verb-valency`, `ser-estar`, and auxiliary-verb material.
+- **161–163** → `verbs/infinitivo`, `infinitive-as-noun`, `verb-infinitive-patterns`.
+- **164** → `verbs/gerundio` + `gerund-uses`.
+- **165** → `verbs/participio`.
+- **166** → `verbs/participio` for double participles.
+- **167–169** → `haber-auxiliary`, `haber-vs-tener`.
+- **170–176** → `ser-estar`, `ser-estar-hay`, `ser-estar-location`, `ser-estar-with-adjectives`.
+- **177** → `ser-estar` + `participio` material.
+- **178–180** → `ser-estar`, `gustar`, `gustar-type-verbs`, `pronominal-verbs`, modal pages.
+- **181** → `deber-vs-deber-de` / modal material.
+- **182** → `deber-poder-soler` / modal material.
+- **183** → `change-of-state`.
+- **184** → **full** for weather through the general verb-system material.
+- **185** → **partial**: perception verbs with infinitive/gerundio are available as general patterns, but the requested perception-verb system is not consolidated.
+- **186** → **missing**: deictic `ir/venir/llevar/traer`; causative `hacer + INF` is the preceding requirement and is also missing. The pseudo-relative requirement is missing as well.
 
 ## 11. Indicative tenses — items 187–202
 

@@ -3,30 +3,16 @@
 import { getCollection, render } from 'astro:content';
 import GrammarLayout from '../../../layouts/GrammarLayout.astro';
 import { mdxComponents } from '../../../components/mdx';
-import { resolveRelated, resolveReferences, parseId } from '../../../utils/content';
-import { getCategory } from '../../../data/categories';
+import { buildTopicNumberMap, resolveRelated, resolveReferences, parseId, sortGrammarEntries } from '../../../utils/content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('es');
-  const ordered = [...entries].sort((a, b) => {
-    const aPath = parseId(a.id);
-    const bPath = parseId(b.id);
-    const categoryDelta =
-      (getCategory(aPath.category)?.order ?? 999) - (getCategory(bPath.category)?.order ?? 999);
-    if (categoryDelta !== 0) return categoryDelta;
-
-    const orderDelta = (a.data.order ?? 100) - (b.data.order ?? 100);
-    if (orderDelta !== 0) return orderDelta;
-
-    return aPath.slug.localeCompare(bPath.slug);
-  });
-
-  const topicNumbers = new Map<string, number>();
+  const ordered = sortGrammarEntries(entries);
+  const topicNumbers = buildTopicNumberMap(entries);
 
   return ordered.map((entry) => {
     const { category, slug } = parseId(entry.id);
-    const topicNumber = (topicNumbers.get(category) ?? 0) + 1;
-    topicNumbers.set(category, topicNumber);
+    const topicNumber = topicNumbers.get(entry.id) ?? 0;
 
     return {
       params: { category, slug },

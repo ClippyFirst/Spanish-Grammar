@@ -183,16 +183,16 @@
 - [x] DONE — precision rewrite + verification `src/content/es/fundamentals/date-time-numbers.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/fundamentals/false-friends-ua-es.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/fundamentals/fractions-percentages.mdx`
-- [ ] `src/content/es/fundamentals/grammar-basics.mdx`
-- [ ] `src/content/es/fundamentals/numbers-in-speech.mdx`
-- [ ] `src/content/es/fundamentals/numerals-advanced.mdx`
-- [ ] `src/content/es/fundamentals/ordinal-numbers.mdx`
-- [ ] `src/content/es/fundamentals/reading-rules.mdx`
-- [ ] `src/content/es/fundamentals/ua-interference.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/grammar-basics.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/numbers-in-speech.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/numerals-advanced.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/ordinal-numbers.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/reading-rules.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/ua-interference.mdx`
 
 ## micro-constructions — 1 сторінок
 
-- [ ] `src/content/es/micro-constructions/de-inf-sera-no-sea-lo-de.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/micro-constructions/de-inf-sera-no-sea-lo-de.mdx`
 
 ---
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **7** |
-| Частка незачеплених сторінок | **3.6%** |
+| Не змінені / залишені в rewrite backlog | **0** |
+| Частка незачеплених сторінок | **0%** |
 
 ### Protected baseline rule
 
@@ -524,3 +524,12 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added/updated RAE/ASALE source metadata and `review_status: verified` on all four pages.
 - Academic Writing Toolkit returned only short-paragraph signals on the four pages; no higher-level paragraph-logic defect was reported.
 - Current operational page backlog: **7 of 196 grammar MDX pages (3.6%)**.
+
+
+## Progress update — 2026-09-24 (final content backlog closure)
+
+- Closed the final seven content pages in the operational untouched/review inventory: `grammar-basics`, `numbers-in-speech`, `numerals-advanced`, `ordinal-numbers`, `reading-rules`, `ua-interference`, and `micro-constructions/de-inf-sera-no-sea-lo-de`.
+- Tightened core terminology, numeral agreement/apocope, reading rules, Ukrainian-interference guidance, and high-frequency micro-constructions.
+- Added/updated RAE/ASALE source metadata and `review_status: verified` on all seven pages.
+- Academic Writing Toolkit returned only short-paragraph signals on the seven pages; no higher-level paragraph-logic defect was reported.
+- **Content backlog is now 0 of 196 grammar MDX pages (0%).** The remaining release gate is technical QA, not another content rewrite.

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { entryUrl, parseId } from '../utils/content';
 import { getCategory } from '../data/categories';
+import SearchControl from '../components/SearchControl.astro';
 import { searchTopics, type SearchTopic } from '../utils/search';
 
 const entries = await getCollection('es');
@@ -27,12 +28,13 @@ const initialHits = searchTopics(initialQuery, catalog, 30);
       <p class="synopsis">Шукайте українською, іспанською або англійською: <em>теперішній час</em>, <em>presente</em>, <em>subjuntivo</em> чи <em>«подобається»</em>.</p>
     </header>
     <div class="search-interface" id="search-interface">
-      <form class="search-form" id="search-form" role="search" action={Astro.url.pathname} method="get">
-        <label class="sr-only" for="search-input">Пошук по граматиці</label>
-        <input id="search-input" type="search" name="q" value={initialQuery} placeholder="Пошук…" autocomplete="off" spellcheck="false" />
-        <button type="submit">Пошук</button>
-      </form>
-      <p class="search-hint">Назва теми, граматичний термін, українське формулювання або ключове слово.</p>
+      <SearchControl
+        id="search-input"
+        action={Astro.url.pathname}
+        value={initialQuery}
+        label="ПОШУК ПО ТЕМАХ"
+        hint="Назва теми, граматичний термін, українське формулювання або ключове слово."
+      />
       <p class="search-results-status" id="search-results-status" aria-live="polite"></p>
       <ol class="search-results" id="search-results">
         {initialHits.map(({ topic }) => (
@@ -75,7 +77,14 @@ const initialHits = searchTopics(initialQuery, catalog, 30);
     const hits=searchTopics(clean,30); status.textContent=hits.length?`ЗНАЙДЕНО — ${hits.length}`:`НІЧОГО НЕ ЗНАЙДЕНО ДЛЯ «${clean}»`;
     results.innerHTML=hits.map(({topic})=>`<li class="search-result"><a class="search-result-link" href="${esc(topic.href)}"><span class="search-result-code">${esc(topic.code)}</span><span class="search-result-copy"><strong>${esc(topic.titleUk)}</strong><em>${esc(topic.titleEs)}</em><small>${esc(topic.summary)}</small></span><span class="search-result-meta">${topic.popular?'<span class="search-result-popular">● популярне</span>':''}${topic.cefr?'<span class="level-badge">'+esc(topic.cefr.toUpperCase())+'</span>':''}</span><span class="search-result-arrow" aria-hidden="true">→</span></a></li>`).join('');
   }
-  const form=document.getElementById('search-form'), input=document.getElementById('search-input');
+  const form=document.querySelector('.search-control'), input=document.getElementById('search-input');
+  document.addEventListener('keydown',(event)=>{
+    if(event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
+    const target=event.target;
+    if(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement || (target instanceof HTMLElement && target.isContentEditable)) return;
+    event.preventDefault();
+    input?.focus();
+  });
   if(form&&input){form.addEventListener('submit',(event)=>{event.preventDefault();render(input.value,true);}); input.addEventListener('input',()=>render(input.value,true));}
   if(input.value)render(input.value,false); else document.getElementById('search-results-status').textContent='Введіть слово або фразу для пошуку.';
 </script>

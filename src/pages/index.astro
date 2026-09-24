@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories, getCategory } from '../data/categories';
 import { entryUrl, categoryUrl, withBase, parseId } from '../utils/content';
+import SearchControl from '../components/SearchControl.astro';
 
 const entries = await getCollection('es');
 const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 5);
@@ -26,11 +27,13 @@ const featuredCategories = sortedCategories.slice(0, 9);
         <span>UA · ES</span>
         <span>довідник, не курс</span>
       </div>
-      <form class="search-bar" action={withBase('/search/')} method="get" role="search">
-        <label class="visually-hidden" for="home-search">Пошук по граматиці</label>
-        <input id="home-search" name="q" type="search" placeholder="presente, «подобається», ser / estar, subjuntivo…" autocomplete="off" />
-        <button class="search-arrow" type="submit" aria-label="Перейти до пошуку">→</button>
-      </form>
+      <SearchControl
+        id="home-search"
+        action={withBase('/search/')}
+        label="ШВИДКИЙ ПОШУК"
+        hint="Шукайте термін, конструкцію або українське формулювання — результати відкриються на окремій сторінці."
+        compact
+      />
     </section>
 
     <section class="section learning-path" aria-label="Як користуватися довідником">

@@ -9,7 +9,7 @@
     "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "search:index": "pagefind --site dist",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "astro sync && tsc --noEmit",
     "validate": "node scripts/validate-content.mjs",
     "links": "node scripts/check-links.mjs",
     "audit:graph": "node scripts/audit-content-graph.mjs",

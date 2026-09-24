@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **62 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **58 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -75,11 +75,11 @@
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/modality-speech-acts.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/negation-patterns.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/passive-voice.mdx`
-- [ ] `src/content/es/sentence-structure/personal-a.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/personal-a.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/predicative-complement.mdx`
-- [ ] `src/content/es/sentence-structure/question-formation.mdx`
-- [ ] `src/content/es/sentence-structure/reported-speech-review.mdx`
-- [ ] `src/content/es/sentence-structure/si-clauses-overview.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/question-formation.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/reported-speech-review.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/si-clauses-overview.mdx`
 - [ ] `src/content/es/sentence-structure/subordinate-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verb-valency.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verum-focus.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **62** |
-| Частка незачеплених сторінок | **31.6%** |
+| Не змінені / залишені в rewrite backlog | **58** |
+| Частка незачеплених сторінок | **29.6%** |
 
 ### Protected baseline rule
 
@@ -312,7 +312,7 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Verified `quantifiers` and `quantifiers-advanced` with current RAE/ASALE source metadata.
 - Tightened quantity/concordance framing and preserved the reference-component format.
 - Academic Writing Toolkit returned only expected short-paragraph signals on both pages.
-- Current backlog: **62 of 196 grammar MDX pages (31.6%)**.
+- Current backlog: **58 of 196 grammar MDX pages (29.6%)**.
 
 
 ## Progress update — 2026-09-24 (verbs continuation)
@@ -324,4 +324,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Reworked `ser/estar` location around entity localization vs event location, avoiding the permanent/temporary shortcut.
 - Academic Writing Toolkit found only short-paragraph signals expected for the componentized reference format on all four pages.
 - RAE/ASALE was used for the high-risk constructional claims and source metadata was refreshed.
-- Current backlog: **62 of 196 grammar MDX pages (31.6%)**.
+- Current backlog: **58 of 196 grammar MDX pages (29.6%)**.
+
+
+## Progress update — 2026-09-24 (sentence structure VI)
+
+- Closed four additional P0 sentence-structure pages: `personal-a`, `question-formation`, `reported-speech-review`, and `si-clauses-overview`.
+- Reworked personal `a` around direct-object function, animacy, definiteness and specificity rather than a single “person = a” rule.
+- Reworked question formation around intonation, interrogatives, information structure, punctuation and the fact that inversion is not obligatory.
+- Reworked reported speech around temporal perspective, indirect questions, directives and non-mechanical tense backshift.
+- Reworked `si` clauses around open, hypothetical, past counterfactual and mixed-time conditions, while avoiding an absolute “three types only” presentation.
+- Academic Writing Toolkit returned only short-paragraph signals expected for the componentized reference format on all four pages.
+- Current backlog: **58 of 196 grammar MDX pages (29.6%)**.

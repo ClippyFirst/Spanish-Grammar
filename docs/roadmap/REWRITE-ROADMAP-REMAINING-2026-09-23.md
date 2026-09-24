@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **94 сторінки, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **90 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -68,12 +68,12 @@
 
 - [x] DONE — precision rewrite + verification `sentence-structure/verb-valency.mdx`
 - [x] DONE — precision rewrite + verification `sentence-structure/predicative-complement.mdx`
-- [ ] REWRITE `sentence-structure/agreement.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/agreement.mdx`
 - [x] DONE — precision rewrite + verification `sentence-structure/comparative-clauses.mdx`
 - [x] DONE — precision rewrite + verification `sentence-structure/consecutive-clauses.mdx`
-- [ ] REWRITE `sentence-structure/modal-clauses.mdx`
-- [ ] REWRITE `sentence-structure/absolute-constructions.mdx`
-- [ ] REWRITE `sentence-structure/ellipsis.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/modal-clauses.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/absolute-constructions.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/ellipsis.mdx`
 - [ ] VERIFY `sentence-structure/compound-complex.mdx`
 - [ ] VERIFY `sentence-structure/cleft-pseudocleft.mdx`
 - [ ] VERIFY `sentence-structure/dislocation.mdx`
@@ -382,4 +382,4 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Tightened false universals around argument counts, complement classification, secondary predication, comparative conjunctions and consecutive mood selection.
 - Added RAE/ASALE source metadata and `review_status: verified` to the four touched pages.
 - Academic Writing Toolkit review again reported only expected short-paragraph signals from the componentized reference format.
-- Current untouched/review backlog: **94 of 196 grammar MDX pages (48.0%)**; previously rewritten baseline remains protected.
+- Current untouched/review backlog: **90 of 196 grammar MDX pages (45.9%)**; previously rewritten baseline remains protected.

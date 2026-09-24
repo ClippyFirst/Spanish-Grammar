@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **16 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **14 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -174,8 +174,8 @@
 
 ## adverbs — 2 сторінок
 
-- [ ] `src/content/es/adverbs/focus-and-stance.mdx`
-- [ ] `src/content/es/adverbs/ya-todavia-aun.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adverbs/focus-and-stance.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adverbs/ya-todavia-aun.mdx`
 
 ## fundamentals — 10 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **16** |
-| Частка незачеплених сторінок | **8.2%** |
+| Не змінені / залишені в rewrite backlog | **14** |
+| Частка незачеплених сторінок | **7.1%** |
 
 ### Protected baseline rule
 
@@ -492,3 +492,13 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added current RAE/ASALE source metadata and `review_status: verified`.
 - Academic Writing Toolkit returned only short-paragraph signals; no higher-level paragraph-logic defect was reported.
 - Current backlog: **16 of 196 grammar MDX pages (8.2%)**.
+
+
+## Progress update — 2026-09-24 (adverbs)
+
+- Closed `focus-and-stance` and `ya-todavia-aun`.
+- Reworked focus particles around scope/focus, `incluso/hasta`, `solo`, `casi`, `apenas`, `también/tampoco`, and sentence-level stance adverbs.
+- Reworked `ya/todavía/aún/ya no/todavía no` around state change, continuation, cessation, expectation, and the orthographic contrast `aún/aun`.
+- Both pages are marked `review_status: verified` with RAE/ASALE source metadata.
+- Academic Writing Toolkit returned only short-paragraph signals on both pages; no higher-level paragraph-logic defect was reported.
+- Current backlog: **14 of 196 grammar MDX pages (7.1%)**.

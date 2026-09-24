@@ -52,7 +52,7 @@
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/pronominal-verbs.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/ser-estar-hay.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/ser-estar-location.mdx`
-- [ ] `src/content/es/verbs/ser-estar-with-adjectives.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/ser-estar-with-adjectives.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/stem-changing-verbs.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/verb-infinitive-patterns.mdx`
 
@@ -80,7 +80,7 @@
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/question-formation.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/reported-speech-review.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/si-clauses-overview.mdx`
-- [ ] `src/content/es/sentence-structure/subordinate-clauses.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/subordinate-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verb-valency.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verum-focus.mdx`
 - [ ] `src/content/es/sentence-structure/word-order-review.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **58** |
-| Частка незачеплених сторінок | **29.6%** |
+| Не змінені / залишені в rewrite backlog | **56** |
+| Частка незачеплених сторінок | **28.6%** |
 
 ### Protected baseline rule
 
@@ -336,3 +336,10 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Reworked `si` clauses around open, hypothetical, past counterfactual and mixed-time conditions, while avoiding an absolute “three types only” presentation.
 - Academic Writing Toolkit returned only short-paragraph signals expected for the componentized reference format on all four pages.
 - Current backlog: **58 of 196 grammar MDX pages (29.6%)**.
+
+
+## Progress update — 2026-09-24
+
+- Closed src/content/es/verbs/ser-estar-with-adjectives.mdx and src/content/es/sentence-structure/subordinate-clauses.mdx.
+- Both pages were marked review_status: verified with RAE/ASALE source metadata.
+- Current backlog: **56 of 196 grammar MDX pages (28.6%)**.

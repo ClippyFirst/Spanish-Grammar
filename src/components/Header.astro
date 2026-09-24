@@ -1,29 +1,59 @@
 ---
-// Gramaticarrona — editorial reference header.
-import { withBase } from '../utils/content';
+import { withBase, categoryUrl } from '../utils/content';
+import { sortedCategories } from '../data/categories';
 const { pathname = '/' } = Astro.props;
 const isActive = (p: string) => pathname.startsWith(p);
 ---
 <header class="site-header">
-  <div class="header-rule" aria-hidden="true"></div>
-  <div class="container header-inner">
+  <div class="header-inner container">
     <a class="brand" href={withBase('/')} aria-label="Gramaticarrona — головна">
-      <span class="brand-mark" aria-hidden="true">G</span>
       <span class="brand-name">Gramaticarrona</span>
       <span class="brand-sub">ES</span>
     </a>
+
     <nav class="nav-main" aria-label="Головна навігація">
-      <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Граматика</a>
+      <a href={withBase('/es/')} aria-current={isActive('/es/') ? 'page' : undefined}>Категорії</a>
       <a href={withBase('/comparisons/')} aria-current={isActive('/comparisons/') ? 'page' : undefined}>Порівняння</a>
-      <a href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}>Пошук</a>
-      <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про сайт</a>
+      <a href={withBase('/about/')} aria-current={isActive('/about/') ? 'page' : undefined}>Про проєкт</a>
+      <a class="nav-search" href={withBase('/search/')} aria-current={isActive('/search/') ? 'page' : undefined}><span aria-hidden="true">⌕</span> Пошук</a>
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню"><span></span><span></span><span></span></button>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню">
+      <span>МЕНЮ</span><span aria-hidden="true">☰</span>
+    </button>
   </div>
+
   <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільна навігація">
-    <a href={withBase('/es/')}>Граматика</a><a href={withBase('/comparisons/')}>Порівняння</a><a href={withBase('/search/')}>Пошук</a><a href={withBase('/about/')}>Про сайт</a>
+    <div class="mobile-menu-primary">
+      <a href={withBase('/es/')}>Категорії</a>
+      <a href={withBase('/comparisons/')}>Порівняння</a>
+      <a href={withBase('/search/')}>Пошук ⌕</a>
+      <a href={withBase('/about/')}>Про проєкт</a>
+    </div>
+    <div class="mobile-menu-index">
+      <span class="mobile-menu-label">КАТЕГОРІЇ — 17</span>
+      <ol>
+        {sortedCategories.map((category) => (
+          <li><a href={categoryUrl(category.key)}>{String(category.order).padStart(2, '0')} · {category.titleUk}</a></li>
+        ))}
+      </ol>
+    </div>
   </nav>
 </header>
 <script is:inline>
-(function(){var t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu');if(!t||!m)return;t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'Закрити меню':'Відкрити меню')});m.addEventListener('click',function(e){if(e.target&&e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded','false')}})})();
+(function(){
+  var t=document.getElementById('nav-toggle'),m=document.getElementById('mobile-menu');
+  if(!t||!m)return;
+  t.addEventListener('click',function(){
+    var o=m.classList.toggle('open');
+    t.setAttribute('aria-expanded',String(o));
+    t.setAttribute('aria-label',o?'Закрити меню':'Відкрити меню');
+  });
+  m.addEventListener('click',function(e){
+    if(e.target&&e.target.tagName==='A'){
+      m.classList.remove('open');
+      t.setAttribute('aria-expanded','false');
+    }
+  });
+})();
 </script>

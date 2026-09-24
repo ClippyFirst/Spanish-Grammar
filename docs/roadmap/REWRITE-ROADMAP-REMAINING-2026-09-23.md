@@ -487,3 +487,13 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Added RAE/ASALE source metadata and `review_status: verified`.
 - Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was identified.
 - Current backlog: **40 of 196 grammar MDX pages (20.4%)**.
+
+
+## Progress update — 2026-09-24 (subjunctive tense precision)
+
+- Closed `moods/imperfecto-subjuntivo` and `moods/futuro-de-subjuntivo`.
+- Reworked imperfecto de subjuntivo around modal/hypothetical meaning and temporal perspective, including both normative `-ra/-se` series.
+- Reworked futuro de subjuntivo as a recognition-oriented historical/marked form, correcting its examples and adding the compound form.
+- Added RAE/ASALE source metadata and `review_status: verified` to both pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was identified.
+- Current backlog: **38 of 196 grammar MDX pages (19.4%)**.

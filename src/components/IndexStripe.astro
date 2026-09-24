@@ -1,0 +1,31 @@
+---
+import { sortedCategories } from '../data/categories';
+import { categoryUrl } from '../utils/content';
+
+const { pathname = '/' } = Astro.props;
+
+function activeCategory() {
+  const match = pathname.match(/^\/es\/([^/]+)/);
+  return match?.[1] ?? null;
+}
+const active = activeCategory();
+---
+<aside class="index-stripe" aria-label="Покажчик категорій">
+  <a class="index-stripe-home" href="/" aria-label="Gramaticarrona — головна">G</a>
+  <nav>
+    <ol>
+      {sortedCategories.map((category) => (
+        <li>
+          <a
+            href={categoryUrl(category.key)}
+            class:list={{ active: active === category.key }}
+            aria-current={active === category.key ? 'page' : undefined}
+            title={`${String(category.order).padStart(2, '0')} · ${category.titleUk}`}
+          >
+            {String(category.order).padStart(2, '0')}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+</aside>

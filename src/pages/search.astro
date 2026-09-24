@@ -8,10 +8,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <div class="container container-search">
     <header class="page-head">
-      <h1>Пошук</h1>
+      <div class="section-label">ПОШУК</div>
+      <h1>Знайти тему</h1>
       <p class="synopsis">
-        Знайдіть тему українською, іспанською або англійською:
-        <em>теперішній час</em>, <em>presente</em>, <em>subjunctive</em> чи <em>«подобається»</em>.
+        Шукайте українською, іспанською або англійською: <em>теперішній час</em>,
+        <em>presente</em>, <em>subjuntivo</em> чи <em>«подобається»</em>.
       </p>
     </header>
 
@@ -21,7 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <input id="search-input" type="search" name="q" placeholder="Пошук…" autocomplete="off" />
         <button type="submit">Пошук</button>
       </form>
-      <p class="search-results-status" id="search-results-status" aria-live="polite"></p>
+      <p class="search-hint">Підказка: можна шукати назву теми, граматичний термін або українське формулювання.</p><p class="search-results-status" id="search-results-status" aria-live="polite"></p>
       <ol class="search-results" id="search-results"></ol>
     </div>
   </div>

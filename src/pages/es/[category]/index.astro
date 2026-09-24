@@ -32,7 +32,7 @@ const entries = (await getCollection('es'))
 
     <header class="category-hero page-head">
       <div class="category-number">{String(cat?.order ?? 0).padStart(2, '0')}</div>
-      <div class="title-en">{cat?.titleEs}</div>
+      <div class="title-es">{cat?.titleEs}</div>
       <h1>{cat?.titleUk ?? category}</h1>
       <p class="synopsis">{cat?.description}</p>
     </header>

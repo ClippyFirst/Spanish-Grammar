@@ -1,17 +1,25 @@
 ---
-// 404 page.
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { withBase } from '../utils/content';
+import { sortedCategories } from '../data/categories';
+import { categoryUrl, withBase } from '../utils/content';
 ---
-<BaseLayout title="Сторінку не знайдено · Gramaticarrona" canonical="/404/">
+<BaseLayout title="404 · Gramaticarrona" canonical="/404/">
   <div class="container page-404">
-    <h1>404 — сторінку не знайдено</h1>
-    <p class="lead">
-      Такої сторінки немає. Спробуйте пошук або поверніться до розділів граматики.
-    </p>
-    <p class="page-404-actions">
-      <a class="card-topic" href={withBase('/es/')}>До розділів граматики</a>
-      <a class="card-topic" href={withBase('/search/')}>Пошук</a>
-    </p>
+    <div class="section-label">ПОМИЛКА 404</div>
+    <h1>404</h1>
+    <h2>Схоже, це правило загубилося у відмінюванні.</h2>
+    <p class="lead">Сторінки за цією адресою немає. Поверніться до довідника або знайдіть потрібну тему.</p>
+    <div class="page-404-actions">
+      <a class="button-primary" href={withBase('/')}>← На головну</a>
+      <a class="button-secondary" href={withBase('/search/')}>Відкрити пошук</a>
+    </div>
+    <section class="continue-categories" aria-labelledby="continue-heading">
+      <h2 id="continue-heading">Продовжити з категорії</h2>
+      <ul>
+        {sortedCategories.map((c) => (
+          <li><a href={categoryUrl(c.key)}><span>{String(c.order).padStart(2, '0')}</span> {c.titleUk}</a></li>
+        ))}
+      </ul>
+    </section>
   </div>
 </BaseLayout>

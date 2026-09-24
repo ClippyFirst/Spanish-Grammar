@@ -12,7 +12,7 @@ const catalog: SearchTopic[] = entries.map((entry) => {
   return {
     id: entry.id, slug, titleUk: entry.data.title_uk, titleEs: entry.data.title_es, titleEn: entry.data.title_en,
     summary: entry.data.short_description, keywords: entry.data.keywords, category,
-    code: `${String(cat?.order ?? 0).padStart('0')}.${String(entry.data.order).padStart(2, '0')}`,
+    code: `${String(cat?.order ?? 0).padStart(2, '0')}.${String(entry.data.order).padStart(2, '0')}`,
     cefr: entry.data.cefr, popular: entry.data.popular, href: entryUrl(entry),
   };
 });

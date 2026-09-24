@@ -14,7 +14,7 @@ The important result is:
 - **196/196 MDX entries are structurally routed into the Astro site.**
 - **17/17 grammar categories are represented.**
 - The checklist is intentionally a **coverage map, not a one-page-per-bullet specification**. Many bullets are covered inside deeper canonical articles.
-- The audit found **13 requirements that are missing or only partially covered enough to warrant explicit follow-up**.
+- The targeted gap-closure pass completed the previously identified **13 requirements** (8 missing + 5 partial).
 - The remaining requirements have a canonical home either as a dedicated page or as an embedded subsection/block in another page.
 
 ### Status vocabulary
@@ -37,22 +37,22 @@ The checklist contains exactly 323 checkbox requirements.
 | Section | Requirements | Main canonical pages | Result |
 |---|---:|---|---|
 | 1. Fundamentals | 18 | `grammar-basics`, `alphabet-pronunciation`, `reading-rules`, numerals, `ua-interference` | **full / embedded** |
-| 2. Spelling & punctuation | 13 | `accent-marks`, `c-z-s-g-j`, `b-v`, `h-y-ll`, `special-letters`, `capitalization`, `punctuation-capitalization` | **1 partial** |
-| 3. Nouns | 17 | `genero`, `gender-exceptions`, `numero-plural`, `irregular-plurals`, `noun-special-cases`, `noun-complements`, `possessive-constructions` | **1 partial** |
+| 2. Spelling & punctuation | 13 | `accent-marks`, `c-z-s-g-j`, `b-v`, `h-y-ll`, `special-letters`, `capitalization`, `punctuation-capitalization`, `loanwords-proper-names`, `por-que-porque-porque-por-que` | **full** |
+| 3. Nouns | 17 | `genero`, `gender-exceptions`, `numero-plural`, `irregular-plurals`, `noun-special-cases`, `noun-complements`, `possessive-constructions`, `noun-classes` | **full** |
 | 4. Articles | 11 | `definite-indefinite`, `definite-vs-indefinite`, `zero-article`, `special-cases`, `articles-with-names`, `neutral-lo` | **full** |
 | 5. Adjectives | 18 | agreement, position, comparison, quantifiers, adjective complements/types | **full / embedded** |
 | 6. Adverbs | 15 | formation/position, types, `muy-mucho-tan-tanto`, `ya-todavia-aun`, focus/stance | **full / embedded** |
 | 7. Pronouns & determiners | 25 | object, placement, double-object, `se`, demonstratives, possessives, relatives, interrogatives, `mismo-uno-generic` | **full / embedded** |
 | 8. Prepositions | 15 | place/time, `hace-desde-hace`, `por-para`, `personal-a`, regime/pairs, common constructions | **full / embedded** |
 | 9. Conjunctions | 17 | coordinating, subordinating, `como-excepto`, connectors, fillers, `que-de-que` | **full / embedded** |
-| 10. Verb system | 37 | conjugation, irregular/stem-changing, infinitive/gerund/participio, ser/estar/haber, valency, pronominal verbs | **5 gaps/partials** |
+| 10. Verb system | 37 | conjugation, irregular/stem-changing, defective verbs, aspect, perception verbs, causative, deictic motion, infinitive/gerund/participio, ser/estar/haber, valency, pronominal verbs | **full** |
 | 11. Indicative tenses | 16 | overview + every major tense + contrasts + conditionals | **full / embedded** |
 | 12. Moods | 17 | subjunctive forms/triggers, negative triggers, ojalá/como si, imperative | **full / embedded** |
 | 13. Periphrases | 14 | overview, `ir-a-infinitivo`, `estar-gerundio`, `frequent-periphrases`, modal periphrases | **full** |
-| 14. Sentence structure | 24 | word order, questions, clauses, conditionals, reported speech, passive, negation, focus, dislocation | **1 missing** |
+| 14. Sentence structure | 24 | word order, questions, tag questions, clauses, conditionals, reported speech, passive, negation, focus, dislocation | **full** |
 | 15. Word formation | 7 | prefixes/suffixes, diminutives, augmentatives, pejoratives, compounding | **full** |
 | 16. Regional variants | 15 | regional overview + Spain/LatAm + Mexico/Central America/Caribbean/Andean/Southern Cone/Rioplatense/Colombia-Canarias + voseo/ustedeo/leísmo/seseo | **full / embedded** |
-| 17. Micro-constructions | 44 | emphasis, polarity, focus, `se`, free subjunctive, aspect/time, `de + INF`, `será que`, `no sea que`, `lo de`, discourse constructions | **5 gaps/partials** |
+| 17. Micro-constructions | 44 | emphasis, polarity, focus, `se`, free subjunctive, aspect/time, `no es porque`, `de + INF`, `será que`, `no sea que`, `lo de`, `por qué / porque / porqué / por que`, emphatic reduplication, discourse constructions | **full** |
 
 **Total: 323 requirements.**
 
@@ -62,33 +62,33 @@ The checklist contains exactly 323 checkbox requirements.
 
 These are the items that should not be marked “complete” merely because a nearby topic exists.
 
-## 2.1 Missing or partial requirements
+## 2.1 Previously identified gaps — resolved
 
-| ID | Requirement | Status | Existing home | What is missing |
-|---|---|---|---|---|
-| **2.13** | Написання запозичень і власних імен (огляд) | **partial** | `capitalization`, `punctuation-capitalization` | Capitalization is covered, but the specific orthographic treatment of loanwords and proper names is not explicit enough. |
-| **3.1** | Загальні / власні; конкретні / абстрактні | **partial** | `genero`, `noun-special-cases` | Noun morphology and special classes are covered, but this semantic noun-classification pair is not presented as an explicit reference point. |
-| **10.6** | Дефективні / недостатні дієслова | **missing** | `irregular-verbs` | Irregularity is covered; defective/incomplete paradigms are not. |
-| **10.7** | Вид / аспект | **partial** | `tenses-overview`, `frequent-periphrases` | Aspectual meaning is discussed, but there is no explicit consolidated treatment of Spanish aspect as a system. |
-| **10.34** | Дієслова сприйняття + INF / gerundio / que | **partial** | `gerund-uses`, `verb-infinitive-patterns` | INF/gerundio patterns are covered, but the perception-verb contrast is not a dedicated or clearly consolidated topic. |
-| **10.34** | Псевдовідносні після сприйняття: *Vi a Juan que corría* | **missing** | — | No explicit canonical treatment found. |
-| **10.35** | Каузатив: hacer + INF | **missing** | — | General verb + infinitive patterns exist, but the causative construction is not explicitly covered. |
-| **10.37** | Ir / venir, llevar / traer — дейксис | **missing** | — | The current inventory does not contain a dedicated deictic-motion treatment. |
-| **14.8** | Tag-питання: ¿no?, ¿verdad?, ¿eh?, ¿cierto? | **missing** | `questions` | Questions are covered, but these discourse/syntax tag forms are not explicitly documented. |
-| **17.2.3** | *No es porque…* + subjuntivo / indicativo | **missing** | `emphasis-polarity-focus` | `no es que…` is covered, but the distinct *no es porque…* construction is not. |
-| **17.7.5** | *Cuanto más… más…*; *lo antes posible* | **partial** | `comparison-structures` | *cuanto más… más…* is covered; *lo antes posible* is not explicit. |
-| **17.7.8** | Por qué / porque / porqué / por que | **missing** | — | No consolidated four-way orthographic/syntactic distinction found. |
-| **17.7.13** | Reduplicación емфатична (*rápido rápido*) | **missing** | — | No explicit canonical treatment found. |
+The 13 requirements identified in the initial audit are now covered by canonical content. The goal remains **coverage**, not one-page-per-checkbox duplication.
 
-### Gap count
+| ID | Requirement | Previous status | Canonical treatment |
+|---|---|---|---|
+| **2.13** | Написання запозичень і власних імен | partial | `spelling/loanwords-proper-names` |
+| **3.1** | Загальні / власні; конкретні / абстрактні | partial | `nouns/noun-classes` |
+| **10.6** | Дефективні / недостатні дієслова | missing | `verbs/defective-verbs` |
+| **10.7** | Вид / аспект | partial | `verbs/aspect` |
+| **10.34** | Дієслова сприйняття + INF / gerundio / que | partial | `verbs/perception-verbs` |
+| **10.34** | Псевдовідносні після сприйняття | missing | `verbs/perception-verbs` |
+| **10.35** | Каузатив: hacer + INF | missing | `verbs/causative-hacer-infinitivo` |
+| **10.37** | Ir / venir, llevar / traer — дейксис | missing | `verbs/deictic-motion` |
+| **14.8** | Tag-питання: ¿no?, ¿verdad?, ¿eh?, ¿cierto? | missing | `sentence-structure/tag-questions` + `questions` |
+| **17.2.3** | `no es porque…` + subjuntivo / indicativo | missing | `micro-constructions/no-es-porque` + `emphasis-polarity-focus` |
+| **17.7.5** | `Cuanto más… más…`; `lo antes posible` | partial | `adjectives/comparison-structures` |
+| **17.7.8** | Por qué / porque / porqué / por que | missing | `spelling/por-que-porque-porque-por-que` |
+| **17.7.13** | Емфатична редуплікація | missing | `micro-constructions/emphatic-reduplication` |
 
-- **8 missing**
-- **5 partial**
-- **310 full or embedded**
+### Current gap count
 
-The four partial items are deliberately kept separate from “missing”: the repository already contains meaningful material, but not enough to claim the roadmap requirement is fully satisfied.
+- **0 missing**
+- **0 partial**
+- **323 full or embedded**
 
----
+The matrix should now be treated as the post-closure baseline. Future audits should only reopen a requirement when new source material, a deeper lexical/syntactic distinction, or a content-quality review shows that the canonical treatment is insufficient.
 
 # 3. 323 → canonical pages: how the compression works
 
@@ -204,8 +204,8 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 ## 10. Verb system — items 150–186
 
 - **150–154** → `verbs/conjugations`, `stem-changing-verbs`, `orthographic-changes`, `irregular-verbs`.
-- **155** → **missing**: defective/incomplete verbs.
-- **156** → **partial**: aspect is distributed between `tenses/tenses-overview` and `periphrases/frequent-periphrases`.
+- **155** → `verbs/defective-verbs`.
+- **156** → `verbs/aspect` + `tenses/tenses-overview` + periphrase pages.
 - **157–159** → `sentence-structure/verb-valency`, `ser-estar`, and auxiliary-verb material.
 - **160** → `verbs/infinitivo` + `infinitive-as-noun`.
 - **161** → `verbs/verb-infinitive-patterns`.
@@ -221,11 +221,11 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 - **179** → `deber-poder-soler` / `periphrases` material for `haber de`.
 - **180** → `change-of-state`.
 - **181** → **full**: impersonal weather verbs are covered by the general verb-system treatment.
-- **182** → **partial**: perception verbs with infinitive/gerundio are available as general patterns, but the requested perception-verb system is not consolidated.
-- **183** → **missing**: pseudo-relative constructions after perception verbs.
-- **184** → **missing**: causative `hacer + infinitivo`.
+- **182** → `verbs/perception-verbs`.
+- **183** → `verbs/perception-verbs`.
+- **184** → `verbs/causative-hacer-infinitivo`.
 - **185** → `gerund-uses` for motion + gerundio.
-- **186** → **missing**: deictic `ir/venir/llevar/traer`.
+- **186** → `verbs/deictic-motion`.
 
 ## 11. Indicative tenses — items 187–202
 
@@ -262,7 +262,7 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 - **234–236** → `agreement`, `predicative-complement`, `verb-valency`.
 - **237–239** → `word-order`, `word-order-review`.
 - **240** → `personal-pronouns-omission`.
-- **241–242** → `questions` + **tag-question gap**.
+- **241–242** → `questions` + `tag-questions`.
 - **243** → `exclamatives`.
 - **244** → `negation`, `negation-patterns`, `double-negation`.
 - **245** → `hay-vs-estar`.
@@ -302,7 +302,7 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 
 ### 17.2 Negation and correction — 287–291
 - **287–288** → `emphasis-polarity-focus`.
-- **289** → **missing**: *no es porque…*.
+- **289** → `micro-constructions/no-es-porque`.
 - **290–291** → `double-negation`, `coordinating`, `negation`.
 
 ### 17.3 Focus/topic/dislocation — 292–296
@@ -319,14 +319,14 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 
 ### 17.7 Other advanced constructions — 306–318
 - **306–309** → `advanced-conditionals`, `micro-constructions/de-inf-sera-no-sea-lo-de`.
-- **310** → `comparison-structures` (**partial** because *lo antes posible* is not explicit).
+- **310** → `comparison-structures` (includes *cuanto más… más…* and *lo antes posible*).
 - **311** → `absolute-constructions`.
-- **312** → **missing**: *por qué / porque / porqué / por que*.
+- **312** → `spelling/por-que-porque-porque-por-que`.
 - **313** → `place` / preposition material.
 - **314** → `noun-complements` + `adjective-complements`.
 - **315** → `como-excepto` (the page explicitly distinguishes standard and colloquial *como que*).
 - **316** → `discourse-fillers`.
-- **317** → **missing**: emphatic reduplication.
+- **317** → `micro-constructions/emphatic-reduplication`.
 
 ### 17.8 Anti-calque zone — 319–323
 → `emphasis-polarity-focus`, `body-parts-possession`, `change-of-state`, `cleft-pseudocleft`.
@@ -380,54 +380,19 @@ The remaining publication risk is not route generation. It is deployment state: 
 
 # 5. Recommended next content work
 
-Do **not** create 12 new pages immediately.
+The previously identified gap-closure phase is complete. Do not expand the repository merely to increase page count.
 
-The cleanest architecture is to close the gaps with the smallest number of canonical topics:
-
-### A. Extend an existing spelling page
-Add the missing loanword/proper-name orthography material to `spelling/capitalization` or create a small dedicated spelling page only if the material becomes substantial.
-
-### B. Add one verb-system page for missing verb constructions
-A single deep page could cover:
-
-- defective verbs;
-- perception verbs + infinitive/gerundio/que;
-- pseudo-relative constructions after perception;
-- causative `hacer + infinitivo`;
-- deictic motion verbs `ir/venir/llevar/traer`.
-
-This is preferable to five tiny pages.
-
-### C. Extend the questions page
-Add a compact section on:
-
-- `¿no?`
-- `¿verdad?`
-- `¿eh?`
-- `¿cierto?`
-
-### D. Extend the emphasis/micro-construction coverage
-Add:
-
-- `no es porque…`;
-- `lo antes posible`;
-- the four-way `por qué / porque / porqué / por que` distinction;
-- emphatic reduplication.
-
-### E. Decide whether aspect deserves a dedicated deep page
-The current system already contains aspect through tense and periphrasis pages. A separate aspect page should only be created if the goal is a genuine conceptual hub rather than another duplicate overview.
-
----
+The next quality pass should instead focus on **cross-linking, examples, source verification, search discoverability, and content-level QA** for the new canonical pages. If a future audit finds a genuinely new requirement, add it to the matrix first and then choose the smallest canonical home.
 
 # 6. Architectural conclusion
 
-The current content architecture is **not suffering from a “196 pages vs 323 requirements” failure**.
+The current content architecture is **not suffering from a “page count vs requirement count” failure**. The targeted missing/partial set has been closed without turning every checklist item into a separate page.
 
 It is doing what the roadmap explicitly intended:
 
 > one deep canonical page can close several related requirements.
 
-The real issue is narrower: **12 checklist requirements are not yet strong enough to call fully covered.**
+The real issue is now **content quality and maintenance**, not missing canonical homes for the audited requirements.
 
 That means the next content phase should be a targeted gap-closure pass, not a mass expansion of the repository.
 

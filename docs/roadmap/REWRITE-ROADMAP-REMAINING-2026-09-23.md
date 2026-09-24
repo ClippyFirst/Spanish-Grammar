@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **58 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **56 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -447,7 +447,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Reworked `ser/estar` location around entity localization vs event location, avoiding the permanent/temporary shortcut.
 - Academic Writing Toolkit found only short-paragraph signals expected for the componentized reference format on all four pages.
 - RAE/ASALE was used for the high-risk constructional claims and source metadata was refreshed.
-- Current backlog: **58 of 196 grammar MDX pages (29.6%)**.
+- Current backlog: **56 of 196 grammar MDX pages (28.6%)**.
 
 
 ## Progress update — 2026-09-24 (sentence structure VI)
@@ -459,3 +459,12 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Reworked `si` clauses around open, hypothetical, past counterfactual and mixed-time conditions, while avoiding an absolute “three types only” presentation.
 - Academic Writing Toolkit returned only short-paragraph signals expected for the componentized reference format on all four pages.
 - Current backlog: **58 of 196 grammar MDX pages (29.6%)**.
+
+
+## Progress update — 2026-09-24 (ser/estar + subordinate-clause closure)
+
+- Closed verbs/ser-estar-with-adjectives with a construction-first precision rewrite: removed the permanent/temporary shortcut as a universal rule, clarified lexical meaning shifts, state/resultative readings, and high-frequency contrasts such as ser/estar listo and ser/estar aburrido.
+- Closed sentence-structure/subordinate-clauses with a system overview covering sustantivas, relativas, adverbial subordinate types, mood selection, ordering and punctuation, while avoiding “conjunction = subjuntivo” rules.
+- Academic Writing Toolkit found no paragraph-logic issue in the ser/estar sample; the subordinate-clause sample produced only the expected short-paragraph signal for componentized reference prose.
+- Both pages received review_status: verified and RAE/ASALE source metadata.
+- Current backlog: **56 of 196 grammar MDX pages (28.6%)**.

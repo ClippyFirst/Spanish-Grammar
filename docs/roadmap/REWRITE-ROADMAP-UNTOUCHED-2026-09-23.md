@@ -152,15 +152,15 @@
 - [ ] `src/content/es/regional/caribbean.mdx`
 - [ ] `src/content/es/regional/central-america.mdx`
 - [ ] `src/content/es/regional/colombia-canarias.mdx`
-- [ ] `src/content/es/regional/leismo-laismo-loismo.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/leismo-laismo-loismo.mdx`
 - [ ] `src/content/es/regional/mexico.mdx`
-- [ ] `src/content/es/regional/regional-overview.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/regional-overview.mdx`
 - [ ] `src/content/es/regional/rioplatense.mdx`
-- [ ] `src/content/es/regional/seseo-ceceo-distincion.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/seseo-ceceo-distincion.mdx`
 - [ ] `src/content/es/regional/southern-cone.mdx`
-- [ ] `src/content/es/regional/spain-vs-latin-america.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/spain-vs-latin-america.mdx`
 - [ ] `src/content/es/regional/ustedeo.mdx`
-- [ ] `src/content/es/regional/voseo.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/regional/voseo.mdx`
 
 ## word-formation — 7 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **28** |
-| Частка незачеплених сторінок | **14.3%** |
+| Не змінені / залишені в rewrite backlog | **23** |
+| Частка незачеплених сторінок | **11.7%** |
 
 ### Protected baseline rule
 
@@ -449,3 +449,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - All four pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit was run on all four full pages; only short-paragraph signals were returned, consistent with the repository's componentized reference format.
 - Current backlog: **28 of 196 grammar MDX pages (14.3%)**.
+
+
+## Progress update — 2026-09-24 (regional precision)
+
+- Closed five regional backlog pages: `regional-overview`, `spain-vs-latin-america`, `voseo`, `seseo-ceceo-distincion`, and `leismo-laismo-loismo`.
+- Reframed regional descriptions to avoid country-wide absolutes and separated pronunciation, treatment forms, pronoun variation, and tense-frequency differences.
+- Reworked voseo around pronominal vs verbal voseo and regional models; kept Rioplatense forms as a named model rather than a universal voseo template.
+- Reworked seseo/ceceo/distinción around the phonological contrast and removed prestige-as-norm and "what Ukrainians should choose" framing.
+- Reworked leísmo/laísmo/loísmo around syntactic function plus normative and regional variation; preserved the RAE-accepted singular masculine person leísmo distinction.
+- Academic Writing Toolkit returned only short-paragraph signals on all five pages; no higher-level paragraph-logic defect was reported.
+- RAE/ASALE sources were refreshed for voseo, seseo/ceceo, and pronominal variation.
+- Current backlog: **23 of 196 grammar MDX pages (11.7%)**.

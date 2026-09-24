@@ -28,12 +28,12 @@
 - [x] DONE — deep rewrite + verification `verbs/stem-changing-verbs.mdx`
 - [x] DONE — deep rewrite + verification `verbs/orthographic-changes.mdx`
 - [x] DONE — deep rewrite + verification `verbs/pronominal-verbs.mdx`
-- [ ] REWRITE `verbs/verb-infinitive-patterns.mdx`
-- [ ] REWRITE `verbs/deber-vs-deber-de.mdx`
-- [ ] REWRITE `verbs/haber-auxiliary.mdx`
-- [ ] REWRITE `verbs/gerundio.mdx`
-- [ ] REWRITE `verbs/participio.mdx`
-- [ ] REWRITE `verbs/infinitivo.mdx`
+- [x] DONE — deep rewrite + verification `verbs/verb-infinitive-patterns.mdx`
+- [x] DONE — deep rewrite + verification `verbs/deber-vs-deber-de.mdx`
+- [x] DONE — deep rewrite + verification `verbs/haber-auxiliary.mdx`
+- [x] DONE — deep rewrite + verification `verbs/gerundio.mdx`
+- [x] DONE — deep rewrite + verification `verbs/participio.mdx`
+- [x] DONE — deep rewrite + verification `verbs/infinitivo.mdx`
 - [ ] VERIFY `verbs/gerund-uses.mdx`
 - [ ] VERIFY `verbs/estar-emotions-states.mdx`
 - [ ] VERIFY `verbs/change-of-state.mdx`
@@ -348,3 +348,19 @@ Primary quality gates remain:
 - Academic Writing Toolkit повторно застосовано до репрезентативної прозової частини; його short-paragraph сигнали залишено як очікувані для компонентного довідника.
 - GitHub PR QA: **PASS** на PR #5 після змін п'яти сторінок; повний `npm run qa` завершився успішно.
 - Наступний P0-блок після цього проходу: `verb-infinitive-patterns`, `deber-vs-deber-de`, `haber-auxiliary`, `gerundio`, `participio`, `infinitivo`.
+
+
+### P0 verbs precision pass — 2026-09-24
+
+**Completed:** all 11 verb pages listed in the P0 morphology block now have a documented deep rewrite + verification status. The pass covered:
+
+- regular conjugation groups and the limits of simplified frequency claims;
+- irregularity typology, stem alternation, voseo and orthographic adaptation;
+- pronominal constructions and the distinction between grammaticality and departure/emphasis nuances;
+- verb + infinitive government;
+- deber / deber de modality and real-usage variation;
+- haber as auxiliary versus hay;
+- gerundio and participio with construction-sensitive analysis;
+- infinitive versus *que + subjuntivo* without a false one-subject/two-subject universal.
+
+All 11 revised pages were marked `review_status: verified` after the PR QA gate. Previously rewritten grammar pages outside this P0 block remain protected and were not re-rewritten.

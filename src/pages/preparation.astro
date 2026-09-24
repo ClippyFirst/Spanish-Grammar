@@ -305,7 +305,7 @@ const sharedRows = sections.reduce(
 .exam-section-es { color:var(--color-text-muted); font:italic 400 14px/1.4 var(--font-body); }
 .exam-topic-list { list-style:none; padding:0; margin:0; border-bottom:1px solid var(--color-divider); }
 .exam-topic-list li { margin:0; }
-.exam-topic { display:grid; grid-template-columns:44px minmax(0,1fr) 100px 116px 28px; gap:1rem; align-items:center; min-height:58px; padding:.65rem 0; border-bottom:1px solid var(--color-divider); color:var(--color-text); text-decoration:none; }
+.exam-topic { display:grid; grid-template-columns:44px minmax(0,1fr) 100px 28px; gap:1rem; align-items:center; min-height:58px; padding:.65rem 0; border-bottom:1px solid var(--color-divider); color:var(--color-text); text-decoration:none; }
 .exam-topic:hover { background:var(--color-surface); }
 .exam-topic:focus-visible { outline:3px solid var(--color-accent); outline-offset:3px; }
 .exam-topic-index { color:var(--color-text-muted); font:500 11px/1 var(--font-mono); }
@@ -330,7 +330,6 @@ const sharedRows = sections.reduce(
   .exam-section-number { font-size:3rem; }
   .exam-topic { grid-template-columns:34px minmax(0,1fr) 22px; gap:.55rem; padding:.75rem 0; }
   .exam-topic-source { grid-column:2; grid-row:2; }
-  .exam-topic-status { grid-column:2; grid-row:3; margin-top:-.2rem; }
   .exam-topic-arrow { grid-column:3; grid-row:1 / span 2; }
   .source-list { grid-template-columns:1fr; }
   .source-list a:nth-child(even) { padding-left:0; border-left:0; }

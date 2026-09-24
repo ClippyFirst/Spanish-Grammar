@@ -78,6 +78,13 @@ const initialHits = searchTopics(initialQuery, catalog, 30);
     results.innerHTML=hits.map(({topic})=>`<li class="search-result"><a class="search-result-link" href="${esc(topic.href)}"><span class="search-result-code">${esc(topic.code)}</span><span class="search-result-copy"><strong>${esc(topic.titleUk)}</strong><em>${esc(topic.titleEs)}</em><small>${esc(topic.summary)}</small></span><span class="search-result-meta">${topic.popular?'<span class="search-result-popular">● популярне</span>':''}${topic.cefr?'<span class="level-badge">'+esc(topic.cefr.toUpperCase())+'</span>':''}</span><span class="search-result-arrow" aria-hidden="true">→</span></a></li>`).join('');
   }
   const form=document.querySelector('.search-control'), input=document.getElementById('search-input');
+  document.addEventListener('keydown',(event)=>{
+    if(event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return;
+    const target=event.target;
+    if(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement || (target instanceof HTMLElement && target.isContentEditable)) return;
+    event.preventDefault();
+    input?.focus();
+  });
   if(form&&input){form.addEventListener('submit',(event)=>{event.preventDefault();render(input.value,true);}); input.addEventListener('input',()=>render(input.value,true));}
   if(input.value)render(input.value,false); else document.getElementById('search-results-status').textContent='Введіть слово або фразу для пошуку.';
 </script>

@@ -179,10 +179,10 @@
 
 ## fundamentals — 10 сторінок
 
-- [ ] `src/content/es/fundamentals/alphabet-pronunciation.mdx`
-- [ ] `src/content/es/fundamentals/date-time-numbers.mdx`
-- [ ] `src/content/es/fundamentals/false-friends-ua-es.mdx`
-- [ ] `src/content/es/fundamentals/fractions-percentages.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/alphabet-pronunciation.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/date-time-numbers.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/false-friends-ua-es.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/fundamentals/fractions-percentages.mdx`
 - [ ] `src/content/es/fundamentals/grammar-basics.mdx`
 - [ ] `src/content/es/fundamentals/numbers-in-speech.mdx`
 - [ ] `src/content/es/fundamentals/numerals-advanced.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **11** |
-| Частка незачеплених сторінок | **5.6%** |
+| Не змінені / залишені в rewrite backlog | **7** |
+| Частка незачеплених сторінок | **3.6%** |
 
 ### Protected baseline rule
 
@@ -512,3 +512,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added/updated RAE/ASALE source metadata and `review_status: verified` on all eight pages.
 - Academic Writing Toolkit returned only short-paragraph signals on the eight pages; no higher-level paragraph-logic defect was reported.
 - Current operational page backlog after reconciliation: **11 of 196 grammar MDX pages (5.6%)**.
+
+
+## Progress update — 2026-09-24 (fundamentals precision pass I)
+
+- Closed four fundamentals pages: `alphabet-pronunciation`, `date-time-numbers`, `false-friends-ua-es`, and `fractions-percentages`.
+- Corrected over-broad pronunciation claims, separated general pronunciation from regional realization, and preserved the 27-letter alphabet distinction from *ch/ll* digraph status.
+- Corrected date/time guidance and repaired the related link to the canonical preposition-time page.
+- Reframed false friends as lexical traps rather than absolute translation rules and removed misleading cross-language generalizations.
+- Tightened fraction/percentage agreement language and approximate-quantity constructions.
+- Added/updated RAE/ASALE source metadata and `review_status: verified` on all four pages.
+- Academic Writing Toolkit returned only short-paragraph signals on the four pages; no higher-level paragraph-logic defect was reported.
+- Current operational page backlog: **7 of 196 grammar MDX pages (3.6%)**.

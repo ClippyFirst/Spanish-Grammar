@@ -70,7 +70,7 @@ The search control is a shared editorial instrument used on both the homepage an
 - A small monospace label identifies the search scope; the dedicated page uses the same control rather than inventing a second form style.
 - Supporting text sits below the rule, outside the field, so the input remains visually quiet.
 - Focus changes the rules and action to the accent color and retains a visible keyboard focus ring.
-- The `/` key focuses the search field when the user is not already typing in another editable control.
+- The `/` key focuses the search field when the user is not already typing in another editable control; the shortcut is implemented by the shared component.
 - Mobile keeps the same instrument; only spacing and proportions contract. There is no stacked full-width button treatment.
 
 The canonical reusable component is `src/components/SearchControl.astro`. Homepage and `/search/` must use this component rather than maintaining separate search-form markup.

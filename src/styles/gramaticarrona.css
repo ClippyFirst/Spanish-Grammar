@@ -293,6 +293,38 @@ p, li { max-width: 75ch; }
 .search-arrow:hover,
 .search-arrow:focus-visible { background: var(--color-accent); border-color: var(--color-accent); }
 
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  border-top: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-divider);
+}
+.path-grid div {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  min-height: 70px;
+  padding: 1rem .75rem 1rem 0;
+  border-right: 1px solid var(--color-divider);
+  font: 600 11px/1.2 var(--font-mono);
+  letter-spacing: .08em;
+}
+.path-grid div + div { padding-left: .75rem; }
+.path-grid div:last-child { border-right: 0; }
+.path-grid b {
+  color: var(--color-accent);
+  font: 700 22px/1 var(--font-display);
+  letter-spacing: -.02em;
+}
+.categories-more {
+  margin: 1rem 0 0;
+  text-align: right;
+  font: 500 12px/1.4 var(--font-mono);
+}
+.categories-more a { color: var(--color-link); text-decoration: none; }
+.categories-more a:hover { text-decoration: underline; }
+
 .grid-categories {
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
@@ -847,6 +879,9 @@ p, li { max-width: 75ch; }
   .hero .lead { font-size: 16px; }
   .hero-meta { font-size: 11px; }
   .grid-categories { grid-template-columns: 1fr; }
+  .path-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .path-grid div:nth-child(2) { border-right: 0; }
+  .path-grid div:nth-child(n+3) { border-top: 1px solid var(--color-divider); }
   .card, .card:nth-child(even) {
     grid-template-columns: 48px minmax(0,1fr);
     padding: 1.1rem 0;
@@ -859,6 +894,10 @@ p, li { max-width: 75ch; }
   .card-topic .t-uk { grid-column: 1; }
   .card-topic::after { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
   .page-head { margin-bottom: 2rem; }
+  .path-grid { grid-template-columns: 1fr 1fr; }
+  .path-grid div { min-height: 60px; }
+  .path-grid div:nth-child(odd) { padding-left: 0; }
+  .path-grid div:nth-child(even) { padding-left: .75rem; }
   .page-head h1 { font-size: var(--fs-h1); }
   .page-head .synopsis { font-size: 16px; }
   .semantic-nav { grid-template-columns: 1fr; }

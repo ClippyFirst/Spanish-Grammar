@@ -128,7 +128,7 @@
 
 ## pronouns — 5 сторінок
 
-- [ ] `src/content/es/pronouns/body-parts-possession.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/pronouns/body-parts-possession.mdx`
 - [ ] `src/content/es/pronouns/mismo-uno-generic.mdx`
 - [ ] `src/content/es/pronouns/reciprocal-pronouns.mdx`
 - [ ] `src/content/es/pronouns/relative-pronouns-review.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **41** |
-| Частка незачеплених сторінок | **20.9%** |
+| Не змінені / залишені в rewrite backlog | **40** |
+| Частка незачеплених сторінок | **20.4%** |
 
 ### Protected baseline rule
 
@@ -395,3 +395,13 @@ The current precision pass closed seven additional backlog pages on this branch:
 - RAE/ASALE sources were checked for the tense-system and aspectual claims; all four pages are marked `review_status: verified`.
 - Academic Writing Toolkit was run on all four pages. It reported only the expected short-paragraph signals from the componentized reference format and no higher-level paragraph-logic defect.
 - Current backlog: **42 of 196 grammar MDX pages (21.4%)**.
+
+
+## Progress update — 2026-09-24 (body-part possession)
+
+- Closed `pronouns/body-parts-possession` with a construction-first precision rewrite.
+- Distinguished possessive dative, reflexive pronouns, indirect/affected-person datives, ordinary possessives, and the special behavior of `doler` agreement.
+- Removed the stronger false-universal framing that every body-part or clothing construction mechanically requires `dativo + definite article`.
+- Added RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was found.
+- Current backlog: **40 of 196 grammar MDX pages (20.4%)**.

@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 23.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **98 залишаються** в untouched/review backlog. Нижче — саме ці 98 сторінок.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **94 залишаються** в untouched/review backlog. Нижче — саме ці 98 сторінок.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -36,25 +36,25 @@
 ## verbs — 20 сторінок
 
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/change-of-state.mdx`
-- [ ] `src/content/es/verbs/conjugations.mdx`
-- [ ] `src/content/es/verbs/deber-vs-deber-de.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/conjugations.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/deber-vs-deber-de.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/estar-emotions-states.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/gerund-uses.mdx`
-- [ ] `src/content/es/verbs/gerundio.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/gerundio.mdx`
 - [ ] `src/content/es/verbs/gustar-type-verbs.mdx`
-- [ ] `src/content/es/verbs/haber-auxiliary.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/haber-auxiliary.mdx`
 - [ ] `src/content/es/verbs/haber-vs-tener.mdx`
 - [ ] `src/content/es/verbs/infinitive-as-noun.mdx`
-- [ ] `src/content/es/verbs/infinitivo.mdx`
-- [ ] `src/content/es/verbs/irregular-verbs.mdx`
-- [ ] `src/content/es/verbs/orthographic-changes.mdx`
-- [ ] `src/content/es/verbs/participio.mdx`
-- [ ] `src/content/es/verbs/pronominal-verbs.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/infinitivo.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/irregular-verbs.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/orthographic-changes.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/participio.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/pronominal-verbs.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/ser-estar-hay.mdx`
 - [ ] `src/content/es/verbs/ser-estar-location.mdx`
 - [ ] `src/content/es/verbs/ser-estar-with-adjectives.mdx`
-- [ ] `src/content/es/verbs/stem-changing-verbs.mdx`
-- [ ] `src/content/es/verbs/verb-infinitive-patterns.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/stem-changing-verbs.mdx`
+- [x] DONE — deep rewrite + verification `src/content/es/verbs/verb-infinitive-patterns.mdx`
 
 ## sentence-structure — 26 сторінок
 
@@ -62,10 +62,10 @@
 - [ ] `src/content/es/sentence-structure/advanced-conditionals.mdx`
 - [ ] `src/content/es/sentence-structure/agreement.mdx`
 - [ ] `src/content/es/sentence-structure/cleft-pseudocleft.mdx`
-- [ ] `src/content/es/sentence-structure/comparative-clauses.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/comparative-clauses.mdx`
 - [ ] `src/content/es/sentence-structure/compound-complex.mdx`
 - [ ] `src/content/es/sentence-structure/concessive-clauses.mdx`
-- [ ] `src/content/es/sentence-structure/consecutive-clauses.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/consecutive-clauses.mdx`
 - [ ] `src/content/es/sentence-structure/dislocation.mdx`
 - [ ] `src/content/es/sentence-structure/double-negation.mdx`
 - [ ] `src/content/es/sentence-structure/ellipsis.mdx`
@@ -76,12 +76,12 @@
 - [ ] `src/content/es/sentence-structure/negation-patterns.mdx`
 - [ ] `src/content/es/sentence-structure/passive-voice.mdx`
 - [ ] `src/content/es/sentence-structure/personal-a.mdx`
-- [ ] `src/content/es/sentence-structure/predicative-complement.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/predicative-complement.mdx`
 - [ ] `src/content/es/sentence-structure/question-formation.mdx`
 - [ ] `src/content/es/sentence-structure/reported-speech-review.mdx`
 - [ ] `src/content/es/sentence-structure/si-clauses-overview.mdx`
 - [ ] `src/content/es/sentence-structure/subordinate-clauses.mdx`
-- [ ] `src/content/es/sentence-structure/verb-valency.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verb-valency.mdx`
 - [ ] `src/content/es/sentence-structure/verum-focus.mdx`
 - [ ] `src/content/es/sentence-structure/word-order-review.mdx`
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **98** |
-| Частка незачеплених сторінок | **50.0%** |
+| Не змінені / залишені в rewrite backlog | **94** |
+| Частка незачеплених сторінок | **48.0%** |
 
 ### Protected baseline rule
 
@@ -232,3 +232,11 @@ Academic Writing Toolkit тут є допоміжним інструментом
 ## Progress update — 2026-09-24
 
 The current precision pass closed seven additional backlog pages on this branch: four verb pages and three conjunction pages. The protected `verbs/ser-estar.mdx` baseline was reviewed but deliberately not rewritten.
+
+
+## Progress update — 2026-09-24 (sentence structure)
+
+- Closed four P0 sentence-structure pages: `verb-valency`, `predicative-complement`, `comparative-clauses`, `consecutive-clauses`.
+- Added construction-based explanations for argument structure, secondary predication, comparative patterns, `más/menos de` vs `que`, `tan/tanto... que`, and the boundary between comparison and consequence.
+- Added RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit returned only short-paragraph signals; no higher-level paragraph-logic issue was used as a reason to expand the componentized reference prose.

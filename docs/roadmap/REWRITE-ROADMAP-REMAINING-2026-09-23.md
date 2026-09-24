@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 сторінок у protected baseline**; разом із поточним rewrite-проходом закрито 162 сторінки, а **34 сторінки залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 сторінок у protected baseline**; разом із поточним rewrite-проходом закрито 162 сторінки, а **32 сторінки залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -511,3 +511,13 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Added RAE/ASALE source metadata and `review_status: verified` to all four pages.
 - Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
 - Current untouched/review backlog: **34 of 196 grammar MDX pages (17.3%)**.
+
+
+### Articles precision pass — 2026-09-24
+
+- Closed `articles/articles-with-names` and `articles/definite-vs-indefinite`.
+- Reworked proper-name article use around official-name articles, geographic classes, titles, regional variation, and article insertion from syntax rather than lexical naming.
+- Reworked definite/indefinite contrast around referent identification, anaphora, genericity, zero article, professions, and contextual readings of `un` under negation.
+- Added RAE/ASALE source metadata and `review_status: verified` to both pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **32 of 196 grammar MDX pages (16.3%)**.

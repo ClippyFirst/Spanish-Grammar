@@ -2,10 +2,11 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories, getCategory } from '../data/categories';
-import { entryUrl, categoryUrl, withBase, parseId } from '../utils/content';
+import { buildTopicNumberMap, entryUrl, categoryUrl, withBase, parseId } from '../utils/content';
 import SearchControl from '../components/SearchControl.astro';
 
 const entries = await getCollection('es');
+const topicNumbers = buildTopicNumberMap(entries);
 const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 5);
 const featuredCategories = sortedCategories.slice(0, 9);
 ---
@@ -72,7 +73,7 @@ const featuredCategories = sortedCategories.slice(0, 9);
         {popular.map((e) => (
           <li>
             <a class="popular-row" href={entryUrl(e)}>
-              <span class="topic-code">{String(getCategory(parseId(e.id).category)?.order ?? 0).padStart(2, '0')}.{String(e.data.order).padStart(2, '0')}</span>
+              <span class="topic-code">{String(getCategory(parseId(e.id).category)?.order ?? 0).padStart(2, '0')}.{String(topicNumbers.get(e.id) ?? 0).padStart(2, '0')}</span>
               <span class="popular-dot" aria-hidden="true">●</span>
               <span class="popular-copy"><strong>{e.data.title_uk}</strong><em>{e.data.title_es}</em></span>
               {e.data.cefr && <span class="level-badge">{e.data.cefr.toUpperCase()}</span>}

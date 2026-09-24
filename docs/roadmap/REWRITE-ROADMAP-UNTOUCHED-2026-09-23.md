@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **74 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **70 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -94,10 +94,10 @@
 
 ## adjectives — 8 сторінок
 
-- [ ] `src/content/es/adjectives/adjective-types-cultos.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adjectives/adjective-types-cultos.mdx`
 - [ ] `src/content/es/adjectives/agreement-traps.mdx`
-- [ ] `src/content/es/adjectives/comparison-structures.mdx`
-- [ ] `src/content/es/adjectives/degrees-of-comparison.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adjectives/comparison-structures.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/adjectives/degrees-of-comparison.mdx`
 - [ ] `src/content/es/adjectives/irregular-comparatives.mdx`
 - [ ] `src/content/es/adjectives/meaning-by-position.mdx`
 - [ ] `src/content/es/adjectives/quantifiers-advanced.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **74** |
-| Частка незачеплених сторінок | **37.8%** |
+| Не змінені / залишені в rewrite backlog | **70** |
+| Частка незачеплених сторінок | **35.7%** |
 
 ### Protected baseline rule
 
@@ -287,3 +287,12 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Tightened construction, discourse-function, punctuation, register, and regional-variation claims; added current RAE/ASALE source metadata and `review_status: verified`.
 - Academic Writing Toolkit reported only expected short-paragraph signals on the three rewritten pages.
 - Current backlog: **74 of 196 grammar MDX pages (37.8%)**.
+
+
+## Progress update — 2026-09-24 (adjectives)
+
+- Closed four adjective backlog pages: `adjective-complements`, `adjective-types-cultos`, `comparison-structures`, and `degrees-of-comparison`.
+- Reworked adjective government, calificativo/relacional distinctions, comparative structures, special comparative forms, and absolute/relative superlative.
+- Added `review_status: verified` and RAE/ASALE source metadata to all four rewritten pages.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
+- Current backlog: **70 of 196 grammar MDX pages (35.7%)**.

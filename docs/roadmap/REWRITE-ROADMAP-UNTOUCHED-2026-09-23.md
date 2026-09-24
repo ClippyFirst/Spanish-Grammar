@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **34 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **30 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -141,10 +141,10 @@
 
 ## prepositions — 4 сторінок
 
-- [ ] `src/content/es/prepositions/estar-de-ser-de.mdx`
-- [ ] `src/content/es/prepositions/hace-desde-hace.mdx`
-- [ ] `src/content/es/prepositions/place-review.mdx`
-- [ ] `src/content/es/prepositions/time-expressions.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/prepositions/estar-de-ser-de.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/prepositions/hace-desde-hace.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/prepositions/place-review.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/prepositions/time-expressions.mdx`
 
 ## regional — 13 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **34** |
-| Частка незачеплених сторінок | **17.3%** |
+| Не змінені / залишені в rewrite backlog | **30** |
+| Частка незачеплених сторінок | **15.3%** |
 
 ### Protected baseline rule
 
@@ -437,3 +437,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added RAE/ASALE source metadata and `review_status: verified` to both pages.
 - Academic Writing Toolkit returned only expected short-paragraph signals for the componentized reference format; no higher-level paragraph-logic defect was reported.
 - Current backlog: **32 of 196 grammar MDX pages (16.3%)**.
+
+
+## Progress update — 2026-09-24 (prepositions)
+
+- Closed all four current preposition backlog pages: `estar-de-ser-de`, `hace-desde-hace`, `place-review`, and `time-expressions`.
+- Reframed `ser de` vs `estar de` around constructional meaning; removed any implication that temporary/permanent is a universal ser/estar rule.
+- Reworked `hace / desde hace / desde` around reference time, duration, starting point, and the fact that `hace... que` is not restricted to present-tense contexts.
+- Reworked spatial prepositions around location, destination, source, direction and reference point; separated `a` vs `hacia` and `de` vs `desde`.
+- Reworked temporal prepositions around fixed constructions, distinguishing `en una hora` (future point) from `durante una hora` (duration), and `dentro de` from `hace`.
+- All four pages are marked `review_status: verified` with RAE/ASALE source metadata.
+- Academic Writing Toolkit was run on all four full pages; only short-paragraph signals were returned, consistent with the repository's componentized reference format.
+- Current backlog: **30 of 196 grammar MDX pages (15.3%)**.

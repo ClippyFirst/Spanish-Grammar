@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **66 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **62 сторінки, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -406,7 +406,7 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Closed `conjunctions/como-excepto.mdx`, `conjunctions/discourse-connectors.mdx`, and `conjunctions/discourse-fillers.mdx` with precision rewrites and verification.
 - Tightened the distinctions among the main uses of `como`, exception constructions, discourse connectors, punctuation, register, and conversational discourse markers.
 - Academic Writing Toolkit returned only short-paragraph signals expected from the componentized reference format on all three rewritten pages.
-- Current untouched/review backlog: **66 of 196 grammar MDX pages (33.7%)**.
+- Current untouched/review backlog: **62 of 196 grammar MDX pages (31.6%)**.
 
 
 ### P1 adjectives precision pass — 2026-09-24
@@ -435,4 +435,16 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Added current RAE/ASALE source metadata and `review_status: verified`.
 - Preserved the componentized reference structure while tightening the treatment of `el resto de` and quantity/concordance variability.
 - Academic Writing Toolkit returned only expected short-paragraph signals on both pages.
-- Current untouched/review backlog: **66 of 196 grammar MDX pages (33.7%)**.
+- Current untouched/review backlog: **62 of 196 grammar MDX pages (31.6%)**.
+
+
+## Progress update — 2026-09-24 (verbs continuation)
+
+- Closed four remaining backlog verb pages in this focused block: `gustar-type-verbs`, `haber-vs-tener`, `infinitive-as-noun`, and `ser-estar-location`.
+- Reworked `gustar` around indirect-object/dative structure and subject–verb agreement rather than the informal “reverse logic” mnemonic.
+- Reworked `haber vs tener` around existential `hay`, possession, compound tenses, and the distinct resultative `tener + participio` construction.
+- Reworked infinitive nominality to distinguish nominal syntactic uses from verbal infinitives, article-based nominalization, prepositional infinitives, and `al + infinitivo`.
+- Reworked `ser/estar` location around entity localization vs event location, avoiding the permanent/temporary shortcut.
+- Academic Writing Toolkit found only short-paragraph signals expected for the componentized reference format on all four pages.
+- RAE/ASALE was used for the high-risk constructional claims and source metadata was refreshed.
+- Current backlog: **62 of 196 grammar MDX pages (31.6%)**.

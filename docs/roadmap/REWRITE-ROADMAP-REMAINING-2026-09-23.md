@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **74 сторінки, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **70 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -88,10 +88,10 @@
 
 # 4. P1 — Adjectives: завершальний системний прохід
 
-- [ ] REWRITE `adjectives/adjective-complements.mdx`
-- [ ] REWRITE `adjectives/adjective-types-cultos.mdx`
-- [ ] REWRITE `adjectives/comparison-structures.mdx`
-- [ ] REWRITE `adjectives/degrees-of-comparison.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/adjective-complements.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/adjective-types-cultos.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/comparison-structures.mdx`
+- [x] DONE — precision rewrite + verification `adjectives/degrees-of-comparison.mdx`
 - [ ] REWRITE `adjectives/irregular-comparatives.mdx`
 - [ ] REWRITE `adjectives/meaning-by-position.mdx`
 - [ ] VERIFY `adjectives/adjective-agreement.mdx`
@@ -406,4 +406,15 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Closed `conjunctions/como-excepto.mdx`, `conjunctions/discourse-connectors.mdx`, and `conjunctions/discourse-fillers.mdx` with precision rewrites and verification.
 - Tightened the distinctions among the main uses of `como`, exception constructions, discourse connectors, punctuation, register, and conversational discourse markers.
 - Academic Writing Toolkit returned only short-paragraph signals expected from the componentized reference format on all three rewritten pages.
-- Current untouched/review backlog: **74 of 196 grammar MDX pages (37.8%)**.
+- Current untouched/review backlog: **70 of 196 grammar MDX pages (35.7%)**.
+
+
+### P1 adjectives precision pass — 2026-09-24
+
+- Closed four adjective pages: `adjective-complements`, `adjective-types-cultos`, `comparison-structures`, and `degrees-of-comparison`.
+- Reframed adjective government around constructional régimen rather than translation-based preposition guessing.
+- Distinguished calificativos from relacionales without turning tendencies into absolute prohibitions on degree modification.
+- Reworked comparative structures around `más/menos... que`, `tan... como`, `tanto... como`, `igual de... que`, `más/menos de + quantity`, superlative constructions, and correlative comparisons.
+- Tightened the treatment of `mejor, peor, mayor, menor`, `superior/inferior`, and absolute vs relative superlative.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages; no higher-level paragraph-logic defect was reported.
+- Current untouched/review backlog: **70 of 196 grammar MDX pages (35.7%)**.

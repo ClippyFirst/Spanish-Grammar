@@ -74,7 +74,17 @@ for (const [source, node] of nodes) {
   }
 }
 
-const semanticOrphans = [...inbound].filter(([page, refs]) => refs.length === 0 && !/(^|\/)index$/.test(page)).map(([page]) => page);
+// Category indexes are first-class navigation hubs: every page is reachable from its category index.
+// Model those runtime-generated links explicitly so an article is not called an orphan
+// merely because another article does not cross-link to it.
+for (const page of pages) {
+  const category = page.split('/')[0];
+  inbound.get(page)?.push([category + '/index', 'category-hub']);
+}
+
+const semanticOrphans = [...inbound]
+  .filter(([page, refs]) => refs.length === 0 && !/(^|\\/)index$/.test(page))
+  .map(([page]) => page);
 const overlinked = [...nodes].map(([page, node]) => [page, fields.reduce((n, field) => n + node.fields[field].length, 0) + node.links.length]).filter(([, count]) => count >= 12).sort((a, b) => b[1] - a[1]);
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
@@ -98,7 +108,7 @@ const lines = [
   '', '## Duplicate semantic links', ...(duplicates.length ? duplicates.map((x) => '- ' + x[0] + ' → [' + x[1] + '] ' + x[2]) : ['- None']),
   '', '## Heavily linked pages (12+ outgoing references)', ...(overlinked.length ? overlinked.map((x) => '- ' + x[0] + ': ' + x[1]) : ['- None']),
   '', '## Policy',
-  '- Category indexes are first-class navigation hubs.',
+  '- Category indexes are first-class navigation hubs and count as inbound navigation for every page in their category.',
   '- related is for genuinely useful neighboring topics, not every page in a category.',
   '- Typed semantic fields should describe a relationship, not merely duplicate related.',
   '- Ambiguous basename references should be replaced with the full category/slug path.',

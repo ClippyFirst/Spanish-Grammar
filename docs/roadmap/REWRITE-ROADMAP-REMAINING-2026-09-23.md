@@ -7,7 +7,7 @@
 
 ## Як користуватися
 
-**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **116 сторінок, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
+**Protected rewrite baseline:** сторінки, які вже були переписані в попередніх deep-rewrite passes, не переписуються повторно без окремої причини. Поточна карта містить **80 уже змінених grammar MDX-сторінок** і **94 сторінки, що залишаються в untouched/review backlog**. Перед кожним новим проходом спочатку звіряємо цей backlog і журнал methodology, щоб не перезаписувати вже опрацьований матеріал.
 
 Статус:
 - [ ] **REWRITE** — повний редакторський прохід за CONTENT-METHODOLOGY-REWRITE-2026-09-23.
@@ -46,9 +46,9 @@
 
 # 2. P0 — Conjunctions та subordinate-clause system
 
-- [ ] REWRITE `conjunctions/coordinating.mdx`
-- [ ] REWRITE `conjunctions/subordinating.mdx`
-- [ ] REWRITE `conjunctions/que-de-que.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/coordinating.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/subordinating.mdx`
+- [x] DONE — precision rewrite + verification `conjunctions/que-de-que.mdx`
 - [ ] VERIFY `conjunctions/como-excepto.mdx`
 - [ ] VERIFY `conjunctions/discourse-connectors.mdx`
 - [ ] VERIFY `conjunctions/discourse-fillers.mdx`
@@ -66,11 +66,11 @@
 
 # 3. P0 — Valency, complements and sentence structure
 
-- [ ] REWRITE `sentence-structure/verb-valency.mdx`
-- [ ] REWRITE `sentence-structure/predicative-complement.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/verb-valency.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/predicative-complement.mdx`
 - [ ] REWRITE `sentence-structure/agreement.mdx`
-- [ ] REWRITE `sentence-structure/comparative-clauses.mdx`
-- [ ] REWRITE `sentence-structure/consecutive-clauses.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/comparative-clauses.mdx`
+- [x] DONE — precision rewrite + verification `sentence-structure/consecutive-clauses.mdx`
 - [ ] REWRITE `sentence-structure/modal-clauses.mdx`
 - [ ] REWRITE `sentence-structure/absolute-constructions.mdx`
 - [ ] REWRITE `sentence-structure/ellipsis.mdx`
@@ -374,3 +374,12 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Tightened false universals around gerundio, ser/estar, change-of-state verbs, and indicativo/subjuntivo selection.
 - Added/updated RAE/ASALE source metadata and marked the seven touched content pages as `review_status: verified`.
 - Academic Writing Toolkit review of the seven pages returned only the expected short-paragraph signals from the componentized reference format; no higher-level paragraph-logic issue was reported.
+
+
+### Sentence-structure precision pass — 2026-09-24
+
+- Closed four P0 sentence-structure pages: `verb-valency`, `predicative-complement`, `comparative-clauses`, `consecutive-clauses`.
+- Tightened false universals around argument counts, complement classification, secondary predication, comparative conjunctions and consecutive mood selection.
+- Added RAE/ASALE source metadata and `review_status: verified` to the four touched pages.
+- Academic Writing Toolkit review again reported only expected short-paragraph signals from the componentized reference format.
+- Current untouched/review backlog: **94 of 196 grammar MDX pages (48.0%)**; previously rewritten baseline remains protected.

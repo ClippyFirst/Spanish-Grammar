@@ -111,9 +111,9 @@
 - [x] DONE — precision rewrite + verification `src/content/es/spelling/capitalization.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/spelling/diphthongs-hiatus.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/spelling/h-y-ll.mdx`
-- [ ] `src/content/es/spelling/punctuation-capitalization.mdx`
-- [ ] `src/content/es/spelling/special-letters.mdx`
-- [ ] `src/content/es/spelling/stress-and-accents-review.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/punctuation-capitalization.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/special-letters.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/spelling/stress-and-accents-review.mdx`
 
 ## tenses — 4 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **49** |
-| Частка незачеплених сторінок | **25.0%** |
+| Не змінені / залишені в rewrite backlog | **46** |
+| Частка незачеплених сторінок | **23.5%** |
 
 ### Protected baseline rule
 
@@ -364,3 +364,14 @@ The current precision pass closed seven additional backlog pages on this branch:
 - All three pages are marked `review_status: verified` with RAE/ASALE source metadata.
 - Academic Writing Toolkit found only short-paragraph signals (5 / 19 / 10 respectively); no higher-level paragraph-logic issue was reported.
 - Current backlog: **49 of 196 grammar MDX pages (25.0%)**.
+
+
+## Progress update — 2026-09-24 (spelling III)
+
+- Closed the final three spelling backlog pages: `punctuation-capitalization`, `special-letters`, and `stress-and-accents-review`.
+- Rebuilt punctuation guidance around syntactic structure rather than pause-based rules: opening `¿/¡`, vocatives, fronted subordinate clauses, `pero/aunque`, discourse connectors, quotation marks, colons/semicolons, abbreviations and siglas.
+- Rebuilt `special-letters` around the distinction between the letter `ñ`, the digraphs `ll/ch`, and the diaeresis `ü`; removed the outdated implication that `ll/ch` are separate alphabet letters.
+- Rebuilt the stress review as a compact cross-linked algorithm, aligned with the full `accent-marks` page, including demonstratives, `solo`, diacritical tilde, and hiatus.
+- All three pages are marked `review_status: verified` with RAE/ASALE source metadata.
+- Academic Writing Toolkit was run on all three full pages; no higher-level paragraph-logic defect was returned (only the repository's expected short-component signals).
+- Current backlog: **46 of 196 grammar MDX pages (23.5%)**.

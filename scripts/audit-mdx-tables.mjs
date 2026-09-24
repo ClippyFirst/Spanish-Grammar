@@ -8,7 +8,7 @@ function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const file = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(file, out);
-    else if (/\\.(md|mdx)$/i.test(entry.name)) out.push(file);
+    else if (/\.(md|mdx)$/i.test(entry.name)) out.push(file);
   }
   return out;
 }
@@ -33,7 +33,7 @@ function arrayStringCount(source) {
   return matches ? matches.length : 0;
 }
 
-const files = walk(ROOT).filter((file) => { const parts = path.relative(ROOT, file).split(path.sep); return parts.every((part) => !EXCLUDED_DIRS.has(part)) && /\\.(md|mdx)$/i.test(file); }).sort();
+const files = walk(ROOT).filter((file) => { const parts = path.relative(ROOT, file).split(path.sep); return parts.every((part) => !EXCLUDED_DIRS.has(part)) && /\.(md|mdx)$/i.test(file); }).sort();
 const failures = []; let markdownTables = 0; let compareTables = 0;
 
 for (const file of files) {

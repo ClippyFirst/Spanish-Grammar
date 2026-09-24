@@ -77,7 +77,7 @@ const initialHits = searchTopics(initialQuery, catalog, 30);
     const hits=searchTopics(clean,30); status.textContent=hits.length?`ЗНАЙДЕНО — ${hits.length}`:`НІЧОГО НЕ ЗНАЙДЕНО ДЛЯ «${clean}»`;
     results.innerHTML=hits.map(({topic})=>`<li class="search-result"><a class="search-result-link" href="${esc(topic.href)}"><span class="search-result-code">${esc(topic.code)}</span><span class="search-result-copy"><strong>${esc(topic.titleUk)}</strong><em>${esc(topic.titleEs)}</em><small>${esc(topic.summary)}</small></span><span class="search-result-meta">${topic.popular?'<span class="search-result-popular">● популярне</span>':''}${topic.cefr?'<span class="level-badge">'+esc(topic.cefr.toUpperCase())+'</span>':''}</span><span class="search-result-arrow" aria-hidden="true">→</span></a></li>`).join('');
   }
-  const form=document.querySelector('.search-control'), input=document.getElementById('search-input');
-  if(form&&input){form.addEventListener('submit',(event)=>{event.preventDefault();render(input.value,true);}); input.addEventListener('input',()=>render(input.value,true));}
+  const input=document.getElementById('search-input');
+  if(input){ input.addEventListener('input',()=>render(input.value,true)); }
   if(input.value)render(input.value,false); else document.getElementById('search-results-status').textContent='Введіть слово або фразу для пошуку.';
 </script>

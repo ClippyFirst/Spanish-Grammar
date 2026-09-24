@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sortedCategories } from '../data/categories';
-import { entryUrl, categoryUrl, withBase } from '../utils/content';
+import { entryUrl, categoryUrl, withBase, parseId } from '../utils/content';
 
 const entries = await getCollection('es');
 const popular = entries.filter((e) => e.data.popular).sort((a, b) => a.data.order - b.data.order).slice(0, 5);
@@ -45,18 +45,21 @@ const featuredCategories = sortedCategories.slice(0, 9);
 
     <section class="section grammar-sections">
       <h2>Категорії — {sortedCategories.length}</h2>
-      <div class="grid-categories">
+      <ol class="category-list">
         {featuredCategories.map((c) => (
-          <a class="card" href={categoryUrl(c.key)}>
-            <span class="card-index" aria-hidden="true"></span>
-            <span class="card-copy">
-              <span class="label">{c.titleEs}</span>
-              <span class="card-title">{c.titleUk}</span>
-              <span class="card-desc">{c.description}</span>
-            </span>
-          </a>
+          <li>
+            <a class="category-row" href={categoryUrl(c.key)}>
+              <span class="category-index">{String(c.order).padStart(2, '0')}</span>
+              <span class="category-copy">
+                <strong>{c.titleUk}</strong>
+                <em>{c.titleEs}</em>
+                <span>{c.description}</span>
+              </span>
+              <span class="category-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
         ))}
-      </div>
+      </ol>
       <p class="categories-more"><a href={withBase('/es/')}>і ще {sortedCategories.length - featuredCategories.length} категорій →</a></p>
     </section>
 
@@ -65,9 +68,12 @@ const featuredCategories = sortedCategories.slice(0, 9);
       <ul class="topic-list">
         {popular.map((e) => (
           <li>
-            <a class="card-topic" href={entryUrl(e)}>
-              <span class="t-es">{e.data.title_es}</span>
-              <span class="t-uk">{e.data.title_uk}</span>
+            <a class="popular-row" href={entryUrl(e)}>
+              <span class="topic-code">{String(parseId(e.id).category).replace(/\D/g, '').padStart(2, '0')}.{String(e.data.order).padStart(2, '0')}</span>
+              <span class="popular-dot" aria-hidden="true">●</span>
+              <span class="popular-copy"><strong>{e.data.title_uk}</strong><em>{e.data.title_es}</em></span>
+              {e.data.cefr && <span class="level-badge">{e.data.cefr.toUpperCase()}</span>}
+              <span class="topic-arrow" aria-hidden="true">→</span>
             </a>
           </li>
         ))}

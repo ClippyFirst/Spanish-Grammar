@@ -405,3 +405,13 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added RAE/ASALE source metadata and `review_status: verified`.
 - Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was found.
 - Current backlog: **40 of 196 grammar MDX pages (20.4%)**.
+
+
+## Progress update — 2026-09-24 (subjunctive tense precision)
+
+- Closed two mood pages: `imperfecto-subjuntivo` and `futuro-de-subjuntivo`.
+- Reworked imperfecto de subjuntivo around modal/hypothetical meaning plus temporal perspective, including both normative `-ra` and `-se` series and the distinction between simple and compound past subjunctive.
+- Corrected the future-subjunctive quick reference: fixed the conjugation example, added the compound form, clarified its restricted modern productivity, and distinguished recognition from active production.
+- Added RAE/ASALE source metadata and `review_status: verified` to both pages.
+- Academic Writing Toolkit returned only short-paragraph signals expected for componentized reference prose; no higher-level logic defect was reported.
+- Current backlog: **38 of 196 grammar MDX pages (19.4%)**.

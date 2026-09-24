@@ -468,3 +468,12 @@ All 11 revised pages were marked `review_status: verified` after the PR QA gate.
 - Academic Writing Toolkit found no paragraph-logic issue in the ser/estar sample; the subordinate-clause sample produced only the expected short-paragraph signal for componentized reference prose.
 - Both pages received review_status: verified and RAE/ASALE source metadata.
 - Current backlog: **56 of 196 grammar MDX pages (28.6%)**.
+
+
+## Progress update — 2026-09-24 (subjunctive quick guide)
+
+- Closed `moods/subjunctive-triggers-list` with a precision rewrite centered on construction rather than a mechanical trigger-word list.
+- Added contrasts for indicativo/subjuntivo, including negation, uncertain referents, temporal clauses, and contexts where both modes can occur with different interpretations.
+- Added RAE/ASALE source metadata and `review_status: verified`.
+- Academic Writing Toolkit returned only expected short-component signals; no higher-level paragraph-logic defect was identified.
+- Current backlog: **41 of 196 grammar MDX pages (20.9%)**.

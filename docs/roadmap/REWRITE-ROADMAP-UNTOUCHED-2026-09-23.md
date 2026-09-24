@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **58 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **34 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -129,10 +129,10 @@
 ## pronouns — 5 сторінок
 
 - [x] DONE — precision rewrite + verification `src/content/es/pronouns/body-parts-possession.mdx`
-- [ ] `src/content/es/pronouns/mismo-uno-generic.mdx`
-- [ ] `src/content/es/pronouns/reciprocal-pronouns.mdx`
-- [ ] `src/content/es/pronouns/relative-pronouns-review.mdx`
-- [ ] `src/content/es/pronouns/se-impersonal.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/pronouns/mismo-uno-generic.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/pronouns/reciprocal-pronouns.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/pronouns/relative-pronouns-review.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/pronouns/se-impersonal.mdx`
 
 ## articles — 2 сторінок
 
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **40** |
-| Частка незачеплених сторінок | **20.4%** |
+| Не змінені / залишені в rewrite backlog | **34** |
+| Частка незачеплених сторінок | **17.3%** |
 
 ### Protected baseline rule
 
@@ -415,3 +415,15 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added RAE/ASALE source metadata and `review_status: verified` to both pages.
 - Academic Writing Toolkit returned only short-paragraph signals expected for componentized reference prose; no higher-level logic defect was reported.
 - Current backlog: **38 of 196 grammar MDX pages (19.4%)**.
+
+
+## Progress update — 2026-09-24 (pronouns precision)
+
+- Closed four pronoun backlog pages: `mismo-uno-generic`, `reciprocal-pronouns`, `relative-pronouns-review`, and `se-impersonal`.
+- Reworked `mismo/uno/cualquiera/generic tú` around function and interpretation rather than treating all forms as interchangeable generic pronouns.
+- Reworked reciprocal pronouns around the overlap between reciprocal and reflexive `nos/os/se`, with explicit diagnostics such as `el uno al otro`, `entre sí`, and `mutuamente`.
+- Reworked the relative-pronoun quick guide around `que`, `quien`, article + relative forms, `cuyo`, `donde`, and `lo que`, including the distinction between antecedent-based and neuter `lo que`.
+- Reworked impersonal `se` around the structural contrast with pasiva refleja, including personal `a`, singular agreement in impersonal clauses, and plural agreement in passive-reflexive clauses.
+- All four pages are marked `review_status: verified` with RAE/ASALE source metadata.
+- Academic Writing Toolkit returned only expected short-paragraph signals for the componentized reference format; no higher-level paragraph-logic defect was reported.
+- Current backlog: **34 of 196 grammar MDX pages (17.3%)**.

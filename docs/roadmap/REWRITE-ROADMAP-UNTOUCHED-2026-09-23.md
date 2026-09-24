@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **94 залишаються** в untouched/review backlog. Нижче — саме ці 98 сторінок.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **90 залишаються** в untouched/review backlog. Нижче — саме ці 90 сторінок.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -58,9 +58,9 @@
 
 ## sentence-structure — 26 сторінок
 
-- [ ] `src/content/es/sentence-structure/absolute-constructions.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/absolute-constructions.mdx`
 - [ ] `src/content/es/sentence-structure/advanced-conditionals.mdx`
-- [ ] `src/content/es/sentence-structure/agreement.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/agreement.mdx`
 - [ ] `src/content/es/sentence-structure/cleft-pseudocleft.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/comparative-clauses.mdx`
 - [ ] `src/content/es/sentence-structure/compound-complex.mdx`
@@ -68,10 +68,10 @@
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/consecutive-clauses.mdx`
 - [ ] `src/content/es/sentence-structure/dislocation.mdx`
 - [ ] `src/content/es/sentence-structure/double-negation.mdx`
-- [ ] `src/content/es/sentence-structure/ellipsis.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/ellipsis.mdx`
 - [ ] `src/content/es/sentence-structure/emphasis-polarity-focus.mdx`
 - [ ] `src/content/es/sentence-structure/interjections.mdx`
-- [ ] `src/content/es/sentence-structure/modal-clauses.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/modal-clauses.mdx`
 - [ ] `src/content/es/sentence-structure/modality-speech-acts.mdx`
 - [ ] `src/content/es/sentence-structure/negation-patterns.mdx`
 - [ ] `src/content/es/sentence-structure/passive-voice.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **94** |
-| Частка незачеплених сторінок | **48.0%** |
+| Не змінені / залишені в rewrite backlog | **90** |
+| Частка незачеплених сторінок | **45.9%** |
 
 ### Protected baseline rule
 
@@ -240,3 +240,14 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Added construction-based explanations for argument structure, secondary predication, comparative patterns, `más/menos de` vs `que`, `tan/tanto... que`, and the boundary between comparison and consequence.
 - Added RAE/ASALE source metadata and `review_status: verified`.
 - Academic Writing Toolkit returned only short-paragraph signals; no higher-level paragraph-logic issue was used as a reason to expand the componentized reference prose.
+
+
+## Progress update — 2026-09-24 (sentence structure II)
+
+- Closed four additional P0 sentence-structure pages: `agreement`, `modal-clauses`, `absolute-constructions`, `ellipsis`.
+- Agreement was tightened around `usted/ustedes`, group nouns and variable concordance.
+- Modal clauses were rewritten around `como`, `según`, `conforme`, `tal como`, `como si`, and the modal/comparative distinction.
+- Absolute constructions were separated from related `al + infinitivo` temporal constructions instead of being reduced to one template.
+- Ellipsis was expanded around predicate ellipsis, comparative ellipsis, coordination, dialogue and recovery/ambiguity diagnostics.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
+- Current backlog: **90 of 196 grammar MDX pages (45.9%)**.

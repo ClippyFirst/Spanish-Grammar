@@ -65,7 +65,7 @@ for (const file of files) {
     if (headersMatch && rowsMatch) {
       compareTables += 1;
       const headers = arrayStringCount(headersMatch[1]);
-      const rowBlocks = [...rowsMatch[1].matchAll(/\\bcells:\\s*\\[([\\s\\S]*?)\\]/g)];
+      const rowBlocks = [...rowsMatch[1].matchAll(/\bcells:\s*\[([\s\S]*?)\]/g)];
       for (const row of rowBlocks) {
         const cells = arrayStringCount(row[1]);
         if (cells !== headers - 1) {

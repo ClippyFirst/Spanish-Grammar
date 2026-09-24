@@ -8,26 +8,30 @@ import { getCategory } from '../../../data/categories';
 
 export async function getStaticPaths() {
   const entries = await getCollection('es');
-  return entries.map((entry) => {
-    const ordered = [...entries].sort((a, b) => {
+  const ordered = [...entries].sort((a, b) => {
     const aPath = parseId(a.id);
     const bPath = parseId(b.id);
-    const categoryDelta = (getCategory(aPath.category)?.order ?? 999) - (getCategory(bPath.category)?.order ?? 999);
+    const categoryDelta =
+      (getCategory(aPath.category)?.order ?? 999) - (getCategory(bPath.category)?.order ?? 999);
     if (categoryDelta !== 0) return categoryDelta;
+
     const orderDelta = (a.data.order ?? 100) - (b.data.order ?? 100);
     if (orderDelta !== 0) return orderDelta;
+
     return aPath.slug.localeCompare(bPath.slug);
   });
+
   const topicNumbers = new Map<string, number>();
+
   return ordered.map((entry) => {
     const { category, slug } = parseId(entry.id);
     const topicNumber = (topicNumbers.get(category) ?? 0) + 1;
     topicNumbers.set(category, topicNumber);
+
     return {
       params: { category, slug },
       props: { entry, all: entries, topicNumber },
     };
-  });
   });
 }
 

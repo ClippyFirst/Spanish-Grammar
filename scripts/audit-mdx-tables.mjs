@@ -60,8 +60,8 @@ for (const file of files) {
     const end = source.indexOf('/>', start);
     if (end < 0) { failures.push({file:rel(file),line:source.slice(0,start).split(/\r?\n/).length,kind:'CompareTable syntax',expected:'closing />',actual:'missing',text:'<CompareTable'}); break; }
     const block = source.slice(start, end + 2);
-    const headersMatch = block.match(/headers=\\{\\[([\\s\\S]*?)\\]\\}/);
-    const rowsMatch = block.match(/rows=\\{\\[([\\s\\S]*?)\\]\\}/);
+    const headersMatch = block.match(/headers=\{\[([\s\S]*?)\]\}/);
+    const rowsMatch = block.match(/rows=\{\[([\s\S]*?)\]\}/);
     if (headersMatch && rowsMatch) {
       compareTables += 1;
       const headers = arrayStringCount(headersMatch[1]);

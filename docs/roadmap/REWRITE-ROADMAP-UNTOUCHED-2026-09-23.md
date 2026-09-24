@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **82 залишаються** в untouched/review backlog. Нижче — саме ці 90 сторінок.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **78 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -59,7 +59,7 @@
 ## sentence-structure — 26 сторінок
 
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/absolute-constructions.mdx`
-- [ ] `src/content/es/sentence-structure/advanced-conditionals.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/advanced-conditionals.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/agreement.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/cleft-pseudocleft.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/comparative-clauses.mdx`
@@ -73,8 +73,8 @@
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/interjections.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/modal-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/modality-speech-acts.mdx`
-- [ ] `src/content/es/sentence-structure/negation-patterns.mdx`
-- [ ] `src/content/es/sentence-structure/passive-voice.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/negation-patterns.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/passive-voice.mdx`
 - [ ] `src/content/es/sentence-structure/personal-a.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/predicative-complement.mdx`
 - [ ] `src/content/es/sentence-structure/question-formation.mdx`
@@ -82,7 +82,7 @@
 - [ ] `src/content/es/sentence-structure/si-clauses-overview.mdx`
 - [ ] `src/content/es/sentence-structure/subordinate-clauses.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verb-valency.mdx`
-- [ ] `src/content/es/sentence-structure/verum-focus.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/sentence-structure/verum-focus.mdx`
 - [ ] `src/content/es/sentence-structure/word-order-review.mdx`
 
 ## conjunctions — 4 сторінок
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **82** |
-| Частка незачеплених сторінок | **41.8%** |
+| Не змінені / залишені в rewrite backlog | **78** |
+| Частка незачеплених сторінок | **39.8%** |
 
 ### Protected baseline rule
 
@@ -267,3 +267,14 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Tightened concessive mood selection, negative concord, interjection/discourse-marker boundaries, punctuation, and modality/speech-act distinctions.
 - Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
 - Current backlog: **82 of 196 grammar MDX pages (41.8%)**.
+
+
+## Progress update — 2026-09-24 (sentence structure V)
+
+- Closed four additional P0 sentence-structure pages: `verum-focus`, `advanced-conditionals`, `negation-patterns`, `passive-voice`.
+- Verum focus was separated from ordinary positive `sí` and contrastive subject focus.
+- Advanced conditionals now distinguish `de + infinitivo`, `como + subjuntivo`, conditional `siempre que`, `por si`, and preventive `no sea que/no fuera que`.
+- Negation now treats negative concord rather than presenting Spanish double negation as a logical anomaly.
+- Passive voice now distinguishes `ser + participio`, pasiva refleja, and impersonal `se`, including agreement and personal `a` diagnostics.
+- Academic Writing Toolkit returned only expected short-paragraph signals on all four pages.
+- Current backlog: **78 of 196 grammar MDX pages (39.8%)**.

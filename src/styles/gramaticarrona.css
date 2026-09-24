@@ -1558,3 +1558,281 @@ p, li { max-width: 75ch; }
 .formula-grid > * {
   min-width: 0;
 }
+
+
+/* ==========================================================================
+   SECOND PASS — editorial consistency + component-level hardening
+   ==========================================================================
+   The redesign is intentionally content-first. These rules remove the last
+   legacy "card" affordances from article primitives and make every component
+   obey the same reading measure, wrapping, and touch-target rules.
+   ========================================================================== */
+
+/* Article typography: no heading or inline expression may create horizontal
+   pressure on the reading column. */
+.grammar-doc .prose h2,
+.grammar-doc .prose h3,
+.grammar-doc .prose h4,
+.grammar-doc .prose p,
+.grammar-doc .prose li,
+.grammar-doc .prose blockquote,
+.grammar-doc .prose dt,
+.grammar-doc .prose dd {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.grammar-doc .prose h2,
+.grammar-doc .prose h3,
+.grammar-doc .prose h4 {
+  text-wrap: balance;
+}
+
+.grammar-doc .prose a {
+  border-radius: 0;
+}
+
+.grammar-doc .prose strong,
+.grammar-doc .prose em,
+.grammar-doc .prose code,
+.grammar-doc .prose kbd {
+  overflow-wrap: anywhere;
+}
+
+.grammar-doc .prose img,
+.grammar-doc .prose video,
+.grammar-doc .prose iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Examples: editorial reference entries rather than legacy rounded cards. */
+.grammar-doc .example {
+  grid-template-columns: 32px minmax(0,1fr);
+  width: 100%;
+  box-sizing: border-box;
+  margin: 24px 0;
+  padding: 14px 0;
+  border: 0;
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  border-left: 2px solid var(--color-accent);
+  border-radius: 0;
+  background: transparent;
+}
+
+.grammar-doc .example > div {
+  min-width: 0;
+}
+
+.grammar-doc .example .ex-es,
+.grammar-doc .example .ex-uk,
+.grammar-doc .example .ex-gram,
+.grammar-doc .example .ex-note {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.grammar-doc .example .ex-es {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.grammar-doc .example .ex-uk {
+  color: var(--color-text-secondary);
+}
+
+.grammar-doc .example .ex-note {
+  border-top: 1px dashed var(--color-divider);
+}
+
+/* Minimal pairs: two equal editorial columns, without nested cards. */
+.grammar-doc .minpair {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 24px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.grammar-doc .minpair .mp-row {
+  min-width: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.grammar-doc .minpair .mp-row + .mp-row {
+  border-left: 1px solid var(--color-divider);
+  padding-left: 24px;
+}
+
+.grammar-doc .minpair .mp-es,
+.grammar-doc .minpair .mp-uk,
+.grammar-doc .minpair .mp-why {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.grammar-doc .minpair .mp-es {
+  color: var(--color-link);
+  font: 500 14px/1.5 var(--font-mono);
+}
+
+.grammar-doc .minpair .mp-uk {
+  color: var(--color-text-secondary);
+  font: 400 14px/1.5 var(--font-body);
+}
+
+/* Notes: preserve the documented accent rule and remove the old card shell. */
+.grammar-doc .note {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.grammar-doc .note > :last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Formula primitives: square editorial frame and safe wrapping for chips. */
+.grammar-doc .formula {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.grammar-doc .formula-body {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.grammar-doc .formula-body .tok {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Tables: the scroll container owns overflow; cells never push the page. */
+.grammar-doc .table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.grammar-doc table {
+  max-width: none;
+}
+
+.grammar-doc table.gram {
+  width: 100%;
+}
+
+/* All in-article interactive rows share the same hit-area geometry. */
+.grammar-doc .related-link,
+.grammar-doc .toc-mobile a {
+  min-height: 44px;
+  box-sizing: border-box;
+}
+
+.grammar-doc .related-link {
+  text-decoration: none;
+}
+
+.grammar-doc .related-link:hover {
+  background: var(--color-surface);
+}
+
+.grammar-doc .related-link:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Keep the arrow in one fixed visual column regardless of title length. */
+.grammar-doc .related-link::after {
+  width: 28px;
+  min-width: 28px;
+  justify-self: end;
+}
+
+@media (max-width: 767px) {
+  .grammar-doc .minpair {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .grammar-doc .minpair .mp-row + .mp-row {
+    border-left: 0;
+    border-top: 1px solid var(--color-divider);
+    padding-left: 0;
+    padding-top: 16px;
+  }
+
+  /* The design spec calls for a vertical correction on mobile. */
+  .grammar-doc .mistake {
+    padding: 14px 0;
+  }
+
+  .grammar-doc .mistake-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .grammar-doc .mistake-bad,
+  .grammar-doc .mistake-good {
+    width: 100%;
+    text-align: left;
+  }
+
+  .grammar-doc .mistake-arrow {
+    justify-self: start;
+    transform: none;
+    padding: 1px 0;
+  }
+
+  .grammar-doc .related-link {
+    grid-template-columns: minmax(0,1fr) 24px;
+  }
+
+  .grammar-doc .related-link::after {
+    width: 24px;
+    min-width: 24px;
+  }
+}
+
+/* Very narrow screens: never let metadata become a horizontal collision. */
+@media (max-width: 420px) {
+  .grammar-doc .article-kicker {
+    gap: .5rem;
+  }
+
+  .grammar-doc .article-kicker > * {
+    max-width: 100%;
+  }
+
+  .grammar-doc .prose {
+    font-size: 15.5px;
+  }
+
+  .grammar-doc .formula-body {
+    padding: .8rem;
+  }
+}

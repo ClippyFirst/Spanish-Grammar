@@ -1,4 +1,4 @@
-# Spanish Grammar — Coverage Matrix 323 → 196
+# Spanish Grammar — Coverage Matrix 323 → 208
 
 > Audit date: 2026-09-24  
 > Source checklist: `docs/roadmap/TOPICS-COMPLETE-UA.md`  
@@ -7,11 +7,11 @@
 
 ## Executive result
 
-The audit reconciles **323 checklist requirements** with **196 canonical MDX grammar pages**.
+The audit reconciles **323 checklist requirements** with **208 canonical MDX grammar pages**.
 
 The important result is:
 
-- **196/196 MDX entries are structurally routed into the Astro site.**
+- **208/208 MDX entries are structurally routed into the Astro site.**
 - **17/17 grammar categories are represented.**
 - The checklist is intentionally a **coverage map, not a one-page-per-bullet specification**. Many bullets are covered inside deeper canonical articles.
 - The targeted gap-closure pass completed the previously identified **13 requirements** (8 missing + 5 partial).

@@ -2,7 +2,7 @@
 
 > Точний операційний backlog статей, які **не змінювалися на поточній rewrite-гілці** після її базової точки порівняння з `main`.
 
-**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **66 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
+**Станом на 24.09.2026:** 196 MDX-сторінок загалом; 80 уже змінені в попередніх rewrite passes; **62 залишаються** в untouched/review backlog. Нижче — операційний список backlog; два раніше закриті conjunction pages також враховуються в загальній метриці, хоча не дублюються в цьому списку.
 
 > **Важливе уточнення:** «не змінювалася на цій гілці» не означає «ніколи не редагувалася в історії репозиторію». Це означає, що сторінка не була зачеплена поточним rewrite-проходом і тому потребує окремого рішення: повний rewrite, verification або свідоме відкладення.
 
@@ -41,17 +41,17 @@
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/estar-emotions-states.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/gerund-uses.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/gerundio.mdx`
-- [ ] `src/content/es/verbs/gustar-type-verbs.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/gustar-type-verbs.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/haber-auxiliary.mdx`
-- [ ] `src/content/es/verbs/haber-vs-tener.mdx`
-- [ ] `src/content/es/verbs/infinitive-as-noun.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/haber-vs-tener.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/infinitive-as-noun.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/infinitivo.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/irregular-verbs.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/orthographic-changes.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/participio.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/pronominal-verbs.mdx`
 - [x] DONE — precision rewrite + verification `src/content/es/verbs/ser-estar-hay.mdx`
-- [ ] `src/content/es/verbs/ser-estar-location.mdx`
+- [x] DONE — precision rewrite + verification `src/content/es/verbs/ser-estar-location.mdx`
 - [ ] `src/content/es/verbs/ser-estar-with-adjectives.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/stem-changing-verbs.mdx`
 - [x] DONE — deep rewrite + verification `src/content/es/verbs/verb-infinitive-patterns.mdx`
@@ -202,8 +202,8 @@
 |---|---:|
 | Усі grammar MDX-сторінки | **196** |
 | Змінені в попередніх rewrite passes | **80** |
-| Не змінені / залишені в rewrite backlog | **66** |
-| Частка незачеплених сторінок | **33.7%** |
+| Не змінені / залишені в rewrite backlog | **62** |
+| Частка незачеплених сторінок | **31.6%** |
 
 ### Protected baseline rule
 
@@ -312,4 +312,16 @@ The current precision pass closed seven additional backlog pages on this branch:
 - Verified `quantifiers` and `quantifiers-advanced` with current RAE/ASALE source metadata.
 - Tightened quantity/concordance framing and preserved the reference-component format.
 - Academic Writing Toolkit returned only expected short-paragraph signals on both pages.
-- Current backlog: **66 of 196 grammar MDX pages (33.7%)**.
+- Current backlog: **62 of 196 grammar MDX pages (31.6%)**.
+
+
+## Progress update — 2026-09-24 (verbs continuation)
+
+- Closed four remaining backlog verb pages in this focused block: `gustar-type-verbs`, `haber-vs-tener`, `infinitive-as-noun`, and `ser-estar-location`.
+- Reworked `gustar` around indirect-object/dative structure and subject–verb agreement rather than the informal “reverse logic” mnemonic.
+- Reworked `haber vs tener` around existential `hay`, possession, compound tenses, and the distinct resultative `tener + participio` construction.
+- Reworked infinitive nominality to distinguish nominal syntactic uses from verbal infinitives, article-based nominalization, prepositional infinitives, and `al + infinitivo`.
+- Reworked `ser/estar` location around entity localization vs event location, avoiding the permanent/temporary shortcut.
+- Academic Writing Toolkit found only short-paragraph signals expected for the componentized reference format on all four pages.
+- RAE/ASALE was used for the high-risk constructional claims and source metadata was refreshed.
+- Current backlog: **62 of 196 grammar MDX pages (31.6%)**.

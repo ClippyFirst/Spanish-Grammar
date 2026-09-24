@@ -167,7 +167,6 @@ const sections = [
 ];
 
 const canonical = (path: string) => withBase('/es/' + path + '/');
-const topicStatus = (_label: string) => 'опрацьовано';
 
 const totalRows = sections.reduce((sum, section) => sum + section.rows.length, 0);
 const sharedRows = sections.reduce(
@@ -241,9 +240,6 @@ const sharedRows = sections.reduce(
                   <span class="exam-topic-index">{String(index + 1).padStart(2, '0')}</span>
                   <span class="exam-topic-label">{label}</span>
                   <span class="exam-topic-source">{source}</span>
-                  <span class={'exam-topic-status status-' + topicStatus(label).replaceAll(' ', '-')}>
-                    {topicStatus(label)}
-                  </span>
                   <span class="exam-topic-arrow" aria-hidden="true">→</span>
                 </a>
               </li>
@@ -315,10 +311,6 @@ const sharedRows = sections.reduce(
 .exam-topic-index { color:var(--color-text-muted); font:500 11px/1 var(--font-mono); }
 .exam-topic-label { min-width:0; color:var(--color-text); font:500 14px/1.45 var(--font-body); overflow-wrap:anywhere; }
 .exam-topic-source { justify-self:start; color:var(--color-accent); font:600 9px/1.2 var(--font-mono); letter-spacing:.05em; white-space:nowrap; }
-.exam-topic-status { justify-self:start; color:var(--color-text-muted); font:500 9px/1.25 var(--font-mono); letter-spacing:.02em; }
-.status-опрацьовано { color:var(--color-correct); }
-.status-частково { color:var(--color-accent); }
-.status-потрібно-доповнити { color:var(--color-accent-dark); }
 .exam-topic-arrow { justify-self:end; color:var(--color-link); font-size:17px; }
 .exam-sources { margin-top:7rem; padding-top:1rem; border-top:3px solid var(--color-text); }
 .exam-sources h2 { margin-top:.5rem; }

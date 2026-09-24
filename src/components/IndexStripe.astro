@@ -1,6 +1,6 @@
 ---
 import { sortedCategories } from '../data/categories';
-import { categoryUrl } from '../utils/content';
+import { categoryUrl, withBase } from '../utils/content';
 
 const { pathname = '/' } = Astro.props;
 
@@ -11,7 +11,7 @@ function activeCategory() {
 const active = activeCategory();
 ---
 <aside class="index-stripe" aria-label="Покажчик категорій">
-  <a class="index-stripe-home" href="/" aria-label="Gramaticarrona — головна">G</a>
+  <a class="index-stripe-home" href={withBase('/')} aria-label="Gramaticarrona — головна">G</a>
   <nav>
     <ol>
       {sortedCategories.map((category) => (

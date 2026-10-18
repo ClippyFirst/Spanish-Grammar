@@ -364,3 +364,28 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 | `Veo a María → la veo` vs. leísmo | DPD `leísmo` | Clarified the standard baseline and the restricted scope of accepted masculine-person leísmo. |
 
 **Evidence boundary:** the cited NGLE paragraphs and DPD `leísmo` entry were opened and relevant text read. The entire inventory of alternations in §§ 34.8–34.10, all dialectal distributions, every example/translation, and related clitic phenomena were not fully audited. No corpus query, quantitative frequency analysis, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.
+
+## 19. `gustar` and gustar-type verbs — bounded construction audit — 2026-10-18
+
+### Direct evidence reviewed
+
+- RAE/ASALE DPD, entry `gustar`: the subject denotes the cause of pleasure/attraction; the person experiencing it is expressed by an indirect object. It directly gives singular/plural examples including `Le gustaban la buena música y los buenos libros` and a voseo example `Vos me gustás mucho`. https://www.rae.es/dpd/gustar
+- NGLE § 35.5b: indirect objects can denote an experiencer, as in the `gustar` construction.
+- NGLE § 35.5k–m: verbs of affect include `gustar, encantar, doler, interesar` and others; the indirect object denotes the experiencer, while the cause of the sensation often appears as subject. Some verbs have other frames in other senses, so the whole class must not be treated as perfectly uniform. https://www.rae.es/gram%C3%A1tica/sintaxis/complementos-indirectos-seleccionados-o-argumentales-i-destinatarios-y-experimentadores
+
+### Changes made
+
+- `src/content/es/verbs/gustar.mdx`: added direct DPD/NGLE source locators and explicit `draft` status; removed an under-sourced and potentially distracting claim/example about plural agreement with coordinated infinitives, retaining the well-supported baseline `Me gusta viajar`; changed the learner-error heading to neutral contrast examples.
+- `src/content/es/verbs/gustar-type-verbs.mdx`: downgraded `verified` to `draft`, replaced generic source metadata with direct DPD/NGLE locators, and changed the learner-error heading to neutral contrast examples. Its main construction account remains consistent with the direct source.
+
+### Evidence register
+
+| Claim/example | Direct source | Disposition |
+|---|---|---|
+| `Me gusta el café`: experiencer is indirect object, cause is subject | DPD `gustar`; NGLE § 35.5b, k–m | Retained with direct source locators. |
+| `Me gusta el libro` vs. `Me gustan los libros` | DPD `gustar` directly documents plural subjects with plural `gustar` | Retained as baseline agreement examples. |
+| `Me gusta viajar` | DPD/NGLE construction description | Retained; removed the unsourced coordination example `Me gustan viajar y cocinar` rather than claiming a full agreement rule for coordinated infinitives. |
+| Similar verbs (`encantar, interesar, doler, faltar`, etc.) | NGLE § 35.5k–m | Kept as a pedagogical group with explicit warning that individual verbs may have other meanings and argument structures. |
+| `a Juan le gustan los libros` / clitic doubling | NGLE indirect-object framework and DPD entry | Retained as a basic pattern; complete cross-dialect clitic-doubling distribution remains open. |
+
+**Evidence boundary:** DPD `gustar` and NGLE § 35.5 excerpts were opened and read. No full paradigm audit of every verb in the group, corpus frequency analysis, detailed regional clitic-doubling survey, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.

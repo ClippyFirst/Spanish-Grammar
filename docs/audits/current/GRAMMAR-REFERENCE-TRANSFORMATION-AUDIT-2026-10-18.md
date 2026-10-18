@@ -166,13 +166,13 @@
 ## 7. Першоджерела в репозиторії
 
 - [Цільова архітектура](../../architecture/GRAMMATICARRONA-TARGET-ARCHITECTURE.md)
-- [Карта тем](../roadmap/TOPICS-COMPLETE-UA.md)
-- [Архітектурна дорожня карта](../roadmap/ARCHITECTURE-ROADMAP.md)
+- [Карта тем](../../roadmap/TOPICS-COMPLETE-UA.md)
+- [Архітектурна дорожня карта](../../roadmap/ARCHITECTURE-ROADMAP.md)
 - [Поточний content graph snapshot](content-graph.md)
 - [Поточний design snapshot](design-deep.md)
-- [Content schema](../../src/content.config.ts)
-- [Основна стаття ser/estar](../../src/content/es/verbs/ser-estar.mdx)
-- [Порівняння ser/estar](../../src/content/comparisons/ser-estar.mdx)
+- [Content schema](../../../src/content.config.ts)
+- [Основна стаття ser/estar](../../../src/content/es/verbs/ser-estar.mdx)
+- [Порівняння ser/estar](../../../src/content/comparisons/ser-estar.mdx)
 
 ## Межі висновку
 

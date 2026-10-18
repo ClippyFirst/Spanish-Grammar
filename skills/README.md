@@ -1,10 +1,10 @@
 # Agent skills for Gramaticarrona
 
-This directory contains **project-specific, original skill specifications** for reviewing the Spanish grammar reference for Ukrainian speakers. They are not verbatim copies of third-party skills. Upstream projects are linked as inspiration or optional tools; check their current licences and dependencies before adopting their code.
+This directory contains **project-specific, original skill specifications** for reviewing the Spanish grammar reference for Ukrainian speakers. They are not verbatim copies of third-party skills. Upstream projects and official linguistic resources are linked as inspiration or evidence sources; verify current availability, scope and licence before adopting third-party code.
 
 ## How to use
 
-Choose a skill for a bounded task, provide the relevant MDX files and repository rules, and require evidence in the output. Do not run every skill on every change: use the routing matrix below and run the repository's existing `npm run qa` after edits.
+Choose a skill for a bounded task, provide relevant MDX files and repository rules, and require evidence in the output. Do not run every skill on every change: use the routing matrix below and run the repository's existing `npm run qa` after edits.
 
 | Skill | Primary use | Suggested stage |
 |---|---|---|
@@ -13,18 +13,25 @@ Choose a skill for a bounded task, provide the relevant MDX files and repository
 | [ukrainian-spanish-proofread](./ukrainian-spanish-proofread/SKILL.md) | Natural Ukrainian explanations and Spanish examples | Content review |
 | [learning-design](./learning-design/SKILL.md) | Learning goals, retrieval practice, scaffolding | Article design |
 | [education-content](./education-content/SKILL.md) | Lesson and exercise quality | Article design |
+| [grammar-exercise-validator](./grammar-exercise-validator/SKILL.md) | Answer keys, distractors, ambiguity and feedback | Exercise review |
 | [seo-audit](./seo-audit/SKILL.md) | Search/indexation review without duplicating QA | Release review |
 | [playwright-audit](./playwright-audit/SKILL.md) | Browser-level user journeys | Release review |
 | [astro-post-audit](./astro-post-audit/SKILL.md) | Built HTML inspection | Release review |
+| [grammar-site-accessibility-auditor](./grammar-site-accessibility-auditor/SKILL.md) | Accessible tables, exercises and interactions | Release review |
 | [seo-content-audit](./seo-content-audit/SKILL.md) | Content usefulness and search intent | Editorial review |
 | [spanish-grammar-fact-checker](./spanish-grammar-fact-checker/SKILL.md) | Spanish grammar claims against authoritative sources | Rule changes |
 | [spanish-ukrainian-contrastive](./spanish-ukrainian-contrastive/SKILL.md) | Function-based comparison of Spanish and Ukrainian | Comparative articles |
 | [spanish-variation-auditor](./spanish-variation-auditor/SKILL.md) | Geography, register and variation | Usage claims |
-| [grammar-coverage-auditor](./grammar-coverage-auditor/SKILL.md) | Corpus coverage, contradictions and topic graph | Periodic corpus audit |
+| [grammar-coverage-auditor](./grammar-coverage-auditor/SKILL.md) | Coverage, contradictions, duplication and topic graph | Periodic corpus audit |
+| [grammar-knowledge-graph-auditor](./grammar-knowledge-graph-auditor/SKILL.md) | Prerequisites, semantic links and navigation dependencies | Site architecture |
+| [pcic-curriculum-mapper](./pcic-curriculum-mapper/SKILL.md) | Coverage and sequencing against consulted PCIC sections | Curriculum design |
 | [spanish-orthography-auditor](./spanish-orthography-auditor/SKILL.md) | Spelling, accents, punctuation and capitalization | Examples and prose |
 | [spanish-forms-auditor](./spanish-forms-auditor/SKILL.md) | Conjugations, agreement, clitics and morphology | Tables and examples |
+| [spanish-morphology-paradigm-auditor](./spanish-morphology-paradigm-auditor/SKILL.md) | Cross-page paradigm correctness and regression fixtures | Tables and rule changes |
 | [spanish-example-corpus-auditor](./spanish-example-corpus-auditor/SKILL.md) | Example quality, minimal contrasts and provenance | Every article |
-| [learner-error-auditor](./learner-error-auditor/SKILL.md) | Evidence-based Ukrainian-speaker difficulty analysis | Exercises and explanations |
+| [spanish-example-naturalness-auditor](./spanish-example-naturalness-auditor/SKILL.md) | Contextual naturalness, idiomaticity and pedagogical fit | Example review |
+| [learner-error-auditor](./learner-error-auditor/SKILL.md) | Evidence-based learner difficulty analysis | Exercises and explanations |
+| [spanish-ukrainian-error-taxonomy](./spanish-ukrainian-error-taxonomy/SKILL.md) | Evidence-graded taxonomy of Ukrainian-speaker error hypotheses | Curriculum and diagnostics |
 | [spanish-corpus-evidence-auditor](./spanish-corpus-evidence-auditor/SKILL.md) | Reproducible corpus queries and usage claims | Frequency/usage claims |
 | [spanish-pragmatics-register-auditor](./spanish-pragmatics-register-auditor/SKILL.md) | Context, politeness and register | Usage explanations |
 | [spanish-cefr-scope-auditor](./spanish-cefr-scope-auditor/SKILL.md) | Evidence for level and prerequisite labels | Curriculum design |
@@ -34,20 +41,24 @@ Choose a skill for a bounded task, provide the relevant MDX files and repository
 
 1. For a disputed Spanish rule: fact-checker → variation auditor if relevant → citation auditor.
 2. For a Spanish/Ukrainian comparison: contrastive skill → fact-checker → terminology audit → proofreading.
-3. For examples or paradigms: forms auditor + example-corpus auditor; orthography auditor where needed.
-4. For frequency or distribution claims: corpus-evidence auditor + variation auditor.
-5. For pedagogy: learning-design + education-content; use CEFR audit only where levels are claimed.
-6. For site changes: existing `npm run qa` remains authoritative for repository gates; browser and SEO audits are complementary, not replacements.
+3. For examples or paradigms: morphology-paradigm auditor + example-corpus auditor; use naturalness and orthography audits where relevant.
+4. For frequency or distribution claims: corpus-evidence auditor + variation auditor. Inspect the actual corpus interface/data and preserve query metadata.
+5. For curriculum coverage: PCIC mapper → CEFR scope audit → grammar coverage and knowledge-graph audits. Treat PCIC alignment as an evidenced mapping, not a certification.
+6. For exercises: exercise validator → fact-checker for disputed rules → accessibility audit for interactive behavior.
+7. For Ukrainian-speaker difficulties: error taxonomy + learner-error auditor; keep observed evidence separate from contrastive hypotheses.
+8. For pedagogy: learning-design + education-content; use CEFR audit only where levels are claimed.
+9. For site changes: existing `npm run qa` remains authoritative for repository gates; browser, accessibility and SEO audits are complementary, not replacements.
 
-## Safety and quality contract
+## Evidence sources
 
-- These skills propose findings; they do not make unreviewed bulk edits.
-- Never fabricate citations, corpus attestations, regional labels, learner errors, CEFR mappings or exercise results.
-- Mark uncertainty and distinguish established rule, common tendency, pedagogical simplification and open question.
-- Prefer primary academic sources and official documentation; record access date for volatile web resources.
-- Preserve current architecture and content model. Read `ARCHITECTURE.md` and `DEVELOPMENT_RULES.md` before repository-wide changes.
-- Every finding should include file/heading, evidence, severity, recommended change and a regression test where appropriate.
-- External references are not endorsements. Verify availability, licence, maintenance, tool compatibility and dependency requirements before installing anything.
+- [Instituto Cervantes — Plan curricular del Instituto Cervantes (PCIC)](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/indice.htm): curriculum reference. Cite the exact section consulted; do not infer mappings from a title or search snippet.
+- [RAE — Nueva gramática de la lengua española](https://www.rae.es/gram%C3%A1tica/): grammatical description and normative analysis.
+- [RAE — Diccionario panhispánico de dudas](https://www.rae.es/dpd/): targeted usage and doubt resolution.
+- [ASALE — Corpus ASALE](https://www.asale.org/corpus-asale/): evaluate for corpus evidence when the relevant data, methodology and access are available.
+- [RAE — CORPES XXI](https://www.rae.es/banco-de-datos/corpes-xxi): pan-Hispanic corpus resource.
+- [RAE — CREA](https://www.rae.es/banco-de-datos/crea): reference corpus for contemporary Spanish, subject to its documented scope.
+- [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills): possible pedagogical workflow inspiration; inspect individual skill quality and licence.
+- [SkillMedev/skills — language-learning](https://github.com/SkillMedev/skills/tree/main/skills/language-learning): possible language-learning workflow inspiration; adapt selectively.
 
 ## Upstream leads
 
@@ -61,7 +72,18 @@ Choose a skill for a bounded task, provide the relevant MDX files and repository
 - [scayver/marketing-skills — education-content](https://github.com/scayver/marketing-skills/tree/main/skills/education-content)
 - [seranking/seo-skills — seo-content-audit](https://github.com/seranking/seo-skills/tree/main/skills/seo-content-audit)
 - [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills)
+- [SkillMedev/skills — language-learning](https://github.com/SkillMedev/skills/tree/main/skills/language-learning)
+
+## Safety and quality contract
+
+- These skills propose findings; they do not make unreviewed bulk edits.
+- Never fabricate citations, corpus attestations, regional labels, learner errors, CEFR mappings or exercise results.
+- Mark uncertainty and distinguish established rule, common tendency, pedagogical simplification and open question.
+- Prefer primary academic sources and official documentation; record access date for volatile web resources.
+- Preserve current architecture and content model. Read `ARCHITECTURE.md` and `DEVELOPMENT_RULES.md` before repository-wide changes.
+- Every finding should include file/heading, evidence, severity, recommended change and a regression test where appropriate.
+- External references are not endorsements. Verify availability, licence, maintenance, tool compatibility and dependency requirements before installing anything.
 
 ## Evaluation
 
-Use the checklists inside each skill and test at least one positive, one negative and one ambiguous case. Record false positives and unresolved questions. A skill is not validated merely because it produces a long report.
+Test at least one positive, one negative and one ambiguous case for each skill used. Record false positives, false negatives and unresolved questions. A skill is not validated merely because it produces a long report. Run the repository's `npm run qa` for code/content changes; this skill directory has not been runtime-tested merely by being committed.

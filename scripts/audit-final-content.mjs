@@ -138,11 +138,12 @@ for (const d of docs) {
         line: d.body.slice(0, m.index).split(/\r?\n/).length
       }));
 
-  // An odd number of triple-or-longer asterisk runs on one line is a strong
-  // signal of malformed mixed bold/italic markup such as ***word**.
+  // Catch the common malformed opener ***word** without flagging valid
+  // nested emphasis such as *Veo **a María***, where the closing run is triple.
   for (const [index, line] of d.body.split(/\r?\n/).entries()) {
-    const runs = line.match(/\*{3,}/g) ?? [];
-    if (runs.length % 2 === 1) hits.push({ match: line.trim(), line: index + 1 });
+    if (/\*{3}[^*\n]+\*{2}(?!\*)/.test(line)) {
+      hits.push({ match: line.trim(), line: index + 1 });
+    }
   }
 
   if (hits.length) findings.emphasis_artifacts.push({ page: d.rel, hits });

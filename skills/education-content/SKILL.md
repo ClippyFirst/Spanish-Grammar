@@ -1,27 +1,42 @@
 ---
 name: education-content
-description: Reviews lesson-like grammar content and exercises for alignment, sequencing, inclusion and feedback quality.
+description: Reviews the clarity, accuracy and usefulness of explanations, examples, tables and optional navigation in a grammar reference.
 ---
 
-# Education Content
+# Grammar Reference Content Review
 
 ## Checklist
-- Is the intended learner outcome explicit and achievable from the page?
-- Does each explanation, example and exercise serve that outcome?
-- Are prerequisite concepts introduced or linked before use?
-- Does difficulty rise for a reason rather than through unexplained vocabulary?
-- Does feedback explain the linguistic reason, not only mark right/wrong?
-- Are distractors plausible and diagnostically useful?
-- Are answer keys consistent with the explanation and accepted variation?
-- Can the activity be completed with the information available on the page?
-- Are instructions concise, accessible and unambiguous?
-- Is there a distinction between declarative knowledge (knowing a rule) and procedural use (choosing a form in context)?
+
+- Does the page answer its likely reader question directly?
+- Can a beginner understand the central explanation without already knowing unexplained terminology?
+- Does each paragraph, example, table or note serve a clear explanatory purpose?
+- Are prerequisites briefly explained or linked without requiring a fixed route?
+- Does the page distinguish a core rule from tendencies, exceptions, mnemonics and regional/register variation?
+- Do examples actually demonstrate the stated distinction and provide enough context?
+- Would a minimal pair, counterexample, compact table or diagnostic cue clarify a likely misunderstanding?
+- Are Ukrainian analogies function-based and accurate rather than literal equivalences?
+- Are source-dependent claims and learner-error claims appropriately evidenced?
+- Are related-topic links canonical, non-duplicative and useful for readers who want more detail?
+- Is the language concise, natural and accessible without removing important nuance?
 
 ## Workflow
-Map each activity to a learning objective; inspect its item and answer key; identify ambiguity; verify Spanish content with the fact-checker; propose targeted revisions. When a page is a reference rather than a lesson, recommend only lightweight self-checks.
+
+1. Identify the page's purpose and likely lookup intent.
+2. Audit explanation order, examples, contrasts, edge cases, terminology and links.
+3. Verify disputed Spanish claims with the fact-checker and relevant variation/source skills.
+4. Check Ukrainian explanation and analogies with the contrastive and proofreading skills.
+5. Recommend only changes that improve accuracy, clarity, discoverability or navigability.
+6. Treat exercises or answer feedback as out of scope unless the repository already contains them or the user explicitly asks to review them.
+7. Consider optional topic pathways and visualizations only where they solve a demonstrated navigation or comprehension problem.
 
 ## Output
-Objective-to-content matrix, exercise findings, revised sample item if needed, answer rationale and unresolved linguistic questions.
+
+Reader question; strengths; exact findings with file/section evidence; severity; proposed targeted revision; related-topic/pathway suggestions; source questions; acceptance criteria.
 
 ## Guardrails
-Do not fabricate learner research or claim an activity is validated. Avoid assumptions about nationality, age, disability or proficiency. Do not make a single dialect the default unless the article states its scope.
+
+- Do not require exercises, quizzes, distractors, scoring or lesson plans.
+- Do not fabricate learner research or claim comprehension gains without testing.
+- Do not make a single dialect the default unless the article explicitly scopes itself that way.
+- Do not infer that a page is complete from its length or number of sections.
+- Keep source verification separate from editorial style suggestions.

@@ -36,7 +36,7 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 | [spanish-pragmatics-register-auditor](./spanish-pragmatics-register-auditor/SKILL.md) | Context, politeness and register | Usage explanations |
 | [spanish-cefr-scope-auditor](./spanish-cefr-scope-auditor/SKILL.md) | Evidence for optional level and prerequisite labels | Conditional |
 | [spanish-terminology-auditor](./spanish-terminology-auditor/SKILL.md) | Spanish–Ukrainian linguistic metalanguage | Editorial consistency |
-| [grammar-visualization-auditor](./grammar-visualization-auditor/SKILL.md) | Decides whether a diagram adds value and specifies an accessible, accurate form | Conditional visual review |
+| [grammar-visualization-auditor](./grammar-visualization-auditor/SKILL.md) | Decides whether a diagram adds value and specifies an accessible, accurate form | Conditional visual review |\n| [spanish-claim-ledger-auditor](./spanish-claim-ledger-auditor/SKILL.md) | Maintains claim-level evidence traceability and cross-page review status | High-risk/cross-page audits |\n| [reference-answerability-auditor](./reference-answerability-auditor/SKILL.md) | Tests whether a page answers concrete reader questions clearly and efficiently | High-value pages and rewrites |
 
 ## Routing rules
 
@@ -49,7 +49,7 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 7. For Ukrainian-speaker difficulties: error taxonomy + learner-error auditor; keep observed evidence separate from contrastive hypotheses.
 8. For explanation design and optional topic paths: learning-design + education-content. Do not add mandatory course sequencing, progress tracking, spaced review or exercises. Use CEFR audit only where levels are claimed.
 9. For proposed graphics: visualization auditor → grammar fact-checker/variation audit as relevant → accessibility/browser review. No-visual is a valid result.
-10. For site changes: existing `npm run qa` remains authoritative for repository gates; browser, accessibility and SEO audits are complementary, not replacements.
+10. For site changes: existing `npm run qa` remains authoritative for repository gates; browser, accessibility and SEO audits are complementary, not replacements.\n11. For evidence/status governance across pages: Spanish claim-ledger auditor → citation-integrity auditor for disputed source support → fact-checker for unresolved linguistic claims.\n12. For whether a reference entry resolves the reader's question: answerability auditor → fact-checker for substantive claims → SEO-content audit only if discoverability is also in scope.
 
 
 ## Evidence sources

@@ -135,3 +135,9 @@ Three article types were sampled: the `ser/estar` canonical article + comparison
 **Дія:** переписано відповідні речення й приклади, щоб використовувати просте вкладення жирного та курсиву без неоднозначної послідовності зірочок. Зміни внесено в commits `a37dc06abc68054e2870fb77c8942082b90bebdd`, `adc7afb4ff66adfbe865698bf02813b5bcae3b32` і `a42cda44525df4966c3691c88b8f0dc74a456c0a`.
 
 **Статус:** source-level виправлення; повний CI QA та production build пройшли на commit `523134360d6ac0c1a8631abbbe6dcb214b78a739`; браузерна перевірка не проводилася.
+
+
+## Follow-up: claim-level source review (2026-10-18)
+
+A subsequent source-based pass is recorded in [CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md](./CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md). It adds official RAE/ASALE and FundéuRAE references to three canonical articles, corrects the didactically misleading duplicate `bad/good` example in `ser-estar`, narrows an unsupported broad regional statement, and qualifies the regional `Lo hay que terminar` variant rather than treating it as universally impossible. The three canonical articles now use `review_status: reviewed`, not `verified`; remaining claim/example and country-level checks are explicitly listed as open.
+

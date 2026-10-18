@@ -545,3 +545,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Editorial clarity / unsupported learner-error framing | `por-para.mdx`; `por-para-markers.mdx` | Repaired malformed Markdown in the canonical page; replaced unsubstantiated “typical mistakes of Ukrainian speakers” headings with neutral contrast framing; source metadata added, pages remain `draft`. |
 
 **Evidence boundary:** direct NGLE paragraphs were read. No corpus search, quantitative frequency calculation, country-by-country survey, full audit of every example/translation, independent Ukrainian editorial review, or browser/accessibility/SEO test was run. The pages are not fully verified.
+
+## 17. Verb–preposition government and personal `a` — bounded source/editorial pass — 2026-10-18
+
+| Requirement cluster | Canonical home | Finding / disposition |
+|---|---|---|
+| Personal `a` with people | `src/content/es/prepositions/verbs-with-prepositions.mdx` (cross-link example); canonical personal-`a` route requires path confirmation before a dedicated edit | NGLE § 34.8a–i was read directly: the direct-object marker is construction-sensitive, especially with human/animate, definite and referential objects. Do not formulate it as an absolute “a before every person” rule. |
+| `a + infinitive` after verbs such as `ayudar` | `verbs-with-prepositions.mdx` | NGLE § 36.6j supports purpose/prospective `a + infinitive` patterns including `ayudar a salir` and `enseñar a cantar`. Page now distinguishes this from personal `a` in `ayudar a alguien`. |
+| Government with `de`, `en`, `con`, `por` | `src/content/es/prepositions/verbs-with-prepositions.mdx` | NGLE §§ 36.7–36.10 provide category-specific source locators; the page remains a selected learning map, not a complete dictionary of all verbs or regional alternations. |
+| Preposition + `que`; queísmo | Same canonical page | DPD `queísmo` entry directly documents `acordarse de que`. Wording now separates the preposition selected by the main verb from mood selection in the subordinate clause. |
+| Editorial clarity and learner-error claims | Same canonical page | Malformed Markdown repaired, source metadata added, unsupported “typical mistakes of Ukrainian speakers” heading changed to neutral contrast examples. Status remains `draft`. |
+
+**Evidence boundary:** selected NGLE sections and DPD `queísmo` were checked. The full personal-`a` article path has not yet been identified for a dedicated edit; no corpus/frequency study, country-by-country survey, complete verb-pair audit, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.

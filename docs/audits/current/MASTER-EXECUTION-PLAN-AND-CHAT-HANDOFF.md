@@ -302,9 +302,9 @@
 **Знімок перевірено 2026-10-18.** Це live-стан перед checkpoint-комітом; перевірити QA на новому точному HEAD після коміту.
 
 - Попередня партія вимог 4.7–4.11: повний QA пройшов на точному HEAD `7b873e3ac2254847cc06a552312a8581020b987c`, run [39158975522](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158975522).
-- Поточна партія `ser / estar / hay`: canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e; також DPD § 4 і DLE entries дев’яти прикметників. Додано дев’ять контекстних пар, pair-level evidence register, приклад регіональної варіативності дня/дати й примітку про країнові варіанти сталих прикметникових зворотів. Після правки прикладів `bueno/malo` QA пройшов на точному HEAD.
+- Поточна партія `ser / estar / hay`: canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e; також DPD § 4 і DLE entries дев’яти прикметників. Додано дев’ять контекстних пар, pair-level evidence register, приклади регіональної варіативності та обмеження їхнього узагальнення. Audit-метадані синхронізовано з фактичними джерельними перевірками.
 - Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `b7b73cf2be7c6cbb6a2dfc11c4cc2a6a551ffe3a`. Повний QA успішний на точному SHA, run [39161437178](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161437178). Раніше QA виявив відсутню лапку в frontmatter `ser-estar-with-adjectives.mdx`; її виправлено до цього успішного запуску.
+- HEAD перед checkpoint-оновленням: `308c1140319af9349b5ffbb4388759e6dcae1fe4`. Повний QA успішний на точному SHA, run [39161644542](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161644542).
 - Локальне робоче дерево не перевірялося; зміни внесено через GitHub API.
 
 #### Live PR state
@@ -312,14 +312,14 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; 0 inline threads | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`b7b73cf2be7c6cbb6a2dfc11c4cc2a6a551ffe3a`) | 46 / 225 | 0 submitted reviews; 0 inline threads | Pass on exact HEAD, [run 39161437178](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161437178) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`308c1140319af9349b5ffbb4388759e6dcae1fe4`) | 46 / 228 | 0 submitted reviews; 0 inline threads | Pass on exact HEAD, [run 39161644542](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161644542) |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; 0 inline threads | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase, or retarget was performed.
 
 #### Batch: `ser / estar / hay`
 
-- Read canonical `src/content/es/verbs/ser-estar.mdx`, `src/content/comparisons/ser-estar.mdx`, `src/content/es/verbs/ser-estar-hay.mdx`, `src/content/es/sentence-structure/hay-vs-estar.mdx`, `src/content/es/verbs/ser-estar-location.mdx`, `src/content/es/verbs/ser-estar-with-adjectives.mdx`, and the prior claim-level pilot audit.
+- Read canonical `src/content/es/verbs/ser-estar.mdx`, `src/content/comparisons/ser-estar.mdx`, `src/content/es/verbs/ser-estar-hay.mdx`, `src/content/es/sentence-structure/hay-vs-estar.mdx`, `src/content/es/verbs/ser-estar-location.mdx`, `src/content/es/verbs/ser-estar-with-adjectives.mdx), and the prior claim-level pilot audit.
 - `ser-estar.mdx`: linked directly to NGLE §§ 37.7–37.9; replaced the heading that could imply empirically established “common mistakes” among Ukrainian speakers.
 - `ser-estar-location.mdx`: repaired malformed emphasis and neutralized the “common mistakes” heading; linked direct NGLE §§ 37.7–37.8; downgraded `verified` to `draft` pending full example-by-example verification.
 - `ser-estar-with-adjectives.mdx`: linked direct NGLE §§ 37.7/37.9 and DLE entries; downgraded `verified` to `draft`. DLE entries for `listo, aburrido, verde, rico, seguro, abierto, cerrado, bueno, malo` were opened. Added contextual Spanish examples and Ukrainian glosses for both readings, plus a pair-level evidence register. Refined context for `rico`, gendered Ukrainian forms for `listo/seguro`, and removed unrelated apocope from `bueno/malo` examples. Added sourced notes on country-dependent adjectival locutions.
@@ -334,10 +334,10 @@
 - G0: partial — live PR/base/head and review state checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
 - G2–G5: partial/open — direct NGLE/DPD evidence and DLE spot-check recorded; independent linguistic review, corpus and full regional checks remain unfinished.
-- G6: pass on exact HEAD `b7b73cf2be7c6cbb6a2dfc11c4cc2a6a551ffe3a`, run 39161437178; check the new checkpoint commit's own QA.
+- G6: pass on exact HEAD `308c1140319af9349b5ffbb4388759e6dcae1fe4`, run 39161644542; check the new checkpoint commit's own QA.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, перейти до наступної пріоритетної claim-level партії в `src/content/es/tenses/preterito-vs-imperfecto.mdx` та порівнянні: звірити приклади `saber/conocer/querer`, їхні часово-аспектуальні інтерпретації й українські переклади з точними розділами NGLE §§ 23.9, 23.10, 23.12; перевірити регіональні твердження окремо й не робити частотних висновків без корпусу.
+- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, перейти до наступної пріоритетної claim-level партії в `src/content/es/tenses/preterito-vs-imperfecto.mdx` та порівнянні `src/content/comparisons/past-tenses.mdx`: звірити приклади `saber/conocer/querer`, їхні часово-аспектуальні інтерпретації й українські переклади з точними розділами NGLE §§ 23.9, 23.10, 23.12; перевірити регіональні твердження окремо й не робити частотних висновків без корпусу.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати зелений QA чи наявність джерельних URL доказом мовної якості.
 
 ## 9. Передача в новий чат

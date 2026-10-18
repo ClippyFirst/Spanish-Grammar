@@ -25,4 +25,7 @@ Claim; current implied scope; evidence; variation dimensions; recommended label;
 - Build coverage across Spain, the Latin American macro-regions and individual countries when relevant; never treat the region list as proof that every country was checked.
 - Keep a repository-level coverage matrix with statuses such as checked, relevant but not checked, not relevant to this claim, and evidence unavailable.
 - Label 'general', 'pan-Hispanic', 'neutral' and 'unmarked' only with a defined meaning and evidence; do not use them as automatic synonyms.
-- Do not reduce Latin America to one variety.\n- Do not mark a valid form as an error because it differs from a textbook default.\n- Do not call every colloquial form non-standard; cite evidence.\n- Avoid unsupported claims about social class or speaker identity.
+- Do not reduce Latin America to one variety.
+- Do not mark a valid form as an error because it differs from a textbook default.
+- Do not call every colloquial form non-standard; cite evidence.
+- Avoid unsupported claims about social class or speaker identity.

@@ -5,6 +5,8 @@
 > Content source: `src/content/es/**.mdx` on `main`  
 > Purpose: distinguish real grammatical coverage from page count and identify requirements that are missing or only partially covered.
 
+> **Status note (2026-10-18):** this is a historical structural-coverage snapshot from 2026-09-24, not a fresh linguistic/source audit of the current branch. `full/embedded` means that a canonical treatment was mapped; it does **not** mean every claim is source-verified or that all country-level varieties have been checked. The source checklist still has unchecked boxes, so reconcile its state with this matrix rather than treating unchecked boxes as missing coverage. See `docs/audits/current/SPANISH-VARIETY-COVERAGE-MATRIX-2026-10-18.md` for the separate regional-scope audit, whose country-level statuses remain unverified.
+
 ## Executive result
 
 The audit reconciles **323 checklist requirements** with **208 canonical MDX grammar pages**.

@@ -70,7 +70,7 @@ These are not automatically errors: a broad overview and a specialized reference
 
 - The first QA run after the initial article comparison rewrite failed at `audit:tables`: the shared `CompareTable` component expects a label column plus one data cell when `headers` has two entries, while the first rewrite supplied an incompatible number of data cells. The first attempted correction still misunderstood the component schema, so QA failed a second time. Both failures were schema mismatches, not grammar or MDX syntax errors.
 - The table was then corrected to use two header entries and one data cell per row, with the explanation and example combined in that cell.
-- The latest run at the time of this report was still pending; check the run attached to the current PR head before calling QA successful. Earlier runs failed at `audit:tables` because of the component's expected column shape. Do not treat a pending run as passing.
+- The full QA run passed on commit `a23bc61e8ce551eddfbaec772518a469d07b04d0`: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39133237216. Results included 0 table column errors, 0 broken internal links across 208 grammar files and 5 comparison files, 0 broken/semantic-orphan graph findings, and successful static build. The build output now generates extensionless comparison routes such as `/comparisons/ser-estar/index.html`, `/comparisons/por-para/index.html`, `/comparisons/indicative-subjunctive/index.html`, and `/comparisons/articles/index.html`. Earlier failed runs were fixed before this successful run.
 
 ## Remaining work
 
@@ -89,4 +89,4 @@ The focused review found additional editorial defects in the article contrast pa
 
 The production build log exposed a more consequential routing mismatch: comparison pages were generated as paths such as `/comparisons/ser-estar.mdx/`, while links and canonical URLs were authored as `/comparisons/ser-estar/`. The route generator and shared URL helper now strip the source extension before generating paths, and `scripts/check-links.mjs` has been extended to validate both `/es/...` and `/comparisons/...` internal links and flag source extensions in comparison URLs. This explains why the earlier link checker could report zero issues while not checking comparison routes at all.
 
-The first build after the comparison rewrites also caught a missing `Mistake` component import in the rewritten `por-para.mdx`; the import has been added. The latest QA run for the final current branch head must still be confirmed before reporting a green result.
+The first build after the comparison rewrites also caught a missing `Mistake` component import in the rewritten `por-para.mdx`; the import has been added.

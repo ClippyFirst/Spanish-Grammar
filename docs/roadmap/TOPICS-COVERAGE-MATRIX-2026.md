@@ -522,3 +522,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 
 **Evidence boundary:** source paragraphs were read directly; no corpus-frequency or regional distribution analysis was performed. These changes improve bounded explanation and cross-page consistency; they do not constitute full verification of all subjunctive triggers or justify upgrading page status.
 
+## 15. Temporal conjunctions — bounded mood-selection check, 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| `hasta que` | `src/content/es/moods/subjunctive-triggers-list.mdx`; `subjunctive-triggers.mdx`; `when-not-subjunctive.mdx`; `comparisons/indicative-subjunctive.mdx` | NGLE § 25.14e directly supports indicative/subjunctive alternation in generic clauses and subjunctive in prospective contexts. The former combined `cuando/hasta que + subjunctive` row was split to avoid overgeneralization. |
+| `antes de que` | Same canonical/comparison pages | NGLE § 25.14h directly states that clauses complementing `antes` take subjunctive. Added a bounded example and source locator. |
+| `después de que` | Same pages | NGLE § 25.14h directly states that future indicative is excluded in temporal use; subjunctive is used prospectively. Present/past clauses show regional variation: indicative is habitual in American Spanish, subjunctive is the majority choice in European Spanish. Wording is source-scoped, not universalized to every speaker. |
+| `en cuanto` | Same pages | NGLE § 22.6p defines the temporal expression as ‘inmediatamente que’; § 31.14i discusses its immediacy meaning. Full mood distribution has not been separately verified and remains an explicit open item. |
+
+**Evidence boundary:** the cited NGLE paragraphs were read directly. No corpus/frequency analysis or regional survey was conducted. This is a bounded source-backed clarification, not complete verification of all temporal conjunctions.
+

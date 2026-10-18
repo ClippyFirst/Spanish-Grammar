@@ -7,13 +7,32 @@ import type { GrammarEntry } from '../utils/content';
 interface Props {
   entry: GrammarEntry;
   related: GrammarEntry[];
+  prerequisites?: GrammarEntry[];
+  contrasts?: GrammarEntry[];
+  extensions?: GrammarEntry[];
+  exceptions?: GrammarEntry[];
+  canonicalTopic?: GrammarEntry;
   topicNumber: number;
 }
 
-const { entry, related, topicNumber } = Astro.props;
+const {
+  entry,
+  related,
+  prerequisites = [],
+  contrasts = [],
+  extensions = [],
+  exceptions = [],
+  canonicalTopic,
+  topicNumber,
+} = Astro.props;
 const { category } = parseId(entry.id);
 const cat = getCategory(category);
 const canonical = entryUrl(entry);
+const typedTargets = new Set(
+  [...prerequisites, ...contrasts, ...extensions, ...exceptions, ...(canonicalTopic ? [canonicalTopic] : [])]
+    .map((target) => target.id),
+);
+const relatedOnly = related.filter((target) => !typedTargets.has(target.id));
 
 ---
 <BaseLayout
@@ -50,11 +69,79 @@ const canonical = entryUrl(entry);
           <slot />
         </div>
 
-        {related.length > 0 && (
+        {(canonicalTopic || prerequisites.length || contrasts.length || extensions.length || exceptions.length) && (
+          <section class="related semantic-navigation" aria-labelledby="semantic-navigation-heading">
+            <h2 id="semantic-navigation-heading">Навігація за змістом</h2>
+            {canonicalTopic && (
+              <div class="semantic-group">
+                <h3>Основне пояснення</h3>
+                <div class="related-links">
+                  <a class="related-link" href={entryUrl(canonicalTopic)} aria-label={`${canonicalTopic.data.title_es} — ${canonicalTopic.data.title_uk}`}>
+                    <span class="r-es" aria-hidden="true">{canonicalTopic.data.title_es}</span>
+                    <span class="r-uk" aria-hidden="true">{canonicalTopic.data.title_uk}</span>
+                  </a>
+                </div>
+              </div>
+            )}
+            {prerequisites.length > 0 && (
+              <div class="semantic-group">
+                <h3>Передумови</h3>
+                <div class="related-links">
+                  {prerequisites.map((r) => (
+                    <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
+                      <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
+                      <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+            {contrasts.length > 0 && (
+              <div class="semantic-group">
+                <h3>Порівняти з</h3>
+                <div class="related-links">
+                  {contrasts.map((r) => (
+                    <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
+                      <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
+                      <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+            {extensions.length > 0 && (
+              <div class="semantic-group">
+                <h3>Далі за темою</h3>
+                <div class="related-links">
+                  {extensions.map((r) => (
+                    <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
+                      <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
+                      <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+            {exceptions.length > 0 && (
+              <div class="semantic-group">
+                <h3>Обмеження та винятки</h3>
+                <div class="related-links">
+                  {exceptions.map((r) => (
+                    <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
+                      <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
+                      <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </section>
+        )}
+        {relatedOnly.length > 0 && (
           <section class="related" aria-labelledby="related-heading">
             <h2 id="related-heading">Пов'язані теми</h2>
             <div class="related-links">
-              {related.map((r) => (
+              {relatedOnly.map((r) => (
                 <a class="related-link" href={entryUrl(r)} aria-label={`${r.data.title_es} — ${r.data.title_uk}`}>
                   <span class="r-es" aria-hidden="true">{r.data.title_es}</span>
                   <span class="r-uk" aria-hidden="true">{r.data.title_uk}</span>
@@ -62,7 +149,8 @@ const canonical = entryUrl(entry);
               ))}
             </div>
           </section>
-        )}      </article>
+        )}
+      </article>
     </div>
   </div>
 </BaseLayout>

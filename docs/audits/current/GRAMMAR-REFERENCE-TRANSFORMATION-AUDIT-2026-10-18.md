@@ -215,3 +215,12 @@
 Звіт навмисно не оголошує всі статті verified і не рекомендує додавати нові статті без виявленої прогалини. Наступна робота — source-based review пріоритетних тем, повний прохід української редактури за ризиком, перевірка регіонально чутливих тверджень і ручний browser smoke test.
 
 Цей follow-up додано після source-level інвентаризації. QA для актуального head слід підтвердити окремим GitHub Actions запуском; успішний QA не замінює лінгвістичну або браузерну перевірку.
+
+
+## Follow-up — targeted coverage-matrix reconciliation (2026-10-18)
+
+A narrow cross-check of the historical `323 → 208` matrix against the current checklist and two canonical MDX pages found two stale residual mappings in the detailed crosswalk: requirement 2.13 still said no loanword/proper-name page existed, and requirement 3.1 still described noun-class coverage as partial. Both pages exist and cover the named scope, so the mappings now point to `spelling/loanwords-proper-names` and `nouns/noun-classes` respectively. This does not establish full linguistic adequacy.
+
+The two pages previously carried `review_status: verified` despite broad source notes without precise claim-level locators. Their status has been downgraded to `draft` pending claim-by-claim review. For loanwords, official RAE/ASALE material was located on adapted/unadapted loanwords (section 8 of the RAE summary of Ortografía) and capitalization of place names (Ortografía, “Lugares”, § 4.2.4.6.1). These sources establish the broad scope but do not verify all examples. For noun classes, the exact NGLE locator remains unresolved. No corpus search was performed and no corpus-attestation claim is made.
+
+This is a targeted spot check, not a full 323-row re-audit. The old count remains a structural baseline. The complete QA for PR #27's prior HEAD `d1a6817f4ea9895691ce5024592c145bc65ade33` succeeded in GitHub Actions run [39156433126](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39156433126). The edits in this follow-up require a new QA run on their resulting commit. The separately stacked PR #28 currently has a failing QA run (39155530069) on its synthetic merge ref; the log points to malformed YAML frontmatter at `src/content/comparisons/ser-estar.mdx:4:72`. That blocker is recorded but not edited in this PR #27 workstream.

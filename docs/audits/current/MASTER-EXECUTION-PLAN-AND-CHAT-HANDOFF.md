@@ -299,23 +299,42 @@
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок стану на 2026-10-18, 21:44 Europe/Kyiv; перед наступною роботою перевірити live.**
+**Знімок перевірено 2026-10-18.** Це live-стан на момент перевірки; повторно перевіряти перед наступною партією.
 
-- Активний workstream: документація й керування процесом у PR #27.
-- Активна гілка: docs/grammar-reference-architecture-2026-10-18.
-- HEAD SHA на момент останньої перевірки перед цим оновленням checkpoint: b0a9debe633fe3e9df48054aed799eb8c3bf9384.
-- Робоче дерево: не перевірялося локально; зміни виконувалися через GitHub contents API.
-- PR: #26 (skill suite), #27 (архітектура/аудит), #28 (два додаткові skills) були знайдені як відкриті; їхні base/head і залежності потрібно перевірити перед роботою.
-- Останній знайдений CI: QA run 39156376005 для SHA b0a9debe633fe3e9df48054aed799eb8c3bf9384 був у статусі in_progress (крок Run full QA) під час останньої перевірки; результат ще не підтверджено. Попередній run 39156279965 для SHA 103fd423a455e0281f2998a4bce71a1acd89fc8c завершився cancelled. Після цього оновлення checkpoint знову перевірити latest PR head і його CI.
-- Файли останньої партії: docs/audits/current/MASTER-EXECUTION-PLAN-AND-CHAT-HANDOFF.md; README.md.
-- Виправлені знахідки: створено master plan і додано посилання на нього в README.
-- Відкриті знахідки: актуальний QA після документальних змін; повна звірка матриці покриття; claim-level перевірка всього корпусу; регіональний аудит; браузер/accessibility/SEO smoke test.
-- Перевірки, які реально виконано: GitHub-файли прочитано; актуальний список відкритих PR перевірено; CI run знайдено.
-- Перевірки, які не виконано: локальний npm run qa; браузерний smoke test; повний корпусний лінгвістичний фактчек.
-- Статус gates: G0 — checkpoint зафіксовано, але live PR details треба перевірити; G1–G5 — частково/не завершено; G6 — pending для SHA вище; G7 — не підтверджено; G8 — не готово.
-- **Наступна конкретна дія:** після цього оновлення перевірити live HEAD і CI для PR #27, а також base/head PR #26/#27/#28; якщо QA пройшов, почати Етап 1 — звірку історичної матриці 323 → 208 з поточними канонічними MDX-файлами.
-- Рішення/обмеження: не зливати PR без прямого дозволу; не заявляти publication-ready; не додавати теми/skills без доведеної прогалини; використовувати «українськомовний».
-- Commit/PR: [PR #27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27); це оновлення checkpoint створить новий commit, тому його SHA та CI потрібно перевірити окремо.
+- Активний workstream: обмежена звірка матриці покриття та доказових статусів у PR #27. Не змішувати зміни з PR #26/#28.
+- Активна гілка: `docs/grammar-reference-architecture-2026-10-18`.
+- HEAD SHA: `d1a6817f4ea9895691ce5024592c145bc65ade33` до цієї партії. Ця партія створить новий commit; його SHA та CI треба перевірити окремо.
+- Робоче дерево локально не перевірялося; зміни виконуються через GitHub API.
+
+#### Live PR state
+
+| PR | Стан | Base → head | Файли / commits | Review | CI на перевіреному SHA |
+|---|---|---|---:|---|---|
+| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No submitted reviews or inline threads found; no requested reviewers | QA success, run [39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`d1a6817f4ea9895691ce5024592c145bc65ade33`) | 37 / 126 | No submitted reviews or inline threads found; no requested reviewers | QA success, run [39156433126](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39156433126) |
+| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No submitted reviews or inline threads found; no requested reviewers | QA failure, run [39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), on synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`. Not addressed in this PR #27 batch. |
+
+All three PRs remain open. #28 is stacked on #26; #26 and #27 independently target `main`. No merge, close, rebase or retarget was performed. Review status is based on live review/thread queries, which returned none; it does not imply an external linguistic review.
+
+#### This batch — targeted matrix reconciliation
+
+- The 323 → 208 matrix is explicitly a historical structural baseline, not a linguistic-verification register. The full 323-row crosswalk has **not** been freshly re-audited.
+- A targeted spot check found stale mapping text for requirements 2.13 and 3.1. The crosswalk now points to the existing canonical pages `spelling/loanwords-proper-names` and `nouns/noun-classes`.
+- Their prior `review_status: verified` values were downgraded to `draft`: source notes were too broad for claim-level verification. The loanwords page now links to official RAE/ASALE material on adapted/unadapted loanwords and capitalization of place names; this is a source lead, not verification of every example. The noun-class page still needs an exact NGLE locator and claim-level review.
+- Transformation audit and matrix record this limitation. No corpus search was run; no browser test was performed.
+- QA on the pre-batch PR #27 HEAD passed (run 39156433126). QA for the resulting commit is pending and must be checked against its exact SHA.
+
+#### Gates
+
+- G0: partial — PR/head/base and current CI checked; local worktree not available.
+- G1: partial — two stale crosswalk entries corrected; complete 323-row reconciliation remains open.
+- G2–G5: partial/open — claim-level source traceability, regional checks, content depth and cross-page consistency remain unfinished.
+- G6: pending for this batch's final SHA; prior head passed.
+- G7: not run — no real-browser/accessibility/SEO smoke-test protocol.
+- G8: blocked/not ready — no publication-ready determination; PRs remain unmerged.
+
+- **Наступна конкретна дія:** перевірити workflow run для нового PR #27 HEAD. Якщо QA успішний, продовжити звірку матриці секція за секцією, наступною обмеженою партією перевіривши фактичні канонічні сторінки й точні джерельні локатори для наступних stale/неоднозначних mappings. Після завершення структурної звірки повернутися до пріоритетного claim-level аудиту ser/estar/hay.
+- Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не підвищувати статуси без claim-level доказів; не трактувати структурну матрицю як доказ мовної якості.
 
 ## 9. Передача в новий чат
 

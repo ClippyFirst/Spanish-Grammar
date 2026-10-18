@@ -121,11 +121,11 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 - **27** → `spelling/capitalization`.
 - **28–29** → `spelling/punctuation-capitalization`.
 - **30** → `spelling/punctuation-capitalization`.
-- **31** → **partial**; no explicit loanword/proper-name orthography page.
+- **31** → `spelling/loanwords-proper-names` (canonical page exists; this mapping is structural and does not certify the page's examples or sources).
 
 ## 3. Nouns — items 32–48
 
-- **32** → **partial** across `nouns/genero` + `nouns/noun-special-cases`.
+- **32** → `nouns/noun-classes` (canonical page exists; this mapping is structural and does not certify the page's examples or sources).
 - **33–37** → `nouns/genero` + `gender-exceptions`.
 - **38–40** → `nouns/numero-plural` + `irregular-plurals`.
 - **41–43** → `nouns/noun-special-cases`.
@@ -411,3 +411,25 @@ The audit used:
 - targeted inspection of canonical pages for the requirements that could otherwise be falsely counted as covered.
 
 No claim here depends on the public GitHub Pages instance being current.
+
+
+## 7. Targeted reconciliation follow-up — 2026-10-18
+
+A source-level spot check of checklist requirements **2.13** and **3.1** found that the detailed mapping section still contained pre-gap-closure notes claiming that no loanword/proper-name page existed and that noun classes were only partially mapped. Both claims were stale:
+
+- **2.13** now maps to `src/content/es/spelling/loanwords-proper-names.mdx`.
+- **3.1** now maps to `src/content/es/nouns/noun-classes.mdx`.
+
+The two canonical files exist and address the named concepts. This confirms a canonical home, not the sufficiency of every explanation, example, translation, or source. The existing `review_status: verified` labels on these two pages were therefore conservatively downgraded to `draft` pending claim-level review: their source notes did not provide enough precise, claim-linked locators to justify a verified status.
+
+Evidence boundaries for this pass:
+
+- For loanwords, the official RAE/ASALE material distinguishes adapted from unadapted loanwords and describes their orthographic treatment; the RAE's `Ortografía` page on places documents capitalization of country/city names. These support the broad topic scope, but do not verify every example on the page.
+- For noun classes, the article's general NGLE source note does not identify a precise section. An exact paragraph-level locator and claim-by-claim check remain open.
+- This is a **targeted spot check**, not a fresh 323-row reconciliation. The 323 → 208 figures and 0 structural-gap count remain a dated structural baseline, not a current count of linguistically verified requirements.
+
+Official source leads checked for this pass:
+- RAE/ASALE, *Principales novedades de la Ortografía de la lengua española*, section 8 on the treatment of loanwords: https://www.rae.es/sites/default/files/Principales_novedades_de_la_Ortografia_de_la_lengua_espanola.pdf
+- RAE/ASALE, *Ortografía de la lengua española*, “Lugares”, § 4.2.4.6.1 on countries, cities and localities: https://www.rae.es/ortografía/lugares
+
+**Next:** continue the matrix crosswalk section by section; where a page's status or evidence is materially stronger than the available record, inspect the canonical content and its comparison (if one exists) before changing claims or status. Do not infer linguistic verification from the mapped slug.

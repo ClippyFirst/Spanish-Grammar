@@ -315,7 +315,7 @@ CEFR A1–C2 — додаткова фасета для пошуку й реко
 - **Від речення до клітик:** `fundamentals/grammar-basics` → `articles/definite-indefinite` → `pronouns/objeto-directo-indirecto` → `pronouns/object-pronoun-placement` → `pronouns/double-object-pronouns`.
 - **Як описувати минуле:** `tenses/tenses-overview` → `tenses/preterito-vs-imperfecto` → `tenses/preterito-perfecto` → `tenses/pluscuamperfecto`; додавати регіональну примітку лише там, де конкретна відмінність підтверджена.
 - **Від subjuntivo до умов:** `moods/subjuntivo-presente` → `moods/subjunctive-triggers-list` → `sentence-structure/conditional-sentences` → `sentence-structure/advanced-conditionals`.
-- **Звертання та наказовий спосіб:** `regional/tu-usted-vosotros-ustedes` → `regional/voseo` → `moods/imperative-overview` → `moods/imperative-pronouns`; не подавати одну регіональну систему як універсальну.
+- **Звертання та наказовий спосіб:** `pronouns/tu-usted-vosotros-ustedes` → `regional/voseo` → `moods/imperative-overview` → `moods/imperative-pronouns`; не подавати одну регіональну систему як універсальну.
 
 Нові маршрути додавати лише після перевірки, що існуючі компоненти/утиліти їх підтримують.
 

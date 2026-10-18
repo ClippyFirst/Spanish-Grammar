@@ -107,7 +107,8 @@ Three article types were sampled: the `ser/estar` canonical article + comparison
 | Claim-level source integrity | Open | Requires actual source-by-source review |
 | Regional coverage | Open | No exhaustive country-by-country audit performed |
 | Visualization suitability | Recommendations recorded | No SVG created or published |
-| GitHub Actions QA/build | Passed on commit `523134360d6ac0c1a8631abbbe6dcb214b78a739` | 213 content pages audited by the existing final-content gate; this is not a linguistic proofread |\n| Manual browser review | Not run | Still required for interaction, viewport and real rendering checks |
+| GitHub Actions QA/build | Passed on commit `523134360d6ac0c1a8631abbbe6dcb214b78a739` | 213 content pages audited by the existing final-content gate; this is not a linguistic proofread |
+| Manual browser review | Not run | Still required for interaction, viewport and real rendering checks |
 
 ## 5. Next actions
 

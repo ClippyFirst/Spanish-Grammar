@@ -592,3 +592,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Editorial/source quality | Both pages | Direct NGLE/DPD locators added, malformed Markdown repaired, unsupported learner-error headings changed to neutral contrast examples, both pages set to `draft`. |
 
 **Evidence boundary:** direct NGLE §§ 16.7, 16.11, 16.14, 34.8, 35.2 and DPD `leísmo` were checked. This is not a full dialect survey or complete audit of every clitic placement environment. No corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
+
+## 21. `si` conditionals — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Open/real conditions | `src/content/es/sentence-structure/conditional-sentences.mdx`; `si-clauses-overview.mdx` | NGLE § 47.8e supports present indicative in the protasis with current, habitual or prospective readings. Wording explicitly avoids equating indicative with a condition already realized. |
+| Potential/hypothetical conditions | Same pages | NGLE § 47.8g, i supports common `si + imperfecto de subjuntivo` patterns; text avoids describing every such condition as impossible or counterfactual. |
+| Past counterfactuals | Same pages | NGLE § 47.8j–k supports the common `pluscuamperfecto de subjuntivo + condicional compuesto` correlation. It is presented as a typical pattern, not a universal algorithm for every mixed conditional. |
+| Forms excluded from ordinary present-day standard `si` protases | Same pages | NGLE § 47.8d directly rejects future, conditional, present subjunctive and present perfect subjunctive in ordinary conditional protases; wording keeps the rule construction-specific and acknowledges the historical boundary. |
+| Source/status/editorial quality | Same pages | Malformed Markdown repaired; NGLE locators added; previously `verified` overview downgraded to `draft`; learner-error headings neutralized. |
+
+**Evidence boundary:** NGLE § 47.8a–k read directly for the claims above. No full survey of all conditional correlations, corpus/frequency study, country-by-country variation study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.

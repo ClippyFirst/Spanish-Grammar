@@ -114,9 +114,76 @@ for (const d of docs) {
   if (hits.length) findings.forbidden_ukrainomov.push({ page: d.rel, hits: [...new Set(hits)] });
 }
 
-const artifact = /\*{3}(?![^*\n]*\*{3})[^*\n]+/g;
+function findEmphasisArtifacts(body) {
+  const withoutFences = body.replace(/\x60\x60\x60[\s\S]*?\x60\x60\x60/g, block => block.replace(/[^\n]/g, ' '));
+  const lines = withoutFences.split(/\r?\n/);
+  const findings = [];
+  let blockLines = [];
+  let blockStart = 1;
+
+  function flushBlock() {
+    if (!blockLines.length) return;
+    const raw = blockLines.join('\n').replace(/`[^`\n]*`/g, '');
+    const tokens = [...raw.matchAll(/\*+/g)];
+    const stack = [];
+    for (const token of tokens) {
+      const run = token[0];
+      const index = token.index ?? 0;
+      const before = raw.slice(0, index);
+      const linePrefix = before.slice(before.lastIndexOf('\n') + 1);
+      const after = raw.slice(index + run.length).split('\n')[0];
+      const line = blockStart + before.split('\n').length - 1;
+
+      // A leading "* item" is a Markdown list marker, not emphasis.
+      if (run.length === 1 && /^\s*$/.test(linePrefix) && /^\s/.test(after)) continue;
+
+      if (run.length === 1) {
+        if (stack[stack.length - 1] === 'italic') stack.pop();
+        else stack.push('italic');
+      } else if (run.length === 2) {
+        if (stack[stack.length - 1] === 'bold') stack.pop();
+        else stack.push('bold');
+      } else if (run.length === 3) {
+        const n = stack.length;
+        const nestedPair = n >= 2 &&
+          ((stack[n - 2] === 'italic' && stack[n - 1] === 'bold') ||
+           (stack[n - 2] === 'bold' && stack[n - 1] === 'italic'));
+        if (nestedPair) {
+          stack.pop();
+          stack.pop();
+        } else if (stack.length === 0) {
+          stack.push('italic', 'bold');
+        } else {
+          findings.push({ match: run, line, reason: 'mismatched emphasis delimiter' });
+        }
+      } else {
+        findings.push({ match: run, line, reason: 'unsupported asterisk run' });
+      }
+    }
+    if (stack.length) {
+      findings.push({
+        match: 'unclosed ' + stack.join('+'),
+        line: blockStart + blockLines.length - 1,
+        reason: 'unclosed emphasis'
+      });
+    }
+    blockLines = [];
+  }
+
+  for (let i = 0; i < lines.length; i++) {
+    if (/^\s*$/.test(lines[i]) || /^\s*\*{3}\s*$/.test(lines[i]) || /^\s*---+\s*$/.test(lines[i])) {
+      flushBlock();
+      blockStart = i + 2;
+    } else {
+      blockLines.push(lines[i]);
+    }
+  }
+  flushBlock();
+  return findings;
+}
+
 for (const d of docs) {
-  const hits = [...d.body.matchAll(artifact)].map(m => ({ match: m[0], line: d.body.slice(0, m.index).split(/\\r?\\n/).length }));
+  const hits = findEmphasisArtifacts(d.body);
   if (hits.length) findings.emphasis_artifacts.push({ page: d.rel, hits });
 }
 

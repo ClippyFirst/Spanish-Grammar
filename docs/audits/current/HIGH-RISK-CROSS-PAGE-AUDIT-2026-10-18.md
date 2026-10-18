@@ -79,3 +79,14 @@ These are not automatically errors: a broad overview and a specialized reference
 3. Build a canonical-topic registry for overlapping page pairs: `canonical_slug`, `page_role`, `distinct_purpose`, and reciprocal links.
 4. Audit each regional claim at the exact level it states (country/region/register), rather than treating “Latin America” as one uniform variety.
 5. Do not mass-upgrade `review_status`; structural QA and a comparison-page rewrite do not establish `verified` status for all claims.
+
+
+### 5. Canonical article page and comparison route generation — corrected
+
+**Files:** `src/content/es/articles/definite-vs-indefinite.mdx`, `src/content/es/articles/definite-indefinite.mdx`, `src/utils/comparisons.ts`, `src/pages/comparisons/[slug].astro`, `scripts/check-links.mjs`.
+
+The focused review found additional editorial defects in the article contrast page: malformed emphasis around examples, and a `Mistake` component that visually labeled `No tengo un coche` as incorrect while its explanation admitted the form can be grammatical. The example is now presented as a context-sensitive contrast, the malformed emphasis is corrected, and the edited page was downgraded from `verified` to `reviewed` rather than claiming that the full article had been freshly verified. The basic article page now has direct RAE/ASALE source links and a reciprocal link to the contrast page; the terminology was corrected to `українськомовний`.
+
+The production build log exposed a more consequential routing mismatch: comparison pages were generated as paths such as `/comparisons/ser-estar.mdx/`, while links and canonical URLs were authored as `/comparisons/ser-estar/`. The route generator and shared URL helper now strip the source extension before generating paths, and `scripts/check-links.mjs` has been extended to validate both `/es/...` and `/comparisons/...` internal links and flag source extensions in comparison URLs. This explains why the earlier link checker could report zero issues while not checking comparison routes at all.
+
+The first build after the comparison rewrites also caught a missing `Mistake` component import in the rewritten `por-para.mdx`; the import has been added. The latest QA run for the final current branch head must still be confirmed before reporting a green result.

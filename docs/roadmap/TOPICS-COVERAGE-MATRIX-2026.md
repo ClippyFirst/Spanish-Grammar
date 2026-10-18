@@ -500,3 +500,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 
 **Evidence boundary:** direct NGLE sections were read; no corpus frequency analysis was performed. Regional labels describe patterns in the cited academic source, not every speaker in a named region.
 
+## 13. Subjunctive / indicative selection — source-traceability batch, 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Construction-based subjunctive selection | `src/content/es/moods/subjunctive-triggers.mdx`; `subjunctive-triggers-list.mdx` | Added direct NGLE §§ 25.2, 25.3, 25.7, 25.12 and 25.13 links; repaired malformed Markdown in the detailed trigger page and quick-reference source list. Quick reference status downgraded from `verified` to `draft` because the previous source metadata was generic. |
+| When indicative is normal | `src/content/es/moods/when-not-subjunctive.mdx` | Added direct NGLE locators for affirmative belief/knowledge, negation, relative clauses, and conjunctions. Narrowed the `Creo que sea verdad` correction to neutral affirmative assertion. |
+| Indicative/subjunctive comparison | `src/content/comparisons/indicative-subjunctive.mdx` | Added direct NGLE links and an explicit scope note: the page is an overview, not an exhaustive list of all triggers/alternations. |
+| Claim-level examples | Same four pages | Spot-checked volition (`querer que`), affirmative vs. negated belief, relative-clause reference, temporal `cuando`, and concessive `aunque` against the relevant NGLE sections. |
+
+**Evidence boundary:** this is a bounded source-traceability/claim spot-check, not full verification of every trigger, alternation, or regional pattern. These pages remain `draft` where claim-level evidence is incomplete.
+

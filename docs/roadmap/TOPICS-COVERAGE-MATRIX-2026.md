@@ -569,3 +569,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Source/markup/editorial quality | Both pages | Direct NGLE/DPD locators added; malformed Markdown repaired; unsupported learner-error framing replaced with neutral contrast examples. Short page continues to link to the detailed canonical page. |
 
 **Evidence boundary:** direct NGLE §§ 34.8a–t, relevant § 34.10 sections, and DPD `leísmo` were reviewed. This is not a complete audit of all alternations, regional distributions, examples/translations, or related clitic phenomena. No corpus query, frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
+
+## 19. `gustar` and gustar-type verbs — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Experiencer and grammatical subject | `src/content/es/verbs/gustar.mdx`; `gustar-type-verbs.mdx` | DPD `gustar` and NGLE § 35.5b, k–m directly support the experiencer as indirect object and the cause/thing experienced as subject in the core construction. |
+| Singular/plural agreement | Same pages | DPD directly documents plural agreement with coordinated nominal subjects. The core examples `Me gusta el libro / Me gustan los libros / Me gusta viajar` remain. An under-sourced coordinated-infinitive example was removed. |
+| Similar verbs | Same pages | NGLE § 35.5k–m lists verbs of affect including `gustar, encantar, doler, interesar`; pages now explicitly warn that this is a pedagogical grouping, not a claim that all verbs are full synonyms or share every construction. |
+| Status and source traceability | Same pages | Direct DPD/NGLE locators added; previously `verified` duplicate page downgraded to `draft`; unsupported learner-error framing changed to neutral contrast examples. |
+
+**Evidence boundary:** selected DPD/NGLE passages read. No full audit of all verbs in the group, regional clitic-doubling survey, corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test. Both pages remain `draft`.

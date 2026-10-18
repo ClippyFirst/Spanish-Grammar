@@ -4,7 +4,7 @@ import { withBase } from './content';
 export type ComparisonEntry = CollectionEntry<'comparisons'>;
 
 export function comparisonUrl(slug: string): string {
-  const cleanSlug = slug.replace(/\\.(mdx?|md)$/i, '').replace(/^\\/+|\\/+$/g, '');
+  const cleanSlug = slug.replace(/\.(md|mdx)$/i, '').replace(/^\/+|\/+$/g, '');
   return withBase(`/comparisons/${cleanSlug}/`);
 }
 

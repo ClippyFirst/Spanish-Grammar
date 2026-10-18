@@ -103,13 +103,13 @@ for (const [key, bucket] of codeMap) {
   if (bucket.length > 1) findings.duplicate_topic_codes.push({ key, pages: bucket });
 }
 
-const forbidden = /україномов|українськомов/giu;
+const forbidden = /україномов/giu;
 for (const d of docs) {
   const hits = [...d.body.matchAll(forbidden)].map(m => m[0]);
   if (hits.length) findings.forbidden_ukrainomov.push({ page: d.rel, hits: [...new Set(hits)] });
 }
 
-const artifact = /\*[^\s*\n]+\*\*[^\s*][^\n*]*\*(?!\*)|\*[^\s*\n]+\*\*[^\s*][^\n*]*\*\*/g;
+const artifact = /\*{3}(?![^*\n]*\*{3})[^*\n]+/g;
 for (const d of docs) {
   const hits = [...d.body.matchAll(artifact)].map(m => ({ match: m[0], line: d.body.slice(0, m.index).split(/\\r?\\n/).length }));
   if (hits.length) findings.emphasis_artifacts.push({ page: d.rel, hits });

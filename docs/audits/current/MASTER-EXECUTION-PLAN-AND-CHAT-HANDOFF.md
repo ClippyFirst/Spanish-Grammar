@@ -303,7 +303,7 @@
 
 - Активний workstream: обмежена звірка матриці покриття та доказових статусів у PR #27. Не змішувати зміни з PR #26/#28.
 - Активна гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD SHA: `d1a6817f4ea9895691ce5024592c145bc65ade33` до цієї партії. Ця партія створить новий commit; його SHA та CI треба перевірити окремо.
+- HEAD SHA перед цією follow-up правкою: `a3b56924ef8675af707df864d295cee4cc9b15ec`; GitHub Actions QA успішний у run [39157376441](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39157376441). Ця правка checkpoint/source locator створить новий commit; його SHA та CI треба перевірити окремо.
 - Робоче дерево локально не перевірялося; зміни виконуються через GitHub API.
 
 #### Live PR state
@@ -311,7 +311,7 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI на перевіреному SHA |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No submitted reviews or inline threads found; no requested reviewers | QA success, run [39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`d1a6817f4ea9895691ce5024592c145bc65ade33`) | 37 / 126 | No submitted reviews or inline threads found; no requested reviewers | QA success, run [39156433126](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39156433126) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`a3b56924ef8675af707df864d295cee4cc9b15ec`) | 39 / 127 | No submitted reviews or inline threads found; no requested reviewers | QA success, run [39157376441](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39157376441) |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No submitted reviews or inline threads found; no requested reviewers | QA failure, run [39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), on synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`. Not addressed in this PR #27 batch. |
 
 All three PRs remain open. #28 is stacked on #26; #26 and #27 independently target `main`. No merge, close, rebase or retarget was performed. Review status is based on live review/thread queries, which returned none; it does not imply an external linguistic review.
@@ -320,9 +320,9 @@ All three PRs remain open. #28 is stacked on #26; #26 and #27 independently targ
 
 - The 323 → 208 matrix is explicitly a historical structural baseline, not a linguistic-verification register. The full 323-row crosswalk has **not** been freshly re-audited.
 - A targeted spot check found stale mapping text for requirements 2.13 and 3.1. The crosswalk now points to the existing canonical pages `spelling/loanwords-proper-names` and `nouns/noun-classes`.
-- Their prior `review_status: verified` values were downgraded to `draft`: source notes were too broad for claim-level verification. The loanwords page now links to official RAE/ASALE material on adapted/unadapted loanwords and capitalization of place names; this is a source lead, not verification of every example. The noun-class page still needs an exact NGLE locator and claim-level review.
+- Their prior `review_status: verified` values were downgraded to `draft`: source notes were too broad for claim-level verification. The loanwords page now links to official RAE/ASALE material on adapted/unadapted loanwords and capitalization of place names; this is a source lead, not verification of every example. For noun classes, the official Manual NGLE contents index identifies §§ 12.1.2 and 12.5.1, but the relevant section text and claims remain unverified.
 - Transformation audit and matrix record this limitation. No corpus search was run; no browser test was performed.
-- QA on the pre-batch PR #27 HEAD passed (run 39156433126). QA for the resulting commit is pending and must be checked against its exact SHA.
+- QA passed on the pre-checkpoint-update PR #27 HEAD `a3b56924ef8675af707df864d295cee4cc9b15ec` (run 39157376441). The current checkpoint/source-locator follow-up will create a new SHA; its exact CI result must be checked before relying on it.
 
 #### Gates
 
@@ -333,7 +333,7 @@ All three PRs remain open. #28 is stacked on #26; #26 and #27 independently targ
 - G7: not run — no real-browser/accessibility/SEO smoke-test protocol.
 - G8: blocked/not ready — no publication-ready determination; PRs remain unmerged.
 
-- **Наступна конкретна дія:** перевірити workflow run для нового PR #27 HEAD. Якщо QA успішний, продовжити звірку матриці секція за секцією, наступною обмеженою партією перевіривши фактичні канонічні сторінки й точні джерельні локатори для наступних stale/неоднозначних mappings. Після завершення структурної звірки повернутися до пріоритетного claim-level аудиту ser/estar/hay.
+- **Наступна конкретна дія:** перевірити workflow run для нового PR #27 HEAD, створеного цією правкою. Якщо QA успішний, продовжити звірку матриці секція за секцією з перевіркою фактичних канонічних сторінок і точних джерельних локаторів для stale/неоднозначних mappings. Після завершення структурної звірки повернутися до пріоритетного claim-level аудиту ser/estar/hay.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не підвищувати статуси без claim-level доказів; не трактувати структурну матрицю як доказ мовної якості.
 
 ## 9. Передача в новий чат

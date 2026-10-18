@@ -425,7 +425,7 @@ The two canonical files exist and address the named concepts. This confirms a ca
 Evidence boundaries for this pass:
 
 - For loanwords, the official RAE/ASALE material distinguishes adapted from unadapted loanwords and describes their orthographic treatment; the RAE's `Ortografía` page on places documents capitalization of country/city names. These support the broad topic scope, but do not verify every example on the page.
-- For noun classes, the article's general NGLE source note does not identify a precise section. An exact paragraph-level locator and claim-by-claim check remain open.
+- For noun classes, the official Manual NGLE contents index now identifies § 12.1.2 «Clases principales de sustantivos» (p. 209) and § 12.5.1 «Clases de nombres propios» (p. 218). This is a locator to the relevant sections, not evidence that their full text or the page's individual claims have been checked; the page remains draft.
 - This is a **targeted spot check**, not a fresh 323-row reconciliation. The 323 → 208 figures and 0 structural-gap count remain a dated structural baseline, not a current count of linguistically verified requirements.
 
 Official source leads checked for this pass:

@@ -488,3 +488,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 
 **Evidence boundary:** this is a bounded source-backed check of three lexical contrasts, not a full audit of every stative verb or every use of indefinido/imperfecto. Ukrainian translations are editorially checked but have not received independent native-speaker review. The regional note about perfecto compuesto/indefinido remains a separate next task.
 
+## 12. Regional claim-level follow-up: compound perfect vs. simple past — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Geographic distribution of `he cantado / canté` | `src/content/es/tenses/preterito-vs-imperfecto.mdx`; `src/content/comparisons/past-tenses.mdx` | NGLE §§ 23.7b–c directly describes several patterns, not a simple Spain/Latin America split. The comparison note now distinguishes central/southern Spain, Mexico/Central America/Caribbean, Chile/much of Argentina, and coastal Peru/some Andean varieties. |
+| Recent-past expressions | Same pages | NGLE § 23.8a contrasts `La he visto hace un momento` in Lima/Madrid/La Paz with `La vi hace un momento` in Montevideo/Santiago/Mexico City. Added as a specific sourced example, not a universal rule. |
+| “Esta semana comí mucho” | `src/content/comparisons/past-tenses.mdx` | Removed from the categorical mistake list; now noted as context- and variety-dependent. |
+| Closed past adjuncts with compound perfect | Same comparison | NGLE § 23.8d records geographic restrictions, so `Ayer he comido` is qualified as non-neutral for Peninsular standard rather than universally impossible. |
+| Explanatory model | Comparison table | Rewrote simplistic “result now / cut off from present” descriptions. Tense choice is framed as temporal/aspectual interpretation with regional variation. |
+
+**Evidence boundary:** direct NGLE sections were read; no corpus frequency analysis was performed. Regional labels describe patterns in the cited academic source, not every speaker in a named region.
+

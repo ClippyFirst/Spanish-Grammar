@@ -123,7 +123,7 @@ The nine rows in `ser-estar-with-adjectives.mdx` now include full Spanish exampl
 
 ### Follow-up dictionary spot-check: adjective contrasts
 
-The official DLE entries for all seven adjectives listed on `ser-estar-with-adjectives.mdx` were opened and checked as lexical evidence leads:
+The official DLE entries for all nine adjectives listed on `ser-estar-with-adjectives.mdx` were opened and checked as lexical evidence leads:
 
 - `listo`: the entry distinguishes a prepared/disposed sense from a sagacious/astute sense, supporting the broad contrast *estar listo* vs *ser listo* without making the construction the dictionary's only organizing principle. https://dle.rae.es/listo
 - `aburrido`: the entry gives “que causa aburrimiento”; it does not by itself establish every predicate/state contrast for *ser/estar*. https://dle.rae.es/aburrido
@@ -134,7 +134,7 @@ The official DLE entries for all seven adjectives listed on `ser-estar-with-adje
 
 This is a lexical spot-check, not full verification of each *ser/estar* pairing. DLE entries establish possible senses; the NGLE sections on the copular contrast still need full-text claim checks to support construction choice and the Ukrainian translation in context. The page remains `draft`.
 
-### Pair-level register for the seven adjective examples
+### Pair-level register for the nine adjective examples
 
 | Pair in the canonical page | Direct lexical / grammatical support reviewed | Assessment for the current example | Remaining limitation |
 |---|---|---|---|
@@ -155,7 +155,7 @@ A Ukrainian editorial spot-check then refined the glosses for gender where neede
 
 - The direct online NGLE texts for §§ 37.7 and 37.8 were read through the relevant subsections; the relevant portions of § 37.9 were also inspected. This is not an exhaustive audit of every example or every subsection in the full chapters.
 - The RAE conjugation page, FundéuRAE, DPD § 4 and NGLE §§ 15.6/41.6 support the impersonal-singular baseline and the definiteness effect; they do not exhaustively verify every example's register, frequency, regional distribution, or discourse context.
-- The seven adjective entries have now been spot-checked in the DLE, but this does not exhaustively verify each construction-to-sense pairing or all Ukrainian translations in context.
+- The nine adjective entries have now been spot-checked in the DLE, but this does not exhaustively verify each construction-to-sense pairing or all Ukrainian translations in context.
 - No corpus query, country-by-country frequency audit, browser test, accessibility/SEO smoke test, or release-readiness assessment was performed.
 - Do not raise any affected page to `verified` on the basis of this pass alone.
 

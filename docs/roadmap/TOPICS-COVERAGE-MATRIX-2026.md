@@ -477,3 +477,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 
 **Evidence boundary:** direct NGLE text was read for §§ 15.6a–s, 37.7a–k, 37.8a–k, relevant portions of 37.9a–i, and 41.6a–e. Representative quantitative/endophoric exceptions in NGLE §§ 15.6j–s were added to the canonical pages; not every example's register, frequency, or regional distribution was audited. DPD, RAE conjugation and FundéuRAE support the impersonal-singular standard and document register/region variation. No corpus query, country-specific frequency audit, full dictionary audit of adjective pairs, or browser/release test was performed. Structural coverage remains distinct from linguistic verification.
 
+## 11. Targeted claim-level follow-up: `indefinido / imperfecto` lexical contrasts — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Aspectual contrast; `saber` | `src/content/es/tenses/preterito-vs-imperfecto.mdx`; `src/content/comparisons/past-tenses.mdx` | NGLE § 23.9j directly supports `saber` in perfective form as acquiring information (`supo la verdad`). The canonical `Sabía la respuesta / Supe la respuesta` contrast and Ukrainian glosses were retained. |
+| Aspectual/lexical contrast; `conocer` | Same canonical/comparison pages | NGLE § 23.9j directly distinguishes perfective `conocer` (“enter into contact with someone”) from imperfective knowledge. The `Conocía a Ana / Conocí a Ana` contrast and translations were retained. |
+| Contextual meanings of `querer` | Same canonical page; NGLE § 23.11e–f for polite imperfect | DLE lists distinct senses including desire, determination/resolution, and attempt. The page now warns that `Quise ir` is context-dependent and is not automatically “decided” or “tried”; added a separate note for polite `Quería pedirte un favor` so it is not conflated with a literal past desire. |
+| Source traceability | NGLE §§ 23.9j–k and 23.11e–f; DLE entries `saber`, `conocer`, `querer` | Direct sources are linked from the canonical page and recorded in the claim-level audit. No frequency or regional-distribution claims were added. |
+
+**Evidence boundary:** this is a bounded source-backed check of three lexical contrasts, not a full audit of every stative verb or every use of indefinido/imperfecto. Ukrainian translations are editorially checked but have not received independent native-speaker review. The regional note about perfecto compuesto/indefinido remains a separate next task.
+

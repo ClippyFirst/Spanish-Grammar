@@ -299,21 +299,21 @@
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок перевірено 2026-10-18.** Це стан перед checkpoint-комітом; після коміту перевірити QA на його точному SHA.
+**Знімок перевірено 2026-10-18.** Значення нижче — live-стан перед цим checkpoint-комітом; перевірити CI нового checkpoint HEAD після коміту.
 
-- Активний workstream: обмежена source-traceability/editorial партія вимог 4.7–4.11 у PR #27. Матрицю оновлено. Наступний workstream після успішного QA — claim-level аудит `ser/estar/hay`.
+- Активний workstream: завершено обмежену source-traceability/editorial партію вимог 4.7–4.11 у PR #27. Матрицю оновлено. Наступний workstream — claim-level аудит `ser/estar/hay`.
 - Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `785016f992b9bbb0fa88a9b02e5f86f5009c9481`.
-- QA run [39158813855](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158813855) на попередньому SHA `a787c2c1d7dab8484b6529aa1bebf6009c439f68` завершився невдачею: duplicate frontmatter key у `neutral-lo.mdx`. Причину усунуто на `785016f992b9bbb0fa88a9b02e5f86f5009c9481` — прибрано застарілий другий `updated` ключ. Повторний QA [39158874775](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158874775) був `in_progress` під час запису; після checkpoint-коміту перевірити новий HEAD.
+- HEAD перед checkpoint-оновленням: `bf418f230ec99ee16566a78af2a665055aa99291`; повний GitHub Actions QA успішний на цьому точному SHA, run [39158908540](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158908540).
+- Попередні QA невдачі на `a787c2c` і `3f46c00` були спричинені duplicate frontmatter key у `neutral-lo.mdx`; зайвий `updated` ключ прибрано, і QA на `bf418f2` пройшов.
 - Робоче дерево локально не перевірялося; зміни виконуються через GitHub API.
 
 #### Live PR state
 
 | PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
-| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No reviews or inline threads; no requested reviewers | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`785016f992b9bbb0fa88a9b02e5f86f5009c9481`) | 44 / 148 | No reviews or inline threads; no requested reviewers | Run [39158874775](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158874775) pending/last observed in progress |
-| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No reviews or inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
+| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No reviews or inline threads; no requested reviewers | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`bf418f230ec99ee16566a78af2a665055aa99291`) | 44 / 149 | No reviews or inline threads; no requested reviewers | Pass on exact HEAD, [run 39158908540](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158908540) |
+| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No reviews or inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. Live review and inline-thread queries for all three PRs returned none. No merge, close, rebase or retarget was performed.
 
@@ -329,10 +329,10 @@
 
 #### Gates and next action
 
-- G0: partial — PR/base/head and review state checked; local worktree unavailable.
+- G0: partial — live PR/base/head and review state checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
 - G2–G5: partial/open — source locators recorded; claim-level, regional and example verification remain unfinished.
-- G6: pending — inspect QA for the new checkpoint SHA.
+- G6: pass on pre-checkpoint SHA `bf418f230ec99ee16566a78af2a665055aa99291`; verify the new checkpoint commit’s exact SHA.
 - G7: not run. G8: blocked; no publication-ready determination.
 
 - **Наступна конкретна дія:** перевірити повний QA на новому PR #27 HEAD після цього checkpoint-коміту. Якщо успішний, почати обмежений claim-level аудит `ser/estar/hay`, звіряючи конкретні твердження й приклади з точними розділами RAE/ASALE та оновлюючи аудит і матриці. Не підвищувати статуси без доказів.

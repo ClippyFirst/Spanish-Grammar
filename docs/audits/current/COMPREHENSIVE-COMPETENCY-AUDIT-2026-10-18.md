@@ -184,3 +184,18 @@
 - [Пілотний claim-level аудит](./CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md)
 - [Пілот skill suite](./SKILL-SUITE-PILOT-2026-10-18.md)
 - [Матриця skill suite у PR #26](https://github.com/ClippyFirst/Spanish-Grammar/blob/feat/grammar-research-skills-2026-10-18/docs/audits/current/SKILL-SUITE-MATRIX-2026-10-18.md)
+
+
+## Follow-up: high-risk cross-page audit (2026-10-18)
+
+A subsequent targeted pass inspected three comparison pages against the canonical grammar content and found stale or overgeneralized formulations in all three. They have been rewritten and linked to the canonical topic pages:
+
+- `src/content/comparisons/articles.mdx`: corrected absolute claims about first mention, definite/indefinite articles and `Soy un médico`; added zero-article framing and canonical links.
+- `src/content/comparisons/por-para.mdx`: removed an example that mixed preposition choice with incorrect pronoun form; softened the universal claim about Ukrainian “для”; separated semantic relations and linked canonical references.
+- `src/content/comparisons/indicative-subjunctive.mdx`: replaced the oversimplified “facts vs attitudes/unreality” model with construction, reference and temporal-context contrasts.
+
+See [HIGH-RISK-CROSS-PAGE-AUDIT-2026-10-18.md](./HIGH-RISK-CROSS-PAGE-AUDIT-2026-10-18.md) for detailed findings and primary RAE/ASALE references.
+
+The same sample confirmed that some related pages overlap substantially (`pronouns/personal-a` vs `sentence-structure/personal-a`; `verbs/gustar` vs `verbs/gustar-type-verbs`; two article pages). This is a content-information-architecture issue to resolve with explicit page roles and reciprocal links, not by blindly deleting one URL. The current audit therefore increases confidence that the architecture is usable while also confirming that the existing corpus needs editorial reconciliation beyond structural QA.
+
+The first run after the comparison rewrite failed because the new `CompareTable` had three data cells per row where the component expects a label column plus two data cells. That mismatch was fixed. Final QA status must be read from the latest run for the current PR head, not from an earlier successful commit.

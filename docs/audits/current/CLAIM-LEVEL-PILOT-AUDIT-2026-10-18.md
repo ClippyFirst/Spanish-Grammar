@@ -1,7 +1,7 @@
 # Пілотний claim-level аудит граматичних пояснень — 2026-10-18
 
 **Гілка:** `docs/grammar-reference-architecture-2026-10-18`  
-**Сфера:** пілотні claim-level перевірки `ser/estar/hay`, `pretérito indefinido/imperfecto` та розміщення клітик; не повний аудит усього репозиторію.  
+**Сфера:** пілотні claim-level перевірки `ser/estar/hay`, `pretérito indefinido/imperfecto` та вибору indicativo/subjuntivo; не повний аудит усього репозиторію.  
 **Підхід:** зіставлення конкретних граматичних узагальнень із доступними академічними джерелами RAE/ASALE і FundéuRAE; корекція надмірно категоричних формулювань; фіксація того, що ще не перевірено.
 
 > **Обмеження:** це пілотний аудит тверджень, а не повний лінгвістичний рецензентський висновок для всіх прикладів і всіх регіонів. Метадані `review_status: reviewed` означають, що статтю пройдено редакторсько-джерельним оглядом; це не рівнозначно `verified`.
@@ -195,4 +195,27 @@ The relevant NGLE sections were opened directly. This is a bounded check of thes
 - The canonical tense page now links NGLE §§ 23.7–23.8 and summarizes the regional patterns without making a frequency claim beyond the academic description.
 
 **Evidence boundary:** this is a source-backed revision of the regional claims, not a corpus-based frequency study. It does not imply that each cited form is equally common or acceptable for every speaker within a named region.
+
+## 7. Subjunctive trigger pages: source-traceability and bounded claim check — 2026-10-18
+
+**Files:** `src/content/es/moods/subjunctive-triggers.mdx`, `subjunctive-triggers-list.mdx`, `when-not-subjunctive.mdx`, and `src/content/comparisons/indicative-subjunctive.mdx`.
+
+### Changes and direct evidence
+
+- `subjunctive-triggers.mdx`: repaired malformed emphasis in the explanation of `cuando`; added `review_status: draft`, update date, and direct NGLE links for §§ 25.2, 25.3, 25.7, 25.12, and 25.13; neutralized the “typical mistakes” heading.
+- `subjunctive-triggers-list.mdx`: downgraded `review_status: verified` to `draft` because the prior sources were generic book titles without claim-level locators; replaced them with direct NGLE section links and repaired malformed Markdown in the source list.
+- `when-not-subjunctive.mdx`: added `review_status: draft`, date, and direct NGLE locators for basic mood selection, negation, relative clauses, and subordinating conjunctions. The `Creo que sea verdad` contrast now explicitly scopes the correction to neutral affirmative assertion rather than every possible context with `creer`.
+- `comparisons/indicative-subjunctive.mdx`: added direct NGLE links and a scope note; corrected title casing.
+
+### Claim-level spot-check
+
+| Claim/example | NGLE evidence reviewed | Disposition |
+|---|---|---|
+| `Quiero que vengas` / `Quiero que viene` | NGLE § 25.2 (inductors of mood) and § 25.3 (basic selection contexts) describe volition/ influence constructions selecting subjunctive. | Kept as a neutral-standard contrast; this is a construction rule, not a claim that every occurrence of `que` selects subjunctive. |
+| `Creo que está bien` / `No creo que esté bien` | NGLE §§ 25.3 and 25.7 describe the basic indicative selection in affirmative belief and the role of negation in mood choice. | Kept with scope language: the generalization is about neutral assertion, not all questions, quotation, or pragmatic contexts. |
+| `Busco el libro que explica esto` / `Busco un libro que explique esto` | NGLE § 25.12 discusses reference and interpretation of nominal groups containing relative clauses. | Kept as a reference/identifiability contrast, not as “real vs. unreal.” |
+| `Cuando llegas a casa, siempre llamas` / `Cuando llegues, llámame` | NGLE § 25.13 covers mood choice with subordinating conjunctions; its treatment of temporal clauses supports the habitual/factual vs. prospective contrast. | Kept as a bounded example. It does not establish a mechanical rule for every use of `cuando`. |
+| `Aunque llueve, salgo` / `Aunque llueva, saldré` | NGLE § 25.13 treats mood choice with subordinating conjunctions and concessive readings. | Kept with a context note: factual assertion vs. hypothetical/non-asserted presentation is a useful contrast, not an exhaustive semantic rule. |
+
+**Evidence boundary:** direct NGLE sections were opened for the listed claims. The batch did not audit every subjunctive trigger, every alternation, every regional pattern, or every example on the four pages. The pages remain `draft` where appropriate; no full verification or publication-readiness claim is made.
 

@@ -301,10 +301,10 @@
 
 **Знімок перевірено 2026-10-18.** Це live-стан перед checkpoint-комітом; перевірити QA на новому точному HEAD після коміту.
 
-- Попередня партія вимог 4.7–4.11: повний QA пройшов на точному HEAD `7b873e3ac2254847cc06a552312a8581020b987c`, run [39158975522](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158975522).
-- Поточна партія `ser / estar / hay`: canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e; також DPD § 4 і DLE entries дев’яти прикметників. Додано дев’ять контекстних пар, pair-level evidence register, приклади регіональної варіативності та обмеження їхнього узагальнення. Audit-метадані синхронізовано з фактичними джерельними перевірками.
+- Партія `ser / estar / hay`: canonical pages, audit і matrix оновлено; прямі джерела NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e, DPD § 4 і DLE entries дев’яти прикметників перевірено. Додано дев’ять контекстних пар, pair-level evidence register, регіональні примітки з NGLE §§ 37.8d та 37.9h–i. QA успішний на точному HEAD `b7b73cf2be7c6cbb6a2dfc11c4cc2a6a551ffe3a`, run [39161437178](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161437178).
+- Поточна партія `pretérito indefinido / imperfecto`: перевірено приклади `saber/conocer` за NGLE § 23.9j; для `querer` додано DLE і NGLE § 23.11e–f, прибрано автоматичне тлумачення `quise` як «вирішив/спробував» і розділено звичайну пару з ввічливим imperfecto. Оновлено claim-level audit і coverage matrix.
 - Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `308c1140319af9349b5ffbb4388759e6dcae1fe4`. Повний QA успішний на точному SHA, run [39161644542](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161644542).
+- HEAD перед checkpoint-оновленням: `df565605708b008dc8ce1bcf41cae7eb55ed5338`. QA на попередньому checkpoint SHA `72e308c679600775a63604401bf4deab02153b97` успішний, run [39161731997](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161731997). Run [39161915302](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161915302) для audit SHA `859c7bd` був pending під час останньої перевірки; exact QA для `df56560` не підтверджено.
 - Локальне робоче дерево не перевірялося; зміни внесено через GitHub API.
 
 #### Live PR state
@@ -312,32 +312,36 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; 0 inline threads | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`308c1140319af9349b5ffbb4388759e6dcae1fe4`) | 46 / 228 | 0 submitted reviews; 0 inline threads | Pass on exact HEAD, [run 39161644542](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39161644542) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`df565605708b008dc8ce1bcf41cae7eb55ed5338`) | 46 / 233 | 0 submitted reviews; 0 inline threads | Pass on previous checkpoint SHA `72e308c679600775a63604401bf4deab02153b97`; current head pending |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; 0 inline threads | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase, or retarget was performed.
 
-#### Batch: `ser / estar / hay`
+#### Completed follow-up: `ser / estar / hay`
 
-- Read canonical `src/content/es/verbs/ser-estar.mdx`, `src/content/comparisons/ser-estar.mdx`, `src/content/es/verbs/ser-estar-hay.mdx`, `src/content/es/sentence-structure/hay-vs-estar.mdx`, `src/content/es/verbs/ser-estar-location.mdx`, `src/content/es/verbs/ser-estar-with-adjectives.mdx), and the prior claim-level pilot audit.
-- `ser-estar.mdx`: linked directly to NGLE §§ 37.7–37.9; replaced the heading that could imply empirically established “common mistakes” among Ukrainian speakers.
-- `ser-estar-location.mdx`: repaired malformed emphasis and neutralized the “common mistakes” heading; linked direct NGLE §§ 37.7–37.8; downgraded `verified` to `draft` pending full example-by-example verification.
-- `ser-estar-with-adjectives.mdx`: linked direct NGLE §§ 37.7/37.9 and DLE entries; downgraded `verified` to `draft`. DLE entries for `listo, aburrido, verde, rico, seguro, abierto, cerrado, bueno, malo` were opened. Added contextual Spanish examples and Ukrainian glosses for both readings, plus a pair-level evidence register. Refined context for `rico`, gendered Ukrainian forms for `listo/seguro`, and removed unrelated apocope from `bueno/malo` examples. Added sourced notes on country-dependent adjectival locutions.
-- `ser-estar-hay.mdx` and `hay-vs-estar.mdx`: added direct NGLE §§ 15.6/41.6, NGLE §§ 37.7–37.8, DPD § 4, RAE conjugation and FundéuRAE sources. DPD/NGLE document formal singular agreement in existential `haber` and informal plural agreement across varieties.
-- `hay-vs-estar.mdx`: NGLE § 15.6i directly rejects bare proper names in the neutral existential pattern (`Hay Eva y Javier`) and contrasts with an indefinite NP (`En la lista hay un tal Luis Pérez`). The page uses a qualified `Mistake` example for `Hay Juan en la sala`. NGLE § 15.6c–s covers the definiteness effect and quantitative/endophoric exceptions; representative examples such as `No hay el menor peligro`, `Hay la información suficiente`, `Había la misma luz`, and `Hubo el habitual trajín` were added to both canonical pages.
-- Regional note audit: NGLE § 37.8d directly supports a bounded date/day example; both `ser-estar.mdx` and `comparisons/ser-estar.mdx` now include the same example and explicitly limit its scope to date/day expressions. NGLE §§ 37.9h–i support a bounded note about country-dependent fixed adjectival locutions. No frequency/corpus claim was added.
-- Updated `docs/audits/current/CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` with direct-source findings and evidence boundaries.
-- Remaining limitations: independent/native review of translations, corpus frequency, and full country-level distribution of the adjective pairs have not been completed. No browser/accessibility/SEO test or release-readiness assessment was performed.
+- Canonical pages: `src/content/es/verbs/ser-estar.mdx`, `ser-estar-hay.mdx`, `ser-estar-location.mdx`, `ser-estar-with-adjectives.mdx`, `src/content/es/sentence-structure/hay-vs-estar.mdx`, comparison `src/content/comparisons/ser-estar.mdx`.
+- `ser-estar-location.mdx` and `ser-estar-with-adjectives.mdx` downgraded from `verified` to `draft` pending complete claim/example review.
+- Existential `haber`: NGLE § 15.6i supports the neutral-standard restriction on bare proper names; §§ 15.6c–s describe definiteness effects and exceptions. NGLE § 41.6 and DPD § 4 support formal singular agreement while documenting informal plural agreement across varieties.
+- Adjective contrasts: DLE entries for `listo, aburrido, verde, rico, seguro, abierto, cerrado, bueno, malo` were checked; nine contextual pairs and a pair-level evidence register were added. Independent/native review, full regional distributions and corpus frequency remain open.
+- Regional note audit: NGLE § 37.8d supports a bounded date/day example; §§ 37.9h–i support a note on country-dependent adjectival locutions. No corpus-frequency claim was added.
+- Updated `docs/audits/current/CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md`.
+
+#### Current follow-up: `saber / conocer / querer`
+
+- Read canonical `src/content/es/tenses/preterito-vs-imperfecto.mdx`, comparison `src/content/comparisons/past-tenses.mdx`, and related `preterito-imperfecto.mdx`.
+- NGLE § 23.9j directly supports `saber` in the perfective as acquiring information and `conocer` as entering into contact with someone; DLE entries corroborate the lexical senses.
+- DLE `querer` lists desire, intention/resolution, and attempt/procure senses; NGLE §§ 23.11e–f supports the courtesy imperfect (`Quería pedirte un favor`). The canonical page now explicitly distinguishes that polite use from `Quería ir / Quise ir` and does not force a single translation for `quise`.
+- Audit and coverage matrix updated. This is a bounded claim-level spot-check, not full verification of all tense examples or regional distribution.
 
 #### Gates and next action
 
 - G0: partial — live PR/base/head and review state checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
-- G2–G5: partial/open — direct NGLE/DPD evidence and DLE spot-check recorded; independent linguistic review, corpus and full regional checks remain unfinished.
-- G6: pass on exact HEAD `308c1140319af9349b5ffbb4388759e6dcae1fe4`, run 39161644542; check the new checkpoint commit's own QA.
+- G2–G5: partial/open — direct source checks recorded; independent linguistic review, complete example/translation audit, corpus and full regional checks remain unfinished.
+- G6: pass on previous checkpoint SHA `72e308c679600775a63604401bf4deab02153b97`; pending on `df565605708b008dc8ce1bcf41cae7eb55ed5338` and this checkpoint commit.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, перейти до наступної пріоритетної claim-level партії в `src/content/es/tenses/preterito-vs-imperfecto.mdx` та порівнянні `src/content/comparisons/past-tenses.mdx`: звірити приклади `saber/conocer/querer`, їхні часово-аспектуальні інтерпретації й українські переклади з точними розділами NGLE §§ 23.9, 23.10, 23.12; перевірити регіональні твердження окремо й не робити частотних висновків без корпусу.
+- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, перейти до регіонального claim-level аудиту `src/content/comparisons/past-tenses.mdx`: перевірити конкретні твердження про perfecto compuesto vs. indefinido (зокрема `esta semana he comido` / `esta semana comí`) за точними академічними джерелами; звузити або переписати регіональні узагальнення, якщо джерело їх не підтримує. Не виводити частотність без корпусних даних.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати зелений QA чи наявність джерельних URL доказом мовної якості.
 
 ## 9. Передача в новий чат

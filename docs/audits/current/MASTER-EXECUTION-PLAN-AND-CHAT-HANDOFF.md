@@ -302,9 +302,9 @@
 **Знімок перевірено 2026-10-18.** Це live-стан перед checkpoint-комітом; перевірити QA на новому точному HEAD після коміту.
 
 - Попередня партія вимог 4.7–4.11: повний QA пройшов на точному HEAD `7b873e3ac2254847cc06a552312a8581020b987c`, run [39158975522](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158975522).
-- Поточна партія: claim-level follow-up `ser / estar / hay`. Canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e; також DPD § 4 і DLE entries семи прикметників. Таблиця прикметників має повні контекстні іспанські речення й pair-level evidence register.
+- Поточна партія: claim-level follow-up `ser / estar / hay`. Canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e; також DPD § 4 і DLE entries дев’яти прикметників. Таблиця прикметників тепер має дев’ять контекстних пар і pair-level evidence register.
 - Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `f1062d064d017115c684b70233f25b7c26766572`. Повний QA пройшов на попередньому checkpoint HEAD `a1473e9bcf80fcef8d356df1e795f608cf08f1f6`, run [39160426669](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160426669). Run [39160470525](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160470525) для audit commit `df1fe99` ще виконувався; exact QA для `f1062d0` не підтверджено.
+- HEAD перед checkpoint-оновленням: `42ffcfbe77cb409b2a4336aa51eccba3f8f153ce`. Повний QA пройшов на попередньому checkpoint HEAD `ea539c0a3074d558575a6291d329c93d6e52ece5`, run [39160500347](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160500347). Run [39160589683](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160589683) на попередньому audit SHA `224b7d1` був pending під час останньої перевірки; exact QA для `42ffcfb` не підтверджено.
 - Локальне робоче дерево не перевірялося; зміни внесено через GitHub API.
 
 #### Live PR state
@@ -312,7 +312,7 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; no inline threads in last live query | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable at last check | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`f1062d064d017115c684b70233f25b7c26766572`) | 46 / 196 | 0 submitted reviews; no inline threads in last live query | Pass on previous checkpoint SHA `a1473e9bcf80fcef8d356df1e795f608cf08f1f6`; current head pending |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable at last check | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`42ffcfbe77cb409b2a4336aa51eccba3f8f153ce`) | 46 / 200 | 0 submitted reviews; no inline threads in last live query | Pass on previous checkpoint SHA `ea539c0a3074d558575a6291d329c93d6e52ece5`; current head pending |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; no inline threads in last live query | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase, or retarget was performed.
@@ -322,7 +322,7 @@
 - Read canonical `src/content/es/verbs/ser-estar.mdx`, `src/content/comparisons/ser-estar.mdx`, `src/content/es/verbs/ser-estar-hay.mdx`, `src/content/es/sentence-structure/hay-vs-estar.mdx`, `src/content/es/verbs/ser-estar-location.mdx`, `src/content/es/verbs/ser-estar-with-adjectives.mdx`, and the prior claim-level pilot audit.
 - `ser-estar.mdx`: linked directly to NGLE §§ 37.7–37.9; replaced the heading that could imply empirically established “common mistakes” among Ukrainian speakers.
 - `ser-estar-location.mdx`: repaired malformed emphasis and neutralized the “common mistakes” heading; linked direct NGLE §§ 37.7–37.8; downgraded `verified` to `draft` pending full example-by-example verification.
-- `ser-estar-with-adjectives.mdx`: linked direct NGLE §§ 37.7/37.9 and DLE entries; downgraded `verified` to `draft`. DLE entries for `listo, aburrido, verde, rico, seguro, abierto, cerrado` were opened. Added full Spanish examples and Ukrainian glosses for both readings, and added a pair-level evidence register to the claim-level audit. Context-specific meaning, translation and regional/register claims remain open.
+- `ser-estar-with-adjectives.mdx`: linked direct NGLE §§ 37.7/37.9 and DLE entries; downgraded `verified` to `draft`. DLE entries for `listo, aburrido, verde, rico, seguro, abierto, cerrado, bueno, malo` were opened. Added contextual Spanish examples and Ukrainian glosses for both readings, plus a pair-level evidence register. Full contextual, translation, register and regional checks remain open.
 - `ser-estar-hay.mdx` and `hay-vs-estar.mdx`: added direct NGLE §§ 15.6/41.6, NGLE §§ 37.7–37.8, DPD § 4, RAE conjugation and FundéuRAE sources. DPD/NGLE document formal singular agreement in existential `haber` and informal plural agreement across varieties.
 - `hay-vs-estar.mdx`: NGLE § 15.6i directly rejects bare proper names in the neutral existential pattern (`Hay Eva y Javier`) and contrasts with an indefinite NP (`En la lista hay un tal Luis Pérez`). The page uses a qualified `Mistake` example for `Hay Juan en la sala`. NGLE § 15.6c–s covers the definiteness effect and quantitative/endophoric exceptions; representative examples such as `No hay el menor peligro`, `Hay la información suficiente`, `Había la misma luz`, and `Hubo el habitual trajín` were added to both canonical pages.
 - Updated `docs/audits/current/CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` with direct-source findings and evidence boundaries.
@@ -334,10 +334,10 @@
 - G0: partial — live PR/base/head and review state checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
 - G2–G5: partial/open — direct NGLE/DPD evidence and DLE spot-check recorded; complete lexical, translation and regional checks remain unfinished.
-- G6: pass on previous checkpoint SHA `a1473e9bcf80fcef8d356df1e795f608cf08f1f6`; pending on `f1062d064d017115c684b70233f25b7c26766572` and this checkpoint commit.
+- G6: pass on previous checkpoint SHA `ea539c0a3074d558575a6291d329c93d6e52ece5`; pending on `42ffcfbe77cb409b2a4336aa51eccba3f8f153ce` and this checkpoint commit.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, продовжити claim-level перевірку прикметникових пар — зокрема `malo/bueno`, `aburrido`, `abierto/cerrado` — за конкретними значеннями DLE та контекстом NGLE; потім звірити українські переклади й регіональні обмеження. Не повертати `verified` без повної перевірки.
+- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, продовжити контекстний і перекладний аудит усіх дев’яти прикметникових пар та їхніх регіональних обмежень; лише після цього розглянути інші лексичні пари, якщо матриця покаже реальну прогалину. Не повертати `verified` без повної перевірки.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати зелений QA чи наявність джерельних URL доказом мовної якості.
 
 ## 9. Передача в новий чат

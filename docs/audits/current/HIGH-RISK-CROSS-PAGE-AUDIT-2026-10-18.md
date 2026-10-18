@@ -68,10 +68,9 @@ These are not automatically errors: a broad overview and a specialized reference
 
 ## QA and debugging log
 
-- The first QA run after the initial article comparison rewrite failed at `audit:tables`: the shared `CompareTable` component expects a label column plus two data cells, while the new table supplied three data cells. This was a schema mismatch, not a grammar or MDX syntax error.
-- The table was corrected to the component's expected two data cells per row.
-- Latest run for the corrected head: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39132852163
-- At report authoring time, that run had started but its final conclusion had not yet been confirmed. Do not treat it as passing until the workflow reports success.
+- The first QA run after the initial article comparison rewrite failed at `audit:tables`: the shared `CompareTable` component expects a label column plus one data cell when `headers` has two entries, while the first rewrite supplied an incompatible number of data cells. The first attempted correction still misunderstood the component schema, so QA failed a second time. Both failures were schema mismatches, not grammar or MDX syntax errors.
+- The table was then corrected to use two header entries and one data cell per row, with the explanation and example combined in that cell.
+- The latest run at the time of this report was still pending; check the run attached to the current PR head before calling QA successful. Earlier runs failed at `audit:tables` because of the component's expected column shape. Do not treat a pending run as passing.
 
 ## Remaining work
 

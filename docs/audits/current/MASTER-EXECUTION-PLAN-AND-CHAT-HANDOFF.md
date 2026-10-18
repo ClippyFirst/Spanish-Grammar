@@ -355,15 +355,23 @@
 - Changed unsupported learner-error headings to neutral contrast examples. Clarified that `Veo a María → la veo` is the general-standard baseline for a feminine direct object; masculine-person leísmo is a separate phenomenon with narrower normative scope.
 - Claim-level audit and topic matrix section 18 appended. No corpus query, full regional audit, full inventory of § 34.8–34.10 alternations, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
 
+
+#### Batch: `gustar` and verbs of affect
+
+- Directly read RAE/ASALE DPD `gustar` and NGLE § 35.5b, k–m: experiencer as indirect object; the cause/thing experienced as subject in the core construction; plural agreement examples; verbs of affect including `gustar, encantar, doler, interesar`.
+- `src/content/es/verbs/gustar.mdx`: added direct source locators and explicit `draft` status; removed an under-sourced coordinated-infinitive example; changed learner-error heading to neutral contrast examples.
+- `src/content/es/verbs/gustar-type-verbs.mdx`: downgraded `verified` to `draft`, added direct DPD/NGLE source locators, and neutralized the learner-error heading.
+- Claim-level audit and matrix section 19 appended. No full paradigm audit of all related verbs, detailed regional clitic-doubling survey, corpus/frequency analysis, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
+
 #### Gates and next action
 
 - G0: partial — live PR/base/head checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
-- G2–G5: partial/open — temporal conjunctions have bounded direct evidence; mood distribution specifically with `en cuanto` remains open. Por/para has bounded NGLE evidence for core functions and regional frequency of `por + quantitative duration`, but individual examples, translations, corpus frequency and broader regional claims remain open. The verb-government page has a bounded source/editorial pass. Personal `a` now has a bounded source review across the detailed and short canonical pages; both were downgraded to `draft`. Full verb-pair verification, regional distributions and clitic audit remain open.
+- G2–G5: partial/open — temporal conjunctions have bounded direct evidence; mood distribution specifically with `en cuanto` remains open. Por/para has bounded NGLE evidence for core functions and regional frequency of `por + quantitative duration`, but individual examples, translations, corpus frequency and broader regional claims remain open. The verb-government page has a bounded source/editorial pass. Personal `a` now has a bounded source review across the detailed and short canonical pages; both were downgraded to `draft`. Full verb-pair verification, regional distributions and the broader clitic audit remain open. The gustar cluster now has a bounded DPD/NGLE pass; both related pages remain `draft`.
 - G6: passed on current pre-checkpoint SHA `5c3f09ed9fbf9a72800bcd01b60e1201f221be3e` (run 39165480113). The new checkpoint commit itself must be checked after writing this document.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити GitHub Actions на точному HEAD після цього checkpoint-коміту. Якщо QA успішний, перейти до наступного пріоритетного кластера `gustar` та дієслів із непрямим додатком: прочитати канонічні сторінки й пов'язані порівняння, перевірити вимоги в матриці, потім звірити конкретні твердження з NGLE §§ 35.4–35.8 та відповідними словниковими статтями. Не узагальнювати leísmo або регіональні моделі без джерел. Вже виконано обмежений source/editorial pass для `verbs-with-prepositions.mdx` за NGLE §§ 36.6j–36.10 та DPD `queísmo`; не повторювати його без нових доказів. Питання mood selection саме з часовим `en cuanto` лишається відкритим: NGLE §§ 22.6p, 31.14i підтверджують значення/тип виразу, але не дають достатнього прямого розподілу способів; не формулювати універсального правила.
+- **Наступна конкретна дія:** перевірити GitHub Actions на точному HEAD після цього checkpoint-коміту. Якщо QA успішний, перейти до кластера клітичних займенників: прочитати `src/content/es/pronouns/objeto-directo-indirecto.mdx` і `double-object-pronouns.mdx`, зафіксувати всі malformed Markdown/MDX та твердження про lo/la/le, se lo, позицію клітика й leísmo; звірити конкретні твердження з NGLE §§ 16.11, 35.2, 35.8 та DPD `leísmo` і лише потім редагувати. Не робити масового форматування без контекстної перевірки. Вже виконано обмежений source/editorial pass для `verbs-with-prepositions.mdx` за NGLE §§ 36.6j–36.10 та DPD `queísmo`, а також gustar за DPD `gustar` і NGLE § 35.5b, k–m; не повторювати ці проходи без нових доказів. Питання mood selection саме з часовим `en cuanto` лишається відкритим: NGLE §§ 22.6p, 31.14i підтверджують значення/тип виразу, але не дають достатнього прямого розподілу способів; не формулювати універсального правила.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати структурне покриття, список URL або зелений QA доказом мовної якості.
 
 ## 9. Передача в новий чат
@@ -409,3 +417,5 @@
 - **2026-10-18:** bounded verb-government/personal-a distinction pass. Direct NGLE § 34.8a–i and § 36.6j plus §§ 36.7–36.10 locators and DPD `queísmo` reviewed; corrected `ayudar a alguien` vs `ayudar a limpiar`, repaired malformed MDX, and updated audit/matrix. Content/doc batch commit before this checkpoint: `063be073faed3ca3eb75d7d88c5f83e8b5821d7e`; this checkpoint commit requires its own CI check.
 
 - **2026-10-18:** personal-a bounded source review completed for detailed and short pages. NGLE §§ 34.8a–t and 34.10b–e/j plus DPD `leísmo` reviewed; both page statuses downgraded to `draft`, markup and scope clarified, audit/matrix updated. Pre-checkpoint content/doc commit: `27a0e5dea2481eeb7e58f4dfaacf145892bd54ce`; this checkpoint commit requires its own CI check.
+
+- **2026-10-18:** bounded gustar pass completed. DPD `gustar` and NGLE § 35.5b/k–m read; both `gustar.mdx` and `gustar-type-verbs.mdx` sourced and set to `draft`; the questionable coordinated-infinitive claim removed; audit/matrix updated. Pre-checkpoint content/doc commit: `d98db61f11e3417bc9707c3a592d3f73171677e`; this checkpoint commit requires its own CI check.

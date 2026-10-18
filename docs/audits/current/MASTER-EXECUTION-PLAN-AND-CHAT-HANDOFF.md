@@ -299,12 +299,12 @@
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок перевірено 2026-10-18.** Значення нижче — live-стан перед checkpoint-комітом; перевірити QA на новому точному HEAD після коміту.
+**Знімок перевірено 2026-10-18.** Це live-стан перед checkpoint-комітом; перевірити QA на новому точному HEAD після коміту.
 
 - Попередня партія вимог 4.7–4.11: повний QA пройшов на точному HEAD `7b873e3ac2254847cc06a552312a8581020b987c`, run [39158975522](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158975522).
-- Поточна партія: claim-level follow-up `ser / estar / hay`. Canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6, 37.7–37.9, 41.6; також DPD § 4 і DLE entries семи прикметників. Повна перевірка кожного конструкційного значення й українського перекладу залишається відкритою.
+- Поточна партія: claim-level follow-up `ser / estar / hay`. Canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e; також DPD § 4 і DLE entries семи прикметників.
 - Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `581e3a3d601705a6d103ee1e8742f0620f528f92`. Повний QA пройшов на попередньому HEAD `90e2e003081facb83d1bbab19e7c093669a2fa33`, run [39160127337](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160127337). Run [39160181719](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160181719) на попередньому SHA `6c8fbc9` ще виконувався під час останньої перевірки; exact QA для `581e3a3` не підтверджено.
+- HEAD перед checkpoint-оновленням: `df2c79e83c94cbe7a65835728c42faa41e483e28`. QA пройшов на попередньому HEAD `90e2e003081facb83d1bbab19e7c093669a2fa33`, run [39160127337](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160127337). Run [39160274418](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160274418) на попередньому SHA `d40fa1a` виконувався під час останньої перевірки; exact QA для `df2c79e` не підтверджено.
 - Локальне робоче дерево не перевірялося; зміни внесено через GitHub API.
 
 #### Live PR state
@@ -312,7 +312,7 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; no inline threads in last live query | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; raw API reports mergeable/clean | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`581e3a3d601705a6d103ee1e8742f0620f528f92`) | 46 / 184 | 0 submitted reviews; no inline threads in last live query | Pass on previous SHA `90e2e003081facb83d1bbab19e7c093669a2fa33`; current head pending |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable at last check | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`df2c79e83c94cbe7a65835728c42faa41e483e28`) | 46 / 189 | 0 submitted reviews; no inline threads in last live query | Pass on previous SHA `90e2e003081facb83d1bbab19e7c093669a2fa33`; current head pending |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; no inline threads in last live query | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase, or retarget was performed.
@@ -320,24 +320,24 @@
 #### Batch: `ser / estar / hay`
 
 - Read canonical `src/content/es/verbs/ser-estar.mdx`, `src/content/comparisons/ser-estar.mdx`, `src/content/es/verbs/ser-estar-hay.mdx`, `src/content/es/sentence-structure/hay-vs-estar.mdx`, `src/content/es/verbs/ser-estar-location.mdx`, `src/content/es/verbs/ser-estar-with-adjectives.mdx`, and the prior claim-level pilot audit.
-- `ser-estar.mdx`: aligned the source note to direct NGLE online §§ 37.7–37.9; replaced the heading that could imply empirically established “common mistakes” among Ukrainian speakers.
-- `ser-estar-location.mdx`: repaired malformed emphasis and neutralized the “common mistakes” heading; added direct NGLE §§ 37.7–37.8 links; downgraded `verified` to `draft` because the former generic source did not support claim-level verification.
-- `ser-estar-with-adjectives.mdx`: added direct NGLE §§ 37.7/37.9 and DLE entry links; downgraded `verified` to `draft`. Opened official DLE entries for `listo, aburrido, verde, rico, seguro, abierto, cerrado`. Their lexical senses were spot-checked, but every ser/estar pairing and Ukrainian translation is not fully verified.
-- `ser-estar-hay.mdx` and `hay-vs-estar.mdx`: added direct NGLE §§ 15.6/41.6, NGLE §§ 37.7–37.8, DPD § 4, RAE conjugation and FundéuRAE sources. DPD/NGLE document both formal singular agreement in existential `haber` and the existence/register of informal plural agreement.
-- `hay-vs-estar.mdx`: NGLE § 15.6i directly supports rejecting bare proper names in the neutral existential pattern (`Hay Eva y Javier`) and contrasts it with an indefinite NP (`En la lista hay un tal Luis Pérez`). Restored a qualified contrastive `Mistake` example for `Hay Juan en la sala` with a scope caveat. NGLE § 15.6c–j also supports the definiteness effect and describes exceptions; the full exception inventory remains open.
-- Updated `docs/audits/current/CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` with direct-source findings and limits.
-- Read the relevant online NGLE text for §§ 15.6a–j, 37.7a–k, 37.8a–k, relevant portions of 37.9a–i, and 41.6a–e. This is not an exhaustive audit of every example/subsection in the full chapters.
-- Open: full adjective-pair/context/translation check; complete exception inventory beyond NGLE § 15.6j; country-level/regional distribution. No corpus query, browser/accessibility/SEO test, or release-readiness assessment was performed.
+- `ser-estar.mdx`: linked directly to NGLE §§ 37.7–37.9; replaced the heading that could imply empirically established “common mistakes” among Ukrainian speakers.
+- `ser-estar-location.mdx`: repaired malformed emphasis and neutralized the “common mistakes” heading; linked direct NGLE §§ 37.7–37.8; downgraded `verified` to `draft` pending full example-by-example verification.
+- `ser-estar-with-adjectives.mdx`: linked direct NGLE §§ 37.7/37.9 and DLE entries; downgraded `verified` to `draft`. DLE entries for `listo, aburrido, verde, rico, seguro, abierto, cerrado` were opened; lexical senses spot-checked, but every ser/estar pairing and Ukrainian translation is not fully verified.
+- `ser-estar-hay.mdx` and `hay-vs-estar.mdx`: added direct NGLE §§ 15.6/41.6, NGLE §§ 37.7–37.8, DPD § 4, RAE conjugation and FundéuRAE sources. DPD/NGLE document formal singular agreement in existential `haber` and informal plural agreement across varieties.
+- `hay-vs-estar.mdx`: NGLE § 15.6i directly rejects bare proper names in the neutral existential pattern (`Hay Eva y Javier`) and contrasts with an indefinite NP (`En la lista hay un tal Luis Pérez`). The page now uses a qualified `Mistake` example for `Hay Juan en la sala`. The definiteness effect and exceptions are explained with examples such as `No hay el menor peligro`, `Hay la información suficiente`, `Había la misma luz`, and `Hubo el habitual trajín`.
+- Updated `docs/audits/current/CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` with direct-source findings and evidence boundaries.
+- Relevant online NGLE text was read for §§ 15.6a–s, 37.7a–k, 37.8a–k, relevant portions of 37.9a–i, and 41.6a–e. Register/frequency and regional distribution of every exception/example have not been audited.
+- Open: complete adjective-pair/context/translation check and regional distribution. No corpus query, browser/accessibility/SEO test, or release-readiness assessment was performed.
 
 #### Gates and next action
 
 - G0: partial — live PR/base/head and review state checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
-- G2–G5: partial/open — direct NGLE and DPD evidence recorded; full lexical, translation, and regional checks remain unfinished.
-- G6: pass on previous SHA `90e2e003081facb83d1bbab19e7c093669a2fa33`; pending on `581e3a3d601705a6d103ee1e8742f0620f528f92` and this checkpoint commit.
+- G2–G5: partial/open — direct NGLE/DPD evidence and DLE spot-check recorded; complete lexical, translation and regional checks remain unfinished.
+- G6: pass on previous SHA `90e2e003081facb83d1bbab19e7c093669a2fa33`; pending on `df2c79e83c94cbe7a65835728c42faa41e483e28` and this checkpoint commit.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, продовжити claim-level перевірку прикметникових пар — зокрема `malo/bueno`, `aburrido`, `abierto/cerrado` — за конкретними значеннями DLE та контекстом NGLE; потім звірити українські переклади. Окремо завершити інвентар винятків NGLE § 15.6 для означених груп після екзистенційного `hay`. Не повертати `verified` без повної перевірки.
+- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, продовжити claim-level перевірку прикметникових пар — зокрема `malo/bueno`, `aburrido`, `abierto/cerrado` — за конкретними значеннями DLE та контекстом NGLE; потім звірити українські переклади й регіональні обмеження. Не повертати `verified` без повної перевірки.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати зелений QA чи наявність джерельних URL доказом мовної якості.
 
 ## 9. Передача в новий чат

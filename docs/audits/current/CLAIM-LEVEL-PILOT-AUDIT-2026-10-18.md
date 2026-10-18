@@ -334,3 +334,33 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 | `pensar en`, `soñar con`, `interesarse por`, etc. | NGLE §§ 36.7–36.10 as relevant locators | Examples remain a pedagogical sample, not a claim that each verb has only one construction or that every listed example was individually frequency-checked. |
 
 **Evidence boundary:** relevant NGLE sections were opened and read; the DPD `queísmo` entry was read directly. This is not a full audit of all verb-preposition pairs, dictionary senses, regional variants, or translations. No corpus query, quantitative frequency analysis, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Page status remains `draft`.
+
+## 18. Personal `a` — canonical/summary consistency and source-bound review — 2026-10-18
+
+### Direct evidence reviewed
+
+- NGLE § 34.8a–i: personal `a` before direct objects of people is influenced by definiteness, reference, animacy and construction; the source explicitly states that its presence can be obligatory, excluded or optional in different contexts.
+- NGLE § 34.8k–n: some human NPs can receive a type/class reading without `a`; intensional verbs and prospectivity influence interpretation. This supports treating `Busco un médico` vs. `Busco a un médico que conozco` as a contextual contrast, not an absolute “indefinite vs. definite article” rule.
+- NGLE § 34.8o: `a` is obligatory with proper names of animals and is commonly extended to common nouns for animals, especially domestic animals; this is not a blanket rule for every animal NP.
+- NGLE § 34.10b–e and j: `ayudar` can select personal `a` before human direct objects; existential `haber` and typical possession `tener` do not take personal `a` in the cited baseline patterns; intensional verbs such as `buscar` favor referential/type readings differently depending on the construction.
+- RAE/ASALE DPD entry `leísmo`: accepted masculine-person leísmo has a specific scope; it must not be generalized to feminine or inanimate direct objects. https://www.rae.es/dpd/le%C3%ADsmo
+- Official NGLE sources: https://www.rae.es/gram%C3%A1tica/sintaxis/el-complemento-directo-preposicional-i-nombres-y-pronombres-complementos-de-persona-y-de-cosa-personificada ; https://www.rae.es/gram%C3%A1tica/sintaxis/el-complemento-directo-preposicional-iii-clases-de-verbos-que-favorecen-la-alternancia-en-el-uso-de-la-preposici%C3%B3n-otros-factores-que-intervienen-en-ella
+
+### Changes made
+
+- `src/content/es/pronouns/personal-a.mdx`: downgraded `reviewed` to `draft`; added claim-relevant NGLE and DPD source locators; repaired malformed Markdown in the inanimate-object example; changed the unsupported learner-error heading to neutral contrast examples; clarified that `a` with an inanimate NP requires a different context/interpretation; narrowed the animal and pronoun notes.
+- `src/content/es/sentence-structure/personal-a.mdx`: downgraded `reviewed` to `draft`; replaced generic source locators with NGLE §§ 34.8 and 34.10; made the `Busco a un médico` contrast explicitly context/reference-sensitive; qualified `Busco a un taxi` as a neutral-baseline contrast rather than an exceptionless prohibition; updated the animal note and neutralized the unsupported learner-error heading.
+- The short page's canonical link to `pronouns/personal-a` was retained. The two pages remain distinct in purpose: short orientation vs. detailed reference.
+- DPD `leísmo` was read directly. The contrast `Veo a María → le veo` now explains that `la` is the general-standard baseline for a feminine direct object, while masculine-person leísmo is a separate accepted pattern with narrower scope.
+
+### Evidence register
+
+| Claim/example | Source | Disposition |
+|---|---|---|
+| `Veo a María` vs. `Veo el coche` | NGLE § 34.8a–i | Retained as a baseline contrast; not generalized into “every person always requires `a`.” |
+| `Busco un médico` vs. `Busco a un médico que conozco` | NGLE § 34.8k–n; § 34.10j | Retained with explicit contextual/reference qualification. |
+| `Quiero a mi perro` / proper names of animals | NGLE § 34.8o | Retained; animal use is bounded rather than described as uniform for all nouns and contexts. |
+| `Tengo dos hermanos`, `Hay una mujer` | NGLE § 34.10e | Retained as baseline existential/possession patterns without personal `a`; not treated as an exhaustive account of every `tener` or `haber` construction. |
+| `Veo a María → la veo` vs. leísmo | DPD `leísmo` | Clarified the standard baseline and the restricted scope of accepted masculine-person leísmo. |
+
+**Evidence boundary:** the cited NGLE paragraphs and DPD `leísmo` entry were opened and relevant text read. The entire inventory of alternations in §§ 34.8–34.10, all dialectal distributions, every example/translation, and related clitic phenomena were not fully audited. No corpus query, quantitative frequency analysis, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.

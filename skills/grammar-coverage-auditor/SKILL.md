@@ -1,6 +1,6 @@
 ---
 name: grammar-coverage-auditor
-description: Audits the whole grammar article corpus for coverage gaps, contradictions, duplication and broken pedagogical dependencies.
+description: Audits the whole grammar article corpus for coverage gaps, contradictions, duplication and broken or misleading topic dependencies.
 ---
 
 # Grammar Coverage & Consistency Auditor
@@ -14,8 +14,8 @@ Content file inventory, frontmatter fields, category registry, content graph aud
 3. Identify topics with no prerequisite path, dead-end nodes, circular dependencies, overloaded pages and orphaned exceptions.
 4. Compare claims across pages for conflicting terminology, incompatible examples or inconsistent regional labels.
 5. Detect likely duplicate pages but do not merge them based on title similarity alone; compare user intent and scope.
-6. Create a coverage matrix with statuses: absent, mentioned, explained, contrasted, practiced, source-verified.
-7. Prioritize gaps by foundational importance, dependency centrality, risk of misleading learners and roadmap alignment.
+6. Create a coverage matrix with statuses: absent, partial/mentioned, explained, contrasted, source-verified, verified, intentionally covered elsewhere.
+7. Prioritize gaps by foundational importance, dependency centrality, risk of misleading readers and roadmap alignment.
 8. Produce narrowly scoped tasks and regression tests; do not bulk-generate articles to fill a count target.
 
 ## Output

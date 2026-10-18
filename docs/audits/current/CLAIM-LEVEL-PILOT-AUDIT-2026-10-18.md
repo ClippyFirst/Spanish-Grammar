@@ -190,7 +190,7 @@ The relevant NGLE sections were opened directly. This is a bounded check of thes
 
 - Replaced the comparison page's broad claim that Latin America, “especially Mexico and the Andean region,” simply uses the compound perfect less often. The new note describes the different patterns by subregion and gives one directly sourced example.
 - Removed `Esta semana comí mucho` as a categorical “mistake”; it is now a regional note explaining that the choice depends on the variety and context.
-- Qualified `Ayer he comido a las dos` as non-neutral for the Peninsular standard, not a universal ban across all varieties.
+- Removed `Ayer he comido a las dos` from the categorical `Mistake` list and replaced it with a regional note: neutral Peninsular standard favors `Ayer comí`, while NGLE § 23.8d documents compound-perfect use with closed past adjuncts in Bolivia and other areas.
 - Rewrote the comparison's introductory definitions and table to avoid equating `perfecto` with an always-current result, `indefinido` with being “cut off from the present,” or `imperfecto` with simple incompletion.
 - The canonical tense page now links NGLE §§ 23.7–23.8 and summarizes the regional patterns without making a frequency claim beyond the academic description.
 

@@ -511,3 +511,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 
 **Evidence boundary:** this is a bounded source-traceability/claim spot-check, not full verification of every trigger, alternation, or regional pattern. These pages remain `draft` where claim-level evidence is incomplete.
 
+## 14. Subjunctive alternations: `cuando` and `aunque` — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Prospective vs. habitual temporal `cuando` | `src/content/es/moods/subjunctive-triggers.mdx`; `when-not-subjunctive.mdx`; `src/content/comparisons/indicative-subjunctive.mdx` | Direct NGLE § 24.5c and § 24.5j–k checked. Habitual/iterative readings are illustrated with imperfective indicative; `Cuando llegues, nos iremos` is discussed as ‘once/after you arrive’. Wording now emphasizes temporal perspective, not a mechanical trigger rule. |
+| Hypothetical concessive `aunque` | Same canonical and comparison pages | NGLE § 25.13h directly gives `Aunque insistas, no te hará caso` as a hypothetical concessive with subjunctive. Added as a bounded example. |
+| Factual concessive alternation | Same canonical and comparison pages | NGLE § 25.13h directly documents `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él`. Added to show that factual concessive clauses may allow both moods. |
+| Information structure in concessives | Same pages | NGLE §§ 25.13i–j directly explains assertion/new information vs. background/shared information; text clarifies that subjunctive does not itself mean doubt or falsity. |
+
+**Evidence boundary:** source paragraphs were read directly; no corpus-frequency or regional distribution analysis was performed. These changes improve bounded explanation and cross-page consistency; they do not constitute full verification of all subjunctive triggers or justify upgrading page status.
+

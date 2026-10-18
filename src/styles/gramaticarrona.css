@@ -2469,3 +2469,14 @@ p, li { max-width: 75ch; }
   .grammar-doc .related-links { grid-template-columns: 1fr; }
   .grammar-doc .related-link { min-height: 50px; }
 }
+
+
+/* Distinguish typed semantic navigation from generic neighboring topics. */
+.grammar-doc .semantic-navigation .semantic-group { margin-top: 1rem; }
+.grammar-doc .semantic-navigation .semantic-group h3 {
+  margin: 0 0 .35rem;
+  color: var(--color-text-secondary);
+  font: 600 11px/1.4 var(--font-mono);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}

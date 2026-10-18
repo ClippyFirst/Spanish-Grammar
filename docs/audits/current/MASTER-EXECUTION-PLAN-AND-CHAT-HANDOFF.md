@@ -338,15 +338,23 @@
 - `src/content/comparisons/por-para.mdx`: added source traceability and clarified that the common functions are orientation rather than mutually exclusive categories; added the documented regional frequency qualification.
 - Audit and matrix sections 16 appended. No corpus query, quantitative frequency calculation, country-by-country survey, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. No claim is fully verified solely by this batch.
 
+
+#### Batch: verb–preposition government and personal `a` distinction
+
+- Directly read NGLE § 34.8a–i for the personal preposition `a`, NGLE § 36.6j for `a + infinitive` with verbs such as `ayudar`, NGLE §§ 36.7–36.10 for selected government patterns, and DPD `queísmo` for `acordarse de que`.
+- `src/content/es/prepositions/verbs-with-prepositions.mdx`: repaired malformed Markdown in the introduction, the `que` clause explanation and final memory tip; added source locators and retained `draft` status; replaced the unsupported “typical mistakes of Ukrainian speakers” heading with neutral contrast examples.
+- Corrected a substantive conflation: `ayudar a alguien` can use personal `a` before a human direct object; `ayudar a limpiar` uses `a + infinitive`. Clarified that the preposition in `Depende de que llegues a tiempo` is selected by `depender de`, not by the subjunctive itself.
+- Claim-level audit and coverage matrix section 17 appended. No corpus query, full verb-dictionary audit, regional survey, independent Ukrainian review, or browser/accessibility/SEO test was performed. Personal-`a` canonical page path remains unconfirmed and is the next content discovery task after CI.
+
 #### Gates and next action
 
 - G0: partial — live PR/base/head checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
-- G2–G5: partial/open — temporal conjunctions have bounded direct evidence; mood distribution specifically with `en cuanto` remains open. Por/para has bounded NGLE evidence for core functions and the regional frequency of `por + quantitative duration`, but individual examples, translations, corpus frequency and broader regional claims remain open.
+- G2–G5: partial/open — temporal conjunctions have bounded direct evidence; mood distribution specifically with `en cuanto` remains open. Por/para has bounded NGLE evidence for core functions and regional frequency of `por + quantitative duration`, but individual examples, translations, corpus frequency and broader regional claims remain open. The verb-government page has a bounded source/editorial pass; personal `a` path and full verb-pair verification remain open.
 - G6: passed on current pre-checkpoint SHA `5c3f09ed9fbf9a72800bcd01b60e1201f221be3e` (run 39165480113). The new checkpoint commit itself must be checked after writing this document.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити GitHub Actions на точному HEAD після цього checkpoint-коміту. Якщо QA успішний, перейти до вузької партії про `a` personal і керування/прийменники після дієслів: спочатку зіставити канонічні сторінки й матрицю, потім прочитати точні NGLE §§ 34.8 та 36.3–36.6, обрати один обмежений набір тверджень і не узагальнювати регіональні відмінності без джерел. Питання mood selection саме з часовим `en cuanto` лишається відкритим: знайдені й прочитані NGLE §§ 22.6p, 31.14i підтверджують значення/тип виразу, але не дають достатнього прямого розподілу способів; не формулювати універсального правила.
+- **Наступна конкретна дія:** перевірити GitHub Actions на точному HEAD після цього checkpoint-коміту. Якщо QA успішний, спершу знайти точний канонічний шлях статті про personal `a` (поточні припущені шляхи не знайдені, тому не вигадувати нову сторінку), прочитати її разом із порівнянням/пов'язаними темами, тоді зробити вузьку claim-level партію на основі NGLE § 34.8 та за потреби §§ 34.9–34.10. Вже виконано обмежений source/editorial pass для `verbs-with-prepositions.mdx` за NGLE §§ 36.6j–36.10 та DPD `queísmo`; не повторювати його без нових доказів. Питання mood selection саме з часовим `en cuanto` лишається відкритим: NGLE §§ 22.6p, 31.14i підтверджують значення/тип виразу, але не дають достатнього прямого розподілу способів; не формулювати універсального правила.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати структурне покриття, список URL або зелений QA доказом мовної якості.
 
 ## 9. Передача в новий чат
@@ -388,3 +396,5 @@
 - **2026-10-18:** requirements 4.7–4.11 pass: proper-name article status downgraded to `draft`, preposition explanation clarified, neutral `lo` Markdown repaired, source locators added, and the coverage matrix updated. Full linguistic verification remains open.
 
 - **2026-10-18:** por/para bounded source-backed batch. Direct NGLE §§ 29.8k–r read; three canonical/comparison pages and the claim-level audit/topic matrix updated; malformed Markdown and unsupported learner-error framing repaired. Pre-checkpoint content SHA: `5c3f09ed9fbf9a72800bcd01b60e1201f221be3e`; QA pass run 39165480113. This document update creates a new HEAD, so check CI for that exact new SHA before proceeding.
+
+- **2026-10-18:** bounded verb-government/personal-a distinction pass. Direct NGLE § 34.8a–i and § 36.6j plus §§ 36.7–36.10 locators and DPD `queísmo` reviewed; corrected `ayudar a alguien` vs `ayudar a limpiar`, repaired malformed MDX, and updated audit/matrix. Content/doc batch commit before this checkpoint: `063be073faed3ca3eb75d7d88c5f83e8b5821d7e`; this checkpoint commit requires its own CI check.

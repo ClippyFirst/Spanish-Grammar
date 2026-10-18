@@ -278,3 +278,32 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 
 **Evidence boundary:** the cited NGLE paragraphs were opened and read. No corpus frequency search or separate regional survey was performed; all mood pages remain `draft` where broader claims are not fully checked. The `en cuanto` mood pattern remains an open item.
 
+
+## 16. Por / para — bounded semantic and regional check — 2026-10-18
+
+### Direct evidence reviewed
+
+- RAE/ASALE, *Nueva gramática de la lengua española*, § 29.8k: *para* expresses physical/figurative destination, prospective temporal limit/deadline, purpose, utility/service, recipient, and orientation/intention.
+- NGLE § 29.8n: *por* and *para* have historical overlap and remain practically interchangeable in a number of contexts, particularly some negative infinitival purpose clauses; a strict one-to-one semantic partition is not supported.
+- NGLE § 29.8ñ: temporal *para la primavera* points to a more precise future time, while *por la primavera* is approximate.
+- NGLE § 29.8o–p: *por* can express route and approximate location in space/time; *por + quantitative duration* is documented in both European and American Spanish and is currently more frequent in American Spanish.
+- NGLE § 29.8q–r: *por* introduces passive agents and causal complements, and also marks means/channel, exchange/price, substitution and acting in favor of something.
+- Direct source: https://www.rae.es/gram%C3%A1tica/sintaxis/usos-particulares-de-las-preposiciones-ii-en-entre-hacia-hasta-para-por-sin-sobre-tras
+
+### Changes made
+
+- `src/content/es/prepositions/por-para.mdx`: repaired malformed Markdown around the opening contrast, `para + infinitivo`, purpose/cause contrast, and reader note; added precise NGLE source locators; narrowed the regional note to the directly supported temporal-duration pattern; preserved the status as `draft`.
+- `src/content/es/prepositions/por-para-markers.mdx`: added a source locator, changed the unsupported framing “typical mistakes of Ukrainian speakers” to neutral contrast examples, updated the reader-facing terminology, and bounded the regional statement for `por + temporal quantity`.
+- `src/content/comparisons/por-para.mdx`: added source traceability, clarified that the semantic rows are orientations rather than mutually exclusive classes, and documented the regional qualification for `Trabajé por tres horas`.
+
+### Evidence register
+
+| Claim/example | Direct source | Disposition |
+|---|---|---|
+| `para` purpose, destination, recipient, deadline | NGLE § 29.8k | Retained as typical functions, not an exhaustive algorithm. |
+| `por` and `para` overlap | NGLE § 29.8n | Added an explicit warning against treating the categories as strictly disjoint. |
+| `por + quantitative duration` | NGLE § 29.8p | Retained but qualified: more frequent in American Spanish, documented in both American and European Spanish. |
+| `por` route, approximate temporal location, agent, cause, means, exchange | NGLE §§ 29.8o–r | Source locators added; not every individual example or translation has been independently audited. |
+| `para + infinitive` vs. `para que + finite clause` | NGLE §§ 46.1, 46.7 (locators) | Existing explanation retained with a caveat against reducing the distinction to an absolute same-subject/different-subject rule; full example-by-example check remains open. |
+
+**Evidence boundary:** relevant NGLE paragraphs were opened and read directly. No corpus query, frequency calculation, country-by-country survey, independent Ukrainian editorial review, full lexical construction audit, or browser/accessibility/SEO test was performed. This is a bounded source-backed review; the three pages remain `draft` and publication readiness is not implied.

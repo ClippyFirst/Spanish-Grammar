@@ -105,6 +105,10 @@ The second edition of the RAE/ASALE *Diccionario panhispánico de dudas*, entry 
 
 This direct DPD source strengthens the evidence for impersonal singular agreement and its register/region caveat. DPD alone does not detail every definiteness restriction; the direct NGLE § 15.6c–i check below resolves the neutral-standard baseline for definite NPs and bare proper names, while NGLE §§ 15.6j–s describe specific quantitative and endophoric exceptions; representative examples are now included in the site.
 
+### Editorial follow-up: contextual examples in adjective pairs
+
+The seven rows in `ser-estar-with-adjectives.mdx` now include full Spanish examples and Ukrainian glosses for both `ser` and `estar` readings (`Es muy listo` / `¿Estás listo?`, `La película es aburrida` / `Estoy aburrido`, etc.). This replaces isolated one-word translations with contexts that make the contrast inspectable. It is an editorial clarity improvement, not proof that every reading is universal or regionally neutral; the page remains `draft`.
+
 ### Follow-up dictionary spot-check: adjective contrasts
 
 The official DLE entries for all seven adjectives listed on `ser-estar-with-adjectives.mdx` were opened and checked as lexical evidence leads:

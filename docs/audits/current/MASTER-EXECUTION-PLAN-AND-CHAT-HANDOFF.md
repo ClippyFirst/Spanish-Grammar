@@ -299,11 +299,12 @@
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок перевірено 2026-10-18.** Це live-стан перед цим checkpoint-комітом; після коміту перевірити CI на його точному SHA.
+**Знімок перевірено 2026-10-18.** Це стан перед checkpoint-комітом; після коміту перевірити QA на його точному SHA.
 
 - Активний workstream: обмежена source-traceability/editorial партія вимог 4.7–4.11 у PR #27. Матрицю оновлено. Наступний workstream після успішного QA — claim-level аудит `ser/estar/hay`.
 - Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `a787c2c1d7dab8484b6529aa1bebf6009c439f68`. QA run [39158813855](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158813855) запущений для точного SHA; під час перевірки ще виконував `npm ci`. Через два невеликі виправлення після попереднього запису (заголовок у `neutral-lo.mdx` і ієрархія підрозділу `al/del`) це найновіший content HEAD.
+- HEAD перед checkpoint-оновленням: `785016f992b9bbb0fa88a9b02e5f86f5009c9481`.
+- QA run [39158813855](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158813855) на попередньому SHA `a787c2c1d7dab8484b6529aa1bebf6009c439f68` завершився невдачею: duplicate frontmatter key у `neutral-lo.mdx`. Причину усунуто на `785016f992b9bbb0fa88a9b02e5f86f5009c9481` — прибрано застарілий другий `updated` ключ. Повторний QA [39158874775](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158874775) був `in_progress` під час запису; після checkpoint-коміту перевірити новий HEAD.
 - Робоче дерево локально не перевірялося; зміни виконуються через GitHub API.
 
 #### Live PR state
@@ -311,8 +312,8 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No reviews or inline threads; no requested reviewers | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`a787c2c1d7dab8484b6529aa1bebf6009c439f68`) | 44 / 146 | No reviews or inline threads; no requested reviewers | Run [39158813855](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158813855) in progress at last check |
-| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No reviews or inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069`), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`785016f992b9bbb0fa88a9b02e5f86f5009c9481`) | 44 / 148 | No reviews or inline threads; no requested reviewers | Run [39158874775](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158874775) pending/last observed in progress |
+| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No reviews or inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. Live review and inline-thread queries for all three PRs returned none. No merge, close, rebase or retarget was performed.
 
@@ -321,7 +322,7 @@
 - Read `articles-with-names.mdx`, `special-cases.mdx`, `neutral-lo.mdx`, `definite-indefinite.mdx`, `definite-vs-indefinite.mdx`, `zero-article.mdx`, `comparisons/articles.mdx` and `micro-constructions/de-inf-sera-no-sea-lo-de.mdx`.
 - `articles-with-names.mdx`: downgraded `verified` to `draft`; replaced generic source names with RAE/ASALE locator leads. Country-specific and colloquial claims remain unverified.
 - `special-cases.mdx`: clarified that prepositions do not mechanically determine article presence; retained the separate `al/del` contraction rule; repaired the Ukrainian note heading and restored a clear subsection hierarchy.
-- `neutral-lo.mdx`: repaired malformed Markdown, corrected the Ukrainian reader heading, added NGLE §§ 14.9–14.10 and relative-construction locator leads, and set status to `draft`.
+- `neutral-lo.mdx`: repaired malformed Markdown, corrected the Ukrainian reader heading, added NGLE §§ 14.9–14.10 and relative-construction locator leads, set status to `draft`, and removed the duplicate frontmatter key found by QA.
 - Genericity/specificity pages and the article comparison were read; the sampled explanations were consistent, so no substantive edit was justified there.
 - Updated `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` with a limited 4.7–4.11 reconciliation and explicit evidence limits. RAE/ASALE locators are leads, not full claim verification.
 - No corpus search, full example/translation audit, regional frequency check, browser/accessibility/SEO test or local worktree check was performed.

@@ -199,3 +199,8 @@ See [HIGH-RISK-CROSS-PAGE-AUDIT-2026-10-18.md](./HIGH-RISK-CROSS-PAGE-AUDIT-2026
 The same sample confirmed that some related pages overlap substantially (`pronouns/personal-a` vs `sentence-structure/personal-a`; `verbs/gustar` vs `verbs/gustar-type-verbs`; two article pages). This is a content-information-architecture issue to resolve with explicit page roles and reciprocal links, not by blindly deleting one URL. The current audit therefore increases confidence that the architecture is usable while also confirming that the existing corpus needs editorial reconciliation beyond structural QA.
 
 The first run after the comparison rewrite failed because the new `CompareTable` did not match the component's column schema. The first attempted correction still supplied two data cells where a label column plus one data cell was expected; the table was then corrected to two header entries and one data cell per row. Final QA status must be read from the latest run for the current PR head, not from an earlier successful commit.
+
+
+### Route integrity finding
+
+The follow-up audit also found that comparison content IDs included the `.mdx` extension in generated route parameters, even though authored links and canonical URLs omitted it. The shared comparison URL helper and static route now normalize source extensions, and the link audit checks comparison URLs as well as grammar URLs. The prior checker had not validated `/comparisons/...` links, so its earlier zero-problem result did not cover this route family. This is a concrete reason to keep route/build checks distinct from linguistic review.

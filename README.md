@@ -86,6 +86,8 @@ docs/
 - [DEVELOPMENT_RULES.md](./DEVELOPMENT_RULES.md) — workflow, AI rules, Git та правила змін.
 - [docs/architecture/](./docs/architecture/) — content model, design system та QA.
 - [Architecture roadmap](./docs/roadmap/ARCHITECTURE-ROADMAP.md) — поетапне вирівнювання фактичної реалізації з цим стандартом.
+- [Цільова архітектура Gramaticarrona](./docs/architecture/GRAMMATICARRONA-TARGET-ARCHITECTURE.md) — модель повноцінного граматичного довідника, доказів, контенту, навігації та етапів розвитку.
+- [Аудит трансформації довідника (2026-10-18)](./docs/audits/current/GRAMMAR-REFERENCE-TRANSFORMATION-AUDIT-2026-10-18.md) — source-level findings, ризики й пріоритетні наступні кроки.
 
 Перед великим рефакторингом спочатку перевіряйте архітектуру та існуючі патерни; не створюйте нову абстракцію, якщо проблему вже вирішує наявна.
 

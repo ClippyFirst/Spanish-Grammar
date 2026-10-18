@@ -87,6 +87,12 @@
 - `src/content/es/verbs/ser-estar-with-adjectives.mdx`: added NGLE locator leads and downgraded `verified` to `draft` pending individual lexical checks.
 - `src/content/comparisons/ser-estar.mdx`: read and compared against the canonical page; no substantive edit was justified in this batch.
 
+### Direct DPD check: existential `haber` and regional variation
+
+The second edition of the RAE/ASALE *Diccionario panhispánico de dudas*, entry `haber`, § 4, was opened and read directly: https://www.rae.es/dpd/haber. It states that existential/presentational `haber` is impersonal, takes a postverbal nominal complement, and remains singular in the formal educated standard; it gives `hay`, `había`, `hubo`, and `habrá` patterns, plus singular agreement in periphrases such as `va a haber`. It also explicitly acknowledges that plural agreement is widespread in informal speech in many American countries and occurs in Spain, especially among Catalan speakers, while recommending the impersonal singular in formal use.
+
+This direct DPD source strengthens the evidence for impersonal singular agreement and its register/region caveat. It **does not** settle the separate question of when a definite NP or proper name may occur after existential `hay`; that remains open.
+
 ### Follow-up dictionary spot-check: adjective contrasts
 
 The official DLE entries for all seven adjectives listed on `ser-estar-with-adjectives.mdx` were opened and checked as lexical evidence leads:

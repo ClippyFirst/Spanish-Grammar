@@ -28,7 +28,7 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 | [spanish-orthography-auditor](./spanish-orthography-auditor/SKILL.md) | Spelling, accents, punctuation and capitalization | Examples and prose |
 | [spanish-forms-auditor](./spanish-forms-auditor/SKILL.md) | Conjugations, agreement, clitics and morphology | Tables and examples |
 | [spanish-morphology-paradigm-auditor](./spanish-morphology-paradigm-auditor/SKILL.md) | Cross-page paradigm correctness and regression fixtures | Tables and rule changes |
-| [spanish-example-corpus-auditor](./spanish-example-corpus-auditor/SKILL.md) | Example quality, minimal contrasts and provenance | Every article |
+| [spanish-example-corpus-auditor](./spanish-example-corpus-auditor/SKILL.md) | Topic/cluster coverage, minimal contrasts and provenance | When examples need a coverage audit |
 | [spanish-example-naturalness-auditor](./spanish-example-naturalness-auditor/SKILL.md) | Contextual naturalness, idiomaticity and pedagogical fit | Example review |
 | [learner-error-auditor](./learner-error-auditor/SKILL.md) | Evidence-based claims about reader difficulties | Conditional research |
 | [spanish-ukrainian-error-taxonomy](./spanish-ukrainian-error-taxonomy/SKILL.md) | Evidence-graded taxonomy of Ukrainian-speaking learners' error hypotheses | Conditional research |
@@ -42,7 +42,7 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 
 1. For a disputed Spanish rule: fact-checker → variation auditor if relevant → citation auditor.
 2. For a Spanish/Ukrainian comparison: contrastive skill → fact-checker → terminology audit → proofreading.
-3. For examples or paradigms: morphology-paradigm auditor + example-corpus auditor; use naturalness and orthography audits where relevant.
+3. For examples: example-corpus auditor for topic/cluster coverage; naturalness auditor for questionable examples; forms/paradigm audits only for morphology-heavy tables or cross-page changes; orthography where relevant.
 4. For frequency or distribution claims: corpus-evidence auditor + variation auditor. Inspect the actual corpus interface/data and preserve query metadata.
 5. For grammar coverage: PCIC mapper → CEFR scope audit only where level labels are in scope → grammar coverage and knowledge-graph audits. Treat PCIC alignment as an evidenced mapping, not a certification.
 6. For existing or explicitly requested exercises only: exercise validator → fact-checker for disputed rules → accessibility audit for interactive behavior. Exercises are not a required product feature.
@@ -63,7 +63,7 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 - [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills): possible pedagogical workflow inspiration; inspect individual skill quality and licence.
 - [SkillMedev/skills — language-learning](https://github.com/SkillMedev/skills/tree/main/skills/language-learning): possible language-learning workflow inspiration; adapt selectively.
 
-## Upstream leads
+## Upstream leads\n\nThese are research references, not automatic adoption recommendations. Course/LMS conversion workflows are out of scope unless a specific reusable technique solves a reference-navigation or explanation problem.
 
 - [JakobThumm/proofreading](https://github.com/JakobThumm/proofreading)
 - [zmoog/skills — proofread](https://github.com/zmoog/skills/tree/main/proofread)

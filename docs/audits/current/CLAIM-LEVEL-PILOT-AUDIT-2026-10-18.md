@@ -1,7 +1,7 @@
 # Пілотний claim-level аудит граматичних пояснень — 2026-10-18
 
 **Гілка:** `docs/grammar-reference-architecture-2026-10-18`  
-**Сфера:** три канонічні статті та порівняльна сторінка `ser/estar`.  
+**Сфера:** пілотні claim-level перевірки `ser/estar/hay`, `pretérito indefinido/imperfecto` та розміщення клітик; не повний аудит усього репозиторію.  
 **Підхід:** зіставлення конкретних граматичних узагальнень із доступними академічними джерелами RAE/ASALE і FundéuRAE; корекція надмірно категоричних формулювань; фіксація того, що ще не перевірено.
 
 > **Обмеження:** це пілотний аудит тверджень, а не повний лінгвістичний рецензентський висновок для всіх прикладів і всіх регіонів. Метадані `review_status: reviewed` означають, що статтю пройдено редакторсько-джерельним оглядом; це не рівнозначно `verified`.
@@ -12,7 +12,7 @@
 |---|---|---|
 | `src/content/es/verbs/ser-estar.mdx` | Основна модель не зводиться до «постійне / тимчасове»; розділено характеристики, місце предмета/особи та місце події. Прибрано невдалий блок `Mistake`, де помилковий і правильний приклади були однаковими. Загальну регіональну заяву замінено вимогою перевіряти конкретні конструкції. | Reviewed; окремі прикметникові та регіональні приклади ще потребують адресної перевірки. |
 | `src/content/comparisons/ser-estar.mdx` | Зіставлено з канонічною статтею: обидві відкидають універсальне правило «постійне / тимчасове», містять мінімальні пари й розрізняють місце події та місце предмета. | Source-level consistency check; не окремий повний аудит кожного прикладу. |
-| `src/content/es/tenses/preterito-vs-imperfecto.mdx` | Уточнено аспектуальне пояснення; додано конкретні посилання на розділи NGLE про `canté`, `cantaba`, habitualidad і їхню опозицію. Регіональну примітку звужено: варіантність perfecto compuesto/indefinido не доводить відсутності варіантності в інших контекстах. | Reviewed; приклади `saber/conocer/querer` і частотні інтерпретації ще варто перевірити окремо. |
+| `src/content/es/tenses/preterito-vs-imperfecto.mdx` | Уточнено аспектуальне пояснення; джерельно перевірено `saber/conocer`, додано словникові та NGLE-посилання для контекстно залежного `querer`, і відокремлено ввічливе imperfecto (`Quería pedirte un favor`) від звичайної пари `Quería ir / Quise ir`. Регіональну примітку звужено. | Claim-level spot-check; повний аудит перекладів, частотності та регіональності лишається відкритим. |
 | `src/content/es/pronouns/object-pronoun-placement.mdx` | Додано джерела про proclisis/enclisis і позицію займенників у складних конструкціях. Додано винятки/обмеження для `ponerse a + infinitivo` та `haber que + infinitivo`. Регіональний варіант `Lo hay que terminar` більше не описано як просто неможливий: зазначено рекомендацію FundéuRAE уникати його в загальному стандартному вжитку та його документування в деяких різновидах Іспанії. | Reviewed; потрібна окрема перевірка акцентуації та повного переліку конструкцій. |
 
 ## Твердження й докази
@@ -158,4 +158,21 @@ A Ukrainian editorial spot-check then refined the glosses for gender where neede
 - The nine adjective entries have now been spot-checked in the DLE, but this does not exhaustively verify each construction-to-sense pairing or all Ukrainian translations in context.
 - No corpus query, country-by-country frequency audit, browser test, accessibility/SEO smoke test, or release-readiness assessment was performed.
 - Do not raise any affected page to `verified` on the basis of this pass alone.
+
+## 5. Follow-up: `saber / conocer / querer` in `pretérito indefinido / imperfecto` — 2026-10-18
+
+**Scope:** `src/content/es/tenses/preterito-vs-imperfecto.mdx`, with comparison against `src/content/comparisons/past-tenses.mdx` and the related `preterito-imperfecto.mdx` page.
+
+### Claim/evidence register
+
+| Claim/example | Direct evidence checked | Disposition |
+|---|---|---|
+| `Sabía la respuesta` vs. `Supe la respuesta` | NGLE § 23.9j explicitly describes perfective `saber` as “enterarse de algo, adquirir conocimiento de ello”; DLE `saber` includes “tener noticia o conocimiento de algo” and `Supimos que se había casado`. https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9#23.9j; https://dle.rae.es/saber | Retained. The Ukrainian contrast “знав” / “дізнався” matches the source's state/acquisition distinction. |
+| `Conocía a Ana` vs. `Conocí a Ana` | NGLE § 23.9j explicitly says perfective `conocer` can mean “entrar en contacto con alguien,” while imperfective forms denote having knowledge of someone/something. DLE `conocer` separately lists “entender, advertir, saber” and “tener trato y comunicación con alguien.” https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9#23.9j; https://dle.rae.es/conocer | Retained. “Був знайомий” / “познайомився” is a direct contextual rendering of the documented contrast. |
+| `Quería ir` vs. `Quise ir` | DLE `querer` has separate senses for desire, will/determination, resolve, and attempt/procure. NGLE § 23.9k explains pragmatic reinterpretation of stative predicates in perfective contexts; it does not provide a one-to-one rule for this exact sentence. https://dle.rae.es/querer; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9#23.9k | Kept with a caveat. The text no longer presents “decided/tried” as an automatic translation of `quise`; context and lexical sense must decide. |
+| `Quería pedirte un favor` | NGLE § 23.11e–f discusses the courtesy use of imperfecto with `querer/desear` in requests. https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-ii-desarrollos-de-la-noci%C3%B3n-de-copret%C3%A9rito-valores-modales-del-imperfecto#23.11e | Added as a separate note so a courtesy imperfect is not confused with a literal past desire or treated as the same contrast as `Quería ir / Quise ir`. |
+
+### Evidence boundary
+
+The relevant NGLE sections were opened directly. This is a bounded check of these examples, not a full audit of every use of stative verbs in the two tenses. No corpus-frequency claim or country-level distribution claim was added. The main page remains `review_status: reviewed`; this spot-check does not justify upgrading it to `verified` without a broader example/translation audit.
 

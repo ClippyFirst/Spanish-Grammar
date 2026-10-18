@@ -35,7 +35,8 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 | [spanish-corpus-evidence-auditor](./spanish-corpus-evidence-auditor/SKILL.md) | Reproducible corpus queries and usage claims | Frequency/usage claims |
 | [spanish-pragmatics-register-auditor](./spanish-pragmatics-register-auditor/SKILL.md) | Context, politeness and register | Usage explanations |
 | [spanish-cefr-scope-auditor](./spanish-cefr-scope-auditor/SKILL.md) | Evidence for optional level and prerequisite labels | Conditional |
-| [spanish-terminology-auditor](./spanish-terminology-auditor/SKILL.md) | Spanish–Ukrainian linguistic metalanguage | Editorial consistency |\n| [grammar-visualization-auditor](./grammar-visualization-auditor/SKILL.md) | Decides whether a diagram adds value and specifies an accessible, accurate form | Conditional visual review |
+| [spanish-terminology-auditor](./spanish-terminology-auditor/SKILL.md) | Spanish–Ukrainian linguistic metalanguage | Editorial consistency |
+| [grammar-visualization-auditor](./grammar-visualization-auditor/SKILL.md) | Decides whether a diagram adds value and specifies an accessible, accurate form | Conditional visual review |
 
 ## Routing rules
 
@@ -46,7 +47,9 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 5. For grammar coverage: PCIC mapper → CEFR scope audit only where level labels are in scope → grammar coverage and knowledge-graph audits. Treat PCIC alignment as an evidenced mapping, not a certification.
 6. For existing or explicitly requested exercises only: exercise validator → fact-checker for disputed rules → accessibility audit for interactive behavior. Exercises are not a required product feature.
 7. For Ukrainian-speaker difficulties: error taxonomy + learner-error auditor; keep observed evidence separate from contrastive hypotheses.
-8. For explanation design and optional topic paths: learning-design + education-content. Do not add mandatory course sequencing, progress tracking, spaced review or exercises. Use CEFR audit only where levels are claimed.\n9. For proposed graphics: visualization auditor → grammar fact-checker/variation audit as relevant → accessibility/browser review. No-visual is a valid result.\n10. For site changes: existing `npm run qa` remains authoritative for repository gates; browser, accessibility and SEO audits are complementary, not replacements.
+8. For explanation design and optional topic paths: learning-design + education-content. Do not add mandatory course sequencing, progress tracking, spaced review or exercises. Use CEFR audit only where levels are claimed.
+9. For proposed graphics: visualization auditor → grammar fact-checker/variation audit as relevant → accessibility/browser review. No-visual is a valid result.
+10. For site changes: existing `npm run qa` remains authoritative for repository gates; browser, accessibility and SEO audits are complementary, not replacements.
 
 
 ## Evidence sources
@@ -74,7 +77,9 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 - [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills)
 - [SkillMedev/skills — language-learning](https://github.com/SkillMedev/skills/tree/main/skills/language-learning)
 
-For the complete per-skill decision, overlap notes, pilot cases and current evidence limits, see [the skill suite matrix](../docs/audits/current/SKILL-SUITE-MATRIX-2026-10-18.md).\n\n## Safety and quality contract
+For the complete per-skill decision, overlap notes, pilot cases and current evidence limits, see [the skill suite matrix](../docs/audits/current/SKILL-SUITE-MATRIX-2026-10-18.md).
+
+## Safety and quality contract
 
 - These skills propose findings; they do not make unreviewed bulk edits.
 - Never fabricate citations, corpus attestations, regional labels, learner errors, CEFR mappings or exercise results.

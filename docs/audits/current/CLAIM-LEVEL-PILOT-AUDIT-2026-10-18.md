@@ -61,3 +61,37 @@
 4. Окремо перевірити регіональні твердження на рівні конкретних країн/спільнот. Не виводити частотність із нормативного опису й не виводити нормативність лише з корпусного прикладу.
 5. Після цього можна розглянути підвищення статусу з `reviewed` до `verified` за узгодженим критерієм.
 
+## 4. Follow-up: `ser / estar / hay` and locative/adjectival subpages — 2026-10-18
+
+**Scope:** `src/content/es/verbs/ser-estar.mdx`, `src/content/comparisons/ser-estar.mdx`, `src/content/es/verbs/ser-estar-hay.mdx`, `src/content/es/sentence-structure/hay-vs-estar.mdx`, `src/content/es/verbs/ser-estar-location.mdx`, and `src/content/es/verbs/ser-estar-with-adjectives.mdx`.
+
+### Claim/evidence register
+
+| Claim or example | Evidence checked | Disposition |
+|---|---|---|
+| The ser/estar contrast cannot be reduced to “permanent vs temporary.” | The official RAE/ASALE NGLE contents index identifies § 37.7 (semantic aspects), § 37.8 (locative attributes), and § 37.9 (syntactic and lexical aspects): https://www.rae.es/sites/default/files/Indice_contenidos_gramatica.pdf | Core pages already explain the contrast as construction- and meaning-sensitive. Kept the explanation; normalized the section locators. The index is a locator, not a substitute for reading all sections. |
+| Entity location normally uses estar, while ser + location can locate an event. | Same NGLE locator, § 37.8, specifically identifies locative attributes as a dedicated topic. | Retained as a typical baseline, not an exceptionless rule. The location page contained broken Markdown emphasis and an overly strong `verified` status supported only by a generic syntax landing page. Fixed the markup, added precise locator leads, and downgraded `review_status` to `draft`. Examples and their regional frequency still need item-by-item checking. |
+| Adjectives can receive different readings with ser/estar. | NGLE locator §§ 37.7–37.9 provides the correct semantic/syntactic/lexical research location. | Kept the useful minimal pairs, but downgraded `ser-estar-with-adjectives.mdx` from `verified` to `draft`: its old source note named NGLE without any section locator. The individual senses/translations of `listo, aburrido, verde, rico, seguro, abierto, cerrado` still require dictionary-level checking. |
+| Existential `haber` is impersonal and remains singular in existential use. | RAE/ASALE, *El buen uso del español*, conjugation table identifies `ha (impersonal: hay)`: https://www.rae.es/buen-uso-español/conjugación-española. FundéuRAE explains singular `había`, `hubo`, `ha habido`, and modal-periphrasis examples: https://www.fundeu.es/recomendacion/habia-habian-muchas-personas-haber-uso-impersonal/ | Supported. Added these direct sources to both canonical `ser-estar-hay.mdx` and `hay-vs-estar.mdx`. |
+| `hay` introduces existence/presence; `estar` locates an identified entity. | Core pages were compared against the above existential-`haber` sources and NGLE locative locator. | Retained as a basic discourse/semantic contrast, explicitly not a mechanical “unknown vs known” rule. |
+| `Hay Juan en la sala` is simply wrong in all contexts. | No direct claim-level source was found in this pass for an exceptionless ban on `hay + proper name`. | Removed the example from the categorical `Mistake` component in `hay-vs-estar.mdx`. Replaced it with a neutral contrast (`Juan está en la sala` vs. `¿Hay alguien en la sala?`) and an explicit warning that this does not prove every use of `hay +` a proper name impossible in every context. This specific construction remains open for a more focused syntax/source check. |
+| A definite NP is not the ordinary neutral presentational complement of `hay`. | No dedicated full-text NGLE section was read for the full range of definite-NP/existential restrictions in this batch. | Kept the wording qualified (“usually”, “basic neutral construction”), and recorded it as context-sensitive/open rather than a categorical ban. |
+| Regional distributions of ser/estar/hay and adjectival pairs. | No regional corpus query or country-specific reference was consulted in this batch. | Removed a broad comparative assertion from the canonical triad page and replaced it with an explicit scope limitation. No country-level frequency or distribution claim is certified. |
+
+### Files changed in this follow-up
+
+- `src/content/es/verbs/ser-estar.mdx`: updated NGLE locator to §§ 37.7–37.9; replaced the unsupported empirical-sounding “common mistakes among Ukrainian speakers” heading with “contrastive examples for Ukrainian-speaking readers”.
+- `src/content/es/verbs/ser-estar-hay.mdx`: added direct RAE/Fundéu sources; bounded the regional note; renamed “typical mistakes” to “contrastive examples”.
+- `src/content/es/sentence-structure/hay-vs-estar.mdx`: added direct RAE/Fundéu sources and replaced the categorical proper-name “mistake” example with a qualified contrast.
+- `src/content/es/verbs/ser-estar-location.mdx`: repaired malformed emphasis, added NGLE locator leads, and downgraded `verified` to `draft`.
+- `src/content/es/verbs/ser-estar-with-adjectives.mdx`: added NGLE locator leads and downgraded `verified` to `draft` pending individual lexical checks.
+- `src/content/comparisons/ser-estar.mdx`: read and compared against the canonical page; no substantive edit was justified in this batch.
+
+### Evidence boundaries / remaining work
+
+- The RAE/ASALE NGLE contents index is a locator; the full text of §§ 37.7–37.9 was not read in full during this batch.
+- The RAE conjugation page and FundéuRAE recommendation directly support the impersonal-singular claim about existential `haber`; they do not by themselves verify every claim about definiteness, information structure, or proper names after `hay`.
+- The adjective list and all Ukrainian translations have not been exhaustively checked against individual dictionary senses and full contexts.
+- No corpus query, country-by-country frequency audit, browser test, accessibility/SEO smoke test, or release-readiness assessment was performed.
+- Do not raise any affected page to `verified` on the basis of this pass alone.
+

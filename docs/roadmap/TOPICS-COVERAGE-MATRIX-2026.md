@@ -533,3 +533,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 
 **Evidence boundary:** the cited NGLE paragraphs were read directly. No corpus/frequency analysis or regional survey was conducted. This is a bounded source-backed clarification, not complete verification of all temporal conjunctions.
 
+
+## 16. Por / para — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Core functions of `para` | `src/content/es/prepositions/por-para.mdx`; `src/content/comparisons/por-para.mdx` | NGLE § 29.8k supports destination, prospective deadline, purpose, service/utility, recipient and orientation/intention. Retained as common functions rather than an exhaustive decision algorithm. |
+| Semantic overlap | Same pages | NGLE § 29.8n documents historical and current overlap between `por` and `para`, including contexts where both are possible. Comparison now warns against treating the rows as mutually exclusive categories. |
+| Temporal `por` | Canonical page; `por-para-markers.mdx`; comparison | NGLE §§ 29.8ñ–p distinguishes precise future reference with `para` from approximate time with `por`; `por + quantitative duration` is more frequent in American Spanish but documented in both American and European Spanish. Wording is now bounded accordingly. |
+| Cause, route, agent, means and exchange | Same pages | NGLE §§ 29.8o–r provide direct locators for route/approximate location, passive agent, cause, channel/means, price/exchange and substitution. Individual examples and translations remain only partially audited. |
+| Editorial clarity / unsupported learner-error framing | `por-para.mdx`; `por-para-markers.mdx` | Repaired malformed Markdown in the canonical page; replaced unsubstantiated “typical mistakes of Ukrainian speakers” headings with neutral contrast framing; source metadata added, pages remain `draft`. |
+
+**Evidence boundary:** direct NGLE paragraphs were read. No corpus search, quantitative frequency calculation, country-by-country survey, full audit of every example/translation, independent Ukrainian editorial review, or browser/accessibility/SEO test was run. The pages are not fully verified.

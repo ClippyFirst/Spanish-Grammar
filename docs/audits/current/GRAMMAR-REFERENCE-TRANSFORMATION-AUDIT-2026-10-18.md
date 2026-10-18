@@ -224,3 +224,20 @@ A narrow cross-check of the historical `323 → 208` matrix against the current 
 The two pages previously carried `review_status: verified` despite broad source notes without precise claim-level locators. Their status has been downgraded to `draft` pending claim-by-claim review. For loanwords, official RAE/ASALE material was located on adapted/unadapted loanwords (section 8 of the RAE summary of Ortografía) and capitalization of place names (Ortografía, “Lugares”, § 4.2.4.6.1). These sources establish the broad scope but do not verify all examples. For noun classes, the official Manual NGLE contents index now identifies § 12.1.2 «Clases principales de sustantivos» (p. 209) and § 12.5.1 «Clases de nombres propios» (p. 218): https://www.rae.es/sites/default/files/Indice_de_contenidos_Manual_Nueva_gramatica_de_la_lengua_espanola.pdf. This is a section locator only; the section text and individual claims have not yet been verified. No corpus search was performed and no corpus-attestation claim is made.
 
 This is a targeted spot check, not a full 323-row re-audit. The old count remains a structural baseline. The complete QA for PR #27's prior HEAD `d1a6817f4ea9895691ce5024592c145bc65ade33` succeeded in GitHub Actions run [39156433126](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39156433126). The edits in this follow-up require a new QA run on their resulting commit. The separately stacked PR #28 currently has a failing QA run (39155530069) on its synthetic merge ref; the log points to malformed YAML frontmatter at `src/content/comparisons/ser-estar.mdx:4:72`. That blocker is recorded but not edited in this PR #27 workstream.
+
+
+## Follow-up — articles and body-part constructions (2026-10-18)
+
+A limited pass compared the article checklist (requirements 4.1–4.11) with the canonical definite/indefinite article pages, the zero-article page, special cases, body-parts/clothing page, and `comparisons/articles.mdx`. The contrastive page and the two definite/indefinite pages consistently reject simplistic rules such as “first mention always takes un” and “profession after ser never takes an article”; no material contradiction was found in this sample.
+
+The pass found editorial Markdown defects in `src/content/es/articles/zero-article.mdx`, `src/content/es/articles/special-cases.mdx`, and `src/content/es/pronouns/body-parts-possession.mdx`. They were corrected. The zero-article page now explicitly frames “нульовий артикль” as a convenient label for absence of an article, aligned with RAE/ASALE's treatment of `ausencia de artículo` and `nombres escuetos`. The body-parts page no longer presents `Me duele mi cabeza` as categorically wrong via a Mistake component; its baseline is `Me duele la cabeza`, and the contrastive example is `Me duele la espalda, no la tuya`.
+
+The body-parts page's previous `review_status: verified` was downgraded to `draft`. The new source notes locate relevant NGLE sections (§§ 35.4j/o, 35.6i, 35.7f–ñ, 35.8k for possessive/sympathetic datives; § 14.7f and following for inalienable possession), but the cited section text and every example/translation were not fully checked in this pass. The zero-article and special-cases pages are also explicitly marked draft. This is not corpus attestation, regional verification, or a full linguistic review.
+
+Sources consulted:
+- RAE/ASALE, NGB § 9.1.1: https://www.rae.es/gram%C3%A1tica-b%C3%A1sica/el-art%C3%ADculo/caracterizaci%C3%B3n/clases-y-paradigma
+- RAE/ASALE, NGLE § 14.6: https://www.rae.es/gram%C3%A1tica/sintaxis/otras-caracter%C3%ADsticas-de-los-usos-anaf%C3%B3ricos-usos-endof%C3%B3ricos-del-art%C3%ADculo
+- RAE/ASALE, NGLE contents index for §§ 15.11–15.13: https://www.rae.es/sites/default/files/Indice_contenidos_gramatica.pdf
+- RAE/ASALE, NGLE subject index for possessive dative sections: https://www.rae.es/sites/default/files/indice_de_materias_gramatica.pdf
+
+No corpus search or browser test was performed. Full claim-level verification remains open.

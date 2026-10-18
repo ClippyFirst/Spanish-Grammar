@@ -136,7 +136,7 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 
 - **49–52** → `articles/definite-indefinite`, `definite-vs-indefinite`, `zero-article`.
 - **53–54** → `articles/special-cases`.
-- **55** → `pronouns/body-parts-possession` + `articles/special-cases`.
+- **55** → `pronouns/body-parts-possession` + `articles/special-cases` (structural mapping retained; this batch repaired malformed Markdown in the canonical body-parts page and downgraded its evidence status to `draft`; claim-level verification remains open).
 - **56** → `articles/articles-with-names`.
 - **57** → `articles/special-cases`.
 - **58** → `articles/neutral-lo`.
@@ -433,3 +433,18 @@ Official source leads checked for this pass:
 - RAE/ASALE, *Ortografía de la lengua española*, “Lugares”, § 4.2.4.6.1 on countries, cities and localities: https://www.rae.es/ortografía/lugares
 
 **Next:** continue the matrix crosswalk section by section; where a page's status or evidence is materially stronger than the available record, inspect the canonical content and its comparison (if one exists) before changing claims or status. Do not infer linguistic verification from the mapped slug.
+
+
+## 8. Targeted article/body-part editorial pass — 2026-10-18
+
+Scope: checklist requirements 4.1–4.11, with particular attention to 4.4 (absence of article/nombres escuetos), 4.5 (special cases), and 4.6 (body parts/clothing). Read the canonical articles `articles/definite-indefinite.mdx`, `articles/definite-vs-indefinite.mdx`, `articles/zero-article.mdx`, `articles/special-cases.mdx`, `pronouns/body-parts-possession.mdx`, and the comparison `comparisons/articles.mdx`.
+
+Findings and actions:
+
+- The canonical comparison and the definite/indefinite articles consistently warn against treating first mention, profession labels, or absence of an article as absolute rules. No substantive contradiction was found in the sampled contrastive explanations.
+- `zero-article.mdx` had malformed Markdown emphasis in its opening paragraph. It now distinguishes the convenient label “нульовий артикль” from the observable absence of an article and records the relevant RAE/ASALE locators: NGB § 9.1.1, NGLE §§ 15.11–15.13, and NGLE § 14.6. The page is explicitly `draft`; these locators do not establish claim-by-claim verification.
+- `special-cases.mdx` had a malformed emphasis sequence in the explanation of `a + el → al` and `de + el → del`. It is repaired and has a limited RAE/ASALE source trail for article forms and inalienable possession. The page remains `draft`.
+- `body-parts-possession.mdx` had widespread malformed Markdown around Spanish examples, including broken emphasis in the introduction, table, and example lists. Those artifacts were repaired. The questionable example `Me duele mi cabeza` was removed from the “mistake” component: the neutral baseline `Me duele la cabeza` is clearer, but possessives must not be declared universally ungrammatical without context. The contrast example is now `Me duele la espalda, no la tuya`. Its prior `verified` status was downgraded to `draft` because broad glossary/source notes did not establish claim-level verification. The source note now points to NGLE §§ 35.4j/o, 35.6i, 35.7f–ñ, 35.8k and § 14.7f onward.
+- The comparison `comparisons/articles.mdx` was read and did not require an edit in this pass. It provides the expected navigation to the three canonical article pages and treats its examples as typical, not exceptionless.
+
+Evidence limits: the official NGLE section references identify relevant material, but the full cited sections were not all read in this pass. No corpus queries were run; no regional frequency claim was validated; no browser test was performed. This is an editorial/source-traceability pass, not full verification of all article claims.

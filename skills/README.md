@@ -17,7 +17,7 @@ Choose a skill for a bounded task, provide the relevant MDX files and repository
 | [playwright-audit](./playwright-audit/SKILL.md) | Browser-level user journeys | Release review |
 | [astro-post-audit](./astro-post-audit/SKILL.md) | Built HTML inspection | Release review |
 | [seo-content-audit](./seo-content-audit/SKILL.md) | Content usefulness and search intent | Editorial review |
-| [spanish-grammar-fact-checker](./spanish-grammar-fact-checker/SKILL.md) | Spanish grammar claims against authoritative sources | Mandatory for rule changes |
+| [spanish-grammar-fact-checker](./spanish-grammar-fact-checker/SKILL.md) | Spanish grammar claims against authoritative sources | Rule changes |
 | [spanish-ukrainian-contrastive](./spanish-ukrainian-contrastive/SKILL.md) | Function-based comparison of Spanish and Ukrainian | Comparative articles |
 | [spanish-variation-auditor](./spanish-variation-auditor/SKILL.md) | Geography, register and variation | Usage claims |
 | [grammar-coverage-auditor](./grammar-coverage-auditor/SKILL.md) | Corpus coverage, contradictions and topic graph | Periodic corpus audit |
@@ -25,14 +25,19 @@ Choose a skill for a bounded task, provide the relevant MDX files and repository
 | [spanish-forms-auditor](./spanish-forms-auditor/SKILL.md) | Conjugations, agreement, clitics and morphology | Tables and examples |
 | [spanish-example-corpus-auditor](./spanish-example-corpus-auditor/SKILL.md) | Example quality, minimal contrasts and provenance | Every article |
 | [learner-error-auditor](./learner-error-auditor/SKILL.md) | Evidence-based Ukrainian-speaker difficulty analysis | Exercises and explanations |
+| [spanish-corpus-evidence-auditor](./spanish-corpus-evidence-auditor/SKILL.md) | Reproducible corpus queries and usage claims | Frequency/usage claims |
+| [spanish-pragmatics-register-auditor](./spanish-pragmatics-register-auditor/SKILL.md) | Context, politeness and register | Usage explanations |
+| [spanish-cefr-scope-auditor](./spanish-cefr-scope-auditor/SKILL.md) | Evidence for level and prerequisite labels | Curriculum design |
+| [spanish-terminology-auditor](./spanish-terminology-auditor/SKILL.md) | Spanish–Ukrainian linguistic metalanguage | Editorial consistency |
 
 ## Routing rules
 
 1. For a disputed Spanish rule: fact-checker → variation auditor if relevant → citation auditor.
-2. For a Spanish/Ukrainian comparison: contrastive skill → fact-checker → proofreading.
+2. For a Spanish/Ukrainian comparison: contrastive skill → fact-checker → terminology audit → proofreading.
 3. For examples or paradigms: forms auditor + example-corpus auditor; orthography auditor where needed.
-4. For pedagogy: learning-design + education-content. Do not invent learner errors or claim measured learning gains without evidence.
-5. For site changes: existing `npm run qa` remains authoritative for repository gates; browser and SEO audits are complementary, not replacements.
+4. For frequency or distribution claims: corpus-evidence auditor + variation auditor.
+5. For pedagogy: learning-design + education-content; use CEFR audit only where levels are claimed.
+6. For site changes: existing `npm run qa` remains authoritative for repository gates; browser and SEO audits are complementary, not replacements.
 
 ## Safety and quality contract
 

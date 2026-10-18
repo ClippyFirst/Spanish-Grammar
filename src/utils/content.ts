@@ -77,13 +77,27 @@ export function buildSlugMap(entries: GrammarEntry[]): Map<string, GrammarEntry[
 }
 
 function resolveReference(reference: string, all: GrammarEntry[]): GrammarEntry | undefined {
+  const normalized = reference
+    .replace(/^\/+/, '')
+    .replace(/\.(md|mdx)$/i, '');
   const slugMap = buildSlugMap(all);
-  const exact = slugMap.get(reference);
+
+  // Prefer an explicit category/slug path so references remain unambiguous
+  // when multiple pages share the same basename.
+  if (normalized.includes('/')) {
+    const exactPath = all.find((candidate) => {
+      const { category, slug } = parseId(candidate.id);
+      return `${category}/${slug}` === normalized;
+    });
+    if (exactPath) return exactPath;
+  }
+
+  const exact = slugMap.get(normalized);
   if (exact?.length === 1) return exact[0];
 
-  if (getCategory(reference)) {
+  if (getCategory(normalized)) {
     return all
-      .filter((candidate) => parseId(candidate.id).category === reference)
+      .filter((candidate) => parseId(candidate.id).category === normalized)
       .sort((a, b) => (a.data.order ?? 100) - (b.data.order ?? 100))[0];
   }
 

@@ -247,3 +247,34 @@ This follow-up implements the next action from the prior checkpoint. It is a bou
 
 **Evidence boundary:** the cited NGLE sections were opened and the relevant paragraphs read directly. No corpus frequency analysis, dialect survey, or full audit of every `cuando`/`aunque` example was performed. The pages remain `draft`; this bounded check does not justify `verified` or publication-ready status.
 
+## 15. Temporal conjunctions: `hasta que`, `antes de que`, `después de que`, and `en cuanto` — 2026-10-18
+
+This is a bounded claim-level pass following the subjunctive/indicative alternation check. It covers existing temporal claims and quick-reference rows, not the entire inventory of subordinate conjunctions.
+
+### Direct evidence reviewed
+
+- NGLE § 25.14e: `hasta que` can alternate in generic clauses (`hasta que les dan ~ den la cédula)); subjunctive is selected in prospective contexts (`hasta que te canses`).
+- NGLE § 25.14h: temporal `después de que` rejects future indicative (`*después de que llegarás`). Indicative and subjunctive alternate for present/past events in American Spanish; indicative is habitual in these temporal constructions in American Spanish, while subjunctive is the majority choice in European Spanish.
+- NGLE § 25.14h: temporal clauses complementing `antes` are described as requiring subjunctive (`antes de que amanezca`).
+- NGLE § 22.6p defines temporal `en cuanto` as ‘inmediatamente que’ (immediately/as soon as). NGLE § 31.14i also treats it as a relative adverbial expression of immediacy. The cited sections do not by themselves provide a complete, claim-by-claim mood-distribution account for `en cuanto`; this remains an explicit verification limit.
+
+### Changes made
+
+- `subjunctive-triggers-list.mdx`: split the former `cuando/hasta que + subjunctive` row, which risked overgeneralizing `hasta que`, into separate rows for prospective `cuando`, contextual alternation with `hasta que`, `antes de que`, and `después de que`.
+- `subjunctive-triggers.mdx`: added a bounded temporal-conjunction subsection with source-linked examples and regional limits; removed the unqualified “not future indicative” notation in favor of an explicit explanation.
+- `when-not-subjunctive.mdx`: added contrastive examples showing indicative in generic `hasta que` clauses and subjunctive in prospective clauses, plus the regional variation in temporal `después de que`.
+- `comparisons/indicative-subjunctive.mdx`: aligned the temporal section with both canonical pages and added a concise note on `antes de que`, `hasta que`, `después de que`, and the limited evidence for `en cuanto`.
+- Added direct source locators for NGLE §§ 25.14 and 22.6p to canonical mood pages and the comparison source note.
+
+### Evidence register
+
+| Claim/example | Direct source | Disposition |
+|---|---|---|
+| `Esperan días y días hasta que les dan la cédula` / `Trabaja hasta que te canses` | NGLE § 25.14e | Kept as the documented contrast between generic alternation and prospective subjunctive. |
+| `Avísame antes de que salgas` | NGLE § 25.14h | Kept as a standard subjunctive pattern after `antes de que`. |
+| Future `después de que` | NGLE § 25.14h | Future indicative is excluded; subjunctive is used for prospective reference. |
+| Present/past temporal `después de que` | NGLE § 25.14h | Regional note added: indicative is habitual in American Spanish, subjunctive is the majority choice in European Spanish. This describes the cited NGLE account, not every speaker. |
+| Temporal `en cuanto` | NGLE §§ 22.6p and 31.14i | Meaning ‘immediately/as soon as’ is source-backed; complete mood distribution is not yet independently verified and is not presented as a universal rule. |
+
+**Evidence boundary:** the cited NGLE paragraphs were opened and read. No corpus frequency search or separate regional survey was performed; all mood pages remain `draft` where broader claims are not fully checked. The `en cuanto` mood pattern remains an open item.
+

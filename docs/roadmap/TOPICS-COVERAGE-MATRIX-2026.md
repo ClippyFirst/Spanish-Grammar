@@ -448,3 +448,18 @@ Findings and actions:
 - The comparison `comparisons/articles.mdx` was read and did not require an edit in this pass. It provides the expected navigation to the three canonical article pages and treats its examples as typical, not exceptionless.
 
 Evidence limits: the official NGLE section references identify relevant material, but the full cited sections were not all read in this pass. No corpus queries were run; no regional frequency claim was validated; no browser test was performed. This is an editorial/source-traceability pass, not full verification of all article claims.
+
+## 9. Targeted article requirements 4.7–4.11 — 2026-10-18
+
+This is a limited source-traceability and editorial pass, not a full linguistic verification. The canonical mappings remain:
+
+| Checklist requirement | Canonical home | Batch finding / disposition |
+|---|---|---|
+| 4.7 Article with proper names | `src/content/es/articles/articles-with-names.mdx` | Structural coverage retained. Source notes now point to RAE/ASALE *Ortografía* § 4.2.4.6.1 and NGLE locators, but country-specific alternations and colloquial article use are not verified. Status downgraded from `verified` to `draft`. |
+| 4.8 Article after `ser`, `tener`, and prepositions | `src/content/es/articles/special-cases.mdx`; `src/content/es/articles/zero-article.mdx` | Existing coverage includes predicative professions, `tener` contrasts, fixed expressions, and `al/del`. Added a bounded explanation that a preposition alone does not determine article presence, with `en casa`, `en el trabajo`, `a la universidad`, and `de noche`. Source locators identify NGLE §§ 14.3, 14.7, 15.11–15.13; examples have not all been independently source-checked. |
+| 4.9 Neutral `lo` | `src/content/es/articles/neutral-lo.mdx` | Repaired malformed Markdown in the opening, adjective examples, and `lo` contrast. Added NGLE §§ 14.9–14.10 and relevant relative-construction locators. Status explicitly set to `draft`; no claim-by-claim verification is implied. |
+| 4.10 Genericity vs specificity | `src/content/es/articles/definite-indefinite.mdx`; `src/content/es/articles/definite-vs-indefinite.mdx`; `src/content/es/articles/zero-article.mdx` | Read the canonical articles and `src/content/comparisons/articles.mdx`. The sampled contrast is consistent: article choice depends on reference, context, generic readings, number, and construction rather than a single first-mention rule. No substantive change was justified in this sub-area; the sample is not a complete claim audit. |
+| 4.11 Article in fixed expressions | `src/content/es/articles/zero-article.mdx`; `src/content/es/articles/special-cases.mdx`; `src/content/es/micro-constructions/de-inf-sera-no-sea-lo-de.mdx` | Existing examples include `estar en casa`, `estar en clase`, `tener hambre`, `tener miedo`, and `dar clase`; `lo de` is covered in the neutral-`lo` and micro-construction pages. Canonical homes exist, but no corpus search or full lexical inventory audit was performed. |
+
+**Evidence boundary:** official RAE/ASALE locators establish where relevant material can be checked; the NGLE contents index is a locator, not the full section text. No corpus query, regional frequency audit, full example-by-example verification, browser test, or release-readiness assessment was performed in this batch. Structural coverage and source-traceability are not equivalent to `reviewed` or `verified` linguistic status.
+

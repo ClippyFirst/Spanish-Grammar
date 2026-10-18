@@ -304,7 +304,7 @@
 - Попередня партія вимог 4.7–4.11: повний QA пройшов на точному HEAD `7b873e3ac2254847cc06a552312a8581020b987c`, run [39158975522](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158975522).
 - Поточна партія: claim-level follow-up `ser / estar / hay`. Canonical pages, audit, matrix і checkpoint оновлено. Прочитано відповідні частини офіційних онлайн-розділів NGLE §§ 15.6a–s, 37.7a–k, 37.8a–k, релевантні частини 37.9a–i та 41.6a–e; також DPD § 4 і DLE entries дев’яти прикметників. Таблиця прикметників має дев’ять контекстних пар і pair-level evidence register.
 - Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `0a084402adc0c50e72fd827688579128d484b57f`. QA на попередньому checkpoint-коміті `6000f7284cd6a54f13bca760431fd7f72ab1f81c` завершився помилкою YAML: відсутня закривальна лапка в `sources` у `src/content/es/verbs/ser-estar-with-adjectives.mdx:26:0`, run [39160621124](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160621124). Дефект виправлено на `0a084402`; QA на цьому SHA ще не підтверджено.
+- HEAD перед checkpoint-оновленням: `9245c44861f032b9e0bf23a9c847375599c37ce7`. Повний QA пройшов на точному SHA, run [39160670634](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160670634). Попередній QA на `6000f7284cd6a54f13bca760431fd7f72ab1f81c` виявив відсутню закривальну лапку в `sources` у `src/content/es/verbs/ser-estar-with-adjectives.mdx:26:0`; її виправлено на `0a084402`. Після цього checkpoint-коміту перевірити QA на його новому точному SHA.
 - Локальне робоче дерево не перевірялося; зміни внесено через GitHub API.
 
 #### Live PR state
@@ -312,7 +312,7 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; no inline threads in last live query | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable at last check | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`0a084402adc0c50e72fd827688579128d484b57f`) | 46 / 202 | 0 submitted reviews; no inline threads in last live query | Previous checkpoint failed due to missing frontmatter quote; fix committed, new HEAD pending |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable at last check | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`9245c44861f032b9e0bf23a9c847375599c37ce7`) | 46 / 203 | 0 submitted reviews; no inline threads in last live query | Pass on exact HEAD, [run 39160670634](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39160670634); new checkpoint commit needs its own QA check |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; no inline threads in last live query | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase, or retarget was performed.
@@ -334,7 +334,7 @@
 - G0: partial — live PR/base/head and review state checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
 - G2–G5: partial/open — direct NGLE/DPD evidence and DLE spot-check recorded; complete lexical, translation and regional checks remain unfinished.
-- G6: failure on checkpoint SHA `6000f7284cd6a54f13bca760431fd7f72ab1f81c`; frontmatter quote repaired on `0a084402adc0c50e72fd827688579128d484b57f`, pending exact QA.
+- G6: pass on exact HEAD `9245c44861f032b9e0bf23a9c847375599c37ce7`, run 39160670634; check the new checkpoint commit's exact SHA.
 - G7: not run. G8: blocked; no publication-ready determination.
 
 - **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо успішний, продовжити контекстний і перекладний аудит усіх дев’яти прикметникових пар та їхніх регіональних обмежень. Не повертати `verified` без повної перевірки.

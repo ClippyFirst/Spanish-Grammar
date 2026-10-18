@@ -309,6 +309,14 @@ CEFR A1–C2 — додаткова фасета для пошуку й реко
 - сторінку методології та джерел;
 - доступну 404-сторінку й sitemap.
 
+**Необов'язкові тематичні добірки** можуть давати читачеві короткий шлях між пов'язаними темами. Це не обов'язковий порядок читання: кожен вузол має бути доступним напряму, а добірка — пояснювати, чому наступна тема корисна.
+
+Приклади редакторських добірок (точні зв'язки треба перевіряти разом із контент-графом):
+- **Від речення до клітик:** `fundamentals/grammar-basics` → `articles/definite-indefinite` → `pronouns/objeto-directo-indirecto` → `pronouns/object-pronoun-placement` → `pronouns/double-object-pronouns`.
+- **Як описувати минуле:** `tenses/tenses-overview` → `tenses/preterito-vs-imperfecto` → `tenses/preterito-perfecto` → `tenses/pluscuamperfecto`; додавати регіональну примітку лише там, де конкретна відмінність підтверджена.
+- **Від subjuntivo до умов:** `moods/subjuntivo-presente` → `moods/subjunctive-triggers-list` → `sentence-structure/conditional-sentences` → `sentence-structure/advanced-conditionals`.
+- **Звертання та наказовий спосіб:** `regional/tu-usted-vosotros-ustedes` → `regional/voseo` → `moods/imperative-overview` → `moods/imperative-pronouns`; не подавати одну регіональну систему як універсальну.
+
 Нові маршрути додавати лише після перевірки, що існуючі компоненти/утиліти їх підтримують.
 
 ### 10.2 Пошукові синоніми

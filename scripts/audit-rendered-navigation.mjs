@@ -20,6 +20,11 @@ const checks = [
     expected: [BASE + '/es/pronouns/personal-a/'],
     description: 'canonical_topic navigation',
   },
+  {
+    file: 'es/sentence-structure/hay-vs-estar/index.html',
+    expected: [BASE + '/es/verbs/ser-estar-hay/'],
+    description: 'canonical_topic navigation for a focused grammar page',
+  },
 ];
 
 let failures = 0;

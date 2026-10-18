@@ -87,11 +87,24 @@
 - `src/content/es/verbs/ser-estar-with-adjectives.mdx`: added NGLE locator leads and downgraded `verified` to `draft` pending individual lexical checks.
 - `src/content/comparisons/ser-estar.mdx`: read and compared against the canonical page; no substantive edit was justified in this batch.
 
+### Follow-up dictionary spot-check: adjective contrasts
+
+The official DLE entries for all seven adjectives listed on `ser-estar-with-adjectives.mdx` were opened and checked as lexical evidence leads:
+
+- `listo`: the entry distinguishes a prepared/disposed sense from a sagacious/astute sense, supporting the broad contrast *estar listo* vs *ser listo* without making the construction the dictionary's only organizing principle. https://dle.rae.es/listo
+- `aburrido`: the entry gives “que causa aburrimiento”; it does not by itself establish every predicate/state contrast for *ser/estar*. https://dle.rae.es/aburrido
+- `verde`: the entry includes the colour sense, fruit not yet ripe, and figurative inexperience/unpreparedness. https://dle.rae.es/verde
+- `rico`: the entry distinguishes wealth from taste/pleasantness. https://dle.rae.es/rico
+- `seguro`: the entry distinguishes safe/reliable from a person who feels no doubt (example: *Está segura de ello*). https://dle.rae.es/seguro
+- `abierto` and `cerrado`: the entries include contrasting personality/attitude senses (frank/receptive vs strict/rigid or reserved), alongside other senses. https://dle.rae.es/abierto and https://dle.rae.es/cerrado
+
+This is a lexical spot-check, not full verification of each *ser/estar* pairing. DLE entries establish possible senses; the NGLE sections on the copular contrast still need full-text claim checks to support construction choice and the Ukrainian translation in context. The page remains `draft`.
+
 ### Evidence boundaries / remaining work
 
 - The RAE/ASALE NGLE contents index is a locator; the full text of §§ 37.7–37.9 was not read in full during this batch.
 - The RAE conjugation page and FundéuRAE recommendation directly support the impersonal-singular claim about existential `haber`; they do not by themselves verify every claim about definiteness, information structure, or proper names after `hay`.
-- The adjective list and all Ukrainian translations have not been exhaustively checked against individual dictionary senses and full contexts.
+- The seven adjective entries have now been spot-checked in the DLE, but this does not exhaustively verify each construction-to-sense pairing or all Ukrainian translations in context.
 - No corpus query, country-by-country frequency audit, browser test, accessibility/SEO smoke test, or release-readiness assessment was performed.
 - Do not raise any affected page to `verified` on the basis of this pass alone.
 

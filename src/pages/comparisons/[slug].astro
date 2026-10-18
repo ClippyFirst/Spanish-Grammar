@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   const comparisons = sortComparisons(await getCollection('comparisons'));
 
   return comparisons.map((entry) => ({
-    params: { slug: entry.id.replace(/\\.(mdx?|md)$/i, '') },
+    params: { slug: entry.id.replace(/\.(md|mdx)$/i, '') },
     props: {
       entry,
       others: comparisons.filter((candidate) => candidate.id !== entry.id),

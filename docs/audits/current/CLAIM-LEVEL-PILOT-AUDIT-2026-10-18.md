@@ -307,3 +307,30 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 | `para + infinitive` vs. `para que + finite clause` | NGLE §§ 46.1, 46.7 (locators) | Existing explanation retained with a caveat against reducing the distinction to an absolute same-subject/different-subject rule; full example-by-example check remains open. |
 
 **Evidence boundary:** relevant NGLE paragraphs were opened and read directly. No corpus query, frequency calculation, country-by-country survey, independent Ukrainian editorial review, full lexical construction audit, or browser/accessibility/SEO test was performed. This is a bounded source-backed review; the three pages remain `draft` and publication readiness is not implied.
+
+## 17. Verb–preposition government and personal `a` — bounded editorial/source check — 2026-10-18
+
+### Direct evidence reviewed
+
+- RAE/ASALE NGLE § 34.8a–i: personal `a` is used with direct objects in person-related contexts; its presence is construction-sensitive, not a universal marker before every noun. Official source: https://www.rae.es/gram%C3%A1tica/sintaxis/el-complemento-directo-preposicional-i-nombres-y-pronombres-complementos-de-persona-y-de-cosa-personificada
+- NGLE § 36.6j: `a + infinitive` appears with prospective/goal-related verbs, including `ayudar` and `enseñar`. Official source: https://www.rae.es/gram%C3%A1tica/sintaxis/complementos-de-r%C3%A9gimen-con-las-preposiciones-a-ante-y-bajo
+- NGLE §§ 36.7–36.10 cover selected verb-preposition patterns with `con`, `de/des­de`, `en`, and `por/para`. Sources: https://www.rae.es/gram%C3%A1tica/sintaxis/complementos-de-r%C3%A9gimen-con-las-preposiciones-con-y-contra ; https://www.rae.es/gram%C3%A1tica/sintaxis/complementos-de-r%C3%A9gimen-con-las-preposiciones-de-y-desde ; https://www.rae.es/gram%C3%A1tica/sintaxis/complementos-de-r%C3%A9gimen-con-las-preposiciones-en-entre-hacia-y-hasta ; https://www.rae.es/gram%C3%A1tica/sintaxis/complementos-de-r%C3%A9gimen-con-las-preposiciones-para-por-sobre-y-tras
+- RAE/ASALE DPD entry `queísmo` directly documents `acordarse de que` and warns against dropping a required preposition; entry `depender` is recorded as a dictionary locator. Sources: https://www.rae.es/dpd/que%C3%ADsmo ; https://www.rae.es/dpd/depender
+
+### Changes made
+
+- `src/content/es/prepositions/verbs-with-prepositions.mdx`: repaired malformed Markdown in the opening, `que` clause explanation, and closing memory tip; added source locators; changed the heading about “typical errors of Ukrainian speakers” to neutral contrast examples; retained `draft` status.
+- Corrected a substantive category conflation: `ayudar a alguien` can involve personal `a` before a human direct object, whereas `ayudar a limpiar` uses `a + infinitive` as part of the verb's construction. The previous sentence treated these as the same distinction in both examples; it now distinguishes the two constructions.
+- Clarified that in `Depende de que llegues a tiempo`, `de` belongs to the government pattern `depender de`; the preposition itself does not determine the subjunctive.
+
+### Evidence register
+
+| Claim/example | Direct source | Disposition |
+|---|---|---|
+| `Veo a María` | NGLE § 34.8a–i | Retained as a baseline example for personal `a`; the section explicitly treats presence/absence as sensitive to animacy, definiteness, reference and construction. |
+| `ayudar a alguien` vs `ayudar a limpiar` | NGLE § 34.8; § 36.6j | Clarified the difference between personal `a` before a human direct object and `a + infinitive` selected by the verb. The page does not attempt a full regional audit of the argument structure of `ayudar`. |
+| `acordarse de que` | DPD, entry `queísmo` | Kept as a documented case where omitting the selected preposition is discouraged in the careful standard. |
+| `Depende de que llegues a tiempo` | DPD `depender`; NGLE government framework | Clarified that preposition selection and subjunctive selection are separate analytical questions. The exact mood choice in every context was not exhaustively audited. |
+| `pensar en`, `soñar con`, `interesarse por`, etc. | NGLE §§ 36.7–36.10 as relevant locators | Examples remain a pedagogical sample, not a claim that each verb has only one construction or that every listed example was individually frequency-checked. |
+
+**Evidence boundary:** relevant NGLE sections were opened and read; the DPD `queísmo` entry was read directly. This is not a full audit of all verb-preposition pairs, dictionary senses, regional variants, or translations. No corpus query, quantitative frequency analysis, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Page status remains `draft`.

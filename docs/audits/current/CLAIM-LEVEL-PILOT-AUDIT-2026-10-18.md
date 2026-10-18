@@ -219,3 +219,31 @@ The relevant NGLE sections were opened directly. This is a bounded check of thes
 
 **Evidence boundary:** direct NGLE sections were opened for the listed claims. The batch did not audit every subjunctive trigger, every alternation, every regional pattern, or every example on the four pages. The pages remain `draft` where appropriate; no full verification or publication-readiness claim is made.
 
+## 14. Subjunctive alternations: temporal `cuando` and concessive `aunque` — 2026-10-18
+
+This follow-up implements the next action from the prior checkpoint. It is a bounded claim-level check, not a complete audit of temporal or concessive conjunctions.
+
+### Direct evidence read
+
+- RAE/ASALE, NGLE § 25.13h: hypothetical concessive clauses such as `Aunque insistas, no te hará caso` take subjunctive; factual concessive clauses may allow both moods, exemplified by `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él`.
+- NGLE § 25.13i–j: mood choice in concessive clauses is related to information structure. Indicative can present the concessive content as an assertion/new information; subjunctive can present it as background/shared information. Subjunctive does not itself deny the truth of the proposition.
+- NGLE § 24.5c and § 24.5j–k: imperfective indicative with `cuando` supports iterative/habitual readings; `Cuando llegues, nos iremos` receives the interpretation ‘once/after you arrive’. This section supports the temporal interpretation and the contrast in time perspective; § 25.13 is the broader source for mood selection with subordinating conjunctions.
+
+### Changes made
+
+- `subjunctive-triggers.mdx`: replaced the broad “not yet occurred / not presented as accomplished fact” description with a more bounded distinction between prospective temporal clauses and habitual scenarios. Added the explicit factual alternation with `aunque` from NGLE § 25.13h and clarified information structure.
+- `when-not-subjunctive.mdx`: added a compact factual-`aunque` alternation section and a more precise reference to NGLE § 24.5j–k for the prospective `cuando` example.
+- `comparisons/indicative-subjunctive.mdx`: added the factual alternation alongside the hypothetical and assertive examples so the canonical pages and comparison do not imply a one-to-one mapping of factuality to mood.
+
+### Evidence register
+
+| Claim/example | Direct source | Disposition |
+|---|---|---|
+| `Cuando llegas a casa, siempre llamas` | NGLE § 24.5c: imperfective indicative in temporal `cuando` clauses can receive habitual/iterative readings. | Retained as a habitual example; not a rule for all `cuando` clauses. |
+| `Cuando llegues, nos iremos` / `Cuando llegues, llámame` | NGLE § 24.5j–k explicitly discusses prospective `cuando llegues` and the paraphrase ‘una vez que llegues’. | Retained with prospective/time-perspective wording; avoid claiming § 24.5 alone exhausts mood selection. |
+| `Aunque insistas, no te hará caso` | NGLE § 25.13h identifies hypothetical concessive clauses and gives this example. | Added as the bounded hypothetical baseline. |
+| `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él` | NGLE § 25.13h gives the two-form alternation in a factual concessive context. | Added to show that factual concession does not mechanically require indicative. |
+| Indicative vs. subjunctive in factual concession | NGLE § 25.13i–j discusses assertion, information structure, and background/shared information. | Clarified; subjunctive is not equated with doubt or falsity. |
+
+**Evidence boundary:** the cited NGLE sections were opened and the relevant paragraphs read directly. No corpus frequency analysis, dialect survey, or full audit of every `cuando`/`aunque` example was performed. The pages remain `draft`; this bounded check does not justify `verified` or publication-ready status.
+

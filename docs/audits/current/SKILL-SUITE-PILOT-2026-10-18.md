@@ -3,7 +3,7 @@
 **Дата:** 2026-10-18  
 **Гілка статей:** `docs/grammar-reference-architecture-2026-10-18`  
 **Гілка навичок:** `feat/grammar-research-skills-2026-10-18`  
-**Метод:** source-level review of MDX, frontmatter, examples, relationships and visible claims. No local build, `npm run qa`, browser session, external corpus query or complete claim-level source verification was executed. Findings below are not a full-corpus audit.
+**Метод:** source-level review of MDX, frontmatter, examples, relationships and visible claims. Після первинного огляду GitHub Actions успішно виконав повний `npm run qa` та Astro production build на commit `523134360d6ac0c1a8631abbbe6dcb214b78a739`. Локальний запуск і ручна браузерна сесія не виконувалися; зовнішній корпусний запит і повна claim-level source verification також не виконувалися. Findings нижче не є повним лінгвістичним аудитом корпусу.
 
 ## 1. Executive summary
 
@@ -107,7 +107,7 @@ Three article types were sampled: the `ser/estar` canonical article + comparison
 | Claim-level source integrity | Open | Requires actual source-by-source review |
 | Regional coverage | Open | No exhaustive country-by-country audit performed |
 | Visualization suitability | Recommendations recorded | No SVG created or published |
-| Local QA/build/browser | Not run | Must not be described as passed |
+| GitHub Actions QA/build | Passed on commit `523134360d6ac0c1a8631abbbe6dcb214b78a739` | 213 content pages audited by the existing final-content gate; this is not a linguistic proofread |\n| Manual browser review | Not run | Still required for interaction, viewport and real rendering checks |
 
 ## 5. Next actions
 
@@ -133,4 +133,4 @@ Three article types were sampled: the `ser/estar` canonical article + comparison
 
 **Дія:** переписано відповідні речення й приклади, щоб використовувати просте вкладення жирного та курсиву без неоднозначної послідовності зірочок. Зміни внесено в commits `a37dc06abc68054e2870fb77c8942082b90bebdd`, `adc7afb4ff66adfbe865698bf02813b5bcae3b32` і `a42cda44525df4966c3691c88b8f0dc74a456c0a`.
 
-**Статус:** source-level виправлення; production build і браузерна перевірка ще очікують фінального QA.
+**Статус:** source-level виправлення; повний CI QA та production build пройшли на commit `523134360d6ac0c1a8631abbbe6dcb214b78a739`; браузерна перевірка не проводилася.

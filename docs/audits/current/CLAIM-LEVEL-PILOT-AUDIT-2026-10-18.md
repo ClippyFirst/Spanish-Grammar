@@ -122,6 +122,19 @@ The official DLE entries for all seven adjectives listed on `ser-estar-with-adje
 
 This is a lexical spot-check, not full verification of each *ser/estar* pairing. DLE entries establish possible senses; the NGLE sections on the copular contrast still need full-text claim checks to support construction choice and the Ukrainian translation in context. The page remains `draft`.
 
+### Pair-level register for the seven adjective examples
+
+| Pair in the canonical page | Direct lexical / grammatical support reviewed | Assessment for the current example | Remaining limitation |
+|---|---|---|---|
+| `listo` | DLE distinguishes “sagaz, avisado” from “preparado, dispuesto”: https://dle.rae.es/listo | `Es muy listo` / `¿Estás listo?` illustrates a clear lexical contrast. | The DLE senses support the glosses; this is not a full regional-frequency audit. |
+| `aburrido` | DLE gives the adjective sense “que causa aburrimiento”: https://dle.rae.es/aburrido. NGLE § 37.7 discusses the broad contrast and the use of participles with `estar`. | `La película es aburrida` / `Estoy aburrido` is a useful property-versus-state teaching pair. | The exact state interpretation is not established by the DLE definition alone; keep the page draft pending complete context/translation review. |
+| `verde` | DLE includes colour and unripe-fruit senses: https://dle.rae.es/verde. NGLE § 37.9f explicitly discusses colour adjectives alternating with `ser` and `estar` according to the assumed change. | `La botella es verde` / `El plátano está verde` is supported as a colour vs. unripe-fruit contrast. | Do not generalize the `estar` reading to every noun or context; the additional “inexperienced” sense is not shown in the table now. |
+| `rico` | DLE distinguishes wealthy from tasty/pleasant: https://dle.rae.es/rico | `Es rico` / `La sopa está rica` matches the intended contrast. | Lexical senses were checked; the page does not yet document region-specific preferences or all uses of `rico`. |
+| `seguro` | DLE distinguishes safe/reliable from a person who feels no doubt and gives `Está segura de ello`: https://dle.rae.es/seguro | `Es un método seguro` / `Estoy seguro de que sí` illustrates reliability vs. certainty. | Full translation and register audit remains open. |
+| `abierto` / `cerrado` | DLE entries include physical/open-closed and personality/attitude senses: https://dle.rae.es/abierto; https://dle.rae.es/cerrado. NGLE § 37.9d discusses character traits with `ser` and situational behaviour with `estar`. | `Es una persona abierta/cerrada` / `La tienda está abierta/cerrada` contrasts a person’s characteristic with a store’s state. | The entries support the broad senses, but the complete range of figurative, social, and regional uses is not audited. |
+
+**Disposition:** all seven pairs now have full Spanish examples instead of isolated Ukrainian glosses. The spot-check supports the intended contrasts at a basic teaching level, but it does not justify upgrading `ser-estar-with-adjectives.mdx` from `draft` to `verified`.
+
 ### Evidence boundaries / remaining work
 
 - The direct online NGLE texts for §§ 37.7 and 37.8 were read through the relevant subsections; the relevant portions of § 37.9 were also inspected. This is not an exhaustive audit of every example or every subsection in the full chapters.

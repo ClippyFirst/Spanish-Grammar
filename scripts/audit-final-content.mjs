@@ -131,14 +131,20 @@ for (const file of uiSourceFiles) {
 
 const artifact = /\*[^\s*\n]+\*\*[^\s*][^\n*]*\*(?!\*)|\*[^\s*\n]+\*\*[^\s*][^\n*]*\*\*/g;
 for (const d of docs) {
-  // Preserve the established conservative emphasis check for grammar articles.
-  // Comparison pages are included in terminology checks, but need their own
-  // dedicated markup review rather than applying a known noisy heuristic.
-  if (d.rel.startsWith('comparisons/')) continue;
-  const hits = [...d.body.matchAll(artifact)].map(m => ({
-    match: m[0],
-    line: d.body.slice(0, m.index).split(/\r?\n/).length
-  }));
+  const hits = d.rel.startsWith('comparisons/')
+    ? []
+    : [...d.body.matchAll(artifact)].map(m => ({
+        match: m[0],
+        line: d.body.slice(0, m.index).split(/\r?\n/).length
+      }));
+
+  // An odd number of triple-or-longer asterisk runs on one line is a strong
+  // signal of malformed mixed bold/italic markup such as ***word**.
+  for (const [index, line] of d.body.split(/\r?\n/).entries()) {
+    const runs = line.match(/\*{3,}/g) ?? [];
+    if (runs.length % 2 === 1) hits.push({ match: line.trim(), line: index + 1 });
+  }
+
   if (hits.length) findings.emphasis_artifacts.push({ page: d.rel, hits });
 }
 

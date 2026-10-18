@@ -389,3 +389,32 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 | `a Juan le gustan los libros` / clitic doubling | NGLE indirect-object framework and DPD entry | Retained as a basic pattern; complete cross-dialect clitic-doubling distribution remains open. |
 
 **Evidence boundary:** DPD `gustar` and NGLE § 35.5 excerpts were opened and read. No full paradigm audit of every verb in the group, corpus frequency analysis, detailed regional clitic-doubling survey, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.
+
+## 20. Object clitics and double-clitic sequences — bounded source/markup pass — 2026-10-18
+
+### Direct evidence reviewed
+
+- NGLE § 16.11a: clitic clusters such as `se lo` are tightly ordered; proclitic groups are written as separate words (`se lo daré`), while enclitic groups are written together (`dárselo`).
+- NGLE § 16.11j and § 35.2e–g: third-person dative `le/les` takes the form `se` before an accusative clitic (`Se lo dijo`, not `*Le lo dijo`); `se` precedes the other clitics in the cluster.
+- NGLE § 16.11l and § 35.2h: plural marking may surface on the accusative clitic in some American varieties (`Se los dije` for singular `lo` with plural recipient); this is regional variation and must not be generalized to all speakers.
+- NGLE § 16.7: proclisis/enclisis and the positions available with finite verbs, infinitives, gerunds and affirmative imperatives.
+- NGLE § 16.14: clitic doubling and co-reference; NGLE § 34.8: personal `a` before a direct object does not itself make the object indirect.
+- DPD `leísmo`: masculine-person singular leísmo has a specific accepted scope; it must not be treated as a universal direct-object pattern. https://www.rae.es/dpd/le%C3%ADsmo
+- Official sources: https://www.rae.es/gram%C3%A1tica/sintaxis/secuencias-de-pronombres-%C3%A1tonos ; https://www.rae.es/gram%C3%A1tica/sintaxis/sintaxis-de-los-pronombres-%C3%A1tonos-pronombres-procl%C3%ADticos-y-encl%C3%ADticos ; https://www.rae.es/gram%C3%A1tica/sintaxis/los-pronombres-dativos ; https://www.rae.es/gram%C3%A1tica/sintaxis/duplicaci%C3%B3n-de-los-pronombres-%C3%A1tonos
+
+### Changes made
+
+- `src/content/es/pronouns/objeto-directo-indirecto.mdx`: added direct NGLE/DPD source locators and `draft` status; repaired malformed Markdown in the direct/indirect object contrast, `se lo` explanation, post-preposition pronouns and `ayudar a alguien` example; clarified the personal-`a` distinction; bounded the leísmo note using DPD; changed learner-error heading to neutral contrast examples.
+- `src/content/es/pronouns/double-object-pronouns.mdx`: added direct NGLE source locators and `draft` status; repaired malformed Markdown around OI/OD, `le/les → se`, and the different values of `se`; changed learner-error heading to neutral contrast examples.
+
+### Evidence register
+
+| Claim/example | Direct source | Disposition |
+|---|---|---|
+| `Veo a María → la veo` vs. `Escribo a María → le escribo` | NGLE § 34.8; indirect-object framework | Retained as a functional contrast; `a` alone does not identify the object as indirect. |
+| `Le doy el libro → Se lo doy` | NGLE §§ 16.11j, 35.2e–g | Retained; `le/les` becomes `se` before `lo/la/los/las`. |
+| `Te la envié`, `Dáselo`, `No se lo des` | NGLE §§ 16.11a, 16.7 | Retained as illustrative examples of order and clitic position; not every complex placement case was audited. |
+| `Veo a María → le veo` | DPD `leísmo` | Wording narrowed: standard feminine direct-object baseline is `la`; masculine-person leísmo is a separate accepted pattern with limited scope. |
+| `Se los dije` with singular `lo` | NGLE § 16.11l / § 35.2h | Regional pattern recorded as an open teaching nuance, not promoted to a general rule in these pages. |
+
+**Evidence boundary:** the cited NGLE passages and DPD `leísmo` entry were read directly. No full dialect survey, corpus frequency analysis, complete audit of all pronoun placement environments, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.

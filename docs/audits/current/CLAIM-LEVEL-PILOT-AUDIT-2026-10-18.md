@@ -107,7 +107,7 @@ This direct DPD source strengthens the evidence for impersonal singular agreemen
 
 ### Editorial follow-up: contextual examples in adjective pairs
 
-The seven rows in `ser-estar-with-adjectives.mdx` now include full Spanish examples and Ukrainian glosses for both `ser` and `estar` readings (`Es muy listo` / `¿Estás listo?`, `La película es aburrida` / `Estoy aburrido`, etc.). This replaces isolated one-word translations with contexts that make the contrast inspectable. It is an editorial clarity improvement, not proof that every reading is universal or regionally neutral; the page remains `draft`.
+The nine rows in `ser-estar-with-adjectives.mdx` now include full Spanish examples and Ukrainian glosses for both `ser` and `estar` readings (`Es muy listo` / `¿Estás listo?`, `La película es aburrida` / `Estoy aburrido`, etc.). This replaces isolated one-word translations with contexts that make the contrast inspectable. It is an editorial clarity improvement, not proof that every reading is universal or regionally neutral; the page remains `draft`.
 
 ### Follow-up dictionary spot-check: adjective contrasts
 
@@ -132,6 +132,8 @@ This is a lexical spot-check, not full verification of each *ser/estar* pairing.
 | `rico` | DLE distinguishes wealthy from tasty/pleasant: https://dle.rae.es/rico | `Es rico` / `La sopa está rica` matches the intended contrast. | Lexical senses were checked; the page does not yet document region-specific preferences or all uses of `rico`. |
 | `seguro` | DLE distinguishes safe/reliable from a person who feels no doubt and gives `Está segura de ello`: https://dle.rae.es/seguro | `Es un método seguro` / `Estoy seguro de que sí` illustrates reliability vs. certainty. | Full translation and register audit remains open. |
 | `abierto` / `cerrado` | DLE entries include physical/open-closed and personality/attitude senses: https://dle.rae.es/abierto; https://dle.rae.es/cerrado. NGLE § 37.9d discusses character traits with `ser` and situational behaviour with `estar`. | `Es una persona abierta/cerrada` / `La tienda está abierta/cerrada` contrasts a person’s characteristic with a store’s state. | The entries support the broad senses, but the complete range of figurative, social, and regional uses is not audited. |
+| `bueno` | DLE includes positive evaluation, health/fitness, and taste/pleasantness senses, including *gustoso, apetecible, agradable*: https://dle.rae.es/bueno | `Es un buen profesor` / `La sopa está buena` distinguishes evaluation of a person’s work from taste. | The broad lexical distinction is supported; the adjective has many other senses and the pair is not a universal ser/estar rule. |
+| `malo` | DLE includes negative evaluation, illness, and deterioration, with the explicit example `El pescado está malo`: https://dle.rae.es/malo | `Es un mal profesor` / `El pescado está malo` distinguishes a characteristic/evaluation from food being spoiled. | Context determines the intended reading; regional and figurative uses are not exhaustively audited. |
 
 **Disposition:** all seven pairs now have full Spanish examples instead of isolated Ukrainian glosses. The spot-check supports the intended contrasts at a basic teaching level, but it does not justify upgrading `ser-estar-with-adjectives.mdx` from `draft` to `verified`.
 

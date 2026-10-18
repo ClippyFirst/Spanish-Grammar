@@ -116,3 +116,10 @@ Three article types were sampled: the `ser/estar` canonical article + comparison
 3. Continue the full inventory and coverage matrix from the grammar roadmap; do not mark an article “verified” based on a sample or on file presence.
 4. Expand regional checks from pan-Hispanic labels to the specific countries/regions relevant to each claim, including Spain and Latin American varieties; explicitly record where evidence is missing.
 5. Keep the two PRs unmerged until their documents, routing and QA claims are reconciled.
+
+
+### P1 — QA final-content audit не розрізняв помилкову й нормативну українську форму
+
+Під час CI для commit `d1ecf1a8` фінальна перевірка помилково позначила «українськомовному» як заборонене слово та виявила хибний Markdown-artifact на коректному `**imperfecto**` поруч із курсивом. Це дефект самого QA-скрипту, а не доказ того, що ці форми неправильні.
+
+**Виправлення:** `scripts/audit-final-content.mjs` у commit `817dedf01ef97d931ec33b1b17fb2530ad388e45` тепер забороняє лише «україномов…» і шукає непарні потрійні зірочки. Повторний повний QA для цього commit ще не підтверджено.

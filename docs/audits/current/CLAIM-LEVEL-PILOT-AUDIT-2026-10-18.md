@@ -105,6 +105,10 @@ The second edition of the RAE/ASALE *Diccionario panhispánico de dudas*, entry 
 
 This direct DPD source strengthens the evidence for impersonal singular agreement and its register/region caveat. DPD alone does not detail every definiteness restriction; the direct NGLE § 15.6c–i check below resolves the neutral-standard baseline for definite NPs and bare proper names, while NGLE §§ 15.6j–s describe specific quantitative and endophoric exceptions; representative examples are now included in the site.
 
+### Regional note audit: date/day expressions
+
+NGLE § 37.8d was read directly for the narrow regional example involving date/day expressions. It states that `Ya es viernes` is the general pattern, also documents `Ya estamos a viernes / en verano / en junio`, records `Ya estamos en viernes` and `Ya estamos viernes` in the Andean area, and cites informal Chilean `Hoy somos viernes` in response to `¿Qué día es hoy?`. The canonical page and comparison page now include the same bounded example with the direct NGLE link and explicitly say it is not a general regional rule for all `ser/estar` uses. No broader Spain-versus-Latin-America generalization or frequency claim was added.
+
 ### Cross-page consistency check
 
 The canonical `ser-estar.mdx`, the focused `ser-estar-with-adjectives.mdx`, and `comparisons/ser-estar.mdx` were compared after the nine-pair table revision. Their shared examples for `listo`, `aburrido`, and `malo` align in the intended baseline readings; the canonical page's `verde` contrast is compatible with the focused page's colour/unripe-fruit examples. The comparison article presents a smaller set of minimal pairs and links back to the canonical explanation; no material contradiction was found in this sample. This is a scoped consistency check, not a claim that all cross-page ser/estar content has been reconciled.

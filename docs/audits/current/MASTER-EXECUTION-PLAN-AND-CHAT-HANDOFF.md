@@ -299,44 +299,46 @@
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок перевірено 2026-10-18.** Це live-стан перед цим checkpoint-комітом; після нього перевірити CI на точному новому HEAD.
+**Знімок перевірено 2026-10-18.** Це live-стан перед checkpoint-комітом; перевірити CI на точному новому HEAD після коміту.
 
-- Завершена партія: subjuntivo/indicativo, зокрема чергування в часових підрядних із `cuando` та поступальних із `aunque`. Перевірено прямі тексти NGLE § 25.13h–j та § 24.5c, j–k. Додано приклад фактичного чергування `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él`, уточнено перспективу майбутніх часових конструкцій, синхронізовано дві канонічні сторінки й порівняння. Claim-level audit і матрицю оновлено.
-- Гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD перед checkpoint-оновленням: `1745b3c7500a55e3cc358e60417f29f605e6e587`.
-- QA run [39164395293](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39164395293) для цього точного SHA був `pending` під час перевірки. Після checkpoint-коміту перевірити QA на новому точному HEAD.
-- PR #27 live state: open, ready (not draft), not merged; base `main` SHA `10d49cba91d33c192d1fc0bfa12def1c845cad09`; head `1745b3c7500a55e3cc358e60417f29f605e6e587`; 50 changed files / 258 commits. GitHub повідомив `mergeable: false` під час перевірки; не намагатися автоматично виправляти конфлікт, поки не встановлено причину. Рев’ю та inline threads раніше повертали 0, reviewers не запитані.
-- Робоче дерево локально не перевірялося; зміни внесено через GitHub API.
+- Завершено два обмежені claim-level проходи для subjuntivo/indicativo:
+  1. NGLE § 25.13h–j та § 24.5c, j–k: factual/hypothetical `aunque` alternation and prospective/habitual `cuando`. Added the NGLE-backed pair `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él`, refined the temporal explanation, aligned canonical pages and comparison.
+  2. NGLE § 25.14e/h and §§ 22.6p, 31.14i: `hasta que` alternation, `antes de que` + subjunctive, temporal `después de que` (future indicative excluded; regional present/past alternation), and `en cuanto` meaning ‘inmediatamente que’. The trigger quick-reference row was split to avoid implying that `hasta que` always takes subjunctive. Mood distribution specifically with `en cuanto` remains unverified and is explicitly caveated.
+- Canonical pages updated: `src/content/es/moods/subjunctive-triggers.mdx`, `subjunctive-triggers-list.mdx`, `when-not-subjunctive.mdx`, plus `src/content/comparisons/indicative-subjunctive.mdx`. Claim-level audit and topic matrix updated with evidence registers and limitations.
+- Branch: `docs/grammar-reference-architecture-2026-10-18`.
+- HEAD before checkpoint update: `8af14fc7b0d274f719e892839242a75876a2e81a`.
+- Full GitHub Actions QA run [39164629780](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39164629780) for that exact SHA was `pending` at last check. Check the exact new HEAD after the checkpoint commit.
+- PR #27 is open, ready (not draft), not merged, and currently reported mergeable. Base `main` SHA `10d49cba91d33c192d1fc0bfa12def1c845cad09`; current pre-checkpoint head `8af14fc7b0d274f719e892839242a75876a2e81a`; 50 changed files / 269 commits. No submitted reviews or inline threads were found in the previous live query; no reviewers requested.
+- Local working tree was not checked; changes were made through GitHub API.
 
 #### Live PR state
 
-| PR | Стан | Base → head | Файли / commits | Review | CI |
+| PR | State | Base → head | Files / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; 0 inline threads; no requested reviewers | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; currently reports not mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`1745b3c7500a55e3cc358e60417f29f605e6e587`) | 50 / 258 | 0 submitted reviews; 0 inline threads; no requested reviewers | Pending, [run 39164395293](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39164395293) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`8af14fc7b0d274f719e892839242a75876a2e81a`) | 50 / 269 | 0 submitted reviews; 0 inline threads; no requested reviewers | Pending, [run 39164629780](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39164629780) |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; 0 inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
-#28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase, or retarget was performed. Do not infer linguistic review from CI or lack of comments.
+#28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase or retarget was performed.
 
-#### Batch: subjuntivo / indicativo — bounded claim-level follow-up
+#### Batch: temporal conjunctions
 
-- Read canonical `src/content/es/moods/subjunctive-triggers.mdx`, `subjunctive-triggers-list.mdx`, `when-not-subjunctive.mdx`, and `src/content/comparisons/indicative-subjunctive.mdx`.
-- Direct NGLE text reviewed: § 25.13h–j states that hypothetical concessives such as `Aunque insistas, no te hará caso` take subjunctive, factual concessives may allow both `intento/intente`, and mood choice relates to information structure; subjunctive does not itself deny truth. NGLE § 24.5c and j–k supports habitual/iterative `cuando` readings and the prospective interpretation of `Cuando llegues, nos iremos`.
-- `subjunctive-triggers.mdx`: narrowed broad explanation of temporal clauses and added the NGLE-documented factual `aunque` alternation.
-- `when-not-subjunctive.mdx`: added the factual `aunque` alternation and a more precise note on prospective `cuando`.
-- `comparisons/indicative-subjunctive.mdx`: aligned the explanation with both canonical pages and added hypothetical, factual-indicative, and factual-alternation examples.
-- Updated `CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `TOPICS-COVERAGE-MATRIX-2026.md` with an evidence register and limits.
-- No corpus query, regional frequency analysis, complete audit of all conjunctions/examples, browser/accessibility/SEO test, or local worktree check was performed. The pages remain `draft`; no `verified` or publication-ready claim is made.
+- Direct RAE/ASALE text reviewed: NGLE § 25.14e on `hasta que`; § 25.14h on `antes de que` and temporal `después de que`; § 22.6p on the immediate meaning of temporal `en cuanto`; § 31.14i on `en cuanto` as a relative adverbial expression of immediacy.
+- `subjunctive-triggers-list.mdx`: split the former combined `cuando/hasta que + subjunctive` row and added separate bounded rows for `hasta que`, `antes de que`, and `después de que`.
+- `subjunctive-triggers.mdx` and `when-not-subjunctive.mdx`: added context-sensitive contrasts and source-linked regional notes.
+- `comparisons/indicative-subjunctive.mdx`: aligned temporal examples and caveats with the canonical pages; added the § 25.14 and § 22.6p source links.
+- `CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `TOPICS-COVERAGE-MATRIX-2026.md`: recorded the evidence register and open item.
+- The source pages were opened and relevant paragraphs read. No corpus query, frequency analysis, regional survey, browser/accessibility/SEO test, or local worktree check was performed. Pages remain `draft`; no claim of complete verification is made.
 
 #### Gates and next action
 
 - G0: partial — live PR/base/head checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
-- G2–G5: partial/open — this bounded pair is source-backed; all mood-selection patterns and regional/corpus claims remain open.
+- G2–G5: partial/open — `hasta que`, `antes de que`, and `después de que` have bounded direct evidence; mood distribution specifically with `en cuanto` remains open.
 - G6: pending — inspect QA for the new checkpoint HEAD.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо він успішний, обрати наступну обмежену партію з наявних temporal-conjunction claims (`hasta que`, `antes de que`, `después de que`, `en cuanto`) і звірити їх з точними NGLE розділами, не масово переписуючи список тригерів. Потім синхронізувати canonical pages, comparison, audit і матрицю; не підвищувати статуси без повної перевірки.
+- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо він успішний, виконати вузький додатковий source check саме для вибору способу з часовим `en cuanto`: перевірити, чи NGLE § 22.6p / § 31.14i або інше точне джерело безпосередньо обґрунтовує проспективний subjuntivo. Якщо прямого доказу немає, залишити caveat і не формулювати універсального правила; тоді перейти до наступного пріоритетного кластера з матриці.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати структурне покриття, список URL або зелений QA доказом мовної якості.
 
 ## 9. Передача в новий чат

@@ -90,3 +90,16 @@ The focused review found additional editorial defects in the article contrast pa
 The production build log exposed a more consequential routing mismatch: comparison pages were generated as paths such as `/comparisons/ser-estar.mdx/`, while links and canonical URLs were authored as `/comparisons/ser-estar/`. The route generator and shared URL helper now strip the source extension before generating paths, and `scripts/check-links.mjs` has been extended to validate both `/es/...` and `/comparisons/...` internal links and flag source extensions in comparison URLs. This explains why the earlier link checker could report zero issues while not checking comparison routes at all.
 
 The first build after the comparison rewrites also caught a missing `Mistake` component import in the rewritten `por-para.mdx`; the import has been added.
+
+
+### 6. Runtime semantic navigation and terminology gate — corrected
+
+The architecture passes `related`, `prerequisites`, `contrasts`, `extensions`, `exceptions` and `canonical_topic` into the grammar layout, but the layout originally rendered only `related`. The runtime reference resolver also failed to resolve explicit `category/slug` values. The resolver now prioritizes explicit category/slug paths and falls back to unique basenames; the layout renders typed groups with distinct headings and suppresses duplicates from the generic related list. The focused `personal-a` page now points to the detailed canonical page, and `hay-vs-estar` points to the `ser-estar-hay` overview. A new post-build regression audit verifies actual rendered links, not just metadata.
+
+The terminology audit was extended from MDX content to UI source files. That caught two remaining user-visible occurrences in `src/components/Footer.astro` and `src/components/Note.astro`, plus two strings in the comparison index; all have been changed to the requested `українськомовний/українськомовні` terminology.
+
+The improved source-level markup scan currently reports **78 pages with legacy mixed-emphasis candidates**. They are non-blocking because some are repaired by the existing remark normalization plugin and each needs contextual review before bulk changes. This is a real cleanup backlog, not proof that all 78 render incorrectly. The two directly audited high-risk pages (`ser-estar-hay` and `personal-a`) had their malformed emphasis corrected.
+
+## Final QA after the runtime-navigation fixes
+
+Full QA passed on commit `4b852311a1be3cbaea1f2028a3feb0df22e51949`: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39134238053. Confirmed: 208 grammar files + 5 comparison pages (213 content pages); internal link audit 0 problems; graph audit 0 broken targets and 0 semantic orphans; UI terminology scan 0 forbidden occurrences; rendered navigation regression checks passed for category/slug related links, canonical topics and extensionless comparison routes.

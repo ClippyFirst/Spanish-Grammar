@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const CONTENT = path.join(ROOT, 'src', 'content', 'es');
+const COMPARISONS = path.join(ROOT, 'src', 'content', 'comparisons');
 
 function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -60,17 +61,21 @@ function tableIssues(body) {
   return issues;
 }
 
-const files = walk(CONTENT).sort();
+const files = [...walk(CONTENT), ...walk(COMPARISONS)].sort();
 const docs = files.map(file => {
   const text = fs.readFileSync(file, 'utf8');
   const parsed = frontmatter(text);
-  const rel = path.relative(CONTENT, file).replaceAll(path.sep, '/').replace(/\.mdx$/, '');
+  const rel = file.startsWith(COMPARISONS + path.sep)
+    ? 'comparisons/' + path.relative(COMPARISONS, file).replaceAll(path.sep, '/').replace(/\.mdx$/, '')
+    : path.relative(CONTENT, file).replaceAll(path.sep, '/').replace(/\.mdx$/, '');
   return { file, rel, text, body: text.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, ''), ...parsed };
 });
 
 const findings = {
   generated: new Date().toISOString(),
   pages: docs.length,
+  grammar_pages: docs.filter(d => !d.rel.startsWith('comparisons/')).length,
+  comparison_pages: docs.filter(d => d.rel.startsWith('comparisons/')).length,
   duplicate_topic_codes: [],
   forbidden_ukrainomov: [],
   emphasis_artifacts: [],

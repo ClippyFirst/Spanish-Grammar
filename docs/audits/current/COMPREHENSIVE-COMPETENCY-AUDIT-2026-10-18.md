@@ -209,3 +209,12 @@ The follow-up audit also found that comparison content IDs included the `.mdx` e
 ### Latest verification after cross-page and route fixes
 
 Full QA passed on commit `a23bc61e8ce551eddfbaec772518a469d07b04d0`: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39133237216. The updated link checker reports 208 grammar files + 5 comparison files, 213 content pages, 0 problems; graph audit reports 208 pages, 0 broken links and 0 semantic orphans; table audit reports 0 column-count errors; static build generates extensionless comparison routes. This validates the changed code and current content structure, not all linguistic claims or browser accessibility.
+
+
+### Runtime navigation and residual markup backlog
+
+A deeper runtime check found two implementation gaps not visible in the original graph report: the UI resolver did not understand explicit `category/slug` references, and the grammar layout ignored typed relationships even though the route passed them in. Both are fixed. The layout now renders canonical-topic, prerequisite, contrast, extension and exception groups separately, and the new post-build test checks actual HTML links. The internal-link checker now covers comparison routes too; UI terminology scanning now covers Astro/component source as well as MDX.
+
+The improved emphasis audit also reports 78 pages with legacy mixed-emphasis candidates. This is a non-blocking remediation backlog because the existing remark plugin normalizes some source patterns; it should be triaged and fixed in context, not mass-rewritten blindly. The source-level count is a signal to investigate, not a claim that all affected pages visibly render incorrectly.
+
+The latest full QA passed on commit `4b852311a1be3cbaea1f2028a3feb0df22e51949`: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39134238053. The current head after adding this report update must be checked once more before calling the PR's latest head green.

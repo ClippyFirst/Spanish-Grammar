@@ -418,3 +418,28 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 | `Se los dije` with singular `lo` | NGLE § 16.11l / § 35.2h | Regional pattern recorded as an open teaching nuance, not promoted to a general rule in these pages. |
 
 **Evidence boundary:** the cited NGLE passages and DPD `leísmo` entry were read directly. No full dialect survey, corpus frequency analysis, complete audit of all pronoun placement environments, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.
+
+## 21. `si` conditionals — bounded time/mood audit and markup repair — 2026-10-18
+
+### Direct evidence reviewed
+
+- NGLE § 47.8a–d: conditional protasis and apodosis form interdependent temporal/modal correlations; in present-day standard Spanish, ordinary `si` protases reject future (`*si tendrás`), conditional (`*si tendrías`), present subjunctive (`*si tengas`) and present perfect subjunctive (`*si hayas tenido`). The source explicitly distinguishes current Spanish from historical forms.
+- NGLE § 47.8e: the real/open pattern uses present indicative and can express current, habitual or prospective situations; it does not mean that the condition has already occurred.
+- NGLE § 47.8g, i–k: potential and irrealis/contrafactual periods use different common correlations; the potential imperfect subjunctive does not simply mean “impossible,” and the pluscuamperfect subjunctive + conditional compound is a typical counterfactual pattern.
+- Direct source: https://www.rae.es/gram%C3%A1tica/sintaxis/tiempo-y-modo-en-las-oraciones-condicionales
+
+### Changes made
+
+- `src/content/es/sentence-structure/conditional-sentences.mdx`: repaired malformed emphasis around the `si` clause and the future/conditional prohibition; added direct NGLE source locators and `draft` status; changed learner-error heading to neutral contrast examples; retained the explicit boundary that the prohibition applies to ordinary conditional protases, not every possible occurrence of the word `si`.
+- `src/content/es/sentence-structure/si-clauses-overview.mdx`: downgraded `verified` to `draft`; added direct NGLE locators alongside the existing style-guide source; changed learner-error heading to neutral contrast examples.
+
+### Evidence register
+
+| Claim/example | Direct source | Disposition |
+|---|---|---|
+| `Si tengo tiempo, iré` | NGLE § 47.8e | Retained as a typical open/prospective condition; wording clarifies that present indicative does not imply a completed condition. |
+| `Si tuviera tiempo, viajaría` | NGLE § 47.8g, i | Retained as a common potential/hypothetical correlation; explicitly not equated with logical impossibility. |
+| `Si hubiera tenido tiempo, habría viajado` | NGLE § 47.8j–k | Retained as a common past counterfactual correlation, not a claim that all conditional relations use only this template. |
+| `*Si tendré tiempo`, `*Si tendría tiempo` in ordinary conditional protases | NGLE § 47.8d | Retained as nonstandard for the target neutral standard; historical and other non-equivalent constructions remain outside this basic rule. |
+
+**Evidence boundary:** NGLE § 47.8a–k was read directly for the claims above. No full survey of all conditional correlations, corpus query, country-by-country variation study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.

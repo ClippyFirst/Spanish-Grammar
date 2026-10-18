@@ -204,3 +204,8 @@ The first run after the comparison rewrite failed because the new `CompareTable`
 ### Route integrity finding
 
 The follow-up audit also found that comparison content IDs included the `.mdx` extension in generated route parameters, even though authored links and canonical URLs omitted it. The shared comparison URL helper and static route now normalize source extensions, and the link audit checks comparison URLs as well as grammar URLs. The prior checker had not validated `/comparisons/...` links, so its earlier zero-problem result did not cover this route family. This is a concrete reason to keep route/build checks distinct from linguistic review.
+
+
+### Latest verification after cross-page and route fixes
+
+Full QA passed on commit `a23bc61e8ce551eddfbaec772518a469d07b04d0`: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39133237216. The updated link checker reports 208 grammar files + 5 comparison files, 213 content pages, 0 problems; graph audit reports 208 pages, 0 broken links and 0 semantic orphans; table audit reports 0 column-count errors; static build generates extensionless comparison routes. This validates the changed code and current content structure, not all linguistic claims or browser accessibility.

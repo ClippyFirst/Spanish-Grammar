@@ -4,12 +4,14 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const CONTENT = path.join(ROOT, 'src', 'content', 'es');
 const COMPARISONS = path.join(ROOT, 'src', 'content', 'comparisons');
+const UI_SOURCE_DIRS = ['pages', 'layouts', 'components', 'data'].map(name => path.join(ROOT, 'src', name));
 
-function walk(dir, out = []) {
+function walk(dir, out = [], pattern = /\.mdx$/i) {
+  if (!fs.existsSync(dir)) return out;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const file = path.join(dir, entry.name);
-    if (entry.isDirectory()) walk(file, out);
-    else if (/\.mdx$/.test(entry.name)) out.push(file);
+    if (entry.isDirectory()) walk(file, out, pattern);
+    else if (pattern.test(entry.name)) out.push(file);
   }
   return out;
 }
@@ -78,6 +80,7 @@ const findings = {
   comparison_pages: docs.filter(d => d.rel.startsWith('comparisons/')).length,
   duplicate_topic_codes: [],
   forbidden_ukrainomov: [],
+  forbidden_ukrainomov_ui: [],
   emphasis_artifacts: [],
   table_mismatches: [],
   related_sections: [],
@@ -112,6 +115,18 @@ const forbidden = /україномов/giu;
 for (const d of docs) {
   const hits = [...d.body.matchAll(forbidden)].map(m => m[0]);
   if (hits.length) findings.forbidden_ukrainomov.push({ page: d.rel, hits: [...new Set(hits)] });
+}
+
+const uiSourceFiles = UI_SOURCE_DIRS.flatMap(dir => walk(dir, [], /\.(astro|ts|tsx|js|mjs)$/i)).sort();
+for (const file of uiSourceFiles) {
+  const text = fs.readFileSync(file, 'utf8');
+  const hits = [...text.matchAll(forbidden)].map(m => m[0]);
+  if (hits.length) {
+    findings.forbidden_ukrainomov_ui.push({
+      file: path.relative(ROOT, file).replaceAll(path.sep, '/'),
+      hits: [...new Set(hits)]
+    });
+  }
 }
 
 const artifact = /\*[^\s*\n]+\*\*[^\s*][^\n*]*\*(?!\*)|\*[^\s*\n]+\*\*[^\s*][^\n*]*\*\*/g;

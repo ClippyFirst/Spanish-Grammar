@@ -22,7 +22,7 @@ Primary starting point: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_c
 
 1. Establish the inventory scope and date. State which files, locales and content types were included or excluded.
 2. Consult the relevant PCIC sections directly. Record exact section titles/identifiers and the categories or level bands they describe; do not infer mappings from search snippets alone.
-3. Map each canonical construction or communicative function to one or more site articles. Use statuses: absent, mentioned, explained, contrasted, practiced, source-verified.
+3. Map each canonical construction or communicative function to one or more site articles. Use statuses: absent, partial/mentioned, explained, contrasted, source-verified, verified, intentionally covered elsewhere.
 4. Distinguish a direct PCIC correspondence from an editorial approximation, a cross-linguistic teaching choice or a topic outside the consulted PCIC scope.
 5. Evaluate topic dependencies and optional navigation paths; do not prescribe a mandatory reading sequence. A construction can recur at different levels of depth, and any CEFR label must be separately evidenced.
 6. Identify gaps, overpacked pages, duplicated scopes, prerequisites missing from navigation, and topics whose level labels are unsupported.
@@ -37,7 +37,9 @@ Primary starting point: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_c
 - Distinction between verified correspondence and proposed editorial mapping.
 - File-scoped tasks and regression checks.
 
-## Guardrails\n\n- This is a reference, not a course: no mandatory syllabus, lesson sequence, practice schedule or progress tracking.
+## Guardrails
+
+- This is a reference, not a course: no mandatory syllabus, lesson sequence, practice schedule or progress tracking.
 
 - PCIC is a reference framework, not a substitute for RAE/ASALE grammatical descriptions or corpus evidence.
 - Never claim a page is aligned to an entire level based on one matching item.

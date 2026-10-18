@@ -70,6 +70,9 @@
 
 - [PCIC — Plan curricular del Instituto Cervantes](https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/indice.htm): корисний інвентар граматики, прагматики та культурних/мовленнєвих контекстів; не замінює регіональних описів.
 - [RAE — Nueva gramática](https://www.rae.es/gram%C3%A1tica/) та [DPD](https://www.rae.es/dpd): граматичний опис і консультації з уживання; перевіряти конкретну сферу твердження.
+- [RAE/ASALE — *El presente (canto) (I)*](https://www.rae.es/gram%C3%A1tica/sintaxis/el-presente-canto-i-caracterizaci%C3%B3n-de%C3%ADctica-los-presentes-generalizadores): корисний орієнтир для перевірки географічної варіативності розподілу деяких минулих часів; не замінює перевірки конкретного твердження на сторінці.
+- [RAE/ASALE — *Cohesión e independencia de los componentes de las perífrasis*](https://www.rae.es/gram%C3%A1tica/sintaxis/cohesi%C3%B3n-e-independencia-de-los-componentes-de-las-per%C3%ADfrasis-per%C3%ADfrasis-verbales-y-tiempos-compuestos): релевантний розділ для перевірки позиції клітик у перифразах і перед auxiliary/infinitive.
+- [RAE/ASALE — *Perífrasis de gerundio (II). El auxiliar ir*](https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-ii-el-auxiliar-ir): приклад того, як окремі конструкції можуть мати регіональні й розмовно-стильові обмеження.
 - Корпуси RAE/ASALE та академічні регіональні описи — для частотності й географічного розподілу, коли відповідні дані реально доступні. Не робити висновків із самих пошукових уривків.
 - Для країно-специфічних тверджень шукати регіональні граматики, академічні дослідження або надійні корпусні дані, а не покладатися лише на загальний нормативний довідник.
 

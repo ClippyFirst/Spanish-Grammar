@@ -299,16 +299,15 @@
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок перевірено 2026-10-18.** Це live-стан перед checkpoint-комітом; перевірити CI на точному новому HEAD після коміту.
+**Знімок оновлюється 2026-10-18.** Перевіряти live HEAD і CI заново після кожного checkpoint-коміту; нижче наведено відомі результати для конкретних SHA.
 
-- Завершено два обмежені claim-level проходи для subjuntivo/indicativo:
+- Завершено три обмежені claim-level проходи: subjuntivo/indicativo, temporal conjunctions, і por/para:
   1. NGLE § 25.13h–j та § 24.5c, j–k: factual/hypothetical `aunque` alternation and prospective/habitual `cuando`. Added the NGLE-backed pair `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él`, refined the temporal explanation, aligned canonical pages and comparison.
   2. NGLE § 25.14e/h and §§ 22.6p, 31.14i: `hasta que` alternation, `antes de que` + subjunctive, temporal `después de que` (future indicative excluded; regional present/past alternation), and `en cuanto` meaning ‘inmediatamente que’. The trigger quick-reference row was split to avoid implying that `hasta que` always takes subjunctive. Mood distribution specifically with `en cuanto` remains unverified and is explicitly caveated.
 - Canonical pages updated: `src/content/es/moods/subjunctive-triggers.mdx`, `subjunctive-triggers-list.mdx`, `when-not-subjunctive.mdx`, plus `src/content/comparisons/indicative-subjunctive.mdx`. Claim-level audit and topic matrix updated with evidence registers and limitations.
 - Branch: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD before checkpoint update: `8af14fc7b0d274f719e892839242a75876a2e81a`.
-- Full GitHub Actions QA run [39164629780](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39164629780) for that exact SHA was `pending` at last check. Check the exact new HEAD after the checkpoint commit.
-- PR #27 is open, ready (not draft), not merged, and currently reported mergeable. Base `main` SHA `10d49cba91d33c192d1fc0bfa12def1c845cad09`; current pre-checkpoint head `8af14fc7b0d274f719e892839242a75876a2e81a`; 50 changed files / 269 commits. No submitted reviews or inline threads were found in the previous live query; no reviewers requested.
+- Previous checkpoint HEAD `adfa3783cf440f77d0c4d6814b09a295c91a5c89` passed full GitHub Actions QA: [run 39164655829](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39164655829). This pass predates the por/para batch and does not validate its commits. The por/para batch has advanced the branch to `ea40e26eb0a8fd1ea91a9da056c7ee8594e01545` before this checkpoint update; check QA for the final checkpoint HEAD after committing this document.
+- PR #27 is open, ready (not draft), not merged, and currently reported mergeable. Base `main` SHA `10d49cba91d33c192d1fc0bfa12def1c845cad09`; previous recorded head `adfa3783cf440f77d0c4d6814b09a295c91a5c89`; por/para batch advanced the branch to `ea40e26eb0a8fd1ea91a9da056c7ee8594e01545` before this checkpoint commit. Changed-file/commit counts should be refreshed from live PR. No submitted reviews or inline threads were found in the previous live query; no reviewers requested.
 - Local working tree was not checked; changes were made through GitHub API.
 
 #### Live PR state
@@ -330,15 +329,24 @@
 - `CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `TOPICS-COVERAGE-MATRIX-2026.md`: recorded the evidence register and open item.
 - The source pages were opened and relevant paragraphs read. No corpus query, frequency analysis, regional survey, browser/accessibility/SEO test, or local worktree check was performed. Pages remain `draft`; no claim of complete verification is made.
 
+
+#### Batch: por / para
+
+- Direct RAE/ASALE NGLE paragraphs read: § 29.8k (destination, prospective deadline, purpose, service/utility, recipient); § 29.8n (historical/current overlap); § 29.8ñ (precise future time vs approximate time); § 29.8o–p (route, approximate location/time, duration); § 29.8q–r (passive agent, cause, means/channel, exchange/price, substitution).
+- Canonical `src/content/es/prepositions/por-para.mdx`: repaired malformed Markdown, added source locators, bounded the regional statement for `por + quantitative duration`, and retained `draft` status.
+- `src/content/es/prepositions/por-para-markers.mdx`: added source metadata, neutralized unsupported claims about “typical errors of Ukrainian speakers”, and qualified the temporal-duration marker.
+- `src/content/comparisons/por-para.mdx`: added source traceability and clarified that the common functions are orientation rather than mutually exclusive categories; added the documented regional frequency qualification.
+- Audit and matrix sections 16 appended. No corpus query, quantitative frequency calculation, country-by-country survey, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. No claim is fully verified solely by this batch.
+
 #### Gates and next action
 
 - G0: partial — live PR/base/head checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
-- G2–G5: partial/open — `hasta que`, `antes de que`, and `después de que` have bounded direct evidence; mood distribution specifically with `en cuanto` remains open.
-- G6: pending — inspect QA for the new checkpoint HEAD.
+- G2–G5: partial/open — temporal conjunctions have bounded direct evidence; mood distribution specifically with `en cuanto` remains open. Por/para has bounded NGLE evidence for core functions and the regional frequency of `por + quantitative duration`, but individual examples, translations, corpus frequency and broader regional claims remain open.
+- G6: previous checkpoint SHA `adfa3783cf440f77d0c4d6814b09a295c91a5c89` passed (run 39164655829); current por/para/checkpoint SHA requires its own result.
 - G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити QA на новому checkpoint HEAD. Якщо він успішний, виконати вузький додатковий source check саме для вибору способу з часовим `en cuanto`: перевірити, чи NGLE § 22.6p / § 31.14i або інше точне джерело безпосередньо обґрунтовує проспективний subjuntivo. Якщо прямого доказу немає, залишити caveat і не формулювати універсального правила; тоді перейти до наступного пріоритетного кластера з матриці.
+- **Наступна конкретна дія:** перевірити GitHub Actions на точному HEAD після цього checkpoint-коміту. Якщо QA успішний, перейти до вузької партії про `a` personal і керування/прийменники після дієслів: спочатку зіставити канонічні сторінки й матрицю, потім прочитати точні NGLE §§ 34.8 та 36.3–36.6, обрати один обмежений набір тверджень і не узагальнювати регіональні відмінності без джерел. Питання mood selection саме з часовим `en cuanto` лишається відкритим: знайдені й прочитані NGLE §§ 22.6p, 31.14i підтверджують значення/тип виразу, але не дають достатнього прямого розподілу способів; не формулювати універсального правила.
 - Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати структурне покриття, список URL або зелений QA доказом мовної якості.
 
 ## 9. Передача в новий чат
@@ -378,3 +386,5 @@
 - **2026-10-18:** заповнено й уточнено checkpoint: активна гілка, відомий SHA, PR, статус попереднього CI та наступна конкретна дія. Кожне оновлення цього документа створює новий SHA, тому перед продовженням перевіряти актуальний head і CI.
 
 - **2026-10-18:** requirements 4.7–4.11 pass: proper-name article status downgraded to `draft`, preposition explanation clarified, neutral `lo` Markdown repaired, source locators added, and the coverage matrix updated. Full linguistic verification remains open.
+
+- **2026-10-18:** por/para bounded source-backed batch. Direct NGLE §§ 29.8k–r read; three canonical/comparison pages and the claim-level audit/topic matrix updated; malformed Markdown and unsupported learner-error framing repaired. Latest pre-checkpoint batch commit: `ea40e26eb0a8fd1ea91a9da056c7ee8594e01545`; check CI on the new checkpoint HEAD before proceeding.

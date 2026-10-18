@@ -580,3 +580,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Status and source traceability | Same pages | Direct DPD/NGLE locators added; previously `verified` duplicate page downgraded to `draft`; unsupported learner-error framing changed to neutral contrast examples. |
 
 **Evidence boundary:** selected DPD/NGLE passages read. No full audit of all verbs in the group, regional clitic-doubling survey, corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test. Both pages remain `draft`.
+
+## 20. Object clitics and double-clitic sequences — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Direct vs. indirect object pronouns | `src/content/es/pronouns/objeto-directo-indirecto.mdx` | NGLE § 34.8 and indirect-object sections support the contrast `Veo a María → la veo` vs. `Escribo a María → le escribo`; personal `a` does not itself determine the function. Source locators added. |
+| Double-clitic order and `le/les → se` | `src/content/es/pronouns/double-object-pronouns.mdx`; main object-pronoun page | NGLE §§ 16.11a/j and 35.2e–g directly support strict order and `Se lo dijo` vs. `*Le lo dijo`. Malformed Markdown repaired; status set to `draft`. |
+| Proclisis/enclisis | Same pages | NGLE § 16.7 and § 16.11a support separated proclitics (`se lo daré`) vs. joined enclitics (`dárselo`), plus common finite/infinitive/gerund/affirmative-imperative examples. Full placement system remains open. |
+| Leísmo and regional plural marking | Main object-pronoun page; double-clitic page | DPD `leísmo` directly read; the feminine direct-object baseline and accepted masculine-person leísmo are distinguished. NGLE § 16.11l/§ 35.2h records regional `se los dije` patterns; no country-by-country survey was performed. |
+| Editorial/source quality | Both pages | Direct NGLE/DPD locators added, malformed Markdown repaired, unsupported learner-error headings changed to neutral contrast examples, both pages set to `draft`. |
+
+**Evidence boundary:** direct NGLE §§ 16.7, 16.11, 16.14, 34.8, 35.2 and DPD `leísmo` were checked. This is not a full dialect survey or complete audit of every clitic placement environment. No corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.

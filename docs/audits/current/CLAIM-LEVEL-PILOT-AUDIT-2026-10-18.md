@@ -176,3 +176,23 @@ A Ukrainian editorial spot-check then refined the glosses for gender where neede
 
 The relevant NGLE sections were opened directly. This is a bounded check of these examples, not a full audit of every use of stative verbs in the two tenses. No corpus-frequency claim or country-level distribution claim was added. The main page remains `review_status: reviewed`; this spot-check does not justify upgrading it to `verified` without a broader example/translation audit.
 
+## 6. Regional claim-level follow-up: `pretérito perfecto compuesto / indefinido` — 2026-10-18
+
+**Files:** `src/content/comparisons/past-tenses.mdx` and `src/content/es/tenses/preterito-vs-imperfecto.mdx`.
+
+### Direct evidence checked
+
+- NGLE § 23.7b–c states that the compound perfect shows the greatest geographic variation among current Spanish tense uses and distinguishes several systems: present-relevance uses in central/southern European Spanish; a more aspectual opposition in Mexico, much of Central America and parts of the Caribbean; neutralization toward the simple past in Chile and much of Argentina; and opposite patterns in coastal Peru and parts of the Andean area. https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos
+- NGLE § 23.8a says `La he visto hace un momento` is natural in Lima, Madrid and La Paz, but not in Montevideo, Santiago de Chile or Mexico City, where `La vi hace un momento` is used. https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos
+- NGLE § 23.8d notes that perfect forms with closed past-time adjuncts are restricted in European Spanish but occur in Bolivia and other areas, which makes an exceptionless “yesterday + compound perfect is wrong everywhere” claim too strong.
+
+### Changes made
+
+- Replaced the comparison page's broad claim that Latin America, “especially Mexico and the Andean region,” simply uses the compound perfect less often. The new note describes the different patterns by subregion and gives one directly sourced example.
+- Removed `Esta semana comí mucho` as a categorical “mistake”; it is now a regional note explaining that the choice depends on the variety and context.
+- Qualified `Ayer he comido a las dos` as non-neutral for the Peninsular standard, not a universal ban across all varieties.
+- Rewrote the comparison's introductory definitions and table to avoid equating `perfecto` with an always-current result, `indefinido` with being “cut off from the present,” or `imperfecto` with simple incompletion.
+- The canonical tense page now links NGLE §§ 23.7–23.8 and summarizes the regional patterns without making a frequency claim beyond the academic description.
+
+**Evidence boundary:** this is a source-backed revision of the regional claims, not a corpus-based frequency study. It does not imply that each cited form is equally common or acceptable for every speaker within a named region.
+

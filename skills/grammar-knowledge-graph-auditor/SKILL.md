@@ -7,7 +7,7 @@ description: Audits prerequisite relations, internal links and conceptual depend
 
 ## Purpose
 
-Check whether learners can navigate from a question to a useful explanation and whether the site's topic structure reflects meaningful prerequisites rather than just categories and backlinks.
+Check whether readers can navigate from a question to a useful explanation and whether the site's topic structure reflects meaningful prerequisites rather than just categories and backlinks.
 
 ## Workflow
 
@@ -16,7 +16,7 @@ Check whether learners can navigate from a question to a useful explanation and 
 3. Separate explicit edges found in content from inferred pedagogical dependencies; label inference and confidence.
 4. Detect orphan pages, dead ends, circular prerequisite paths, broken links, duplicate nodes and topics with no path from foundational material.
 5. Inspect whether links are semantically helpful and appear where the learner needs them, not merely whether a link exists.
-6. Check progressive coverage: introduction, explanation, contrast, practice and reference depth may be distributed across multiple pages.
+6. Check progressive coverage: introduction, explanation, contrast, optional topic paths and reference depth may be distributed across multiple pages.
 7. Avoid merging pages solely because they share keywords. Compare their learner intent and scope.
 8. Prioritize by navigation cost, foundational centrality, risk of misconception and repair effort.
 9. Propose file-scoped edits and graph regression tests; do not mass-rewrite the taxonomy.

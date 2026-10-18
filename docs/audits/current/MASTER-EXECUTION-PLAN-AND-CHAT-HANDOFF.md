@@ -299,47 +299,43 @@
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок перевірено 2026-10-18.** Значення нижче — live-стан на HEAD перед цим оновленням checkpoint. Після checkpoint-коміту окремо перевірити його новий SHA та CI.
+**Знімок перевірено 2026-10-18.** Це live-стан перед checkpoint-комітом; після коміту перевірити CI на новому точному HEAD.
 
-- Активний workstream: обмежена партія редакторського/джерельного аудиту артиклів і конструкцій із частинами тіла в PR #27. Не змішувати зміни з PR #26/#28.
-- Активна гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD до цього оновлення checkpoint: `e8a86ab5636679c306929252ab392666a1fed1f6`; повний GitHub Actions QA успішний на цьому точному SHA (run [39158161791](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158161791)). Попередні batch-коміти також проходили QA; перевірка поточного checkpoint-коміту лишається обов’язковою.
+- Активний workstream: обмежена source-traceability/editorial партія вимог 4.7–4.11 у PR #27. Матрицю оновлено. Наступний workstream після успішного QA — claim-level аудит `ser/estar/hay`.
+- Гілка: `docs/grammar-reference-architecture-2026-10-18`.
+- HEAD перед checkpoint-оновленням: `f067853294369b126c977028dcc3439410d38adc`; QA поточної партії на цьому SHA ще не перевірено.
 - Робоче дерево локально не перевірялося; зміни виконуються через GitHub API.
 
 #### Live PR state
 
-| PR | Стан | Base → head | Файли / commits | Review | CI на перевіреному SHA |
+| PR | Стан | Base → head | Файли / commits | Review | CI |
 |---|---|---|---:|---|---|
-| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No submitted reviews or inline threads found; no requested reviewers | QA success, run [39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`e8a86ab5636679c306929252ab392666a1fed1f6`) | 42 / 136 | No submitted reviews or inline threads found; no requested reviewers | QA success on exact HEAD, run [39158161791](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158161791) |
-| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No submitted reviews or inline threads found; no requested reviewers | QA failure, run [39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), on synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`. Not addressed in this PR #27 batch. |
+| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No reviews or inline threads; no requested reviewers | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`f067853294369b126c977028dcc3439410d38adc`) | 44 / 143 | No reviews or inline threads; no requested reviewers | Pending for this batch/checkpoint |
+| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No reviews or inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
-All three PRs remain open. #28 is stacked on #26; #26 and #27 independently target `main`. No merge, close, rebase or retarget was performed. Review status is based on live review/thread queries, which returned none; it does not imply an external linguistic review.
+#28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase or retarget was performed.
 
-#### This batch — article and body-part editorial/source-traceability pass
+#### Batch: article requirements 4.7–4.11
 
-- Read canonical `articles/definite-indefinite.mdx`, `articles/definite-vs-indefinite.mdx`, `articles/zero-article.mdx`, `articles/special-cases.mdx`, `pronouns/body-parts-possession.mdx`, plus `comparisons/articles.mdx`.
-- Fixed malformed Markdown/emphasis in the zero-article opening, special-cases contraction explanation, and body-parts page (introduction, table, and example lists).
-- Clarified that “нульовий артикль” is a convenient label for absence of an article, not a separately pronounced form.
-- Removed the questionable `Me duele mi cabeza` example from the Mistake component; neutral baseline remains `Me duele la cabeza`, and the contrast example is `Me duele la espalda, no la tuya`.
-- Renamed learner-error headings on the definite/indefinite, zero-article and body-parts pages to “контрастні приклади”/rule limits. This avoids implying that the examples are empirically attested as common errors by Ukrainian-speaking learners.
-- Downgraded `review_status: verified` on `body-parts-possession.mdx` to `draft`; `zero-article.mdx` and `special-cases.mdx` are explicitly marked `draft`. Added precise source leads: NGB § 9.1.1, NGLE § 14.6, NGLE §§ 15.11–15.13 via the official contents index, and NGLE §§ 35.4j/o, 35.6i, 35.7f–ñ, 35.8k / § 14.7f onward for possessive/sympathetic datives and inalienable possession.
-- The comparison `comparisons/articles.mdx` was reviewed and did not need a change in this pass. The sampled contrastive explanations do not show a material contradiction, but this is not a full verification of all examples or claims.
-- Matrix and transformation audit now document the limited scope and evidence boundaries. Structural mapping for article checklist items remains; the 323 → 208 baseline is not a claim-verification register.
-- No corpus search was run; no regional frequency claim was validated; no browser test was performed.
+- Read `articles-with-names.mdx`, `special-cases.mdx`, `neutral-lo.mdx`, `definite-indefinite.mdx`, `definite-vs-indefinite.mdx`, `zero-article.mdx`, `comparisons/articles.mdx` and `micro-constructions/de-inf-sera-no-sea-lo-de.mdx`.
+- `articles-with-names.mdx`: downgraded `verified` to `draft`; replaced generic source names with RAE/ASALE locators. Country-specific and colloquial claims remain unverified.
+- `special-cases.mdx`: clarified that prepositions do not mechanically determine article presence; preserved the separate `al/del` contraction rule; repaired the Ukrainian note heading and neutralized the example heading.
+- `neutral-lo.mdx`: repaired malformed Markdown, added NGLE §§ 14.9–14.10 and relative-construction locator leads, set status to `draft`.
+- Genericity/specificity pages and the article comparison were read; the sampled explanations were consistent, so no substantive edit was justified there.
+- Updated `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` with a limited 4.7–4.11 reconciliation and explicit evidence limits. RAE/ASALE locators are leads, not full claim verification.
+- No corpus search, full example/translation audit, regional frequency check, browser/accessibility/SEO test or local worktree check was performed.
 
-#### Gates
+#### Gates and next action
 
-- G0: partial — live PR/base/head and review state checked; local worktree not available.
-- G1: partial — article mapping spot-checked; full 323-row reconciliation remains open.
-- G2–G5: partial/open — precise locators were added, but full source-text and claim-by-claim checks, regional verification, cross-page coverage and navigation review remain unfinished.
-- G6: pending for this checkpoint-only update; the immediately preceding HEAD `e8a86ab5636679c306929252ab392666a1fed1f6` passed QA in run [39158161791](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158161791). Check CI on the new HEAD before continuing.
-- G7: not run — no real-browser/accessibility/SEO smoke-test protocol.
-- G8: blocked/not ready — no publication-ready determination; PRs remain unmerged.
+- G0: partial — PR/base/head and review state checked; local worktree unavailable.
+- G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
+- G2–G5: partial/open — source locators recorded; claim-level, regional and example verification remain unfinished.
+- G6: pending — check GitHub Actions on the new checkpoint HEAD.
+- G7: not run. G8: blocked; no publication-ready determination.
 
-- **Наступна конкретна дія:** перевірити QA на новому PR #27 HEAD після цього checkpoint-коміту. Якщо він успішний, продовжити обмежену звірку вимог 4.7–4.11 (артикль із власними назвами; після ser/tener/прийменників; neutral lo; узагальнення/конкретизація; сталі вирази): прочитати канонічні сторінки й порівняння, звірити точні RAE/ASALE локатори, виправити тільки підтверджені проблеми й оновити матрицю. Після завершення структурної звірки повернутися до пріоритетного claim-level аудиту ser/estar/hay.
-- Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не підвищувати статуси без claim-level доказів; не трактувати структурну матрицю або зелений QA як доказ мовної якості.
-
+- **Наступна конкретна дія:** перевірити повний QA на новому PR #27 HEAD. Якщо він успішний, почати обмежений claim-level аудит `ser/estar/hay`, звіряючи конкретні твердження й приклади з точними розділами RAE/ASALE та оновлюючи аудит і матриці. Не підвищувати статуси без доказів.
+- Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати структурне покриття, список джерел або зелений QA доказом мовної якості.
 
 ## 9. Передача в новий чат
 
@@ -376,3 +372,5 @@ All three PRs remain open. #28 is stacked on #26; #26 and #27 independently targ
 
 - **2026-10-18:** створено master plan після матриці компетенцій і claim-level пілоту. Зафіксовано продуктові рішення, відомий стан PR/CI, етапи виконання, release gates, маршрутизацію перевірок і prompt для нового чату.
 - **2026-10-18:** заповнено й уточнено checkpoint: активна гілка, відомий SHA, PR, статус попереднього CI та наступна конкретна дія. Кожне оновлення цього документа створює новий SHA, тому перед продовженням перевіряти актуальний head і CI.
+
+- **2026-10-18:** requirements 4.7–4.11 pass: proper-name article status downgraded to `draft`, preposition explanation clarified, neutral `lo` Markdown repaired, source locators added, and the coverage matrix updated. Full linguistic verification remains open.

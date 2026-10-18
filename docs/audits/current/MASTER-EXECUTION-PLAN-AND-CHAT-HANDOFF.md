@@ -303,7 +303,7 @@
 
 - Активний workstream: обмежена партія редакторського/джерельного аудиту артиклів і конструкцій із частинами тіла в PR #27. Не змішувати зміни з PR #26/#28.
 - Активна гілка: `docs/grammar-reference-architecture-2026-10-18`.
-- HEAD до цього оновлення checkpoint: `013685b4b9bea9d45e3bcfbe6830166a8e3bccb8`; повний GitHub Actions QA успішний на цьому точному SHA (run [39158096274](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158096274)). Попередні batch-коміти також проходили QA; перевірка поточного checkpoint-коміту лишається обов’язковою.
+- HEAD до цього оновлення checkpoint: `e8a86ab5636679c306929252ab392666a1fed1f6`; повний GitHub Actions QA успішний на цьому точному SHA (run [39158161791](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158161791)). Попередні batch-коміти також проходили QA; перевірка поточного checkpoint-коміту лишається обов’язковою.
 - Робоче дерево локально не перевірялося; зміни виконуються через GitHub API.
 
 #### Live PR state
@@ -311,7 +311,7 @@
 | PR | Стан | Base → head | Файли / commits | Review | CI на перевіреному SHA |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | No submitted reviews or inline threads found; no requested reviewers | QA success, run [39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`013685b4b9bea9d45e3bcfbe6830166a8e3bccb8`) | 42 / 135 | No submitted reviews or inline threads found; no requested reviewers | QA success on exact HEAD, run [39158096274](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158096274) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`e8a86ab5636679c306929252ab392666a1fed1f6`) | 42 / 136 | No submitted reviews or inline threads found; no requested reviewers | QA success on exact HEAD, run [39158161791](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158161791) |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No submitted reviews or inline threads found; no requested reviewers | QA failure, run [39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), on synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`. Not addressed in this PR #27 batch. |
 
 All three PRs remain open. #28 is stacked on #26; #26 and #27 independently target `main`. No merge, close, rebase or retarget was performed. Review status is based on live review/thread queries, which returned none; it does not imply an external linguistic review.
@@ -333,7 +333,7 @@ All three PRs remain open. #28 is stacked on #26; #26 and #27 independently targ
 - G0: partial — live PR/base/head and review state checked; local worktree not available.
 - G1: partial — article mapping spot-checked; full 323-row reconciliation remains open.
 - G2–G5: partial/open — precise locators were added, but full source-text and claim-by-claim checks, regional verification, cross-page coverage and navigation review remain unfinished.
-- G6: pending for this checkpoint-only update; the immediately preceding HEAD `013685b4b9bea9d45e3bcfbe6830166a8e3bccb8` passed QA in run [39158096274](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158096274). Check CI on the new HEAD before continuing.
+- G6: pending for this checkpoint-only update; the immediately preceding HEAD `e8a86ab5636679c306929252ab392666a1fed1f6` passed QA in run [39158161791](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39158161791). Check CI on the new HEAD before continuing.
 - G7: not run — no real-browser/accessibility/SEO smoke-test protocol.
 - G8: blocked/not ready — no publication-ready determination; PRs remain unmerged.
 
@@ -369,6 +369,8 @@ All three PRs remain open. #28 is stacked on #26; #26 and #27 independently targ
 - **Актуальність:** що перевірити заново.
 
 ## 10. Журнал змін
+
+- **2026-10-18:** checkpoint refresh after article batch: exact pre-checkpoint HEAD `e8a86ab5636679c306929252ab392666a1fed1f6` passed full GitHub Actions QA (run 39158161791); the checkpoint-only commit must receive its own CI check.
 
 - **2026-10-18:** обмежена партія статей про артиклі й частини тіла: виправлено Markdown, уточнено межі поняття «нульовий артикль», замінено непідтверджене формулювання про типові помилки на нейтральні контрастні приклади, додано локатори RAE/ASALE і знижено непідтверджений `verified` до `draft`. QA успішний на `013685b4b9bea9d45e3bcfbe6830166a8e3bccb8` (run 39158096274); поточний checkpoint-коміт потребує власної перевірки.
 

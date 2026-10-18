@@ -557,3 +557,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Editorial clarity and learner-error claims | Same canonical page | Malformed Markdown repaired, source metadata added, unsupported “typical mistakes of Ukrainian speakers” heading changed to neutral contrast examples. Status remains `draft`. |
 
 **Evidence boundary:** selected NGLE sections and DPD `queísmo` were checked. The full personal-`a` article path has not yet been identified for a dedicated edit; no corpus/frequency study, country-by-country survey, complete verb-pair audit, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
+
+## 18. Personal `a` — bounded source-backed review — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Core personal-`a` distribution | `src/content/es/pronouns/personal-a.mdx`; short entry `src/content/es/sentence-structure/personal-a.mdx` | NGLE § 34.8a–i directly supports a construction-sensitive account involving definiteness, reference, animacy and context. Both pages downgraded from `reviewed` to `draft` because prior sources were generic and claim-level coverage was incomplete. |
+| Specific vs. type/class readings | Same pages | NGLE § 34.8k–n and § 34.10j support contextual contrasts with intensional verbs such as `buscar`; examples now avoid making article choice alone the determinant. |
+| Animals, personification, inanimate NPs | Same pages | NGLE § 34.8o and § 34.8p–t directly discuss proper animal names, domestic animals, personification and alternations. The wording is bounded and does not claim that every animal or inanimate NP behaves identically. |
+| `haber`, `tener` and clitic distinction | Detailed page | NGLE § 34.10e supports baseline existential `haber` and possession `tener` patterns without personal `a`; DPD `leísmo` was read and the `la` baseline for a feminine direct object is distinguished from accepted masculine-person leísmo. |
+| Source/markup/editorial quality | Both pages | Direct NGLE/DPD locators added; malformed Markdown repaired; unsupported learner-error framing replaced with neutral contrast examples. Short page continues to link to the detailed canonical page. |
+
+**Evidence boundary:** direct NGLE §§ 34.8a–t, relevant § 34.10 sections, and DPD `leísmo` were reviewed. This is not a complete audit of all alternations, regional distributions, examples/translations, or related clitic phenomena. No corpus query, frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.

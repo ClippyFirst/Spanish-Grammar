@@ -885,3 +885,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Post-nominal gerund and learner-error framing | RAE/ASALE sources above, interpreted construction-by-construction | Replaced categorical error framing with contextual contrast; both general gerund pages changed from `verified` to `reviewed`. | Specific post-nominal examples need a dedicated claim-level pass before any stronger status. |
 
 **Status:** the two general gerund pages are `reviewed`, not `verified`; the progressive page is also `reviewed`. This is a bounded editorial/source pass, not a complete gerund audit.
+
+## 51. Neutral *lo*: semantics, relative constructions, and regional *lo de* (2026-10-19)
+
+| Claim / requirement | Canonical page(s) | Direct evidence and disposition | Remaining limits |
+|---|---|---|---|
+| Referential vs emphatic *lo* | articles/neutral-lo.mdx | NGLE § 14.9d–e distinguishes referential *lo + adjective* (adjective masculine singular) from emphatic/degree *lo + adjective/adverb + que*, where adjective agreement may follow the noun (*lo difíciles que han sido los últimos días*). Page now explains the distinction. | No full example/translation inventory or audit of all degree constructions. |
+| *lo que* and *lo cual* | articles/neutral-lo.mdx; pronouns/relative-pronouns.mdx | NGLE § 44.1b, g–h and § 44.7k support relative forms without an expressed nominal antecedent, the complex-relative analysis, inanimate reference and anaphoric reference to propositional content. Both pages now distinguish these patterns and cross-link. | Does not establish interchangeability; context and syntactic construction remain relevant. |
+| Locative *lo de + name* | articles/neutral-lo.mdx | NGLE § 14.10g–h describes a colloquial locative use in Chile, Río de la Plata, Guatemala, Bolivia and other American areas; it is more frequent in American Spanish but also documented in Europe. Page separates this from “the matter/story about X”. | No corpus-frequency calculation or country-by-country survey; not a universal neutral-register pattern. |
+| Source traceability | articles/neutral-lo.mdx; pronouns/relative-pronouns.mdx | Replaced NGLE contents-index-only locators with direct links to §§ 14.9–14.10, 44.1 and 44.7. | Sources do not verify every example or translation on either page. |
+
+**Status:** the neutral-lo and relative-pronouns pages remain draft. This is a bounded source and consistency pass, not a complete audit of the full relative-clause system, regional frequency, all examples, or publication gates. Full QA on the exact resulting HEAD remains pending.

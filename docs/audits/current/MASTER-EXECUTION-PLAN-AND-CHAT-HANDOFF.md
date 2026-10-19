@@ -846,3 +846,15 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - Full GitHub Actions QA passed on exact HEAD `9df1fb7bda2f7fb131ac8c9673d92e896ba9dcc6`: [run 39238975321](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39238975321). `npm ci` and the complete `npm run qa` pipeline succeeded.
 - This pass includes the gustar quick-reference split, the clitic-placement caveat update, claim audit §63, matrix §63, and this handoff's corrected YAML QA log.
 - Note: the handoff update recording this result creates a new documentation-only HEAD. Check CI once more against that exact resulting SHA; do not treat the prior SHA's green result as evidence for a later commit.
+
+
+### Live refresh — event-location *ser/estar* claim correction (2026-10-19)
+
+- **Starting HEAD:** `e8b8732cb8143e2914539c1aba08d7a88a442235`, PR #27 branch `docs/grammar-reference-architecture-2026-10-18`. PR #26/#27/#28 were rechecked before the batch; all remained open and unmerged, with #28 still draft. No merge, close, rebase, retarget, or base-branch change.
+- **Specific gap:** the high-risk cross-page backlog identified `ser/estar/hay`. In `src/content/es/verbs/ser-estar-location.mdx`, the `Mistake` example treated `La reunión está en la sala 2` as a categorical error, although that exact sentence was not the strongest unambiguous counterexample for a context-free mistake component.
+- **Direct evidence:** RAE/ASALE NGLE § 37.8e directly contrasts rejected `El conferenciante es en el auditorio` with accepted `La conferencia es en el auditorio`; § 37.8f explains that event-denoting nouns may also denote physical objects, allowing a different `estar` reading (`La conferencia está en la maleta`). Source: https://www.rae.es/gram%C3%A1tica/sintaxis/el-atributo-en-las-oraciones-copulativas-con-ser-y-estar-ii-pol%C3%A9micas-relativas-a-los-atributos-locativos . These paragraphs were read directly.
+- **Change:** replaced the ambiguous bad example with the source-explicit person/event contrast and added a caveat that the choice follows the intended reading, not merely the noun. Page remains `draft`.
+- **Audit updates:** claim audit §64 and topic coverage matrix §64 now record the claim, source, decision and remaining limits.
+- **Limits:** this is a one-claim correction, not an exhaustive review of the `ser/estar/hay` family, all translations, regional frequency, browser rendering, accessibility, SEO, or release readiness.
+- **QA:** pending on the final resulting HEAD; check the exact resulting SHA and record the actual workflow result before reporting completion.
+- **Next action:** after QA, inspect the canonical-topic registry/overlap backlog for `personal-a.mdx` in `pronouns` vs `sentence-structure`. Determine the distinct purpose of each page and correct only a demonstrated overlap/contradiction, preserving both URLs and keeping statuses conservative. Avoid another broad ser/estar rewrite unless a concrete source-backed defect appears.

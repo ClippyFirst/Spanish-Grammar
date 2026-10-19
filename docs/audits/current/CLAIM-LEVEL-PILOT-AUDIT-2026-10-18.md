@@ -739,3 +739,12 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - **Content changes:** preterito-perfecto.mdx now has a source registry and explicit \`reviewed\` status; its regional overview is narrower and does not imply a single “Spain vs Latin America” split. preterito-indefinido.mdx now links directly to §§ 23.7–23.8 for its regional qualification. comparisons/past-tenses.mdx narrows the closed-period note and avoids implying that the European pattern is universal.
 - **Limits:** this is a source-grounded overview, not a corpus-based frequency study or a complete country-by-country dialect atlas. It does not verify every example or translation in the three pages. No browser/accessibility/SEO audit was run; do not promote pages beyond \`reviewed\`.
 - **QA:** run full QA on the exact resulting HEAD.
+
+
+## 45. Контекстно залежні минулі форми: виправлення надмірно категоричних Mistake-прикладів (2026-10-19)
+
+- У preterito-perfecto.mdx та preterito-indefinido.mdx приклади Ayer he comido (a las dos) більше не оформлені як безумовні помилки: їх замінено регіональними нотатками, що описують типовий вибір у багатьох різновидах європейської іспанської й прямо застерігають від універсального правила.
+- У comparisons/past-tenses.mdx пару Cuando era niño, comí en casa / comía en casa переведено з категоричного компонента Mistake в пояснення контексту: imperfecto є нейтральним для звички, але indefinido може описувати окремий епізод.
+- **Підстава:** NGLE §§ 23.7b–c, 23.8a–d описують регіональні відмінності у perfecto compuesto; §§ 23.9a–d і 23.13d–h показують роль аспекту, часових меж і контексту в інтерпретації indefinido/imperfecto.
+- **QA попередньої партії:** run 39214049711 пройшов на точному SHA 53a7efb2215f4c1fa7bde643d751d3ae7d3e716d. Нова правка потребує окремого QA на новому HEAD.
+- **Межі:** це виправлення двох класів надмірно категоричних прикладів, а не повний аудит усіх часових конструкцій, регіональних варіантів чи перекладів.

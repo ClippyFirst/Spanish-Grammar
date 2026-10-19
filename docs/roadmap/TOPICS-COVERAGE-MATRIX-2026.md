@@ -824,3 +824,13 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Відкритий інтервал *esta semana/este año* | NGLE § 23.7f, 23.7w and 23.8f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos | *Este/esta* може задавати розширений інтервал, що охоплює момент мовлення, але вибір форми залежить також від регіональної системи та значення. | Не засвідчує автоматично природність кожного прикладу без контексту. |
 
 **Статус:** регіональний опис має прямі академічні джерела й обмежені межі; це не повний діалектологічний або корпусний аудит. Сторінки залишаються reviewed.
+
+
+## 45. Минулі часи: не маркувати контекстні варіанти як безумовні помилки — 2026-10-19
+
+| Приклад | Пряме джерело | Редакційне рішення | Межа |
+|---|---|---|---|
+| *Ayer he comido* проти *Ayer comí* | NGLE §§ 23.7b–c, 23.8a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos | У двох канонічних сторінках компонент Mistake замінено на регіональну нотатку; типовий вибір описано без універсальної заборони. | Конкретна природність залежить від цільового різновиду й контексту. |
+| *Cuando era niño, comí en casa* проти *comía en casa* | NGLE §§ 23.9a–d, 23.13d–h: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-iv-otros-aspectos-de-la-oposici%C3%B3n-cant%C3%A9cantaba | Замість безумовного маркування Mistake пояснено звичне прочитання imperfecto та можливість окремого епізоду з indefinido. | Ізольована фраза не задає достатньо контексту для остаточної оцінки всіх прочитань. |
+
+**Статус:** ці зміни зменшують ризик надмірних тверджень; вони не означають повної верифікації всієї системи минулих часів. Статуси канонічних сторінок лишаються reviewed.

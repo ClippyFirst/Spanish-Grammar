@@ -657,3 +657,11 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Audit trail:** claim-level audit §43 and coverage matrix §43 record scope and limitations. No exhaustive review of every example or Ukrainian translation, corpus-frequency analysis, comprehensive country-by-country audit, browser/accessibility/SEO test, or release certification was performed.
 - **PR state:** PR #27 remains open and unmerged; \`main\` unchanged; no merge/close/rebase/retarget.
 - **Next concrete action:** review the regional distribution of \`pretérito perfecto compuesto\` versus \`indefinido\` in the canonical \`preterito-perfecto.mdx\`, \`preterito-indefinido.mdx\`, and \`comparisons/past-tenses.mdx\`. Read NGLE §§ 23.7–23.8 directly, distinguish sourced regional patterns from pedagogical generalizations, and avoid treating \`hoy/esta semana/ayer\` as automatic tense triggers. Preserve uncertainty where a specific country-level claim lacks direct evidence.
+
+
+### Live refresh — regional past-tense batch and context-sensitive examples (2026-10-19)
+
+- **Exact QA pass for the source-grounded regional batch:** [run 39214049711](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39214049711) succeeded on SHA 53a7efb2215f4c1fa7bde643d751d3ae7d3e716d. This covered the narrowed regional overview in preterito-perfecto.mdx, direct NGLE source locators, and corresponding audit/matrix updates.
+- **Follow-up corrections in this checkpoint:** removed categorical Mistake framing from Ayer he comido (a las dos) in the canonical perfecto/indefinido pages and from Cuando era niño, comí en casa in the comparison page. These are now source-scoped regional/context notes. Claim audit §45 and coverage matrix §45 record the basis and limits.
+- **Next action after QA on this exact checkpoint:** move to a bounded subjunctive pass. Read the canonical present subjunctive page and its comparison/overview first, then inspect direct NGLE/RAE sources for mood selection, uncertainty/desire, and subordinate clauses. Preserve the difference between indicative/subjunctive as a syntactic-semantic choice and simplistic “certainty vs uncertainty” rules. Do not raise content statuses without full claim/example review.
+- **PR state:** PR #27 remains open and unmerged; main unchanged. No merge/close/rebase/retarget performed.

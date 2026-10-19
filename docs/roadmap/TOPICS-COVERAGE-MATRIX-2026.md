@@ -745,3 +745,10 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **NGLE § 15.13:** direct text discusses construction-specific and phraseological uses of bare nouns; no direct weekday-name rule was found in this pass.
 - **RAE Ortografía:** directly supports no contraction when the article belongs to an official place name (*a El Cairo*, *de El Dorado*). The general *al/del* rule still needs direct NGLE § 14.3 text.
 - **Disposition:** the source register and evidence boundary were updated. Weekday use remains open; no corpus/frequency, full Ukrainian edit, or browser/accessibility/SEO audit. Page remains `draft`.
+
+
+## 37. QA follow-up — emphasis artifact in *el/él* contrast (2026-10-19)
+
+- Run `39211512517` failed at final emphasis audit with one `emphasis_artifacts` match in `special-cases.mdx:112`; other blocking totals were zero.
+- Replaced bold spans around *el* and *él* with italics in commit `2c75c52ede13e9c231fd010894360e27924588df`. This is a markup-only repair; grammar claims and QA rules are unchanged.
+- Exact latest HEAD still needs a full QA pass.

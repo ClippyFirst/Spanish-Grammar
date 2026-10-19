@@ -632,3 +632,11 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - **Changes:** `special-cases.mdx` now links to the direct NGLE § 18.7 page instead of only the contents index, its `updated` metadata is `2026-10-19`, and its body-part paragraph links to the canonical detailed guide while warning against a categorical ban on possessives. The body-part page now distinguishes the intended reading of *Se rompió el brazo* from *Se le rompió el brazo* and avoids presenting the former as a simple anticausative reading without context.
 - **Cross-page check:** the articles comparison already links to both the body-part/dative guide and the possessive forms page; no extra topic/page was created.
 - **Limits:** this is a targeted consistency pass, not a full audit of all special-case examples or all regional distributions. No browser testing, full accessibility/SEO review, or corpus study was run. Keep the relevant pages `draft`.
+
+
+## 33. Одяг: синтаксичні ролі clitic і межі узагальнення — 2026-10-19
+
+- **Джерело:** NGLE § 18.7a–i, прочитаний безпосередньо: https://www.rae.es/gram%C3%A1tica/sintaxis/alternancias-de-presencia-y-ausencia-de-posesivos. § 18.7d прямо включає речі особистої сфери, зокрема *pantalones*, до іменників, що можуть уживатися з артиклем у посесивному значенні; § 18.7g описує роль симпатетичного датива.
+- **Зміна:** у `body-parts-possession.mdx` уточнено, що *Ponte el abrigo*, *Quítate los zapatos*, *Me he manchado la camisa* і *Le quitaron la chaqueta* не слід автоматично описувати як одну й ту саму конструкцію. У всіх прикладах предмет одягу оформлено як іменникову групу, але функція clitic залежить від дієслова та контексту. У швидкій довідці виправлено опис *me* в *Me lavo las manos*: прямий додаток — *las manos*, а *me* кореферентне з підметом і має посесивне прочитання.
+- **Межа:** NGLE § 18.7 підтримує загальну модель артикля/посесивної інтерпретації, але не надає повного окремого розбору кожного з чотирьох наведених речень. Тому точна функція clitic не приписується автоматично за аналогією.
+- **Не виконано:** корпусний пошук, кількісний аналіз, країнове/реєстрове зіставлення та повна незалежна українська редактура. Сторінка лишається `draft`.

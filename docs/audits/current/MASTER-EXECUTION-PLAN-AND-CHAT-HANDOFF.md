@@ -877,3 +877,10 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - **Limits:** this does not imply that every noun phrase with *a* requires clitic doubling; it concerns tonic personal pronouns. No full audit of the clitic-doubling system, all examples/translations, or regional variation has been performed.
 - **QA:** pending on the final resulting HEAD; run/check full QA on the exact tip after the handoff commit.
 - **Next action:** after QA, continue to the next high-risk claim cluster from the live coverage matrix. Prioritize a concrete source gap, not another architecture-only pass; preserve the existing page-role/URL decisions and do not mass-upgrade review statuses.
+
+
+### QA result — personal *a* tonic-pronoun correction (2026-10-19)
+
+- Full QA passed on exact HEAD `90677c86ff991afb307eb4ccb24020eedc19f2ad`: [GitHub Actions run 39241313196](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39241313196). `npm ci` and `npm run qa` both succeeded.
+- This pass includes both personal-a page edits, claim audit §65, coverage matrix §65, high-risk cross-page audit §7 and the handoff update at that SHA.
+- The result is recorded here; this documentation-only commit will create a new HEAD, so check the exact resulting SHA's CI before continuing to another content batch.

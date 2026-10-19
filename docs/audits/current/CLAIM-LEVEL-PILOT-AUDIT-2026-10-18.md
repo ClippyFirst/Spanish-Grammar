@@ -675,3 +675,13 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - **Finding:** `src/content/es/articles/special-cases.mdx:112` flagged adjacent bold spans in the contrast between the article *el* and pronoun *él*.
 - **Repair:** changed the two labels from bold to italic in commit `2c75c52ede13e9c231fd010894360e27924588df`. No linguistic claim or QA rule was changed.
 - **Status:** rerun full QA on the exact latest HEAD after the repair and current handoff update.
+
+
+## 38. Артиклі: direct-source gaps and cross-page consistency (2026-10-19)
+
+- **Exact CI baseline before this documentation batch:** run [39211778009](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39211778009) passed on exact HEAD `c415272c498fb523a866d27ffca602ffccbc3060`. Any edits in this section and the subsequent checkpoint require a new exact-HEAD QA run.
+- **Cross-page scope:** compared `articles/definite-indefinite.mdx`, `articles/zero-article.mdx`, `articles/special-cases.mdx`, and `comparisons/articles.mdx`. The profession contrast is aligned: `Soy médico` is the neutral classificatory pattern, while a qualified/identifying NP can take an article; none of the pages now labels `Soy un médico...` categorically ungrammatical. The `al/del` proper-name exception is aligned between the special-cases and comparison pages.
+- **Traceability repair:** the zero-article page now cites the directly read NGLE § 15.11 and § 15.13 pages rather than only the table-of-contents index; a Ukrainian heading typo was corrected. This is a source-link/editorial repair, not verification of every claim on the page.
+- **Weekday article use:** targeted searches of RAE/ASALE online material did not yield a directly relevant specialized passage in this bounded pass. The examples `El lunes...` and `Los lunes...` remain ordinary illustrative examples, but their rule-level analysis is **not source-verified** here. Do not claim that a dedicated RAE rule was found; retain this gap or remove any stronger generalization until a direct source is located.
+- **General `al/del` contraction:** RAE *Ortografía* directly supports the exception when `El` belongs to an official proper name. The direct NGLE § 14.3 passage was not located/read in this pass; the NGLE citation remains a contents-index locator. General contraction is a basic descriptive rule, but this project's requested source-level gate remains open until the precise academic passage is inspected.
+- **Evidence limits:** no corpus/frequency analysis, exhaustive example/translation audit, country/register survey, independent full Ukrainian edit, browser/accessibility/SEO test, or publication-readiness certification. Relevant pages remain `draft`.

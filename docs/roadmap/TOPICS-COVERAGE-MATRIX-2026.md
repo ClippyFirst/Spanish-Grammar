@@ -1022,3 +1022,12 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Обидві позиції в перифразах і перспективних інфінітивах | та сама сторінка | NGLE § 16.12a–f: *Debo hacerlo / Lo debo hacer*, *Espero hacerlo / Lo espero hacer*. Додано розрізнення перифрази та інших інфінітивних конструкцій. | Не проводилося корпусне порівняння частотності. |
 | Обмеження винесення клітика | та сама сторінка | За NGLE § 16.12f–m додано приклади не перспективного/одночасного стану, інфінітива-підмета, заперечення між дієсловами та дієслів із прийменниковим керуванням: *Espero tenerlos en regla* (неприродне для частини мовців *Los espero tener en regla*); *Conviene decírselo*, не *Se lo conviene decir*; *Desea no verla más*, не *La desea no ver más*; *Confío en averiguarlo*, не *Lo confío en averiguar*. | Частина оцінок градуальна або залежить від мовця; приклади не вичерпують усіх конструкцій. |
 | Джерела, статус і межі | `pronouns/object-pronoun-placement.mdx`; суміжні `double-object-pronouns.mdx`, `objeto-directo-indirecto.mdx` | Додано прямі NGLE §§ 16.7, 16.12, 16.13; сторінка залишається `draft`. | Не повний аудит усіх прикладів/перекладів трьох сторінок, не browser/accessibility/SEO QA і не релізна сертифікація. |
+
+
+## 64. Місце подій: *ser/estar* залежить від прочитання (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| Місце людини проти місця події | `verbs/ser-estar-location.mdx` | NGLE § 37.8e прямо відхиляє *El conferenciante es en el auditorio* і наводить *La conferencia es en el auditorio*. Замінено менш однозначний приклад *La reunión está en la sala 2* на джерельно підтверджений контраст: *El conferenciante está en el auditorio* vs *La conferencia es en el auditorio*. | Точкова перевірка одного прикладу, а не повний аудит усіх сторінок ser/estar. |
+| Іменник події з фізичним прочитанням | та сама сторінка | NGLE § 37.8f: *La conferencia es en el Aula Magna* (подія) vs *La conferencia está en la maleta* (фізичний документ/текст). Додано застереження, щоб не трактувати *ser* як автоматичну вимогу лише через лексичний іменник. | Це ілюстративний контраст; не повний список іменників чи значень, без корпусного/регіонального дослідження. |
+| Статус | та сама сторінка | Сторінка залишається `draft`; запис внесено до claim-level аудиту §64. | Не повний аудит усіх прикладів/перекладів, browser/accessibility/SEO QA або сертифікація релізу. |

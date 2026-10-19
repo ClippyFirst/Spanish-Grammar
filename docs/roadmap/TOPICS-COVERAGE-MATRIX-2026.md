@@ -801,3 +801,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Узгодження безособового *haber* | NGLE § 41.6a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/impersonales-no-reflejas-ii-impersonales-con-los-verbos-haber-hacer-ser-estar-e-ir | Джерело описує засвідчене узгодження, зокрема *habían/hubieron*, його неоднакове соціальне сприйняття й рекомендацію неузгоджених форм для формального стандарту. | Не є корпусним вимірюванням частотності для кожної країни; регіональні висновки обмежені описом NGLE/DPD. |
 
 **Статус:** центральні правила й названі приклади мають прямий розділовий доказ у межах таблиці. Повна перевірка кожного прикладу/перекладу, регіональний корпусний аналіз, браузерний QA та релізні gates лишаються відкритими; сторінки залишаються \`reviewed\`, якщо не виконано окремий повний аудит.
+
+
+## 43. Indefinido/imperfecto: прямі джерела й статуси канонічних сторінок — 2026-10-19
+
+| Твердження | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Indefinido може охоплювати тривалий період, а не лише коротку дію | NGLE § 23.9a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9 | Підтверджено тривалість із зовнішніми часовими межами та наративну послідовність. | Не перевірено кожен приклад у канонічній статті. |
+| *Supe* / *conocí* можуть виражати набуття знання / знайомство | NGLE § 23.9j: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9#23.9j | Прямо описано *saber* ‘дізнатися’ та perfective *conocer* ‘вступити в контакт’; imperfective *conocer* може означати ‘знати/бути знайомим’. | Значення *querer* додатково залежить від лексичного значення та контексту. |
+| *Quería pedirte un favor* як ввічливий imperfecto | NGLE § 23.11e–g: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-ii-desarrollos-de-la-noci%C3%B3n-de-copret%C3%A9rito-valores-modales-del-imperfecto | Підтверджено дистанціювання/ввічливість і частотність конструкції з *querer/desear*. | Не доводить, що будь-який imperfecto *quería* є ввічливим. |
+| Повторюваність не виключає indefinido за наявності меж інтервалу | NGLE § 23.13d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-iv-otros-aspectos-de-la-oposici%C3%B3n-cant%C3%A9cantaba | Джерело прямо наводить обмежений інтервал, у якому серія повторюваних подій може стояти в indefinido. | Не засвідчує автоматично природність кожного ізольованого речення з *cada día*. |
+
+**Статус:** точкові правила мають прямі джерела; повний аудит усіх прикладів, перекладів, регіонального розподілу й браузерних властивостей не виконано. Канонічні сторінки indefinido та imperfecto мають статус \`reviewed\`, не \`verified\`.

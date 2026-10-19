@@ -865,3 +865,15 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - Full QA passed on exact content-and-audit HEAD `9c8da933428cd2ab756c59932621b9534ccc16a5`: [GitHub Actions run 39240966145](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39240966145). Both `npm ci` and the complete `npm run qa` step succeeded.
 - The pass covers the event-location example correction in `ser-estar-location.mdx`, claim audit §64, coverage matrix §64, and the handoff state at that SHA.
 - This entry itself is a documentation-only commit and creates a new HEAD; check CI once more for the resulting SHA before stating the branch is green at its current tip.
+
+
+### Live refresh — personal *a* and tonic-pronoun clitic doubling (2026-10-19)
+
+- **Starting HEAD:** `1d6fb77e985c08828601f5bf96d240e62f6997c4`; exact-HEAD full QA passed in [run 39241069812](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39241069812). PR #27 remains open/unmerged; no merge, close, rebase, retarget or base change.
+- **Specific gap:** inspected both `src/content/es/pronouns/personal-a.mdx` and `src/content/es/sentence-structure/personal-a.mdx`. The short page's `Ayudó a ella` example implied that a stressed tonic pronoun could stand alone as the object, with only a vague comment that a clitic was often more natural.
+- **Direct evidence:** RAE/ASALE *Glosario de términos gramaticales*, entry *complemento indirecto*, says tonic accusative/dative personal pronouns in contemporary Spanish occur only when doubled by the corresponding unstressed clitic: `No la vi a ella`, not `No vi a ella`; `No se lo di a él`, not `No lo di a él`. Source: https://www.rae.es/gtg/complemento-indirecto .
+- **Changes:** changed the short-page example to `La ayudó a ella`; added the explicit doubling rule and direct source to the canonical `pronouns/personal-a.mdx`; linked the source in both pages. Preserved both URLs, the shorter page's `canonical_topic` and cross-reference, and both `draft` statuses.
+- **Audit updates:** claim audit §65, topic coverage matrix §65 and section 7 of `HIGH-RISK-CROSS-PAGE-AUDIT-2026-10-18.md` record the finding and boundary.
+- **Limits:** this does not imply that every noun phrase with *a* requires clitic doubling; it concerns tonic personal pronouns. No full audit of the clitic-doubling system, all examples/translations, or regional variation has been performed.
+- **QA:** pending on the final resulting HEAD; run/check full QA on the exact tip after the handoff commit.
+- **Next action:** after QA, continue to the next high-risk claim cluster from the live coverage matrix. Prioritize a concrete source gap, not another architecture-only pass; preserve the existing page-role/URL decisions and do not mass-upgrade review statuses.

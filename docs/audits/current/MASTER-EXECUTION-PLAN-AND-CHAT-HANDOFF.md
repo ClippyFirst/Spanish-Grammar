@@ -817,3 +817,13 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - **Changes:** added a qualified note to `when-not-subjunctive.mdx` and `comparisons/indicative-subjunctive.mdx`; appended claim audit §61 and coverage matrix §61. Both pages remain `draft`.
 - **Limits:** no full semantic, regional-frequency or corpus survey; the indicative variant is not presented as a default learner model. No browser/accessibility/SEO or publication certification.
 - **Next action:** choose one next high-priority claim cluster with a concrete unresolved evidence gap from the live coverage matrix.
+
+
+### Live refresh — gustar canonical-page / quick-reference split (2026-10-19)
+
+- **Starting HEAD:** `59f7bf5e1a4cf0cf397fc61971bb8f91a0c5609e`, branch `docs/grammar-reference-architecture-2026-10-18`, PR #27. PRs #26, #27 and #28 were rechecked live: all remain open and unmerged; #28 remains draft and stacked on #26. No PR or base branch was changed.
+- **Evidence reviewed:** canonical `verbs/gustar.mdx`, overlapping `verbs/gustar-type-verbs.mdx`, existing high-risk cross-page audit, and RAE/ASALE DPD *gustar*, NGLE § 35.5b, k–m, and GTG *complemento indirecto*.
+- **Changes:** renamed `gustar-type-verbs.mdx` as a quick reference in Ukrainian, Spanish and English metadata; trimmed duplicated explanation while retaining the construction formula, agreement and pronoun tables, representative verbs, two error checks and scoped regional note; added reciprocal links between the quick reference and full canonical article. Both original URLs remain intact. Appended claim audit §62 and coverage matrix §62. Both pages remain `draft`.
+- **Limits:** this is a bounded page-role/duplication fix, not full verification of every example/translation, a corpus or regional-frequency study, browser/accessibility/SEO testing, or release certification. No analytics-based search-intent claim was made.
+- **QA:** pending for the final resulting HEAD; do not infer success from individual commits or content inspection. Record the exact workflow result after the final documentation commit.
+- **Next action:** continue the high-risk cross-page backlog with the object-clitic placement cluster. First inspect canonical clitic pages and all related comparisons; then read the applicable RAE/ASALE NGLE/DPD evidence on clitic placement with infinitives, gerunds, imperatives and finite verbs. Select one bounded unresolved claim, avoid treating every alternative as universally interchangeable, update the claim audit/matrix/handoff, and run full QA on the exact final HEAD.

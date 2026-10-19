@@ -903,3 +903,13 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - The pass includes direct source updates in both article pages, claim audit §66, coverage matrix §66, high-risk audit §8 and the handoff snapshot at that SHA.
 - This note is a new documentation-only commit; check CI on its resulting exact HEAD before reporting the branch green.
 - **Next candidate inspected, not yet changed:** `src/content/es/articles/zero-article.mdx` overlaps with both article pages. It has direct NGLE §§ 15.11/15.13 sources and useful distinct coverage (bare nouns, predicates, phraseological patterns), so do not simply collapse it. Next pass should compare exact claims/examples across all three pages, identify any duplicated or conflicting rule (especially `No tengo coche` vs `No tengo un coche` and bare-noun licensing), then make only a concrete evidence-supported correction and record page roles without removing URLs.
+
+
+### Live refresh — zero-article role and reciprocal links (2026-10-19)
+
+- **QA checkpoint before this batch:** exact HEAD `7943e00a9bfa77aecfa7c9e08721a8777bff9fd0` passed full QA in [run 39248325023](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39248325023); `npm ci` and `npm run qa` succeeded. That run does not cover the content edits below.
+- **Concrete gap:** inspected `definite-indefinite.mdx`, `definite-vs-indefinite.mdx`, and `zero-article.mdx`. The first two already covered zero article at overview level; the dedicated page had distinct deeper coverage but did not explicitly state its narrower role in its opening or link back to the other two in the body.
+- **Direct evidence:** NGLE §§ 15.11 and 15.13 on bare noun phrases and construction/phraseological factors: https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-i-constituci%C3%B3n-e-interpretaci%C3%B3n-sem%C3%A1ntica-de-los-grupos-nominales-sin-determinante and https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-iii-otros-factores-aspectos-fraseol%C3%B3gicos-y-discursivos. The inspected examples did not justify a grammar rewrite.
+- **Changes:** clarified the three page roles and added reciprocal in-body links; no URL/slug changes or status upgrades. Claim audit §67, coverage matrix §67 and high-risk audit §9 record the change and its limits.
+- **Current content/audit HEAD:** pending after this batch; retrieve the live PR #27 HEAD and verify full QA on that exact SHA before proceeding.
+- **Next action after QA:** continue the next unresolved high-risk cluster from the current matrix. Prioritize source-backed claim gaps, not further architecture-only churn; do not remove pages or alter PR state without approval.

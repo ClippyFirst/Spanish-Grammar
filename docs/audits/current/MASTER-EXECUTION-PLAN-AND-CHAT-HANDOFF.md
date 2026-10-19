@@ -536,3 +536,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Limits:** no corpus/frequency analysis, exhaustive clothing/body-part example audit, country/register survey, independent full Ukrainian edit, or browser/accessibility/SEO test. Both pages remain `draft`.
 - **QA after this content batch:** pending. The success on `b22a9e53f952b5d9f39804575b25a5d635cd1a6a` predates these new content/audit/matrix/checkpoint commits and cannot be reused as their validation.
 - **Next concrete action:** check full GitHub Actions QA for the exact newest HEAD after this checkpoint. If it passes, continue by reviewing the remaining clothing/body-part examples and then compare the final claims with the canonical article and article comparison. If it fails, inspect the exact failing step and repair only the demonstrated blocker. Keep `draft`; no merge/close/rebase/retarget.
+
+
+### Live refresh — QA pass and cross-page article consistency (2026-10-19)
+
+- **Exact QA pass:** run [39210604433](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39210604433) completed successfully on SHA `1fc2e52506f22ba837f6a1482ed617c1c60398cc`. This confirms full QA for the previous body-part example/audit/matrix/handoff batch, including the frontmatter quote repair.
+- **New changes after that pass:** in `body-parts-possession.mdx`, refined the reading of *Se rompió el brazo* versus *Se le rompió el brazo*. In `articles/special-cases.mdx`, added direct NGLE § 18.7a–i source, updated its date, and linked its body-part section to the detailed guide. The articles comparison already links both the body-part guide and possessive forms page.
+- **Audit trail:** claim-level audit §32 and topic coverage matrix §32 record the cross-page pass and limitations.
+- **QA after these newest edits:** pending; the success on `1fc2e52506f22ba837f6a1482ed617c1c60398cc` predates the latest content/audit/matrix/checkpoint commits.
+- **Next concrete action:** check full GitHub Actions QA for the exact newest HEAD. If green, continue a bounded claim-level review of the remaining clothing constructions and any remaining examples in `special-cases.mdx`; if not, repair only the demonstrated blocker. Keep `body-parts-possession.mdx`, `possessive-pronouns.mdx`, and `special-cases.mdx` in `draft` until their relevant claim-level work is complete. No merge/close/rebase/retarget.

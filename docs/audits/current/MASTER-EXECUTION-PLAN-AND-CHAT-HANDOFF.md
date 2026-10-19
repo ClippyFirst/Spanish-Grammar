@@ -319,9 +319,9 @@ No merges, closes, rebases, retargets, or changes to `main` were made. PR #28 re
 
 ### Next concrete action
 
-Завершено обмежені партії з відносних займенників, subjuntivo/indicativo у відносних підрядних, негативних неозначених антецедентів, *por/para*, особового *a*, керування дієслів прийменниками, *queísmo/dequeísmo* та точкової перевірки прикладів/перекладів у відповідному кластері. Усі зміни залишилися в PR #27; сторінки лишаються `draft`, а QA не є лінгвістичною сертифікацією.
+Завершено обмежені партії з відносних займенників, subjuntivo/indicativo у відносних підрядних, негативних неозначених антецедентів, *por/para*, особового *a*, керування дієслів прийменниками, *queísmo/dequeísmo*, цільових прикладів/перекладів і швидкої карти subjuntivo. Сторінки лишаються `draft`; зелений CI не є лінгвістичною сертифікацією.
 
-Наступна дія — обмежений аудит **швидкої карти тригерів subjuntivo**: `src/content/es/moods/subjunctive-triggers-list.mdx`, зі звіркою відповідних розділів у `subjunctive-triggers.mdx` та `comparisons/indicative-subjunctive.mdx`. Обсяг лише рядки швидкої таблиці про волю/бажання, прохання/вплив, емоцію/оцінку, сумнів/заперечення, мету й `ojalá`; часові підрядні й відносні конструкції не переаудитовувати в цій партії, бо для них уже є окремі записи. Прочитати прямі тексти NGLE §§ 25.2, 25.3 і 25.7 та перевірити кожен приклад, переклад і пояснення: типова модель чи обов’язкове правило, чи є лексична/контекстна варіативність, чи немає хибного «одне слово — один спосіб». Внести лише доведені виправлення, записати межі доказів у claim audit/matrix і виконати QA на точному фінальному HEAD. Сторінки залишити `draft`.
+Наступна дія — обмежений source pass для `src/content/es/moods/when-not-subjunctive.mdx` і відповідного розділу `comparisons/indicative-subjunctive.mdx`: перевірити лише центральні приклади indicativo після предикатів знання/сприйняття/твердження та після заперечених `creer/pensar`, використовуючи прямі NGLE §§ 25.3–25.7. Особлива увага — не подавати «заперечення завжди вимагає subjuntivo» як правило й не плутати лексичний вибір способу з ефектом заперечення. Не переаудитовувати часові та відносні підрядні, для яких уже є окремі записи. Записати атомарні claims, конкретні джерела, виправлення й межі в audit/matrix; QA виконати на точному HEAD.
 
 ### Live refresh — 2026-10-19 09:16 UTC (після партії про артиклі й присвійні форми)
 
@@ -779,3 +779,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, **draft**, not merged; stacked on #26 | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | GitHub reported `mergeable: true` | Historical failure [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069) remains; recheck exact head before integration |
 
 The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa340e9904ac774c2e0445f201e4fc828321` when this refresh was written. No PR was merged, closed, rebased or retargeted; `main` was unchanged. Mergeability is not approval or release readiness.
+
+
+### Live refresh — quick subjunctive-trigger table pass (2026-10-19)
+
+- **Starting HEAD:** `32a8816b388813467eaa69c1e4ab026e872f4885`; branch `docs/grammar-reference-architecture-2026-10-18`, PR #27.
+- **Direct sources reviewed:** NGLE § 25.2h, k (inductors, `ojalá`, `dudar`); NGLE § 25.3b, k, q (basic selection, will/intention, affective predicates); NGLE § 25.7i (negated `creer/pensar` and possible indicative alternation); DPD, `dudar`.
+- **Changes:** qualified `esperar que` as a subjunctive model in its hope/wish reading; corrected the quick-guide mismatch between `alegrarse de` and `Me alegra`; added both `dudar que` and `dudar de que` as documented frames; made explicit that `ojalá` does not alternate with indicative; added DPD source and audit/matrix §60.
+- **Limits:** selected quick-table rows only; no complete audit of every subjunctive trigger, every example/translation, all regional varieties, browser/accessibility/SEO, or publication certification.
+- **Next action:** bounded direct-source pass on `when-not-subjunctive.mdx`, limited to knowledge/perception/assertion predicates and negated `creer/pensar`; do not expand into all mood-selection contexts.

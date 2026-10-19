@@ -443,3 +443,26 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 | `*Si tendré tiempo`, `*Si tendría tiempo` in ordinary conditional protases | NGLE § 47.8d | Retained as nonstandard for the target neutral standard; historical and other non-equivalent constructions remain outside this basic rule. |
 
 **Evidence boundary:** NGLE § 47.8a–k was read directly for the claims above. No full survey of all conditional correlations, corpus query, country-by-country variation study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.
+
+
+## 22. Imperative forms, clitic placement, forms of address, and voseo — 2026-10-19
+
+### Direct evidence read
+
+- RAE/ASALE, NGLE § 42.3c, g: the imperative paradigm is defective and chiefly involves second-person forms; forms such as *ven* (tú), *vení* (vos), and *venid* (vosotros) are exclusive imperative forms, while *venga* (usted) and *vengan* (ustedes) coincide with subjunctive forms. The same section identifies the common irregular affirmative *tú* forms *di, haz, ve, pon, sal, sé, ten, ven*.
+- NGLE § 42.3e, h: affirmative imperative forms allow enclitic pronouns; in the relevant imperative uses, pronouns do not precede the verb. The negative pattern is different.
+- NGLE § 42.3k–m: some enclitic combinations cause morphological changes, including loss of final *-d* before *os* and loss of final *-s* in first-person plural forms before *nos/se*. These details are not exhaustively covered in the short site article.
+- NGLE § 42.3t–u: negative imperatives use subjunctive forms; exclusive affirmative imperative forms such as *entra, llamá, ven, di* do not simply take *no* unchanged (*no entres, no llamés/no llames, no vengas, no digas* according to the selected address variety).
+- DPD entries «vos» and «vosotros»: *vos* is a singular second-person form in voseante varieties; *vosotros* is informal plural in most of Spain and is not used in America or in some southern Spanish areas, where *ustedes* also serves informal plural address. Direct references: https://www.rae.es/dpd/vos and https://www.rae.es/dpd/vosotros.
+
+### Changes made
+
+- `src/content/es/moods/imperativo.mdx`: added direct NGLE source locators and `draft` status; repaired malformed emphasis around affirmative/negative forms, the subjunctive mapping, and address examples; repaired two malformed contrast lines; corrected the Ukrainian audience heading; changed learner-error framing to neutral contrast examples.
+- `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx`: added direct RAE source locators and `draft` status; repaired malformed Markdown around *usted* agreement; clarified the function of *vosotros* vs *ustedes*; changed learner-error framing to neutral contrast examples.
+- `src/content/es/pronouns/object-pronoun-placement.mdx`: added direct NGLE § 42.3 locator for imperative enclisis/proclisis and negative imperatives; downgraded `reviewed` to `draft` because the imperative-specific claims now have a new source pass but the whole page has not been exhaustively checked.
+- `src/content/es/regional/voseo.mdx`: added a direct DPD «vos» link, repaired malformed emphasis and a Ukrainian spelling issue, and downgraded `verified` to `draft`. The direct source supports the core pronoun/distribution note, not every country-level or social-frequency statement on the page.
+- `en cuanto` remains an explicit open item: NGLE §§ 22.6p and 31.14i establish its temporal immediacy meaning and relative-adverbial classification, but the inspected passages do not directly establish a complete mood-selection rule. The existing caveat should remain until an exact direct source is found.
+
+### Evidence boundary
+
+This was a bounded source/editorial pass, not a full conjugation audit. No full review of every irregular imperative, all imperative-plus-clitic spellings, all regional voseo paradigms, country-by-country treatment norms, corpus frequencies, independent Ukrainian editorial review, or browser/accessibility/SEO testing was performed. All four pages remain `draft`; no claim of full verification or publication readiness is made.

@@ -667,3 +667,11 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - Read NGLE § 15.13 directly: https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-iii-otros-factores-aspectos-fraseol%C3%B3gicos-y-discursivos. It discusses construction-specific/phraseological bare nouns; it does not establish a general weekday rule.
 - RAE «Ortografía» directly states that a/de do not contract when the article is part of an official place name, with examples such as *a El Cairo* and *de El Dorado*: https://www.rae.es/diccionario-estudiante/docs/ortografia.pdf.
 - **Disposition:** `special-cases.mdx` source register and evidence note now distinguish direct text from contents-index locators. Profession and language-name patterns have general direct support; weekday article use and the full *al/del* rule remain open. Page remains `draft`.
+
+
+## 37. QA failure and markup-only repair — special-cases *el/él* (2026-10-19)
+
+- **Run:** [39211512517](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39211512517), exact SHA `d8839aefa1afa7f2caa2da4fc4b33c4084c33f5b`, failed only at the final emphasis audit (`emphasis_artifacts: 1`). All other listed blocking totals were zero.
+- **Finding:** `src/content/es/articles/special-cases.mdx:112` flagged adjacent bold spans in the contrast between the article *el* and pronoun *él*.
+- **Repair:** changed the two labels from bold to italic in commit `2c75c52ede13e9c231fd010894360e27924588df`. No linguistic claim or QA rule was changed.
+- **Status:** rerun full QA on the exact latest HEAD after the repair and current handoff update.

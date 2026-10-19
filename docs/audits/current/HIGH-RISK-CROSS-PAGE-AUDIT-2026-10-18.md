@@ -103,3 +103,12 @@ The improved source-level markup scan currently reports **78 pages with legacy m
 ## Final QA after the runtime-navigation fixes
 
 Full QA passed on commit `4b852311a1be3cbaea1f2028a3feb0df22e51949`: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39134238053. Confirmed: 208 grammar files + 5 comparison pages (213 content pages); internal link audit 0 problems; graph audit 0 broken targets and 0 semantic orphans; UI terminology scan 0 forbidden occurrences; rendered navigation regression checks passed for category/slug related links, canonical topics and extensionless comparison routes.
+
+
+### 7. Personal *a*: stressed-pronoun example corrected; page roles retained
+
+**Files:** `src/content/es/pronouns/personal-a.mdx` (canonical) and `src/content/es/sentence-structure/personal-a.mdx` (short reference).
+
+The shorter page used `Ayudó a ella` as an example for a tonic pronoun, with only a vague note that a clitic is often more natural. The RAE/ASALE *Glosario de términos gramaticales*, entry *complemento indirecto*, explicitly states that in contemporary Spanish tonic accusative and dative personal pronouns require doubling by the corresponding unstressed clitic: `No la vi a ella`, not `No vi a ella`; `No se lo di a él`, not `No lo di a él`.
+
+The short-page example is now `La ayudó a ella`, with the clitic explained. The canonical article now states the rule explicitly and contrasts both direct and indirect object examples. The source is linked on both pages. The short page already has a distinct shorter-reference role, `canonical_topic: pronouns/personal-a`, and links to the canonical article; both URLs and roles are preserved. This is a bounded claim fix, not a full audit of all clitic doubling or regional patterns. Both pages remain `draft`.

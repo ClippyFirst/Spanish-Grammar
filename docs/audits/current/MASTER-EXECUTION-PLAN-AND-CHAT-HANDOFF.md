@@ -319,9 +319,9 @@ No merges, closes, rebases, retargets, or changes to `main` were made. PR #28 re
 
 ### Next concrete action
 
-Завершено обмежені партії з відносних займенників, subjuntivo/indicativo у відносних підрядних, негативних неозначених антецедентів, *por/para*, особового *a*, керування дієслів прийменниками, *queísmo/dequeísmo*, цільових прикладів/перекладів і швидкої карти subjuntivo. Сторінки лишаються `draft`; зелений CI не є лінгвістичною сертифікацією.
+Завершено обмежені партії з відносних займенників, subjuntivo/indicativo у відносних підрядних, негативних неозначених антецедентів, *por/para*, особового *a*, керування дієслів прийменниками, *queísmo/dequeísmo*, швидкої карти subjuntivo та меж правила *no creer → subjuntivo*. Усі зміни залишилися в PR #27; статуси сторінок не підвищувалися до `verified` на підставі лише CI.
 
-Наступна дія — обмежений source pass для `src/content/es/moods/when-not-subjunctive.mdx` і відповідного розділу `comparisons/indicative-subjunctive.mdx`: перевірити лише центральні приклади indicativo після предикатів знання/сприйняття/твердження та після заперечених `creer/pensar`, використовуючи прямі NGLE §§ 25.3–25.7. Особлива увага — не подавати «заперечення завжди вимагає subjuntivo» як правило й не плутати лексичний вибір способу з ефектом заперечення. Не переаудитовувати часові та відносні підрядні, для яких уже є окремі записи. Записати атомарні claims, конкретні джерела, виправлення й межі в audit/matrix; QA виконати на точному HEAD.
+Наступна дія — повернутися до coverage matrix і вибрати **один наступний конкретний claim cluster** із невирішеною доказовою прогалиною. Перед змінами перевірити актуальний worklist і live PR/HEAD/CI, прочитати канонічну сторінку та пов’язані аудити, визначити точний обсяг і прямі джерела. Якщо прогалина стосується прикладів/перекладів — перевіряти їх по одному; якщо джерело не підтверджує сильне твердження, звузити його або зафіксувати невизначеність. Оновити claim audit, coverage matrix і цей handoff; QA запускати на точному фінальному SHA. Не додавати нові теми/skills без доведеної прогалини.
 
 ### Live refresh — 2026-10-19 09:16 UTC (після партії про артиклі й присвійні форми)
 
@@ -798,3 +798,12 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - **Sources:** NGLE §§ 25.2h, k and 25.3b, k, q; DPD, `dudar`. Source text was read directly, not inferred from the contents index.
 - **Limits:** selected quick-guide rows only; no complete verification of every trigger, example/translation, regional pattern, browser/accessibility/SEO or publication readiness.
 - **Next action:** bounded direct-source audit of `when-not-subjunctive.mdx` and the corresponding comparison section, limited to knowledge/perception/assertion predicates and negated `creer/pensar`.
+
+
+### Live refresh — negated belief predicates and indicative variation (2026-10-19)
+
+- **Starting HEAD:** `bdff64f0fd4bb1922ccf0d0b740611382605aee0`; branch `docs/grammar-reference-architecture-2026-10-18`, PR #27.
+- **Direct source:** NGLE § 25.7i, read directly: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-sustantivas-v-negaci%C3%B3n--y-subjuntivo-en-la-subordinaci%C3%B3n-sustantiva-otros-inductores-asimilables-a-la-negaci%C3%B3n .
+- **Change:** preserved `No creo que venga` as the typical neutral subjunctive model, but added the source-attested indicative example `No creen que es necesario aumentar la cantidad de funcionarios` as a marked discourse-dependent alternative in `when-not-subjunctive.mdx` and `comparisons/indicative-subjunctive.mdx`. Recorded the boundary in claim audit §61 and matrix §61.
+- **Limits:** no full semantic, regional-frequency, or corpus survey; the indicative example is not presented as a default learner model. Both pages remain `draft`.
+- **Next action:** select one next claim cluster with a specific unresolved evidence gap from the coverage matrix; do not expand scope without evidence.

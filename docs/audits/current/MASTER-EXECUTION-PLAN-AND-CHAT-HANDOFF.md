@@ -691,3 +691,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Remaining limits:** both trigger pages remain draft; no full audit of all triggers, tense combinations, regional frequencies, translations, browser rendering, accessibility, or SEO has been performed.
 - **Next:** run full QA on this exact HEAD, inspect any failing step, then proceed to the next claim-level gap in the master plan. Do not merge PR #27 without explicit approval.
 - **PR state:** open and unmerged; branch docs/grammar-reference-architecture-2026-10-18; main unchanged.
+
+
+### QA result — temporal subjunctive trigger checkpoint (2026-10-19)
+
+- **Exact full QA passed:** [run 39214912286](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39214912286) succeeded on SHA 1f36e27d0378c166ef91d3cd75964f47c1f7463e.
+- Verified edits: removed context-poor categorical Mistake framing for *Cuando llegas mañana* in favor of a usage note; added the future-indicative restriction for temporal *después de que* to the quick guide; corrected the relative-clause source locator from NGLE § 25.12 to § 25.10 in both trigger pages.
+- Direct sources read in this pass: NGLE § 24.5 (especially 24.5c, j–k), § 25.14e, § 25.14h, and § 31.14i. The latter confirms that temporal *en cuanto* denotes immediacy; it does not by itself establish every mood/tense pattern, so the existing claim remains narrowly phrased.
+- Both trigger pages remain draft. This pass is not a full trigger-list, tense, translation, browser, accessibility, SEO, or publication audit.
+- **Next bounded action:** inspect the comparison page for indicative/subjunctive and temporal clauses against the updated canonical pages, correcting only direct cross-page contradictions. Keep PR #27 open/unmerged and do not alter main.

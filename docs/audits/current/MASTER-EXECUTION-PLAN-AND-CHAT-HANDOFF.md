@@ -572,3 +572,11 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - Added the proper-name exception to the contraction summary on the special-cases page and the comparison page.
 - Audit §35 and matrix §35 record the changes. Direct sources for profession predicates, weekday article use, language names, and contractions are still open; do not claim these items verified.
 - QA: all changes after run 39210981413 remain unvalidated. Run full QA on exact latest HEAD. Keep pages `draft`; no merge/close/rebase/retarget.
+
+
+### Live refresh — direct NGLE evidence for article omission (2026-10-19)
+
+- Read NGLE § 15.11 directly. § 15.11g gives bare nominal predicates (*Son médicos*); § 15.11m gives a language name without determiner (*Habla ruso*) in a habitual/generic context. These support the general profession and language-name patterns on `special-cases.mdx`, without making them universal rules. Read NGLE § 15.13 directly for construction-specific/phraseological bare nouns; it does not settle weekday article use.
+- RAE «Ortografía» directly confirms that a/de do not contract when the article is part of an official place name (e.g. *a El Cairo*, *de El Dorado*). The general *al/del* contraction rule still needs direct NGLE § 14.3 text.
+- `special-cases.mdx` source register/evidence note updated. Audit §36 and matrix §36 record evidence and remaining gaps. Weekday names remain the only open item among the requested subtopics aside from full direct verification of the general contraction rule.
+- **QA:** changes after the last successful run are pending validation. Run full QA on exact latest HEAD; repair only any demonstrated blocker. Keep relevant pages `draft`; no merge/close/rebase/retarget.

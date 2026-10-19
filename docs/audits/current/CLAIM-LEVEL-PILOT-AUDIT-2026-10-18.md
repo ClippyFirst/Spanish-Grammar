@@ -847,3 +847,13 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 | Comparison and consistency | `prepositions/por-para.mdx`; `comparisons/por-para.mdx`. | Split exact future deadline from approximate temporal location/duration in the comparison table; widened the explanation of `por ti` to include acting in someone's favor/substitution where context supports it. | No full independent Ukrainian copy-edit, corpus study, browser/accessibility/SEO, or publication certification. |
 
 **Status:** both pages remain `draft`. This is a bounded claim/source and cross-page consistency pass, not complete verification of every example or regional usage.
+
+
+## 56. Personal *a*: type readings and limits of “person = a” (2026-10-19)
+
+| Claim / area | Direct evidence | Disposition | Remaining boundary |
+|---|---|---|---|
+| Core factors governing personal *a* | NGLE § 34.8a, d–i: https://www.rae.es/gram%C3%A1tica/sintaxis/el-complemento-directo-preposicional-i-nombres-y-pronombres-complementos-de-persona-y-de-cosa-personificada. Animacy, definiteness, specificity, verb class, personification and context all matter; some contexts require *a*, others exclude it, and some allow alternation. | Confirmed the existing caution against “every person = a”; aligned the canonical-page terminology as **особове a**. | This pass does not classify every verb or every animate/inanimate object. |
+| Restricted type/archetype readings | NGLE § 34.8k–n, same direct source. Examples include definite plural human NPs interpreted as types and restricted singular archetype readings such as *encontrar el político perfecto* without *a*. | Added a bounded note to both canonical pages: these readings exist but do not license general omission before a specific person. | Does not establish that every definite human NP can omit *a*; the source stresses restricted contexts and lexical/pragmatic factors. |
+| Animals and personification | NGLE § 34.8o–t, same direct source: proper animal names require *a*; common animal names often pattern like human referents, but presence can vary with context and affective individualization; personified things can also take *a*. | Existing examples retained; no universal “all animals = a” rule introduced. | No full inventory of animal examples or regional frequencies. |
+| Status and scope | `pronouns/personal-a.mdx`; `sentence-structure/personal-a.mdx`. | Added the exact NGLE locator and synchronized the Ukrainian term to “особове a”; both pages remain `draft`. | Not a full example/translation audit, leísmo survey, browser/accessibility/SEO, or publication certification. |

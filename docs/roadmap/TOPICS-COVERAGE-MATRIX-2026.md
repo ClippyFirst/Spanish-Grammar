@@ -875,3 +875,13 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Some progressive forms are unnecessary or calqued when the intended event is presented as completed | NGLE § 28.12s: https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-i-el-auxiliar-estar | Supported as a usage caution; the canonical page now provides a qualified contrast. | Not a ban on future progressive or all uses with a future reference. |
 
 **Status:** `estar-gerundio.mdx` is `reviewed`, not `verified`. This bounded source pass does not verify every gerund construction, example, translation, regional-frequency claim, or browser behavior.
+
+## 50. Gerundio cluster: page roles and evidence limits (2026-10-19)
+
+| Page / claim area | Direct source | Disposition | Remaining boundary |
+|---|---|---|---|
+| `verbs/gerundio.mdx`: form and general functions | RAE/ASALE, *Libro de estilo de la Justicia*, § 6.5: https://www.rae.es/libro-estilo-justicia/las-palabras-y-sus-grupos-problemas-y-actuaciones/gerundio | Added direct source; page role clarified as compact form/overview reference. | Irregular-form inventory and every example/translation not exhaustively checked. |
+| `verbs/gerund-uses.mdx`: simultaneity, peripheral constructions, and restrictions | NGLE §§ 28.12–28.13; *Libro de estilo de la Justicia* §§ 6.5.1–6.5.2 | Added direct links to the relevant progressive/incremental constructions and selected usage guidance; page role clarified as functions/restrictions. | Legal-style cautions should not be generalized into an exhaustive pan-Hispanic grammar of every gerund construction. |
+| Post-nominal gerund and learner-error framing | RAE/ASALE sources above, interpreted construction-by-construction | Replaced categorical error framing with contextual contrast; both general gerund pages changed from `verified` to `reviewed`. | Specific post-nominal examples need a dedicated claim-level pass before any stronger status. |
+
+**Status:** the two general gerund pages are `reviewed`, not `verified`; the progressive page is also `reviewed`. This is a bounded editorial/source pass, not a complete gerund audit.

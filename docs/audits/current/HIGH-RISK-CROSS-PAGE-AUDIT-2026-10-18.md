@@ -112,3 +112,12 @@ Full QA passed on commit `4b852311a1be3cbaea1f2028a3feb0df22e51949`: https://git
 The shorter page used `Ayudó a ella` as an example for a tonic pronoun, with only a vague note that a clitic is often more natural. The RAE/ASALE *Glosario de términos gramaticales*, entry *complemento indirecto*, explicitly states that in contemporary Spanish tonic accusative and dative personal pronouns require doubling by the corresponding unstressed clitic: `No la vi a ella`, not `No vi a ella`; `No se lo di a él`, not `No lo di a él`.
 
 The short-page example is now `La ayudó a ella`, with the clitic explained. The canonical article now states the rule explicitly and contrasts both direct and indirect object examples. The source is linked on both pages. The short page already has a distinct shorter-reference role, `canonical_topic: pronouns/personal-a`, and links to the canonical article; both URLs and roles are preserved. This is a bounded claim fix, not a full audit of all clitic doubling or regional patterns. Both pages remain `draft`.
+
+
+### 8. Article contrast pages — exact source locators added (2026-10-19)
+
+Files: src/content/es/articles/definite-indefinite.mdx and src/content/es/articles/definite-vs-indefinite.mdx.
+
+The two pages already had distinct editorial roles (full explanation vs contrastive guide), reciprocal links and preserved URLs. The concrete remaining gap was source precision: one page cited NGLE chapters 14–15 through a locator that opened only the § 15.2 page, while the contrast page used chapter-level references without direct URLs. Updated both source lists to link directly to NGLE § 15.4 (anaphora/first mention), § 15.8 (generic article use), § 15.11 (bare nouns/no article), and DPD *el* § 2 for the stressed-/a/ rule. These sections directly support the specific claims/examples; DPD explicitly confirms *el agua fría*, feminine agreement, and the adjacency restriction.
+
+The article content and page roles were not rewritten because inspection did not reveal a new unsupported rule in the reviewed examples. Existing statuses were not upgraded. This is a source-locator precision pass, not complete verification of every article construction or translation.

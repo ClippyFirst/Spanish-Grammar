@@ -858,3 +858,10 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - **Limits:** this is a one-claim correction, not an exhaustive review of the `ser/estar/hay` family, all translations, regional frequency, browser rendering, accessibility, SEO, or release readiness.
 - **QA:** pending on the final resulting HEAD; check the exact resulting SHA and record the actual workflow result before reporting completion.
 - **Next action:** after QA, inspect the canonical-topic registry/overlap backlog for `personal-a.mdx` in `pronouns` vs `sentence-structure`. Determine the distinct purpose of each page and correct only a demonstrated overlap/contradiction, preserving both URLs and keeping statuses conservative. Avoid another broad ser/estar rewrite unless a concrete source-backed defect appears.
+
+
+### QA result — event-location *ser/estar* correction (2026-10-19)
+
+- Full QA passed on exact content-and-audit HEAD `9c8da933428cd2ab756c59932621b9534ccc16a5`: [GitHub Actions run 39240966145](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39240966145). Both `npm ci` and the complete `npm run qa` step succeeded.
+- The pass covers the event-location example correction in `ser-estar-location.mdx`, claim audit §64, coverage matrix §64, and the handoff state at that SHA.
+- This entry itself is a documentation-only commit and creates a new HEAD; check CI once more for the resulting SHA before stating the branch is green at its current tip.

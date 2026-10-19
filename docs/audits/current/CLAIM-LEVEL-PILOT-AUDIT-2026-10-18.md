@@ -526,3 +526,21 @@ DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4 were read directly. This pass i
 ### Evidence boundary
 
 The relevant excerpt from the RAE-hosted BRAE PDF search result was inspected, not a full page-by-page audit of the article. No corpus query or full distributional study was performed. The prospective pattern is supported; a complete *en cuanto* mood-selection account remains open. The three pages remain `draft`.
+
+
+## 26. Частини тіла, присвійні форми та узгодженість порівняння — 2026-10-19
+
+**Обсяг:** source-level редакційний прохід для `src/content/es/pronouns/body-parts-possession.mdx`, `src/content/es/pronouns/possessive-pronouns.mdx` і `src/content/comparisons/articles.mdx`. Це не повна перевірка кожного прикладу чи всіх регіонів.
+
+### Зміни та підстави
+
+- У порівняльній сторінці артиклів додано прямі переходи до канонічних пояснень про частини тіла/одяг і присвійні форми. Це усуває навігаційну прогалину: приклад `Me duele la cabeza` уже є в короткому огляді, але його синтаксис і роль `me` пояснюються в іншій статті.
+- На сторінці частин тіла уточнено межу джерельної заяви: наявні локатори NGLE вказують на релевантні розділи про дативи та невідчужуване володіння, але не підтверджують автоматично кожний приклад, переклад, конструкцію з одягом або регіональне твердження.
+- У присвійній статті додано локатор до NGLE §§ 18.1–18.7 (форми перед/після іменника, семантика, антецеденти та чергування з `de`) і встановлено `review_status: draft`: до цього не було claim-level запису джерел у frontmatter.
+- Виправлено пошкоджене Markdown-виділення у вступі присвійної статті та нормалізовано виділення `vuestro/vosotros/de ustedes`. Регіональний абзац прямо повідомляє, що країно-за-країною аудит не виконаний.
+
+### Докази й статус
+
+- RAE/ASALE, *Nueva gramática de la lengua española*, предметний покажчик: розділи про посесивні конструкції з непрямим додатком — §§ 35.7i, ñ, p; невідчужуване володіння — § 18.7a–i; посесивні форми — §§ 18.1–18.7. Офіційний покажчик: https://www.rae.es/sites/default/files/Indice_contenidos_gramatica.pdf
+- RAE/ASALE, § 38.11w, обговорює означений артикль у відношеннях невідчужуваного володіння в літературних абсолютних конструкціях: https://www.rae.es/gram%C3%A1tica/sintaxis/las-construcciones-absolutas-i-sus-elementos-constitutivos. Це вузьке підтвердження релевантності артикля, а не доказ універсального правила для всіх розмовних конструкцій із частинами тіла.
+- Результат: редакційна узгодженість і прозорість джерельних обмежень покращені; повна перевірка прикладів, перекладів, одягу, дативної класифікації й регіонального розподілу залишається відкритою. Статус `draft` збережено.

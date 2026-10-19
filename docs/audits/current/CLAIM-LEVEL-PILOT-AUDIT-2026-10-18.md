@@ -623,3 +623,12 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 
 - Це точкова перевірка наведених конструкцій і перекладів, а не корпусний аудит частотності або повна перевірка всіх конструкцій з одягом/частинами тіла в усіх регіонах.
 - Не виконано незалежної повної української редактури, браузерного/accessibility/SEO тесту чи систематичного країнового зіставлення. Сторінка залишається `draft`.
+
+
+## 32. Cross-page consistency: article special cases and body-part guide — 2026-10-19
+
+- **Files:** `src/content/es/articles/special-cases.mdx`; `src/content/es/pronouns/body-parts-possession.mdx`; comparison `src/content/comparisons/articles.mdx`.
+- **Source:** directly inspected NGLE § 18.7a–i at https://www.rae.es/gram%C3%A1tica/sintaxis/alternancias-de-presencia-y-ausencia-de-posesivos. The section explicitly explains article with possessive interpretation in body-part constructions, the influence of noun/verb/syntactic position, and dative clitics.
+- **Changes:** `special-cases.mdx` now links to the direct NGLE § 18.7 page instead of only the contents index, its `updated` metadata is `2026-10-19`, and its body-part paragraph links to the canonical detailed guide while warning against a categorical ban on possessives. The body-part page now distinguishes the intended reading of *Se rompió el brazo* from *Se le rompió el brazo* and avoids presenting the former as a simple anticausative reading without context.
+- **Cross-page check:** the articles comparison already links to both the body-part/dative guide and the possessive forms page; no extra topic/page was created.
+- **Limits:** this is a targeted consistency pass, not a full audit of all special-case examples or all regional distributions. No browser testing, full accessibility/SEO review, or corpus study was run. Keep the relevant pages `draft`.

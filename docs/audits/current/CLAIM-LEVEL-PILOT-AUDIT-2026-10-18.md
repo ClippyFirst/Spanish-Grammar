@@ -507,3 +507,22 @@ The cited DPD passages were read directly. The changes support only the specific
 ### Evidence boundary
 
 DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4 were read directly. This pass is a claim-level spot-check of the overview and Rioplatense table, not a complete audit of every voseo tense, every country's paradigm, or frequency/register claims. No corpus query, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. The page remains `draft`.
+
+
+## 25. Temporal *en cuanto* — prospective subjunctive evidence, bounded — 2026-10-19
+
+### Evidence
+
+- RAE/ASALE NGLE § 22.6p establishes temporal *en cuanto* as ‘inmediatamente que’; § 31.14i discusses it among relative adverbial expressions of immediacy. These passages establish meaning/category, but not by themselves a complete mood-selection paradigm.
+- A result excerpt from the RAE-hosted BRAE article «Las conjunciones temporales del español» (p. 301) explicitly gives *en cuanto salgan* alongside *cuando venga* as a prospective/future temporal subordinate with subjunctive, contrasting these with temporal conjunctions that take present indicative in certain simultaneous contexts. Source PDF: https://apps2.rae.es/BRAE_DB_PDF/TOMO_LXII/CCXXVI/Eberenz_289_385.pdf
+- This evidence supports the prospective pattern *En cuanto salgan, avísame*; it does **not** establish that *en cuanto* categorically excludes indicative in every habitual, factual, past or generic context.
+
+### Changes made
+
+- `src/content/es/moods/subjunctive-triggers.mdx`: replaced the prior statement that mood distribution had no separate evidence with the narrower supported claim and a direct link to the BRAE article.
+- `src/content/es/moods/when-not-subjunctive.mdx`: added the same evidence boundary; the page no longer implies that only the semantic meaning was checked.
+- `src/content/comparisons/indicative-subjunctive.mdx`: added the prospective example and source link, while retaining a caveat against a complete distribution claim.
+
+### Evidence boundary
+
+The relevant excerpt from the RAE-hosted BRAE PDF search result was inspected, not a full page-by-page audit of the article. No corpus query or full distributional study was performed. The prospective pattern is supported; a complete *en cuanto* mood-selection account remains open. The three pages remain `draft`.

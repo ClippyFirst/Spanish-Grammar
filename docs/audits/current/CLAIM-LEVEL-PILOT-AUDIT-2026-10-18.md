@@ -601,3 +601,25 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - **Exact finding:** `src/content/es/pronouns/body-parts-possession.mdx:33:5`, `bad indentation of a mapping entry`. The newly replaced NGLE § 18.7 source locator line lacked its closing double quote in YAML frontmatter.
 - **Repair:** added the missing closing quote in commit `82cd7e57f9135ff44f1d1e628c925591e16b40f7`. This is a syntax-only correction; the cited source and linguistic claims did not change.
 - **Status:** rerun full QA on the exact latest HEAD after audit/matrix/handoff updates. Do not treat the earlier success on `a593e4d7d2c7c436ae85decfeea74c6533998e8e` as validation of this later change.
+
+
+## 31. Приклади частин тіла й одягу: переклади та статус «помилки» — 2026-10-19
+
+### Прямі джерела й перевірені приклади
+
+- Прочитано NGLE § 18.7a–i: https://www.rae.es/gram%C3%A1tica/sintaxis/alternancias-de-presencia-y-ausencia-de-posesivos. § 18.7b прямо порівнює *Me duele la cabeza* з нехарактерним для іспанської *Me duele mi cabeza*; § 18.7d охоплює частини тіла й речі особистої сфери, зокрема *pantalones*; § 18.7e дає приклади з дативом і означеним артиклем (*Se me cierran los ojos*, *Se me taponaron los oídos*); § 18.7g–h пояснює зв’язок симпатетичного датива з посесивним артиклем.
+- Підтверджено базову логіку *Me duele la cabeza*, *Te duelen los pies*, *Me lavo las manos*, *Quítate los zapatos* та конструкцій на кшталт *Le curaron la herida*. Для *Me duele la cabeza* частина тіла узгоджується з дієсловом; займенник позначає експерієнцера/особу, якої стосується стан.
+
+### Зміни
+
+- У src/content/es/pronouns/body-parts-possession.mdx переклад *Le quitaron la chaqueta* змінено на «З нього/неї зняли куртку» замість неоднозначного «забрали куртку».
+- Переклад *Le lavó el pelo al niño* нейтралізовано щодо невираженого роду підмета: «Дитині помили волосся».
+- У *Se rompió el brazo* вилучено альтернативний переклад «рука зламалася», який міг змішувати цю конструкцію з *Se le rompió el brazo*. Додано коротке застереження про різницю між моделями.
+- *Lavo mis manos* більше не позначено через компонент `Mistake` як безумовну помилку. Замінено на примітку: *Me lavo las manos* — нейтральніший типовий вибір у звичайному контексті, але менш типовий варіант не оголошується неграматичним без урахування контексту.
+- Точніше описано *Me lavo las manos*: *las manos* — прямий додаток; *me* кореферентне з підметом і має посесивну інтерпретацію, тому не варто просто ототожнювати його з прямим зворотним додатком у *Me lavo*.
+- *El médico me revisó la garganta* описано як аналіз за аналогією з посесивним/симпатетичним дативом, не як дослівний приклад з GTG. Явно позначено, що це синтаксичний аналіз конструкції, а не цитата з джерела.
+
+### Межі
+
+- Це точкова перевірка наведених конструкцій і перекладів, а не корпусний аудит частотності або повна перевірка всіх конструкцій з одягом/частинами тіла в усіх регіонах.
+- Не виконано незалежної повної української редактури, браузерного/accessibility/SEO тесту чи систематичного країнового зіставлення. Сторінка залишається `draft`.

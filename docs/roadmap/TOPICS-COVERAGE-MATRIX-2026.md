@@ -714,3 +714,11 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Disposition:** special-cases page now uses direct NGLE § 18.7a–i evidence and links to the detailed body-part/dative guide. The comparison page already links to the body-part guide and possessive forms page, so no duplicate topic was added.
 - **Specific repair:** clarified *Se rompió el brazo* vs *Se le rompió el brazo*; avoid claiming a context-free anticausative analysis for the first form.
 - **Limits:** only a targeted cross-page pass; not a complete audit of all special-cases content, country-level variation, corpus frequency, browser/accessibility/SEO. Relevant pages remain `draft`.
+
+
+## 33. Одяг і clitic: обмеження узагальнення (2026-10-19)
+
+- **Сторінка:** `src/content/es/pronouns/body-parts-possession.mdx`.
+- **Джерело:** NGLE § 18.7d, g: https://www.rae.es/gram%C3%A1tica/sintaxis/alternancias-de-presencia-y-ausencia-de-posesivos. Академічний текст включає предмети особистої сфери (зокрема *pantalones*) до конструкцій з артиклем у посесивному значенні та описує симпатетичний датив.
+- **Зміна:** пояснення уточнено так, щоб не зводити *Ponte el abrigo*, *Quítate los zapatos*, *Me he manchado la camisa* і *Le quitaron la chaqueta* до одного синтаксичного шаблону. Швидку довідку щодо *Me lavo las manos* узгоджено з основним поясненням.
+- **Межа:** загальна модель підтримана NGLE, але точний розбір кожного clitic у цих чотирьох прикладах не заявлено як дослівно засвідчений у джерелі. Немає корпусного чи країнового аналізу; сторінка залишається `draft`.

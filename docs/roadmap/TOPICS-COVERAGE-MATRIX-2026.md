@@ -864,3 +864,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 ## 48. Cross-page source locator: relative clauses — 2026-10-19
 
 Під час звіряння порівняльної сторінки та сторінки про випадки без subjuntivo виявлено два додаткові посилання, де URL відповідав NGLE § 25.10, але текст указував § 25.12. Номери виправлено в comparisons/indicative-subjunctive.mdx і es/moods/when-not-subjunctive.mdx. Це узгоджує локатори з двома вже виправленими сторінками тригерів. Джерело: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen. Інші твердження на цих сторінках цим записом не сертифікуються.
+
+## 49. Estar + gerundio: aspectual framing and English-transfer risk (2026-10-19)
+
+| Claim | Direct source | Result | Boundary |
+|---|---|---|---|
+| Progressive viewpoint presents an internal phase of a situation already in progress | NGLE § 28.12c–e: https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-i-el-auxiliar-estar | Supported. It is not restricted to the exact moment of speaking; tense and context set the reference point. | Does not mean every ongoing event requires the progressive. |
+| Present indicative can also describe an ongoing situation | NGLE § 23.5f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-presente-canto-i-caracterizaci%C3%B3n-de%C3%ADctica-los-presentes-generalizadores | Supported. *Estar + gerundio* is especially common for durative activity in progress, but the simple present can occur. | Contextual alternation, not complete interchangeability. |
+| Progressive can describe recurring behavior over a current interval | NGLE § 28.12l–m: https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-i-el-auxiliar-estar | Supported by examples such as *Últimamente estás fumando demasiado*; repeated/habitual adverbs do not automatically make the construction wrong. | The exact reading depends on temporal interval, predicate, and discourse. |
+| Some progressive forms are unnecessary or calqued when the intended event is presented as completed | NGLE § 28.12s: https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-i-el-auxiliar-estar | Supported as a usage caution; the canonical page now provides a qualified contrast. | Not a ban on future progressive or all uses with a future reference. |
+
+**Status:** `estar-gerundio.mdx` is `reviewed`, not `verified`. This bounded source pass does not verify every gerund construction, example, translation, regional-frequency claim, or browser behavior.

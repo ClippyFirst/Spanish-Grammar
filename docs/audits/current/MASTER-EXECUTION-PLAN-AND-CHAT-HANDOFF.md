@@ -473,3 +473,17 @@ Live snapshot at 2026-10-19: open, ready, not merged; base `main` at `10d49cba91
 - **2026-10-18:** bounded `si` conditional pass completed. NGLE § 47.8a–k read directly; repaired/sourced the two overview pages, downgraded the previously `verified` overview to `draft`, and updated audit/matrix. Pre-checkpoint content/doc commit: `98213bb6aa00b9c0b4bcf4fc7250a98d047475bb`; this checkpoint commit requires its own CI check.
 
 - **2026-10-19:** bounded imperative/address-form pass completed. Directly read NGLE § 42.3c–u and DPD «vos»/«vosotros». Updated the imperative page, forms-of-address page, object-pronoun placement page and voseo page; repaired malformed emphasis/contrast markup, added source locators, neutralized learner-error headings, and downgraded unsupported `reviewed`/`verified` statuses to `draft`. Audit and coverage matrix section 22 appended. Follow-up commit `125d323eaca0f4ba7185200b65c9efca32c3f37e` repaired two remaining malformed emphasis spans in `imperativo.mdx`. Run 39207552978 was cancelled by the later push; no run was surfaced for the exact pre-checkpoint SHA at snapshot time. Mood selection with temporal `en cuanto` remains open because the inspected NGLE sections confirm meaning/classification but not a complete direct mood distribution.
+
+
+
+### Live refresh — QA failure and markup repair (2026-10-19)
+
+This addendum supersedes the prior note that run 39208866244 was pending. The user supplied the failed QA result; the workflow log was inspected.
+
+- **Failed exact run:** [39208866244, job 117917615173](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39208866244/job/117917615173#step:5:1266). Checkout and `npm ci` succeeded. `typecheck`, MDX preflight (213 files; 0 syntax errors), table audit (204 Markdown tables and 3 CompareTable components; 0 column errors), content validation (208 grammar pages; no blocking errors), link audit (0 problems), content graph (0 broken edges/orphans), and design audits completed. Failure occurred in `npm run audit:final`.
+- **Single blocking finding:** `emphasis_artifacts: 1` in `src/content/es/pronouns/possessive-pronouns.mdx`, regional-variation paragraph. The bold markup around `vuestro/vuestra`, `vosotros`, `su/sus`, and `de ustedes` was changed to italics to avoid the detector's false-positive pattern. Repair commit: `063a11c08530627bf25937dd6a1c883d5e91050f`.
+- **Audit trail updated:** `docs/audits/current/CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` §27 and `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` §27 record the failed gate and narrow repair.
+- **No QA pass is yet confirmed for the repair or the subsequent audit/matrix/checkpoint commits.** The earlier run's passed stages are useful diagnosis, not a pass for current HEAD. Do not label the current branch CI-green until a run for its exact HEAD succeeds.
+- **No PR was merged/closed/rebased/retargeted.** No changes to `main`.
+
+**Next concrete action:** check the newest workflow run for the current branch HEAD after this checkpoint commit. If the run fails, inspect its exact failing step/log and repair only the demonstrated blocker; rerun against the resulting exact SHA. If it passes, resume the bounded claim-level review of body-part possession and possessive forms by opening the relevant NGLE text itself (not just its index), checking examples and Ukrainian translations individually, and recording variety-specific claims only with variety-specific evidence. Preserve `draft` status until that work is complete.

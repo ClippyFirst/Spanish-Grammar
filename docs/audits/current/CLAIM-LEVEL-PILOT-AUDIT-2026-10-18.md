@@ -685,3 +685,11 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - **Weekday article use:** targeted searches of RAE/ASALE online material did not yield a directly relevant specialized passage in this bounded pass. The examples `El lunes...` and `Los lunes...` remain ordinary illustrative examples, but their rule-level analysis is **not source-verified** here. Do not claim that a dedicated RAE rule was found; retain this gap or remove any stronger generalization until a direct source is located.
 - **General `al/del` contraction:** RAE *Ortografía* directly supports the exception when `El` belongs to an official proper name. The direct NGLE § 14.3 passage was not located/read in this pass; the NGLE citation remains a contents-index locator. General contraction is a basic descriptive rule, but this project's requested source-level gate remains open until the precise academic passage is inspected.
 - **Evidence limits:** no corpus/frequency analysis, exhaustive example/translation audit, country/register survey, independent full Ukrainian edit, browser/accessibility/SEO test, or publication-readiness certification. Relevant pages remain `draft`.
+
+
+## 39. QA follow-up — malformed source-list line break (2026-10-19)
+
+- **Failure:** run [39212495117](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39212495117) failed at `astro sync` while parsing `src/content/es/articles/zero-article.mdx:25:322` with `bad indentation of a sequence entry`.
+- **Cause:** while replacing the contents-index locator with two direct NGLE URLs, the line separator was written as the literal characters `\\n` inside the YAML string instead of a real newline. This was a frontmatter formatting error, not a linguistic or source-content failure.
+- **Repair:** replaced the literal separator with a real newline in commit `2d24c3c6db5031c0f3f233e62541fa9d9c3425c0`; the two NGLE references are now separate YAML list entries.
+- **Status:** run 39212495117 validates neither the repaired file nor subsequent checkpoint commits. Full QA must pass on the exact newest HEAD before the batch is called green.

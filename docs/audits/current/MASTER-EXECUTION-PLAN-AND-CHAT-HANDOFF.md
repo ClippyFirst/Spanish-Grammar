@@ -913,3 +913,11 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - **Changes:** clarified the three page roles and added reciprocal in-body links; no URL/slug changes or status upgrades. Claim audit §67, coverage matrix §67 and high-risk audit §9 record the change and its limits.
 - **Current content/audit HEAD:** pending after this batch; retrieve the live PR #27 HEAD and verify full QA on that exact SHA before proceeding.
 - **Next action after QA:** continue the next unresolved high-risk cluster from the current matrix. Prioritize source-backed claim gaps, not further architecture-only churn; do not remove pages or alter PR state without approval.
+
+
+### QA result — zero-article page-role pass (2026-10-19)
+
+- Full QA passed on exact HEAD `b2abc537927b3e49c2c1f79e48c88fdc8ffa5992`: [GitHub Actions run 39248538829](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39248538829). `npm ci` and the full `npm run qa` step succeeded.
+- The pass includes the three article-page role/link edits, claim audit §67, coverage matrix §67, high-risk audit §9, and the handoff checkpoint at that SHA.
+- This QA-result note creates a documentation-only commit; verify CI on the exact new HEAD before reporting the current tip as green.
+- **Next action:** inspect the live markup-normalization backlog and choose one high-risk page with a visible source-level mixed-emphasis candidate. Compare the raw MDX with the normalization plugin and rendered/build expectations before changing anything; do not bulk-rewrite the remaining candidates because the current scanner flags candidates, not proven rendered defects.

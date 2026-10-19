@@ -545,3 +545,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Audit trail:** claim-level audit §32 and topic coverage matrix §32 record the cross-page pass and limitations.
 - **QA after these newest edits:** pending; the success on `1fc2e52506f22ba837f6a1482ed617c1c60398cc` predates the latest content/audit/matrix/checkpoint commits.
 - **Next concrete action:** check full GitHub Actions QA for the exact newest HEAD. If green, continue a bounded claim-level review of the remaining clothing constructions and any remaining examples in `special-cases.mdx`; if not, repair only the demonstrated blocker. Keep `body-parts-possession.mdx`, `possessive-pronouns.mdx`, and `special-cases.mdx` in `draft` until their relevant claim-level work is complete. No merge/close/rebase/retarget.
+
+
+### Live refresh — clothing example analysis (2026-10-19)
+
+- **Exact QA pass before this batch:** run [39210802248](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39210802248) completed successfully on exact SHA `445a362707f370528fd0e5f64187e49a22ee9765`, including the body-part/`Se rompió el brazo` distinction and the special-cases cross-link.
+- **New bounded content pass:** `body-parts-possession.mdx` now identifies the clothing examples as distinct constructions rather than treating all clitics as the same dative: *Ponte el abrigo*, *Quítate los zapatos*, *Me he manchado la camisa*, *Le quitaron la chaqueta*. It links the general pattern to NGLE § 18.7d/g, notes that the source supports the broader pattern but does not individually analyze every one of these examples, and corrects the quick-reference analysis of *Me lavo las manos*.
+- **Audit trail:** claim-level audit §33 and coverage matrix §33 record the source scope and limitations.
+- **QA after these newest edits:** pending; the previous success does not validate the new body page/audit/matrix/checkpoint commits.
+- **Next concrete action:** run/check full GitHub Actions QA on exact newest HEAD. If green, continue the remaining bounded example check in `special-cases.mdx` and compare all body-part claims across the canonical page, comparison page, and special-cases page. If it fails, diagnose only the exact failing step. Keep relevant pages `draft`; no merge/close/rebase/retarget.

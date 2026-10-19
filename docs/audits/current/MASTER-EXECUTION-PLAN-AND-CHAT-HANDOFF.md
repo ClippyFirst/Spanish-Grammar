@@ -564,3 +564,11 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Open evidence gaps:** NGLE §§ 14.3 and 15.11–15.13 are still contents-index locators, not directly reviewed text. Profession predicates after *ser*, weekday article use, language names, and contractions *al/del* need direct source verification. `special-cases.mdx` remains `draft`.
 - Claim-level audit §34 and topic matrix §34 record the bounded results. No browser/accessibility/SEO or corpus/frequency test was performed.
 - **Next action:** locate direct RAE/ASALE text for professions after *ser*, weekdays, language names, and *al/del* (including proper-name exceptions). Then cross-check the canonical definite/indefinite, zero-article, special-cases and comparison pages, and run full QA on the exact newest HEAD. If a direct source cannot be located, retain the explicit evidence gap and narrow the claim. No merge/close/rebase/retarget.
+
+
+### Live refresh — article consistency repair (2026-10-19)
+
+- Replaced the misleading “mistake” component for a valid qualified profession phrase with a neutral contrast on both canonical article pages; updated their edit dates and retained `draft` status.
+- Added the proper-name exception to the contraction summary on the special-cases page and the comparison page.
+- Audit §35 and matrix §35 record the changes. Direct sources for profession predicates, weekday article use, language names, and contractions are still open; do not claim these items verified.
+- QA: all changes after run 39210981413 remain unvalidated. Run full QA on exact latest HEAD. Keep pages `draft`; no merge/close/rebase/retarget.

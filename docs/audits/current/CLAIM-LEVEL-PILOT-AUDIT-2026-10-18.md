@@ -486,3 +486,24 @@ This was a bounded source/editorial pass, not a full conjugation audit. No full 
 ### Evidence boundary
 
 The cited DPD passages were read directly. The changes support only the specific paradigms and geographic/normative distinctions described above. No exhaustive accentuation audit, full country-by-country review of all voseo forms, corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO testing was performed. All three pages remain `draft`.
+
+
+## 24. Voseo page claim-level audit — 2026-10-19
+
+### Claim-by-claim findings against DPD
+
+- **Definition and two dimensions:** DPD «voseo», §§ 2.1.1–2.1.2, distinguishes *voseo pronominal* (using *vos* in place of *tú/ti*) from *voseo verbal* (using voseante verbal endings). The former page example *Vos vivís aquí* combined both dimensions and was not a clean illustration of pronominal voseo alone. It is replaced with *Vos eres inteligente*, a pronominal-only pattern documented by the DPD for some varieties.
+- **Rioplatense present indicative:** the table forms *vos hablás, comés, vivís, sos, tenés, querés, podés* are consistent with the DPD's description of the generalized Rioplatense model. The page explicitly labels this table as Rioplatense rather than a universal voseo paradigm.
+- **Geographic scope:** DPD §§ 2.3–2.4 describes voseo in the majority of Hispanic America but emphasizes sharply different country/area distributions and social values. The overview now names Argentina, Paraguay and Uruguay in its Rioplatense summary, and does not equate voseo presence with a single social meaning.
+- **Imperative:** DPD § 2.1.2.5 supports *cantá, comé, viví* as voseante imperatives; §§ 2.3.1–2.3.2 distinguish the Rioplatense pattern from the more restricted Chilean imperative profile. The page retains this distinction.
+- **Accentuation:** DPD § 2.1.2.5 says voseante imperatives with enclitic pronouns follow general accentuation rules; the adjacent canonical imperative page now illustrates *decí → decime → decímelo* with DPD «tilde» §§ 1.2.1–1.2.3.
+- **Valid mixed systems:** *vos eres* can occur in pronominal voseo with a tuteante verb, so it must not be displayed as a general error. The former two `Mistake` components were replaced by a contrast table that explicitly labels the variety and avoids implying universal incorrectness.
+
+### Changes made
+
+- `src/content/es/regional/voseo.mdx`: corrected the pronominal-voseo example; expanded the geographic summary to include Paraguay; replaced two potentially misleading `Mistake` components with a variety-labelled contrast table; added direct DPD links; retained `review_status: draft`.
+- `src/content/es/moods/imperativo.mdx`, `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx`: their immediately preceding source-supported updates remain in place.
+
+### Evidence boundary
+
+DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4 were read directly. This pass is a claim-level spot-check of the overview and Rioplatense table, not a complete audit of every voseo tense, every country's paradigm, or frequency/register claims. No corpus query, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. The page remains `draft`.

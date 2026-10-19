@@ -884,3 +884,14 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - Full QA passed on exact HEAD `90677c86ff991afb307eb4ccb24020eedc19f2ad`: [GitHub Actions run 39241313196](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39241313196). `npm ci` and `npm run qa` both succeeded.
 - This pass includes both personal-a page edits, claim audit §65, coverage matrix §65, high-risk cross-page audit §7 and the handoff update at that SHA.
 - The result is recorded here; this documentation-only commit will create a new HEAD, so check the exact resulting SHA's CI before continuing to another content batch.
+
+
+### Live refresh — article source-locator precision (2026-10-19)
+
+- Starting branch/PR: docs/grammar-reference-architecture-2026-10-18, PR #27, starting HEAD dc885a38ba998caddc42ab4b0bec3ee463350d28; the exact starting HEAD had successful full QA in run 39241443265: https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39241443265. PR #27 remains open and unmerged; no merge, close, rebase, retarget or base change.
+- Concrete gap: the two article pages already had different roles and reciprocal links, but their source locators were broad: one cited NGLE chapters 14–15 through a URL that resolved only to § 15.2, and the contrast page cited chapter-level sections without direct URLs.
+- Direct evidence reviewed: RAE/ASALE NGLE § 15.4 (first mention/anaphora), § 15.8 (generic article use), § 15.11 (bare nouns), plus DPD *el* § 2 for feminine nouns beginning with stressed /a/. The latter explicitly confirms *el agua fría*, feminine agreement and the adjacency restriction.
+- Changes: both definite-indefinite.mdx and definite-vs-indefinite.mdx now cite direct, claim-relevant source pages. Existing page roles, links, URLs and review statuses are unchanged. Claim audit §66, topic matrix §66 and high-risk cross-page audit §8 record the finding and limits.
+- Limits: no wholesale rewrite, no full audit of every article construction/translation, no corpus-frequency/regional survey, and no release certification. Do not mass-upgrade review statuses.
+- QA: pending on the final resulting HEAD; run/check the exact resulting SHA after all documentation commits before reporting green status.
+- Next action: after exact-HEAD QA, return to the live high-risk backlog and choose the next single unresolved claim with a direct-source gap. Avoid repeating completed personal-a, gustar, clitic-placement or event-location fixes without new evidence.

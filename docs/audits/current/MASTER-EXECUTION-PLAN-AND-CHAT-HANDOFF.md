@@ -604,3 +604,11 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Open source gates:** a bounded RAE/ASALE search did not locate a direct specialized source for weekday article use; examples such as `El lunes...` and `Los lunes...` remain illustrative, not rule-level verified. The general NGLE § 14.3 `al/del` passage also remains uninspected; only the proper-name exception has direct support from RAE *Ortografía*. Keep these gaps explicit, and do not overstate source coverage.
 - **Audit trail:** claim-level audit §38 and topic coverage matrix §38 record the exact scope, dispositions, and evidence limits.
 - **Next concrete action:** run full GitHub Actions QA on the exact newest HEAD after these edits. If green, continue a bounded source pass for weekday article use and NGLE § 14.3; if no direct source is located, retain the gap and narrow the prose rather than inventing a citation. Then perform a targeted final cross-page pass for contradictory claims and update this handoff again. Keep pages `draft`; no merge/close/rebase/retarget; no changes to `main`.
+
+
+### Live refresh — source-registry YAML repair (2026-10-19)
+
+- **QA failure:** run [39212495117](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39212495117) failed during `astro sync` at `src/content/es/articles/zero-article.mdx:25:322`. The direct-source update had inserted literal `\\n` characters into YAML rather than a real line break between list items.
+- **Narrow repair:** replaced the literal sequence with a real newline in commit `2d24c3c6db5031c0f3f233e62541fa9d9c3425c0`. No grammar claim or QA rule was changed.
+- **Audit trail:** claim-level audit §39 and topic coverage matrix §39 record the exact failure and repair.
+- **Next concrete action:** check the full QA workflow on the newest exact HEAD after this checkpoint commit. If it fails, inspect the exact step and repair only the demonstrated blocker. If it passes, continue the remaining direct-source search for weekdays and NGLE § 14.3; if no precise source is found, keep the explicit evidence gaps and avoid stronger claims. Keep relevant pages `draft`; no merge/close/rebase/retarget and no changes to `main`.

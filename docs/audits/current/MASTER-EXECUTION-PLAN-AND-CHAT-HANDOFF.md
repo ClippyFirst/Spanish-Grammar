@@ -319,9 +319,9 @@ No merges, closes, rebases, retargets, or changes to `main` were made. PR #28 re
 
 ### Next concrete action
 
-Завершено обмежені партії з відносних займенників, subjuntivo/indicativo у відносних підрядних, негативних неозначених антецедентів, *por/para*, особового *a*, керування дієслів прийменниками та *queísmo/dequeísmo*. У кожній партії внесені зміни залишалися в PR #27; сторінки не підвищувалися до `verified` лише через зелений CI. Для останніх партій точні content SHA та run IDs наведено в live refresh entries нижче.
+Завершено обмежені партії з відносних займенників, subjuntivo/indicativo у відносних підрядних, негативних неозначених антецедентів, *por/para*, особового *a*, керування дієслів прийменниками, *queísmo/dequeísmo* та точкової перевірки прикладів і перекладів у відповідному кластері. Усі зміни залишилися в PR #27; сторінки лишаються `draft`, а QA не подається як лінгвістична сертифікація.
 
-Наступна дія — обмежений аудит **прикладів і перекладів** у трьох щойно узгоджених сторінках: `src/content/es/conjunctions/que-de-que.mdx`, `src/content/es/prepositions/verb-preposition-pairs.mdx` та `src/content/es/prepositions/verbs-with-prepositions.mdx`. Не розширюй аудит на весь subjuntivo чи повний словник дієслів. Інвентаризуй лише приклади, які вже є на цих сторінках; перевір іспанську форму, значення, український переклад, граматичну функцію й те, чи пояснення не суперечить прямим джерелам DPD/NGLE. Записуй лише доведені виправлення й залишкові питання в claim audit та coverage matrix. Запусти QA на точному фінальному HEAD. Усі три сторінки лишаються `draft`, доки приклади, переклади та твердження в заявленому обсязі не перевірені.
+Наступна дія — повернутися до worklist у coverage matrix та вибрати **один наступний найпріоритетніший кластер із конкретною прогалиною доказів**. Перед змінами: прочитати актуальні канонічні сторінки й пов’язані аудити; зафіксувати атомарні твердження, прямі джерела, точні приклади/переклади та межі. Не починати нову широку тему лише заради кількості; якщо доказів недостатньо, занотувати блокер і перейти до іншої конкретної прогалини. Перевірити live PR/HEAD/CI, внести лише доведені зміни, оновити audit/matrix/цей handoff і виконати QA на точному фінальному SHA.
 
 ### Live refresh — 2026-10-19 09:16 UTC (після партії про артиклі й присвійні форми)
 
@@ -759,3 +759,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Changes:** corrected the malformed opening emphasis; changed `review_status` from `verified` to `draft`; added direct source locators for both DPD articles and relevant verb entries; separated dequeísmo before direct-object clauses, subject clauses, and wrong-preposition substitution; documented accepted variation in `dudar`, semantic difference in `advertir`, and regional framing for `informar`; clarified queísmo involving *en* as well as *de*; updated cross-links and audit/matrix §58.
 - **Limits:** no exhaustive predicate list, no complete audit of every example/translation on the three pages, no corpus frequency study, no full regional survey, and no browser/accessibility/SEO or publication certification.
 - **Next action:** bounded example-and-translation audit of the three canonical pages listed in §8.2. Do not expand into the whole subjunctive system.
+
+
+### Live refresh — targeted example/translation audit (2026-10-19)
+
+- **Starting HEAD:** `73334d848975c9e6d3c35257a305634d6ee30b37`; branch `docs/grammar-reference-architecture-2026-10-18`, PR #27.
+- **Direct evidence reused:** NGLE §§ 36.9i, 36.9j, 36.10ñ; DPD *pensar*, *soñar*, and *queísmo*.
+- **Changes:** removed the potentially misleading categorical example `Pienso de ti` and replaced it with a context contrast; clarified the sourced `soñar con/en + infinitivo` note; qualified the `acordarse de que` warning according to DPD's careful-register recommendation; replaced vague wording about `interesarse en/por` with the sourced alternation; appended claim audit §59 and coverage matrix §59.
+- **Limits:** targeted example/translation review only; no exhaustive review of all examples, corpus attestation, frequency, full regional distribution, browser/accessibility/SEO or publication certification.
+- **Next action:** select one next high-priority source gap from the live coverage matrix; do not broaden scope without evidence.

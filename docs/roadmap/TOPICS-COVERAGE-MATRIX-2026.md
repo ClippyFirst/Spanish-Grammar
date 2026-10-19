@@ -644,3 +644,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Learner-error examples | Replaced `Mistake` components for *vos eres* and *vos hablas* with a contrast table labelled by variety, because these forms are not universally wrong. | Corrected. |
 
 **Evidence boundary:** DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4 were read directly. No corpus/frequency study, exhaustive regional paradigm review, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. `review_status` remains `draft`.
+
+
+## 25. Temporal *en cuanto* — prospective subjunctive evidence — 2026-10-19
+
+| Claim | Evidence / action | Status |
+|---|---|---|
+| Temporal meaning of *en cuanto* | NGLE § 22.6p defines the temporal meaning as ‘inmediatamente que’; § 31.14i discusses its relative-adverbial immediacy use. | Meaning/category source-checked. |
+| Prospective/future *en cuanto + subjunctive* | RAE-hosted BRAE article «Las conjunciones temporales del español», p. 301, gives *en cuanto salgan* alongside *cuando venga* as prospective temporal subjunctive examples. Added the source and example to the canonical trigger page, the “when not subjunctive” page, and the comparison page. | Supported for prospective contexts. |
+| Complete mood distribution | The inspected NGLE passages do not give the full distribution; the BRAE excerpt supports the prospective pattern but does not establish categorical exclusion of indicative in all habitual, factual, past or generic contexts. | Open; no universal rule claimed. |
+
+**Evidence boundary:** relevant BRAE excerpt inspected from the RAE-hosted PDF result; no full article audit, corpus query, or frequency study performed. All three pages remain `draft`.

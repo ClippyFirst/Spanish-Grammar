@@ -659,3 +659,11 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - Added the proper-name exception to the *al/del* summary in the article comparison: do not contract when **El** belongs to a proper name (*a El Salvador*, *de El Cairo*). The special-cases page now includes the same exception and explicitly flags the lack of direct source verification for NGLE § 14.3.
 - Direct source basis for stressed initial /a/ and personal/geographical names remains DPD «el» §§ 2.1–2.2, 4–6; NGLE § 18.7a–i supports the body-part possession section. The contraction exception is a bounded editorial correction but remains open for direct verification against the NGLE chapter text.
 - **Limits:** no direct NGLE passage on profession predicates after *ser*, weekday article use, or language names was located/read in this batch. No corpus/frequency study, independent full Ukrainian edit, browser/accessibility/SEO test. Relevant pages remain `draft`.
+
+
+## 36. Direct NGLE evidence for bare predicatives and language names (2026-10-19)
+
+- Read NGLE § 15.11 directly: https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-i-constituci%C3%B3n-e-interpretaci%C3%B3n-sem%C3%A1ntica-de-los-grupos-nominales-sin-determinante. § 15.11g explicitly gives bare nominal predicates (*Son médicos*); § 15.11m gives a language name without determiner (*Habla ruso*) in a habitual/generic context. This supports the general pattern behind *Soy médico* and *Hablo español*, not every possible context or all language names.
+- Read NGLE § 15.13 directly: https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-iii-otros-factores-aspectos-fraseol%C3%B3gicos-y-discursivos. It discusses construction-specific/phraseological bare nouns; it does not establish a general weekday rule.
+- RAE «Ortografía» directly states that a/de do not contract when the article is part of an official place name, with examples such as *a El Cairo* and *de El Dorado*: https://www.rae.es/diccionario-estudiante/docs/ortografia.pdf.
+- **Disposition:** `special-cases.mdx` source register and evidence note now distinguish direct text from contents-index locators. Profession and language-name patterns have general direct support; weekday article use and the full *al/del* rule remain open. Page remains `draft`.

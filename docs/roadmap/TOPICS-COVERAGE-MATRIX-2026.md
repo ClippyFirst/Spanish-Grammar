@@ -619,3 +619,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Temporal *en cuanto* mood selection | `src/content/es/moods/subjunctive-triggers.mdx`; `src/content/es/moods/when-not-subjunctive.mdx`; `src/content/comparisons/indicative-subjunctive.mdx` | Still open: NGLE §§ 22.6p and 31.14i establish meaning/classification, not a full mood-distribution rule. Preserve the caveat; do not generalize from one prospective example. |
 
 **Evidence boundary:** direct NGLE § 42.3 and DPD «vos»/«vosotros» passages were read. No exhaustive paradigm, regional-frequency, corpus, or browser/accessibility/SEO audit was performed. All four edited pages remain `draft`.
+
+
+## 23. Voseo imperative accentuation and address-form exceptions — 2026-10-19
+
+| Requirement / claim | Canonical pages | Evidence and current status |
+|---|---|---|
+| Voseo affirmative imperatives | `src/content/es/moods/imperativo.mdx`; `src/content/es/regional/voseo.mdx` | DPD «voseo» § 2.1.2.5 supports forms such as *tomá, respondé, escribí* and distinguishes them from irregular *tú* imperatives. DPD §§ 2.3–2.4 supports the regional and social boundaries. This is not a complete country-by-country paradigm audit. |
+| Enclitic spelling and accentuation | `src/content/es/moods/imperativo.mdx` | DPD «voseo» § 2.1.2.5 says enclitic forms follow general accentuation rules; DPD «tilde» §§ 1.2.1–1.2.3 supplies the rules. The page now contrasts *decí → decime → decímelo*. Full spelling audit remains open. |
+| *Vosotros* vs *ustedes* in plural address | `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx` | DPD «vosotros» supports informal *vosotros* in most of Spain, with *ustedes* also used informally in the Canary Islands and western Andalusia; *vosotros* is not used in America as a normal address form. The quick map now names the southern Spanish exception. |
+| Rioplatense vs Chilean voseo | `src/content/es/regional/voseo.mdx`; `src/content/es/moods/imperativo.mdx` | DPD «voseo» §§ 2.1.2.5, 2.3–2.4 supports the accepted Rioplatense imperative forms and the more restricted Chilean profile. All country-specific paradigms and frequency claims remain unverified. |
+
+**Evidence boundary:** direct DPD «voseo», «tilde», and «vosotros» entries were read. No corpus/frequency study, exhaustive regional paradigm review, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. All three pages remain `draft`.

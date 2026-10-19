@@ -688,3 +688,11 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Зміни:** прямі NGLE URL додано до джерел; пояснення коротких/повних форм розведено на три конструкції: `mi casa`, `un amigo mío` / `la casa es mía`, `el mío / la mía`.
 - **Не перевірено:** повний аудит кожного елемента парадигми й перекладу, корпусна частотність, країновий розподіл `vuestro/vuestra` та `su/sus`, повний контекстний аналіз неоднозначності `su`, браузер/accessibility/SEO.
 - **Статус:** `possessive-pronouns.mdx` лишається `draft`; структурні claims мають прямі джерела, але повна перевірка статті не завершена.
+
+
+## 30. QA follow-up — malformed source frontmatter in body-parts page (2026-10-19)
+
+- **Finding:** run 39210353945 failed at `astro sync` because the new NGLE § 18.7 source locator in `src/content/es/pronouns/body-parts-possession.mdx` lacked a closing double quote; YAML reported `bad indentation of a mapping entry` at line 33.
+- **Repair:** added the missing quote in commit `82cd7e57f9135ff44f1d1e628c925591e16b40f7`.
+- **Impact:** no grammar/content claim changed; this is frontmatter syntax only.
+- **Status:** exact latest HEAD requires a fresh full QA run; prior successful run 39210103241 predates this content/source batch.

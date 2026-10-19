@@ -298,7 +298,7 @@ Live snapshot at 2026-10-19: open, ready, not merged; base `main` at `10d49cba91
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок оновлено 2026-10-19 після завершення bounded pass для neutral `lo`.** Нижче зафіксовано точні SHA, PR-залежності й CI; повторно перевіряти їх перед наступною інтеграційною дією.
+**Знімок оновлено 2026-10-19 після bounded pass для керування дієслів і queísmo/dequeísmo.** Старіші записи нижче є історичними; для інтеграції використовувати найновіший live refresh і повторно перевіряти SHA, PR-залежності та CI.
 
 ### Завершена партія: neutral *lo*
 
@@ -319,8 +319,9 @@ No merges, closes, rebases, retargets, or changes to `main` were made. PR #28 re
 
 ### Next concrete action
 
-The bounded relative-pronouns pass is complete and its final content/audit/matrix commit passed exact-head QA (see the live refresh below). The bounded NGLE §§ 25.10–25.11 relative-clause mood pass is complete and its exact content SHA passed QA (see the live refresh below). The negative-indefinite relative-clause pass, por/para pass, and personal-a pass are complete; their exact content SHAs passed full QA (see live refresh entries below). The next priority in the initial order (§4, Stage 3) is a bounded **verb–preposition government** audit. Read `src/content/es/prepositions/verb-preposition-pairs.mdx` and `src/content/es/prepositions/verbs-with-prepositions.mdx` first; inventory their actual claims/examples and source locators, then consult direct RAE/ASALE sources for those specific constructions. Distinguish lexical government from semantic choice and from general prepositional meanings; do not treat every listed verb as having one invariant translation or expand this into an unverified exhaustive dictionary. Reconcile the two pages, record evidence and limits in the audit/matrix, and run full QA on the exact resulting HEAD. Keep both pages `draft` unless all in-scope claims/examples/translations are checked.
+Завершено обмежені партії з відносних займенників, subjuntivo/indicativo у відносних підрядних, негативних неозначених антецедентів, *por/para*, особового *a*, керування дієслів прийменниками та *queísmo/dequeísmo*. У кожній партії внесені зміни залишалися в PR #27; сторінки не підвищувалися до `verified` лише через зелений CI. Для останніх партій точні content SHA та run IDs наведено в live refresh entries нижче.
 
+Наступна дія — обмежений аудит **прикладів і перекладів** у трьох щойно узгоджених сторінках: `src/content/es/conjunctions/que-de-que.mdx`, `src/content/es/prepositions/verb-preposition-pairs.mdx` та `src/content/es/prepositions/verbs-with-prepositions.mdx`. Не розширюй аудит на весь subjuntivo чи повний словник дієслів. Інвентаризуй лише приклади, які вже є на цих сторінках; перевір іспанську форму, значення, український переклад, граматичну функцію й те, чи пояснення не суперечить прямим джерелам DPD/NGLE. Записуй лише доведені виправлення й залишкові питання в claim audit та coverage matrix. Запусти QA на точному фінальному HEAD. Усі три сторінки лишаються `draft`, доки приклади, переклади та твердження в заявленому обсязі не перевірені.
 
 ### Live refresh — 2026-10-19 09:16 UTC (після партії про артиклі й присвійні форми)
 
@@ -749,3 +750,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Audit/matrix:** appended §57 to `CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `TOPICS-COVERAGE-MATRIX-2026.md`.
 - **Limits:** no exhaustive verb inventory, corpus frequency study, complete regional distribution, full example/translation audit, or browser/accessibility/SEO/release certification. Both pages remain `draft`.
 - **Next action:** bounded `queísmo/dequeísmo` consistency audit, starting from the exact canonical page and the two government pages. Do not generalize one verb’s pattern to every `que` clause.
+
+
+### Live refresh — queísmo/dequeísmo source pass (2026-10-19)
+
+- **Starting HEAD:** `9c288a2a6d6d021c50fde19a5c72f705d7b53b57`; branch `docs/grammar-reference-architecture-2026-10-18`, PR #27.
+- **Direct sources reviewed:** DPD *dequeísmo* §§ 1–2, 5; DPD *queísmo* §§ 1a–b; DPD entries *dudar*, *advertir*, *informar*; related NGLE §§ 36.8–36.10 already recorded in audit §57.
+- **Changes:** corrected the malformed opening emphasis; changed `review_status` from `verified` to `draft`; added direct source locators for both DPD articles and relevant verb entries; separated dequeísmo before direct-object clauses, subject clauses, and wrong-preposition substitution; documented accepted variation in `dudar`, semantic difference in `advertir`, and regional framing for `informar`; clarified queísmo involving *en* as well as *de*; updated cross-links and audit/matrix §58.
+- **Limits:** no exhaustive predicate list, no complete audit of every example/translation on the three pages, no corpus frequency study, no full regional survey, and no browser/accessibility/SEO or publication certification.
+- **Next action:** bounded example-and-translation audit of the three canonical pages listed in §8.2. Do not expand into the whole subjunctive system.

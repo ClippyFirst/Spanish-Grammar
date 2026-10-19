@@ -298,7 +298,7 @@ Live snapshot at 2026-10-19: open, ready, not merged; base `main` at `10d49cba91
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок оновлено 2026-10-19 після bounded pass для керування дієслів, queísmo/dequeísmo та швидкої карти subjuntivo.** Старіші записи нижче є історичними; для інтеграції використовувати найновіший live refresh і повторно перевіряти SHA, PR-залежності та CI.
+**Знімок оновлено 2026-10-19 після bounded pass для керування дієслів, queísmo/dequeísmo, швидкої карти subjuntivo та меж заперечених предикатів переконання.** Старіші записи нижче є історичними; для інтеграції використовувати найновіший live refresh і повторно перевіряти SHA, PR-залежності та CI.
 
 ### Завершена партія: neutral *lo*
 
@@ -312,7 +312,7 @@ Live snapshot at 2026-10-19: open, ready, not merged; base `main` at `10d49cba91
 | PR | State / dependency | Base SHA → head SHA | Files / commits | Review | Latest known CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, unmerged; targets `main` | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; 0 inline threads | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, unmerged; targets `main`; independent of #26; mergeable at latest query | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`c9061ad412997385e5a0299a5017bb876d8aee64`) | 76 / 471 | 0 submitted reviews; 0 inline threads in last reviewed snapshot | Exact full QA passed on `c9061ad412997385e5a0299a5017bb876d8aee64`, [run 39237498507](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39237498507)
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, unmerged; targets `main`; independent of #26; mergeable at latest query | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`5e058888e94c558e9f0b9623a964d11eecc0e612`) | 76 / 473 | 0 submitted reviews; 0 inline threads in last reviewed snapshot | Exact full QA passed on `5e058888e94c558e9f0b9623a964d11eecc0e612`, [run 39237714843](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39237714843)
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, **draft**, unmerged; stacked on #26 | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; 0 inline threads | Last known failure, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse error at `src/content/comparisons/ser-estar.mdx:4:72`; recheck before integration |
 
 No merges, closes, rebases, retargets, or changes to `main` were made. PR #28 remains draft and dependent on #26; do not merge automatically. At the most recent live query, #26, #27 and #28 were reported mergeable. A docs-only checkpoint update follows the recorded pre-refresh SHA, so recheck the branch head before any integration decision. Mergeability is not approval or release readiness.
@@ -807,3 +807,13 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - **Change:** preserved `No creo que venga` as the typical neutral subjunctive model, but added the source-attested indicative example `No creen que es necesario aumentar la cantidad de funcionarios` as a marked discourse-dependent alternative in `when-not-subjunctive.mdx` and `comparisons/indicative-subjunctive.mdx`. Recorded the boundary in claim audit §61 and matrix §61.
 - **Limits:** no full semantic, regional-frequency, or corpus survey; the indicative example is not presented as a default learner model. Both pages remain `draft`.
 - **Next action:** select one next claim cluster with a specific unresolved evidence gap from the coverage matrix; do not expand scope without evidence.
+
+
+### Live refresh — negated belief predicate pass (2026-10-19)
+
+- **Content HEAD:** `5e058888e94c558e9f0b9623a964d11eecc0e612`, branch `docs/grammar-reference-architecture-2026-10-18`, PR #27.
+- **Exact full QA passed:** [run 39237714843](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39237714843), on exact content SHA `5e058888e94c558e9f0b9623a964d11eecc0e612`; `npm ci` and full `npm run qa` succeeded.
+- **Direct source:** NGLE § 25.7i, read directly. It documents indicative in certain contexts with negated `creer/pensar`, e.g. `No creen que es necesario aumentar la cantidad de funcionarios`, and distinguishes this discourse-dependent pattern from the neutral subjunctive baseline.
+- **Changes:** added a qualified note to `when-not-subjunctive.mdx` and `comparisons/indicative-subjunctive.mdx`; appended claim audit §61 and coverage matrix §61. Both pages remain `draft`.
+- **Limits:** no full semantic, regional-frequency or corpus survey; the indicative variant is not presented as a default learner model. No browser/accessibility/SEO or publication certification.
+- **Next action:** choose one next high-priority claim cluster with a concrete unresolved evidence gap from the live coverage matrix.

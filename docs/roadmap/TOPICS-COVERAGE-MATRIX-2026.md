@@ -859,3 +859,8 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Номер розділу у реєстрі джерел для relative clauses | NGLE § 25.10: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen | У двох сторінках виправлено метадані § 25.12 → § 25.10. | Це виправлення локатора джерела, а не повна верифікація всіх прикладів про відносні підрядні. |
 
 **Статус:** обидві сторінки залишаються draft; цей pass не підтверджує готовність до публікації.
+
+
+## 48. Cross-page source locator: relative clauses — 2026-10-19
+
+Під час звіряння порівняльної сторінки та сторінки про випадки без subjuntivo виявлено два додаткові посилання, де URL відповідав NGLE § 25.10, але текст указував § 25.12. Номери виправлено в comparisons/indicative-subjunctive.mdx і es/moods/when-not-subjunctive.mdx. Це узгоджує локатори з двома вже виправленими сторінками тригерів. Джерело: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen. Інші твердження на цих сторінках цим записом не сертифікуються.

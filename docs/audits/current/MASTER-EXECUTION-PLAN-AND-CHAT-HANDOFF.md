@@ -700,3 +700,11 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - Direct sources read in this pass: NGLE § 24.5 (especially 24.5c, j–k), § 25.14e, § 25.14h, and § 31.14i. The latter confirms that temporal *en cuanto* denotes immediacy; it does not by itself establish every mood/tense pattern, so the existing claim remains narrowly phrased.
 - Both trigger pages remain draft. This pass is not a full trigger-list, tense, translation, browser, accessibility, SEO, or publication audit.
 - **Next bounded action:** inspect the comparison page for indicative/subjunctive and temporal clauses against the updated canonical pages, correcting only direct cross-page contradictions. Keep PR #27 open/unmerged and do not alter main.
+
+
+### Live refresh — cross-page mood comparison and source-locator consistency (2026-10-19)
+
+- **Exact QA pass for the prior temporal-trigger checkpoint:** [run 39214998284](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39214998284) succeeded on SHA 1734dbe936194eba975003b9149a8b06c6ed9669.
+- **Cross-page check:** the temporal explanations in comparisons/indicative-subjunctive.mdx, when-not-subjunctive.mdx, and subordinate-clauses.mdx align with the reviewed NGLE distinctions for prospective versus habitual temporal clauses. No new grammar-claim contradiction was found in this bounded comparison.
+- **Small source-locator repair:** the relative-clause URL in comparisons/indicative-subjunctive.mdx and when-not-subjunctive.mdx points to NGLE § 25.10, not § 25.12; both labels corrected. Claim audit §48 and matrix §48 record the change.
+- **Next:** run full QA on the resulting HEAD; then choose the next highest-priority claim-level issue from the plan. Keep both trigger pages draft, PR #27 open/unmerged, and main unchanged.

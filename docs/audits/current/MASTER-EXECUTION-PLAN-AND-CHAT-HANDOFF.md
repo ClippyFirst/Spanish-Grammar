@@ -741,3 +741,10 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Files changed:** `src/content/es/articles/neutral-lo.mdx`; `src/content/es/pronouns/relative-pronouns.mdx`; claim audit §51; topic coverage matrix §51. Direct NGLE URLs replace the former contents-index-only locators for the reviewed claims.
 - **Status/limits:** both pages remain `draft`. This is a bounded source pass, not a complete review of all examples/translations, all `lo` constructions, regional frequencies, browser/accessibility/SEO, or publication readiness.
 - **Next concrete action:** run full `npm run qa` via GitHub Actions on the exact newest branch HEAD after these edits. If green, record that precise SHA and run URL here; if red, repair only the demonstrated blocker and rerun on the new exact SHA. Then choose the next claim-level priority from the plan. Do not merge, close, rebase, or retarget PRs; do not modify `main`.
+
+### Live refresh — neutral *lo* editorial regression fixes (2026-10-19)
+
+- Clarified the context-dependent reading of `lo difícil del problema` (partitive vs high-degree interpretation) and removed a duplicated `lo de Juan` example.
+- On `relative-pronouns.mdx`, repaired the missing paragraph break after the new cross-link, replaced the unsupported “typical mistakes of Ukrainian speakers” heading, and removed an invalid identical bad/good example pair. The replacement explains how `en la que vivo` and `que es grande` can perform distinct relative-clause functions.
+- Updated claim audit §51 and topic coverage matrix §51 to record these editorial repairs and limits. No content status was promoted.
+- **Next concrete action:** inspect the current live PR #27 head SHA and run full GitHub Actions QA on that exact commit. A green result must be recorded against the same SHA; if the check is not present, do not infer success from an earlier commit. If red, fix only the demonstrated blocker and rerun.

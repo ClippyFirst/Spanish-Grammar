@@ -395,6 +395,33 @@ Live snapshot at 2026-10-19: open, ready, not merged; base `main` at `10d49cba91
 - **2026-10-19:** bounded claim-level audit of the voseo overview completed against DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4. Corrected the pronominal-voseo example, distinguished valid pronominal-only voseo from Rioplatense verbal voseo, added Paraguay to the Rioplatense summary, and replaced misleading `Mistake` components with variety-labelled contrasts. Audit/matrix section 24 appended. Previous exact SHA `1b3aad523e887712c91bee02a1bbbd043407070e` passed run 39207926192; pre-checkpoint SHA `b25a7ae33feea900001528045edc1f8e8981e487` requires a fresh exact-HEAD check.
 
 - **2026-10-19:** bounded source pass on temporal `en cuanto`. NGLE §§ 22.6p and 31.14i establish meaning/classification; a directly surfaced excerpt from the RAE-hosted BRAE article «Las conjunciones temporales del español», p. 301, gives prospective `en cuanto salgan` alongside `cuando venga` as subjunctive examples. Updated the two canonical mood pages and the comparison page, and appended audit/matrix section 25. The evidence supports the prospective pattern only; full distribution remains open. Previous exact SHA `ab98cbd4616c535252cfc6ec8d466b0c170d0aa5` passed run 39208114447; pre-checkpoint SHA `23d7c8aebcced401f263f6222203ceba8444c508` requires a fresh exact-HEAD check.
+
+### Live refresh — 2026-10-19 09:16 UTC (після партії про артиклі й присвійні форми)
+
+Цей додаток замінює старі live-цифри вище там, де вони суперечать актуальному GitHub API. Стани PR перевірено повторно; зміни залишаються лише у PR #27.
+
+| PR | State | Base → head | Changed files / commits | Review | CI evidence |
+|---|---|---|---:|---|---|
+| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | PR #27 review snapshot does not imply #26 review; no merge performed | Earlier QA pass run 39129981192 for its recorded SHA; recheck before any integration |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`06bc25f37e7d8e14bb119fbddc0510c25f8a8d4b`) | 63 / 340 | 0 submitted reviews and 0 inline comments in the latest direct API queries; no merge/retarget/rebase/close | Run 39208303177 passed on prior exact SHA `9cffdec7bda4b77465930f5dd645a75bc2e1d89b`. Run 39208813121 was in progress on content commit `5fe60c7e047f44c27b8b0ad5c3b2dd42fb126751`; it is not evidence for latest HEAD `06bc25f37e7d8e14bb119fbddc0510c25f8a8d4b`. |
+| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | No integration or status change performed | Earlier failure run 39155530069 remains a known historical failure; latest exact-head CI must be checked before considering integration |
+
+**Completed in this batch**
+- Confirmed the prior checkpoint's exact SHA `9cffdec7bda4b77465930f5dd645a75bc2e1d89b` passed GitHub Actions QA run 39208303177.
+- Updated `src/content/comparisons/articles.mdx` with links to the canonical body-parts and possessives pages.
+- Updated `src/content/es/pronouns/body-parts-possession.mdx` to state explicitly that the cited locators do not establish claim-by-claim verification of all examples, translations, clothing constructions, or regional statements.
+- Updated `src/content/es/pronouns/possessive-pronouns.mdx`: added NGLE §§ 18.1–18.7 source locator, set `review_status: draft`, corrected malformed emphasis markup, and bounded the regional note about `vuestro` / `ustedes`.
+- Appended bounded findings to `docs/audits/current/CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` §26 and disposition to `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` §26.
+- No new topic or skill added. No changes to `main`; no PR was merged, closed, rebased or retargeted.
+
+**Evidence and limits**
+- RAE/ASALE, *Nueva gramática de la lengua española*: the official contents index identifies possessives §§ 18.1–18.7, inalienable possession §§ 18.7a–i, and possession expressed by indirect complement §§ 35.7i, ñ, p: https://www.rae.es/sites/default/files/Indice_contenidos_gramatica.pdf
+- RAE/ASALE § 38.11w discusses the definite article in inalienable-possession relations in literary absolute constructions: https://www.rae.es/gram%C3%A1tica/sintaxis/las-construcciones-absolutas-i-sus-elementos-constitutivos. Its scope is narrower than a universal rule for all spoken body-part constructions.
+- This was a bounded source-scope and cross-page consistency pass, not a full audit of every example, translation, clothing construction, dative classification, or country-level variety. Both content pages remain `draft` where relevant; no `verified`, corpus-attested, browser-tested or publication-ready claim is made.
+- Local working tree and local `npm run qa` were not available/checked in this GitHub-only pass.
+
+**Next concrete action:** check GitHub Actions for the exact latest branch HEAD after this checkpoint commit. If it passes, continue the claim-level review of body-part possession and possessive forms by opening the exact relevant NGLE text (not only the contents index), checking the examples and Ukrainian translations one by one, and recording any regional claim only when a source supports that specific variety. Keep the batch bounded and retain `draft` status until that review is complete.
+
 ## 9. Передача в новий чат
 
 Коли чат наближається до ліміту:

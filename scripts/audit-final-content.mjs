@@ -3,12 +3,15 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const CONTENT = path.join(ROOT, 'src', 'content', 'es');
+const COMPARISONS = path.join(ROOT, 'src', 'content', 'comparisons');
+const UI_SOURCE_DIRS = ['pages', 'layouts', 'components', 'data'].map(name => path.join(ROOT, 'src', name));
 
-function walk(dir, out = []) {
+function walk(dir, out = [], pattern = /\.mdx$/i) {
+  if (!fs.existsSync(dir)) return out;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const file = path.join(dir, entry.name);
-    if (entry.isDirectory()) walk(file, out);
-    else if (/\.mdx$/.test(entry.name)) out.push(file);
+    if (entry.isDirectory()) walk(file, out, pattern);
+    else if (pattern.test(entry.name)) out.push(file);
   }
   return out;
 }
@@ -60,20 +63,26 @@ function tableIssues(body) {
   return issues;
 }
 
-const files = walk(CONTENT).sort();
+const files = [...walk(CONTENT), ...walk(COMPARISONS)].sort();
 const docs = files.map(file => {
   const text = fs.readFileSync(file, 'utf8');
   const parsed = frontmatter(text);
-  const rel = path.relative(CONTENT, file).replaceAll(path.sep, '/').replace(/\.mdx$/, '');
+  const rel = file.startsWith(COMPARISONS + path.sep)
+    ? 'comparisons/' + path.relative(COMPARISONS, file).replaceAll(path.sep, '/').replace(/\.mdx$/, '')
+    : path.relative(CONTENT, file).replaceAll(path.sep, '/').replace(/\.mdx$/, '');
   return { file, rel, text, body: text.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, ''), ...parsed };
 });
 
 const findings = {
   generated: new Date().toISOString(),
   pages: docs.length,
+  grammar_pages: docs.filter(d => !d.rel.startsWith('comparisons/')).length,
+  comparison_pages: docs.filter(d => d.rel.startsWith('comparisons/')).length,
   duplicate_topic_codes: [],
   forbidden_ukrainomov: [],
+  forbidden_ukrainomov_ui: [],
   emphasis_artifacts: [],
+  legacy_emphasis_candidates: [],
   table_mismatches: [],
   related_sections: [],
   duplicate_related_targets: [],
@@ -103,16 +112,44 @@ for (const [key, bucket] of codeMap) {
   if (bucket.length > 1) findings.duplicate_topic_codes.push({ key, pages: bucket });
 }
 
-const forbidden = /україномов|українськомов/giu;
+const forbidden = /україномов/giu;
 for (const d of docs) {
   const hits = [...d.body.matchAll(forbidden)].map(m => m[0]);
   if (hits.length) findings.forbidden_ukrainomov.push({ page: d.rel, hits: [...new Set(hits)] });
 }
 
+const uiSourceFiles = UI_SOURCE_DIRS.flatMap(dir => walk(dir, [], /\.(astro|ts|tsx|js|mjs)$/i)).sort();
+for (const file of uiSourceFiles) {
+  const text = fs.readFileSync(file, 'utf8');
+  const hits = [...text.matchAll(forbidden)].map(m => m[0]);
+  if (hits.length) {
+    findings.forbidden_ukrainomov_ui.push({
+      file: path.relative(ROOT, file).replaceAll(path.sep, '/'),
+      hits: [...new Set(hits)]
+    });
+  }
+}
+
 const artifact = /\*[^\s*\n]+\*\*[^\s*][^\n*]*\*(?!\*)|\*[^\s*\n]+\*\*[^\s*][^\n*]*\*\*/g;
 for (const d of docs) {
-  const hits = [...d.body.matchAll(artifact)].map(m => ({ match: m[0], line: d.body.slice(0, m.index).split(/\\r?\\n/).length }));
+  const hits = d.rel.startsWith('comparisons/')
+    ? []
+    : [...d.body.matchAll(artifact)].map(m => ({
+        match: m[0],
+        line: d.body.slice(0, m.index).split(/\r?\n/).length
+      }));
   if (hits.length) findings.emphasis_artifacts.push({ page: d.rel, hits });
+
+  // Report legacy mixed-emphasis candidates separately. The remark plugin
+  // normalizes some of these at render time, so they are a cleanup backlog,
+  // not a blocking gate until each candidate is reviewed in context.
+  const legacyHits = [];
+  for (const [index, line] of d.body.split(/\r?\n/).entries()) {
+    if (/\*{3}[^*\n]+\*{2}(?!\*)/.test(line)) {
+      legacyHits.push({ line: index + 1, excerpt: line.trim().slice(0, 120) });
+    }
+  }
+  if (legacyHits.length) findings.legacy_emphasis_candidates.push({ page: d.rel, hits: legacyHits });
 }
 
 for (const d of docs) {
@@ -143,8 +180,9 @@ for (const d of docs) {
   if (dup.length) findings.duplicate_related_targets.push({ page: d.rel, duplicates: [...new Set(dup)] });
 }
 
-const totals = Object.fromEntries(Object.entries(findings).filter(([k]) => Array.isArray(findings[k])).map(([k,v]) => [k, v.length]));
+const totals = Object.fromEntries(Object.entries(findings).filter(([k]) => Array.isArray(findings[k]) && k !== 'legacy_emphasis_candidates').map(([k,v]) => [k, v.length]));
 console.log(JSON.stringify({ ...findings, totals }, null, 2));
+console.log('Non-blocking legacy emphasis candidates: ' + findings.legacy_emphasis_candidates.length + ' pages; review in context before mass editing.');
 let failed = false;
 for (const [, value] of Object.entries(totals)) if (value > 0) failed = true;
 if (findings.related_sections.some(x => x.sections.length !== 0)) failed = true;

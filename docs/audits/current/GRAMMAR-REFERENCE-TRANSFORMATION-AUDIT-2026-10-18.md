@@ -1,0 +1,243 @@
+# Аудит поточного стану Gramaticarrona — 2026-10-18
+
+**Репозиторій:** [ClippyFirst/Spanish-Grammar](https://github.com/ClippyFirst/Spanish-Grammar)  
+**Гілка аудиту:** `docs/grammar-reference-architecture-2026-10-18`  
+**Обсяг:** архітектурні документи, content schema, таксономія, карта тем, QA scripts/workflows, збережені audit snapshots і репрезентативні статті. Окремий набір навичок перевірено в sibling PR #26 (`feat/grammar-research-skills-2026-10-18`); його матриця та пілотні висновки ще не інтегровані в цю гілку.  
+**Обмеження:** це source-level аудит через GitHub; повний локальний `npm run qa`, актуальний production build і ручний браузерний аудит у цій сесії не запускалися. Тому жоден runtime gate не оголошується пройденим.
+
+## 1. Короткий висновок
+
+Проєкт має **міцну технічну основу**, але ще не має достатньо формалізованого редакційного контролю, щоб кількість сторінок дорівнювала доведеній повноті й надійності граматичного довідника.
+
+Головний ризик зараз — не Astro, не брак категорій і не недостатня кількість skills. Це розрив між:
+
+1. широкою картою бажаного граматичного охоплення;
+2. фактичними статтями;
+3. реальним статусом лінгвістичної перевірки кожної статті;
+4. синхронністю канонічних статей і порівнянь;
+5. відтворюваними доказами для важливих тверджень.
+
+**Рекомендація:** зберегти поточний стек і спершу побудувати перевірюваний реєстр покриття та редакційних доказів. Не починати з повного переписування сайту або масового додавання нових skills.
+
+## 2. Що підтверджено в репозиторії
+
+### 2.1 Сильні сторони
+
+- Astro 5 + MDX + TypeScript, статична генерація й Pagefind.
+- Контент розділено на граматичні статті (`src/content/es/`) та порівняння (`src/content/comparisons/`).
+- Є централізований реєстр категорій у `src/data/categories.ts`.
+- Є семантичні зв'язки: `related`, `prerequisites`, `contrasts`, `extensions`, `exceptions`, `canonical_topic`.
+- Є редакційні поля `review_status`, `updated`, `sources`, `region` та необов'язковий `cefr`.
+- Є єдиний `npm run qa`, який поєднує typecheck, MDX preflight, таблиці, валідацію контенту, посилання, граф, дизайн-аудити, фінальну перевірку та build.
+- Є окремі PR QA та deploy workflows у `.github/workflows/`.
+- `ARCHITECTURE.md` і `DEVELOPMENT_RULES.md` задають принципи збереження URL, повторного використання наявних патернів і вузьких змін.
+- Існує широка українськомовна карта граматичних тем і предметні skills для fact-checking, варіантності, контрастивного пояснення, прикладів, покриття та технічного аудиту.
+
+Це достатня основа для еволюційного розвитку. Не потрібно переносити проєкт на інший фреймворк або додавати бекенд заради самого факту «повноцінності».
+
+### 2.2 Поточні виміри — з чітким статусом доказу
+
+| Показник | Що показують доступні файли | Статус |
+|---|---|---|
+| Карта граматики | 17 основних предметних блоків плюс окремий наскрізний список пріоритетів для українськомовних і детальні підрозділи | Підтверджено файлом roadmap |
+| Категорії сайту | 17 у `src/data/categories.ts` | Перевірено в коді |
+| Обсяг статей | Збережений content-graph snapshot від 2026-09-24 показує 208 сторінок | Історичний snapshot; потрібно перегенерувати |
+| Внутрішні посилання | Той самий snapshot: 66 Markdown-посилань, 0 broken targets, 0 ambiguous targets, 0 self-links, 0 semantic orphans | Історичний snapshot; не є лінгвістичним аудитом |
+| Дизайн-аудит | Snapshot повідомляє 252 source files, 2 findings: 1 medium і 1 low responsive | Історичний snapshot; browser audit не виконаний |
+| Повний QA у цій сесії | Не запускався | Не підтверджено |
+| Skill suite | У sibling PR #26 індексовано 29 project-specific skills після додавання навички перевірки доцільності візуалізацій | Файли/індекс існують у гілці PR #26; їхня якість оцінюється в `SKILL-SUITE-MATRIX-2026-10-18.md` і `SKILL-SUITE-PILOT-2026-10-18.md`, але не доведена самим фактом існування |
+
+## 3. Знахідки та ризики
+
+### P0 — якість пояснень і межі спрощень потребують формалізованого редакційного стандарту
+
+**Доказ:** перевірені приклади статей показують, що навіть за наявності граматичних матеріалів і технічних правил необхідно окремо контролювати зрозумілість для початківця, узгодженість основних статей і порівнянь, контрприклади та межі евристик. Зокрема, основна стаття про *ser/estar* заперечує універсальність правила «постійне / тимчасове», тоді як порівняльна стаття використовує це спрощення як головну вісь пояснення.
+
+**Чому це важливо:** читачеві потрібне пояснення, яке працює і для абсолютного початківця, і для просунутого користувача, але не створює хибного правила. Окремої системи вправ або обов’язкового навчального маршруту для цього не потрібно; потрібні ясна редакційна логіка, контрасти, діагностичні орієнтири, каверзні випадки, обережні асоціації та джерельна дисципліна.
+
+**Дія:** цільову архітектуру й README уточнено відповідно до формату граматичного довідника; додано `docs/architecture/EXPLANATION-QUALITY-STANDARD-UA.md` зі стандартом пояснень і редакторським чеклістом. Це визначає бажану методику, але ще не доводить, що всі наявні статті вже відповідають їй. Наступний практичний крок — застосувати стандарт до пріоритетних реальних статей і порівнянь, починаючи з `ser/estar`, і зафіксувати конкретні findings.
+
+
+### P0 — чекліст і матриця покриття мають різні, неузгоджені статуси
+
+**Доказ:** `docs/roadmap/TOPICS-COMPLETE-UA.md` містить 323 незаповнені чекбокси, але `docs/roadmap/TOPICS-COVERAGE-MATRIX-2026.md` (зріз від 2026-09-24) заявляє 323/323 вимоги зі статусом `full` або `embedded`, 0 `missing` і 0 `partial`. Отже, порожні чекбокси не доводять відсутності тем. Водночас матриця описує канонічне місце покриття, а не claim-level фактчек, джерельну верифікацію чи повний країно-регіональний аудит; її джерельний зріз був на `main` станом на 2026-09-24.
+
+**Чому це важливо:** обидва документи корисні, але зараз читач не розуміє, чи `full/embedded` означає «є сторінка/підрозділ», «пояснення достатнє», «твердження перевірені» або «всі регіони охоплено». Не можна ані оголошувати 323 теми відсутніми, ані називати їх лінгвістично перевіреними лише за старою матрицею.
+
+**Додаткова структурна перевірка:** з `TOPICS-COVERAGE-MATRIX-2026.md` витягнуто 75 унікальних канонічних slug-посилань; усі 75 відповідають наявним `src/content/es/<slug>.mdx` у поточному дереві. Це підтверджує розв'язання цих посилань, але не достатність пояснень і не джерельну верифікацію.
+
+**Дія:** зберегти `TOPICS-COMPLETE-UA.md` як інвентар вимог; актуалізувати матрицю як reconciliation layer із окремими статусами: канонічне місце визначено, пояснення переглянуто, джерела перевірено, регіональні твердження перевірено, свідомо вбудовано/не потрібна окрема сторінка, відсутнє/часткове. Не виводити відсутність із незаповненого чекбокса.
+
+### P0 — основна стаття й порівняльна стаття можуть суперечити одна одній
+
+**Початковий доказ:** `src/content/es/verbs/ser-estar.mdx` пояснювала, що правило «ser = постійне, estar = тимчасове» не є універсальним, тоді як `src/content/comparisons/ser-estar.mdx` подавала його як головне правило. У порівняльному файлі також були пошкоджене Markdown-виділення у вступі та категоричне твердження про `Estoy de Ucrania`, яке потребувало джерельного перегляду.
+
+**Чому це важливо:** користувач, який відкриє дві сторінки, не повинен отримати різні моделі того самого правила. Порівняння має бути стислим входом до теми, а не альтернативною й суперечливою граматикою.
+
+**Дія на гілці цього PR:** порівняльну статтю переписано як контрастний огляд із мінімальними парами, обмеженнями мнемоніки «постійне / тимчасове», діагностичними запитаннями та посиланням на канонічну статтю. Прибрано непідтверджене широке узагальнення про регіональну різницю й виправлено використання `Note` відповідно до типів компонента. Це source-level редакторська правка; повний QA і лінгвістична перевірка джерел ще не виконані.
+
+
+### P0 — поле джерел ще не є системою доказів
+
+**Доказ:** `src/content.config.ts` визначає `sources: z.array(z.string()).default([])`. Схема не вимагає ідентифікатора джерела, точного розділу, дати доступу або зв'язку «твердження → джерело». `review_status` має default `draft`, що є безпечним для нового контенту, але саме поле не доводить, що старі статті вже пройшли перевірку.
+
+**Ризик:** посилання може бути загальним, недоречним або не підтримувати конкретне твердження; сторінка може виглядати авторитетною без відтворюваної доказової основи.
+
+**Дія:** поступово стандартизувати джерельні записи й критерії `reviewed/verified`. Не вимагати одразу великої нової системи даних: почати з мінімальної структури й пілотувати її на P0-статтях.
+
+### P1 — застарілі snapshots і roadmap-статуси
+
+**Доказ:** `docs/audits/current/content-graph.md` має timestamp 2026-09-24; `docs/audits/current/design-deep.md` теж є збереженим звітом. Rewrite-roadmap датована 2026-09-23 і містить історичні числа protected baseline / done / untouched.
+
+**Ризик:** каталог `current` може створювати враження, що звіт відображає поточний стан, хоча після нього могли бути зміни. Різні файли можуть описувати різні часові зрізи.
+
+**Дія:** перегенерувати snapshots у checkout/CI; додавати commit SHA, дату, версію скрипта та обсяг аудиту. Історичні підсумки не переписувати заднім числом — позначати як архівні.
+
+### P1 — відсутня підтверджена браузерна перевірка
+
+**Доказ:** дизайн-звіт прямо вимагає перевірки 320/375/430/768/1024/1440/1920 px, масштабування, клавіатурної навігації, TOC, мобільного меню, довгих українських/іспанських рядків, таблиць і пошуку. У звіті це перелік обов'язкових тестів, а не доказ, що вони виконані.
+
+**Дія:** запустити browser audit для головної, індексу, категорії, довгої статті, порівняння, пошуку та 404. Не позначати доступність «пройденою» тільки за source-level перевіркою.
+
+### P1 — якість прикладів і тверджень не можна вивести з технічного QA
+
+**Доказ:** наявні QA scripts перевіряють структуру, MDX, посилання, граф і дизайн. Вони не можуть самі по собі довести нормативність кожного прикладу, природність перекладу, адекватність регіональної примітки або емпіричність твердження про помилки українськомовних.
+
+**Дія:** додати редакційний протокол із джерелами та sampling. Для ключових форм — regression cases. Для корпусних заяв — зберігати параметри запиту та межі даних.
+
+### P2 — ризик надмірної фрагментації та дублювання
+
+**Доказ:** вже є 17 категорій, широкий предметний інвентар, окремі порівняння й семантичні зв'язки. Це не дефект саме по собі, але без канонічного реєстру та графа змін зростає ризик кількох сторінок з різними поясненнями однієї теми.
+
+**Дія:** не додавати сторінку автоматично для кожного пункту syllabus. Спочатку вирішувати: окрема стаття, підрозділ канонічної статті, мінімальна пара, примітка чи свідомо виключене питання.
+
+### P2 — skills є специфікаціями, а не перевіреними інструментами
+
+**Доказ:** `skills/README.md` прямо говорить, що skills пропонують findings, а не виконують неперевірені масові зміни, і рекомендує позитивний, негативний та неоднозначний випадок.
+
+**Дія:** оцінити наявний набір на реальних статтях і зафіксувати false positives/false negatives. Не розширювати каталог, поки не виявлено прогалину, яку не покриває жоден чинний skill.
+
+## 4. Що не є проблемою, яку треба негайно «виправляти»
+
+- Не потрібно замінювати Astro, MDX або Pagefind.
+- Не потрібно додавати сервер/базу даних заради позначення прогресу; для початку достатньо статичних редакційних метаданих.
+- Не потрібно перетворювати кожну граматичну підкатегорію на окрему сторінку.
+- Не потрібно запускати всі skills на кожен коміт.
+- Не потрібно переписувати protected baseline без конкретної причини.
+- Не потрібно вважати нуль битих посилань доказом повноти граматики.
+- Не потрібно вважати наявність джерела доказом, що воно підтримує потрібне твердження.
+
+## 5. Пріоритетний план
+
+### Крок 1 — технічний baseline
+- виконати `npm ci` та `npm run qa` у checkout;
+- зберегти повний результат і commit SHA;
+- перегенерувати graph/design/content snapshots;
+- зафіксувати URL, кількість сторінок і категорій.
+
+### Крок 2 — карта покриття
+- зіставити 323 пункти інвентарю з наявною матрицею покриття та актуальним деревом контенту; не трактувати порожній чекбокс як доказ відсутності;
+- кожному надати однозначний статус;
+- зв'язати пункт із canonical slug або пояснити, де він покривається;
+- позначити P0 для українськомовних окремо від CEFR.
+
+### Крок 3 — пілотний editorial QA
+- взяти групу взаємопов'язаних P0 тем;
+- перевірити правило, межі, приклади, українське пояснення, варіантність і джерела;
+- синхронізувати всі пов'язані порівняння;
+- зберегти regression cases.
+
+### Крок 4 — схема доказів і статуси
+- визначити критерії `draft/reviewed/verified`;
+- стандартизувати джерельні записи;
+- додати тільки ті валідатори, що усувають конкретні проблеми, виявлені на пілоті.
+
+### Крок 5 — пошук і браузерний аудит
+- перевірити реальні українські запити й запити без результатів;
+- провести keyboard/mobile/zoom тест;
+- після цього вирішувати, чи потрібні нові індекси або компоненти.
+
+### Крок 6 — масштабування
+- поширити доведений протокол на наступні тематичні сімейства;
+- оцінювати skills на позитивних/негативних/неоднозначних прикладах;
+- робити невеликі PR із вимірюваним diff і QA.
+
+## 6. Критерії готовності
+
+Трансформація рухається правильно, коли:
+- кожен пункт предметного інвентарю має чесний статус і шлях до канонічного покриття;
+- P0 теми перевірені джерелами й прикладами;
+- порівняльні сторінки не суперечать канонічним;
+- `verified` означає проходження визначеного процесу, а не наявність URL;
+- повний `npm run qa` проходить у CI;
+- браузерний аудит має відтворювані результати;
+- кількість статей не використовується як єдиний KPI повноти.
+
+## 7. Першоджерела в репозиторії
+
+- [Цільова архітектура](../../architecture/GRAMMATICARRONA-TARGET-ARCHITECTURE.md)
+- [Карта тем](../../roadmap/TOPICS-COMPLETE-UA.md)
+- [Архітектурна дорожня карта](../../roadmap/ARCHITECTURE-ROADMAP.md)
+- [Поточний content graph snapshot](content-graph.md)
+- [Поточний design snapshot](design-deep.md)
+- [Content schema](../../../src/content.config.ts)
+- [Основна стаття ser/estar](../../../src/content/es/verbs/ser-estar.mdx)
+- [Порівняння ser/estar](../../../src/content/comparisons/ser-estar.mdx)
+
+## Межі висновку
+
+Цей аудит є відтворюваним source-level review вибраних документів і файлів у репозиторії, а не повним лінгвістичним аудитом усіх статей. Додатково він виявив концептуальний розрив між «довідником для пошуку» та «навчальною системою для абсолютного початківця»; цільову архітектуру доповнено, але повний навчальний syllabus і перевірені навчальні матеріали ще належить створити. Він виявляє конкретні системні ризики та задає порядок подальшої перевірки. Повний build, актуальні згенеровані звіти й браузерні тести лишаються окремими незавершеними перевірками.
+
+
+## 4. Додані результати аудиту після початкового зрізу
+
+- Створено [матрицю регіонального охоплення](./SPANISH-VARIETY-COVERAGE-MATRIX-2026-10-18.md). Вона фіксує необхідність перевіряти не лише «Іспанія проти Латинської Америки», а й релевантні країни/субрегіони та редакційне поняття нейтрального вживання. Статуси покриття наразі не виставлено: матриця є рамкою, не доказом завершеного аудиту.
+- [Пілотний аудит skill suite](./SKILL-SUITE-PILOT-2026-10-18.md) зафіксував реальні source-level findings у `ser/estar`, `pretérito indefinido/imperfecto` та позиції клітик. Виявлені помилки Markdown і навігаційне посилання виправлено на гілці PR #27; повний GitHub Actions QA успішно завершився на commit `a581bacca3a3e2f5011be18c7aef3d67b15ffe76` після source-level правок.
+- [Claim-level пілот](./CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md) додає конкретні джерела RAE/ASALE та FundéuRAE до трьох канонічних статей, уточнює межі регіональних тверджень і фіксує відкриті перевірки. Статус цих статей — `reviewed`, не `verified`; повний аудит прикладів і країнових різновидів не завершено.
+- [Матриця навичок у PR #26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) містить рекомендацію перепрофілювати навчально-орієнтовані навички під пояснення та необов'язкові шляхи між темами, а перевірку вправ залишити умовною. До інтеграції цей файл не є частиною гілки PR #27.
+
+
+### P1 — фінальний контент-аудит мав хибні спрацьовування на коректну термінологію та Markdown
+
+**Доказ:** CI run для commit `d1ecf1a8` пройшов ранні етапи, але завершився на `audit:final`. Звіт позначив коректне слово «українськомовному» як заборонене, бо регулярний вираз забороняв і помилкову, і правильну форми. Окремо евристика `emphasis_artifacts` помилково прочитала коректне `**imperfecto**` поруч із курсивним фрагментом як артефакт.
+
+**Дія:** у `scripts/audit-final-content.mjs` виправлено регулярні вирази: забороняється лише форма «україномов…», а пошук зіпсованого виділення зосереджено на непарних потрійних зірочках, не на звичайному bold поруч із курсивом. Commit: `817dedf01ef97d931ec33b1b17fb2530ad388e45`.
+
+**Статус:** повний GitHub Actions `npm run qa` успішно завершився на commit `523134360d6ac0c1a8631abbbe6dcb214b78a739`. Фінальний контент-аудит охопив 213 сторінок (208 граматичних і 5 порівняльних): 0 заборонених термінів, 0 знайдених артефактів у консервативній emphasis-перевірці, 0 розбіжностей таблиць, 0 дубльованих topic codes. Astro production build також завершився успішно. Це не замінює ручного браузерного аудиту або claim-level мовознавчої перевірки.
+
+
+## Follow-up: комплексна матриця компетенцій (2026-10-18)
+
+Додано [COMPREHENSIVE-COMPETENCY-AUDIT-2026-10-18.md](./COMPREHENSIVE-COMPETENCY-AUDIT-2026-10-18.md) як зведений звіт за тематичним покриттям, 24 компетенціями, регіональною рамкою, skill suite, джерельними статусами, технічною архітектурою та QA.
+
+Головний висновок: **предметна база й технічний фундамент достатні; повна доказова, редакційна, регіональна й браузерна перевірка ще не завершена**. Історичні 323 → 208 показують структурне зіставлення вимог із канонічними сторінками, а не 323 верифіковані граматичні твердження. Регіональна матриця наразі є планом аудиту, а не доказом фактичного охоплення кожного різновиду.
+
+Звіт навмисно не оголошує всі статті verified і не рекомендує додавати нові статті без виявленої прогалини. Наступна робота — source-based review пріоритетних тем, повний прохід української редактури за ризиком, перевірка регіонально чутливих тверджень і ручний browser smoke test.
+
+Цей follow-up додано після source-level інвентаризації. QA для актуального head слід підтвердити окремим GitHub Actions запуском; успішний QA не замінює лінгвістичну або браузерну перевірку.
+
+
+## Follow-up — targeted coverage-matrix reconciliation (2026-10-18)
+
+A narrow cross-check of the historical `323 → 208` matrix against the current checklist and two canonical MDX pages found two stale residual mappings in the detailed crosswalk: requirement 2.13 still said no loanword/proper-name page existed, and requirement 3.1 still described noun-class coverage as partial. Both pages exist and cover the named scope, so the mappings now point to `spelling/loanwords-proper-names` and `nouns/noun-classes` respectively. This does not establish full linguistic adequacy.
+
+The two pages previously carried `review_status: verified` despite broad source notes without precise claim-level locators. Their status has been downgraded to `draft` pending claim-by-claim review. For loanwords, official RAE/ASALE material was located on adapted/unadapted loanwords (section 8 of the RAE summary of Ortografía) and capitalization of place names (Ortografía, “Lugares”, § 4.2.4.6.1). These sources establish the broad scope but do not verify all examples. For noun classes, the official Manual NGLE contents index now identifies § 12.1.2 «Clases principales de sustantivos» (p. 209) and § 12.5.1 «Clases de nombres propios» (p. 218): https://www.rae.es/sites/default/files/Indice_de_contenidos_Manual_Nueva_gramatica_de_la_lengua_espanola.pdf. This is a section locator only; the section text and individual claims have not yet been verified. No corpus search was performed and no corpus-attestation claim is made.
+
+This is a targeted spot check, not a full 323-row re-audit. The old count remains a structural baseline. The complete QA for PR #27's prior HEAD `d1a6817f4ea9895691ce5024592c145bc65ade33` succeeded in GitHub Actions run [39156433126](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39156433126). The edits in this follow-up require a new QA run on their resulting commit. The separately stacked PR #28 currently has a failing QA run (39155530069) on its synthetic merge ref; the log points to malformed YAML frontmatter at `src/content/comparisons/ser-estar.mdx:4:72`. That blocker is recorded but not edited in this PR #27 workstream.
+
+
+## Follow-up — articles and body-part constructions (2026-10-18)
+
+A limited pass compared the article checklist (requirements 4.1–4.11) with the canonical definite/indefinite article pages, the zero-article page, special cases, body-parts/clothing page, and `comparisons/articles.mdx`. The contrastive page and the two definite/indefinite pages consistently reject simplistic rules such as “first mention always takes un” and “profession after ser never takes an article”; no material contradiction was found in this sample.
+
+The pass found editorial Markdown defects in `src/content/es/articles/zero-article.mdx`, `src/content/es/articles/special-cases.mdx`, and `src/content/es/pronouns/body-parts-possession.mdx`. They were corrected. The zero-article page now explicitly frames “нульовий артикль” as a convenient label for absence of an article, aligned with RAE/ASALE's treatment of `ausencia de artículo` and `nombres escuetos`. The body-parts page no longer presents `Me duele mi cabeza` as categorically wrong via a Mistake component; its baseline is `Me duele la cabeza`, and the contrastive example is `Me duele la espalda, no la tuya`.
+
+The body-parts page's previous `review_status: verified` was downgraded to `draft`. The new source notes locate relevant NGLE sections (§§ 35.4j/o, 35.6i, 35.7f–ñ, 35.8k for possessive/sympathetic datives; § 14.7f and following for inalienable possession), but the cited section text and every example/translation were not fully checked in this pass. The zero-article and special-cases pages are also explicitly marked draft. This is not corpus attestation, regional verification, or a full linguistic review.
+
+Sources consulted:
+- RAE/ASALE, NGB § 9.1.1: https://www.rae.es/gram%C3%A1tica-b%C3%A1sica/el-art%C3%ADculo/caracterizaci%C3%B3n/clases-y-paradigma
+- RAE/ASALE, NGLE § 14.6: https://www.rae.es/gram%C3%A1tica/sintaxis/otras-caracter%C3%ADsticas-de-los-usos-anaf%C3%B3ricos-usos-endof%C3%B3ricos-del-art%C3%ADculo
+- RAE/ASALE, NGLE contents index for §§ 15.11–15.13: https://www.rae.es/sites/default/files/Indice_contenidos_gramatica.pdf
+- RAE/ASALE, NGLE subject index for possessive dative sections: https://www.rae.es/sites/default/files/indice_de_materias_gramatica.pdf
+
+No corpus search or browser test was performed. Full claim-level verification remains open.

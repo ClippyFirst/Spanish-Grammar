@@ -5,6 +5,8 @@
 > Content source: `src/content/es/**.mdx` on `main`  
 > Purpose: distinguish real grammatical coverage from page count and identify requirements that are missing or only partially covered.
 
+> **Status note (2026-10-18):** this is a historical structural-coverage snapshot from 2026-09-24, not a fresh linguistic/source audit of the current branch. `full/embedded` means that a canonical treatment was mapped; it does **not** mean every claim is source-verified or that all country-level varieties have been checked. The source checklist still has unchecked boxes, so reconcile its state with this matrix rather than treating unchecked boxes as missing coverage. See `docs/audits/current/SPANISH-VARIETY-COVERAGE-MATRIX-2026-10-18.md` for the separate regional-scope audit, whose country-level statuses remain unverified. A source-level path check on the 2026-10-18 audit branch found that all 75 unique canonical slugs explicitly referenced in this matrix resolve to existing MDX files. This checks route/file existence only; it does not validate whether each checklist requirement is explained adequately or source-verified.
+
 ## Executive result
 
 The audit reconciles **323 checklist requirements** with **208 canonical MDX grammar pages**.
@@ -119,11 +121,11 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 - **27** → `spelling/capitalization`.
 - **28–29** → `spelling/punctuation-capitalization`.
 - **30** → `spelling/punctuation-capitalization`.
-- **31** → **partial**; no explicit loanword/proper-name orthography page.
+- **31** → `spelling/loanwords-proper-names` (canonical page exists; this mapping is structural and does not certify the page's examples or sources).
 
 ## 3. Nouns — items 32–48
 
-- **32** → **partial** across `nouns/genero` + `nouns/noun-special-cases`.
+- **32** → `nouns/noun-classes` (canonical page exists; this mapping is structural and does not certify the page's examples or sources).
 - **33–37** → `nouns/genero` + `gender-exceptions`.
 - **38–40** → `nouns/numero-plural` + `irregular-plurals`.
 - **41–43** → `nouns/noun-special-cases`.
@@ -134,7 +136,7 @@ The following is the actual reconciliation logic. Item numbers refer to the numb
 
 - **49–52** → `articles/definite-indefinite`, `definite-vs-indefinite`, `zero-article`.
 - **53–54** → `articles/special-cases`.
-- **55** → `pronouns/body-parts-possession` + `articles/special-cases`.
+- **55** → `pronouns/body-parts-possession` + `articles/special-cases` (structural mapping retained; this batch repaired malformed Markdown in the canonical body-parts page and downgraded its evidence status to `draft`; claim-level verification remains open).
 - **56** → `articles/articles-with-names`.
 - **57** → `articles/special-cases`.
 - **58** → `articles/neutral-lo`.
@@ -409,3 +411,651 @@ The audit used:
 - targeted inspection of canonical pages for the requirements that could otherwise be falsely counted as covered.
 
 No claim here depends on the public GitHub Pages instance being current.
+
+
+## 7. Targeted reconciliation follow-up — 2026-10-18
+
+A source-level spot check of checklist requirements **2.13** and **3.1** found that the detailed mapping section still contained pre-gap-closure notes claiming that no loanword/proper-name page existed and that noun classes were only partially mapped. Both claims were stale:
+
+- **2.13** now maps to `src/content/es/spelling/loanwords-proper-names.mdx`.
+- **3.1** now maps to `src/content/es/nouns/noun-classes.mdx`.
+
+The two canonical files exist and address the named concepts. This confirms a canonical home, not the sufficiency of every explanation, example, translation, or source. The existing `review_status: verified` labels on these two pages were therefore conservatively downgraded to `draft` pending claim-level review: their source notes did not provide enough precise, claim-linked locators to justify a verified status.
+
+Evidence boundaries for this pass:
+
+- For loanwords, the official RAE/ASALE material distinguishes adapted from unadapted loanwords and describes their orthographic treatment; the RAE's `Ortografía` page on places documents capitalization of country/city names. These support the broad topic scope, but do not verify every example on the page.
+- For noun classes, the official Manual NGLE contents index now identifies § 12.1.2 «Clases principales de sustantivos» (p. 209) and § 12.5.1 «Clases de nombres propios» (p. 218). This is a locator to the relevant sections, not evidence that their full text or the page's individual claims have been checked; the page remains draft.
+- This is a **targeted spot check**, not a fresh 323-row reconciliation. The 323 → 208 figures and 0 structural-gap count remain a dated structural baseline, not a current count of linguistically verified requirements.
+
+Official source leads checked for this pass:
+- RAE/ASALE, *Principales novedades de la Ortografía de la lengua española*, section 8 on the treatment of loanwords: https://www.rae.es/sites/default/files/Principales_novedades_de_la_Ortografia_de_la_lengua_espanola.pdf
+- RAE/ASALE, *Ortografía de la lengua española*, “Lugares”, § 4.2.4.6.1 on countries, cities and localities: https://www.rae.es/ortografía/lugares
+
+**Next:** continue the matrix crosswalk section by section; where a page's status or evidence is materially stronger than the available record, inspect the canonical content and its comparison (if one exists) before changing claims or status. Do not infer linguistic verification from the mapped slug.
+
+
+## 8. Targeted article/body-part editorial pass — 2026-10-18
+
+Scope: checklist requirements 4.1–4.11, with particular attention to 4.4 (absence of article/nombres escuetos), 4.5 (special cases), and 4.6 (body parts/clothing). Read the canonical articles `articles/definite-indefinite.mdx`, `articles/definite-vs-indefinite.mdx`, `articles/zero-article.mdx`, `articles/special-cases.mdx`, `pronouns/body-parts-possession.mdx`, and the comparison `comparisons/articles.mdx`.
+
+Findings and actions:
+
+- The canonical comparison and the definite/indefinite articles consistently warn against treating first mention, profession labels, or absence of an article as absolute rules. No substantive contradiction was found in the sampled contrastive explanations.
+- `zero-article.mdx` had malformed Markdown emphasis in its opening paragraph. It now distinguishes the convenient label “нульовий артикль” from the observable absence of an article and records the relevant RAE/ASALE locators: NGB § 9.1.1, NGLE §§ 15.11–15.13, and NGLE § 14.6. The page is explicitly `draft`; these locators do not establish claim-by-claim verification.
+- `special-cases.mdx` had a malformed emphasis sequence in the explanation of `a + el → al` and `de + el → del`. It is repaired and has a limited RAE/ASALE source trail for article forms and inalienable possession. The page remains `draft`.
+- `body-parts-possession.mdx` had widespread malformed Markdown around Spanish examples, including broken emphasis in the introduction, table, and example lists. Those artifacts were repaired. The questionable example `Me duele mi cabeza` was removed from the “mistake” component: the neutral baseline `Me duele la cabeza` is clearer, but possessives must not be declared universally ungrammatical without context. The contrast example is now `Me duele la espalda, no la tuya`. Its prior `verified` status was downgraded to `draft` because broad glossary/source notes did not establish claim-level verification. The source note now points to NGLE §§ 35.4j/o, 35.6i, 35.7f–ñ, 35.8k and § 14.7f onward.
+- The comparison `comparisons/articles.mdx` was read and did not require an edit in this pass. It provides the expected navigation to the three canonical article pages and treats its examples as typical, not exceptionless.
+
+Evidence limits: the official NGLE section references identify relevant material, but the full cited sections were not all read in this pass. No corpus queries were run; no regional frequency claim was validated; no browser test was performed. This is an editorial/source-traceability pass, not full verification of all article claims.
+
+## 9. Targeted article requirements 4.7–4.11 — 2026-10-18
+
+This is a limited source-traceability and editorial pass, not a full linguistic verification. The canonical mappings remain:
+
+| Checklist requirement | Canonical home | Batch finding / disposition |
+|---|---|---|
+| 4.7 Article with proper names | `src/content/es/articles/articles-with-names.mdx` | Structural coverage retained. Source notes now point to RAE/ASALE *Ortografía* § 4.2.4.6.1 and NGLE locators, but country-specific alternations and colloquial article use are not verified. Status downgraded from `verified` to `draft`. |
+| 4.8 Article after `ser`, `tener`, and prepositions | `src/content/es/articles/special-cases.mdx`; `src/content/es/articles/zero-article.mdx` | Existing coverage includes predicative professions, `tener` contrasts, fixed expressions, and `al/del`. Added a bounded explanation that a preposition alone does not determine article presence, with `en casa`, `en el trabajo`, `a la universidad`, and `de noche`. Source locators identify NGLE §§ 14.3, 14.7, 15.11–15.13; examples have not all been independently source-checked. |
+| 4.9 Neutral `lo` | `src/content/es/articles/neutral-lo.mdx` | Repaired malformed Markdown in the opening, adjective examples, and `lo` contrast. Added NGLE §§ 14.9–14.10 and relevant relative-construction locators. Status explicitly set to `draft`; no claim-by-claim verification is implied. |
+| 4.10 Genericity vs specificity | `src/content/es/articles/definite-indefinite.mdx`; `src/content/es/articles/definite-vs-indefinite.mdx`; `src/content/es/articles/zero-article.mdx` | Read the canonical articles and `src/content/comparisons/articles.mdx`. The sampled contrast is consistent: article choice depends on reference, context, generic readings, number, and construction rather than a single first-mention rule. No substantive change was justified in this sub-area; the sample is not a complete claim audit. |
+| 4.11 Article in fixed expressions | `src/content/es/articles/zero-article.mdx`; `src/content/es/articles/special-cases.mdx`; `src/content/es/micro-constructions/de-inf-sera-no-sea-lo-de.mdx` | Existing examples include `estar en casa`, `estar en clase`, `tener hambre`, `tener miedo`, and `dar clase`; `lo de` is covered in the neutral-`lo` and micro-construction pages. Canonical homes exist, but no corpus search or full lexical inventory audit was performed. |
+
+**Evidence boundary:** official RAE/ASALE locators establish where relevant material can be checked; the NGLE contents index is a locator, not the full section text. No corpus query, regional frequency audit, full example-by-example verification, browser test, or release-readiness assessment was performed in this batch. Structural coverage and source-traceability are not equivalent to `reviewed` or `verified` linguistic status.
+
+## 10. Targeted `ser / estar / hay` claim-level follow-up — 2026-10-18
+
+This follow-up is a limited claim/evidence pass, not complete verification of every example.
+
+| Requirement cluster | Canonical home(s) | Finding / status |
+|---|---|---|
+| Checklist items 168–174: ser/estar, location, adjective contrasts | `src/content/es/verbs/ser-estar.mdx`; `src/content/es/verbs/ser-estar-location.mdx`; `src/content/es/verbs/ser-estar-with-adjectives.mdx`; comparison `src/content/comparisons/ser-estar.mdx` | Core construction-based explanation remains consistent across canonical and comparison pages. The location and adjective pages were downgraded from `verified` to `draft` because their previous source notes were generic and did not establish claim-level verification. Malformed Markdown in the location page was repaired. NGLE locator §§ 37.7–37.9 added. DLE entries for all nine listed adjectives were spot-checked, each pair now includes a full Spanish sentence, and the claim-level audit records the support per pair. Complete context/translation checks and regional distributions remain open. A scoped cross-page consistency check found no material contradiction among the canonical ser/estar page, adjective page, and comparison article for the shared `listo`, `aburrido`, `malo` examples. Both canonical and comparison pages now include the same bounded NGLE § 37.8d regional example for date/day expressions, explicitly limited to that construction. A scan found no other explicit country-level claim requiring revision; no frequency or corpus claim is made. The focused adjective page now cites NGLE §§ 37.9h–i for country-dependent fixed adjectival locutions and differences in familiarity of some `estar` locutions, without generalizing this to the nine adjective pairs. Direct NGLE sections §§ 37.7–37.9 were opened and relevant portions read. |
+| Checklist item 245: hay vs estar | `src/content/es/sentence-structure/hay-vs-estar.mdx`; canonical triad page `src/content/es/verbs/ser-estar-hay.mdx` | Added direct RAE/ASALE DPD § 4, conjugation-table and FundéuRAE sources for existential `haber` as impersonal singular in formal standard use; DPD also records informal plural agreement in some regions. NGLE § 15.6i was read directly: it rejects bare proper names in the neutral existential pattern (e.g. `Hay Eva y Javier`) while allowing a proper name inside an indefinite NP (`En la lista hay un tal Luis Pérez`). The `Hay Juan en la sala` contrast is now labelled as a neutral-standard baseline with an explicit scope caveat; NGLE §§ 15.6j–s describe quantitative and endophoric exceptions; representative examples were added to both canonical pages. Register/frequency and regional distributions remain open. |
+| Related requirements on event location and predicate choice | `ser-estar-location.mdx`, `ser-estar.mdx`, `comparisons/ser-estar.mdx` | Retain “entity/object → estar” and “event → ser” as a typical baseline, not an exceptionless algorithm. NGLE § 37.8 was read directly for the entity-location/event-location contrast, including the conversational locative uses of `ser` and the date-expression regional notes. |
+
+**Sources checked:** RAE/ASALE, NGLE §§ 15.6 and 41.6 on existential NPs and impersonal haber: https://www.rae.es/gram%C3%A1tica/sintaxis/grupos-nominales-definidos-e-indefinidos-en-contextos-presentativos-o-existenciales; https://www.rae.es/gram%C3%A1tica/sintaxis/impersonales-no-reflejas-ii-impersonales-con-los-verbos-haber-hacer-ser-estar-e-ir; NGLE §§ 37.7–37.9 on ser/estar: https://www.rae.es/gram%C3%A1tica/sintaxis/el-atributo-en-las-oraciones-copulativas-con-ser-y-estar-i-aspectos-sem%C3%A1nticos-de-la-distinci%C3%B3n; https://www.rae.es/gram%C3%A1tica/sintaxis/el-atributo-en-las-oraciones-copulativas-con-ser-y-estar-ii-pol%C3%A9micas-relativas-a-los-atributos-locativos; https://www.rae.es/gram%C3%A1tica/sintaxis/el-atributo-en-las-oraciones-copulativas-con-ser-y-estar-iii-aspectos-sint%C3%A1cticos-y-l%C3%A9xicos; RAE/ASALE, *Diccionario panhispánico de dudas*, entry `haber` § 4: https://www.rae.es/dpd/haber; RAE/ASALE, *El buen uso del español*, conjugation of `haber`: https://www.rae.es/buen-uso-español/conjugación-española; FundéuRAE on impersonal existential `haber`: https://www.fundeu.es/recomendacion/habia-habian-muchas-personas-haber-uso-impersonal/.
+
+**Evidence boundary:** direct NGLE text was read for §§ 15.6a–s, 37.7a–k, 37.8a–k, relevant portions of 37.9a–i, and 41.6a–e. Representative quantitative/endophoric exceptions in NGLE §§ 15.6j–s were added to the canonical pages; not every example's register, frequency, or regional distribution was audited. DPD, RAE conjugation and FundéuRAE support the impersonal-singular standard and document register/region variation. No corpus query, country-specific frequency audit, full dictionary audit of adjective pairs, or browser/release test was performed. Structural coverage remains distinct from linguistic verification.
+
+## 11. Targeted claim-level follow-up: `indefinido / imperfecto` lexical contrasts — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Aspectual contrast; `saber` | `src/content/es/tenses/preterito-vs-imperfecto.mdx`; `src/content/comparisons/past-tenses.mdx` | NGLE § 23.9j directly supports `saber` in perfective form as acquiring information (`supo la verdad`). The canonical `Sabía la respuesta / Supe la respuesta` contrast and Ukrainian glosses were retained. |
+| Aspectual/lexical contrast; `conocer` | Same canonical/comparison pages | NGLE § 23.9j directly distinguishes perfective `conocer` (“enter into contact with someone”) from imperfective knowledge. The `Conocía a Ana / Conocí a Ana` contrast and translations were retained. |
+| Contextual meanings of `querer` | Same canonical page; NGLE § 23.11e–f for polite imperfect | DLE lists distinct senses including desire, determination/resolution, and attempt. The page now warns that `Quise ir` is context-dependent and is not automatically “decided” or “tried”; added a separate note for polite `Quería pedirte un favor` so it is not conflated with a literal past desire. |
+| Source traceability | NGLE §§ 23.9j–k and 23.11e–f; DLE entries `saber`, `conocer`, `querer` | Direct sources are linked from the canonical page and recorded in the claim-level audit. No frequency or regional-distribution claims were added. |
+
+**Evidence boundary:** this is a bounded source-backed check of three lexical contrasts, not a full audit of every stative verb or every use of indefinido/imperfecto. Ukrainian translations are editorially checked but have not received independent native-speaker review. The regional note about perfecto compuesto/indefinido remains a separate next task.
+
+## 12. Regional claim-level follow-up: compound perfect vs. simple past — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Geographic distribution of `he cantado / canté` | `src/content/es/tenses/preterito-vs-imperfecto.mdx`; `src/content/comparisons/past-tenses.mdx` | NGLE §§ 23.7b–c directly describes several patterns, not a simple Spain/Latin America split. The comparison note now distinguishes central/southern Spain, Mexico/Central America/Caribbean, Chile/much of Argentina, and coastal Peru/some Andean varieties. |
+| Recent-past expressions | Same pages | NGLE § 23.8a contrasts `La he visto hace un momento` in Lima/Madrid/La Paz with `La vi hace un momento` in Montevideo/Santiago/Mexico City. Added as a specific sourced example, not a universal rule. |
+| “Esta semana comí mucho” | `src/content/comparisons/past-tenses.mdx` | Removed from the categorical mistake list; now noted as context- and variety-dependent. |
+| Closed past adjuncts with compound perfect | Same comparison | NGLE § 23.8d records geographic restrictions. The comparison no longer labels `Ayer he comido` as a categorical mistake; it now notes the neutral Peninsular standard and the documented regional exceptions. |
+| Explanatory model | Comparison table | Rewrote simplistic “result now / cut off from present” descriptions. Tense choice is framed as temporal/aspectual interpretation with regional variation. |
+
+**Evidence boundary:** direct NGLE sections were read; no corpus frequency analysis was performed. Regional labels describe patterns in the cited academic source, not every speaker in a named region.
+
+## 13. Subjunctive / indicative selection — source-traceability batch, 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Construction-based subjunctive selection | `src/content/es/moods/subjunctive-triggers.mdx`; `subjunctive-triggers-list.mdx` | Added direct NGLE §§ 25.2, 25.3, 25.7, 25.12 and 25.13 links; repaired malformed Markdown in the detailed trigger page and quick-reference source list. Quick reference status downgraded from `verified` to `draft` because the previous source metadata was generic. |
+| When indicative is normal | `src/content/es/moods/when-not-subjunctive.mdx` | Added direct NGLE locators for affirmative belief/knowledge, negation, relative clauses, and conjunctions. Narrowed the `Creo que sea verdad` correction to neutral affirmative assertion. |
+| Indicative/subjunctive comparison | `src/content/comparisons/indicative-subjunctive.mdx` | Added direct NGLE links and an explicit scope note: the page is an overview, not an exhaustive list of all triggers/alternations. |
+| Claim-level examples | Same four pages | Spot-checked volition (`querer que`), affirmative vs. negated belief, relative-clause reference, temporal `cuando`, and concessive `aunque` against the relevant NGLE sections. |
+
+**Evidence boundary:** this is a bounded source-traceability/claim spot-check, not full verification of every trigger, alternation, or regional pattern. These pages remain `draft` where claim-level evidence is incomplete.
+
+## 14. Subjunctive alternations: `cuando` and `aunque` — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Prospective vs. habitual temporal `cuando` | `src/content/es/moods/subjunctive-triggers.mdx`; `when-not-subjunctive.mdx`; `src/content/comparisons/indicative-subjunctive.mdx` | Direct NGLE § 24.5c and § 24.5j–k checked. Habitual/iterative readings are illustrated with imperfective indicative; `Cuando llegues, nos iremos` is discussed as ‘once/after you arrive’. Wording now emphasizes temporal perspective, not a mechanical trigger rule. |
+| Hypothetical concessive `aunque` | Same canonical and comparison pages | NGLE § 25.13h directly gives `Aunque insistas, no te hará caso` as a hypothetical concessive with subjunctive. Added as a bounded example. |
+| Factual concessive alternation | Same canonical and comparison pages | NGLE § 25.13h directly documents `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él`. Added to show that factual concessive clauses may allow both moods. |
+| Information structure in concessives | Same pages | NGLE §§ 25.13i–j directly explains assertion/new information vs. background/shared information; text clarifies that subjunctive does not itself mean doubt or falsity. |
+
+**Evidence boundary:** source paragraphs were read directly; no corpus-frequency or regional distribution analysis was performed. These changes improve bounded explanation and cross-page consistency; they do not constitute full verification of all subjunctive triggers or justify upgrading page status.
+
+## 15. Temporal conjunctions — bounded mood-selection check, 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| `hasta que` | `src/content/es/moods/subjunctive-triggers-list.mdx`; `subjunctive-triggers.mdx`; `when-not-subjunctive.mdx`; `comparisons/indicative-subjunctive.mdx` | NGLE § 25.14e directly supports indicative/subjunctive alternation in generic clauses and subjunctive in prospective contexts. The former combined `cuando/hasta que + subjunctive` row was split to avoid overgeneralization. |
+| `antes de que` | Same canonical/comparison pages | NGLE § 25.14h directly states that clauses complementing `antes` take subjunctive. Added a bounded example and source locator. |
+| `después de que` | Same pages | NGLE § 25.14h directly states that future indicative is excluded in temporal use; subjunctive is used prospectively. Present/past clauses show regional variation: indicative is habitual in American Spanish, subjunctive is the majority choice in European Spanish. Wording is source-scoped, not universalized to every speaker. |
+| `en cuanto` | Same pages | NGLE § 22.6p defines the temporal expression as ‘inmediatamente que’; § 31.14i discusses its immediacy meaning. Full mood distribution has not been separately verified and remains an explicit open item. |
+
+**Evidence boundary:** the cited NGLE paragraphs were read directly. No corpus/frequency analysis or regional survey was conducted. This is a bounded source-backed clarification, not complete verification of all temporal conjunctions.
+
+
+## 16. Por / para — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical/comparison home | Finding / disposition |
+|---|---|---|
+| Core functions of `para` | `src/content/es/prepositions/por-para.mdx`; `src/content/comparisons/por-para.mdx` | NGLE § 29.8k supports destination, prospective deadline, purpose, service/utility, recipient and orientation/intention. Retained as common functions rather than an exhaustive decision algorithm. |
+| Semantic overlap | Same pages | NGLE § 29.8n documents historical and current overlap between `por` and `para`, including contexts where both are possible. Comparison now warns against treating the rows as mutually exclusive categories. |
+| Temporal `por` | Canonical page; `por-para-markers.mdx`; comparison | NGLE §§ 29.8ñ–p distinguishes precise future reference with `para` from approximate time with `por`; `por + quantitative duration` is more frequent in American Spanish but documented in both American and European Spanish. Wording is now bounded accordingly. |
+| Cause, route, agent, means and exchange | Same pages | NGLE §§ 29.8o–r provide direct locators for route/approximate location, passive agent, cause, channel/means, price/exchange and substitution. Individual examples and translations remain only partially audited. |
+| Editorial clarity / unsupported learner-error framing | `por-para.mdx`; `por-para-markers.mdx` | Repaired malformed Markdown in the canonical page; replaced unsubstantiated “typical mistakes of Ukrainian speakers” headings with neutral contrast framing; source metadata added, pages remain `draft`. |
+
+**Evidence boundary:** direct NGLE paragraphs were read. No corpus search, quantitative frequency calculation, country-by-country survey, full audit of every example/translation, independent Ukrainian editorial review, or browser/accessibility/SEO test was run. The pages are not fully verified.
+
+## 17. Verb–preposition government and personal `a` — bounded source/editorial pass — 2026-10-18
+
+| Requirement cluster | Canonical home | Finding / disposition |
+|---|---|---|
+| Personal `a` with people | `src/content/es/prepositions/verbs-with-prepositions.mdx` (cross-link example); canonical personal-`a` route requires path confirmation before a dedicated edit | NGLE § 34.8a–i was read directly: the direct-object marker is construction-sensitive, especially with human/animate, definite and referential objects. Do not formulate it as an absolute “a before every person” rule. |
+| `a + infinitive` after verbs such as `ayudar` | `verbs-with-prepositions.mdx` | NGLE § 36.6j supports purpose/prospective `a + infinitive` patterns including `ayudar a salir` and `enseñar a cantar`. Page now distinguishes this from personal `a` in `ayudar a alguien`. |
+| Government with `de`, `en`, `con`, `por` | `src/content/es/prepositions/verbs-with-prepositions.mdx` | NGLE §§ 36.7–36.10 provide category-specific source locators; the page remains a selected learning map, not a complete dictionary of all verbs or regional alternations. |
+| Preposition + `que`; queísmo | Same canonical page | DPD `queísmo` entry directly documents `acordarse de que`. Wording now separates the preposition selected by the main verb from mood selection in the subordinate clause. |
+| Editorial clarity and learner-error claims | Same canonical page | Malformed Markdown repaired, source metadata added, unsupported “typical mistakes of Ukrainian speakers” heading changed to neutral contrast examples. Status remains `draft`. |
+
+**Evidence boundary:** selected NGLE sections and DPD `queísmo` were checked. The full personal-`a` article path has not yet been identified for a dedicated edit; no corpus/frequency study, country-by-country survey, complete verb-pair audit, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
+
+## 18. Personal `a` — bounded source-backed review — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Core personal-`a` distribution | `src/content/es/pronouns/personal-a.mdx`; short entry `src/content/es/sentence-structure/personal-a.mdx` | NGLE § 34.8a–i directly supports a construction-sensitive account involving definiteness, reference, animacy and context. Both pages downgraded from `reviewed` to `draft` because prior sources were generic and claim-level coverage was incomplete. |
+| Specific vs. type/class readings | Same pages | NGLE § 34.8k–n and § 34.10j support contextual contrasts with intensional verbs such as `buscar`; examples now avoid making article choice alone the determinant. |
+| Animals, personification, inanimate NPs | Same pages | NGLE § 34.8o and § 34.8p–t directly discuss proper animal names, domestic animals, personification and alternations. The wording is bounded and does not claim that every animal or inanimate NP behaves identically. |
+| `haber`, `tener` and clitic distinction | Detailed page | NGLE § 34.10e supports baseline existential `haber` and possession `tener` patterns without personal `a`; DPD `leísmo` was read and the `la` baseline for a feminine direct object is distinguished from accepted masculine-person leísmo. |
+| Source/markup/editorial quality | Both pages | Direct NGLE/DPD locators added; malformed Markdown repaired; unsupported learner-error framing replaced with neutral contrast examples. Short page continues to link to the detailed canonical page. |
+
+**Evidence boundary:** direct NGLE §§ 34.8a–t, relevant § 34.10 sections, and DPD `leísmo` were reviewed. This is not a complete audit of all alternations, regional distributions, examples/translations, or related clitic phenomena. No corpus query, frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
+
+## 19. `gustar` and gustar-type verbs — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Experiencer and grammatical subject | `src/content/es/verbs/gustar.mdx`; `gustar-type-verbs.mdx` | DPD `gustar` and NGLE § 35.5b, k–m directly support the experiencer as indirect object and the cause/thing experienced as subject in the core construction. |
+| Singular/plural agreement | Same pages | DPD directly documents plural agreement with coordinated nominal subjects. The core examples `Me gusta el libro / Me gustan los libros / Me gusta viajar` remain. An under-sourced coordinated-infinitive example was removed. |
+| Similar verbs | Same pages | NGLE § 35.5k–m lists verbs of affect including `gustar, encantar, doler, interesar`; pages now explicitly warn that this is a pedagogical grouping, not a claim that all verbs are full synonyms or share every construction. |
+| Status and source traceability | Same pages | Direct DPD/NGLE locators added; previously `verified` duplicate page downgraded to `draft`; unsupported learner-error framing changed to neutral contrast examples. |
+
+**Evidence boundary:** selected DPD/NGLE passages read. No full audit of all verbs in the group, regional clitic-doubling survey, corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test. Both pages remain `draft`.
+
+## 20. Object clitics and double-clitic sequences — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Direct vs. indirect object pronouns | `src/content/es/pronouns/objeto-directo-indirecto.mdx` | NGLE § 34.8 and indirect-object sections support the contrast `Veo a María → la veo` vs. `Escribo a María → le escribo`; personal `a` does not itself determine the function. Source locators added. |
+| Double-clitic order and `le/les → se` | `src/content/es/pronouns/double-object-pronouns.mdx`; main object-pronoun page | NGLE §§ 16.11a/j and 35.2e–g directly support strict order and `Se lo dijo` vs. `*Le lo dijo`. Malformed Markdown repaired; status set to `draft`. |
+| Proclisis/enclisis | Same pages | NGLE § 16.7 and § 16.11a support separated proclitics (`se lo daré`) vs. joined enclitics (`dárselo`), plus common finite/infinitive/gerund/affirmative-imperative examples. Full placement system remains open. |
+| Leísmo and regional plural marking | Main object-pronoun page; double-clitic page | DPD `leísmo` directly read; the feminine direct-object baseline and accepted masculine-person leísmo are distinguished. NGLE § 16.11l/§ 35.2h records regional `se los dije` patterns; no country-by-country survey was performed. |
+| Editorial/source quality | Both pages | Direct NGLE/DPD locators added, malformed Markdown repaired, unsupported learner-error headings changed to neutral contrast examples, both pages set to `draft`. |
+
+**Evidence boundary:** direct NGLE §§ 16.7, 16.11, 16.14, 34.8, 35.2 and DPD `leísmo` were checked. This is not a full dialect survey or complete audit of every clitic placement environment. No corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
+
+## 21. `si` conditionals — bounded source-backed pass — 2026-10-18
+
+| Requirement cluster | Canonical home(s) | Finding / disposition |
+|---|---|---|
+| Open/real conditions | `src/content/es/sentence-structure/conditional-sentences.mdx`; `si-clauses-overview.mdx` | NGLE § 47.8e supports present indicative in the protasis with current, habitual or prospective readings. Wording explicitly avoids equating indicative with a condition already realized. |
+| Potential/hypothetical conditions | Same pages | NGLE § 47.8g, i supports common `si + imperfecto de subjuntivo` patterns; text avoids describing every such condition as impossible or counterfactual. |
+| Past counterfactuals | Same pages | NGLE § 47.8j–k supports the common `pluscuamperfecto de subjuntivo + condicional compuesto` correlation. It is presented as a typical pattern, not a universal algorithm for every mixed conditional. |
+| Forms excluded from ordinary present-day standard `si` protases | Same pages | NGLE § 47.8d directly rejects future, conditional, present subjunctive and present perfect subjunctive in ordinary conditional protases; wording keeps the rule construction-specific and acknowledges the historical boundary. |
+| Source/status/editorial quality | Same pages | Malformed Markdown repaired; NGLE locators added; previously `verified` overview downgraded to `draft`; learner-error headings neutralized. |
+
+**Evidence boundary:** NGLE § 47.8a–k read directly for the claims above. No full survey of all conditional correlations, corpus/frequency study, country-by-country variation study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.
+
+
+## 22. Imperative forms, address pronouns, and voseo — 2026-10-19
+
+| Requirement / claim | Canonical pages | Evidence and current status |
+|---|---|---|
+| Affirmative imperative forms across *tú, vos, vosotros, usted, ustedes* | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx`; `src/content/es/regional/voseo.mdx` | NGLE § 42.3c/g distinguishes exclusive imperative forms (*ven, vení, venid*) from forms shared with subjunctive (*venga, vengan*) and lists common irregular *tú* forms. The pages now link to the direct NGLE source. This is a bounded check, not a full paradigm audit. |
+| Negative imperative | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/object-pronoun-placement.mdx` | NGLE § 42.3t–u directly supports the subjunctive-form pattern and rejects simply negating exclusive affirmative forms (*no ven*, *no di*, *no llamá*). Wording now contrasts the forms rather than presenting the negative as a mechanical prefix. |
+| Clitic position with affirmative vs negative imperatives | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/object-pronoun-placement.mdx` | NGLE § 42.3e/h supports enclisis in affirmative imperative contexts and preverbal clitics in negative imperatives (*dímelo* vs *no me lo digas*). Broader placement restrictions and all clitic clusters remain outside this batch. |
+| *vosotros* and *ustedes* address scope | `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx` | DPD «vosotros» supports informal plural address in most of Spain and its absence in America and some southern Spanish areas, where *ustedes* also serves informal plural address. The page remains `draft`; country-specific social norms need further evidence. |
+| *vos* and regional voseo | `src/content/es/regional/voseo.mdx`; `src/content/es/moods/imperativo.mdx` | DPD «vos» supports *vos* as a singular second-person pronoun in voseante varieties and gives a bounded geographic/social description. It does not substantiate every regional claim or the full regional distribution of imperative forms. The prior `verified` status was downgraded to `draft`. |
+| Accentuation and enclitic spelling | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/object-pronoun-placement.mdx` | The pages retain examples such as *dime → dímelo* and *explica → explícamelo*. A complete orthographic audit of all forms and voseo imperative spellings remains open. |
+| Temporal *en cuanto* mood selection | `src/content/es/moods/subjunctive-triggers.mdx`; `src/content/es/moods/when-not-subjunctive.mdx`; `src/content/comparisons/indicative-subjunctive.mdx` | Still open: NGLE §§ 22.6p and 31.14i establish meaning/classification, not a full mood-distribution rule. Preserve the caveat; do not generalize from one prospective example. |
+
+**Evidence boundary:** direct NGLE § 42.3 and DPD «vos»/«vosotros» passages were read. No exhaustive paradigm, regional-frequency, corpus, or browser/accessibility/SEO audit was performed. All four edited pages remain `draft`.
+
+
+## 23. Voseo imperative accentuation and address-form exceptions — 2026-10-19
+
+| Requirement / claim | Canonical pages | Evidence and current status |
+|---|---|---|
+| Voseo affirmative imperatives | `src/content/es/moods/imperativo.mdx`; `src/content/es/regional/voseo.mdx` | DPD «voseo» § 2.1.2.5 supports forms such as *tomá, respondé, escribí* and distinguishes them from irregular *tú* imperatives. DPD §§ 2.3–2.4 supports the regional and social boundaries. This is not a complete country-by-country paradigm audit. |
+| Enclitic spelling and accentuation | `src/content/es/moods/imperativo.mdx` | DPD «voseo» § 2.1.2.5 says enclitic forms follow general accentuation rules; DPD «tilde» §§ 1.2.1–1.2.3 supplies the rules. The page now contrasts *decí → decime → decímelo*. Full spelling audit remains open. |
+| *Vosotros* vs *ustedes* in plural address | `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx` | DPD «vosotros» supports informal *vosotros* in most of Spain, with *ustedes* also used informally in the Canary Islands and western Andalusia; *vosotros* is not used in America as a normal address form. The quick map now names the southern Spanish exception. |
+| Rioplatense vs Chilean voseo | `src/content/es/regional/voseo.mdx`; `src/content/es/moods/imperativo.mdx` | DPD «voseo» §§ 2.1.2.5, 2.3–2.4 supports the accepted Rioplatense imperative forms and the more restricted Chilean profile. All country-specific paradigms and frequency claims remain unverified. |
+
+**Evidence boundary:** direct DPD «voseo», «tilde», and «vosotros» entries were read. No corpus/frequency study, exhaustive regional paradigm review, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. All three pages remain `draft`.
+
+
+## 24. Voseo page claim-level audit — 2026-10-19
+
+| Claim | Finding / action | Status |
+|---|---|---|
+| Definition of pronominal vs verbal voseo | Replaced *Vos vivís aquí* as the sole pronominal example because it contains both *vos* and a voseante verb. Uses *Vos eres inteligente* as a DPD-documented pronominal-only pattern in some varieties. | Corrected; page remains `draft`. |
+| Rioplatense present indicative forms | *hablás, comés, vivís, sos, tenés, querés, podés* are consistent with the DPD's generalized Rioplatense description. Table remains explicitly scoped to Rioplatense. | Bounded source check; not a universal paradigm. |
+| Geography and social meaning | DPD §§ 2.3–2.4 documents voseo across much of Hispanic America but with major country/area and social differences. The overview includes Paraguay in the Rioplatense summary and cautions against inferring a speaker's system from country name alone. | Bounded source check; country-level completeness remains open. |
+| Imperative and clitic spelling | DPD § 2.1.2.5 supports Rioplatense *cantá, comé, viví* and general accentuation rules with enclitics; Chilean usage is not treated as identical. | Bounded source check; full accentuation and regional audit remains open. |
+| Learner-error examples | Replaced `Mistake` components for *vos eres* and *vos hablas* with a contrast table labelled by variety, because these forms are not universally wrong. | Corrected. |
+
+**Evidence boundary:** DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4 were read directly. No corpus/frequency study, exhaustive regional paradigm review, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. `review_status` remains `draft`.
+
+
+## 25. Temporal *en cuanto* — prospective subjunctive evidence — 2026-10-19
+
+| Claim | Evidence / action | Status |
+|---|---|---|
+| Temporal meaning of *en cuanto* | NGLE § 22.6p defines the temporal meaning as ‘inmediatamente que’; § 31.14i discusses its relative-adverbial immediacy use. | Meaning/category source-checked. |
+| Prospective/future *en cuanto + subjunctive* | RAE-hosted BRAE article «Las conjunciones temporales del español», p. 301, gives *en cuanto salgan* alongside *cuando venga* as prospective temporal subjunctive examples. Added the source and example to the canonical trigger page, the “when not subjunctive” page, and the comparison page. | Supported for prospective contexts. |
+| Complete mood distribution | The inspected NGLE passages do not give the full distribution; the BRAE excerpt supports the prospective pattern but does not establish categorical exclusion of indicative in all habitual, factual, past or generic contexts. | Open; no universal rule claimed. |
+
+**Evidence boundary:** relevant BRAE excerpt inspected from the RAE-hosted PDF result; no full article audit, corpus query, or frequency study performed. All three pages remain `draft`.
+
+
+## 26. Частини тіла та присвійні форми — редакційний follow-up (2026-10-19)
+
+- **Канонічні сторінки:** `src/content/es/pronouns/body-parts-possession.mdx`, `src/content/es/pronouns/possessive-pronouns.mdx`; порівняння: `src/content/comparisons/articles.mdx`.
+- **Результат:** покращено зв'язок між коротким оглядом артиклів і двома докладними статтями; у присвійній статті додано джерельний локатор до NGLE §§ 18.1–18.7 і встановлено `draft`; у статті про частини тіла чіткіше позначено межі доказів і регіональної перевірки.
+- **Disposition:** структурне покриття існує; доказова перевірка прикладів і перекладів — часткова/не завершена. Це не нова тема й не підстава для окремої сторінки про кожен різновид.
+- **Невирішене:** перевірити кожний приклад `doler`, рефлексивні дії, симпатетичний/посесивний датив, одяг, присвійний контраст та форми `vuestro` / `ustedes` за точними розділами NGLE і джерелами для конкретних різновидів. Не робити загальних тверджень про частотність або «типові помилки» без корпусних/емпіричних доказів.
+
+
+## 27. QA follow-up — possessive-page markup (2026-10-19)
+- **Failure evidence:** full QA run 39208866244 failed only at `audit:final` with one blocking `emphasis_artifacts` match on the regional-variation paragraph of `pronouns/possessive-pronouns`; all earlier stages in the log passed.
+- **Repair:** changed bold emphasis around Spanish possessive/address forms to italic emphasis in commit `063a11c08530627bf25937dd6a1c883d5e91050f`.
+- **Status:** repair committed; exact-head CI pending. No change to linguistic review status; page remains `draft`.
+
+
+## 28. Частини тіла: датив експерієнцера vs симпатетичний датив (2026-10-19)
+
+- **Канонічна сторінка:** `src/content/es/pronouns/body-parts-possession.mdx`.
+- **Доказ:** безпосередньо прочитано RAE/ASALE GTG «dativo» та «complemento indirecto». У першому розрізнено датив-аргумент експерієнцера (*Me duele la garganta*) і посесивний/симпатетичний датив; у другому *Le lavó el pelo al niño* прямо класифіковано як неаргументний датив-додаток.
+- **Disposition:** пояснення уточнено, прямі академічні посилання додано. Не всі дативи при частинах тіла мають однаковий синтаксичний статус; *Me duele la cabeza*, *Me lavo las manos* та *Le lavó el pelo al niño* не слід зводити до одного правила.
+- **Не перевірено:** кожний приклад і переклад; усі конструкції з одягом; країновий/реєстровий розподіл; корпусна частотність; браузерна доступність/SEO.
+- **Статус:** `body-parts-possession.mdx` залишається `draft`; `possessive-pronouns.mdx` також `draft`, оскільки джерельний локатор NGLE §§ 18.1–18.7 не є повним claim-level аудитом форм і регіональних тверджень.
+
+
+## 29. Присвійні форми — прямий NGLE pass (2026-10-19)
+
+- **Канонічна сторінка:** `src/content/es/pronouns/possessive-pronouns.mdx`.
+- **Доказ:** безпосередньо прочитано NGLE §§ 18.2, 18.3, 18.5a та 18.7a–i на сайті RAE/ASALE. Джерела розрізняють prenominal possessives як determiners і postnominal possessives як restrictive modifiers, підтверджують узгодження посесивної форми та пояснюють означений артикль із посесивним значенням у конструкціях з частинами тіла.
+- **Регіональна знахідка:** NGLE § 18.2l–ñ прямо описує історичні та регіонально обмежені конструкції з артиклем і присвійним (*un su amigo*, *una mi hijita*) у певних зонах Іспанії, Мексики, Центральної Америки, Парагваю й Анд. Тому правило «mi casa, не la mi casa» лишено як нейтральну загальноіспанську модель, але додано межу, щоб не оголошувати всі інші варіанти неможливими в кожному різновиді.
+- **Зміни:** прямі NGLE URL додано до джерел; пояснення коротких/повних форм розведено на три конструкції: `mi casa`, `un amigo mío` / `la casa es mía`, `el mío / la mía`.
+- **Не перевірено:** повний аудит кожного елемента парадигми й перекладу, корпусна частотність, країновий розподіл `vuestro/vuestra` та `su/sus`, повний контекстний аналіз неоднозначності `su`, браузер/accessibility/SEO.
+- **Статус:** `possessive-pronouns.mdx` лишається `draft`; структурні claims мають прямі джерела, але повна перевірка статті не завершена.
+
+
+## 30. QA follow-up — malformed source frontmatter in body-parts page (2026-10-19)
+
+- **Finding:** run 39210353945 failed at `astro sync` because the new NGLE § 18.7 source locator in `src/content/es/pronouns/body-parts-possession.mdx` lacked a closing double quote; YAML reported `bad indentation of a mapping entry` at line 33.
+- **Repair:** added the missing quote in commit `82cd7e57f9135ff44f1d1e628c925591e16b40f7`.
+- **Impact:** no grammar/content claim changed; this is frontmatter syntax only.
+- **Status:** exact latest HEAD requires a fresh full QA run; prior successful run 39210103241 predates this content/source batch.
+
+
+## 31. Приклади частин тіла й одягу — точкова перевірка (2026-10-19)
+
+- **Канонічна сторінка:** `src/content/es/pronouns/body-parts-possession.mdx`.
+- **Доказ:** NGLE § 18.7a–i прочитано безпосередньо. Підтверджено базову модель *Me duele la cabeza*, посесивний артикль із частинами тіла та приклади з дативом на кшталт *Se me cierran los ojos* / *Se me taponaron los oídos*.
+- **Виправлення:** *Le quitaron la chaqueta* → «З нього/неї зняли куртку»; *Le lavó el pelo al niño* перекладено без вигаданого роду підмета; вилучено хибну альтернативу «рука зламалася» для *Se rompió el brazo*; *Lavo mis manos* перестало бути безумовним `Mistake` і позначене як нетиповий нейтральний вибір, а не універсально неграматична форма.
+- **Аналіз:** чіткіше розрізнено датив експерієнцера в *Me duele la cabeza*, посесивну інтерпретацію *me* в *Me lavo las manos* і прямо описаний GTG неаргументний симпатетичний датив у *Le lavó el pelo al niño*. Аналіз *El médico me revisó la garganta* позначено як висновок за аналогією, а не дослівний приклад із джерела.
+- **Не перевірено:** повний корпусний/частотний аналіз, всі приклади й переклади, країнові/реєстрові відмінності, браузер/accessibility/SEO.
+- **Статус:** `body-parts-possession.mdx` залишається `draft`.
+
+
+## 32. Cross-page consistency — article special cases and body-part guide (2026-10-19)
+
+- **Files:** `src/content/es/articles/special-cases.mdx`, `src/content/es/pronouns/body-parts-possession.mdx`, `src/content/comparisons/articles.mdx`.
+- **Disposition:** special-cases page now uses direct NGLE § 18.7a–i evidence and links to the detailed body-part/dative guide. The comparison page already links to the body-part guide and possessive forms page, so no duplicate topic was added.
+- **Specific repair:** clarified *Se rompió el brazo* vs *Se le rompió el brazo*; avoid claiming a context-free anticausative analysis for the first form.
+- **Limits:** only a targeted cross-page pass; not a complete audit of all special-cases content, country-level variation, corpus frequency, browser/accessibility/SEO. Relevant pages remain `draft`.
+
+
+## 33. Одяг і clitic: обмеження узагальнення (2026-10-19)
+
+- **Сторінка:** `src/content/es/pronouns/body-parts-possession.mdx`.
+- **Джерело:** NGLE § 18.7d, g: https://www.rae.es/gram%C3%A1tica/sintaxis/alternancias-de-presencia-y-ausencia-de-posesivos. Академічний текст включає предмети особистої сфери (зокрема *pantalones*) до конструкцій з артиклем у посесивному значенні та описує симпатетичний датив.
+- **Зміна:** пояснення уточнено так, щоб не зводити *Ponte el abrigo*, *Quítate los zapatos*, *Me he manchado la camisa* і *Le quitaron la chaqueta* до одного синтаксичного шаблону. Швидку довідку щодо *Me lavo las manos* узгоджено з основним поясненням.
+- **Межа:** загальна модель підтримана NGLE, але точний розбір кожного clitic у цих чотирьох прикладах не заявлено як дослівно засвідчений у джерелі. Немає корпусного чи країнового аналізу; сторінка залишається `draft`.
+
+
+## 34. Special-case articles — direct DPD evidence and open claims (2026-10-19)
+
+- **Directly checked:** DPD «el» §§ 2.1–2.2 supports the stressed-initial-/a/ rule, immediate adjacency, feminine agreement and demonstrative contrast; §§ 4–6 support the bounded statements on personal names and geographical names. NGB § 9.1.1 confirms the article paradigm. NGLE § 18.7a–i supports the article/possession discussion for body parts.
+- **Changed:** source register now distinguishes direct-text sources from the NGLE contents-index-only locators; country-name wording marks *la Argentina* as a possible variant; the discussion of *la María* includes register and regional limitations; proper-name exception to *al/del* contraction added as a claim needing direct source verification; related canonical possession pages added to frontmatter.
+- **Still open:** source-specific verification of profession predicates after *ser*, weekday article use, language names, and contractions *al/del*. The cited NGLE § 14.3 and §§ 15.11–15.13 are currently contents-index locators, not direct chapter text. No corpus/frequency study or browser/accessibility/SEO testing. `special-cases.mdx` remains `draft`.
+
+
+## 35. Cross-page consistency — profession examples and *al/del* (2026-10-19)
+
+- **Pages:** `definite-indefinite.mdx`, `zero-article.mdx`, `special-cases.mdx`, and `comparisons/articles.mdx`.
+- **Correction:** removed the visually categorical `Mistake` treatment of *Soy un médico* and replaced it with a neutral contrast against *Soy médico*, because the descriptive/qualified form is possible. The two canonical pages now remain `draft` with current edit dates.
+- **Consistency:** the comparison and special-cases pages now mention that contraction does not apply when **El** is part of a proper name (*a El Salvador*, *de El Cairo*). The rule still requires a direct source pass; the current NGLE § 14.3 citation is a contents-index locator only.
+- **Open claims:** direct evidence for profession predicates after *ser*, weekday article use, language names, and *al/del* contractions not yet inspected. No corpus/frequency or browser/accessibility/SEO audit; pages remain `draft`.
+
+
+## 36. Direct NGLE pass — bare predicates and language names (2026-10-19)
+
+- **NGLE § 15.11g, m:** direct text supports bare nominal predicates (*Son médicos*) and language names without determiners in habitual/generic contexts (*Habla ruso*). This supports the general pattern behind examples on `special-cases.mdx`, not a universal article rule.
+- **NGLE § 15.13:** direct text discusses construction-specific and phraseological uses of bare nouns; no direct weekday-name rule was found in this pass.
+- **RAE Ortografía:** directly supports no contraction when the article belongs to an official place name (*a El Cairo*, *de El Dorado*). The general *al/del* rule still needs direct NGLE § 14.3 text.
+- **Disposition:** the source register and evidence boundary were updated. Weekday use remains open; no corpus/frequency, full Ukrainian edit, or browser/accessibility/SEO audit. Page remains `draft`.
+
+
+## 37. QA follow-up — emphasis artifact in *el/él* contrast (2026-10-19)
+
+- Run `39211512517` failed at final emphasis audit with one `emphasis_artifacts` match in `special-cases.mdx:112`; other blocking totals were zero.
+- Replaced bold spans around *el* and *él* with italics in commit `2c75c52ede13e9c231fd010894360e27924588df`. This is a markup-only repair; grammar claims and QA rules are unchanged.
+- Exact latest HEAD still needs a full QA pass.
+
+
+## 38. Артиклі: джерела та узгодженість сторінок — 2026-10-19
+
+| Вимога / твердження | Канонічні сторінки | Результат і статус |
+|---|---|---|
+| Професія після `ser` | `articles/definite-indefinite.mdx`, `articles/zero-article.mdx`, `articles/special-cases.mdx`, `comparisons/articles.mdx` | Формулювання узгоджено: `Soy médico` — нейтральна класифікація; описова/ідентифікаційна група може мати артикль. NGLE § 15.11 прямо підтримує загальну модель; не кожний приклад або контекст перевірено. Частково перевірено. |
+| Назви мов без артикля | `articles/zero-article.mdx`, `articles/special-cases.mdx`, `comparisons/articles.mdx` | NGLE § 15.11 прямо дає приклад `Habla ruso` у відповідному звичному/узагальненому контексті; не універсальне правило для всіх синтаксичних функцій. Частково перевірено. |
+| Артикль із днями тижня | `articles/special-cases.mdx`, `comparisons/articles.mdx` | Прямий спеціалізований розділ RAE/ASALE не знайдено в обмеженому пошуковому проході. Приклади залишено як ілюстративні; твердження не верифіковано. Відкрита прогалина. |
+| Стягнення `al/del` | `articles/special-cases.mdx`, `comparisons/articles.mdx` | Виняток із `El` у складі власної назви прямо підтримано RAE *Ortografía*. Прямий текст NGLE § 14.3 у цьому проході не прочитано; загальне правило лишається з відкритим джерельним gate. Частково перевірено. |
+| Прямі джерела для нульового артикля | `articles/zero-article.mdx` | Посилання на NGLE §§ 15.11 та 15.13 замінено з contents-index locator на прямі сторінки. Це покращує відтворюваність, але не означає повного claim-level аудиту. |
+
+**Межа доказів:** повний аудит усіх прикладів/перекладів, корпусна частотність, країно-регіональний фактчек, незалежна редактура української, браузер/accessibility/SEO та готовність до публікації не встановлені. Сторінки залишаються `draft`.
+
+
+## 39. QA follow-up — джерельний реєстр YAML — 2026-10-19
+
+- **Помилка:** run [39212495117](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39212495117) зупинився на `astro sync` у `src/content/es/articles/zero-article.mdx:25:322` через некоректний перенос рядка в YAML-списку джерел.
+- **Причина:** під час заміни contents-index посилання двома прямими URL NGLE між елементами списку потрапив буквальний `\\n`, а не справжній перенос рядка.
+- **Виправлення:** у коміті `2d24c3c6db5031c0f3f233e62541fa9d9c3425c0` розділювач замінено справжнім переносом; джерела § 15.11 і § 15.13 стали окремими коректними елементами YAML-списку.
+- **QA:** точний HEAD після виправлення та подальших checkpoint-комітів потребує повного успішного запуску.
+
+
+## 40. Прямі джерела: дні тижня та al/del — 2026-10-19
+
+| Claim | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Артикль із днями тижня | NGLE § 14.8c–h: https://www.rae.es/gram%C3%A1tica/sintaxis/usos-de%C3%ADcticos-del-art%C3%ADculo-determinado-el-art%C3%ADculo--en-las-expresiones-temporales | Підтверджено загальне вживання означеного артикля для конкретного дня (*el lunes*), повторюваність у множині (*los lunes*) і розрізнення з конструкціями без артикля (*Hoy es jueves*, заголовки дат, *en viernes*). | Не є аудитом усіх прикладів, регіональних конструкцій або всіх можливих часових іменникових груп. |
+| Стягнення *al/del* | NGLE § 14.3a–g: https://www.rae.es/gram%C3%A1tica/sintaxis/formas-del-art%C3%ADculo-determinado-ii-el-art%C3%ADculo--en-las-construcciones-contractas | Підтверджено загальне/систематичне стягнення, виняток із артиклем у складі власної назви та вимогу безпосереднього сусідства. | § 14.3c–d зазначає письмову рекомендацію не стягувати *El* у назвах на кшталт *El Salvador*, але фіксує й варіанти; не можна подавати всі топоніми як одну категорію. |
+
+**Статус:** rule-level джерельний gate для цих двох тверджень закрито в межах зазначених розділів. Повний claim-by-claim аудит статті, корпусний/регіональний аналіз, незалежна редактура української та браузерні перевірки залишаються невиконаними. Сторінки лишаються `draft`.
+
+
+## 41. Узгодження винятку al/del у порівняльній сторінці — 2026-10-19
+
+- `comparisons/articles.mdx` узгоджено з `special-cases.mdx` та NGLE § 14.3c–d: якщо артикль є складником власної назви на кшталт `El Salvador`, у письмі рекомендують уникати стягнення, але джерело фіксує й варіантні вживання. Формулювання не представляє це як абсолютне твердження про кожне реальне вживання.
+- Додано пряме посилання на NGLE § 14.3. Це точкова правка міжсторінкової узгодженості, а не повний аудит топонімів.
+
+
+## 42. Ser/estar/hay: джерельна перевірка центральних правил — 2026-10-19
+
+| Вимога | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Межі мнемоніки «постійне / тимчасове» | NGLE § 37.7a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-atributo-en-las-oraciones-copulativas-con-ser-y-estar-i-aspectos-sem%C3%A1nticos-de-la-distinci%C3%B3n | Прямий текст відкидає просте ототожнення характерних/ситуаційних предикатів із постійними/тимчасовими властивостями. | Підтверджує загальну модель, але не всі прикметники чи приклади в статтях. |
+| Місце предмета проти місця події | NGLE § 37.8a, e–f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-atributo-en-las-oraciones-copulativas-con-ser-y-estar-ii-pol%C3%A9micas-relativas-a-los-atributos-locativos | Для місця особи/речі типове *estar*; із назвами подій можливе *ser*. Контекстна коротка відповідь *Es en Madrid* не є помилкою сама по собі. | Не перевіряє всі можливі контекстні еліпсиси. |
+| Екзистенційне *haber* і означені групи | NGLE § 15.6a–n: https://www.rae.es/gram%C3%A1tica/sintaxis/grupos-nominales-definidos-e-indefinidos-en-contextos-presentativos-o-existenciales | Ефект означеності — загальна тенденція з явно описаними кількісними, ендофоричними та іншими винятками; *estar* локалізує вже ідентифікований референт. | Не робить кожну конструкцію з означеним NP неграматичною. |
+| Узгодження безособового *haber* | NGLE § 41.6a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/impersonales-no-reflejas-ii-impersonales-con-los-verbos-haber-hacer-ser-estar-e-ir | Джерело описує засвідчене узгодження, зокрема *habían/hubieron*, його неоднакове соціальне сприйняття й рекомендацію неузгоджених форм для формального стандарту. | Не є корпусним вимірюванням частотності для кожної країни; регіональні висновки обмежені описом NGLE/DPD. |
+
+**Статус:** центральні правила й названі приклади мають прямий розділовий доказ у межах таблиці. Повна перевірка кожного прикладу/перекладу, регіональний корпусний аналіз, браузерний QA та релізні gates лишаються відкритими; сторінки залишаються \`reviewed\`, якщо не виконано окремий повний аудит.
+
+
+## 43. Indefinido/imperfecto: прямі джерела й статуси канонічних сторінок — 2026-10-19
+
+| Твердження | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Indefinido може охоплювати тривалий період, а не лише коротку дію | NGLE § 23.9a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9 | Підтверджено тривалість із зовнішніми часовими межами та наративну послідовність. | Не перевірено кожен приклад у канонічній статті. |
+| *Supe* / *conocí* можуть виражати набуття знання / знайомство | NGLE § 23.9j: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9#23.9j | Прямо описано *saber* ‘дізнатися’ та perfective *conocer* ‘вступити в контакт’; imperfective *conocer* може означати ‘знати/бути знайомим’. | Значення *querer* додатково залежить від лексичного значення та контексту. |
+| *Quería pedirte un favor* як ввічливий imperfecto | NGLE § 23.11e–g: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-ii-desarrollos-de-la-noci%C3%B3n-de-copret%C3%A9rito-valores-modales-del-imperfecto | Підтверджено дистанціювання/ввічливість і частотність конструкції з *querer/desear*. | Не доводить, що будь-який imperfecto *quería* є ввічливим. |
+| Повторюваність не виключає indefinido за наявності меж інтервалу | NGLE § 23.13d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-iv-otros-aspectos-de-la-oposici%C3%B3n-cant%C3%A9cantaba | Джерело прямо наводить обмежений інтервал, у якому серія повторюваних подій може стояти в indefinido. | Не засвідчує автоматично природність кожного ізольованого речення з *cada día*. |
+
+**Статус:** точкові правила мають прямі джерела; повний аудит усіх прикладів, перекладів, регіонального розподілу й браузерних властивостей не виконано. Канонічні сторінки indefinido та imperfecto мають статус \`reviewed\`, не \`verified\`.
+
+
+## 44. Perfecto compuesto / indefinido: регіональна варіативність — 2026-10-19
+
+| Твердження | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Географічна варіативність *he cantado/canté* | NGLE § 23.7b–c: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos | Джерело описує кілька систем: актуальна перспектива в центральній/південній європейській іспанській, аспектуальне протиставлення в багатьох мексиканських/центральноамериканських/карибських різновидах і нейтралізацію в інших регіонах. | Не слід робити висновки про кожну країну чи кожного мовця. |
+| *Ayer* і *he cantado* | NGLE § 23.8a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos | У багатьох європейських моделях закритий минулий інтервал сприяє *canté*; інші різновиди можуть розподіляти форми інакше. | Маркер часу не є універсальним механічним тригером. |
+| Відкритий інтервал *esta semana/este año* | NGLE § 23.7f, 23.7w and 23.8f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos | *Este/esta* може задавати розширений інтервал, що охоплює момент мовлення, але вибір форми залежить також від регіональної системи та значення. | Не засвідчує автоматично природність кожного прикладу без контексту. |
+
+**Статус:** регіональний опис має прямі академічні джерела й обмежені межі; це не повний діалектологічний або корпусний аудит. Сторінки залишаються reviewed.
+
+
+## 45. Минулі часи: не маркувати контекстні варіанти як безумовні помилки — 2026-10-19
+
+| Приклад | Пряме джерело | Редакційне рішення | Межа |
+|---|---|---|---|
+| *Ayer he comido* проти *Ayer comí* | NGLE §§ 23.7b–c, 23.8a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos | У двох канонічних сторінках компонент Mistake замінено на регіональну нотатку; типовий вибір описано без універсальної заборони. | Конкретна природність залежить від цільового різновиду й контексту. |
+| *Cuando era niño, comí en casa* проти *comía en casa* | NGLE §§ 23.9a–d, 23.13d–h: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-iv-otros-aspectos-de-la-oposici%C3%B3n-cant%C3%A9cantaba | Замість безумовного маркування Mistake пояснено звичне прочитання imperfecto та можливість окремого епізоду з indefinido. | Ізольована фраза не задає достатньо контексту для остаточної оцінки всіх прочитань. |
+
+**Статус:** ці зміни зменшують ризик надмірних тверджень; вони не означають повної верифікації всієї системи минулих часів. Статуси канонічних сторінок лишаються reviewed.
+
+
+## 46. Presente de subjuntivo: джерельна перевірка базових індукторів — 2026-10-19
+
+| Твердження | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Indicativo як типовий режим незалежного твердження; роль індукторів | NGLE § 25.2a, f–n: https://www.rae.es/gram%C3%A1tica/sintaxis/inductores-del-modo | Підтверджено, що спосіб може визначатися дієсловом, прикметником, іменником, прислівником, запереченням, відносною конструкцією тощо. | Не створює списку, який автоматично розв'язує кожний контекст. |
+| Бажання, оцінка й твердження | NGLE § 25.3a–j: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-sustantivas-i-contextos-b%C3%A1sicos-de-selecci%C3%B3n-del-modo | Предикати різних семантичних класів обирають способи; просте «впевненість/невпевненість» недостатнє. | Не перевірено всі дієслова й усі приклади на сторінці. |
+| Заперечення й сфера дії | NGLE § 25.7a–f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-sustantivas-v-negaci%C3%B3n--y-subjuntivo-en-la-subordinaci%C3%B3n-sustantiva-otros-inductores-asimilables-a-la-negaci%C3%B3n | Заперечення часто індукує subjuntivo, але інтерпретація може відрізнятися залежно від того, що саме подано як відоме/істинне. | Потрібен контекст для багатьох пар з indicativo/subjuntivo. |
+| Відносні речення: specific/non-specific | NGLE § 25.10a–f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen | Indicativo часто підтримує specific reading, subjuntivo — non-specific; джерело прямо застерігає від простого ототожнення з існуванням/неіснуванням референта. | Не кожне відносне речення підпорядковується спрощеній парі. |
+| *Aunque* й інші підрядні сполучники | NGLE § 25.13a–f: https://www.rae.es/gram%C3%A1tica/sintaxis/elecci%C3%B3n-del-modo-con-las-conjunciones-subordinantes | Для частини сполучників спосіб залежить від значення; *aunque* допускає обидва способи в певних контекстах. | Не є повним аудитом часових, умовних та інших підрядних конструкцій. |
+
+**Статус:** канонічну presente-subjuntivo сторінку позначено reviewed, не verified; список тригерів і повний набір прикладів потребують окремого аудиту.
+
+
+## 47. Часові підрядні у шпаргалках subjuntivo — 2026-10-19
+
+| Твердження | Джерело | Результат | Межа |
+|---|---|---|---|
+| *Cuando*: habitual/generic vs. prospective/posterior reading | NGLE § 24.5c, j–k: https://www.rae.es/gram%C3%A1tica/sintaxis/tiempo-aspecto-y-adjuntos-de-localizaci%C3%B3n-temporal-ii-construcciones-temporales-con-el-adverbio-cuando | Підтверджено, що вибір інтерпретації залежить від аспекту й часового зв'язку; нейтральний приклад для конкретної очікуваної майбутньої події — *Cuando llegues mañana, llámame*. Категоричний компонент Mistake замінено контекстною нотаткою. | Не є повним описом усіх регіональних або спеціальних конструкцій. |
+| *Hasta que*: alternancia modal | NGLE § 25.14e: https://www.rae.es/gram%C3%A1tica/sintaxis/elecci%C3%B3n-del-modo-con-preposiciones-adverbios-e-interjecciones | У generic reading можливі indicativo/subjuntivo; prospectivity схиляє до subjuntivo. | Конкретний вибір залежить від значення головного предиката та часової перспективи. |
+| *Después de que*: future and non-future contexts | NGLE § 25.14h: https://www.rae.es/gram%C3%A1tica/sintaxis/elecci%C3%B3n-del-modo-con-preposiciones-adverbios-e-interjecciones | Future indicative не приймається в часовому прочитанні; для теперішніх/минулих подій чергуються способи з регіональною відмінністю. Шпаргалку уточнено. | Не слід переносити це на concessive/causal uses *después de que*. |
+| Номер розділу у реєстрі джерел для relative clauses | NGLE § 25.10: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen | У двох сторінках виправлено метадані § 25.12 → § 25.10. | Це виправлення локатора джерела, а не повна верифікація всіх прикладів про відносні підрядні. |
+
+**Статус:** обидві сторінки залишаються draft; цей pass не підтверджує готовність до публікації.
+
+
+## 48. Cross-page source locator: relative clauses — 2026-10-19
+
+Під час звіряння порівняльної сторінки та сторінки про випадки без subjuntivo виявлено два додаткові посилання, де URL відповідав NGLE § 25.10, але текст указував § 25.12. Номери виправлено в comparisons/indicative-subjunctive.mdx і es/moods/when-not-subjunctive.mdx. Це узгоджує локатори з двома вже виправленими сторінками тригерів. Джерело: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen. Інші твердження на цих сторінках цим записом не сертифікуються.
+
+## 49. Estar + gerundio: aspectual framing and English-transfer risk (2026-10-19)
+
+| Claim | Direct source | Result | Boundary |
+|---|---|---|---|
+| Progressive viewpoint presents an internal phase of a situation already in progress | NGLE § 28.12c–e: https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-i-el-auxiliar-estar | Supported. It is not restricted to the exact moment of speaking; tense and context set the reference point. | Does not mean every ongoing event requires the progressive. |
+| Present indicative can also describe an ongoing situation | NGLE § 23.5f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-presente-canto-i-caracterizaci%C3%B3n-de%C3%ADctica-los-presentes-generalizadores | Supported. *Estar + gerundio* is especially common for durative activity in progress, but the simple present can occur. | Contextual alternation, not complete interchangeability. |
+| Progressive can describe recurring behavior over a current interval | NGLE § 28.12l–m: https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-i-el-auxiliar-estar | Supported by examples such as *Últimamente estás fumando demasiado*; repeated/habitual adverbs do not automatically make the construction wrong. | The exact reading depends on temporal interval, predicate, and discourse. |
+| Some progressive forms are unnecessary or calqued when the intended event is presented as completed | NGLE § 28.12s: https://www.rae.es/gram%C3%A1tica/sintaxis/per%C3%ADfrasis-de-gerundio-i-el-auxiliar-estar | Supported as a usage caution; the canonical page now provides a qualified contrast. | Not a ban on future progressive or all uses with a future reference. |
+
+**Status:** `estar-gerundio.mdx` is `reviewed`, not `verified`. This bounded source pass does not verify every gerund construction, example, translation, regional-frequency claim, or browser behavior.
+
+## 50. Gerundio cluster: page roles and evidence limits (2026-10-19)
+
+| Page / claim area | Direct source | Disposition | Remaining boundary |
+|---|---|---|---|
+| `verbs/gerundio.mdx`: form and general functions | RAE/ASALE, *Libro de estilo de la Justicia*, § 6.5: https://www.rae.es/libro-estilo-justicia/las-palabras-y-sus-grupos-problemas-y-actuaciones/gerundio | Added direct source; page role clarified as compact form/overview reference. | Irregular-form inventory and every example/translation not exhaustively checked. |
+| `verbs/gerund-uses.mdx`: simultaneity, peripheral constructions, and restrictions | NGLE §§ 28.12–28.13; *Libro de estilo de la Justicia* §§ 6.5.1–6.5.2 | Added direct links to the relevant progressive/incremental constructions and selected usage guidance; page role clarified as functions/restrictions. | Legal-style cautions should not be generalized into an exhaustive pan-Hispanic grammar of every gerund construction. |
+| Post-nominal gerund and learner-error framing | RAE/ASALE sources above, interpreted construction-by-construction | Replaced categorical error framing with contextual contrast; both general gerund pages changed from `verified` to `reviewed`. | Specific post-nominal examples need a dedicated claim-level pass before any stronger status. |
+
+**Status:** the two general gerund pages are `reviewed`, not `verified`; the progressive page is also `reviewed`. This is a bounded editorial/source pass, not a complete gerund audit.
+
+## 51. Neutral *lo*: semantics, relative constructions, and regional *lo de* (2026-10-19)
+
+| Claim / requirement | Canonical page(s) | Direct evidence and disposition | Remaining limits |
+|---|---|---|---|
+| Referential vs emphatic *lo* | articles/neutral-lo.mdx | NGLE § 14.9d–e distinguishes referential *lo + adjective* (adjective masculine singular) from emphatic/degree *lo + adjective/adverb + que*, where adjective agreement may follow the noun (*lo difíciles que han sido los últimos días*). Page now explains the distinction. | No full example/translation inventory or audit of all degree constructions. |
+| *lo que* and *lo cual* | articles/neutral-lo.mdx; pronouns/relative-pronouns.mdx | NGLE § 44.1b, g–h and § 44.7k support relative forms without an expressed nominal antecedent, the complex-relative analysis, inanimate reference and anaphoric reference to propositional content. Both pages now distinguish these patterns and cross-link. | Does not establish interchangeability; context and syntactic construction remain relevant. |
+| Locative *lo de + name* | articles/neutral-lo.mdx | NGLE § 14.10g–h describes a colloquial locative use in Chile, Río de la Plata, Guatemala, Bolivia and other American areas; it is more frequent in American Spanish but also documented in Europe. Page separates this from “the matter/story about X”. | No corpus-frequency calculation or country-by-country survey; not a universal neutral-register pattern. |
+| Source traceability | articles/neutral-lo.mdx; pronouns/relative-pronouns.mdx | Replaced NGLE contents-index-only locators with direct links to §§ 14.9–14.10, 44.1 and 44.7. | Sources do not verify every example or translation on either page. |
+
+**Status:** the neutral-lo and relative-pronouns pages remain draft. In the relative-pronouns page, an identical bad/good example pair was removed and replaced with an explanation of the two relative clauses; the page's missing line break and unsupported learner-error heading were also repaired. This is a bounded source and consistency pass, not a complete audit of the full relative-clause system, regional frequency, all examples, or publication gates. Full QA on the exact resulting HEAD remains pending.
+
+
+## 52. Відносні займенники й відносні підрядні: синтаксичні обмеження та регістр (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| *quien* vs *que* | `pronouns/relative-pronouns.mdx`; `pronouns/relative-pronouns-review.mdx`; `sentence-structure/relative-clauses-depth.mdx` | NGLE § 22.4d, h та § 44.5g: *quien* зазвичай стосується осіб/персоніфікованих сутностей; у сучасній стандартній мові не виступає підметом означального підрядного з вираженим антецедентом без прийменника, але можливий у пояснювальному. | Не охоплює всі персоніфікації, історичні чи стилістично марковані випадки. |
+| Узгодження й регістр *cuyo* | `pronouns/relative-pronouns.mdx`; `pronouns/relative-pronouns-review.mdx`; `sentence-structure/relative-clauses-depth.mdx` | NGLE § 22.5a–e: узгодження з наступним іменником, не з антецедентом-власником; обмеження неформального регістру та усного вжитку в багатьох різновидах. | Без корпусної частотності або карти країн. |
+| Прийменникові відносні групи | `pronouns/relative-pronouns.mdx`; `sentence-structure/relative-clauses-depth.mdx` | NGLE § 44.2a–r: прийменник входить до відносної групи; опущення артикля в моделях із *que* залежить від прийменника, типу підрядного, антецедента й синтаксичної функції. | Не повний аудит керування кожного дієслова/прийменника. |
+| Означальні й пояснювальні підрядні | `pronouns/relative-pronouns.mdx`; `sentence-structure/relative-clauses.mdx`; `sentence-structure/relative-clauses-depth.mdx` | NGLE §§ 44.4–44.5: означальні обмежують/уточнюють референцію і входять до іменникової групи; пояснювальні додають інцидентну інформацію й відокремлюються пунктуаційно. Переклади прикладів узгоджено з контрастом. | Коми не описують усіх просодичних, дискурсивних і прагматичних нюансів. |
+| Функція *el cual* | `pronouns/relative-pronouns.mdx`; `pronouns/relative-pronouns-review.mdx` | NGLE § 22.4m–o та § 44.2: складна відносна форма, доречна в певних прийменникових і пояснювальних конструкціях, з віддаленим антецедентом або для розрізнення референтів. | Не повний опис стилістичної частотності. |
+| Доказовий статус | усі чотири сторінки цього кластера | Додано прямі джерельні локатори; quick guide `relative-pronouns-review.mdx` змінено з `verified` на `draft`. | Партія не є повною перевіркою всіх прикладів, перекладів, регіонів або релізних gate. |
+
+
+## 53. Indicativo/subjuntivo у відносних підрядних: specific / non-specific ≠ існування (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| Specific vs non-specific reading | `sentence-structure/relative-clauses-depth.mdx`; `sentence-structure/relative-clauses.mdx`; `comparisons/indicative-subjunctive.mdx` | NGLE § 25.10a–f, k–s: indicativo часто підтримує specific reading, subjuntivo — non-specific, але це не тотожне «існує / не існує» або «відоме / невідоме». | Не встановлює однозначного прочитання кожного речення поза контекстом. |
+| `buscar` + відносне підрядне | `sentence-structure/relative-clauses-depth.mdx`; `moods/subjunctive-triggers.mdx`; `moods/subjunctive-triggers-list.mdx` | NGLE § 25.11a, c, e: subjuntivo типовий для шуканого неспецифічного референта, але indicativo не виключається в багатьох контекстах; його природність залежить від прагматичної інтерпретації. Категоричний Mistake замінено контекстною нотаткою. | Не оцінено частотність і природність усіх можливих контекстів. |
+| Generic contexts and negative antecedents | ті самі канонічні сторінки | NGLE § 25.10q–s і § 25.11n: узагальнені контексти можуть допускати indicativo; з негативними неозначеними групами є регіональна варіативність. | Без карти країн і частотних підрахунків. |
+| Джерела й статус | відносні підрядні, дві сторінки тригерів, порівняння способів | Додано прямі посилання на NGLE §§ 25.10–25.11. Сторінки залишаються `draft`; CI не є лінгвістичною сертифікацією. | Це обмежений аудит контрасту, а не повна перевірка всіх тригерів, прикладів, перекладів або релізних gate. |
+
+
+## 54. Негативні неозначені антецеденти: межі регіонального indicativo (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| Типовий спосіб у відносних підрядних після *nadie/nada/ningún* | `moods/subjunctive-triggers-list.mdx`; `moods/when-not-subjunctive.mdx` | NGLE § 25.10q–s, особливо § 25.10r, та § 25.11n: типовим є subjuntivo (*No conozco ningún libro que trate de ese asunto*). | Не охоплює всі синтаксичні функції негативних неозначених форм. |
+| Регіонально обмежений indicativo | ті самі сторінки | NGLE § 25.10r засвідчує узагальнені приклади з indicativo в деяких різновидах, зокрема перуанському, і зрідка в мексиканських/центральноамериканських матеріалах; інші різновиди цей варіант відкидають. Текст уточнено, щоб не подавати його як загальну паніспанську альтернативу. | Без карти країн, частотності або тверджень про всіх мовців названих регіонів. |
+| Доказовий статус | обидві сторінки лишаються `draft` | Додано прямі посилання на NGLE §§ 25.10 і 25.11; зафіксовано обмеження джерела. | Це вузький аудит одного типу відносних підрядних, не повна перевірка всіх тригерів або регіональних моделей. |
+
+
+## 55. *Por/para*: джерельна перевірка й контекстні межі (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| *Para*: напрямок, строк, мета, адресат | `prepositions/por-para.mdx`; `comparisons/por-para.mdx` | NGLE § 29.8k–m та §§ 46.1, 46.7: прямі джерела додано; уточнено роботодавця в `trabajar para una empresa`. | Не повна перевірка всіх конструкцій мети чи керування дієслів. |
+| *Por*: маршрут, приблизне місце/час, тривалість, агент, причина, засіб, обмін/заміщення | ті самі сторінки | NGLE § 29.8o–r: додано приблизний часовий орієнтир `por Navidad` і відмежовано його від точнішого майбутнього строку `para el martes`; збережено кваліфіковану регіональну примітку щодо `por + тривалість`. | Без корпусної частотності або карти країн. |
+| Перетин причини й мети | ті самі сторінки | NGLE § 29.8n–ñ та § 46.1c–d: *por* і *para* можуть бути близькими або частково взаємозамінними; приклад `por/para no despertar a los niños` відображає тонку різницю, а не безумовну помилку. Вилучено хибну пару bad/good з різними реченнями. | Приклади не вичерпують усіх значень і контекстів. |
+| Статус і межі | обидві сторінки залишаються `draft` | Додано прямі джерела й синхронізовано порівняльну таблицю; не змінювали статуси на verified. | Не повний аудит прикладів, перекладів, регіональної варіативності, браузера, доступності, SEO чи релізу. |
+
+
+## 56. Особове *a*: типові прочитання й межі правила «людина = a» (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| Чинники особового *a* | `pronouns/personal-a.mdx`; `sentence-structure/personal-a.mdx` | NGLE § 34.8a, d–i: одушевленість, означеність, специфічність, клас дієслова, персоніфікація й контекст впливають на наявність прийменника. | Не класифіковано кожне дієслово чи кожен одушевлений/неодушевлений додаток. |
+| Типові/архетипні прочитання | ті самі сторінки | NGLE § 34.8k–n: у вузьких контекстах *a* може бути відсутнім навіть із означеним іменником на позначення людини, коли йдеться про тип/архетип (*encontrar el político perfecto*). Обидві сторінки доповнено цим обмеженням. | Не є загальним дозволом опускати *a* перед конкретною особою. |
+| Тварини й персоніфікація | ті самі сторінки | NGLE § 34.8o–t: власні назви тварин вимагають *a*; загальні назви тварин часто поводяться як назви людей, але можливі контекстні варіанти; персоніфіковані речі також можуть отримувати *a*. | Без повного аудиту всіх прикладів чи регіональної частотності. |
+| Статус | обидві сторінки залишаються `draft` | Додано точний локатор і вирівняно український термін до «особове a». | Не повний аудит прикладів, перекладів, leísmo, браузера, доступності, SEO чи релізу. |
+
+
+## 57. Керування дієслів прийменниками: джерела й межі (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| Керування залежить від конструкції, а не механічного перекладу | `prepositions/verb-preposition-pairs.mdx`; `prepositions/verbs-with-prepositions.mdx` | NGLE §§ 36.8–36.10: додано прямі джерела до обох сторінок; збережено навчання повної рамки дієслово + прийменник + тип доповнення. | Не вичерпний словник усіх дієслів або типів доповнення. |
+| *soñar con* / *soñar en + infinitivo* | ті самі сторінки | DPD, *soñar*, § 2: *con* — звична модель, але перед інфінітивом засвідчено також *en* (*Soñó en ir a la capital*). Виправлено категоричне подання *con* як єдиного можливого прийменника перед інфінітивом. | Не дозволяє автоматично переносити *en* на будь-який іменниковий додаток; частотність не порівнювалася. |
+| *ayudar a alguien* / *ayudar a + infinitivo* | ті самі сторінки | DPD, *ayudar(se)*, § 1: в перехідному вживанні особове *a* маркує прямий додаток на позначення особи; *a* перед інфінітивом має іншу функцію. Виправлено попереднє змішування personal *a* з лексичним керуванням. | Не повний огляд регіонального непрямого/дативного вживання *ayudar*. |
+| *pensar en* і запитання про думку | ті самі сторінки | NGLE § 36.9i, § 36.10ñ; DPD, *pensar*: уточнено відмінність між *pensar en* і *¿Qué piensas de esta propuesta?* | Не повна семантична чи регіональна карта всіх рамок *pensar*. |
+| *interesarse en/por*, *preocuparse de/por* | ті самі сторінки | NGLE § 36.9j, § 36.10h; DPD, *queísmo*, § 1a: прибрано спрощений розподіл «людина / річ», уточнено варіативність. | Без корпусного порівняння частотності, повного семантичного розмежування чи карти регіонів. |
+| *que*-підрядні | ті самі сторінки | DPD, *queísmo*, §§ 1a–b: точні джерела для *acordarse de*, *preocuparse de/por*, *confiar en*, *insistir en*, *tratar de*. Керування відокремлено від вибору способу в підрядній частині. | Не повний аудит усіх прикладів queísmo/dequeísmo на сайті. |
+| Статус | обидві сторінки залишаються `draft` | Додано джерела, виправлено помилки розмітки й точність пояснень. | Не повний аудит усіх прикладів/перекладів, браузера, доступності, SEO чи релізу. |
+
+
+## 58. Queísmo/dequeísmo: межі правил і варіативне керування (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| *De* перед підрядним-додатком | `conjunctions/que-de-que.mdx` | DPD, *dequeísmo*, § 1a: *Creo que...*, *Pienso que...*; не *de que*, коли підрядна частина є прямим додатком. | Не означає, що всі випадки *de que* помилкові. |
+| *De* перед підрядним-підметом | та сама сторінка | DPD, *dequeísmo*, § 1b: *Me alegra que...* vs *Me alegro de que...*. Додано синтаксичний контраст. | Не повний список дієслів і конструкцій із підрядним-підметом. |
+| Підміна прийменника та queísmo | `conjunctions/que-de-que.mdx`; дві сторінки керування дієслів | DPD, *dequeísmo*, § 1e та *queísmo*, §§ 1a–b: *insistir en que*, *confiar en que*, *acordarse de que*. Додано приклади й уточнено, що queísmo може стосуватися не лише *de*. | Не повний аудит усіх моделей «прийменник + que». |
+| Варіативність | `conjunctions/que-de-que.mdx` | DPD, *dudar*, § 1: *Dudo que...* і *Dudo de que...*; DPD, *advertir*, §§ 2–3: значення «помітити» vs «попередити»; DPD, *dequeísmo*, § 2: регіональні рамки *informar*. | Без повної семантичної/регіональної карти або частотного аналізу. |
+| Діагностичні тести | та сама сторінка | DPD, *dequeísmo*, § 5: перетворення на питання й заміна підрядної на *eso* допомагають визначити прийменник. | Це підказки, а не заміна перевірки словникової рамки. |
+| Статус і зв’язки | три сторінки цього кластера | Додано прямі джерела й перехресні посилання; `que-de-que.mdx` змінено з `verified` на `draft`, оскільки попередній frontmatter мав лише одне джерело для dequeísmo. | Не повний аудит прикладів/перекладів, корпусу, браузера, доступності, SEO чи релізу. |
+
+
+## 59. Приклади й переклади в кластері queísmo/керування (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| *Pienso de ti* / *Pienso en ti* | `prepositions/verb-preposition-pairs.mdx` | Замінено безумовну пару «помилка/правильно» на контекстний контраст *Pienso en ti* vs *¿Qué piensas de mí?*; *de* не позначається помилковим саме по собі. | Не повна карта всіх моделей *pensar*. |
+| *soñar de viajar* | `prepositions/verb-preposition-pairs.mdx`; `prepositions/verbs-with-prepositions.mdx` | Уточнено пояснення за DPD: звичне *soñar con* і засвідчене *soñar en + infinitivo*. | Без порівняння частотності. |
+| *Me acuerdo que...* | ті самі сторінки | Попередження уточнено як рекомендацію DPD для ретельно контрольованого мовлення; не перебільшено ступінь стигматизації. | Без корпусної оцінки частотності/стигми. |
+| *interesarse en/por* | `prepositions/verbs-with-prepositions.mdx` | Розпливчасте пояснення замінено на підтверджене NGLE чергування без вигаданого жорсткого семантичного розподілу. | Без частотного або регіонального дослідження. |
+| Статус | три канонічні сторінки | Перевірено лише цільові приклади та пояснення; сторінки залишаються `draft`. | Не повний аудит усіх прикладів і перекладів. |
+
+
+## 60. Швидка карта subjuntivo: уточнення типових моделей (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| *esperar que* | `moods/subjunctive-triggers-list.mdx` | Уточнено: subjuntivo показуємо в значенні надії/бажання, а не як єдиний спосіб у всіх значеннях *esperar*. | Не повний аналіз усіх значень *esperar*. |
+| *alegrar* / *alegrarse de* | швидка карта; детальний розбір | NGLE § 25.3b, q прямо розрізняє *Me alegra que...* (підрядне-підмет) і *Me alegro de que...* (прийменникове доповнення). У таблиці виправлено модель і наведено обидві форми. | Не всі дієслова емоцій і не обмежені альтернативи indicativo. |
+| *dudar que* / *dudar de que* | швидка карта; детальний розбір; порівняння способів | NGLE § 25.2k і DPD, *dudar*: обидві конструкції засвідчені. Додано примітку, що *de* саме по собі не є ознакою dequeísmo. | Без повного аналізу значень, регістру й частотності. |
+| *ojalá* | швидка карта | NGLE § 25.2h, k: у конструкції *ojalá* немає чергування з indicativo; уточнено модель. | Не охоплено всі незалежні форми subjuntivo. |
+| Статус | три сторінки mood-кластера | Додано джерело DPD для *dudar* і виправлено приклад/рамку в таблиці; сторінки лишаються `draft`. | Вибіркова перевірка, не повний аудит усього кластера. |
+
+
+## 61. Заперечене *creer/pensar*: subjuntivo як типовий, не єдиний варіант (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| *No creo que venga* | `moods/when-not-subjunctive.mdx`; `comparisons/indicative-subjunctive.mdx` | Збережено як типову нейтральну модель із subjuntivo. | Не універсальна заборона indicativo в усіх дискурсивних контекстах. |
+| Indicativo після запереченого *creer/pensar* | ті самі сторінки | NGLE § 25.7i наводить, зокрема, *No creen que es necesario aumentar la cantidad de funcionarios*. Додано застереження: у певних контекстах заперечується переконання, а зміст підрядної частини може подаватися як істинний/прийнятий. | Не повний семантичний, регіональний або корпусний аналіз; не базова модель для автоматичного відтворення. |
+| Статус | обидві сторінки лишаються `draft` | Додано пряме пояснення й узгоджено формулювання в порівняльній сторінці. | Не повний аудит усіх прикладів/перекладів або релізних gate. |
+
+
+## 62. *Gustar*: канонічна стаття й коротка пам’ятка (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| Синтаксична модель *gustar* | `verbs/gustar.mdx`; `verbs/gustar-type-verbs.mdx` | DPD *gustar*, NGLE § 35.5b, k–m та GTG *complemento indirecto* підтримують модель: підмет виражає стимул/причину реакції, експерієнсер — непрямим додатком; дієслово узгоджується з підметом. | Джерела підтверджують граматичну модель, але не визначають роль сторінок у навігації. |
+| Дублювання пояснень | ті самі сторінки | `gustar.mdx` залишається повнішою канонічною статтею; `gustar-type-verbs.mdx` перетворено на коротку пам’ятку з формулою, узгодженням, займенниками, кількома дієсловами та двома перевірками помилок. Додано взаємні посилання, URL збережено. | Не видаляли сторінок і не створювали redirect; не використовували аналітику для припущень про пошуковий намір. |
+| Статус і перевірка | обидві сторінки | Обидві лишаються `draft`. Додано запис до claim-level аудиту §62. | Це архітектурне розмежування, а не повна граматична верифікація, аудит усіх перекладів, браузерна/доступнісна/SEO перевірка або сертифікація релізу. |
+
+
+## 63. Позиція клітиків з інфінітивом: варіативність залежить від конструкції (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| Базова прокліза й енкліза | `pronouns/object-pronoun-placement.mdx` | NGLE § 16.7c: клітики передують особовим формам, а приєднуються до інфінітива, герундія та імператива. Уточнено актуальний прямий локатор джерела. | Не огляд усіх історичних або регіональних винятків. |
+| Обидві позиції в перифразах і перспективних інфінітивах | та сама сторінка | NGLE § 16.12a–f: *Debo hacerlo / Lo debo hacer*, *Espero hacerlo / Lo espero hacer*. Додано розрізнення перифрази та інших інфінітивних конструкцій. | Не проводилося корпусне порівняння частотності. |
+| Обмеження винесення клітика | та сама сторінка | За NGLE § 16.12f–m додано приклади не перспективного/одночасного стану, інфінітива-підмета, заперечення між дієсловами та дієслів із прийменниковим керуванням: *Espero tenerlos en regla* (неприродне для частини мовців *Los espero tener en regla*); *Conviene decírselo*, не *Se lo conviene decir*; *Desea no verla más*, не *La desea no ver más*; *Confío en averiguarlo*, не *Lo confío en averiguar*. | Частина оцінок градуальна або залежить від мовця; приклади не вичерпують усіх конструкцій. |
+| Джерела, статус і межі | `pronouns/object-pronoun-placement.mdx`; суміжні `double-object-pronouns.mdx`, `objeto-directo-indirecto.mdx` | Додано прямі NGLE §§ 16.7, 16.12, 16.13; сторінка залишається `draft`. | Не повний аудит усіх прикладів/перекладів трьох сторінок, не browser/accessibility/SEO QA і не релізна сертифікація. |
+
+
+## 64. Місце подій: *ser/estar* залежить від прочитання (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| Місце людини проти місця події | `verbs/ser-estar-location.mdx` | NGLE § 37.8e прямо відхиляє *El conferenciante es en el auditorio* і наводить *La conferencia es en el auditorio*. Замінено менш однозначний приклад *La reunión está en la sala 2* на джерельно підтверджений контраст: *El conferenciante está en el auditorio* vs *La conferencia es en el auditorio*. | Точкова перевірка одного прикладу, а не повний аудит усіх сторінок ser/estar. |
+| Іменник події з фізичним прочитанням | та сама сторінка | NGLE § 37.8f: *La conferencia es en el Aula Magna* (подія) vs *La conferencia está en la maleta* (фізичний документ/текст). Додано застереження, щоб не трактувати *ser* як автоматичну вимогу лише через лексичний іменник. | Це ілюстративний контраст; не повний список іменників чи значень, без корпусного/регіонального дослідження. |
+| Статус | та сама сторінка | Сторінка залишається `draft`; запис внесено до claim-level аудиту §64. | Не повний аудит усіх прикладів/перекладів, browser/accessibility/SEO QA або сертифікація релізу. |
+
+
+## 65. Особове *a* та наголошені особові займенники: обов’язкове дублювання клітика (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| Наголошений займенник у ролі прямого/непрямого додатка | `pronouns/personal-a.mdx`; коротка `sentence-structure/personal-a.mdx` | GTG, *complemento indirecto*: *No la vi a ella*, не *No vi a ella*; *No se lo di a él*, не *No lo di a él*. У короткій пам’ятці замінено *Ayudó a ella* на *La ayudó a ella* й пояснено дублювання; у канонічній статті додано відповідне правило. | Це правило для наголошених особових займенників, а не загальна вимога дублювати всі іменникові додатки з *a*. |
+| Архітектурна узгодженість | ті самі сторінки | Обидві сторінки посилаються на пряме джерело; коротка сторінка зберігає власну роль, `canonical_topic`, посилання та URL. Статуси лишаються `draft`. | Не повний аудит усіх прикладів/перекладів чи регіональних систем клітичного дублювання. |
+
+
+## 66. Артиклі: точні джерела для референції, узагальнення та нульового артикля (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| Перша згадка й подальша ідентифікація | articles/definite-indefinite.mdx; articles/definite-vs-indefinite.mdx | NGLE § 15.4: https://www.rae.es/gram%C3%A1tica/sintaxis/an%C3%A1fora-y-primera-menci%C3%B3n . Замість загального посилання на розділи 14–15 додано точний локатор для навчальної послідовності *un perro → el perro*; збережено застереження, що це не абсолютне правило. | Педагогічна модель, а не універсальна формула першої/другої згадки. |
+| Родове значення означеного/неозначеного артикля | ті самі сторінки | NGLE § 15.8: https://www.rae.es/gram%C3%A1tica/sintaxis/uso-gen%C3%A9rico-del-art%C3%ADculo-la-genericidad-y-la-relaci%C3%B3n-art%C3%ADculopronombre . Додано пряме джерело для *El perro es un animal doméstico* і застереження щодо родового *un* у відповідних контекстах. | Родове прочитання залежить від контексту й предиката; повної таксономії немає. |
+| Нульовий артикль | ті самі сторінки | NGLE § 15.11: https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-i-constituci%C3%B3n-e-interpretaci%C3%B3n-sem%C3%A1ntica-de-los-grupos-nominales-sin-determinante . Додано пряме джерело для *No tengo coche*, *Busco trabajo*, *Bebo café* та відмінності між групами без детермінанта, *unos* і означеними групами. | Ліцензування залежить від синтаксису, лексичної семантики й контексту; приклади не вичерпні. |
+| Жіночі іменники з наголошеним /a/ | канонічна стаття про артиклі | DPD, *el*, § 2: https://www.rae.es/dpd/el . Загальне посилання на глави 14–15 замінено точним джерелом для *el agua fría*, жіночого узгодження та умови безпосередньої суміжності (*el agua*, але *la mejor agua*). | Точкова перевірка базового правила; не всі винятки чи всі типи детермінантів. |
+| Якість джерел для пари сторінок | articles/definite-indefinite.mdx; articles/definite-vs-indefinite.mdx | Обидві сторінки тепер мають прямі, релевантні конкретним твердженням джерела; ролі сторінок і URL не змінювалися. | Це виправлення локаторів джерел і меж тверджень, а не повна перевірка кожного правила/перекладу. Статуси залишено без підвищення. |
+
+
+## 67. Кластер артиклів: чітко відмежовано статтю про нульовий артикль (2026-10-19)
+
+| Вимога / приклад | Канонічні сторінки | Рішення | Межі |
+|---|---|---|---|
+| Уживання іменникових груп без детермінанта | articles/zero-article.mdx | NGLE §§ 15.11 і 15.13: https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-i-constituci%C3%B3n-e-interpretaci%C3%B3n-sem%C3%A1ntica-de-los-grupos-nominales-sin-determinante та https://www.rae.es/gram%C3%A1tica/sintaxis/la-ausencia-del-art%C3%ADculo-iii-otros-factores-aspectos-fraseol%C3%B3gicos-y-discursivos . Зіставлено *No tengo coche / No tengo un coche*, професії, речовини, множинні іменники та сталі конструкції; суперечностей у перевірених прикладах не виявлено. | Приклади залежать від контексту; це не повний аудит усіх умов уживання bare NPs. |
+| Перетин сторінок | articles/definite-indefinite.mdx; articles/definite-vs-indefinite.mdx; articles/zero-article.mdx | Уточнено ролі в тексті й додано взаємні посилання: загальний огляд → спеціалізована сторінка про нульовий артикль → контрастна пам’ятка; пам’ятка посилається назад на обидві. Збережено окреме покриття нульового артикля, предикативних груп і сталих конструкцій. | URL не видаляли, redirect/canonical slug не змінювали; пошуковий намір не виводився з аналітики. |
+| Статус і межі | ті самі три сторінки | Використано вже наявні прямі локатори NGLE; статуси перевірки не змінено. | Архітектурна ясність не є повною граматичною, перекладацькою, регіональною, браузерною, доступнісною чи релізною верифікацією. |

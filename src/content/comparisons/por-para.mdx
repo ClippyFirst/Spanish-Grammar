@@ -1,60 +1,87 @@
 ---
 title: Por / Para
-titleEn: Por y para — два «для»
-description: "Прийменники por і para, які носії української мови найчастіше плутають. Правило, приклади, мінімальні пари і типові помилки."
+titleEn: Por y para — два «за / для»
+description: "Контрастивна карта por і para для українськомовних читачів: причина, мета, адресат, строк, маршрут, обмін і межі мнемонік."
 order: 2
 featured: true
+review_status: draft
+sources:
+  - "RAE/ASALE, Nueva gramática de la lengua española, §§ 29.8k–r: purpose/destination, temporal deadline, overlap between por and para, approximate time, duration, passive agent, cause and means. https://www.rae.es/gram%C3%A1tica/sintaxis/usos-particulares-de-las-preposiciones-ii-en-entre-hacia-hasta-para-por-sin-sobre-tras"
+  - "RAE/ASALE, NGLE § 46.1, cause and purpose and the overlap between por and para: https://www.rae.es/gram%C3%A1tica/sintaxis/introducci%C3%B3n-caracter%C3%ADsticas-generales-de-estas-construcciones"
+  - "RAE/ASALE, NGLE § 46.7, purpose constructions: https://www.rae.es/gram%C3%A1tica/sintaxis/caracter%C3%ADsticas-particulares-de-las-oraciones-finales"
 ---
 import CompareTable from '../../components/CompareTable.astro';
 import MinPair from '../../components/MinPair.astro';
 import Mistake from '../../components/Mistake.astro';
 import Note from '../../components/Note.astro';
 
-Українською обидва можуть перекладатися як «за», «через», «для», тому плутанина майже неминуча. Ключ: **para — ціль і призначення*** (напрямку), por — причина, обмін і тривалість**.
+Українські «за», «для», «через», «на» можуть відповідати різним іспанським конструкціям. Тому вибір між **por** і **para** не можна зробити лише за українським перекладом.
 
-## Швидка мнемоніка
-
-- **Para** = для (ціль, призначення, напрямок до). * **Estudio español para*** trabajar en España.*
-- **Por** = за, через, протягом (причина, рух крізь, обмін, ціна, тривалість). * **Lo compré por*** ti.*
+Як початкова орієнтація: **para** часто позначає мету, адресата, призначення, строк або напрямок; **por** — причину, мотив, маршрут, приблизне місце/час, обмін, ціну, тривалість або засіб. Це карта типових уживань, а не алгоритм для кожного речення. NGLE § 29.8n прямо зазначає, що *por* і *para* в деяких контекстах можуть бути практично взаємозамінними; розподіл значень не є абсолютно взаємовиключним.
 
 <CompareTable
-  caption="Коли що"
-  headers={['Контекст', 'Por', 'Para']}
+  caption="Типові відношення"
+  headers={['Відношення','Por','Para']}
   rows={[
-    { label: 'Причина/мета', cells: ['Lo hago por ti (через тебе)', 'Estudio para aprobar (щоб здати)'] },
-    { label: 'Тривалість/крайній термін', cells: ['por dos horas (протягом)', 'para mañana (до завтра)'] },
-    { label: 'Обмін/ціна', cells:['Te doy 10 € por el libro (за книжку)', '—'] },
-    { label: 'Рух крізь/напрямок', cells:['camino por el parque (через парк)', 'salgo para Madrid (до Мадрида)'] },
-    { label: 'Від імені/для когось', cells:['—', 'un regalo para ella (подарунок для неї)'] },
+    { label: 'Причина / мотив', cells: ['Lo hice por ti.', '—'] },
+    { label: 'Мета', cells: ['—', 'Estudio para aprobar.'] },
+    { label: 'Адресат / призначення', cells: ['—', 'El regalo es para María.'] },
+    { label: 'Обмін / ціна', cells: ['Te doy 10 € por el libro.', '—'] },
+    { label: 'Маршрут / напрямок', cells: ['Camino por el parque.', 'Salgo para Madrid.'] },
+    { label: 'Точний майбутній строк', cells: ['—', 'Lo necesito para mañana.'] },
+    { label: 'Приблизний часовий орієнтир / тривалість', cells: ['Llegaré por Navidad; trabajé por tres horas (частіше в американській іспанській; також засвідчено в європейській).', '—'] },
+    { label: 'Засіб / канал', cells: ['Te lo envío por correo.', '—'] },
   ]}
 />
 
-## Мінімальні пари
+## Мінімальні пари: відношення змінює значення
 
 <MinPair
-  a={{ es: 'Estudio para ti.', uk: 'Я вчуся заради тебе (щоб тобі було добре).' }}
-  b={{ es: 'Estudio por ti.', uk: 'Я вчуся замість тебе (за тебе).' }}
+  a={{ es: "Lo hago para ti.", uk: "Я роблю це для тебе: ти — адресат або той, для кого це призначено." }}
+  b={{ es: "Lo hago por ti.", uk: "Я роблю це заради тебе / замість тебе: ти пов'язаний із мотивом або підставою." }}
 />
+
 <MinPair
-  a={{ es: 'El regalo es para María.', uk: 'Подарунок — для Марії (призначений їй).' }}
-  b={{ es: 'El regalo es por María.', uk: 'Подарунок — через Марію (вона причина).' }}
+  a={{ es: "El regalo es para María.", uk: "Подарунок призначений Марії." }}
+  b={{ es: "Lo hice por María.", uk: "Я зробив це через Марію / заради Марії; точне значення залежить від контексту." }}
 />
 
-## Типові помилки носіїв української мови
-
-<Mistake
-  bad="Salgo por mañana."
-  good="Salgo para mañana."
-  why="«На завтра» — це крайній термін/мета, тому para. «Por mañana» означало б «протягом завтрашнього дня» (щонайменше дивно)."
-/>
-<Mistake
-  bad="Lo hago para tu."
-  good="Lo hago por ti."
-  why="Тут сенс «заради/через тебе» — причина, тому por. Після прийменника займенник стоїть у називному об'єктному: ti."
+<MinPair
+  a={{ es: "Salimos para Madrid.", uk: "Ми вирушаємо до Мадрида — напрямок або пункт призначення." }}
+  b={{ es: "Pasamos por Madrid.", uk: "Ми проїжджаємо через Мадрид — маршрут." }}
 />
 
-<Note kind="uk" title="Для носіїв української мови">
-  Українське «за» справді покриває обидва: «купити за гроші» (por), «працювати за ідею» (por),
-  «вважати/сприймати як» (por). Але «для» у значенні мети/призначення завжди нормально перекладається як para.
-  Порівняйте: regalo para ti (подарунок для тебе).
+## Пастка: одне українське слово — різні конструкції
+
+- *Pagué veinte euros por el libro.* — Я заплатив двадцять євро **за** книжку.
+- *Este regalo es para ti.* — Цей подарунок **для** тебе.
+- *Gracias por venir.* — Дякую **за те, що** прийшов.
+- *Lo necesito para mañana.* — Мені це потрібно **на завтра**.
+- *Hablamos por teléfono.* — Ми говоримо телефоном.
+
+Значення слід вивчати в конструкціях, а не через механічну заміну українського прийменника.
+
+## Типові помилки за конкретного значення
+
+<Note kind="usage" title="Не кожне por/para чергування є помилкою">
+  Порівняйте *Hablábamos en voz baja por no despertar a los niños* і *Hablábamos en voz baja para no despertar a los niños*. Обидві конструкції можливі; NGLE § 46.1d описує між ними тонку різницю, а не просту граматичну заборону. Вибір слід оцінювати за наміром і контекстом.
 </Note>
+
+<Mistake
+  bad="El regalo es por ti."
+  good="El regalo es para ti."
+  why="Якщо мається на увазі, що подарунок призначений тобі, типова форма — *para ti*. *Por ti* можливе в іншій конструкції (наприклад, із мотивом або значенням «заради тебе»), але не передає те саме відношення адресата."
+/>
+
+<Note kind="uk" title="Для українськомовного читача">
+  Запитайте: це **мета, адресат, призначення, строк або напрямок** (часто *para*) чи **причина, мотив, маршрут, приблизне місце/час, обмін, ціна або засіб** (часто *por*)? Потім перевірте всю конструкцію та контекст — не лише переклад.
+</Note>
+
+## Межі регіонального узагальнення
+
+NGLE § 29.8p зазначає, що *por* із кількісними виразами тривалості частіше вживається в американській іспанській, ніж у європейській, хоча засвідчений в обох; § 29.8o описує приблизне просторове й часове значення *por*, а § 29.8ñ — контраст між приблизним *por la primavera* і точнішим майбутнім *para la primavera*. Це вузькі твердження, а не простий поділ усієї системи *por/para* за регіонами. Інші відмінності частотності в цій таблиці окремо не досліджувалися.
+
+## Докладніше
+
+- [Повний довідник por / para](/es/prepositions/por-para/) — ширші значення, конструкції та контрприклади.
+- [Маркери й мінімальні пари por / para](/es/prepositions/por-para-markers/) — швидке повторення типових моделей.

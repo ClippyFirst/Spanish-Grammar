@@ -752,3 +752,16 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - Run `39211512517` failed at final emphasis audit with one `emphasis_artifacts` match in `special-cases.mdx:112`; other blocking totals were zero.
 - Replaced bold spans around *el* and *él* with italics in commit `2c75c52ede13e9c231fd010894360e27924588df`. This is a markup-only repair; grammar claims and QA rules are unchanged.
 - Exact latest HEAD still needs a full QA pass.
+
+
+## 38. Артиклі: джерела та узгодженість сторінок — 2026-10-19
+
+| Вимога / твердження | Канонічні сторінки | Результат і статус |
+|---|---|---|
+| Професія після `ser` | `articles/definite-indefinite.mdx`, `articles/zero-article.mdx`, `articles/special-cases.mdx`, `comparisons/articles.mdx` | Формулювання узгоджено: `Soy médico` — нейтральна класифікація; описова/ідентифікаційна група може мати артикль. NGLE § 15.11 прямо підтримує загальну модель; не кожний приклад або контекст перевірено. Частково перевірено. |
+| Назви мов без артикля | `articles/zero-article.mdx`, `articles/special-cases.mdx`, `comparisons/articles.mdx` | NGLE § 15.11 прямо дає приклад `Habla ruso` у відповідному звичному/узагальненому контексті; не універсальне правило для всіх синтаксичних функцій. Частково перевірено. |
+| Артикль із днями тижня | `articles/special-cases.mdx`, `comparisons/articles.mdx` | Прямий спеціалізований розділ RAE/ASALE не знайдено в обмеженому пошуковому проході. Приклади залишено як ілюстративні; твердження не верифіковано. Відкрита прогалина. |
+| Стягнення `al/del` | `articles/special-cases.mdx`, `comparisons/articles.mdx` | Виняток із `El` у складі власної назви прямо підтримано RAE *Ortografía*. Прямий текст NGLE § 14.3 у цьому проході не прочитано; загальне правило лишається з відкритим джерельним gate. Частково перевірено. |
+| Прямі джерела для нульового артикля | `articles/zero-article.mdx` | Посилання на NGLE §§ 15.11 та 15.13 замінено з contents-index locator на прямі сторінки. Це покращує відтворюваність, але не означає повного claim-level аудиту. |
+
+**Межа доказів:** повний аудит усіх прикладів/перекладів, корпусна частотність, країно-регіональний фактчек, незалежна редактура української, браузер/accessibility/SEO та готовність до публікації не встановлені. Сторінки залишаються `draft`.

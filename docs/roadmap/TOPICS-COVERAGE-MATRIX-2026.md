@@ -604,3 +604,18 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Source/status/editorial quality | Same pages | Malformed Markdown repaired; NGLE locators added; previously `verified` overview downgraded to `draft`; learner-error headings neutralized. |
 
 **Evidence boundary:** NGLE § 47.8a–k read directly for the claims above. No full survey of all conditional correlations, corpus/frequency study, country-by-country variation study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. Both pages remain `draft`.
+
+
+## 22. Imperative forms, address pronouns, and voseo — 2026-10-19
+
+| Requirement / claim | Canonical pages | Evidence and current status |
+|---|---|---|
+| Affirmative imperative forms across *tú, vos, vosotros, usted, ustedes* | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx`; `src/content/es/regional/voseo.mdx` | NGLE § 42.3c/g distinguishes exclusive imperative forms (*ven, vení, venid*) from forms shared with subjunctive (*venga, vengan*) and lists common irregular *tú* forms. The pages now link to the direct NGLE source. This is a bounded check, not a full paradigm audit. |
+| Negative imperative | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/object-pronoun-placement.mdx` | NGLE § 42.3t–u directly supports the subjunctive-form pattern and rejects simply negating exclusive affirmative forms (*no ven*, *no di*, *no llamá*). Wording now contrasts the forms rather than presenting the negative as a mechanical prefix. |
+| Clitic position with affirmative vs negative imperatives | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/object-pronoun-placement.mdx` | NGLE § 42.3e/h supports enclisis in affirmative imperative contexts and preverbal clitics in negative imperatives (*dímelo* vs *no me lo digas*). Broader placement restrictions and all clitic clusters remain outside this batch. |
+| *vosotros* and *ustedes* address scope | `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx` | DPD «vosotros» supports informal plural address in most of Spain and its absence in America and some southern Spanish areas, where *ustedes* also serves informal plural address. The page remains `draft`; country-specific social norms need further evidence. |
+| *vos* and regional voseo | `src/content/es/regional/voseo.mdx`; `src/content/es/moods/imperativo.mdx` | DPD «vos» supports *vos* as a singular second-person pronoun in voseante varieties and gives a bounded geographic/social description. It does not substantiate every regional claim or the full regional distribution of imperative forms. The prior `verified` status was downgraded to `draft`. |
+| Accentuation and enclitic spelling | `src/content/es/moods/imperativo.mdx`; `src/content/es/pronouns/object-pronoun-placement.mdx` | The pages retain examples such as *dime → dímelo* and *explica → explícamelo*. A complete orthographic audit of all forms and voseo imperative spellings remains open. |
+| Temporal *en cuanto* mood selection | `src/content/es/moods/subjunctive-triggers.mdx`; `src/content/es/moods/when-not-subjunctive.mdx`; `src/content/comparisons/indicative-subjunctive.mdx` | Still open: NGLE §§ 22.6p and 31.14i establish meaning/classification, not a full mood-distribution rule. Preserve the caveat; do not generalize from one prospective example. |
+
+**Evidence boundary:** direct NGLE § 42.3 and DPD «vos»/«vosotros» passages were read. No exhaustive paradigm, regional-frequency, corpus, or browser/accessibility/SEO audit was performed. All four edited pages remain `draft`.

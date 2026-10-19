@@ -839,3 +839,10 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - **Current content HEAD before this handoff update:** `a38f7724715f819cb177c2a41a8bd3219f52c832`. The handoff commit itself will create a new HEAD, so full QA must be checked on the exact resulting commit before reporting success.
 - **Remaining scope:** no exhaustive clitic-page/example/translation audit, no full regional or corpus-frequency study, no browser/accessibility/SEO validation, and no publication certification.
 - **Next action after QA:** continue with the next highest-risk item from `HIGH-RISK-CROSS-PAGE-AUDIT-2026-10-18.md` (article exceptions or `ser/estar/hay` cross-page alignment), but first inspect the exact live matrix and source gap. Do not expand into a broad clitic rewrite unless QA or direct evidence reveals a concrete defect.
+
+
+### QA result — gustar/clitic continuation (2026-10-19)
+
+- Full GitHub Actions QA passed on exact HEAD `9df1fb7bda2f7fb131ac8c9673d92e896ba9dcc6`: [run 39238975321](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39238975321). `npm ci` and the complete `npm run qa` pipeline succeeded.
+- This pass includes the gustar quick-reference split, the clitic-placement caveat update, claim audit §63, matrix §63, and this handoff's corrected YAML QA log.
+- Note: the handoff update recording this result creates a new documentation-only HEAD. Check CI once more against that exact resulting SHA; do not treat the prior SHA's green result as evidence for a later commit.

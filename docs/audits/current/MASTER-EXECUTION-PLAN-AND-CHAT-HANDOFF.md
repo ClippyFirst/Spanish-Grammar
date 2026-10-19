@@ -580,3 +580,10 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - RAE «Ortografía» directly confirms that a/de do not contract when the article is part of an official place name (e.g. *a El Cairo*, *de El Dorado*). The general *al/del* contraction rule still needs direct NGLE § 14.3 text.
 - `special-cases.mdx` source register/evidence note updated. Audit §36 and matrix §36 record evidence and remaining gaps. Weekday names remain the only open item among the requested subtopics aside from full direct verification of the general contraction rule.
 - **QA:** changes after the last successful run are pending validation. Run full QA on exact latest HEAD; repair only any demonstrated blocker. Keep relevant pages `draft`; no merge/close/rebase/retarget.
+
+
+### Live refresh — QA failure and emphasis repair (2026-10-19)
+
+- Run [39211512517](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39211512517) failed only at the final emphasis audit: one `emphasis_artifacts` match at `src/content/es/articles/special-cases.mdx:112`, where bold spans around *el* and *él* were adjacent. Other blocking totals were zero.
+- Changed both labels to italics in `2c75c52ede13e9c231fd010894360e27924588df`; grammar claims and audit rules are unchanged. Audit §37 and matrix §37 record the incident.
+- Full QA is required on exact latest HEAD after the repair and documentation updates. Keep pages `draft`; no merge/close/rebase/retarget.

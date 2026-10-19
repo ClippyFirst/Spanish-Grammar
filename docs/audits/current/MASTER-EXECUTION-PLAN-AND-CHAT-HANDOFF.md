@@ -682,3 +682,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Scope boundary:** this is a central-claims pass, not full verification of every trigger, tense, translation, or regional variant. The trigger pages remain draft. No browser, accessibility, SEO, or publication certification has been performed.
 - **Next concrete action:** audit the trigger-list/temporal subordinate claims in \`subjunctive-triggers.mdx\` and \`subjunctive-triggers-list.mdx\`, especially the broad statements about \`después de que\`, \`cuando\`, and \`hasta que\`. Read direct NGLE §§ 24.5 and 25.14 before editing, then record any necessary claim-level narrowing. Do not infer correctness merely from source links in frontmatter.
 - **PR state:** PR #27 remains open and unmerged, base \`main\` unchanged at \`10d49cba91d33c192d1fc0bfa12def1c845cad09\`; head branch remains \`docs/grammar-reference-architecture-2026-10-18\`. No merge, close, rebase, or retarget was performed.
+
+
+### Live refresh — temporal subjunctive trigger claims (2026-10-19)
+
+- **Direct NGLE text reviewed:** § 24.5c, j–k (temporal *cuando*); § 25.14e (*hasta que*); § 25.14h (*después de que* and *antes de que*). The key distinctions are source-grounded: *hasta que* permits mood alternation in generic contexts but prospective predicates favor subjunctive; future indicative is rejected in temporal *después de que* clauses, while present/past contexts show regional variation.
+- **Edits on this checkpoint:** replaced the context-poor categorical Mistake for *Cuando llegas mañana* with a usage note; added the future-indicative restriction to the quick-reference page; corrected the relative-clause source locator from § 25.12 to § 25.10 in both trigger pages. Claim audit §47 and coverage matrix §47 record evidence and limits.
+- **Remaining limits:** both trigger pages remain draft; no full audit of all triggers, tense combinations, regional frequencies, translations, browser rendering, accessibility, or SEO has been performed.
+- **Next:** run full QA on this exact HEAD, inspect any failing step, then proceed to the next claim-level gap in the master plan. Do not merge PR #27 without explicit approval.
+- **PR state:** open and unmerged; branch docs/grammar-reference-architecture-2026-10-18; main unchanged.

@@ -847,3 +847,15 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | *Aunque* й інші підрядні сполучники | NGLE § 25.13a–f: https://www.rae.es/gram%C3%A1tica/sintaxis/elecci%C3%B3n-del-modo-con-las-conjunciones-subordinantes | Для частини сполучників спосіб залежить від значення; *aunque* допускає обидва способи в певних контекстах. | Не є повним аудитом часових, умовних та інших підрядних конструкцій. |
 
 **Статус:** канонічну presente-subjuntivo сторінку позначено reviewed, не verified; список тригерів і повний набір прикладів потребують окремого аудиту.
+
+
+## 47. Часові підрядні у шпаргалках subjuntivo — 2026-10-19
+
+| Твердження | Джерело | Результат | Межа |
+|---|---|---|---|
+| *Cuando*: habitual/generic vs. prospective/posterior reading | NGLE § 24.5c, j–k: https://www.rae.es/gram%C3%A1tica/sintaxis/tiempo-aspecto-y-adjuntos-de-localizaci%C3%B3n-temporal-ii-construcciones-temporales-con-el-adverbio-cuando | Підтверджено, що вибір інтерпретації залежить від аспекту й часового зв'язку; нейтральний приклад для конкретної очікуваної майбутньої події — *Cuando llegues mañana, llámame*. Категоричний компонент Mistake замінено контекстною нотаткою. | Не є повним описом усіх регіональних або спеціальних конструкцій. |
+| *Hasta que*: alternancia modal | NGLE § 25.14e: https://www.rae.es/gram%C3%A1tica/sintaxis/elecci%C3%B3n-del-modo-con-preposiciones-adverbios-e-interjecciones | У generic reading можливі indicativo/subjuntivo; prospectivity схиляє до subjuntivo. | Конкретний вибір залежить від значення головного предиката та часової перспективи. |
+| *Después de que*: future and non-future contexts | NGLE § 25.14h: https://www.rae.es/gram%C3%A1tica/sintaxis/elecci%C3%B3n-del-modo-con-preposiciones-adverbios-e-interjecciones | Future indicative не приймається в часовому прочитанні; для теперішніх/минулих подій чергуються способи з регіональною відмінністю. Шпаргалку уточнено. | Не слід переносити це на concessive/causal uses *después de que*. |
+| Номер розділу у реєстрі джерел для relative clauses | NGLE § 25.10: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen | У двох сторінках виправлено метадані § 25.12 → § 25.10. | Це виправлення локатора джерела, а не повна верифікація всіх прикладів про відносні підрядні. |
+
+**Статус:** обидві сторінки залишаються draft; цей pass не підтверджує готовність до публікації.

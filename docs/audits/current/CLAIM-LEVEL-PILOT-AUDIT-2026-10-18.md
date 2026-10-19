@@ -703,3 +703,11 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - **Canonical page change:** `src/content/es/articles/special-cases.mdx` now links directly to both NGLE sections and narrows the weekday and contraction wording. No page status was raised; it remains `draft`.
 - **Limits:** this pass verifies these specific rule-level claims, not every example, every proper name, every country-specific usage, corpus frequencies, the full article system, or Ukrainian copy. No browser/accessibility/SEO test was performed.
 - **Next action:** inspect exact newest HEAD QA. If green, do a final targeted consistency check across the four article pages and update the handoff. If red, inspect and repair only the reported blocker. Keep PR #27 open/unmerged and do not modify `main`.
+
+
+## 41. Міжсторінкове узгодження після прямого читання NGLE § 14.3 (2026-10-19)
+
+- У `comparisons/articles.mdx` уточнено формулювання про власні назви: попередня коротка фраза могла створювати враження, що відсутність стягнення є безвинятковим описом усіх реальних уживань. NGLE § 14.3c–d формулює правило для артикля як складника власної назви, рекомендує уникати стягнення в письмі для назв на кшталт `El Salvador`, але також документує варіантність.
+- Формулювання тепер узгоджене зі `special-cases.mdx` і посилається на прямий текст NGLE § 14.3. Не змінювали правило стягнення загалом.
+- **QA:** потрібен повний запуск на найновішому точному HEAD після цієї міжсторінкової правки та оновлення handoff.
+- **Межі:** це точкова узгодженість твердження, не повна верифікація всіх топонімів, прикладів чи всієї сторінки.

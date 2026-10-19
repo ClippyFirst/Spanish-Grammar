@@ -631,3 +631,16 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Rioplatense vs Chilean voseo | `src/content/es/regional/voseo.mdx`; `src/content/es/moods/imperativo.mdx` | DPD «voseo» §§ 2.1.2.5, 2.3–2.4 supports the accepted Rioplatense imperative forms and the more restricted Chilean profile. All country-specific paradigms and frequency claims remain unverified. |
 
 **Evidence boundary:** direct DPD «voseo», «tilde», and «vosotros» entries were read. No corpus/frequency study, exhaustive regional paradigm review, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. All three pages remain `draft`.
+
+
+## 24. Voseo page claim-level audit — 2026-10-19
+
+| Claim | Finding / action | Status |
+|---|---|---|
+| Definition of pronominal vs verbal voseo | Replaced *Vos vivís aquí* as the sole pronominal example because it contains both *vos* and a voseante verb. Uses *Vos eres inteligente* as a DPD-documented pronominal-only pattern in some varieties. | Corrected; page remains `draft`. |
+| Rioplatense present indicative forms | *hablás, comés, vivís, sos, tenés, querés, podés* are consistent with the DPD's generalized Rioplatense description. Table remains explicitly scoped to Rioplatense. | Bounded source check; not a universal paradigm. |
+| Geography and social meaning | DPD §§ 2.3–2.4 documents voseo across much of Hispanic America but with major country/area and social differences. The overview includes Paraguay in the Rioplatense summary and cautions against inferring a speaker's system from country name alone. | Bounded source check; country-level completeness remains open. |
+| Imperative and clitic spelling | DPD § 2.1.2.5 supports Rioplatense *cantá, comé, viví* and general accentuation rules with enclitics; Chilean usage is not treated as identical. | Bounded source check; full accentuation and regional audit remains open. |
+| Learner-error examples | Replaced `Mistake` components for *vos eres* and *vos hablas* with a contrast table labelled by variety, because these forms are not universally wrong. | Corrected. |
+
+**Evidence boundary:** DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4 were read directly. No corpus/frequency study, exhaustive regional paradigm review, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. `review_status` remains `draft`.

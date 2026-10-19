@@ -722,3 +722,10 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Джерело:** NGLE § 18.7d, g: https://www.rae.es/gram%C3%A1tica/sintaxis/alternancias-de-presencia-y-ausencia-de-posesivos. Академічний текст включає предмети особистої сфери (зокрема *pantalones*) до конструкцій з артиклем у посесивному значенні та описує симпатетичний датив.
 - **Зміна:** пояснення уточнено так, щоб не зводити *Ponte el abrigo*, *Quítate los zapatos*, *Me he manchado la camisa* і *Le quitaron la chaqueta* до одного синтаксичного шаблону. Швидку довідку щодо *Me lavo las manos* узгоджено з основним поясненням.
 - **Межа:** загальна модель підтримана NGLE, але точний розбір кожного clitic у цих чотирьох прикладах не заявлено як дослівно засвідчений у джерелі. Немає корпусного чи країнового аналізу; сторінка залишається `draft`.
+
+
+## 34. Special-case articles — direct DPD evidence and open claims (2026-10-19)
+
+- **Directly checked:** DPD «el» §§ 2.1–2.2 supports the stressed-initial-/a/ rule, immediate adjacency, feminine agreement and demonstrative contrast; §§ 4–6 support the bounded statements on personal names and geographical names. NGB § 9.1.1 confirms the article paradigm. NGLE § 18.7a–i supports the article/possession discussion for body parts.
+- **Changed:** source register now distinguishes direct-text sources from the NGLE contents-index-only locators; country-name wording marks *la Argentina* as a possible variant; the discussion of *la María* includes register and regional limitations; proper-name exception to *al/del* contraction added as a claim needing direct source verification; related canonical possession pages added to frontmatter.
+- **Still open:** source-specific verification of profession predicates after *ser*, weekday article use, language names, and contractions *al/del*. The cited NGLE § 14.3 and §§ 15.11–15.13 are currently contents-index locators, not direct chapter text. No corpus/frequency study or browser/accessibility/SEO testing. `special-cases.mdx` remains `draft`.

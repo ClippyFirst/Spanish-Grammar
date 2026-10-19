@@ -813,3 +813,14 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Повторюваність не виключає indefinido за наявності меж інтервалу | NGLE § 23.13d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-iv-otros-aspectos-de-la-oposici%C3%B3n-cant%C3%A9cantaba | Джерело прямо наводить обмежений інтервал, у якому серія повторюваних подій може стояти в indefinido. | Не засвідчує автоматично природність кожного ізольованого речення з *cada día*. |
 
 **Статус:** точкові правила мають прямі джерела; повний аудит усіх прикладів, перекладів, регіонального розподілу й браузерних властивостей не виконано. Канонічні сторінки indefinido та imperfecto мають статус \`reviewed\`, не \`verified\`.
+
+
+## 44. Perfecto compuesto / indefinido: регіональна варіативність — 2026-10-19
+
+| Твердження | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Географічна варіативність *he cantado/canté* | NGLE § 23.7b–c: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos | Джерело описує кілька систем: актуальна перспектива в центральній/південній європейській іспанській, аспектуальне протиставлення в багатьох мексиканських/центральноамериканських/карибських різновидах і нейтралізацію в інших регіонах. | Не слід робити висновки про кожну країну чи кожного мовця. |
+| *Ayer* і *he cantado* | NGLE § 23.8a–d: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos | У багатьох європейських моделях закритий минулий інтервал сприяє *canté*; інші різновиди можуть розподіляти форми інакше. | Маркер часу не є універсальним механічним тригером. |
+| Відкритий інтервал *esta semana/este año* | NGLE § 23.7f, 23.7w and 23.8f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-i-relevancia-actual-de-los-hechos-pret%C3%A9ritos; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-compuesto-he-cantado-ii-el-perfecto-de-hechos-recientes-otros-usos | *Este/esta* може задавати розширений інтервал, що охоплює момент мовлення, але вибір форми залежить також від регіональної системи та значення. | Не засвідчує автоматично природність кожного прикладу без контексту. |
+
+**Статус:** регіональний опис має прямі академічні джерела й обмежені межі; це не повний діалектологічний або корпусний аудит. Сторінки залишаються reviewed.

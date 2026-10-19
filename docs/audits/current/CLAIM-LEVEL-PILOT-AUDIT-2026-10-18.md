@@ -730,3 +730,12 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - **Metadata correction:** the two canonical pages \`preterito-indefinido.mdx\` and \`preterito-imperfecto.mdx\` had \`review_status: verified\`, which overstated the scope of documented claim/example/translation review. They are now \`reviewed\`, with direct source locators; the source pass does not validate every example or translation.
 - **Limits:** no corpus-frequency study, comprehensive regional audit, exhaustive example/translation review, or browser/accessibility/SEO test. The comparisons page remains \`reviewed\`. Do not promote pages back to \`verified\` based on CI alone.
 - **QA:** run full QA on the exact resulting HEAD.
+
+
+## 44. Claim-level pass: perfecto compuesto / indefinido regional distribution (2026-10-19)
+
+- **Direct NGLE text reviewed:** §§ 23.7a–c, 23.7o–w, and 23.8a–p. These sections explicitly describe geographic variation, recent-past readings, the role of a reference interval that includes the speech moment, and varieties where *canté* and *he cantado* differ aspectually or are neutralized in one direction.
+- **Core finding:** avoid a single pan-Hispanic rule that maps *hoy/esta semana* to *he cantado* and *ayer* to *canté*. In much of European Spanish, a closed past interval such as *ayer* favors/requires the simple form; in other varieties, the distribution differs. NGLE distinguishes central/southern European use, Mexico/much of Central America and parts of the Caribbean, Chile and much of Argentina, and Andean/coastal Peruvian and other zones, with further subregional qualifications.
+- **Content changes:** preterito-perfecto.mdx now has a source registry and explicit \`reviewed\` status; its regional overview is narrower and does not imply a single “Spain vs Latin America” split. preterito-indefinido.mdx now links directly to §§ 23.7–23.8 for its regional qualification. comparisons/past-tenses.mdx narrows the closed-period note and avoids implying that the European pattern is universal.
+- **Limits:** this is a source-grounded overview, not a corpus-based frequency study or a complete country-by-country dialect atlas. It does not verify every example or translation in the three pages. No browser/accessibility/SEO audit was run; do not promote pages beyond \`reviewed\`.
+- **QA:** run full QA on the exact resulting HEAD.

@@ -587,3 +587,10 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - Run [39211512517](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39211512517) failed only at the final emphasis audit: one `emphasis_artifacts` match at `src/content/es/articles/special-cases.mdx:112`, where bold spans around *el* and *él* were adjacent. Other blocking totals were zero.
 - Changed both labels to italics in `2c75c52ede13e9c231fd010894360e27924588df`; grammar claims and audit rules are unchanged. Audit §37 and matrix §37 record the incident.
 - Full QA is required on exact latest HEAD after the repair and documentation updates. Keep pages `draft`; no merge/close/rebase/retarget.
+
+
+### Live refresh — QA passed after special-case repair (2026-10-19)
+
+- Full GitHub Actions QA [run 39211693361](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39211693361) completed successfully on exact SHA `5fe09ffc671d151df158a0812bbf67f4e2de6eb0`. It includes the emphasis-only repair in `special-cases.mdx` and the audit/matrix/checkpoint updates.
+- Current source state: direct DPD «el» §§ 2.1–2.2, 4–6; NGLE § 18.7a–i; NGLE § 15.11 and § 15.13; RAE «Ortografía» place-name contraction exception. The profession and language-name examples now have general direct support. The specific weekday rule and full general *al/del* contraction passage remain open.
+- **Next action:** continue only those two unresolved source claims; then cross-check the resulting wording across `definite-indefinite.mdx`, `zero-article.mdx`, `special-cases.mdx`, and `comparisons/articles.mdx`. After any new edits, run full QA on exact latest HEAD. Keep pages `draft`; no merge/close/rebase/retarget.

@@ -895,3 +895,11 @@ The branch `docs/grammar-reference-architecture-2026-10-18` was live at `eea5fa3
 - Limits: no wholesale rewrite, no full audit of every article construction/translation, no corpus-frequency/regional survey, and no release certification. Do not mass-upgrade review statuses.
 - QA: pending on the final resulting HEAD; run/check the exact resulting SHA after all documentation commits before reporting green status.
 - Next action: after exact-HEAD QA, return to the live high-risk backlog and choose the next single unresolved claim with a direct-source gap. Avoid repeating completed personal-a, gustar, clitic-placement or event-location fixes without new evidence.
+
+
+### QA result — article source-locator precision (2026-10-19)
+
+- Full QA passed on exact HEAD `eae6a7ea28ea34273106b07e76dd608c41c3b456`: [GitHub Actions run 39248158476](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39248158476). `npm ci` and the full `npm run qa` step succeeded.
+- The pass includes direct source updates in both article pages, claim audit §66, coverage matrix §66, high-risk audit §8 and the handoff snapshot at that SHA.
+- This note is a new documentation-only commit; check CI on its resulting exact HEAD before reporting the branch green.
+- **Next candidate inspected, not yet changed:** `src/content/es/articles/zero-article.mdx` overlaps with both article pages. It has direct NGLE §§ 15.11/15.13 sources and useful distinct coverage (bare nouns, predicates, phraseological patterns), so do not simply collapse it. Next pass should compare exact claims/examples across all three pages, identify any duplicated or conflicting rule (especially `No tengo coche` vs `No tengo un coche` and bare-noun licensing), then make only a concrete evidence-supported correction and record page roles without removing URLs.

@@ -663,3 +663,9 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Результат:** покращено зв'язок між коротким оглядом артиклів і двома докладними статтями; у присвійній статті додано джерельний локатор до NGLE §§ 18.1–18.7 і встановлено `draft`; у статті про частини тіла чіткіше позначено межі доказів і регіональної перевірки.
 - **Disposition:** структурне покриття існує; доказова перевірка прикладів і перекладів — часткова/не завершена. Це не нова тема й не підстава для окремої сторінки про кожен різновид.
 - **Невирішене:** перевірити кожний приклад `doler`, рефлексивні дії, симпатетичний/посесивний датив, одяг, присвійний контраст та форми `vuestro` / `ustedes` за точними розділами NGLE і джерелами для конкретних різновидів. Не робити загальних тверджень про частотність або «типові помилки» без корпусних/емпіричних доказів.
+
+
+## 27. QA follow-up — possessive-page markup (2026-10-19)
+- **Failure evidence:** full QA run 39208866244 failed only at `audit:final` with one blocking `emphasis_artifacts` match on the regional-variation paragraph of `pronouns/possessive-pronouns`; all earlier stages in the log passed.
+- **Repair:** changed bold emphasis around Spanish possessive/address forms to italic emphasis in commit `063a11c08530627bf25937dd6a1c883d5e91050f`.
+- **Status:** repair committed; exact-head CI pending. No change to linguistic review status; page remains `draft`.

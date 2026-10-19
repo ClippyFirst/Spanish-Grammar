@@ -669,3 +669,12 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Failure evidence:** full QA run 39208866244 failed only at `audit:final` with one blocking `emphasis_artifacts` match on the regional-variation paragraph of `pronouns/possessive-pronouns`; all earlier stages in the log passed.
 - **Repair:** changed bold emphasis around Spanish possessive/address forms to italic emphasis in commit `063a11c08530627bf25937dd6a1c883d5e91050f`.
 - **Status:** repair committed; exact-head CI pending. No change to linguistic review status; page remains `draft`.
+
+
+## 28. Частини тіла: датив експерієнцера vs симпатетичний датив (2026-10-19)
+
+- **Канонічна сторінка:** `src/content/es/pronouns/body-parts-possession.mdx`.
+- **Доказ:** безпосередньо прочитано RAE/ASALE GTG «dativo» та «complemento indirecto». У першому розрізнено датив-аргумент експерієнцера (*Me duele la garganta*) і посесивний/симпатетичний датив; у другому *Le lavó el pelo al niño* прямо класифіковано як неаргументний датив-додаток.
+- **Disposition:** пояснення уточнено, прямі академічні посилання додано. Не всі дативи при частинах тіла мають однаковий синтаксичний статус; *Me duele la cabeza*, *Me lavo las manos* та *Le lavó el pelo al niño* не слід зводити до одного правила.
+- **Не перевірено:** кожний приклад і переклад; усі конструкції з одягом; країновий/реєстровий розподіл; корпусна частотність; браузерна доступність/SEO.
+- **Статус:** `body-parts-possession.mdx` залишається `draft`; `possessive-pronouns.mdx` також `draft`, оскільки джерельний локатор NGLE §§ 18.1–18.7 не є повним claim-level аудитом форм і регіональних тверджень.

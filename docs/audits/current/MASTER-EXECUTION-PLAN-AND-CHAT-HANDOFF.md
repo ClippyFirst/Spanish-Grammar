@@ -298,103 +298,29 @@ Live snapshot at 2026-10-19: open, ready, not merged; base `main` at `10d49cba91
 
 ### 8.2 Остання контрольна точка — замінювати при handoff
 
-**Знімок оновлюється 2026-10-19.** Перевіряти live HEAD і CI заново після кожного checkpoint-коміту; нижче наведено відомі результати для конкретних SHA.
+**Знімок оновлено 2026-10-19 після завершення bounded pass для neutral `lo`.** Нижче зафіксовано точні SHA, PR-залежності й CI; повторно перевіряти їх перед наступною інтеграційною дією.
 
-- Завершено три обмежені claim-level проходи: subjuntivo/indicativo, temporal conjunctions, і por/para:
-  1. NGLE § 25.13h–j та § 24.5c, j–k: factual/hypothetical `aunque` alternation and prospective/habitual `cuando`. Added the NGLE-backed pair `Aunque lo intento ~ intente todos los días, nunca consigo hablar con él`, refined the temporal explanation, aligned canonical pages and comparison.
-  2. NGLE § 25.14e/h and §§ 22.6p, 31.14i: `hasta que` alternation, `antes de que` + subjunctive, temporal `después de que` (future indicative excluded; regional present/past alternation), and `en cuanto` meaning ‘inmediatamente que’. The trigger quick-reference row was split to avoid implying that `hasta que` always takes subjunctive. Mood distribution specifically with `en cuanto` remains unverified and is explicitly caveated.
-- Canonical pages updated: `src/content/es/moods/subjunctive-triggers.mdx`, `subjunctive-triggers-list.mdx`, `when-not-subjunctive.mdx`, plus `src/content/comparisons/indicative-subjunctive.mdx`. Claim-level audit and topic matrix updated with evidence registers and limitations.
-- Branch: `docs/grammar-reference-architecture-2026-10-18`.
-- Previous checkpoint HEAD `adfa3783cf440f77d0c4d6814b09a295c91a5c89` passed full GitHub Actions QA: [run 39164655829](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39164655829). This pass predates the por/para batch and does not validate its commits. The por/para batch and its QA-driven markup correction advanced the branch to `5c3f09ed9fbf9a72800bcd01b60e1201f221be3e` before this checkpoint update. Full GitHub Actions QA passed on that exact SHA: [run 39165480113](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39165480113). Earlier runs 39165368567 and 39165393412 failed because the emphasis audit flagged a valid `**метою**` span as a malformed substring; the sentence was rewritten without bold emphasis, the audit was not weakened, and run 39165480113 passed.
-- PR #27 is open, ready (not draft), not merged, and currently reported mergeable. Base `main` SHA `10d49cba91d33c192d1fc0bfa12def1c845cad09`; previous recorded head `adfa3783cf440f77d0c4d6814b09a295c91a5c89`; current pre-checkpoint head `5c3f09ed9fbf9a72800bcd01b60e1201f221be3e`. Live PR snapshot: 52 changed files / 280 commits; full QA pass on that exact head is run 39165480113. No submitted reviews or inline threads were found in the previous live query; no reviewers requested.
-- Local working tree was not checked; changes were made through GitHub API.
+### Завершена партія: neutral *lo*
 
-#### Live PR state
+- Прочитано прямий текст NGLE §§ 14.9–14.10 та §§ 44.1, 44.7. У `neutral-lo.mdx` розмежовано референційне `lo + adjective` і емфатичну конструкцію ступеня `lo + adjective/adverb + que`, включно з різницею в узгодженні; уточнено контекстно залежне `lo de` та додано регіональне локативне вживання `lo de + name` у частині американських різновидів.
+- У `relative-pronouns.mdx` уточнено `lo que/lo cual`, додано прямі джерела й посилання на нейтральне `lo`; виправлено пропущений абзацний перенос, недоказове формулювання про «типові помилки українців» і дефектний блок з однаковими `bad/good` прикладами.
+- Claim audit §51 і topic coverage matrix §51 оновлено; обидві сторінки залишаються `draft`. Це не повний аудит усіх прикладів, перекладів, відносних конструкцій, регіональної частотності чи браузерних gate.
+- **Exact full QA passed:** [run 39223141451](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39223141451) succeeded on exact content SHA `72ccde00b3afd133c8f76925515592674a188088`. The full QA job completed successfully after `npm ci`. This run validates the neutral-`lo` and relative-pronouns content edits, claim audit, coverage matrix, and the handoff state present at that SHA. No browser, accessibility, SEO, corpus, or publication certification is implied.
 
-| PR | State | Base → head | Files / commits | Review | CI |
+### Live PR state
+
+| PR | State / dependency | Base SHA → head SHA | Files / commits | Review | Latest known CI |
 |---|---|---|---:|---|---|
-| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; 0 inline threads; no requested reviewers | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeability recalculating | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`23d7c8aebcced401f263f6222203ceba8444c508`, pre-checkpoint) | 62 / 334 | 0 submitted reviews; 0 inline threads; no requested reviewers | No run surfaced for this exact SHA at snapshot time; re-check after checkpoint commit |
-| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; 0 inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
+| [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, unmerged; targets `main` | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; 0 inline threads | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, unmerged; targets `main`; independent of #26 | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`72ccde00b3afd133c8f76925515592674a188088`, exact QA SHA) | 71 / 449 | 0 submitted reviews; 0 inline threads | Pass, [run 39223141451](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39223141451) |
+| [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, **draft**, unmerged; stacked on #26 | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; 0 inline threads | Last known failure, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse error at `src/content/comparisons/ser-estar.mdx:4:72`; recheck before integration |
 
-#28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase or retarget was performed.
+No merges, closes, rebases, retargets, or changes to `main` were made. PR #28 remains draft and dependent on #26; do not merge automatically. Live mergeability was reported true for #26, #27 and #28 at the last query, but that is not an approval or release decision.
 
-#### Batch: temporal conjunctions
+### Next concrete action
 
-- Direct RAE/ASALE text reviewed: NGLE § 25.14e on `hasta que`; § 25.14h on `antes de que` and temporal `después de que`; § 22.6p on the immediate meaning of temporal `en cuanto`; § 31.14i on `en cuanto` as a relative adverbial expression of immediacy.
-- `subjunctive-triggers-list.mdx`: split the former combined `cuando/hasta que + subjunctive` row and added separate bounded rows for `hasta que`, `antes de que`, and `después de que`.
-- `subjunctive-triggers.mdx` and `when-not-subjunctive.mdx`: added context-sensitive contrasts and source-linked regional notes.
-- `comparisons/indicative-subjunctive.mdx`: aligned temporal examples and caveats with the canonical pages; added the § 25.14 and § 22.6p source links.
-- `CLAIM-LEVEL-PILOT-AUDIT-2026-10-18.md` and `TOPICS-COVERAGE-MATRIX-2026.md`: recorded the evidence register and open item.
-- The source pages were opened and relevant paragraphs read. No corpus query, frequency analysis, regional survey, browser/accessibility/SEO test, or local worktree check was performed. Pages remain `draft`; no claim of complete verification is made.
+Continue with the **specific evidence gap exposed by the adjacent edit**: audit the remaining claims in `src/content/es/pronouns/relative-pronouns.mdx`, not the whole relative-clause system. Read that page and its canonical linked pages first; inventory claims for `que`, `quien`, `el que/el cual`, `cuyo`, preposition patterns, and restrictive/explanatory relatives. Then read direct NGLE §§ 22.1–22.5 and 44.1–44.2 as relevant to each claim. Change only demonstrated overgeneralizations or source-locator gaps, record evidence and limits as the next audit/matrix entry, and run full QA on the exact resulting HEAD. Keep the content `draft` unless every claim/example/translation in the stated scope is fully checked. No browser/SEO/accessibility or publication-ready claims without their own evidence.
 
-
-#### Batch: por / para
-
-- Direct RAE/ASALE NGLE paragraphs read: § 29.8k (destination, prospective deadline, purpose, service/utility, recipient); § 29.8n (historical/current overlap); § 29.8ñ (precise future time vs approximate time); § 29.8o–p (route, approximate location/time, duration); § 29.8q–r (passive agent, cause, means/channel, exchange/price, substitution).
-- Canonical `src/content/es/prepositions/por-para.mdx`: repaired malformed Markdown, added source locators, bounded the regional statement for `por + quantitative duration`, and retained `draft` status.
-- `src/content/es/prepositions/por-para-markers.mdx`: added source metadata, neutralized unsupported claims about “typical errors of Ukrainian speakers”, and qualified the temporal-duration marker.
-- `src/content/comparisons/por-para.mdx`: added source traceability and clarified that the common functions are orientation rather than mutually exclusive categories; added the documented regional frequency qualification.
-- Audit and matrix sections 16 appended. No corpus query, quantitative frequency calculation, country-by-country survey, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed. No claim is fully verified solely by this batch.
-
-
-#### Batch: verb–preposition government and personal `a` distinction
-
-- Directly read NGLE § 34.8a–i for the personal preposition `a`, NGLE § 36.6j for `a + infinitive` with verbs such as `ayudar`, NGLE §§ 36.7–36.10 for selected government patterns, and DPD `queísmo` for `acordarse de que`.
-- `src/content/es/prepositions/verbs-with-prepositions.mdx`: repaired malformed Markdown in the introduction, the `que` clause explanation and final memory tip; added source locators and retained `draft` status; replaced the unsupported “typical mistakes of Ukrainian speakers” heading with neutral contrast examples.
-- Corrected a substantive conflation: `ayudar a alguien` can use personal `a` before a human direct object; `ayudar a limpiar` uses `a + infinitive`. Clarified that the preposition in `Depende de que llegues a tiempo` is selected by `depender de`, not by the subjunctive itself.
-- Claim-level audit and coverage matrix section 17 appended. No corpus query, full verb-dictionary audit, regional survey, independent Ukrainian review, or browser/accessibility/SEO test was performed. Personal-`a` canonical page path remains unconfirmed and is the next content discovery task after CI.
-
-
-#### Batch: personal `a` — source-backed review of detailed and short pages
-
-- Directly read NGLE § 34.8a–i and relevant § 34.8k–t paragraphs on referentiality/type readings, animals, personification and alternations; read NGLE § 34.10b–e and j for verb classes, `haber`, `tener`, and intensional verbs; read DPD `leísmo`.
-- Detailed `src/content/es/pronouns/personal-a.mdx` and short `src/content/es/sentence-structure/personal-a.mdx` now have claim-relevant source locators and were downgraded from `reviewed` to `draft` because prior generic source metadata did not establish claim-by-claim verification.
-- Repaired malformed Markdown in the detailed page, clarified the inanimate-object baseline, bounded the `Busco un médico / Busco a un médico que conozco` contrast, and refined the animal note based on NGLE § 34.8o.
-- Changed unsupported learner-error headings to neutral contrast examples. Clarified that `Veo a María → la veo` is the general-standard baseline for a feminine direct object; masculine-person leísmo is a separate phenomenon with narrower normative scope.
-- Claim-level audit and topic matrix section 18 appended. No corpus query, full regional audit, full inventory of § 34.8–34.10 alternations, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
-
-
-#### Batch: `gustar` and verbs of affect
-
-- Directly read RAE/ASALE DPD `gustar` and NGLE § 35.5b, k–m: experiencer as indirect object; the cause/thing experienced as subject in the core construction; plural agreement examples; verbs of affect including `gustar, encantar, doler, interesar`.
-- `src/content/es/verbs/gustar.mdx`: added direct source locators and explicit `draft` status; removed an under-sourced coordinated-infinitive example; changed learner-error heading to neutral contrast examples.
-- `src/content/es/verbs/gustar-type-verbs.mdx`: downgraded `verified` to `draft`, added direct DPD/NGLE source locators, and neutralized the learner-error heading.
-- Claim-level audit and matrix section 19 appended. No full paradigm audit of all related verbs, detailed regional clitic-doubling survey, corpus/frequency analysis, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
-
-
-#### Batch: object clitics and double-clitic sequences
-
-- Directly read NGLE §§ 16.7, 16.11a/j/l, 16.14, 34.8, 35.2e–h and DPD `leísmo`. Evidence confirms the strict order of clitic clusters, `le/les → se` before accusative clitics, common proclisis/enclisis patterns, clitic doubling, and the bounded scope of masculine-person leísmo.
-- `src/content/es/pronouns/objeto-directo-indirecto.mdx`: added direct NGLE/DPD locators and `draft` status; repaired malformed Markdown in object-function contrasts, `se lo`, pronouns after prepositions and `ayudar a alguien`; clarified that personal `a` does not itself mean indirect object; narrowed the leísmo note.
-- `src/content/es/pronouns/double-object-pronouns.mdx`: added NGLE source locators and `draft` status; repaired malformed Markdown around OI/OD, `le/les → se`, and contrasting uses of `se`; changed the learner-error heading to neutral contrast examples.
-- Claim-level audit and coverage matrix section 20 appended. No complete dialect survey, corpus/frequency study, full clitic placement audit, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
-
-
-#### Batch: `si` conditional clauses
-
-- Directly read NGLE § 47.8a–k, including § 47.8d (forms rejected in ordinary present-day `si` protases), § 47.8e (real/open conditions), § 47.8g/i (potential conditions), and § 47.8j/k (irrealis/counterfactual periods).
-- `src/content/es/sentence-structure/conditional-sentences.mdx`: repaired malformed Markdown around `si` and the future/conditional prohibition; added NGLE locators and `draft` status; replaced learner-error framing with neutral contrasts; preserved the distinction between ordinary conditional protases and other occurrences of `si`.
-- `src/content/es/sentence-structure/si-clauses-overview.mdx`: downgraded `verified` to `draft`, added NGLE source locators alongside the existing style-guide source, and neutralized the learner-error heading.
-- Claim-level audit and matrix section 21 appended. No full inventory of conditional correlations, corpus query, country-by-country variation study, independent Ukrainian editorial review, or browser/accessibility/SEO test was performed.
-
-#### Gates and next action
-
-- G0: partial — live PR/base/head checked; local worktree unavailable.
-- G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
-- G2–G5: partial/open — temporal conjunctions have bounded direct evidence; mood distribution specifically with `en cuanto` remains open. Por/para has bounded NGLE evidence for core functions and regional frequency of `por + quantitative duration`, but individual examples, translations, corpus frequency and broader regional claims remain open. The verb-government page has a bounded source/editorial pass. Personal `a` now has a bounded source review across the detailed and short canonical pages; both were downgraded to `draft`. Full verb-pair verification, regional distributions and complete clitic placement remain open. The gustar cluster has a bounded DPD/NGLE pass; both related pages remain `draft`. The core object-clitic and double-clitic pages now have a bounded NGLE/DPD pass and remain `draft`. The `si` conditional overview pair has a bounded NGLE § 47.8 pass; both pages remain `draft`.
-- G6: full GitHub Actions QA passed on exact SHA `ab98cbd4616c535252cfc6ec8d466b0c170d0aa5` (run 39208114447) for the previous voseo audit. The subsequent `en cuanto` source batch advanced the branch to pre-checkpoint SHA `23d7c8aebcced401f263f6222203ceba8444c508`; no workflow run had surfaced for that exact SHA at the last query. This master-plan update itself creates a new commit, so check CI on the exact resulting HEAD before proceeding.
-- G7: not run. G8: blocked; no publication-ready determination.
-
-- **Наступна конкретна дія:** перевірити GitHub Actions на точному HEAD після цього checkpoint-коміту. Якщо QA успішний, перейти до claim-level аудиту артиклів із частинами тіла та присвійними формами: прочитати відповідні розділи NGLE/DPD, зіставити пояснення й приклади в канонічних сторінках, відділити граматичну норму від типових контекстів та регіональних/прагматичних варіантів. Відкритий пункт `en cuanto` тепер має джерело для проспективного subjuntivo (*en cuanto salgan*), але повний розподіл способів у минулих/звичних/узагальнених контекстах лишається невирішеним; не формулювати універсального правила.
-- Обмеження: не зливати/закривати/rebase/retarget PR без дозволу; не вважати структурне покриття, список URL або зелений QA доказом мовної якості.
-
-
-- **2026-10-19:** follow-up on voseo imperative spelling and plural address. Directly read DPD «voseo» §§ 2.1.2.5, 2.3–2.4, «tilde» §§ 1.2.1–1.2.3, and «vosotros». Added the `decí → decime → decímelo` accentuation contrast; bounded Rioplatense/Chilean voseo claims; documented informal `ustedes` in the Canary Islands and western Andalusia; included Paraguay and Montevideo's formal-register variation in the voseo overview. Audit and coverage matrix section 23 appended. Previous exact checkpoint SHA `6dee0f0c89ff4b2859bee59a99d66171f24f6536` passed run 39207699595; this follow-up has pre-checkpoint SHA `a1a706e6004daac7377a9cedfc306cda3ec00821`, pending a fresh exact-HEAD QA check.
-
-- **2026-10-19:** bounded claim-level audit of the voseo overview completed against DPD «voseo» §§ 2.1.1–2.1.2.5 and 2.3–2.4. Corrected the pronominal-voseo example, distinguished valid pronominal-only voseo from Rioplatense verbal voseo, added Paraguay to the Rioplatense summary, and replaced misleading `Mistake` components with variety-labelled contrasts. Audit/matrix section 24 appended. Previous exact SHA `1b3aad523e887712c91bee02a1bbbd043407070e` passed run 39207926192; pre-checkpoint SHA `b25a7ae33feea900001528045edc1f8e8981e487` requires a fresh exact-HEAD check.
-
-- **2026-10-19:** bounded source pass on temporal `en cuanto`. NGLE §§ 22.6p and 31.14i establish meaning/classification; a directly surfaced excerpt from the RAE-hosted BRAE article «Las conjunciones temporales del español», p. 301, gives prospective `en cuanto salgan` alongside `cuando venga` as subjunctive examples. Updated the two canonical mood pages and the comparison page, and appended audit/matrix section 25. The evidence supports the prospective pattern only; full distribution remains open. Previous exact SHA `ab98cbd4616c535252cfc6ec8d466b0c170d0aa5` passed run 39208114447; pre-checkpoint SHA `23d7c8aebcced401f263f6222203ceba8444c508` requires a fresh exact-HEAD check.
 
 ### Live refresh — 2026-10-19 09:16 UTC (після партії про артиклі й присвійні форми)
 
@@ -748,3 +674,9 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - On `relative-pronouns.mdx`, repaired the missing paragraph break after the new cross-link, replaced the unsupported “typical mistakes of Ukrainian speakers” heading, and removed an invalid identical bad/good example pair. The replacement explains how `en la que vivo` and `que es grande` can perform distinct relative-clause functions.
 - Updated claim audit §51 and topic coverage matrix §51 to record these editorial repairs and limits. No content status was promoted.
 - **Next concrete action:** inspect the current live PR #27 head SHA and run full GitHub Actions QA on that exact commit. A green result must be recorded against the same SHA; if the check is not present, do not infer success from an earlier commit. If red, fix only the demonstrated blocker and rerun.
+
+### QA result — neutral *lo* and relative-pronouns checkpoint (2026-10-19)
+
+- Full GitHub Actions QA [run 39223141451](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39223141451) passed on exact content SHA `72ccde00b3afd133c8f76925515592674a188088`.
+- The live §8.2 snapshot now records the article/neutral-`lo` evidence, exact CI, PR #26/#27/#28 base/head dependencies, review state, and the next bounded relative-pronouns claim pass.
+- This checkpoint update changes documentation only; the QA result above is explicitly tied to the exact content SHA and does not certify browser, accessibility, SEO, corpus, or publication gates.

@@ -1,7 +1,7 @@
 # Master execution plan and chat handoff — Gramaticarrona
 
 **Призначення:** головний операційний план, живий реєстр прогресу й протокол передачі контексту новому чату.  
-**Дата консолідації:** 2026-10-18  
+**Дата консолідації:** 2026-10-19  
 **Репозиторій:** https://github.com/ClippyFirst/Spanish-Grammar  
 **Статус:** робота триває; готовність до публікації не сертифікована.
 
@@ -34,13 +34,12 @@
 - MDX — джерело істини для статей. Аудити документують докази й процес, але не замінюють виправлення канонічного контенту.
 - Розрізняти граматичність, нормативну рекомендацію, частотність, регістр, регіональну перевагу, прагматику й гіпотезу. «ser = постійне, estar = тимчасове» не є універсальним правилом.
 
-## 2. Відомий стан на 2026-10-18 — перевірити заново
+## 2. Відомий стан на 2026-10-19 — перевірити заново
 
 ### PR #27 — архітектура й аудит
 [PR #27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27)  
 Відома гілка: docs/grammar-reference-architecture-2026-10-18  
-Останній відомий commit: 900c34d5f2663d6aaad84adfd3881588a7d9ac26  
-Для нього повідомлялося про успішний GitHub Actions QA: [run 39131940822](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39131940822). Перед опорою на результат перевірити актуальний статус. На момент останньої перевірки PR був відкритий і не злитий.
+Live snapshot at 2026-10-19: open, ready, not merged, mergeable; base `main` at `10d49cba91d33c192d1fc0bfa12def1c845cad09`; head `125d323eaca0f4ba7185200b65c9efca32c3f37e`; 62 changed files / 318 commits. No workflow run was surfaced for this exact SHA at the last query; check again after the checkpoint commit. Do not treat an earlier successful QA run as validation of later commits.
 
 У гілці є цільова архітектура, стандарт якості пояснень, регіональна матриця, claim-level пілот, матриця 24 компетенцій і точкове джерельне рев’ю трьох канонічних статей та порівняння ser/estar. Три канонічні статті мають статус reviewed, не verified. Весь корпус не верифікований.
 
@@ -315,7 +314,7 @@
 | PR | State | Base → head | Files / commits | Review | CI |
 |---|---|---|---:|---|---|
 | [#26](https://github.com/ClippyFirst/Spanish-Grammar/pull/26) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) | 31 / 26 | 0 submitted reviews; 0 inline threads; no requested reviewers | Pass, [run 39129981192](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39129981192) |
-| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`bb50f0c843fb375e922e9dabc8034fac77351960`, pre-checkpoint) | 62 / 316 | 0 submitted reviews; 0 inline threads; no requested reviewers | Pre-checkpoint run queued, [run 39207552978](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39207552978); checkpoint commit will require a fresh check |
+| [#27](https://github.com/ClippyFirst/Spanish-Grammar/pull/27) | Open, ready, not merged; mergeable | `main` (`10d49cba91d33c192d1fc0bfa12def1c845cad09`) → `docs/grammar-reference-architecture-2026-10-18` (`125d323eaca0f4ba7185200b65c9efca32c3f37e`, pre-checkpoint) | 62 / 318 | 0 submitted reviews; 0 inline threads; no requested reviewers | No run surfaced for this exact SHA at snapshot time; re-check after checkpoint commit |
 | [#28](https://github.com/ClippyFirst/Spanish-Grammar/pull/28) | Open, draft, not merged; mergeable | `feat/grammar-research-skills-2026-10-18` (`25e736b5c5dea52031f32cb82964da0fd7d3cf9f`) → `feat/grammar-research-skills-wave2-2026-10-18` (`c228e69e69f397e0b16a1b9174a49b7ff24912e2`) | 11 / 23 | 0 submitted reviews; 0 inline threads; no requested reviewers | Fail, [run 39155530069](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39155530069), synthetic merge ref `072199b632d0fc8bcd1ae9d1663ea6f62e74d404`; YAML parse failure at `src/content/comparisons/ser-estar.mdx:4:72`; not fixed in #27 |
 
 #28 remains stacked on #26; #26 and #27 target `main`. No merge, close, rebase or retarget was performed.
@@ -384,7 +383,7 @@
 - G0: partial — live PR/base/head checked; local worktree unavailable.
 - G1: partial — scoped matrix updated; 323 → 208 remains a historical structural baseline.
 - G2–G5: partial/open — temporal conjunctions have bounded direct evidence; mood distribution specifically with `en cuanto` remains open. Por/para has bounded NGLE evidence for core functions and regional frequency of `por + quantitative duration`, but individual examples, translations, corpus frequency and broader regional claims remain open. The verb-government page has a bounded source/editorial pass. Personal `a` now has a bounded source review across the detailed and short canonical pages; both were downgraded to `draft`. Full verb-pair verification, regional distributions and complete clitic placement remain open. The gustar cluster has a bounded DPD/NGLE pass; both related pages remain `draft`. The core object-clitic and double-clitic pages now have a bounded NGLE/DPD pass and remain `draft`. The `si` conditional overview pair has a bounded NGLE § 47.8 pass; both pages remain `draft`.
-- G6: previous content checkpoint passed on `5c3f09ed9fbf9a72800bcd01b60e1201f221be3e` (run 39165480113). After that, the live branch advanced through later source-review batches. Pre-checkpoint HEAD for the 2026-10-19 imperative/address batch is `bb50f0c843fb375e922e9dabc8034fac77351960`; run 39207552978 is queued at this snapshot. This master-plan update itself creates a new commit, so check CI again on the exact resulting HEAD before proceeding.
+- G6: previous content checkpoint passed on `5c3f09ed9fbf9a72800bcd01b60e1201f221be3e` (run 39165480113). After that, the live branch advanced through later source-review batches. Pre-checkpoint HEAD after the 2026-10-19 imperative/address batch and its final markup correction is `125d323eaca0f4ba7185200b65c9efca32c3f37e`. Run 39207552978 was cancelled by the subsequent push; no run was surfaced for this exact SHA at the last query. This master-plan update itself creates a new commit, so check CI again on the exact resulting HEAD before proceeding.
 - G7: not run. G8: blocked; no publication-ready determination.
 
 - **Наступна конкретна дія:** спочатку перевірити GitHub Actions на точному HEAD після цього checkpoint-коміту. Якщо QA успішний, провести окремий вузький source pass для орфографії клітиків у наказових формах і регіональних моделей voseo: звірити офіційну *Ortografía* щодо написання дієслова з enclíticos, NGLE § 4.3.2 та DPD «voseo»; перевірити *idos/iros*, *marchaos*, voseo imperative spellings, і не розширювати висновки за межі прямо підтверджених різновидів. Питання mood selection саме з часовим `en cuanto` лишається відкритим: NGLE §§ 22.6p, 31.14i підтверджують значення/тип виразу, але не дають достатнього прямого розподілу способів; не формулювати універсального правила. Вже виконано обмежені проходи для subjuntivo/indicativo, temporal conjunctions, por/para, verb government, personal *a*, *gustar*, object clitics, *si* conditionals, and the 2026-10-19 imperative/address cluster; не повторювати їх без нових доказів.
@@ -440,4 +439,4 @@
 
 - **2026-10-18:** bounded `si` conditional pass completed. NGLE § 47.8a–k read directly; repaired/sourced the two overview pages, downgraded the previously `verified` overview to `draft`, and updated audit/matrix. Pre-checkpoint content/doc commit: `98213bb6aa00b9c0b4bcf4fc7250a98d047475bb`; this checkpoint commit requires its own CI check.
 
-- **2026-10-19:** bounded imperative/address-form pass completed. Directly read NGLE § 42.3c–u and DPD «vos»/«vosotros». Updated the imperative page, forms-of-address page, object-pronoun placement page and voseo page; repaired malformed emphasis/contrast markup, added source locators, neutralized learner-error headings, and downgraded unsupported `reviewed`/`verified` statuses to `draft`. Audit and coverage matrix section 22 appended. Pre-checkpoint SHA `bb50f0c843fb375e922e9dabc8034fac77351960`; run 39207552978 queued at checkpoint creation. Mood selection with temporal `en cuanto` remains open because the inspected NGLE sections confirm meaning/classification but not a complete direct mood distribution.
+- **2026-10-19:** bounded imperative/address-form pass completed. Directly read NGLE § 42.3c–u and DPD «vos»/«vosotros». Updated the imperative page, forms-of-address page, object-pronoun placement page and voseo page; repaired malformed emphasis/contrast markup, added source locators, neutralized learner-error headings, and downgraded unsupported `reviewed`/`verified` statuses to `draft`. Audit and coverage matrix section 22 appended. Follow-up commit `125d323eaca0f4ba7185200b65c9efca32c3f37e` repaired two remaining malformed emphasis spans in `imperativo.mdx`. Run 39207552978 was cancelled by the later push; no run was surfaced for the exact pre-checkpoint SHA at snapshot time. Mood selection with temporal `en cuanto` remains open because the inspected NGLE sections confirm meaning/classification but not a complete direct mood distribution.

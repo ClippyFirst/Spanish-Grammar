@@ -593,3 +593,11 @@ The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actio
 - Для *su/sus* збережено пояснення про потенційну неоднозначність референта, але не проведено корпусного вимірювання неоднозначності чи повного аналізу всіх контекстів.
 - Не виконано корпусного/частотного дослідження, країно-за-країною перевірки всіх форм, незалежної повної української редактури чи браузерного/accessibility/SEO тесту.
 - Статус сторінки залишається `draft`; джерела у frontmatter не є підставою для `verified`.
+
+
+## 30. QA failure: malformed YAML source string in body-parts page — 2026-10-19
+
+- **Run:** [39210353945](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39210353945), job `117922128723`, failed during `astro sync` / frontmatter parsing before the other QA stages ran.
+- **Exact finding:** `src/content/es/pronouns/body-parts-possession.mdx:33:5`, `bad indentation of a mapping entry`. The newly replaced NGLE § 18.7 source locator line lacked its closing double quote in YAML frontmatter.
+- **Repair:** added the missing closing quote in commit `82cd7e57f9135ff44f1d1e628c925591e16b40f7`. This is a syntax-only correction; the cited source and linguistic claims did not change.
+- **Status:** rerun full QA on the exact latest HEAD after audit/matrix/handoff updates. Do not treat the earlier success on `a593e4d7d2c7c436ae85decfeea74c6533998e8e` as validation of this later change.

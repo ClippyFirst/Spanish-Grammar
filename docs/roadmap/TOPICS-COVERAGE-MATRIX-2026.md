@@ -908,3 +908,13 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | Означальні й пояснювальні підрядні | `pronouns/relative-pronouns.mdx`; `sentence-structure/relative-clauses.mdx`; `sentence-structure/relative-clauses-depth.mdx` | NGLE §§ 44.4–44.5: означальні обмежують/уточнюють референцію і входять до іменникової групи; пояснювальні додають інцидентну інформацію й відокремлюються пунктуаційно. Переклади прикладів узгоджено з контрастом. | Коми не описують усіх просодичних, дискурсивних і прагматичних нюансів. |
 | Функція *el cual* | `pronouns/relative-pronouns.mdx`; `pronouns/relative-pronouns-review.mdx` | NGLE § 22.4m–o та § 44.2: складна відносна форма, доречна в певних прийменникових і пояснювальних конструкціях, з віддаленим антецедентом або для розрізнення референтів. | Не повний опис стилістичної частотності. |
 | Доказовий статус | усі чотири сторінки цього кластера | Додано прямі джерельні локатори; quick guide `relative-pronouns-review.mdx` змінено з `verified` на `draft`. | Партія не є повною перевіркою всіх прикладів, перекладів, регіонів або релізних gate. |
+
+
+## 53. Indicativo/subjuntivo у відносних підрядних: specific / non-specific ≠ існування (2026-10-19)
+
+| Вимога / твердження | Канонічні сторінки | Джерело / disposition | Межі |
+|---|---|---|---|
+| Specific vs non-specific reading | `sentence-structure/relative-clauses-depth.mdx`; `sentence-structure/relative-clauses.mdx`; `comparisons/indicative-subjunctive.mdx` | NGLE § 25.10a–f, k–s: indicativo часто підтримує specific reading, subjuntivo — non-specific, але це не тотожне «існує / не існує» або «відоме / невідоме». | Не встановлює однозначного прочитання кожного речення поза контекстом. |
+| `buscar` + відносне підрядне | `sentence-structure/relative-clauses-depth.mdx`; `moods/subjunctive-triggers.mdx`; `moods/subjunctive-triggers-list.mdx` | NGLE § 25.11a, c, e: subjuntivo типовий для шуканого неспецифічного референта, але indicativo не виключається в багатьох контекстах; його природність залежить від прагматичної інтерпретації. Категоричний Mistake замінено контекстною нотаткою. | Не оцінено частотність і природність усіх можливих контекстів. |
+| Generic contexts and negative antecedents | ті самі канонічні сторінки | NGLE § 25.10q–s і § 25.11n: узагальнені контексти можуть допускати indicativo; з негативними неозначеними групами є регіональна варіативність. | Без карти країн і частотних підрахунків. |
+| Джерела й статус | відносні підрядні, дві сторінки тригерів, порівняння способів | Додано прямі посилання на NGLE §§ 25.10–25.11. Сторінки залишаються `draft`; CI не є лінгвістичною сертифікацією. | Це обмежений аудит контрасту, а не повна перевірка всіх тригерів, прикладів, перекладів або релізних gate. |

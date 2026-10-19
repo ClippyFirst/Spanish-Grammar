@@ -706,3 +706,11 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Аналіз:** чіткіше розрізнено датив експерієнцера в *Me duele la cabeza*, посесивну інтерпретацію *me* в *Me lavo las manos* і прямо описаний GTG неаргументний симпатетичний датив у *Le lavó el pelo al niño*. Аналіз *El médico me revisó la garganta* позначено як висновок за аналогією, а не дослівний приклад із джерела.
 - **Не перевірено:** повний корпусний/частотний аналіз, всі приклади й переклади, країнові/реєстрові відмінності, браузер/accessibility/SEO.
 - **Статус:** `body-parts-possession.mdx` залишається `draft`.
+
+
+## 32. Cross-page consistency — article special cases and body-part guide (2026-10-19)
+
+- **Files:** `src/content/es/articles/special-cases.mdx`, `src/content/es/pronouns/body-parts-possession.mdx`, `src/content/comparisons/articles.mdx`.
+- **Disposition:** special-cases page now uses direct NGLE § 18.7a–i evidence and links to the detailed body-part/dative guide. The comparison page already links to the body-part guide and possessive forms page, so no duplicate topic was added.
+- **Specific repair:** clarified *Se rompió el brazo* vs *Se le rompió el brazo*; avoid claiming a context-free anticausative analysis for the first form.
+- **Limits:** only a targeted cross-page pass; not a complete audit of all special-cases content, country-level variation, corpus frequency, browser/accessibility/SEO. Relevant pages remain `draft`.

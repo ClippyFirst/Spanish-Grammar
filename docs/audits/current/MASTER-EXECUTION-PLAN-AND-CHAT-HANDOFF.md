@@ -554,3 +554,13 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Audit trail:** claim-level audit §33 and coverage matrix §33 record the source scope and limitations.
 - **QA after these newest edits:** pending; the previous success does not validate the new body page/audit/matrix/checkpoint commits.
 - **Next concrete action:** run/check full GitHub Actions QA on exact newest HEAD. If green, continue the remaining bounded example check in `special-cases.mdx` and compare all body-part claims across the canonical page, comparison page, and special-cases page. If it fails, diagnose only the exact failing step. Keep relevant pages `draft`; no merge/close/rebase/retarget.
+
+
+### Live refresh — special-case article claims (2026-10-19)
+
+- Previous exact QA pass: [run 39210981413](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39210981413) succeeded on SHA `241461a6f981a00ed4a11addd66da72d7830612c`. It predates the current special-cases edits.
+- Directly read RAE/ASALE DPD «el» §§ 2.1–2.2 and 4–6, NGB § 9.1.1, and NGLE § 18.7a–i. The DPD source supports the stressed-initial-/a/ rule, feminine agreement, immediate adjacency, and scoped treatment of personal/geographical names.
+- `special-cases.mdx` now links direct DPD text instead of relying only on a contents index for stressed /a/ and proper-name use; *Argentina/la Argentina* and *la María* have more precise variation notes; frontmatter links to both canonical possession guides; the exception for **El** as part of a proper name was added to the *al/del* explanation.
+- **Open evidence gaps:** NGLE §§ 14.3 and 15.11–15.13 are still contents-index locators, not directly reviewed text. Profession predicates after *ser*, weekday article use, language names, and contractions *al/del* need direct source verification. `special-cases.mdx` remains `draft`.
+- Claim-level audit §34 and topic matrix §34 record the bounded results. No browser/accessibility/SEO or corpus/frequency test was performed.
+- **Next action:** locate direct RAE/ASALE text for professions after *ser*, weekdays, language names, and *al/del* (including proper-name exceptions). Then cross-check the canonical definite/indefinite, zero-article, special-cases and comparison pages, and run full QA on the exact newest HEAD. If a direct source cannot be located, retain the explicit evidence gap and narrow the claim. No merge/close/rebase/retarget.

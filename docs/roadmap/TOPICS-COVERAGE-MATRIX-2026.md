@@ -737,3 +737,11 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Correction:** removed the visually categorical `Mistake` treatment of *Soy un médico* and replaced it with a neutral contrast against *Soy médico*, because the descriptive/qualified form is possible. The two canonical pages now remain `draft` with current edit dates.
 - **Consistency:** the comparison and special-cases pages now mention that contraction does not apply when **El** is part of a proper name (*a El Salvador*, *de El Cairo*). The rule still requires a direct source pass; the current NGLE § 14.3 citation is a contents-index locator only.
 - **Open claims:** direct evidence for profession predicates after *ser*, weekday article use, language names, and *al/del* contractions not yet inspected. No corpus/frequency or browser/accessibility/SEO audit; pages remain `draft`.
+
+
+## 36. Direct NGLE pass — bare predicates and language names (2026-10-19)
+
+- **NGLE § 15.11g, m:** direct text supports bare nominal predicates (*Son médicos*) and language names without determiners in habitual/generic contexts (*Habla ruso*). This supports the general pattern behind examples on `special-cases.mdx`, not a universal article rule.
+- **NGLE § 15.13:** direct text discusses construction-specific and phraseological uses of bare nouns; no direct weekday-name rule was found in this pass.
+- **RAE Ortografía:** directly supports no contraction when the article belongs to an official place name (*a El Cairo*, *de El Dorado*). The general *al/del* rule still needs direct NGLE § 14.3 text.
+- **Disposition:** the source register and evidence boundary were updated. Weekday use remains open; no corpus/frequency, full Ukrainian edit, or browser/accessibility/SEO audit. Page remains `draft`.

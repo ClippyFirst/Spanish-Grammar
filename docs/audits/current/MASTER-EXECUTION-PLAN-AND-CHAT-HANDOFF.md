@@ -516,3 +516,12 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 
 - After the direct source pass, the body-parts page metadata was aligned with the actual edit date (`updated: "2026-10-19"`), and its earlier indirect § 14.7/§ 38.11 locator was replaced with the directly relevant NGLE § 18.7a–i page. Commit: `7cec2e486e4d98dea3c88550034c61695e3f7b93`.
 - This is a metadata/source-traceability repair; it does not expand the linguistic verification claim. The exact latest full QA must run after this and the checkpoint commit.
+
+
+### Live refresh — source-frontmatter QA failure and narrow repair (2026-10-19)
+
+- **Failure:** run [39210353945](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39210353945), job `117922128723`, failed at `astro sync` while parsing `src/content/es/pronouns/body-parts-possession.mdx:33:5`: `bad indentation of a mapping entry`.
+- **Cause:** the newly added direct NGLE § 18.7 source locator in the YAML `sources` list lacked its closing double quote. The remaining QA stages did not run, so this is a frontmatter parse failure, not a content audit result.
+- **Repair:** missing quote added in commit `82cd7e57f9135ff44f1d1e628c925591e16b40f7`. Audit §30 and coverage matrix §30 record the failure and repair.
+- **QA status:** the repair itself and subsequent audit/matrix/handoff commits still require a full QA pass on exact latest HEAD. Do not reuse run 39210103241, which validated the earlier SHA only.
+- **Next concrete action:** check full GitHub Actions QA for the exact newest HEAD after this checkpoint. If green, continue example-by-example review of body-part/clothing examples and Ukrainian translations; if not, inspect the exact failing step and repair only that demonstrated blocker. Keep both content pages `draft`; no merge/close/rebase/retarget.

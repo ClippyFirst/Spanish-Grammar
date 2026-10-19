@@ -548,3 +548,24 @@ The relevant excerpt from the RAE-hosted BRAE PDF search result was inspected, n
 
 ## 27. QA failure follow-up: possessive-page emphasis artifact — 2026-10-19
 The exact run [39208866244](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39208866244), job 117917615173, failed in `npm run audit:final`, not in typecheck, MDX preflight, table audit, content validation, links, graph, or design checks. The reported blocking count was `emphasis_artifacts: 1`, with the sole reported match on the regional-variation paragraph in `pronouns/possessive-pronouns`. The paragraph used bold Markdown for several Spanish forms in one sentence, which triggered the emphasis-artifact detector. Changed the forms to single-asterisk italics in commit `063a11c08530627bf25937dd6a1c883d5e91050f`; this is a narrow formatting repair, not a linguistic claim change. The latest commit still requires a fresh full QA run. Do not claim CI pass until a run for the exact current SHA succeeds.
+
+
+## 28. Частини тіла: експерієнцер і симпатетичний датив — 2026-10-19
+
+### Прямо перевірені джерела
+
+- RAE/ASALE, *Glosario de términos gramaticales*, «dativo»: https://www.rae.es/gtg/dativo — розрізняє датив-аргумент (зокрема експерієнцер у *Me duele la garganta*) і датив-додаток; посесивний/симпатетичний датив установлює відношення належності, приналежності або включення.
+- RAE/ASALE, *Glosario de términos gramaticales*, «complemento indirecto»: https://www.rae.es/gtg/complemento-indirecto — прямо протиставляє аргументний CI у *Le dio el libro al niño* та неаргументний симпатетичний датив у *Le lavó el pelo al niño*. У джерелі зазначено, що *lavar* відбирає агенса й тему, а не окремого адресата.
+- Офіційний предметний покажчик NGLE вказує на релевантні розділи про посесивний датив (§§ 35.7f–ñ) та невідчужуване володіння (§ 18.7a–i): https://www.rae.es/sites/default/files/indice_de_materias_gramatica.pdf. Сам покажчик є локатором, а не доказом усіх конкретних прикладів.
+
+### Знахідки й зміни
+
+- У src/content/es/pronouns/body-parts-possession.mdx додано прямі посилання на дві статті GTG та розмежовано три аналізи: *Me duele la cabeza* — датив експерієнцера, який може також установлювати зв’язок належності; *Me lavo las manos* — займенник кореферентний із підметом у конструкції, де *las manos* є прямим додатком, але його не слід беззастережно описувати як прямий зворотний додаток «мию себе»; *Le lavó el pelo al niño* — прямо засвідчений у GTG неаргументний симпатетичний датив.
+- Для *El médico me revisó la garganta* збережено обережне формулювання: *me* позначає особу, якої стосується дія, але точну класифікацію не поширено на всі контексти без окремого аналізу.
+- Не зроблено висновку, що кожен датив у реченнях із частинами тіла неаргументний. За GTG дативи можуть бути аргументами або додатками; *doler* із експерієнцером та *lavar* із симпатетичним дативом — не одна синтаксична модель.
+
+### Межі доказу / відкриті питання
+
+- Це джерельно підкріплене уточнення синтаксичного пояснення, а не повна перевірка всіх прикладів, українських перекладів, конструкцій з одягом або регіональної варіантності.
+- Не виконано корпусного пошуку, частотного аналізу, країнового зіставлення чи браузерного/accessibility/SEO тесту.
+- possessive-pronouns.mdx залишається draft: загальний локатор NGLE §§ 18.1–18.7 не замінює перевірки парадигм, прикладів, перекладів і розподілу vuestro/vuestra, su/sus, de ustedes за конкретними різновидами.

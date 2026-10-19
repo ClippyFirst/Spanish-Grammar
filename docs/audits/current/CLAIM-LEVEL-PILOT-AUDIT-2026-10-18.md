@@ -466,3 +466,23 @@ This is a bounded claim-level pass following the subjunctive/indicative alternat
 ### Evidence boundary
 
 This was a bounded source/editorial pass, not a full conjugation audit. No full review of every irregular imperative, all imperative-plus-clitic spellings, all regional voseo paradigms, country-by-country treatment norms, corpus frequencies, independent Ukrainian editorial review, or browser/accessibility/SEO testing was performed. All four pages remain `draft`; no claim of full verification or publication readiness is made.
+
+
+## 23. Voseo imperative accentuation and plural address distribution — 2026-10-19
+
+### Direct evidence read
+
+- RAE/ASALE DPD «voseo», § 2.1.2.5: voseo imperative forms derive from the second-person plural forms with loss of final *-d* (e.g. *tomá, respondé, escribí*); the DPD distinguishes these from irregular *tú* imperatives. When enclitic pronouns are added, general accentuation rules apply.
+- DPD «voseo», §§ 2.3–2.4: voseo has regional and social variation; the Rioplatense forms are accepted in the educated norm in Argentina, Paraguay and Uruguay. In Montevideo, formal registers more often use verbal voseo with *tú*; the Chilean system has a different profile and imperative voseo is restricted.
+- DPD «tilde», §§ 1.2.1–1.2.3: agudas ending in a vowel take a written accent; llana words ending in a vowel do not; esdrújulas and sobresdrújulas always take a written accent.
+- DPD «vosotros»: *vosotros/as* is informal plural in most of Spain, but it is absent from America and some southern Spanish areas such as the Canary Islands and western Andalusia, where *ustedes* also serves informal plural address. https://www.rae.es/dpd/vosotros
+
+### Changes made
+
+- `src/content/es/moods/imperativo.mdx`: added DPD «voseo» and «tilde» sources; clarified that enclitic accentuation follows rules for the resulting word; added the contrast `decí → decime → decímelo`; narrowed the voseo imperative description and noted that the Chilean pattern is not universal.
+- `src/content/es/pronouns/tu-usted-vosotros-ustedes.mdx`: added a direct DPD-based caveat to the quick map for informal *ustedes* in the Canary Islands and western Andalusia; clarified that *ustedes* is not exclusively formal throughout Spain.
+- `src/content/es/regional/voseo.mdx`: added direct DPD source locator for voseo paradigms; included Paraguay in the Rioplatense summary and noted the DPD-described formal-register variation in Montevideo; bounded the Chilean imperative statement.
+
+### Evidence boundary
+
+The cited DPD passages were read directly. The changes support only the specific paradigms and geographic/normative distinctions described above. No exhaustive accentuation audit, full country-by-country review of all voseo forms, corpus/frequency study, independent Ukrainian editorial review, or browser/accessibility/SEO testing was performed. All three pages remain `draft`.

@@ -121,3 +121,14 @@ Files: src/content/es/articles/definite-indefinite.mdx and src/content/es/articl
 The two pages already had distinct editorial roles (full explanation vs contrastive guide), reciprocal links and preserved URLs. The concrete remaining gap was source precision: one page cited NGLE chapters 14–15 through a locator that opened only the § 15.2 page, while the contrast page used chapter-level references without direct URLs. Updated both source lists to link directly to NGLE § 15.4 (anaphora/first mention), § 15.8 (generic article use), § 15.11 (bare nouns/no article), and DPD *el* § 2 for the stressed-/a/ rule. These sections directly support the specific claims/examples; DPD explicitly confirms *el agua fría*, feminine agreement, and the adjacency restriction.
 
 The article content and page roles were not rewritten because inspection did not reveal a new unsupported rule in the reviewed examples. Existing statuses were not upgraded. This is a source-locator precision pass, not complete verification of every article construction or translation.
+
+
+### 9. Article cluster: zero-article page role clarified (2026-10-19)
+
+**Files:** src/content/es/articles/definite-indefinite.mdx, src/content/es/articles/definite-vs-indefinite.mdx, src/content/es/articles/zero-article.mdx.
+
+Compared the three pages at claim level around bare nouns, *No tengo coche / No tengo un coche*, profession predicates, substances, plural bare nouns and fixed expressions. The inspected examples were already qualified sufficiently; no grammar rewrite was justified. The actual defect was role ambiguity: the overview and contrast guide both discussed zero article extensively, while the dedicated page's specialist purpose was not stated explicitly in its body.
+
+Added a short role statement and reciprocal in-body links: the general overview points to the focused zero-article guide and contrast guide; the contrast guide points to both; the zero-article page explicitly says it focuses on bare nominal groups and fixed article-less constructions rather than the whole article system. The dedicated page retains its distinct deeper coverage of bare nouns, predicative complements and phraseological patterns. Existing URLs and review statuses are unchanged. Direct NGLE §§ 15.11 and 15.13 sources were inspected and retained; no unsupported claim or need for a broad rewrite was found.
+
+This is a bounded navigation/content-role correction, not an exhaustive audit of all bare-NP licensing conditions or all translations.

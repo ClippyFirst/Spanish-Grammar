@@ -834,3 +834,16 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 | *Cuando era niño, comí en casa* проти *comía en casa* | NGLE §§ 23.9a–d, 23.13d–h: https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-perfecto-simple-cant%C3%A9; https://www.rae.es/gram%C3%A1tica/sintaxis/el-pret%C3%A9rito-imperfecto-cantaba-iv-otros-aspectos-de-la-oposici%C3%B3n-cant%C3%A9cantaba | Замість безумовного маркування Mistake пояснено звичне прочитання imperfecto та можливість окремого епізоду з indefinido. | Ізольована фраза не задає достатньо контексту для остаточної оцінки всіх прочитань. |
 
 **Статус:** ці зміни зменшують ризик надмірних тверджень; вони не означають повної верифікації всієї системи минулих часів. Статуси канонічних сторінок лишаються reviewed.
+
+
+## 46. Presente de subjuntivo: джерельна перевірка базових індукторів — 2026-10-19
+
+| Твердження | Пряме джерело | Результат | Межа |
+|---|---|---|---|
+| Indicativo як типовий режим незалежного твердження; роль індукторів | NGLE § 25.2a, f–n: https://www.rae.es/gram%C3%A1tica/sintaxis/inductores-del-modo | Підтверджено, що спосіб може визначатися дієсловом, прикметником, іменником, прислівником, запереченням, відносною конструкцією тощо. | Не створює списку, який автоматично розв'язує кожний контекст. |
+| Бажання, оцінка й твердження | NGLE § 25.3a–j: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-sustantivas-i-contextos-b%C3%A1sicos-de-selecci%C3%B3n-del-modo | Предикати різних семантичних класів обирають способи; просте «впевненість/невпевненість» недостатнє. | Не перевірено всі дієслова й усі приклади на сторінці. |
+| Заперечення й сфера дії | NGLE § 25.7a–f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-sustantivas-v-negaci%C3%B3n--y-subjuntivo-en-la-subordinaci%C3%B3n-sustantiva-otros-inductores-asimilables-a-la-negaci%C3%B3n | Заперечення часто індукує subjuntivo, але інтерпретація може відрізнятися залежно від того, що саме подано як відоме/істинне. | Потрібен контекст для багатьох пар з indicativo/subjuntivo. |
+| Відносні речення: specific/non-specific | NGLE § 25.10a–f: https://www.rae.es/gram%C3%A1tica/sintaxis/el-modo-en-las-subordinadas-relativas-ii-interpretaci%C3%B3n-de-los-grupos-nominales-que-las-contienen | Indicativo часто підтримує specific reading, subjuntivo — non-specific; джерело прямо застерігає від простого ототожнення з існуванням/неіснуванням референта. | Не кожне відносне речення підпорядковується спрощеній парі. |
+| *Aunque* й інші підрядні сполучники | NGLE § 25.13a–f: https://www.rae.es/gram%C3%A1tica/sintaxis/elecci%C3%B3n-del-modo-con-las-conjunciones-subordinantes | Для частини сполучників спосіб залежить від значення; *aunque* допускає обидва способи в певних контекстах. | Не є повним аудитом часових, умовних та інших підрядних конструкцій. |
+
+**Статус:** канонічну presente-subjuntivo сторінку позначено reviewed, не verified; список тригерів і повний набір прикладів потребують окремого аудиту.

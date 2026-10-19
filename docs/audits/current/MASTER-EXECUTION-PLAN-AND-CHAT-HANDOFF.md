@@ -665,3 +665,11 @@ This addendum supersedes the prior note that run 39208866244 was pending. The us
 - **Follow-up corrections in this checkpoint:** removed categorical Mistake framing from Ayer he comido (a las dos) in the canonical perfecto/indefinido pages and from Cuando era niño, comí en casa in the comparison page. These are now source-scoped regional/context notes. Claim audit §45 and coverage matrix §45 record the basis and limits.
 - **Next action after QA on this exact checkpoint:** move to a bounded subjunctive pass. Read the canonical present subjunctive page and its comparison/overview first, then inspect direct NGLE/RAE sources for mood selection, uncertainty/desire, and subordinate clauses. Preserve the difference between indicative/subjunctive as a syntactic-semantic choice and simplistic “certainty vs uncertainty” rules. Do not raise content statuses without full claim/example review.
 - **PR state:** PR #27 remains open and unmerged; main unchanged. No merge/close/rebase/retarget performed.
+
+
+### Live refresh — present subjunctive source pass (2026-10-19)
+
+- **Previous exact QA pass:** [run 39214201501](https://github.com/ClippyFirst/Spanish-Grammar/actions/runs/39214201501) succeeded on SHA a91c1711f750383b7956da95fb39f280756c2721, covering the regional past-tense corrections and handoff checkpoint.
+- **Current source pass:** directly reviewed NGLE §§ 25.2, 25.3, 25.7, 25.10, and 25.13. The canonical present subjunctive page now has a direct source registry and status reviewed; the categorical Mistake label for *Creo que sea verdad* was replaced with a contextual note presenting *Creo que es verdad* as the neutral default.
+- **Audit trail:** claim-level audit §46 and coverage matrix §46 record evidence and limits. This does not verify every example/translation or the full trigger list. The trigger pages remain draft.
+- **Next action after exact-head QA:** continue with the trigger-list/temporal subordinate clauses only if a claim-level source gap or an overbroad claim is identified; otherwise choose the next high-priority topic from the master plan. Keep PR #27 open/unmerged, main unchanged, and do not merge without explicit authorization.

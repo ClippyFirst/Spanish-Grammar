@@ -729,3 +729,11 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Directly checked:** DPD «el» §§ 2.1–2.2 supports the stressed-initial-/a/ rule, immediate adjacency, feminine agreement and demonstrative contrast; §§ 4–6 support the bounded statements on personal names and geographical names. NGB § 9.1.1 confirms the article paradigm. NGLE § 18.7a–i supports the article/possession discussion for body parts.
 - **Changed:** source register now distinguishes direct-text sources from the NGLE contents-index-only locators; country-name wording marks *la Argentina* as a possible variant; the discussion of *la María* includes register and regional limitations; proper-name exception to *al/del* contraction added as a claim needing direct source verification; related canonical possession pages added to frontmatter.
 - **Still open:** source-specific verification of profession predicates after *ser*, weekday article use, language names, and contractions *al/del*. The cited NGLE § 14.3 and §§ 15.11–15.13 are currently contents-index locators, not direct chapter text. No corpus/frequency study or browser/accessibility/SEO testing. `special-cases.mdx` remains `draft`.
+
+
+## 35. Cross-page consistency — profession examples and *al/del* (2026-10-19)
+
+- **Pages:** `definite-indefinite.mdx`, `zero-article.mdx`, `special-cases.mdx`, and `comparisons/articles.mdx`.
+- **Correction:** removed the visually categorical `Mistake` treatment of *Soy un médico* and replaced it with a neutral contrast against *Soy médico*, because the descriptive/qualified form is possible. The two canonical pages now remain `draft` with current edit dates.
+- **Consistency:** the comparison and special-cases pages now mention that contraction does not apply when **El** is part of a proper name (*a El Salvador*, *de El Cairo*). The rule still requires a direct source pass; the current NGLE § 14.3 citation is a contents-index locator only.
+- **Open claims:** direct evidence for profession predicates after *ser*, weekday article use, language names, and *al/del* contractions not yet inspected. No corpus/frequency or browser/accessibility/SEO audit; pages remain `draft`.

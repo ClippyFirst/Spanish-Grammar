@@ -696,3 +696,13 @@ This follow-up is a limited claim/evidence pass, not complete verification of ev
 - **Repair:** added the missing quote in commit `82cd7e57f9135ff44f1d1e628c925591e16b40f7`.
 - **Impact:** no grammar/content claim changed; this is frontmatter syntax only.
 - **Status:** exact latest HEAD requires a fresh full QA run; prior successful run 39210103241 predates this content/source batch.
+
+
+## 31. Приклади частин тіла й одягу — точкова перевірка (2026-10-19)
+
+- **Канонічна сторінка:** `src/content/es/pronouns/body-parts-possession.mdx`.
+- **Доказ:** NGLE § 18.7a–i прочитано безпосередньо. Підтверджено базову модель *Me duele la cabeza*, посесивний артикль із частинами тіла та приклади з дативом на кшталт *Se me cierran los ojos* / *Se me taponaron los oídos*.
+- **Виправлення:** *Le quitaron la chaqueta* → «З нього/неї зняли куртку»; *Le lavó el pelo al niño* перекладено без вигаданого роду підмета; вилучено хибну альтернативу «рука зламалася» для *Se rompió el brazo*; *Lavo mis manos* перестало бути безумовним `Mistake` і позначене як нетиповий нейтральний вибір, а не універсально неграматична форма.
+- **Аналіз:** чіткіше розрізнено датив експерієнцера в *Me duele la cabeza*, посесивну інтерпретацію *me* в *Me lavo las manos* і прямо описаний GTG неаргументний симпатетичний датив у *Le lavó el pelo al niño*. Аналіз *El médico me revisó la garganta* позначено як висновок за аналогією, а не дослівний приклад із джерела.
+- **Не перевірено:** повний корпусний/частотний аналіз, всі приклади й переклади, країнові/реєстрові відмінності, браузер/accessibility/SEO.
+- **Статус:** `body-parts-possession.mdx` залишається `draft`.

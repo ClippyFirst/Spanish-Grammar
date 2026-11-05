@@ -37,6 +37,8 @@ Choose a skill for a bounded task, provide relevant MDX files and repository rul
 | [spanish-cefr-scope-auditor](./spanish-cefr-scope-auditor/SKILL.md) | Evidence for optional level and prerequisite labels | Conditional |
 | [spanish-terminology-auditor](./spanish-terminology-auditor/SKILL.md) | Spanish–Ukrainian linguistic metalanguage | Editorial consistency |
 | [grammar-visualization-auditor](./grammar-visualization-auditor/SKILL.md) | Decides whether a diagram adds value and specifies an accessible, accurate form | Conditional visual review |
+| [spanish-claim-ledger-auditor](./spanish-claim-ledger-auditor/SKILL.md) | Maintains claim-level evidence traceability and cross-page review status | High-risk/cross-page audits |
+| [reference-answerability-auditor](./reference-answerability-auditor/SKILL.md) | Tests whether a reference page directly answers concrete reader questions | Page-level content review |
 
 ## Routing rules
 
